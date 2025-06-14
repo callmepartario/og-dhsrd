@@ -6374,6 +6374,7 @@
 		<li><strong>Tier Limits:</strong> You can't equip weapons or armor with a higher <a href="#define-tier">tier</a> than you.</li>
 		<li><strong>Inventory Weapons:</strong> You can carry up to two additional weapons in the <strong>Inventory Weapon</strong> areas of the character sheet.</li>
 		<li><strong>Swapping Weapons:</strong> You can swap an Inventory Weapon with an Active Weapon of the same burden at no cost during a <a href="#define-downtime">rest</a> or moment of calm; otherwise, you must mark a <a href="#define-stress">Stress</a> to do so.</li>
+		<li><strong>Throwing Weapons:</strong> You can throw an equipped <a href="#define-weapon">weapon</a> at a target within <a href="#define-range">Very Close</a> range, making the <a href="#define-attack-roll">attack roll</a> with <a href="#define-finesse">Finesse</a>. On a success, deal damage as usual for that weapon. Once thrown, the weapon is no longer considered equipped. Until you retrieve and re-equip it, you can't attack with it or benefit from its features.</li>
 	</ul>
 	<div class="og-omit">
 		<h4 class="h6">Weapon Anatomy</h4>
@@ -6385,7 +6386,7 @@
 			<dt>Range</dt>
 			<dd>A weapon's <a href="#define-range">range</a> specifies the maximum <strong>distance</strong> between the attacker and their target when attacking with it.</dd>
 			<dt>Damage</dt>
-			<dd>A weapon's <strong>damage</strong> indicates the size of the <a href="#define-damage-roll">damage dice</a> you roll on a successful attack with it; you roll a number of dice equal to your <a href="#define-proficiency">Proficiency</a>. If the damage includes a flat modifier, this number is addedadd it to the total<a href="#define-damage-roll">damage rolled</a>, but is not altered or affected by <a href="#define-proficiency">Proficiency</a>.</dd>
+			<dd>A weapon's <strong>damage</strong> indicates the size of the <a href="#define-damage-roll">damage dice</a> you roll on a successful attack with it; you roll a number of dice equal to your <a href="#define-proficiency">Proficiency</a>. If the damage includes a flat modifier, this number is added to the total <a href="#define-damage-roll">damage rolled</a>, but is not altered or affected by <a href="#define-proficiency">Proficiency</a>.</dd>
 			<dt>Damage Type</dt>
 			<dd>A weapon's <a href="#define-damage-type">damage type</a> indicates whether it deals physical or <a href="#define-damage-type">magic damage</a>. Weapons that deal <a href="#define-damage-type">magic damage</a> can only be wielded by characters with a <a href="#define-subclass">Spellcast trait</a>.</dd>
 			<dt>Burden</dt>
@@ -6394,11 +6395,6 @@
 			<dd>A weapon's <strong>feature</strong> is a special rule that stays in effect while the weapon is equipped.</dd>
 		</dl>
 	</div>
-	<div id="define-throw">
-	<h3 class="h6">Throwing a Weapon</h3>
-	<p>You can throw an equipped <a href="#define-weapon">weapon</a> at a target within <a href="#define-range">Very Close</a> range, making the <a href="#define-attack-roll">attack roll</a> with <a href="#define-finesse">Finesse</a>. On a success, deal damage as usual for that weapon. Once thrown, the weapon is no longer considered equipped. Until you retrieve and re-equip it, you can't attack with it or benefit from its features.</p>
-	<p class="og-tooltip-ed">See full text for details.</p>
-</div>
 </div>
 <hr>
 <h4 id="weapons-primary">Primary Weapon Tables<a class="og-h-anchor" href="#weapons-primary" title="Permalink" aria-hidden="true"></a></h4>
@@ -6598,7 +6594,7 @@
             <td class="text-center og-nowrap">Close</td>
             <td class="text-center og-nowrap">d8 mag</td>
             <td class="text-center og-nowrap">One-Handed</td>
-            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-throw">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
+            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Shortstaff</th>
@@ -6907,7 +6903,7 @@
             <td class="text-center og-nowrap">Close</td>
             <td class="text-center og-nowrap">d8+3 mag</td>
             <td class="text-center og-nowrap">One-Handed</td>
-            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-throw">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
+            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Improved Shortstaff</th>
@@ -7510,7 +7506,7 @@
             <td class="text-center og-nowrap">Close</td>
             <td class="text-center og-nowrap">d8+9 mag</td>
             <td class="text-center-og-nowrap">One-Handed</td>
-            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-throw">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
+            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Legendary Shortstaff</th>
@@ -7990,7 +7986,7 @@
             <td class="text-center og-nowrap">Close</td>
             <td class="text-centr og-nowrap">d6+4 phy</td>
             <td class="text-center og-nowrap">One-Handed</td>
-            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-throw">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
+            <td><em><strong>Returning:</strong></em> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
         </tr>
     </tbody>
 </table></div>
