@@ -261,7 +261,8 @@ html {
 	border-bottom: 0.25em solid #146;
 }
 #og-navbar.theme-dark { 
-	background-color: #146 !important;
+	background-color: #023 !important;
+	border-bottom: 0.25em solid #146;
 }
 
 /* light and dark mode iconography */
