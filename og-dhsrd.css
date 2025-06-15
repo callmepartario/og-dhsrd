@@ -1,0 +1,656 @@
+/* Header Fonts */
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-Thin.ttf') format(truetype);
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-ThinItalic.ttf') format(truetype);
+	font-weight: 100;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-ExtraLight.ttf') format(truetype);
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-ExtraLightItalic.ttf') format(truetype);
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-Light.ttf') format(truetype);
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-LightItalic.ttf') format(truetype);
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-Regular.ttf') format(truetype);
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-RegularItalic.ttf') format(truetype);
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-Medium.ttf') format(truetype);
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-MediumItalic.ttf') format(truetype);
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-SemiBold.ttf') format(truetype);
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-SemiBoldItalic.ttf') format(truetype);
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-Bold.ttf') format(truetype);
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-BoldItalic.ttf') format(truetype);
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-ExtraBold.ttf') format(truetype);
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-ExtraBoldItalic.ttf') format(truetype);
+	font-weight: 800;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-Black.ttf') format(truetype);
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src:url('../fonts/BeVietnamPro-BlackItalic.ttf') format(truetype);
+	font-weight: 900;
+	font-style: italic;
+}
+
+/* Body Fonts */
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-Thin.ttf') format(truetype);
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-ThinItalic.ttf') format(truetype);
+	font-weight: 100;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-ExtraLight.ttf') format(truetype);
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-ExtraLightItalic.ttf') format(truetype);
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-Light.ttf') format(truetype);
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-LightItalic.ttf') format(truetype);
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-Regular.ttf') format(truetype);
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-RegularItalic.ttf') format(truetype);
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-Medium.ttf') format(truetype);
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-MediumItalic.ttf') format(truetype);
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-SemiBold.ttf') format(truetype);
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-SemiBoldItalic.ttf') format(truetype);
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-Bold.ttf') format(truetype);
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-BoldItalic.ttf') format(truetype);
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-ExtraBold.ttf') format(truetype);
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-ExtraBoldItalic.ttf') format(truetype);
+	font-weight: 800;
+	font-style: italic;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-Black.ttf') format(truetype);
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Public Sans';
+    src:url('../fonts/PublicSans-BlackItalic.ttf') format(truetype);
+	font-weight: 900;
+	font-style: italic;
+}
+/* title font */
+@font-face {
+	font-family: 'Yeseva One';
+    src:url('../fonts/YesevaOne-Regular.ttf') format(truetype);
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* width, by percent */
+.w-95 { width: 95% !important; }
+.w-90 { width: 90% !important; }
+.w-85 { width: 85% !important; }
+.w-80 { width: 80% !important; }
+/* bootstrap has w-75 */
+.w-70 { width: 70% !important; }
+.w-65 { width: 65% !important; }
+.w-60 { width: 60% !important; }
+.w-55 { width: 55% !important; }
+/* bootstrap has w-50 */
+.w-45 { width: 45% !important; }
+.w-40 { width: 40% !important; }
+.w-35 { width: 35% !important; }
+.w-30 { width: 30% !important; }
+/* bootstrap has w-25 */
+.w-20 { width: 20% !important; }
+.w-15 { width: 15% !important; }
+.w-10 { width: 10% !important; }
+.w-5 { width: 5% !important; }
+
+/* scroll offset for fixed navbar */
+html { 
+	scroll-padding-top: 5rem; 
+	scroll-behavior: auto !important;
+}
+.navbar-brand { font-family: 'Be Vietnam Pro'; font-weight: 900; }
+
+#og-navbar.theme-light .navbar-brand { color: #146; }
+#og-navbar.theme-dark .navbar-brand { color: #fff; }
+
+#og-navbar.theme-light { 
+	background-color: #f2fffc !important;
+	border-bottom: 0.25em solid #146;
+}
+#og-navbar.theme-dark { 
+	background-color: #023 !important;
+	border-bottom: 0.25em solid #146;
+}
+
+/* light and dark mode iconography */
+img.og-icon { height: 1.25em; width: 1.25em; }
+#modeicon.theme-light { color: #000; }
+#modeicon.theme-dark { color: #fff; }
+
+/* navbar link click color override */
+nav.theme-dark ul.navbar-nav li.nav-item ul li a.dropdown-item:active { background-color: #fca832 !important; }
+a.nav-link { font-weight: 400; }
+
+/* override font */
+body {
+	font-family: 'Public Sans', Arial, Helvetica, sans-serif;
+	font-weight: 200;
+	font-size: 1rem;
+}
+body.theme-light { 
+	color: #000;
+	background-color: #046 !important;
+}
+body.theme-dark { 
+	color: #fff;
+	background-color: #023 !important;
+}
+strong { font-weight: bold; }
+
+/* override link and body coloration */
+#og-content.theme-light a, .theme-light .tooltip-inner a { color: #2b71f4; }
+#og-content.theme-light a:hover { color: #225ac3; }
+#og-content.theme-dark a { color: #facc8e; }
+#og-content.theme-dark a:hover { color: #fca832; }
+button.theme-light, a.btn.theme-light { 
+	background-color: #f7fffb; 
+	border-color: #aab3ae !important; 
+	box-shadow: 2px 2px 0px 0px #aab3ae; 
+}
+button.theme-dark, a.btn.theme-dark { 
+	background-color: #1c1f21; 
+	border-color: #4d5359 !important; 
+	box-shadow: 2px 2px 0px 0px #4d5359; 
+}
+
+/* main content window */
+#og-content.theme-light {
+	background-color: #fff !important;
+}
+#og-content.theme-dark {
+	background-color: #1c1f21 !important;
+}
+/* image variants */
+img.theme-light { display: block !important; }
+img.theme-dark { display: block !important; }
+
+.theme-dark img.og-image { filter: invert(1); }
+
+.og-nowrap { white-space: nowrap; }
+
+/* header overrides */
+h1 { 
+	font-size: 3rem;
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: left;
+}
+h1 .og-subtitle {
+	display: block;
+	font-family: 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
+	font-size: 1.25rem;
+}
+h1 .og-title {
+	display: block;
+	font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
+	letter-spacing: -0.4rem;
+}
+h2, h3, h4, h5, h6 {
+	font-family: 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 2.5rem; 
+	text-align: left; 
+	font-weight: 100;
+}
+h3 { 
+	font-size: 2.0rem; 
+	font-weight: 700;
+}
+h4 { 
+	font-size: 1.75rem; 
+	font-weight: 100;
+}
+h5 { 
+	font-size: 1.50rem;
+	font-weight: 600;
+}
+h6, .h6 { 
+	font-size: 1.15rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.lead {
+	font-family: 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
+	font-size: 1.1rem; 
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* anchor link iconography - position */
+h2 a.og-h-anchor,
+h3 a.og-h-anchor,
+h4 a.og-h-anchor,
+h5 a.og-h-anchor,
+h6 a.og-h-anchor {
+	width: 1.25rem;
+	height: 1.25rem;
+	text-decoration: none;
+	float: left;
+	display: inline;
+	margin-left: -1.25rem;
+	margin-bottom: 0;
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+h2 a.og-h-anchor { margin-top: 1.00rem; }
+h3 a.og-h-anchor { margin-top: 0.65rem; }
+h4 a.og-h-anchor { margin-top: 0.45rem; }
+h5 a.og-h-anchor { margin-top: 0.25rem; }
+h6 a.og-h-anchor { margin-top: 0.15rem; }
+.og-tab {
+	text-shadow: #000 1px 0 0.5rem;
+	padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+	border-radius: 0.25em;
+	color: #fff !important;
+	background-color: #146;
+}
+.og-tab a.og-h-anchor {
+	margin-left: -1.75rem !important;
+}
+
+/* anchor link iconography - color */
+.theme-light h2 a.og-h-anchor,
+.theme-light h3 a.og-h-anchor,
+.theme-light h4 a.og-h-anchor,
+.theme-light h5 a.og-h-anchor,
+.theme-light h6 a.og-h-anchor {
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 400 400' style='enable-background:new 0 0 400 400%3B' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:none%3B%7D.st1%7Bfill:%23d0d0d0%3B%7D%3C/style%3E%3Crect x='-0.4' y='-0.9' class='st0' width='399.7' height='399.7'/%3E%3Cg transform='matrix( 1  0  0  1  0 0) '%3E%3Cg%3E%3Cg id='Layer1_0_FILL'%3E%3Cpath class='st1' d='M234.4 166.4l-25.8 25.7l14.2 14.2c3.9 3.9 5.8 8.6 5.8 14.1v0c0 5.5-1.9 10.2-5.8 14.1l-73.3 73.3c-3.9 3.9-8.6 5.8-14.1 5.8v0.1c-5.5 0-10.1-2-14-5.9l-28.4-28.5c-3.9-3.9-5.9-8.5-5.9-13.9v-0.1c0-5.5 2-10.1 5.9-14l27.8-27.8c3.3-3.5 5-7.7 5-12.6c0-5-1.8-9.3-5.3-12.8c-3.5-3.5-7.8-5.2-12.8-5.2c-4.9 0-9.1 1.6-12.6 5l-27.8 27.8c-11 11-16.5 24.2-16.5 39.7c0 15.5 5.5 28.8 16.5 39.8l28.5 28.5c11 11 24.2 16.5 39.7 16.5c15.6 0 28.8-5.5 39.8-16.5l73.3-73.4c11-10.9 16.4-24.2 16.4-39.7s-5.5-28.8-16.4-39.8L234.4 166.4 M332.6 174.4c11-11 16.5-24.2 16.5-39.8c0-15.5-5.5-28.8-16.5-39.8l-28.4-28.4c-11-11-24.2-16.5-39.8-16.5c-15.5 0-28.7 5.5-39.7 16.5l-73.4 73.3c-11 11-16.5 24.2-16.5 39.8c0 15.5 5.5 28.8 16.5 39.8l14.2 14.2l25.6-25.7l-14.1-14.2c-3.9-3.9-5.9-8.6-5.8-14v-0.1c-0.1-5.5 1.9-10.1 5.8-14l73.3-73.3c3.9-3.9 8.6-5.8 14.1-5.8l0-0.1c5.5 0 10.2 1.9 14.1 5.8l28.4 28.4c3.9 3.9 5.8 8.6 5.8 14l0 0.1c0 5.4-2 10.1-5.8 14l-27.9 27.8c-3.3 3.5-5 7.7-5.1 12.6c0.1 5 1.9 9.3 5.5 12.9c3.6 3.5 7.8 5.3 12.8 5.3c4.9 0 9.1-1.7 12.6-5.1L332.6 174.4z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.theme-light h2:hover a.og-h-anchor,
+.theme-light h3:hover a.og-h-anchor,
+.theme-light h4:hover a.og-h-anchor,
+.theme-light h5:hover a.og-h-anchor,
+.theme-light h6:hover a.og-h-anchor {
+	color: #facc8e;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 400 400' style='enable-background:new 0 0 400 400%3B' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:none%3B%7D.st1%7Bfill:%232b71f4%3B%7D%3C/style%3E%3Crect x='-0.4' y='-0.9' class='st0' width='399.7' height='399.7'/%3E%3Cg transform='matrix( 1  0  0  1  0 0) '%3E%3Cg%3E%3Cg id='Layer1_0_FILL'%3E%3Cpath class='st1' d='M234.4 166.4l-25.8 25.7l14.2 14.2c3.9 3.9 5.8 8.6 5.8 14.1v0c0 5.5-1.9 10.2-5.8 14.1l-73.3 73.3c-3.9 3.9-8.6 5.8-14.1 5.8v0.1c-5.5 0-10.1-2-14-5.9l-28.4-28.5c-3.9-3.9-5.9-8.5-5.9-13.9v-0.1c0-5.5 2-10.1 5.9-14l27.8-27.8c3.3-3.5 5-7.7 5-12.6c0-5-1.8-9.3-5.3-12.8c-3.5-3.5-7.8-5.2-12.8-5.2c-4.9 0-9.1 1.6-12.6 5l-27.8 27.8c-11 11-16.5 24.2-16.5 39.7c0 15.5 5.5 28.8 16.5 39.8l28.5 28.5c11 11 24.2 16.5 39.7 16.5c15.6 0 28.8-5.5 39.8-16.5l73.3-73.4c11-10.9 16.4-24.2 16.4-39.7s-5.5-28.8-16.4-39.8L234.4 166.4 M332.6 174.4c11-11 16.5-24.2 16.5-39.8c0-15.5-5.5-28.8-16.5-39.8l-28.4-28.4c-11-11-24.2-16.5-39.8-16.5c-15.5 0-28.7 5.5-39.7 16.5l-73.4 73.3c-11 11-16.5 24.2-16.5 39.8c0 15.5 5.5 28.8 16.5 39.8l14.2 14.2l25.6-25.7l-14.1-14.2c-3.9-3.9-5.9-8.6-5.8-14v-0.1c-0.1-5.5 1.9-10.1 5.8-14l73.3-73.3c3.9-3.9 8.6-5.8 14.1-5.8l0-0.1c5.5 0 10.2 1.9 14.1 5.8l28.4 28.4c3.9 3.9 5.8 8.6 5.8 14l0 0.1c0 5.4-2 10.1-5.8 14l-27.9 27.8c-3.3 3.5-5 7.7-5.1 12.6c0.1 5 1.9 9.3 5.5 12.9c3.6 3.5 7.8 5.3 12.8 5.3c4.9 0 9.1-1.7 12.6-5.1L332.6 174.4z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.theme-dark h2 a.og-h-anchor,
+.theme-dark h3 a.og-h-anchor,
+.theme-dark h4 a.og-h-anchor,
+.theme-dark h5 a.og-h-anchor,
+.theme-dark h6 a.og-h-anchor {
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 400 400' style='enable-background:new 0 0 400 400%3B' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:none%3B%7D.st1%7Bfill:%232d3034%3B%7D%3C/style%3E%3Crect x='-0.4' y='-0.9' class='st0' width='399.7' height='399.7'/%3E%3Cg transform='matrix( 1  0  0  1  0 0) '%3E%3Cg%3E%3Cg id='Layer1_0_FILL'%3E%3Cpath class='st1' d='M234.4 166.4l-25.8 25.7l14.2 14.2c3.9 3.9 5.8 8.6 5.8 14.1v0c0 5.5-1.9 10.2-5.8 14.1l-73.3 73.3c-3.9 3.9-8.6 5.8-14.1 5.8v0.1c-5.5 0-10.1-2-14-5.9l-28.4-28.5c-3.9-3.9-5.9-8.5-5.9-13.9v-0.1c0-5.5 2-10.1 5.9-14l27.8-27.8c3.3-3.5 5-7.7 5-12.6c0-5-1.8-9.3-5.3-12.8c-3.5-3.5-7.8-5.2-12.8-5.2c-4.9 0-9.1 1.6-12.6 5l-27.8 27.8c-11 11-16.5 24.2-16.5 39.7c0 15.5 5.5 28.8 16.5 39.8l28.5 28.5c11 11 24.2 16.5 39.7 16.5c15.6 0 28.8-5.5 39.8-16.5l73.3-73.4c11-10.9 16.4-24.2 16.4-39.7s-5.5-28.8-16.4-39.8L234.4 166.4 M332.6 174.4c11-11 16.5-24.2 16.5-39.8c0-15.5-5.5-28.8-16.5-39.8l-28.4-28.4c-11-11-24.2-16.5-39.8-16.5c-15.5 0-28.7 5.5-39.7 16.5l-73.4 73.3c-11 11-16.5 24.2-16.5 39.8c0 15.5 5.5 28.8 16.5 39.8l14.2 14.2l25.6-25.7l-14.1-14.2c-3.9-3.9-5.9-8.6-5.8-14v-0.1c-0.1-5.5 1.9-10.1 5.8-14l73.3-73.3c3.9-3.9 8.6-5.8 14.1-5.8l0-0.1c5.5 0 10.2 1.9 14.1 5.8l28.4 28.4c3.9 3.9 5.8 8.6 5.8 14l0 0.1c0 5.4-2 10.1-5.8 14l-27.9 27.8c-3.3 3.5-5 7.7-5.1 12.6c0.1 5 1.9 9.3 5.5 12.9c3.6 3.5 7.8 5.3 12.8 5.3c4.9 0 9.1-1.7 12.6-5.1L332.6 174.4z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.theme-dark h2:hover a.og-h-anchor,
+.theme-dark h3:hover a.og-h-anchor,
+.theme-dark h4:hover a.og-h-anchor,
+.theme-dark h5:hover a.og-h-anchor,
+.theme-dark h6:hover a.og-h-anchor {
+	color: #facc8e;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 400 400' style='enable-background:new 0 0 400 400%3B' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st0%7Bfill:none%3B%7D.st1%7Bfill:%23facc8e%3B%7D%3C/style%3E%3Crect x='-0.4' y='-0.9' class='st0' width='399.7' height='399.7'/%3E%3Cg transform='matrix( 1  0  0  1  0 0) '%3E%3Cg%3E%3Cg id='Layer1_0_FILL'%3E%3Cpath class='st1' d='M234.4 166.4l-25.8 25.7l14.2 14.2c3.9 3.9 5.8 8.6 5.8 14.1v0c0 5.5-1.9 10.2-5.8 14.1l-73.3 73.3c-3.9 3.9-8.6 5.8-14.1 5.8v0.1c-5.5 0-10.1-2-14-5.9l-28.4-28.5c-3.9-3.9-5.9-8.5-5.9-13.9v-0.1c0-5.5 2-10.1 5.9-14l27.8-27.8c3.3-3.5 5-7.7 5-12.6c0-5-1.8-9.3-5.3-12.8c-3.5-3.5-7.8-5.2-12.8-5.2c-4.9 0-9.1 1.6-12.6 5l-27.8 27.8c-11 11-16.5 24.2-16.5 39.7c0 15.5 5.5 28.8 16.5 39.8l28.5 28.5c11 11 24.2 16.5 39.7 16.5c15.6 0 28.8-5.5 39.8-16.5l73.3-73.4c11-10.9 16.4-24.2 16.4-39.7s-5.5-28.8-16.4-39.8L234.4 166.4 M332.6 174.4c11-11 16.5-24.2 16.5-39.8c0-15.5-5.5-28.8-16.5-39.8l-28.4-28.4c-11-11-24.2-16.5-39.8-16.5c-15.5 0-28.7 5.5-39.7 16.5l-73.4 73.3c-11 11-16.5 24.2-16.5 39.8c0 15.5 5.5 28.8 16.5 39.8l14.2 14.2l25.6-25.7l-14.1-14.2c-3.9-3.9-5.9-8.6-5.8-14v-0.1c-0.1-5.5 1.9-10.1 5.8-14l73.3-73.3c3.9-3.9 8.6-5.8 14.1-5.8l0-0.1c5.5 0 10.2 1.9 14.1 5.8l28.4 28.4c3.9 3.9 5.8 8.6 5.8 14l0 0.1c0 5.4-2 10.1-5.8 14l-27.9 27.8c-3.3 3.5-5 7.7-5.1 12.6c0.1 5 1.9 9.3 5.5 12.9c3.6 3.5 7.8 5.3 12.8 5.3c4.9 0 9.1-1.7 12.6-5.1L332.6 174.4z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* color theming by part */
+.theme-light h1, 
+.theme-light h2, 
+.theme-light h3, 
+.theme-light h4, 
+.theme-light h5, 
+.theme-light h6, 
+.theme-light p.lead,
+.theme-light .og-quote,
+.theme-light .og-sidebar,
+.theme-light .og-detail-item {
+	color: #146;
+	border-color: #146;
+}
+.theme-dark h1, 
+.theme-dark h2, 
+.theme-dark h3, 
+.theme-dark h4, 
+.theme-dark h5, 
+.theme-dark h6, 
+.theme-dark p.lead,
+.theme-dark .og-quote,
+.theme-dark .og-sidebar,
+.theme-dark .og-detail-item {
+	color: #9cd;
+	border-color: #146;
+}
+.og-quote { 
+	font-style: italic;
+	font-size: 1.25rem;
+	text-align: center;
+}
+.og-sidebar {
+	font-style: italic;
+	border-left: 0.25rem solid #146;
+}
+.theme-light .og-sidebar { 
+	background-color: #f2fcff;
+}
+.theme-dark div.og-sidebar { 
+	background-color: #222829; 
+}
+
+/* alert */
+.alert { 
+	border: 0.25rem solid #146;
+}
+.theme-light .alert { background-image: linear-gradient(180deg, #f2fcff, #ffffff); }
+.theme-dark .alert { background-image: linear-gradient(180deg, #222829, #111415); }
+
+/* quick-reference */
+ul.og-qr {
+	column-count: 2;
+}
+@media (min-width: 576px) {
+	ul.og-qr {
+		column-count: 2;
+	}
+}
+@media (min-width: 768px) {
+	ul.og-qr {
+		column-count: 3;
+	}
+}
+@media (min-width: 1200px) {
+	ul.og-qr {
+	column-count: 4	;
+	}
+}
+ul.og-qr li {
+	display: block;
+	break-inside: avoid-column;
+	padding-bottom: 0.25rem;
+}
+ul.og-qr-compact {
+	column-count: 2;
+}
+@media (min-width: 576px) {
+	ul.og-qr-compact {
+	column-count: 3;
+	}
+}
+@media (min-width: 768px) {
+	ul.og-qr-compact {
+	column-count: 4;
+	}
+}
+@media (min-width: 1200px) {
+	ul.og-qr-compact {
+	column-count: 5;
+	}
+}
+ul.og-qr li, 
+ul.og-qr-compact li {
+	display: block;
+	break-inside: avoid-column;
+	padding-bottom: 0.25rem;
+}
+ol.og-list-alpha {
+	list-style-type: upper-alpha;
+}
+
+/* nested lists with disc bullets, used in deeper itemization on creatures, cyphers, and artifacts */
+ul.og-list-disc {
+	text-indent: 0rem;
+	margin-left: 0rem;
+	padding-left: 1rem;
+	list-style-type: disc;
+	margin-bottom: 0.75rem;
+}
+ul.og-list-disc li {
+	margin-bottom: 0.25em;
+}
+ul.og-list-inline li {
+	display: inline-block;
+	padding-right: 0.25rem;
+	padding-left: 0.45rem;
+	border-left: 1px solid;
+	white-space: nowrap;
+}
+ul.og-list-inline li:first-child {
+	padding-left: 0rem;
+	border-left: 0px solid;
+}
+.theme-light ul.og-list-inline li {
+	border-color: #000;
+}
+.theme-dark ul.og-list-inline li {
+	border-color: #fff;
+}
+
+ul.og-list-class {
+	border-top: 0.1rem solid #146;
+	border-bottom: 0.1rem solid #146;
+	padding-top: 1rem;
+	padding-bottom: 0rem;
+	margin-bottom: 1rem;
+}
+
+/* tooltips */
+.tooltip.show {
+	opacity: 1.0;
+}
+.tooltip-arrow::before { display: none; }
+.tooltip-inner {
+	font-family: 'Public Sans', Arial, Helvetica, sans-serif;
+	font-size: 0.75rem;
+	font-weight: 300;
+	max-width: 500px;
+	text-align: left;
+	padding: 0.25rem 0.75rem 0rem 0.75rem !important; 
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.tooltip-inner h2, 
+.tooltip-inner h3, 
+.tooltip-inner h4, 
+.tooltip-inner h5 {
+	font-size: 1.25rem;
+	font-weight: 100;
+}
+.tooltip-inner h5 {
+	font-size: 1rem;
+	font-weight: 700;
+}
+.tooltip-inner h6,
+.tooltip-inner .h6 {
+	font-size: 0.75rem;
+	font-weight: 700;
+}
+body.theme-light .tooltip-inner {
+	color: #000 !important;
+	border: 0.25rem solid #146;
+	background-color: #f2fffc;
+}
+body.theme-dark .tooltip-inner {
+	color: #fff !important;
+	border: 0.25rem solid #146;
+	background-color: #222829;
+}
+.theme-light .tooltip-inner a { color: #146 !important; text-decoration: none !important;}
+.theme-light .tooltip-inner a:hover { color: #146 !important; text-decoration: none !important;}
+.theme-dark .tooltip-inner a { color: #9cd !important; text-decoration: none !important;}
+.theme-dark .tooltip-inner a:hover { color: #9cd !important; text-decoration: none !important;}
+
+/* tooltip display or hide */
+.tooltip-inner .og-h-anchor {
+	display: none;
+}
+.tooltip-inner p {
+	margin-bottom: 0.5rem;
+}
+.tooltip-inner ul.og-list-inline-tooltip li {
+	display: inline-block;
+	margin-right: 1.5rem;
+}
+
+ul.og-list-class {
+	padding-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.tooltip-inner .og-omit { display: none !important; }
+
+.og-tooltip-block { display: none; }
+.tooltip-inner .og-tooltip-block { display: block; }
+
+.og-tooltip-inline { display: none; }
+.tooltip-inner .og-tooltip-inline { display: inline; }
+
+.tooltip-inner caption { display: none; }
+
+.og-tooltip-ed { display: none; }
+.tooltip-inner .og-tooltip-ed { 
+	display: block; 
+	font-style: italic;
+}
+.theme-light .og-tooltip-ed { color: #146; }
+.theme-dark .og-tooltip-ed { color: #9cd; }
