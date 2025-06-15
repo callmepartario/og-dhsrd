@@ -552,14 +552,20 @@ ul.og-list-disc li {
 ul.og-list-inline li {
 	display: inline-block;
 	padding-right: 0.25rem;
-	padding-left: 0.45rem;
-	border-left: 1px solid;
 	white-space: nowrap;
 }
-ul.og-list-inline li:first-child {
-	padding-left: 0rem;
-	border-left: 0px solid;
+ul.og-list-inline li::before {
+	position: relative;
+	top: 0.25rem;
+	border-radius: 0.15rem;
+	content: '';
+	display: inline-block;
+	background-color: #146;
+	width: 0.4rem;
+	height: 1rem;
+	margin-right: 0.2rem;
 }
+
 .theme-light ul.og-list-inline li {
 	border-color: #000;
 }
