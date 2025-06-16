@@ -13,7 +13,7 @@ There are no previous modifications by others.
 ## Editorial Mission
 
 - More readers are players than GMs.
-- Some can't see or use the official character sheet, or are developing their own character sheet solutions.
+- Some readers can't see or use the official character sheet, or are developing their own character sheet solutions.
 - Some readers prefer metric units.
 - Present information so reading orders provide better information groups.
 - Correct suspected misprints and increase consistency in formatting of game terms.
@@ -22,22 +22,22 @@ There are no previous modifications by others.
 ## Technical Features
 
 - Lightweight, mobile format.
-- Accomodate an online header structure and extensive hyperlink document navigation.
-- Provide hoverable tooltips on hyperlinks that preview sections of the document. Some tooltips omit sections of text for brevity, indicated by the following statement: See full text for details.
-- Add an index of Optional Rules.
+- Accommodates an online header structure and extensive hyperlink document navigation.
+- Provides page number references for corresponding sections of the Daggerheart Core Rulebook.
+- Provides hover tooltips on hyperlinks that preview sections of the document. Some tooltips omit sections of text for brevity, - indicated by the following statement: See full text for details.
+- Provides an index of Optional Rules.
 
 ## Goals
 
-- Add the the Adversaries and Environments section.
-- Add page number references to coresponding sections of the Daggerheart Core Rulebook so readers can easily "get on the same page" even if they are using diffeent sources.
-- Continue to improve cross-refrencing and hyperlinking.
-- Unlikely, but Possible: Do a plain-language edit across the entire document for clarity, concision, and consistency.
+- Add adversary stat blocks.
+- Continue to improve cross-referencing and hyperlinking.
+- Perform a plain-language edit across the entire document for clarity, concision, and consistency.
 
 If you'd like to support this work, buy me a ☕ [Ko-fi](https://ko-fi.com/oldgus)!
 
 ## Acknowledgements
 
-Thanks to the Daggerhert team for this amazing resource.
+Thanks to the Daggerheart team for this amazing resource.
 
 Thanks for reading, and may this record bring you and yours many happy adventures!
 
