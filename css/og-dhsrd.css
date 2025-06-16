@@ -224,6 +224,20 @@
 	font-weight: 400;
 	font-style: normal;
 }
+/* title font */
+@font-face {
+	font-family: 'PT Sans Narrow';
+    src:url('../fonts/PTSansNarrow-Regular.ttf') format(truetype);
+	font-weight: 400;
+	font-style: normal;
+}
+/* title font */
+@font-face {
+	font-family: 'PT Sans Narrow';
+    src:url('../fonts/PTSansNarrow-Bold.ttf') format(truetype);
+	font-weight: 700;
+	font-style: normal;
+}
 
 /* width, by percent */
 .w-95 { width: 95% !important; }
@@ -403,7 +417,6 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .og-tab a.og-h-anchor {
 	margin-left: -1.75rem !important;
 }
-
 /* anchor link iconography - color */
 .theme-light h2 a.og-h-anchor,
 .theme-light h3 a.og-h-anchor,
@@ -539,6 +552,9 @@ ol.og-list-alpha {
 }
 
 /* nested lists with disc bullets, used in deeper itemization on creatures, cyphers, and artifacts */
+.theme-dark ul.og-ref {
+	color: #9cd;
+}
 ul.og-list-disc {
 	text-indent: 0rem;
 	margin-left: 0rem;
@@ -579,6 +595,20 @@ ul.og-list-class {
 	padding-top: 1rem;
 	padding-bottom: 0rem;
 	margin-bottom: 1rem;
+}
+ul.og-ref {
+	margin: 0 0 0.5rem 0;
+	padding: 0 0 0 0;
+}
+ul.og-ref li {
+	font-family: 'PT Sans Narrow', Tahoma, Verdana, sans-serif;
+	font-weight: 700;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+.theme-light ul.og-ref {
+	color: #146;
+	background-color: #f7fbff !important;
 }
 
 /* tooltips */
