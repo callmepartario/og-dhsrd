@@ -44,7 +44,7 @@
 						<li><a class="dropdown-item og-nav" href="#experiences">Experiences</a></li>
 						<li><a class="dropdown-item og-nav" href="#leveling-up">Gaining Levels</a></li>
 						<li><a class="dropdown-item og-nav" href="#multiclassing">Multiclassing</a></li>
-						<li><a class="dropdown-item og-nav" href="#equipment">">Equipment</a></li>
+						<li><a class="dropdown-item og-nav" href="#equipment">Equipment</a></li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
@@ -110,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.70n (2025-06-16)</p>
+<p class="small text-center">version 0.70m (2025-06-17)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -244,7 +244,7 @@
 <ul class="og-list-disc">
 	<li><strong>Level:</strong> You are <a href="#define-level">Level 1</a>.</li>
 	<li><strong>Evasion:</strong> Your <a href="#define-evasion">Evasion</a> scopre represents your ability to defend yourself and avoid danger. Your Evasion score is determined by your <a href="#define-class">class</a>.</li>
-	<li><strong>Hit Points (HP):</strong> <a href="#define-hp">Hit Points</a> are an abstract measurement of physical health. Your starting Hit Points are determined by your <a href="#define-class">class</a>.</li>
+	<li><strong>Hit Points:</strong> <a href="#define-hit-point">Hit Points</a> are an abstract measurement of physical health. Your starting Hit Points are determined by your <a href="#define-class">class</a>.</li>
 	<li><strong>Stress:</strong> <a href="#define-stress">Stress</a> reflects your ability to withstand the physical, mental, and emotional strain of dangerous situations. PCs start with 6 Stress slots.</li>
 	<li><strong>Hope:</strong> <a href="#define-hope">Hope</a> fuels special <a href="#define-action">moves</a> and features. For example, each <a href="#define-class">class</a> has a unique Hope Feature. PCs start with 2 Hope.</li>
 </ul>
@@ -268,7 +268,7 @@
 <p>Choose and equip a set of <a href="#define-armor">armor</a> from the <a href="#armor-tier-1">Tier 1 Armor Table</a>:</p>
 <ul class="og-list-disc">
 	<li><strong>Armor Score:</strong> Record your <a href="#define-armor">Armor Slots</a>, determined by your armor's <strong>Base Score</strong> (plus any bonuses from other features that modify your Armor Score).</li>
-	<li><strong>Damage Threshold:</strong> Calculate your Major and Severe <a href="#define-hp">damage thresholds</a>. Start with the numbers listed in your armor's <strong>Base Thresholds</strong> and add your <a href="#define-level">level</a> (plus any bonuses from other features that modify your damage thresholds) to each.</li>
+	<li><strong>Damage Threshold:</strong> Calculate your Major and Severe <a href="#define-hit-point">damage thresholds</a>. Start with the numbers listed in your armor's <strong>Base Thresholds</strong> and add your <a href="#define-level">level</a> (plus any bonuses from other features that modify your damage thresholds) to each.</li>
 </ul>
 <p>Add the following items to your <strong>Inventory</strong>:</p>
 <ul class="og-list-disc">
@@ -276,7 +276,7 @@
 	<li>50 feet (15 m) of rope</li>
 	<li>Basic supplies</li>
 	<li>One handful of <a href="#define-gold">gold</a></li>
-	<li>Choose either a <a href="#define-loot-minor-health-potion">Minor Health Potion</a> (clear <strong>1d4</strong> <a href="#define-hp">Hit Points</a>), or a <a href="#define-loot-minor-stamina-potion">Minor Stamina Potion</a> (clear <strong>1d4</strong> <a href="#define-stress">Stress</a>)</li>
+	<li>Choose either a <a href="#define-loot-minor-health-potion">Minor Health Potion</a> (clear <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a>), or a <a href="#define-loot-minor-stamina-potion">Minor Stamina Potion</a> (clear <strong>1d4</strong> <a href="#define-stress">Stress</a>)</li>
 	<li>One <a href="#define-class">class-specific items</a></li>
 	<li>If applicable, whichever class-specific item you selected to carry your spells</li>
 	<li>Any other items you'd like to start with the GM approves</li>
@@ -390,7 +390,7 @@
 	<p>A <strong>class</strong> is a role-based archetype that determines a PC's:</p>
 	<ul class="og-list-disc">
 		<li><strong>Domain Decks:</strong> Each class grants access to two <a href="#define-domain">domains</a> and their <a href="#define-domain-card">domain cards</a>.</li>
-		<li>Starting <a href="#define-evasion">Evasion</a> and <a href="#define-hp">Hit Points (HP)</a></li>
+		<li>Starting <a href="#define-evasion">Evasion</a> and <a href="#define-hit-point">Hit Points</a></li>
 		<li>One or more class features</li>
 		<li>Class <a href="#define-hope">Hope Feature</a>, a class feature that costs 3 <a href="#define-hope">Hope</a> to activate.</li>
 		<li>Starting Items</li>
@@ -460,7 +460,7 @@
 			<ul class="list-unstyled">
 				<li><p><strong><em>Gifted Performer:</em></strong> You can play three different types of songs, once each per <a href="#define-long-rest">long rest</a>; describe how you perform for others to gain the listed benefit:</p>
 					<ul class="og-list-disc">
-						<li><strong><em>Relaxing Song:</em></strong> You and all allies within <a href="#define-range">Close</a> range clear a <a href="#define-hp">Hit Point</a>.</li>
+						<li><strong><em>Relaxing Song:</em></strong> You and all allies within <a href="#define-range">Close</a> range clear a <a href="#define-hit-point">Hit Point</a>.</li>
 						<li><strong><em>Epic Song:</em></strong> Make a target within <a href="#define-range">Close</a> range temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</li>
 						<li><strong><em>Heartbreaking Song:</em></strong> You and all allies within <a href="#define-range">Close</a> range gain a <a href="#define-hope">Hope</a>.</li>
 					</ul>
@@ -550,7 +550,7 @@
 	</ul>
 	<h4 class="h6">Class Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Beastform:</em></strong> Mark a <a href="#define-stress">Stress</a> to magically transform into a creature of your <a href="#define-tier">tier</a> or lower from the <a href="#define-druid-beastform-options">Beastform</a> list. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href="#define-domain-card">domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href="#define-evasion">Evasion</a> bonus to your Evasion, and use the trait specified in their statistics for your attack. While you're in a Beastform, your armor becomes part of your body and you mark <a href="#armor">Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href="#define-armor">Armor Slot</a>s remain marked. If you mark your last <a href="#define-hp">Hit Point</a>, you automatically drop out of this form.</p></li>
+		<li><p><strong><em>Beastform:</em></strong> Mark a <a href="#define-stress">Stress</a> to magically transform into a creature of your <a href="#define-tier">tier</a> or lower from the <a href="#define-druid-beastform-options">Beastform</a> list. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href="#define-domain-card">domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href="#define-evasion">Evasion</a> bonus to your Evasion, and use the trait specified in their statistics for your attack. While you're in a Beastform, your armor becomes part of your body and you mark <a href="#armor">Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href="#define-armor">Armor Slot</a>s remain marked. If you mark your last <a href="#define-hit-point">Hit Point</a>, you automatically drop out of this form.</p></li>
 		<li><p><strong><em>Wildtouch:</em></strong> You can perform harmless, subtle effects that involve nature&mdash;such as causing a flower to rapidly grow, summoning a slight gust of wind, or starting a campfire&mdash;at will.</p></li>
 	</ul>
 </div>
@@ -572,7 +572,7 @@
 				<li><p><strong><em>Elemental Incarnation:</em></strong> Mark a <a href="#define-stress">Stress</a> to Channel one of the following elements until you take Severe damage or until your next <a href="#define-downtime">rest</a>:</p>
 					<ul class="og-list-disc">
 						<li><strong><em>Fire:</em></strong> When an <a href="#define-adversary">adversary</a> within <a href="#define-range">Melee</a> range deals damage to you, they take <strong>1d10</strong> <a href="#define-damage-type">magic damage</a>.</li>
-						<li><strong><em>Earth:</em></strong> Gain a bonus to your <a href="define-hp">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</li>
+						<li><strong><em>Earth:</em></strong> Gain a bonus to your <a href="define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</li>
 						<li><strong><em>Water:</em></strong> When you deal damage to an <a href="#define-adversary">adversary</a> within <a href="#define-range">Melee</a> range, all other adversaries within <a href="#define-range">Very Close</a> range must mark a <a href="#define-stress">Stress</a>.</li>
 						<li><strong><em>Air:</em></strong> You can hover, gaining <a href="#define-advantage">advantage</a> on <a href="#define-trait-rolls">Agility Rolls</a>.</li>
 					</ul>
@@ -583,7 +583,7 @@
 		<ul class="list-unstyled">
 			<li><p><strong><em>Elemental Aura:</em></strong> Once per <a href="#define-downtime">rest</a> while Channeling, you can assume an aura matching your element. The aura affects targets within <a href="#define-range">Close</a> range until your Channeling ends.</p>
 				<ul class="og-list-disc">
-					<li><strong><em>Fire:</em></strong> When an <a href="#define-adversary">adversary</a> marks 1 or more <a href="#define-hp">Hit Points</a>, they must also mark a <a href="#define-stress">Stress</a>.</li>
+					<li><strong><em>Fire:</em></strong> When an <a href="#define-adversary">adversary</a> marks 1 or more <a href="#define-hit-point">Hit Points</a>, they must also mark a <a href="#define-stress">Stress</a>.</li>
 					<li><strong><em>Earth:</em></strong> Your allies gain a +1 bonus to <a href="#define-strength">Strength</a>.</li>
 					<li><strong><em>Water:</em></strong> When an <a href="#define-adversary">adversary</a> deals damage to you, you can mark a <a href="#define-stress">Stress</a> to move them anywhere within <a href="#define-range">Very Close</a> range of where they are.</li>
 					<li><strong><em>Air:</em></strong> When you or an ally takes damage from an attack beyond <a href="#define-range">Melee</a> range, reduce the damage by 1d8.</li>
@@ -595,7 +595,7 @@
 			<li><p><strong><em>Elemental Dominion:</em></strong> You further embody your element. While Channeling, you gain the following benefit:</p>
 				<ul class="og-list-disc">
 					<li><strong><em>Fire:</em></strong> You gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for attacks and spells that deal damage.</li>
-					<li><strong><em>Earth:</em></strong> When you would mark <a href="#define-hp">Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li>
+					<li><strong><em>Earth:</em></strong> When you would mark <a href="#define-hit-point">Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li>
 					<li><strong><em>Water:</em></strong> When an attack against you succeeds, you can mark a <a href="#define-stress">Stress</a> to make the attacker temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</li>
 					<li><strong><em>Air:</em></strong> You gain a +1 bonus to your <a href="#define-evasion">Evasion</a> and can fly.</li>
 				</ul>
@@ -614,7 +614,7 @@
 			<h6>Foundation Features</h6>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Clarity of Nature:</em></strong> Once per <a href="#define-long-rest">long rest</a>, you can create a space of natural serenity within <a href="#define-range">Close</a> range. When you spend a few minutes resting within the space, clear <a href="#define-stress">Stress</a> equal to your <a href="#define-instinct">Instinct</a>, distributed as you choose between you and your allies.</p></li>
-				<li><p><strong><em>Regeneration:</em></strong> Touch a creature and spend 3 <a href="#define-hope">Hope</a>. That creature clears <strong>1d4</strong> <a href="#define-hp">Hit Points</a>.</p></li>
+				<li><p><strong><em>Regeneration:</em></strong> Touch a creature and spend 3 <a href="#define-hope">Hope</a>. That creature clears <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a>.</p></li>
 			</ul>
 		</div>
 		<h6>Specialization Features</h6>
@@ -624,7 +624,7 @@
 		</ul>
 		<h6>Mastery Feature</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Defender:</em></strong> Your animal transformation embodies a healing guardian spirit. When you're in Beastform and an ally within <a href="#define-range">Close</a> range marks 2 or more <a href="#define-hp">Hit Points</a>, you can mark a <a href="#define-stress">Stress</a> to reduce the number of Hit Points they mark by 1.</p></li>
+			<li><p><strong><em>Defender:</em></strong> Your animal transformation embodies a healing guardian spirit. When you're in Beastform and an ally within <a href="#define-range">Close</a> range marks 2 or more <a href="#define-hit-point">Hit Points</a>, you can mark a <a href="#define-stress">Stress</a> to reduce the number of Hit Points they mark by 1.</p></li>
 		</ul>
 		<div class="og-topbar">
 			<h4 class="h6">Background Questions</h4>
@@ -928,7 +928,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Rampage:</em></strong> When you roll a 1 on a <a href="#define-damage-roll">damage die</a>, you can roll a <strong>d10</strong> and add the result to the <a href="#define-damage-roll">damage roll</a>. Additionally, before you make an <a href="#define-attack-roll">attack roll</a>, you can mark a <a href="#define-stress">Stress</a> to gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for that attack</p></li>
-				<li><p><strong><em>Thick Hide:</em></strong> You gain a +2 bonus to your <a href="define-hp">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Thick Hide:</em></strong> You gain a +2 bonus to your <a href="define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -970,7 +970,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Bird's-Eye View:</em></strong> You can fly at will. Once per <a href="#define-downtime">rest</a> while you are airborne, you can ask the GM a question about the scene below you without needing to roll. The first time a character makes a roll to act on this information, they gain <a href="#define-advantage">advantage</a> on the roll.</p></li>
-				<li><p><strong><em>Hollow Bones:</em></strong> You gain a &minus;2 penalty to your <a href="define-hp">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Hollow Bones:</em></strong> You gain a &minus;2 penalty to your <a href="define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -1093,7 +1093,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Physical Defense:</em></strong> You gain a +3 bonus to your <a href="define-hp">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Physical Defense:</em></strong> You gain a +3 bonus to your <a href="define-hit-point">damage thresholds</a>.</p></li>
 				<li><p><strong><em>Snapping Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can spend a <a href="#define-hope">Hope</a> to clamp that opponent in your jaws, making them temporarily <a href="#define-restrained"><em>Restrained</em></a> and <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
 			</ul>
 		</div>
@@ -1141,7 +1141,7 @@
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to four willing allies with you when you move.</p></li>
 				<li><p><strong><em>Demolish:</em></strong> spend a <a href="#define-hope">Hope</a> to move up to <a href="#define-range">Far</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-proficiency">Proficiency</a> and are temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
-				<li><p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href="define-hp">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href="define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -1219,7 +1219,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Devastating Strikes:</em></strong> When you deal Severe damage to a target within <a href="#define-range">Melee</a> range, you can mark a <a href="#define-stress">Stress</a> to force them to mark an additional <a href="#define-hp">Hit Point</a>.</p></li>
+				<li><p><strong><em>Devastating Strikes:</em></strong> When you deal Severe damage to a target within <a href="#define-range">Melee</a> range, you can mark a <a href="#define-stress">Stress</a> to force them to mark an additional <a href="#define-hit-point">Hit Point</a>.</p></li>
 				<li><p><strong><em>Massive Stride:</em></strong> You can move up to <a href="#define-range">Far</a> range without rolling. You ignore rough terrain (at the GM's discretion) due to your size.</p></li>
 			</ul>
 		</div>
@@ -1279,7 +1279,7 @@
 		<h6>Mastery Features</h6>
 		<ul class="list-unstyled">
 			<li><p><strong><em>Advanced Training:</em></strong> Choose two additional level-up options for your companion.</p></li>
-			<li><p><strong><em>Loyal Friend:</em></strong> Once per <a href="#define-long-rest">long rest</a>, when the damage from an attack would mark your companion's last <a href="#define-stress">Stress</a> or your last <a href="#define-hp">Hit Point</a> and you're within <a href="#define-range">Close</a> range of each other, you or your companion can rush to the other's side and take that damage instead.</p></li>
+			<li><p><strong><em>Loyal Friend:</em></strong> Once per <a href="#define-long-rest">long rest</a>, when the damage from an attack would mark your companion's last <a href="#define-stress">Stress</a> or your last <a href="#define-hit-point">Hit Point</a> and you're within <a href="#define-range">Close</a> range of each other, you or your companion can rush to the other's side and take that damage instead.</p></li>
 		</ul>
 	</div>
 	<div class="col-12 col-md-6">
@@ -1436,7 +1436,7 @@
 			</tr>
 			<tr>
 				<th class="fw-normal" scope="row">Bonded</th>
-				<td>When you mark your last <a href="#define-hp">Hit Point</a>, your companion rushes to your side. Roll a number of <strong>d6s</strong> equal to their unmarked <a href="#define-stress">Stress</a> slots and mark them. If any <strong>d6</strong> results in a 6, your companion helps you up, you clear your last <a href="#define-hp">Hit Point</a>, and return to the scene.</td>
+				<td>When you mark your last <a href="#define-hit-point">Hit Point</a>, your companion rushes to your side. Roll a number of <strong>d6s</strong> equal to their unmarked <a href="#define-stress">Stress</a> slots and mark them. If any <strong>d6</strong> results in a 6, your companion helps you up, you clear your last <a href="#define-hit-point">Hit Point</a>, and return to the scene.</td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">1</span><span aria-hidden="true">&#x25A2;</span></td>
 			</tr>
 			<tr>
@@ -1535,7 +1535,7 @@
 		<ul class="list-unstyled">
 			<li><p><strong><em>Reliable Backup:</em></strong> You can use your <strong><em>Contacts Everywhere</em></strong> feature three times per session. The following options are added to the list of benefits you can choose from when you use that feature:</p>
 				<ul class="og-list-disc">
-					<li>When you mark 1 or more <a href="#define-hp">Hit Points</a>, they can rush out to shield you, reducing the Hit Points marked by 1.</li>
+					<li>When you mark 1 or more <a href="#define-hit-point">Hit Points</a>, they can rush out to shield you, reducing the Hit Points marked by 1.</li>
 					<li>When you make a <a href="#define-trait-rolls">Presence Roll</a> in conversation, they back you up. You can roll a <strong>d20</strong> as your <a href="#define-action-roll">Hope Die</a>.</li>
 				</ul>
 			</li>
@@ -1582,7 +1582,7 @@
 	<h4 class="h6">Seraph's Hope Feature</h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 44</li></ul>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Life Support:</em></strong> Spend 3 <a href="#define-hope">Hope</a> to clear a <a href="#define-hp">Hit Point</a> on an ally within <a href="#define-range">Close</a> range.</p></li>
+		<li><p><strong><em>Life Support:</em></strong> Spend 3 <a href="#define-hope">Hope</a> to clear a <a href="#define-hit-point">Hit Point</a> on an ally within <a href="#define-range">Close</a> range.</p></li>
 	</ul>
 	<h4 class="h6">Class Feature</h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 44</li></ul>
@@ -1606,7 +1606,7 @@
 			<h6>Foundation Features</h6>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Spirit Weapon:</em></strong> When you have an equipped <a href="#define-weapon">weapon</a> with a range of Melee or Very Close, it can fly from your hand to attack an <a href="#define-adversary">adversary</a> within <a href="#define-range">Close</a> range and then return to you. You can mark a <a href="#define-stress">Stress</a> to target an additional adversary within <a href="#define-range">range</a> with the same <a href="#define-attack-roll">attack roll</a>.</p></li>
-				<li><p><strong><em>Sparing Touch:</em></strong> Once per <a href="#define-long-rest">long rest</a>, touch a creature and clear 2 <a href="#define-hp">Hit Points</a> or 2 <a href="#stress">Stress</a> from them.</p></li>
+				<li><p><strong><em>Sparing Touch:</em></strong> Once per <a href="#define-long-rest">long rest</a>, touch a creature and clear 2 <a href="#define-hit-point">Hit Points</a> or 2 <a href="#stress">Stress</a> from them.</p></li>
 			</ul>
 		</div>
 		<h6>Specialization Feature</h6>
@@ -1643,7 +1643,7 @@
 		</ul>
 		<h6>Mastery Features</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Ascendant:</em></strong> Gain a permanent +4 bonus to your Severe <a href="define-hp">damage threshold</a>.</p></li>
+			<li><p><strong><em>Ascendant:</em></strong> Gain a permanent +4 bonus to your Severe <a href="define-hit-point">damage threshold</a>.</p></li>
 			<li><p><strong><em>Power of the Gods:</em></strong> While flying, you deal an extra <strong>1d12</strong> damage instead of <strong>1d8</strong> from your <strong><em>Wings of Light</em></strong> feature.</p></li>
 		</ul>
 	</div>
@@ -1837,7 +1837,7 @@
 		</div>
 		<h6>Specialization Feature</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Rise to the Challenge:</em></strong> You are vigilant in the face of mounting danger. While you have 2 or fewer <a href="#define-hp">Hit Points</a> unmarked, you can roll a <strong>d20</strong> as your <a href="#define-action-roll">Hope Die</a>.</p></li>
+			<li><p><strong><em>Rise to the Challenge:</em></strong> You are vigilant in the face of mounting danger. While you have 2 or fewer <a href="#define-hit-point">Hit Points</a> unmarked, you can roll a <strong>d20</strong> as your <a href="#define-action-roll">Hope Die</a>.</p></li>
 		</ul>
 		<h6>Mastery Feature</h6>
 		<ul class="list-unstyled">
@@ -1952,7 +1952,7 @@
 				</ul>
 			<h6>Foundation Features</h6>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Battlemage:</em></strong> You've focused your studies on becoming an unconquerable force on the battlefield. Gain an additional <a href="#define-hp">Hit Point</a> slot.</p></li>
+				<li><p><strong><em>Battlemage:</em></strong> You've focused your studies on becoming an unconquerable force on the battlefield. Gain an additional <a href="#define-hit-point">Hit Point</a> slot.</p></li>
 				<li><p><strong><em>Face Your Fear:</em></strong> When you succeed with <a href="#define-fear">Fear</a> on an <a href="#define-attack-roll">attack roll</a>, you deal an extra <strong>1d10</strong> <a href="#define-damage-type">magic damage</a>.</p></li>
 			</ul>
 		</div>
@@ -1963,7 +1963,7 @@
 		</ul>
 		<h6>Mastery Features</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Thrive in Chaos:</em></strong> When you succeed on an attack, you can mark a <a href="#define-stress">Stress</a> after rolling damage to force the target to mark an additional <a href="#define-hp">Hit Point</a>.</p></li>
+			<li><p><strong><em>Thrive in Chaos:</em></strong> When you succeed on an attack, you can mark a <a href="#define-stress">Stress</a> after rolling damage to force the target to mark an additional <a href="#define-hit-point">Hit Point</a>.</p></li>
 			<li><p><strong><em>Have No Fear:</em></strong> The extra <a href="#define-damage-type">magic damage</a> from your <strong><em>Face Your Fear</em></strong> feature increases to <strong>3d10</strong>.</p></li>
 		</ul>
 	</div>
@@ -3401,7 +3401,7 @@
             <li class="fw-bold">Level 4 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 0</li>
             <li class="mt-3">
-                <p>While you are wearing armor, gain a +2 bonus to your <a href="#define-hp">damage thresholds</a>.</p>
+                <p>While you are wearing armor, gain a +2 bonus to your <a href="#define-hit-point">damage thresholds</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -3414,9 +3414,9 @@
             <li class="mt-3">
                 <p>When you critically succeed on an attack, you can spend up to 3 <a href="#define-hope">Hope</a> and choose one of the following options for each <a href="#define-hope">Hope</a> spent:</p>
                 <ul class="og-list-disc">
-                    <li>You clear a <a href="#define-hp">Hit Point</a>.</li>
+                    <li>You clear a <a href="#define-hit-point">Hit Point</a>.</li>
                     <li>You clear an <a href="#define-armor">Armor Slot</a>.</li>
-                    <li>The target must mark an additional <a href="#define-hp">Hit Point</a>.</li>
+                    <li>The target must mark an additional <a href="#define-hit-point">Hit Point</a>.</li>
                 </ul>
                 <p>You can't choose the same option more than once.</p>
             </li>
@@ -3432,8 +3432,8 @@
                 <p>When you choose this card, permanently gain two of the following benefits:</p>
                 <ul class="og-list-disc">
                     <li>One <a href="#define-stress">Stress</a> slot</li>
-                    <li>One <a href="#define-hp">Hit Point</a> slot</li>
-                    <li>+2 bonus to your <a href="#define-hp">damage thresholds</a></li>
+                    <li>One <a href="#define-hit-point">Hit Point</a> slot</li>
+                    <li>+2 bonus to your <a href="#define-hit-point">damage thresholds</a></li>
                 </ul>
                 <p>Then place this card in your vault permanently.</p>
             </li>
@@ -3446,7 +3446,7 @@
             <li class="fw-bold">Level 6 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-long-rest">long rest</a> when you would make a Death Move, you can spend a <a href="#define-hope">Hope</a> to clear a <a href="#define-hp">Hit Point</a> instead.</p>
+                <p>Once per <a href="#define-long-rest">long rest</a> when you would make a Death Move, you can spend a <a href="#define-hope">Hope</a> to clear a <a href="#define-hit-point">Hit Point</a> instead.</p>
             </li>
         </ul>
     </div></div>
@@ -3471,7 +3471,7 @@
                 <p>When 4 or more of the domain cards in your loadout are from the Blade domain, gain the following benefits:</p>
                 <ul class="og-list-disc">
                     <li>+2 bonus to your <a href="#define-attack-roll">attack rolls</a></li>
-                    <li>+4 bonus to your Severe <a href="#define-hp">damage threshold</a></li>
+                    <li>+4 bonus to your Severe <a href="#define-hit-point">damage threshold</a></li>
                 </ul>
             </li>
         </ul>
@@ -3506,7 +3506,7 @@
             <li class="fw-bold">Recall Cost: 3</li>
             <li class="mt-3">
                 <p>Once per <a href="#define-long-rest">long rest</a>, you can go into a <em>Frenzy</em> until there are no more adversaries within sight.</p>
-                <p>While <em>Frenzied</em>, you can't use <a href="#armor">Armor Slots</a>, and you gain a +10 bonus to your <a href="#define-damage-roll">damage rolls</a> and a +8 bonus to your Severe <a href="#define-hp">damage threshold</a>.</p>
+                <p>While <em>Frenzied</em>, you can't use <a href="#armor">Armor Slots</a>, and you gain a +10 bonus to your <a href="#define-damage-roll">damage rolls</a> and a +8 bonus to your Severe <a href="#define-hit-point">damage threshold</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -3529,7 +3529,7 @@
             <li class="fw-bold">Level 9 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 3</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-long-rest">long rest</a>, spend a <a href="#define-hope">Hope</a> to make an <a href="#define-attack-roll">attack roll</a>. The GM tells you which targets within <a href="#define-range">range</a> it would succeed against. Choose one of these targets and force them to mark 5 <a href="#define-hp">Hit Points</a>.</p>
+                <p>Once per <a href="#define-long-rest">long rest</a>, spend a <a href="#define-hope">Hope</a> to make an <a href="#define-attack-roll">attack roll</a>. The GM tells you which targets within <a href="#define-range">range</a> it would succeed against. Choose one of these targets and force them to mark 5 <a href="#define-hit-point">Hit Points</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -3540,7 +3540,7 @@
             <li class="fw-bold">Level 10 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 0</li>
             <li class="mt-3">
-                <p>When you make a successful attack against an <a href="#define-adversary">adversary</a>, you can mark 4 <a href="#define-stress">Stress</a> to force the target to mark a number of <a href="#define-hp">Hit Points</a> equal to the number of <a href="#define-hp">Hit Points</a> you currently have marked instead of rolling for damage.</p>
+                <p>When you make a successful attack against an <a href="#define-adversary">adversary</a>, you can mark 4 <a href="#define-stress">Stress</a> to force the target to mark a number of <a href="#define-hit-point">Hit Points</a> equal to the number of <a href="#define-hit-point">Hit Points</a> you currently have marked instead of rolling for damage.</p>
             </li>
         </ul>
     </div></div>
@@ -3551,8 +3551,8 @@
             <li class="fw-bold">Level 10 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 3</li>
             <li class="mt-3">
-                <p>When you successfully make an attack with your <a href="#define-weapon">weapon</a>, you never deal damage beneath a target's Major <a href="#define-hp">damage threshold</a> (the target always marks a minimum of 2 <a href="#define-hp">Hit Points</a>).</p>
-                <p>Additionally, when a creature within your weapon's range deals damage to an ally with an attack that doesn't include you, you can mark a <a href="#define-stress">Stress</a> to force them to make a Reaction Roll <strong>(15)</strong>. On a failure, the target must mark a <a href="#define-hp">Hit Point</a>.</p>
+                <p>When you successfully make an attack with your <a href="#define-weapon">weapon</a>, you never deal damage beneath a target's Major <a href="#define-hit-point">damage threshold</a> (the target always marks a minimum of 2 <a href="#define-hit-point">Hit Points</a>).</p>
+                <p>Additionally, when a creature within your weapon's range deals damage to an ally with an attack that doesn't include you, you can mark a <a href="#define-stress">Stress</a> to force them to make a Reaction Roll <strong>(15)</strong>. On a failure, the target must mark a <a href="#define-hit-point">Hit Point</a>.</p>
             </li>
         </ul>
     </div>
@@ -3601,7 +3601,7 @@
             <li class="fw-bold">Level 2 Bone Ability</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>When you cause an <a href="#define-adversary">adversary</a> to mark 1 or more <a href="#define-hp">Hit Points</a>, you can spend 2 <a href="#define-hope">Hope</a> to increase your <a href="#define-evasion">Evasion</a> by the number of <a href="#define-hp">Hit Points</a> they marked. This bonus lasts until after the next attack made against you.</p>
+                <p>When you cause an <a href="#define-adversary">adversary</a> to mark 1 or more <a href="#define-hit-point">Hit Points</a>, you can spend 2 <a href="#define-hope">Hope</a> to increase your <a href="#define-evasion">Evasion</a> by the number of <a href="#define-hit-point">Hit Points</a> they marked. This bonus lasts until after the next attack made against you.</p>
             </li>
         </ul>
     </div></div>
@@ -3675,8 +3675,8 @@
             <li class="mt-3">
                 <p>When observing a creature, you can make an <a href="#define-trait-roll">Instinct Roll</a> against them. On a success, spend a <a href="#define-hope">Hope</a> and ask the GM for one set of information about the target from the following options:</p>
                 <ul class="og-list-disc">
-                    <li>Their unmarked <a href="#define-hp">Hit Points</a> and <a href="#define-stress">Stress</a>.</li>
-                    <li>Their <a href="#define-difficulty">Difficulty</a> and <a href="#define-hp">damage thresholds</a>.</li>
+                    <li>Their unmarked <a href="#define-hit-point">Hit Points</a> and <a href="#define-stress">Stress</a>.</li>
+                    <li>Their <a href="#define-difficulty">Difficulty</a> and <a href="#define-hit-point">damage thresholds</a>.</li>
                     <li>Their tactics and standard attack damage dice.</li>
                     <li>Their features and <a href="#define-experience">Experiences</a>.</li>
                 </ul>
@@ -3772,7 +3772,7 @@
             <li class="fw-bold">Level 9 Bone Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When you have 2 or fewer <a href="#define-hp">Hit Points</a> unmarked, you don't take Minor damage.</p>
+                <p>When you have 2 or fewer <a href="#define-hit-point">Hit Points</a> unmarked, you don't take Minor damage.</p>
             </li>
         </ul>
     </div></div>
@@ -4116,7 +4116,7 @@
             <li class="fw-bold">Level 10 Codex Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-long-rest">long rest</a>, spend 5 <a href="#define-hope">Hope</a> to cast this spell on two or more willing creatures. Until your next <a href="#define-downtime">rest</a>, when a creature connected by this union would mark <a href="#define-stress">Stress</a> or <a href="#define-hp">Hit Points</a>, the connected creatures can choose who marks it.</p>
+                <p>Once per <a href="#define-long-rest">long rest</a>, spend 5 <a href="#define-hope">Hope</a> to cast this spell on two or more willing creatures. Until your next <a href="#define-downtime">rest</a>, when a creature connected by this union would mark <a href="#define-stress">Stress</a> or <a href="#define-hit-point">Hit Points</a>, the connected creatures can choose who marks it.</p>
             </li>
         </ul>
     </div>
@@ -4156,7 +4156,7 @@
                 <p>Your speech is imbued with power. After a <a href="#define-long-rest">long rest</a>, place a number of tokens on this card equal to your <a href="#define-presence">Presence</a>. When you speak with an ally, you can spend a token from this card to give them one benefit from the following options:</p>
                 <ul class="og-list-disc">
                     <li>Your ally clears a <a href="#define-stress">Stress</a>.</li>
-                    <li>Your ally clears a <a href="#define-hp">Hit Point</a>.</li>
+                    <li>Your ally clears a <a href="#define-hit-point">Hit Point</a>.</li>
                     <li>Your ally gains a <a href="#define-hope">Hope</a>.</li>
                 </ul>
                 <p>When you take a <a href="#define-long-rest">long rest</a>, clear all unspent tokens.</p>
@@ -4215,7 +4215,7 @@
             <li class="fw-bold">Level 4 Grace Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>During a <a href="#define-short-rest">short rest</a>, when you take the time to comfort another character while using the Tend to Wounds downtime move on them, clear an additional <a href="#define-hp">Hit Point</a> on that character. When you do, you also clear 2 <a href="#define-hp">Hit Points</a>.</p>
+                <p>During a <a href="#define-short-rest">short rest</a>, when you take the time to comfort another character while using the Tend to Wounds downtime move on them, clear an additional <a href="#define-hit-point">Hit Point</a> on that character. When you do, you also clear 2 <a href="#define-hit-point">Hit Points</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4261,7 +4261,7 @@
             <li class="fw-bold">Level 6 Grace Ability</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>When you mark 1 or more <a href="#define-hp">Hit Points</a> from an attack, you can mark a <a href="#define-stress">Stress</a> to place a number of tokens equal to the number of <a href="#define-hp">Hit Points</a> you marked on this card. On your next successful attack, gain a +5 bonus to your <a href="#define-damage-roll">damage roll</a> for each token on this card, then clear all tokens.</p>
+                <p>When you mark 1 or more <a href="#define-hit-point">Hit Points</a> from an attack, you can mark a <a href="#define-stress">Stress</a> to place a number of tokens equal to the number of <a href="#define-hit-point">Hit Points</a> you marked on this card. On your next successful attack, gain a +5 bonus to your <a href="#define-damage-roll">damage roll</a> for each token on this card, then clear all tokens.</p>
             </li>
         </ul>
     </div></div>
@@ -4297,7 +4297,7 @@
                 <p>When 4 or more of the domain cards in your loadout are from the Grace domain, gain the following benefits:</p>
                 <ul class="og-list-disc">
                     <li>You can mark an <a href="#define-armor">Armor Slot</a> instead of marking a <a href="#define-stress">Stress</a>.</li>
-                    <li>When you would force a target to mark a number of <a href="#define-hp">Hit Points</a>, you can choose instead to force them to mark that number of <a href="#define-stress">Stress</a>.</li>
+                    <li>When you would force a target to mark a number of <a href="#define-hit-point">Hit Points</a>, you can choose instead to force them to mark that number of <a href="#define-stress">Stress</a>.</li>
                 </ul>
             </li>
         </ul>
@@ -4573,7 +4573,7 @@
             <li class="fw-bold">Level 8 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When you take <a href="#define-damage-type">magic damage</a>, place tokens equal to the number of <a href="#define-hp">Hit Points</a> you marked on this card. You can store a number of tokens equal to your <a href="#define-subclass">Spellcast trait</a>.</p>
+                <p>When you take <a href="#define-damage-type">magic damage</a>, place tokens equal to the number of <a href="#define-hit-point">Hit Points</a> you marked on this card. You can store a number of tokens equal to your <a href="#define-subclass">Spellcast trait</a>.</p>
                 <p>When you make a successful attack against a target, you can spend any number of tokens to add a <strong>d6</strong> for each token spent to your <a href="#define-damage-roll">damage roll</a>.</p>
             </li>
         </ul>
@@ -4742,8 +4742,8 @@
             <li class="fw-bold">Level 4 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-long-rest">long rest</a>, you can conjure a field of healing plants around you. Everywhere within <a href="#define-range">Close</a> range of you bursts to life with vibrant nature, allowing you and all allies in the area to clear a <a href="#define-hp">Hit Point</a>.</p>
-                <p>Spend 2 <a href="#define-hope">Hope</a> to allow you and all allies to clear 2 <a href="#define-hp">Hit Points</a> instead.</p>
+                <p>Once per <a href="#define-long-rest">long rest</a>, you can conjure a field of healing plants around you. Everywhere within <a href="#define-range">Close</a> range of you bursts to life with vibrant nature, allowing you and all allies in the area to clear a <a href="#define-hit-point">Hit Point</a>.</p>
+                <p>Spend 2 <a href="#define-hope">Hope</a> to allow you and all allies to clear 2 <a href="#define-hit-point">Hit Points</a> instead.</p>
             </li>
         </ul>
     </div></div>
@@ -4766,7 +4766,7 @@
             <li class="fw-bold">Level 5 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(13)</strong>. On a success, spend 2 <a href="#define-hope">Hope</a> to grow a natural barricade in the shape of a dome that you and one ally can take cover within. While inside the dome, a creature can't be targeted by attacks and can't make attacks. Attacks made against the dome automatically succeed. The dome has the following <a href="#define-hp">damage thresholds</a> and lasts until it marks 3 <a href="#define-hp">Hit Points</a>. Place tokens on this card to represent marking <a href="#define-hp">Hit Points</a>.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(13)</strong>. On a success, spend 2 <a href="#define-hope">Hope</a> to grow a natural barricade in the shape of a dome that you and one ally can take cover within. While inside the dome, a creature can't be targeted by attacks and can't make attacks. Attacks made against the dome automatically succeed. The dome has the following <a href="#define-hit-point">damage thresholds</a> and lasts until it marks 3 <a href="#define-hit-point">Hit Points</a>. Place tokens on this card to represent marking <a href="#define-hit-point">Hit Points</a>.</p>
                 <p>Thresholds: 15/30</p>
             </li>
         </ul>
@@ -4794,7 +4794,7 @@
                     <li>A unique food (Clear 2 <a href="#define-stress">Stress</a>)</li>
                     <li>A beautiful relic (Gain 2 <a href="#define-hope">Hope</a>)</li>
                     <li>An arcane rune (+2 to a <a href="#define-spellcast-roll">Spellcast Roll</a>)</li>
-                    <li>A healing vial (Clear 2 <a href="#define-hp">Hit Points</a>)</li>
+                    <li>A healing vial (Clear 2 <a href="#define-hit-point">Hit Points</a>)</li>
                     <li>A luck charm (Reroll any die)</li>
                     <li>Choose one of the options above.</li>
                 </ol>
@@ -4851,7 +4851,7 @@
             <li class="fw-bold">Level 8 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. Once per <a href="#define-downtime">rest</a> on a success, create a temporary barrier of protective energy around you at <a href="#define-range">Very Close</a> range. You and all allies within the barrier when this spell is cast clear <strong>1d4</strong> <a href="#define-hp">Hit Points</a>. While the barrier is up, you and all allies within have resistance to <a href="#define-damage-type">physical damage</a> from outside the barrier.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. Once per <a href="#define-downtime">rest</a> on a success, create a temporary barrier of protective energy around you at <a href="#define-range">Very Close</a> range. You and all allies within the barrier when this spell is cast clear <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a>. While the barrier is up, you and all allies within have resistance to <a href="#define-damage-type">physical damage</a> from outside the barrier.</p>
                 <p>When you move, the barrier follows you.</p>
             </li>
         </ul>
@@ -4937,8 +4937,8 @@
             <li class="fw-bold">Level 1 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>You lay your hands upon a creature and channel healing magic to close their wounds. When you can take a few minutes to focus on the target you're helping, you can spend 2 <a href="#define-hope">Hope</a> to clear a <a href="#define-hp">Hit Point</a> or a <a href="#define-stress">Stress</a> on them.</p>
-                <p> Once per <a href="#define-long-rest">long rest</a>, when you spend this healing time learning something new about them or revealing something about yourself, you can clear 2 <a href="#define-hp">Hit Points</a> or 2 <a href="#define-stress">Stress</a> on them instead.</p>
+                <p>You lay your hands upon a creature and channel healing magic to close their wounds. When you can take a few minutes to focus on the target you're helping, you can spend 2 <a href="#define-hope">Hope</a> to clear a <a href="#define-hit-point">Hit Point</a> or a <a href="#define-stress">Stress</a> on them.</p>
+                <p> Once per <a href="#define-long-rest">long rest</a>, when you spend this healing time learning something new about them or revealing something about yourself, you can clear 2 <a href="#define-hit-point">Hit Points</a> or 2 <a href="#define-stress">Stress</a> on them instead.</p>
             </li>
         </ul>
     </div></div>
@@ -4971,7 +4971,7 @@
             <li class="fw-bold">Level 2 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(13)</strong> and target a creature other than yourself within <a href="#define-range">Melee</a> range. On a success, mark a <a href="#define-stress">Stress</a> to clear 2 <a href="#define-hp">Hit Points</a> or 2 <a href="#define-stress">Stress</a> on the target. On a failure, mark a <a href="#define-stress">Stress</a> to clear a <a href="#define-hp">Hit Point</a> or a <a href="#define-stress">Stress</a> on the target. You can't heal the same target again until your next <a href="#define-long-rest">long rest</a>.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(13)</strong> and target a creature other than yourself within <a href="#define-range">Melee</a> range. On a success, mark a <a href="#define-stress">Stress</a> to clear 2 <a href="#define-hit-point">Hit Points</a> or 2 <a href="#define-stress">Stress</a> on the target. On a failure, mark a <a href="#define-stress">Stress</a> to clear a <a href="#define-hit-point">Hit Point</a> or a <a href="#define-stress">Stress</a> on the target. You can't heal the same target again until your next <a href="#define-long-rest">long rest</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4982,7 +4982,7 @@
             <li class="fw-bold">Level 3 Splendor Ability</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-downtime">rest</a>, when you succeed on an attack against an <a href="#define-adversary">adversary</a>, you can clear 3 <a href="#define-stress">Stress</a> or a <a href="#define-hp">Hit Point</a>. On a success with <a href="#define-hope">Hope</a>, you also clear 3 <a href="#define-stress">Stress</a> or a <a href="#define-hp">Hit Point</a> on an ally within <a href="#define-range">Close</a> range of you.</p>
+                <p>Once per <a href="#define-downtime">rest</a>, when you succeed on an attack against an <a href="#define-adversary">adversary</a>, you can clear 3 <a href="#define-stress">Stress</a> or a <a href="#define-hit-point">Hit Point</a>. On a success with <a href="#define-hope">Hope</a>, you also clear 3 <a href="#define-stress">Stress</a> or a <a href="#define-hit-point">Hit Point</a> on an ally within <a href="#define-range">Close</a> range of you.</p>
             </li>
         </ul>
     </div></div>
@@ -5016,7 +5016,7 @@
             <li class="fw-bold">Level 4 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Spend 3 <a href="#define-hope">Hope</a> and choose an ally within <a href="#define-range">Close</a> range. They are marked with a glowing sigil of protection. When this ally would make a <a href="#define-death">death move</a>, they clear a <a href="#define-hp">Hit Point</a> instead.</p>
+                <p>Spend 3 <a href="#define-hope">Hope</a> and choose an ally within <a href="#define-range">Close</a> range. They are marked with a glowing sigil of protection. When this ally would make a <a href="#define-death">death move</a>, they clear a <a href="#define-hit-point">Hit Point</a> instead.</p>
                 <p>This effect ends when it saves the target from a <a href="#define-death">death move</a>, you cast Life Ward on another target, or you take a <a href="#define-long-rest">long rest</a>.</p>
             </li>
         </ul>
@@ -5051,7 +5051,7 @@
             <li class="fw-bold">Level 6 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>After a <a href="#define-long-rest">long rest</a>, place a number of tokens equal to your <a href="#define-subclass">Spellcast trait</a> on this card. Touch a creature and spend any number of tokens to clear 2 <a href="#define-hp">Hit Points</a> or 2 <a href="#define-stress">Stress</a> for each token spent.</p>
+                <p>After a <a href="#define-long-rest">long rest</a>, place a number of tokens equal to your <a href="#define-subclass">Spellcast trait</a> on this card. Touch a creature and spend any number of tokens to clear 2 <a href="#define-hit-point">Hit Points</a> or 2 <a href="#define-stress">Stress</a> for each token spent.</p>
                 <p> You can also spend a token from this card when touching a creature to clear the <a href="#define-vulnerable"><em>Vulnerable</em></a> <a href="#define-condition">condition</a> or heal a physical or magical ailment (the GM might require additional tokens depending on the strength of the ailment). When you take a <a href="#define-long-rest">long rest</a>, clear all unspent tokens.</p>
             </li>
         </ul>
@@ -5074,7 +5074,7 @@
             <li class="fw-bold">Level 7 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When you deal damage to an <a href="#define-adversary">adversary</a>, you can spend 2 <a href="#define-hope">Hope</a> to clear a <a href="#define-hp">Hit Point</a> on an ally within <a href="#define-range">Close</a> range.</p>
+                <p>When you deal damage to an <a href="#define-adversary">adversary</a>, you can spend 2 <a href="#define-hope">Hope</a> to clear a <a href="#define-hit-point">Hit Point</a> on an ally within <a href="#define-range">Close</a> range.</p>
             </li>
         </ul>
     </div></div>
@@ -5087,8 +5087,8 @@
             <li class="mt-3">
                 <p>When 4 or more of the domain cards in your loadout are from the Splendor domain, gain the following benefits:</p>
                 <ul class="og-list-disc">
-                    <li>+3 bonus to your Severe <a href="#define-hp">damage threshold</a></li>
-                    <li>Once per <a href="#define-long-rest">long rest</a>, when incoming damage would require you to mark a number of <a href="#define-hp">Hit Points</a>, you can choose to mark that much <a href="#define-stress">Stress</a> or spend that much <a href="#define-hope">Hope</a> instead.</li>
+                    <li>+3 bonus to your Severe <a href="#define-hit-point">damage threshold</a></li>
+                    <li>Once per <a href="#define-long-rest">long rest</a>, when incoming damage would require you to mark a number of <a href="#define-hit-point">Hit Points</a>, you can choose to mark that much <a href="#define-stress">Stress</a> or spend that much <a href="#define-hope">Hope</a> instead.</li>
                 </ul>
             </li>
         </ul>
@@ -5100,7 +5100,7 @@
             <li class="fw-bold">Level 8 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Mark a <a href="#define-stress">Stress</a> to cast a protective aura on a target within <a href="#define-range">Very Close</a> range. When the target marks an <a href="#define-armor">Armor Slot</a>, they reduce the severity of the attack by an additional threshold. If this spell causes a creature who would be damaged to instead mark no <a href="#define-hp">Hit Points</a>, the effect ends.</p>
+                <p>Mark a <a href="#define-stress">Stress</a> to cast a protective aura on a target within <a href="#define-range">Very Close</a> range. When the target marks an <a href="#define-armor">Armor Slot</a>, they reduce the severity of the attack by an additional threshold. If this spell causes a creature who would be damaged to instead mark no <a href="#define-hit-point">Hit Points</a>, the effect ends.</p>
                 <p>You can only hold Shield Aura on one creature at a time.</p>
             </li>
         </ul>
@@ -5135,7 +5135,7 @@
             <li class="fw-bold">Level 9 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(16)</strong>. On a success, mark any number of <a href="#define-stress">Stress</a> to target a line of allies within <a href="#define-range">Far</a> range. You can clear <a href="#define-hp">Hit Points</a> on the targets equal to the number of <a href="#define-stress">Stress</a> marked, divided among them however you'd like.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(16)</strong>. On a success, mark any number of <a href="#define-stress">Stress</a> to target a line of allies within <a href="#define-range">Far</a> range. You can clear <a href="#define-hit-point">Hit Points</a> on the targets equal to the number of <a href="#define-stress">Stress</a> marked, divided among them however you'd like.</p>
             </li>
         </ul>
     </div></div>
@@ -5173,7 +5173,7 @@
             <li class="fw-bold">Level 1 Valor Ability</li>
             <li class="fw-bold">Recall Cost: 0</li>
             <li class="mt-3">
-                <p>When you choose not to equip armor, you have a base <a href="#armor">Armor Score</a> of 3 + your <a href="#define-strength">Strength</a> and use the following as your base <a href="#define-hp">damage thresholds</a>:</p>
+                <p>When you choose not to equip armor, you have a base <a href="#armor">Armor Score</a> of 3 + your <a href="#define-strength">Strength</a> and use the following as your base <a href="#define-hit-point">damage thresholds</a>:</p>
                 <ul class="og-list-disc">
                     <li><strong><em>Tier 1:</em></strong> 9 / 19</li>
                     <li><strong><em>Tier 2:</em></strong> 11 / 24</li>
@@ -5292,7 +5292,7 @@
             <li class="fw-bold">Level 5 Valor Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-downtime">rest</a>, when you critically succeed on an attack, you and all allies who can see or hear you can clear a <a href="#define-hp">Hit Point</a> or <strong>1d4</strong> <a href="#define-stress">Stress</a>.</p>
+                <p>Once per <a href="#define-downtime">rest</a>, when you critically succeed on an attack, you and all allies who can see or hear you can clear a <a href="#define-hit-point">Hit Point</a> or <strong>1d4</strong> <a href="#define-stress">Stress</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -5315,7 +5315,7 @@
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
                 <p>Gain a bonus to your Severe threshold equal to your <a href="#define-proficiency-type">Proficiency</a>.</p>
-                <p>When you mark 1 or more <a href="#define-hp">Hit Points</a> from an attack, clear a <a href="#define-stress">Stress</a>.</p>
+                <p>When you mark 1 or more <a href="#define-hit-point">Hit Points</a> from an attack, clear a <a href="#define-stress">Stress</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -5340,7 +5340,7 @@
                 <p>When 4 or more of the domain cards in your loadout are from the Valor domain, gain the following benefits:</p>
                 <ul class="og-list-disc">
                     <li>+1 bonus to your <a href="#armor">Armor Score</a></li>
-                    <li>When you mark 1 or more <a href="#define-hp">Hit Points</a> without marking an <a href="#define-armor">Armor Slot</a>, clear an Armor Slot.</li>
+                    <li>When you mark 1 or more <a href="#define-hit-point">Hit Points</a> without marking an <a href="#define-armor">Armor Slot</a>, clear an Armor Slot.</li>
                 </ul>
             </li>
         </ul>
@@ -5397,7 +5397,7 @@
             <li class="fw-bold">Level 10 Valor Ability</li>
             <li class="fw-bold">Recall Cost: 4</li>
             <li class="mt-3">
-                <p>When you mark your last <a href="#define-hp">Hit Point</a>, instead of making a <a href="#define-death">death move</a>, you can roll a <strong>d6</strong> and clear a number of <a href="#define-hp">Hit Points</a> equal to the result. Then place this card in your vault.</p>
+                <p>When you mark your last <a href="#define-hit-point">Hit Point</a>, instead of making a <a href="#define-death">death move</a>, you can roll a <strong>d6</strong> and clear a number of <a href="#define-hit-point">Hit Points</a> equal to the result. Then place this card in your vault.</p>
             </li>
         </ul>
     </div></div>
@@ -5488,7 +5488,7 @@
 	<p>Drakona resemble wingless dragons in humanoid form and possess a powerful elemental breath. <span class="og-omit">All drakona have thick scales that provide excellent natural armor against both attacks and the forces of nature. They are large in size, ranging from 5&ndash;7 feet (1.5&ndash;2.1m) on average, with long sharp teeth. New teeth grow throughout a drakona's approximately 350-year lifespan, so they are never in danger of permanently losing an incisor. Unlike their dragon ancestors, drakona don't have wings and can't fly without magical aid. Members of this ancestry pass down the element of their breath through generations, though in rare cases, a drakona's elemental power will differ from the rest of their family's.</span></p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Scales:</em></strong> Your scales act as natural protection. When you would take Severe damage, you can mark a <a href="#define-stress">Stress</a> to mark 1 fewer <a href="#define-hp">Hit Points</a>.</p></li>
+		<li><p><strong><em>Scales:</em></strong> Your scales act as natural protection. When you would take Severe damage, you can mark a <a href="#define-stress">Stress</a> to mark 1 fewer <a href="#define-hit-point">Hit Points</a>.</p></li>
 		<li><p><strong><em>Elemental Breath:</em></strong> Choose an element for your breath (such as electricity, fire, or ice). You can use this breath against a target or group of targets within <a href="#define-range">Very Close</a> range, treating it as an <a href="#define-instint">Instinct</a> <a href="#define-weapon">weapon</a> that deals <strong>d8</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency">Proficiency</a>.</p></li>
 	</ul>
 </div>
@@ -5500,7 +5500,7 @@
 	<p class="og-omit">Their hair grows thickly&mdash;usually on their heads, but some dwarves have thick hair across their bodies as well. Dwarves of all genders can grow facial hair, which they often style in elaborate arrangements. Typically, dwarves live up to 250 years of age, maintaining their muscle mass well into later life.</p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Thick Skin:</em></strong> When you take Minor damage, you can mark 2 <a href="#define-stress">Stress</a> instead of marking a <a href="#define-hp">Hit Point</a>.</p></li>
+		<li><p><strong><em>Thick Skin:</em></strong> When you take Minor damage, you can mark 2 <a href="#define-stress">Stress</a> instead of marking a <a href="#define-hit-point">Hit Point</a>.</p></li>
 		<li><p><strong><em>Increased Fortitude:</em></strong> Spend 3 <a href="#define-hope">Hope</a> to halve incoming <a href="#define-damage-type">physical damage</a>.</p></li>
 	</ul>
 </div>
@@ -5570,7 +5570,7 @@
 	<p class="og-omit">Galapa come in a variety of earth tones&mdash;most often shades of green and brown&mdash; and possess unique patterns on their shells. Members of this ancestry can draw their head, arms, and legs into their shell for protection to use it as a natural shield when defensive measures are needed. Some supplement their shell's strength or appearance by attaching armor or carving unique designs, but the process is exceedingly painful. Most galapa move slowly no matter their age, and they can live approximately 150 years.</p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Shell:</em></strong> Gain a bonus to your  <a href="define-hp">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</p></li>
+		<li><p><strong><em>Shell:</em></strong> Gain a bonus to your  <a href="define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</p></li>
 		<li><p><strong><em>Retract:</em></strong> Mark a <a href="#define-stress">Stress</a> to retract into your shell. While in your shell, you have resistance to <a href="#define-damage-type">physical damage</a>, you have <a href="#define-advantage">disadvantage</a> on <a href="#define-action-roll">action rolls</a>, and you can't move.</p></li>
 	</ul>
 </div>
@@ -5581,7 +5581,7 @@
 	<p>Giants are towering humanoids with broad shoulders, long arms, and one to three eyes. <span class="og-omit">Adult giants range from 6&half;&ndash;8&half; feet (2&ndash;2.6 m) tall and are naturally muscular, regardless of body type. They are easily recognized by their wide frames and elongated arms and necks. Though they can have up to three eyes, all giants are born with none and remain sightless for their first year of life. Until a giant reaches the age of 10 and their features fully develop, the formation of their eyes may fluctuate. Those with a single eye are commonly known as cyclops. The average giant lifespan is about 75 years.</span></p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Endurance:</em></strong> Gain an additional <a href="#define-hp">Hit Point</a> slot at <a href="#define-character-creation">character creation</a>.</p></li>
+		<li><p><strong><em>Endurance:</em></strong> Gain an additional <a href="#define-hit-point">Hit Point</a> slot at <a href="#define-character-creation">character creation</a>.</p></li>
 		<li><p><strong><em>Reach:</em></strong> Treat any <a href="#define-weapon">weapon</a>, ability, spell, or other feature that has a <a href="#define-range">Melee</a> range as though it has a <a href="#define-range">Very Close</a> range instead.</p></li>
 	</ul>
 </div>
@@ -5651,7 +5651,7 @@
 	<p class="og-omit">Tusks come in various sizes, and though they extend from the mouth, they aren't used for consuming food. Instead, many orcs choose to decorate their tusks with significant ornamentation. Orcs typically live for 125 years, and unless altered, their tusks continue to grow throughout the course of their lives. Their ears are pointed, and their hair and skin typically have green, blue, pink, or gray tones. Orcs tend toward a muscular build, and their average height ranges from 5&ndash;6&half; feet (1.5&ndash;2.0 m).</p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Sturdy:</em></strong> When you have 1 <a href="#define-hp">Hit Point</a> remaining, attacks against you have <a href="#define-advantage">disadvantage</a>.</p></li>
+		<li><p><strong><em>Sturdy:</em></strong> When you have 1 <a href="#define-hit-point">Hit Point</a> remaining, attacks against you have <a href="#define-advantage">disadvantage</a>.</p></li>
 		<li><p><strong><em>Tusks:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can spend a Hope to gore the target with your tusks, dealing an extra <strong>1d6</strong> damage.</p></li>
 	</ul>
 </div>
@@ -5911,7 +5911,7 @@
 	<h2 id="experiences">Experiences<a class="og-h-anchor" href="#experiences" title="Permalink" aria-hidden="true"></a></h2>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 20</li></ul>
 	<p>An <strong>Experience</strong> is a word or phrase that evokes a set of skills, personality traits, or aptitudes a PC has acquired over the course of their life. They can relate to your backstory, characteristics, specialties, skills.</p>
-	<p>Experiences start with a +2 <a href="#define-modifier">modifier</a>. PCs can spend a <a href="#define-hope">Hope</a> to add an Experience's <a href="#define-modifier">modifier</a> to a relevant <a href="#define-action-roll">action roll</a>.</p>
+	<p>Experiences start with a +2 <a href="#define-modifier">modifier</a>. PCs can spend a <a href="#define-hope">Hope</a> to add an Experience's modifier to a relevant <a href="#define-action-roll">action roll</a>.</p>
 	<p>You can purchase an <a href="#define-advancement">advancement</a> to increase an Experience's modifier when you gain a <a href="#define-level">level</a>, and you create new Experiences each time you reach a new <a href="#define-tier">tier</a>.</p>
 </div>
 <div class="og-topbar">
@@ -5991,7 +5991,7 @@
 	</table></div>
 </div>
 <div id="define-advancement">
-	<h4 id="level-up-step-2"><span class="og-omit">Step 2: </span>Character Advancements<a class="og-h-anchor" href="#level-up-step-2" title="Permalink" aria-hidden="true"></a></h4>
+	<h4 id="level-up-step-2"><span class="og-omit">Step 2: </span>Advancements<a class="og-h-anchor" href="#level-up-step-2" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 110</li></ul>
 	<p>Each time you gain a <a href="#define-level">level</a>, you gain two <strong>advancements</strong> which you use to purchase options available to your <a href="#define-tier">tier</a> or lower. You can purchase an advancement a number of times equal to its slots. The <a href="#define-proficiency">Proficiency</a> and <a href="#define-multiclass=">multiclass</a> options require both advancements purchase them.</p>
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
@@ -6014,8 +6014,8 @@
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">3</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;&nbsp;&#x25A2;</span></td>
 			</tr>
 			<tr>
-				<th class="fw-normal" scope="row">HP</th>
-				<td>Gain 1 <a href="#define-hp">Hit Point</a> slot.</td>
+				<th class="fw-normal" scope="row">Hit Point</th>
+				<td>Gain 1 <a href="#define-hit-point">Hit Point</a> slot.</td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
@@ -6036,7 +6036,7 @@
 			</tr>
 			<tr>
 				<th class="fw-normal" scope="row">Domain Card</th>
-				<td>Choose a new <a href="#define-domain-card">domain card</a><span class="og-omit"> from your <a href="#define-domain">domains</a>. The card must be your level or lower, and its level can't exceed the <a href="#define-tier">tier</a> of the slot used to purchase this advancement.</span></td>
+				<td>Choose a new <a href="#define-domain-card">domain card</a><span class="og-omit"> from your <a href="#define-domain">domains</a>. The card must be your level or lower, and its level can't exceed the <a href="#define-tier">tier</a> of the slot used to purchase this advancement</span>.</td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">1</span><span aria-hidden="true">&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">1</span><span aria-hidden="true">&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">1</span><span aria-hidden="true">&#x25A2;</span></td>
@@ -6050,7 +6050,7 @@
 			</tr>
 			<tr>
 				<th class="fw-normal" scope="row">Enhanced Subclass</th>
-				<td>Progress a <a href="#define-subclass">subclass</a>, gaining its specialization feature&mdash;or if you have them already, its mastery features. <span class="og-omit">Choosing this option excludes the <strong>Multiclass</strong> advancement for this <a href="#define-tier">tier</a>.</span></td>
+				<td>Progress a <a href="#define-subclass">subclass</a><span class="og-omit">, gaining its specialization feature&mdash;or if you have them already, its mastery features. Choosing this option excludes the <strong>Multiclass</strong> advancement for this <a href="#define-tier">tier</a></span>.</td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">&mdash;</span><span aria-hidden="true">&mdash;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">1</span><span aria-hidden="true">&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">1</span><span aria-hidden="true">&#x25A2;</span></td>
@@ -6082,18 +6082,18 @@
 </div>
 <h4 id="level-up-step-3">Step 3: Damage Thresholds<a class="og-h-anchor" href="#level-up-step-3" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
-<p>Increase all <a href="#define-hp">damage thresholds</a> by 1.</p>
+<p>Increase all <a href="#define-hit-point">damage thresholds</a> by 1.</p>
 <h4 id="level-up-step-4">Step 4: Domain Cards<a class="og-h-anchor" href="#level-up-step-4" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
 <p>Acquire a new <a href="#define-domain-card">domain card</a> at your level or lower from one of the <a href="#define-domain">domains</a> for your <a href="#define-class">class</a> and add it to your <a href="#define-loadout">loadout or vault</a>. If your loadout is already full, you can't add the new card to it until you move another into your vault. You can also exchange one domain card you've previously acquired for a different domain card of the same level or lower.</p>
 <hr>
 <div id="define-equipment">
-	<h2 id="equipment">Equipment<a class="og-h-anchor" href="#define-equipment">" title="Permalink" aria-hidden="true"></a></h2>
+	<h2 id="equipment">Equipment<a class="og-h-anchor" href="#define-equipment" title="Permalink" aria-hidden="true"></a></h2>
 	<div class="alert ps-4 pb-0 og-omit">
 		<div class="row">
 			<div class="col-12 col-md-6">
 				<ul class="list-unstyled">
-					<li><span class="h6"><a href="#weapons">Weapons</a></span>
+					<li><span class="h6"><a href="#define-weapon">Weapons</a></span>
 						<ul class="list-unstyled">
 							<li><span><a href="#weapons-primary">Primary Weapons</a></span>
 								<ul class="list-unstyled small">
@@ -6140,7 +6140,7 @@
 			</div>
 			<div class="col-12 col-md-6">
 				<ul class="list-unstyled">
-					<li><span class="h6"><a href="#armor">Armor</a></span>
+					<li><span class="h6"><a href="#define-armor">Armor</a></span>
 						<ul class="og-list-inline">
 							<li class="list-inline-item"><a href="#armor-tier-1">Tier 1</a></li>
 							<li class="list-inline-item"><a href="#armor-tier-1">Tier 2</a></li>
@@ -6166,31 +6166,27 @@
 	<h3 id="weapons">Weapons<a class="og-h-anchor" href="#weapons" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 112</li><li>Page 113</li></ul>
 	<ul class="og-list-disc">
-		<li><strong>Equipped Weapons:</strong> Your equipped weapons are the ones listed in the <strong>Active Weapons</strong> section of your character sheet. You can equip one <strong>primary</strong> weapon and one <strong>secondary</strong> weapon, and can't attack with weapons that aren't equipped. Equipping a <strong>magic weapon</strong> requires a <a href="#define-subclass">Spellcast trait</a>.</li>
+		<li><strong>Active Weapons:</strong> You can equip one active <strong>primary</strong> weapon and one <strong>secondary</strong> weapon. You can't attack with unequipped weapons.</li>
 		<li><strong>Tier Limits:</strong> You can't equip weapons or armor with a higher <a href="#define-tier">tier</a> than you.</li>
-		<li><strong>Inventory Weapons:</strong> You can carry up to two additional weapons in the <strong>Inventory Weapon</strong> areas of the character sheet.</li>
-		<li><strong>Swapping Weapons:</strong> You can swap an Inventory Weapon with an Active Weapon of the same burden at no cost during a <a href="#define-downtime">rest</a> or moment of calm; otherwise, you must mark a <a href="#define-stress">Stress</a> to do so.</li>
-		<li><strong>Throwing Weapons:</strong> You can throw an equipped <a href="#define-weapon">weapon</a> at a target within <a href="#define-range">Very Close</a> range, making the <a href="#define-attack-roll">attack roll</a> with <a href="#define-finesse">Finesse</a>. On a success, deal damage as usual for that weapon. Once thrown, the weapon is no longer considered equipped. Until you retrieve and re-equip it, you can't attack with it or benefit from its features.</li>
-	</ul>
+		<li><strong>Inventory Weapons:</strong> You can carry up to two additional weapons in your inventory.</li>
+		<li><strong>Swapping Weapons:</strong> You can swap an Inventory Weapon with an Active Weapon of the same burden during <a href="#define-downtime">rest</a> or a moment of calm. In danger, you must mark a <a href="#define-stress">Stress</a> to do so.</li>
+		<li><strong>Throwing Weapons:</strong> You can make an <a href="#define-finesse">Finesse</a> <a href="#define-attack-roll">attack roll</a> to throw a weapon within <a href="#define-range">Very Close</a> range, dealing the weapon's usual <a href="#define-damage-roll">damage</a> on a success. Once thrown, the weapon isn't equipped.</li>
+	</ul><h4 class="h6">Weapon Anatomy</h4>
+	<dl>
+		<dt>Trait</dt>
+		<dd>The <a href="#define-trait">trait</a> used for <a href="#define-attack-roll">attack roll</a> with the weapon.</dd>
+		<dt>Range</dt>
+		<dd>The maximum <a href="#define-range">range</a> between attacker and target.</dd>
+		<dt>Damage</dt>
+		<dd>The <a href="#define-damage-roll">damage dice</a> rolled on a successful attack. If it includes a <a href="#define-modifier">modifier</a>, add it to the total.</dd>
+		<dt>Damage Type</dt>
+		<dd>Weapons that deal <a href="#define-damage-type">magic damage</a> require a <a href="#define-subclass">Spellcast trait</a> to equip.</dd>
+		<dt>Burden</dt>
+		<dd>The number of <strong>hands</strong> it occupies when equipped. A PC's maximum burden is two hands.</dd>
+		<dt>Feature</dt>
+		<dd>Some weapons grant a <strong>feature</strong> when equipped.</dd>
+	</dl>
 </div>
-<h4 class="h6">Weapon Anatomy</h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 112</li><li>Page 113</li></ul>
-<dl>
-	<dt>Category</dt>
-	<dd>A weapon's <strong>category</strong> specifies whether it is a <strong>Primary</strong> or <strong>Secondary</strong> weapon.</dd>
-	<dt>Trait</dt>
-	<dd>A weapon's <strong>trait</strong> specifies which <a href="#define-trait">trait</a> to use when making an <a href="#define-attack-roll">attack roll</a> with it.</dd>
-	<dt>Range</dt>
-	<dd>A weapon's <a href="#define-range">range</a> specifies the maximum <strong>distance</strong> between the attacker and their target when attacking with it.</dd>
-	<dt>Damage</dt>
-	<dd>A weapon's <strong>damage</strong> indicates the size of the <a href="#define-damage-roll">damage dice</a> you roll on a successful attack with it; you roll a number of dice equal to your <a href="#define-proficiency">Proficiency</a>. If the damage includes a flat modifier, this number is added to the total <a href="#define-damage-roll">damage rolled</a>, but is not altered or affected by <a href="#define-proficiency">Proficiency</a>.</dd>
-	<dt>Damage Type</dt>
-	<dd>A weapon's <a href="#define-damage-type">damage type</a> indicates whether it deals physical or <a href="#define-damage-type">magic damage</a>. Weapons that deal <a href="#define-damage-type">magic damage</a> can only be wielded by characters with a <a href="#define-subclass">Spellcast trait</a>.</dd>
-	<dt>Burden</dt>
-	<dd>A weapon's <strong>burden</strong> indicates how many <strong>hands</strong> it occupies when equipped. Your character's maximum burden is 2 hands.</dd>
-	<dt>Feature</dt>
-	<dd>A weapon's <strong>feature</strong> is a special rule that stays in effect while the weapon is equipped.</dd>
-</dl>
 <hr>
 <h4 id="weapons-primary">Primary Weapon Tables<a class="og-h-anchor" href="#weapons-primary" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 115</li></ul>
@@ -6592,7 +6588,7 @@
             <td class="text-center og-nowrap">Melee</td>
             <td class="text-center og-nowrap">d8+3 phy</td>
             <td class="text-center og-nowrap">One-Handed</td>
-            <td><em><strong>Deadly:</strong></em> When you deal Severe damage, the target must mark an additional <a href="#define-hp">HP</a>.
+            <td><em><strong>Deadly:</strong></em> When you deal Severe damage, the target must mark an additional <a href="#define-hit-point">Hit Point</a>.
             </td>
         </tr>
         <tr>
@@ -6965,7 +6961,7 @@
             <td class="text-center og-nowrap">Melee</td>
             <td class="text-center og-nowrap">d12+7 phy</td>
             <td class="text-center og-nowrap">Two-Handed</td>
-            <td><em><strong>Brave:</strong></em> &minus;1 to <a href="#define-evasion">Evasion</a>; +3 to Severe <a href="define-hp">damage threshold</a></td>
+            <td><em><strong>Brave:</strong></em> &minus;1 to <a href="#define-evasion">Evasion</a>; +3 to Severe <a href="define-hit-point">damage threshold</a></td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Hammer of Wrath</th>
@@ -7996,22 +7992,18 @@
 	<h4 class="h6">Equipping Armor</h4>
 	<ul class="og-list-disc">
 		<li><strong>Equipping:</strong> You can't equip armor while in danger or under pressure, and you can't equip armor with a higher <a href="#define-tier">tier</a> than you.</li>
-		<li><strong>Active Armor:</strong> You can only wear one Active Armor at a time.</li>
-		<li><strong>Tracking Armor:</strong> Each armor has its own Armor Slots. If you change your armor, track how many slots are marked, then recalculate your <a href="define-hp">damage thresholds</a>. You can't carry armor in your inventory.</li>
+		<li><strong>Active Armor:</strong> You can equip one Active Armor at a time.</li>
+		<li><strong>Exchanging Armor:</strong> Each armor has its own Armor Slots. If you change your armor, track how many slots are marked, then recalculate your <a href="#define-hit-point">damage thresholds</a>. You can't carry armor in your inventory.</li>
 	</ul>
-	<div class="og-omit">
-		<h4 class="h6">Armor Anatomy</h4>
-		<dl>
-			<dt>Armor Score</dt>
-			<dd>An armor's base armor score indicates how many <strong>Armor Slots</strong> it provides its wearer before additional bonuses are added to calculate their total Armor Score. A PC's Armor Score can't exceed 12.</dd>
-			<dt>Base Thresholds</dt>
-			<dd>An armor's base thresholds determine its wearer's major and severe <a href="define-hp">damage thresholds</a> before adding bonuses to calculate their final <a href="#define-hp">damage thresholds</a>.</dd>
-			<dt>Feature</dt>
-			<dd>Some armor also has a feature. An armor's feature is a special rule that stays in effect while the armor is equipped.</dd>
-		</dl>
-	</div>
-	<h4 class="h6">Armor Slots</h4>
-	<p>When you take damage, you can mark one <strong>Armor Slot</strong> to reduce the number of <a href="#define-hp">Hit Points</a> you would mark by one. If your character has an Armor Score of 0, you can't mark Armor Slots. If an effect temporarily increases your Armor Score, it increases your available Armor Slots by the same amount; when the effect ends, so does the availability of these Armor Slots.</p>
+	<h4 class="h6">Armor Anatomy</h4>
+	<dl>
+		<dt>Armor Score and Armor Slots</dt>
+		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Armor Slots</strong> plus any <a href="#define-modifier">modifiers</a> to your Armor Score (to a maximum of 12). When you would mark <a href="#define-hit-point">Hit Points</a>, you can mark <strong>Armor Slots</strong> instead. If you Armor Score is temporarily increased, your Armor Slots increase by the same amount, and when the effect ends, so does their availability.</dd>
+		<dt>Base Thresholds</dt>
+		<dd>An armor's base thresholds contributes to your Major and Severe <a href="#define-hit-point">damage thresholds</a>. Be sure to add your <a href="#define-level">level</a> when calculating your final damage threshold.</dd>
+		<dt>Feature</dt>
+		<dd>Some armors grant a feature when equipped.</dd>
+	</dl>
 </div>
 <h4 id="armor-tables">Armor Tables<a class="og-h-anchor" href="#armor-tables" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 126</li></ul>
@@ -8095,7 +8087,7 @@
             <th class="fw-normal" scope="row">Elundrian Chain Armor</th>
             <td class="text-center og-nowrap">9 / 21</td>
             <td class="text-center og-nowrap">4</td>
-            <td><em><strong>Warded:</strong></em> You reduce incoming <a href="#define-damage-type">magic damage</a> by your <a href="#armor">Armor Score</a> before applying it to your <a href="define-hp">damage thresholds</a>.</td>
+            <td><em><strong>Warded:</strong></em> You reduce incoming <a href="#define-damage-type">magic damage</a> by your <a href="#armor">Armor Score</a> before applying it to your <a href="define-hit-point">damage thresholds</a>.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Harrowbone Armor</th>
@@ -8107,7 +8099,7 @@
             <th class="fw-normal" scope="row">Irontree Breastplate Armor</th>
             <td class="text-center og-nowrap">9 / 20</td>
             <td class="text-center og-nowrap">4</td>
-            <td><em><strong>Reinforced:</strong></em> When you mark your last <a href="#define-armor">Armor Slot</a>, increase your <a href="define-hp">damage thresholds</a> by +2 until you clear at least 1 Armor Slot.</td>
+            <td><em><strong>Reinforced:</strong></em> When you mark your last <a href="#define-armor">Armor Slot</a>, increase your <a href="define-hit-point">damage thresholds</a> by +2 until you clear at least 1 Armor Slot.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Runetan Floating Armor</th>
@@ -8264,7 +8256,7 @@
             <th class="fw-normal" scope="row">Full Fortified Armor</th>
             <td class="text-center og-nowrap">15 / 40</td>
             <td class="text-center og-nowrap">4</td>
-            <td><em><strong>Fortified:</strong></em> When you mark an <a href="#define-armor">Armor Slot</a>, you reduce the severity of an attack by two <a href="#define-hp">thresholds</a> instead of one.</td>
+            <td><em><strong>Fortified:</strong></em> When you mark an <a href="#define-armor">Armor Slot</a>, you reduce the severity of an attack by two <a href="#define-hit-point">thresholds</a> instead of one.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Veritas Opal Armor</th>
@@ -8601,7 +8593,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">7</th>
-					<td><div id="define-loot-minor-health-potion"><strong><em>Minor Health Potion:</em></strong> Clear 1d4 <a href="#define-hp">HP</a>.</div></td>
+					<td><div id="define-loot-minor-health-potion"><strong><em>Minor Health Potion:</em></strong> Clear 1d4 <a href="#define-hit-point">Hit Points</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">8</th>
@@ -8645,11 +8637,11 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">18</th>
-					<td><div id="define-loot-snap-powder"><strong><em>Snap Powder:</em></strong> Mark a <a href="#define-stress">Stress</a> and clear a <a href="#define-hp">HP</a>.</div></td>
+					<td><div id="define-loot-snap-powder"><strong><em>Snap Powder:</em></strong> Mark a <a href="#define-stress">Stress</a> and clear a <a href="#define-hit-point">Hit Points</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">19</th>
-					<td><div id="define-loot-health-potion"><strong><em>Health Potion:</em></strong> Clear 1d4+1 <a href="#define-hp">HP</a>.</div></td>
+					<td><div id="define-loot-health-potion"><strong><em>Health Potion:</em></strong> Clear 1d4+1 <a href="#define-hit-point">Hit Points</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">20</th>
@@ -8738,7 +8730,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">41</th>
-					<td><div id="define-loot-sun-tree-sap"><strong><em>Sun Tree Sap:</em></strong> Consume this sap to roll a <strong>d6</strong>. On a result of 5&ndash;6, clear 2 <a href="#define-hp">HP</a>. On a result of 2&ndash;4, clear 3 <a href="#define-stress">Stress</a>. On a result of 1, see through the veil of death and return unscathed, gaining one scar.</div></td>
+					<td><div id="define-loot-sun-tree-sap"><strong><em>Sun Tree Sap:</em></strong> Consume this sap to roll a <strong>d6</strong>. On a result of 5&ndash;6, clear 2 <a href="#define-hit-point">Hit Points</a>. On a result of 2&ndash;4, clear 3 <a href="#define-stress">Stress</a>. On a result of 1, see through the veil of death and return unscathed, gaining one scar.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">42</th>
@@ -8746,7 +8738,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">43</th>
-					<td><div id="define-loot-major-health-potion"><strong><em>Major Health Potion:</em></strong> Clear <strong>1d4+2</strong> <a href="#define-hp">HP</a>.</div></td>
+					<td><div id="define-loot-major-health-potion"><strong><em>Major Health Potion:</em></strong> Clear <strong>1d4+2</strong> <a href="#define-hit-point">Hit Points</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">44</th>
@@ -8778,7 +8770,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">51</th>
-					<td><div id="define-loot-feast-of-xuria"><strong><em>Feast of Xuria:</em></strong> You can eat this meal to clear all <a href="#define-hp">HP</a> and <a href="#define-stress">Stress</a> and gain <strong>1d4</strong> <a href="#define-hope">Hope</a>.</div></td>
+					<td><div id="define-loot-feast-of-xuria"><strong><em>Feast of Xuria:</em></strong> You can eat this meal to clear all <a href="#define-hit-point">Hit Points</a> and <a href="#define-stress">Stress</a> and gain <strong>1d4</strong> <a href="#define-hope">Hope</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">52</th>
@@ -8798,11 +8790,11 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">56</th>
-					<td><div id="define-loot-sweet-moss"><strong><em>Sweet Moss:</em></strong> You can consume this moss during a rest to clear <strong>1d4</strong> <a href="#define-hp">HP</a> or <strong>1d4</strong> <a href="#define-stress">Stress</a>.</div></td>
+					<td><div id="define-loot-sweet-moss"><strong><em>Sweet Moss:</em></strong> You can consume this moss during a rest to clear <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a> or <strong>1d4</strong> <a href="#define-stress">Stress</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">57</th>
-					<td><div id="define-loot-blinding-orb"><strong><em>Blinding Orb:</em></strong> You can activate this orb to create a flash of bright light. All targets within <a href="#define-range">Close</a> range become <em>Blinded</em> until they mark <a href="#define-hp">HP</a>.</div></td>
+					<td><div id="define-loot-blinding-orb"><strong><em>Blinding Orb:</em></strong> You can activate this orb to create a flash of bright light. All targets within <a href="#define-range">Close</a> range become <em>Blinded</em> until they mark <a href="#define-hit-point">Hit Points</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">58</th>
@@ -8810,7 +8802,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">59</th>
-					<td><div id="define-loot-mirror-of-marigold"><strong><em>Mirror of Marigold:</em></strong> When you take <a href="#define-hp">damage</a>, you can spend a <a href="#define-hope">Hope</a> to negate that damage, after which the mirror shatters.</div></td>
+					<td><div id="define-loot-mirror-of-marigold"><strong><em>Mirror of Marigold:</em></strong> When you take <a href="#define-hit-point">damage</a>, you can spend a <a href="#define-hope">Hope</a> to negate that damage, after which the mirror shatters.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">60</th>
@@ -9166,43 +9158,42 @@
 <div id="define-evasion">
 	<h3 id="evasion">Evasion<a class="og-h-anchor" href="#evasion" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-	<p>Evasion represents a character's ability to avoid attacks and other unwanted effects. Any roll made against a PC has a <a href="#define-difficulty">Difficulty</a> equal to their Evasion. A PC's starting Evasion is determined by their <a href="#define-class">class</a>, and can be modified by <a href="#define-domain-card">domain cards</a>, <a href="#define-equipment">Equipment</a>, <a href="#define-condition">conditions</a>, and other effects.</p>
-	<p>You can choose an <a href="#define-advancement">advancement</a> to increase your Evasion when you <a href="#define-level">level up</a>.</p>
+	<p>Evasion represents a character's ability to avoid attacks and other unwanted effects. Any roll made against a PC has a <a href="#define-difficulty">Difficulty</a> equal to their Evasion. A PC's starting Evasion is determined by their <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase your Evasion when you <a href="#define-level">level up</a>.</p>
 </div>
 <hr>
-<div id="define-hp">
+<div id="define-hit-point">
 	<h3 id="hit-points-and-damage-thresholds">Hit Points and Damage Thresholds<a class="og-h-anchor" href="#hit-points-and-damage-thresholds" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-	<h4 class="h6">Hit Points (HP)</h4>
-	<p><strong>Hit Points (HP)</strong> represent a character's ability to withstand physical injury. When a character takes damage, they mark 1 to 3 HP, based on their damage <strong>thresholds</strong>:</p>
+	<h4 class="h6">Hit Points</h4>
+	<p><strong>Hit Points</strong> represent a character's ability to withstand physical injury. When a character takes damage, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>:</p>
 	<ul class="og-list-disc">
-		<li>If the final damage is at or above the character's <strong>Severe</strong> damage threshold, they mark 3 HP.</li>
-		<li>If the final damage is at or above the character's <strong>Major</strong> damage threshold but below their <strong>Severe</strong> damage threshold, they mark 2 HP.</li>
-		<li>If the final damage is below the character's <strong>Major</strong> damage threshold, they mark 1 HP.</li>
-		<li>If incoming damage is ever reduced to 0 or less, no HP is marked.</li>
+		<li>If the damage meets or beats a <strong>Severe</strong> damage threshold, the target marks 3 Hit Points.</li>
+		<li>If the damage meets or beats a <strong>Major</strong> damage threshold but below their <strong>Severe</strong> damage threshold, the target marks 2 Hit Points.</li>
+		<li>If the damage is below a <strong>Major</strong> damage threshold, the target mark 1 Hit Point.</li>
+		<li>If incoming damage is reduced to 0, no Hit Points are marked.</li>
+		<li>If a PC marks their last Hit Point, they make a <a href="#define-death">death move</a>.</li>
+		<li>If an <a href="#define-adversary">adversary</a>'s last <a href="#define-hit-point">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</li>
 	</ul>
-	<p>Your starting Hit Points are determined by your <a href="#define-class">class</a>, and you can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>.</p>
+	<p>PCs can clear Hit Points by making <a href="#define-downtime">downtime moves</a> or activating certain features.</p>
+	<p>Your starting Hit Points are determined by their <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>.</p>
 	<h4 class="h6">Damage Thresholds</h4>
-	<p>A PC's base <strong>damage thresholds</strong> are determined by their <a href="#define-armor">armor</a>, and gain a bonus equal to the PC's <a href="#define-level">level</a>.</p>
-	<p>An <a href="#define-adversary">adversary</a>'s Damage Thresholds and HP are listed in their stat blocks.</p>
-	<p>When a character marks their last Hit Point, they fall. If a PC falls, they make a <a href="#define-death">death move</a>.</p>
-	<p>Characters can clear Hit Points by taking <a href="#define-downtime">downtime moves</a>  or by activating relevant special abilities or effects.</p>
+	<p>A PC's base <strong>damage thresholds</strong> are determined by their <a href="#define-armor">armor</a>, and gain a bonus equal to the PC's <a href="#define-level">level</a>.
 </div>
 <div class="og-topbar">
 	<div id="define-optional-rule-massive-damage">
 		<h4 id="optional-rule-massive-damage">Optional Rule: Massive Damage<a class="og-h-anchor" href="#optional-rule-massive-damage" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-		<p>If a character ever takes damage equal to twice their Severe threshold, they mark 4 <a href="#define-hp">HP</a> instead of 3.</p>
+		<p>If a character ever takes damage equal to twice their Severe threshold, they mark 4 <a href="#define-hit-point">Hit Points</a> instead of 3.</p>
 	</div>
 </div>
 <div id="define-death">
 	<h4 id="death">Death<a class="og-h-anchor" href="#death" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 106</li></ul>
-	<p>When a PC marks their last <a href="#define-hp">Hit Point</a>, they must make a <strong>death move</strong> by choosing one of the following options:</p>
+	<p>When a PC marks their last <a href="#define-hit-point">Hit Point</a>, they must make a <strong>death move</strong> by choosing one of the following options:</p>
 	<ul class="og-list-disc">
 		<li><strong>Blaze of Glory:</strong> Your character embraces death and goes out in a blaze of glory. Take one final <a href="#define-action">action</a>. It automatically <a href="#define-action-roll">critically succeeds</a> (with GM approval), and then you cross through the veil of death.</li>
-		<li><strong>Avoid Death:</strong> Your character avoids death and faces the consequences. They temporarily drop unconscious, and then you work with the GM to describe how the situation worsens. While unconscious, your character can't move or act, and they can't be targeted by an attack. They return to consciousness when an ally clears 1 or more of their marked <a href="#define-hp">Hit Points</a> or when the party finishes a <a href="#define-long-rest">long rest</a>. After your character falls unconscious, roll your <a href="#define-action-roll">Hope Die</a>. If its value is equal to or less than your character's <a href="#define-level">level</a>, they gain a <strong>scar</strong>: permanently cross out a <a href="#define-hope">Hope</a> slot and work with the GM to determine its lasting narrative impact and how, if possible, it can be restored. If you ever cross out your last <a href="#define-hope">Hope</a> slot, your character's journey ends.</li>
-		<li><strong>Risk It All:</strong> Roll your <a href="#define-action-roll">Duality Dice</a>. If the <a href="#define-action-roll">Hope Die</a> is higher, your character stays on their feet and clears a number of <a href="#define-hp">Hit Points</a> or <a href="#define-stress">Stress</a> equal to the value of the Hope Die (you can divide the Hope Die value between Hit Points and Stress however you'd prefer). If the <a href="#define-action-roll">Fear Die</a> is higher, your character crosses through the veil of death. If the <a href="#define-action-roll">Duality Dice</a> show matching results, your character stays up and clears all Hit Points and Stress.</li>
+		<li><strong>Avoid Death:</strong> Your character avoids death and faces the consequences. They temporarily drop unconscious, and then you work with the GM to describe how the situation worsens. While unconscious, your character can't move or act, and they can't be targeted by an attack. They return to consciousness when an ally clears 1 or more of their marked <a href="#define-hit-point">Hit Points</a> or when the party finishes a <a href="#define-long-rest">long rest</a>. After your character falls unconscious, roll your <a href="#define-action-roll">Hope Die</a>. If its value is equal to or less than your character's <a href="#define-level">level</a>, they gain a <strong>scar</strong>: permanently cross out a <a href="#define-hope">Hope</a> slot and work with the GM to determine its lasting narrative impact and how, if possible, it can be restored. If you ever cross out your last <a href="#define-hope">Hope</a> slot, your character's journey ends.</li>
+		<li><strong>Risk It All:</strong> Roll your <a href="#define-action-roll">Duality Dice</a>. If the <a href="#define-action-roll">Hope Die</a> is higher, your character stays on their feet and clears a number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-stress">Stress</a> equal to the value of the Hope Die (you can divide the Hope Die value between Hit Points and Stress however you'd prefer). If the <a href="#define-action-roll">Fear Die</a> is higher, your character crosses through the veil of death. If the <a href="#define-action-roll">Duality Dice</a> show matching results, your character stays up and clears all Hit Points and Stress.</li>
 	</ul>
 	<p>If your character dies, work with the GM before the next session to create a new character at the current level of the rest of the party.</p>
 </div>
@@ -9210,9 +9201,10 @@
 <div id="define-stress">
 	<h3 id="stress">Stress<a class="og-h-anchor" href="#stress" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 92</li></ul>
-	<p><strong>Stress</strong> represents how much mental, physical, and emotional strain a character can endure. Some special abilities or effects require the character activating them to mark Stress, and the GM can require a PC to mark Stress as a <a href="#define-gm-move">GM move</a> or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>.<p>
+	<p><strong>Stress</strong> represents how much physical, mental, and emotional strain a character can endure. Activating some features require marking Stress. Addtionally the GM can require a PC to mark Stress as a <a href="#define-gm-move">GM move</a>, or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>.<p>
 	<p>
-	<p>When a character marks their last Stress, they become <a href="#define-vulnerable"><em>Vulnerable</em></a> until they clear at least 1 Stress. When a character must mark 1 or more Stress but can't, they mark 1 <a href="#define-hit-point">Hit Point</a> instead. A character can't use a <a href="#define-action">move</a> that requires them to mark Stress if all of their Stress is marked. PCs can clear Stress by making <a href="#define-downtime">downtime moves</a> . A PC's maximum Stress is determined by their class, but they can increase it through advancements, abilities, and other effects.</p>
+	<p>When a character marks their last Stress, they become <a href="#define-vulnerable"><em>Vulnerable</em></a> until they clear at least 1 Stress. If all of a character's Stress slots are marked, they can't use features that requires them to mark Stress, and if something else requires them mark Stress, they mark a <a href="#define-hit-point">Hit Point</a> instead.  Stress is cleared during <a href="#define-downtime">rests</a>.</p>
+	<p>A PC starts with 6 Stress slots. You can purchase an <a href="#define-advancement">advancement</a> to increase your Stress slots when you gain a <a href="#define-level">level</a>.</p>
 </div>
 <hr>
 <h3 id="attacking">Attacking<a class="og-h-anchor" href="#attacking" title="Permalink" aria-hidden="true"></a></h3>
@@ -9258,7 +9250,7 @@
 <div id="define-resistance">
 	<h5 id="resistance-immunity-and-direct-damage">Resistance, Immunity, and Direct Damage<a class="og-h-anchor" href="#resistance-immunity-and-direct-damage" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 99</li></ul>
-	<p>If a target has <strong>resistance</strong> to a <a href="#define-damage-type">damage type</a>, then they reduce incoming damage of that type by half before comparing it to their <a href="#define-hp">Hit Points Thresholds</a>. If the target has additional ways of reducing incoming damage, such as marking <a href="#armor">Armor Slots</a>, they apply the resistance effect first. The effects of multiple resistances to the same damage type do not stack.</p>
+	<p>If a target has <strong>resistance</strong> to a <a href="#define-damage-type">damage type</a>, then they reduce incoming damage of that type by half before comparing it to their <a href="#define-hit-point">Hit Points Thresholds</a>. If the target has additional ways of reducing incoming damage, such as marking <a href="#armor">Armor Slots</a>, they apply the resistance effect first. The effects of multiple resistances to the same damage type do not stack.</p>
 	<p>If a target has <strong>immunity</strong> to a damage type, they ignore incoming damage of that type.</p>
 	<p>If an attack deals both physical and magic damage, a character can only benefit from resistance or immunity if they are resistant or immune to both damage types.</p>
 </div>
@@ -9272,7 +9264,7 @@
 <div id="define-multiple-damage-sources">
 	<h4 id="multiple-damage-sources">Multiple Damage Sources<a class="og-h-anchor" href="#multiple-damage-sources" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 98</li></ul>
-	<p>Damage dealt simultaneously from multiple sources is always totaled before it's compared to its target's <a href="define-hp">damage thresholds</a>.</p>
+	<p>Damage dealt simultaneously from multiple sources is always totaled before it's compared to its target's <a href="define-hit-point">damage thresholds</a>.</p>
 	<p>For example, if a PC with <a href="#define-orc">orc</a> ancestry makes a successful attack against a target in <a href="#define-range">Melee</a> range and decides to spend a <a href="#define-hope">Hope</a> to use their <strong><em>Tusks</em></strong> feature (which gives them an extra <strong>1d6</strong> damage on a <a href="#define-damage-roll">damage roll</a>), they would roll their normal <a href="#define-weapon">weapon</a> damage and add a <strong>d6</strong> to the result, then deal that total damage to the <a href="#define-adversary">adversary</a>.</p>
 </div>
 <hr>
@@ -9450,7 +9442,7 @@
 	<ul class="og-list-inline og-ref og-omit"><li>Page 105</li></ul>
 	<p>A short rest lasts enough time for the party to catch its breath, about an hour<span class="og-omit"> in-world</span>. Each player can move domain cards between their <a href="#define-loadout">loadout and vault</a><span class="og-omit"> for free</span>, then choose twice from the following <span class="og-omit">list of</span> downtime moves (<span class="og-omit">players </span>can choose the same move twice):</p>
 	<ul class="og-list-disc">
-		<li><strong>Tend to Wounds:</strong> Clear <strong>1d4</strong> + <a href="#define-tier">Tier</a> <a href="#define-hp">Hit Points</a> for yourself or an ally.</li>
+		<li><strong>Tend to Wounds:</strong> Clear <strong>1d4</strong> + <a href="#define-tier">Tier</a> <a href="#define-hit-point">Hit Points</a> for yourself or an ally.</li>
 		<li><strong>Clear Stress:</strong> Clear <strong>1d4</strong> + <a href="#define-tier">Tier</a> <a href="#define-stress">Stress</a>.</li>
 		<li><strong>Repair Armor:</strong> Clear <strong>1d4</strong> + <a href="#define-tier">Tier</a> <a href="#armor">Armor Slots</a> from your or an ally's armor.</li>
 		<li><strong>Prepare:</strong> Describe how you prepare yourself for the path ahead, then gain a <a href="#define-hope">Hope</a>. If you choose to Prepare with one or more members of your party, you each gain 2 Hope.</li>
@@ -9466,7 +9458,7 @@
 	<ul class="og-list-inline og-ref og-omit"><li>Page 105</li></ul>
 	<p>A long rest is when the characters <span class="og-omit">make camp and</span> relax or sleep for several <span class="og-omit">in-game</span> hours. Each player can move domain cards between their <a href="#define-loadout">loadout and vault</a><span class="og-omit"> for free</span>, then choose twice from the following <span class="og-omit">list of</span> downtime moves (<span class="og-omit">players </span>can choose the same move twice):</p>
 	<ul class="og-list-disc">
-		<li><strong>Tend to All Wounds:</strong> Clear all <a href="#define-hp">Hit Points</a> for yourself or an ally.</li>
+		<li><strong>Tend to All Wounds:</strong> Clear all <a href="#define-hit-point">Hit Points</a> for yourself or an ally.</li>
 		<li><strong>Clear All Stress:</strong> Clear all <a href="#define-stress">Stress</a>.</li>
 		<li><strong>Repair All Armor:</strong> Clear all <a href="#armor">Armor Slots</a> from your or an ally's armor.</li>
 		<li><strong>Prepare:</strong> Describe how you prepare for the next day's adventure, then gain a <a href="#define-hope">Hope</a>. If you choose to Prepare with one or more members of your party, you each gain 2 Hope.</li>
@@ -10834,7 +10826,7 @@
 				<dt>Difficulty</dt>
 				<dd>The <a href="#define-difficulty">Difficulty</a> of any <a href="#define-action-roll">roll</a> made against them, unless otherwise noted.</dd>
 				<dt>Damage</dt>
-				<dd>Like PCs, NPCs can have <a href="#define-hp">Hit Points</a>, <a href="#define-hp">damage thresholds</a> and <a href="#define-stress">Stress</a>. An adversary's <strong>Threshold</strong> lists their Major and Severe Thresholds. When the adversary's last <a href="#define-hp">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed, or anything else the table decides makes sense.</dd>
+				<dd>Like PCs, NPCs can have <a href="#define-hit-point">Hit Points</a>, <a href="#define-hit-point">damage thresholds</a> and <a href="#define-stress">Stress</a>.</dd>
 				<dt>Attack Modifier</dt>
 				<dd>Apply this bonus or penalty to the adversary's <a href="#define-attack-roll">attack roll</a>.</dd>
 				<dt>Standard Attack</dt>
@@ -10851,7 +10843,7 @@
 				<li><strong>Decription:</strong> The adversary's look and mannerisms.</li>
 				<li><strong>Motives and Tactics:</strong> How they get what they want.</li>
 				<li><strong>Difficulty:</strong> The <a href="#define-difficulty">Difficulty</a> of <a href="#define-action-roll">rolls</a> made against them<span class="og-omit">, unless otherwise noted</span>.</li>
-				<li><strong>Damage:</strong> Includes <a href="#define-hp">Hit Points</a>, <a href="#define-hp">damage thresholds</a> (Major and Severe) and <a href="#define-stress">Stress</a>. When the adversary's last <a href="#define-hp">Hit Point</a> is marked, they are defeated.</li>
+				<li><strong>Damage:</strong> Includes <a href="#define-hit-point">Hit Points</a>, <a href="#define-hit-point">damage thresholds</a> (Major and Severe) and <a href="#define-stress">Stress</a>.</li>
 				<li><strong>Attack Modifier:</strong> Apply this bonus to the adversary's <a href="#define-attack-roll">attack roll</a>.</li>
 				<li><strong>Standard Attack:</strong> Includes the attack's name, <a href="#define-range">range</a>, and <a href="#define-damage-roll">damage roll</a>. Using a standard attack is a <a href="#define-gm-move">GM move</a>.</li>
 				<li><strong>Experience:</strong> The GM can spend a <a href="#define-fear">Fear</a> to add <a href="#define-experience">Experience</a> as a <a href="#define-modifier">modifier</a>&mdash;adding it as a bonus to an <a href="#define-attack-roll">attack roll</a>, or increasing the <a href="#define-difficult">Difficulty</a> of a roll against them.</li>
@@ -10958,7 +10950,7 @@
 	<div class="col-12 col-md-6">
 		<h5 class="h6 og-tab">Example Passive</h5>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Horde (X)&mdash;Passive:</em></strong> When the Horde has marked half or more of their <a href="#define-hp">HP</a>, their standard attack deals X damage instead.</p></li>
+			<li><p><strong><em>Horde (X)&mdash;Passive:</em></strong> When the Horde has marked half or more of their <a href="#define-hit-point">Hit Points</a>, their standard attack deals X damage instead.</p></li>
 			<li><p><strong><em>Minion (X)&mdash;Passive:</em></strong> This adversary is defeated when they take any damage. For every X damage a PC deals to this adversary, defeat an additional <strong>Minion</strong> within range the attack would succeed against.</p></li>
 			<li><p><strong><em>Relentless (X)&mdash;Passive:</em></strong> This adversary can be <a href="#define-spotlight">spotlight</a>ed up to X times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to spotlight them.</p></li>
 			<li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> this adversary and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> this adversary and they have a token on their stat block, clear the token and they can act.</p></li>
@@ -11099,7 +11091,7 @@
 			<td class="text-center og-nowrap">20</td>
 		</tr>
 		<tr>
-			<th class="fw-normal"><a href="#define-hp">Damage Thresholds</a></th>
+			<th class="fw-normal"><a href="#define-hit-point">Damage Thresholds</a></th>
 			<td class="text-center og-nowrap">7 / 12</td>
 			<td class="text-center og-nowrap">10 / 20</td>
 			<td class="text-center og-nowrap">20 / 32</td>
