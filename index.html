@@ -43,22 +43,20 @@
 						<li><a class="dropdown-item og-nav" href="#traits">Traits</a></li>
 						<li><a class="dropdown-item og-nav" href="#experiences">Experiences</a></li>
 						<li><a class="dropdown-item og-nav" href="#leveling-up">Gaining Levels</a></li>
-						<li><a class="dropdown-item og-nav" href="#multiclassing">Multiclassing</a></li>
 						<li><a class="dropdown-item og-nav" href="#equipment">Equipment</a></li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-core-rules" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rules</a>
-					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-core-rules">
-						<li><a class="dropdown-item og-nav" href="#core-mechanics">Core Mechanics</a></li>
+					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-core-mechanics" role="button" data-bs-toggle="dropdown" aria-expanded="false">Core Mechanics</a>
+					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-core-mechanics">
+						<li><a class="dropdown-item og-nav" href="#flow-of-the-game">Flow of the Game</a></li>
+						<li><a class="dropdown-item og-nav" href="#core-gameplay-loop">Core Gameplay Loop</a></li>
 						<li><a class="dropdown-item og-nav" href="#the-spotlight">The Spotlight</a></li>
 						<li><a class="dropdown-item og-nav" href="#making-moves-and-taking-action">Making Moves and Taking Action</a></li>
 						<li><a class="dropdown-item og-nav" href="#special-rolls">Special Rolls</a></li>
 						<li><a class="dropdown-item og-nav" href="#advantage-and-disadvantage">Advantage and Disadvantage</a></li>
 						<li><a class="dropdown-item og-nav" href="#hope-and-fear">Hope and Fear</a></li>
-						<li><a class="dropdown-item og-nav" href="#gm-moves">GM Moves and Adversary Actions</a></li>
 						<li><a class="dropdown-item og-nav" href="#additional-rules">Additional Rules</a></li>
-						<li><a class="dropdown-item og-nav" href="#optional-rules">Optional Rules</a></li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
@@ -69,6 +67,7 @@
 						<li><a class="dropdown-item og-nav" href="#death">Death</a></li>
 						<li><a class="dropdown-item og-nav" href="#stress">Stress</a></li>
 						<li><a class="dropdown-item og-nav" href="#attacking">Attacking</a></li>
+						<li><a class="dropdown-item og-nav" href="#adversaries-in-combat">Adversaries in Combat</a></li>
 						<li><a class="dropdown-item og-nav" href="#conditions">Conditions</a></li>
 						<li><a class="dropdown-item og-nav" href="#maps-range-and-movement">Maps, Range, and Movement</a></li>
 						<li><a class="dropdown-item og-nav" href="#downtime">Downtime</a></li>
@@ -80,11 +79,9 @@
 						<li><a class="dropdown-item og-nav" href="#gm-guidance">Running an Adventure</a></li>
 						<li><a class="dropdown-item og-nav" href="#gm-moves">GM Moves</a></li>
 						<li><a class="dropdown-item og-nav" href="#difficulty">Difficulty</a></li>
-						<li><a class="dropdown-item og-nav" href="#giving-advantage-and-disadvantge">Advantage and Disadvantage</a></li>
 						<li><a class="dropdown-item og-nav" href="#countdowns">Countdowns</a></li>
-						<li><a class="dropdown-item og-nav" href="#giving-out-loot">Giving Out Loot</a></li>
 						<li><a class="dropdown-item og-nav" href="#additional-gm-guidance">Additional GM Guidance</a></li>
-						<li><a class="dropdown-item og-nav" href="#optional-gm-mechanics">Optional GM Mechanics</a></li>
+						<li><a class="dropdown-item og-nav" href="#optional-rules">Optional Rules</a></li>
 						<li><a class="dropdown-item og-nav" href="#campaign-frames">Campaign Frame: The Witherwild</a></li>
 					</ul>
 				</li>
@@ -111,7 +108,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.70n (2025-06-17)</p>
+<p class="small text-center">version 0.70p (2025-06-17)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -166,17 +163,9 @@
 	<p><strong>Daggerheart</strong> is a tabletop roleplaying game for one Game Master (<strong>GM</strong>) and 2&ndash;5 players. Each game session lasts 2&ndash;4 hours. The game can be played as a one-shot, or a multi-session campaign.</p>
 </div>
 <p>During a session, the GM describes the situations, narrates events, and controls any <a href="#define-adversary">adversaries</a> or obstacles that the Player Characters (<strong>PCs</strong>) encounter in the scenario. The players, roleplay their PC's reaction to the scenario. If a player's <a href="#define-action">action</a> depends on fate or fortune, the GM calls for an <a href="#define-action-roll">action roll</a>.</p>
-<p>When a player makes an action roll, they use <a href="#define-action-roll">Duality Dice</a>&mdash;two distinct 12-sided dice (<strong>d12s</strong>)&mdash;representing <a href="#define-hope">Hope</a> and <a href="#define-fear">Fear</a>. The Duality Dice are rolled, and relevant <a href="#define-modifier">modifiers</a> are added to the results. The total is compared to a <a href="#define-difficulty">Difficulty</a> set by the GM. If the total meets or beats the <a href="#define-difficulty">Difficulty</a>, the player succeeds. If it's lower, they fail.</p>
+<p>When a player makes an action roll, they use <a href="#define-action-roll">Duality Dice</a>&mdash;two distinct 12-sided dice (<strong>d12s</strong>)&mdash;representing <a href="#define-hope">Hope</a> and <a href="#define-fear">Fear</a>. The Duality Dice are rolled, and relevant <a href="#define-modifier">modifiers</a> are added to the results. The total is compared to a <a href="#define-difficulty">Difficulty</a> set by the GM. If the total meets or beats the Difficulty, the player succeeds. If it's lower, they fail.</p>
 <p>The situation changes based on which Duality Die rolls higher, either giving the player helpful <a href="#define-hope">Hope</a> tokens, or generating terrifying <a href="#define-fear">Fear</a> tokens for the GM.</p>
-<h4 id="the-golden-rule">The Golden Rule<a class="og-h-anchor" href="#the-golden-rule" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 7</li></ul>
-<p>The most important rule of <a href="#define-daggerheart">Daggerheart</a> is to make the game your own. The rules are designed to help you enjoy the experience, but everyone has a different approach to interpreting rules and telling stories. The rules shouldn't get in the way of the story you want to tell, the character you want to play, or the adventure you want to have. If the players and GM agree to a change, anything in the rules can be ignored or adjusted.</p>
-<h4 id="rulings-over-rules">Rulings Over Rules<a class="og-h-anchor" href="#rulings-over-rules" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 7</li></ul>
-<p><a href="#define-daggerheart">Daggerheart</a> prioritizes rulings over rules. The rules offers answers for many questions you might have, but it won't answer all of them. When in doubt about a rule, the GM makes a ruling that aligns with the narrative.</p>
-<p>For example, Daggerheart has a <a href="#define-weapon">weapon</a> called a grappler that lets you pull a target closer to you. If you try to use it to pull an entire castle, the weapon text doesn't forbid you from doing that&mdash;but it doesn't make sense within the narrative. Instead, the GM might rule that you pull a few bricks out, or pull yourself toward the wall instead.</p>
-<p>Similarly, if your character does something that would logically result in immediate death&mdash;for example, diving into an active volcano without protection&mdash;you might not get to make a <a href="#define-death">death move</a>, which normally give you control of your character's fate. The GM should make kind of consequence clear before the action.</p>
-<p>In a narrative-focused game, out-of-context interpretations of the rules are encouraged. Everything should flow back to the fiction. The GM has the authority and responsibility to make rulings about how rules are applied to underscore that fiction.</p>
+
 <hr>
 <div id="define-character-creation">
 	<h2 id="character-creation">Character Creation<a class="og-h-anchor" href="#character-creation" title="Permalink" aria-hidden="true"></a></h2>
@@ -197,7 +186,7 @@
 		</ol>
 	</div>
 </div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>You'll need somehwere to record information about your PC. You can download the official <a href="https://www.daggerheart.com/downloads/">Daggerheart Character Sheets and Guides</a>, or create your own solution.</p>
 </div>
 <hr>
@@ -249,7 +238,7 @@
 	<li>One two-handed <a href="#weapons-primary">primary weapon</a></li>
 	<li>One one-handed <a href="#weapons-primary">primary weapon</a> and one <a href="#weapons-secondary">secondary weapon</a></li>
 </ul>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>Each weapon lists the <a href="#define-trait">trait</a> <a href="#define-modifier">modifier</a> added to <a href="#define-attack-roll">attack rolls</a> made with the weapon.</p>
 </div>
 <p>Next, record your <strong>Proficiency</strong> and <strong>damage</strong> for your chosen weapons:</p>
@@ -278,7 +267,7 @@
 <ul class="og-list-inline og-ref og-omit"><li>Page 19</li></ul>
 <p class="lead">Create a background.</p>
 <p>Develop your <strong>background</strong> by answering the background questions in your <a href="#define-class">class</a>. You or the GM can modify or replace them to fit the character or setting.</p>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>A background has no explicit mechanical effect, but it greatly affects the character you'll play and how the GM will prepare narrative elements for your character. Throughout character creation, you revisit earlier steps to better reflect your background. Alternatively, you can leave your past ambiguous, and discover their backstory through play.</p>
 </div>
 <hr>
@@ -305,7 +294,7 @@
 	<li>Use the questions included in the <strong>Connections</strong> section of your <a href="#define-class">class</a> to discuss potential connections between the PCs.</li>
 	<li>Suggest at least one connection between your PC and each other player's PC. Accept and record the connections you want to explore, refuse the ones you don't.</li>
 </ul>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>It's okay if there isn't an established connection between each pair of PCs&mdash;you can discover and develop those relationships through play.</p>
 </div>
 <hr>
@@ -2049,7 +2038,7 @@
 <h4 id="usage-limits">Usage Limits<a class="og-h-anchor" href="#usage-limits" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 101</li></ul>
 <p>If a <a href="#define-domain-card">domain card</a> restricts how often it can be used.</p>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>You can track <a href="#define-domain-card">domain card</a> usage limits however you like, for example, turning the card sideways, flipping it facedown, us tokens, or marking a checkbox.</p>
 </div>
 <hr>
@@ -5454,7 +5443,7 @@
 		<li><a href="#simiah">Simiah</a></li>
 		<li><a href="#mixed-ancestry">Mixed Ancestry</a></li>
 	</ul>	
-	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 		<p><strong>People</strong> refers to all ancestries. Some ancestries are described as <strong>humanoid</strong>, but this doesn't imply genetic relation to <a href="#define-human">humans</a>, but rather to the set of physical characteristics humans recognize from their anatomy, for example, bipedal movement, upright posture, and facial layout.</p>
 	</div>
 	<h3 class="h6">Ancestry Features</h3>
@@ -5677,7 +5666,7 @@
 	<h4 class="h6">Step 2. Choose Ancestry Features</h4>
 	<p>Choose the <strong>first feature</strong> from one ancestry, and the <strong>second feature</strong> from the other. For example, if you are mixing the <a href="#define-goblin">goblin</a>-<a href="#define-orc">orc</a> ancestries, you can take the <strong><em>Surefooted</em></strong> and <strong><em>Tusks</em></strong> features, or the <strong><em>Sturdy</em></strong> and <strong><em>Danger Sense</em></strong> features.</p>
 </div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>If your character's heritage includes more than two ancestries, you can represent additional ancestries through their appearance, backstory, and <a href="#define-experience">Experiences</a>.</p>
 </div>
 <hr>
@@ -6186,7 +6175,7 @@
 <ul class="og-list-inline og-ref og-omit"><li>Page 115</li></ul>
 <h5 id="weapons-primary-tier-1">Tier 1 (Level 1)<a class="og-h-anchor" href="#weapons-primary-tier-1" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 115</li></ul>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>Players can choose one Tier 1 primary weapon during <a href="#define-character-creation">character creation</a>.</p>
 </div>
 <h6 id="weapons-primary-tier-1-physical">Physical Weapons<a class="og-h-anchor" href="#weapons-primary-tier-1-physical" title="Permalink" aria-hidden="true"></a></h6>
@@ -7025,7 +7014,7 @@
 </table></div>
 <h6 id="weapons-primary-tier-3-magic">Magic Weapons<a class="og-h-anchor" href="#weapons-primary-tier-3-magic" title="Permalink" aria-hidden="true"></a></h6>
 <ul class="og-list-inline og-ref og-omit"><li>Page 119</li></ul>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p><strong>Editor's Notes &mdash;</strong> Tier 3 magic weapons are not included in the <a href="https://www.daggerheart.com/srd">Daggerheart SRD 1.0</a>.</p>
 </div>
 <h5 id="weapons-primary-tier-4">Tier 4 (Levels 8&ndash;10)<a class="og-h-anchor" href="#weapons-primary-tier-4" title="Permalink" aria-hidden="true"></a></h5>
@@ -8806,21 +8795,90 @@
 	</div>
 </div>
 <hr>
-<div id="define-gold">
-	<h3 id="gold">Gold<a class="og-h-anchor" href="#gold" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 104</li></ul>
-	<p><strong>Gold</strong> is an abstract measurement wealth measured in handfuls, bags, and chests:</p>
-	<ul class="og-list-disc">
-		<li>10 handfuls of gold equals 1 bag</li>
-		<li>10 bags of gold equals 1 chest</li>
-	</ul>
-	<p>You can't carry more than 1 chest, so you'll need to spend some or store it somewhere before you can acquire more.</p>
-</div>
-<div class="og-topbar">
-	<div id="define-optional-rule-gold">
-		<h4 id="optional-rule-gold-coins">Optional Rule: Gold Coins<a class="og-h-anchor" href="#optional-rule-gold-coins" title="Permalink" aria-hidden="true"></a></h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 104</li></ul>
-		<p>If your group wants to track gold with more granularity, you can add coins as your lowest denomination. Following the established pattern, 10 coins equal 1 handful.</p>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<div id="define-gold">
+			<h3 id="gold">Gold<a class="og-h-anchor" href="#gold" title="Permalink" aria-hidden="true"></a></h3>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 104</li><li>Page 165</li></ul>
+			<p><strong>Gold</strong> is an abstract measurement wealth measured in handfuls, bags, and chests:</p>
+			<ul class="og-list-disc">
+				<li>10 handfuls of gold equals 1 bag</li>
+				<li>10 bags of gold equals 1 chest</li>
+			</ul>
+			<p>You can't carry more than 1 chest, so you'll need to spend some or store it somewhere before you can acquire more.</p>
+			<p>It's up to the GM and players to decide how much importance to place on tracking gold. If you don't wish to track gold, when PCs go shopping for new items, the GM might allow them choose one or two from a prepared list of appropriate items.</p>
+		</div>
+		<div class="og-topbar">
+			<div id="define-optional-rule-gold">
+				<h4 id="optional-rule-gold-coins">Optional Rule: Gold Coins<a class="og-h-anchor" href="#optional-rule-gold-coins" title="Permalink" aria-hidden="true"></a></h4>
+				<ul class="og-list-inline og-ref og-omit"><li>Page 104</li></ul>
+				<p>If your group wants to track gold with more granularity, you can add coins as your lowest denomination. Following the established pattern, 10 coins equal 1 handful.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<h4 id="average-costs">Average Costs<a class="og-h-anchor" href="#average-costs" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 165</li></ul>
+		<p>The GM can adjust the following prices for goods and services to better reflect the tone, themes, or setting:</p>
+		<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Average Costs</caption>
+			<thead>
+				<tr>
+					<th scope="col">Goods and Services</th>
+					<th class="text-center" scope="col">Cost</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal">Meals for a party of adventurers per night</th>
+					<td class="text-center og-nowrap">1 Handful</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Standard inn room per night</th>
+					<td class="text-center og-nowrap">1 Handful</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Luxury inn room per night</th>
+					<td class="text-center og-nowrap">1 Bag</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Carriage ride</th>
+					<td class="text-center og-nowrap">2 Handfuls</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Mount (horse, mule, etc.)</th>
+					<td class="text-center og-nowrap">3 Bags</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Specialized tools</th>
+					<td class="text-center og-nowrap">3 Handfuls</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Fine clothing</th>
+					<td class="text-center og-nowrap">3 Handfuls</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Luxury clothing</th>
+					<td class="text-center og-nowrap">1 Bag</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Tier 1 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
+					<td class="text-center og-nowrap">1&ndash;5 Handfuls</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Tier 2 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
+					<td class="text-center og-nowrap">1&ndash;2 Bags</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Tier 3 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
+					<td class="text-center og-nowrap">5&ndash;10 Bags</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Tier 4 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
+					<td class="text-center og-nowrap">1&ndash;2 Chests</td>
+				</tr>
+			</tbody>
+		</table></div>
 	</div>
 </div>
 <hr>
@@ -8836,7 +8894,7 @@
 <p>Players should keep the following principles and practices in mind:</p>
 <div class="row">
 	<div class="col-12 col-md-6">
-		<h5 class="h6">Principles</h5>
+		<h5 class="h6 og-tab">Principles</h5>
 		<ul class="og-list-disc">
 			<li>Be a fan of your character and their journey.</li>
 			<li>Spotlight your friends.</li>
@@ -8847,14 +8905,14 @@
 		</ul>
 	</div>
 	<div class="col-12 col-md-6">
-		<h5 class="h6">Best Practices</h5>
+		<h5 class="h6 og-tab">Best Practices</h5>
 		<ul class="og-list-disc">
 			<li>Embrace danger.</li>
 			<li>Use your resources.</li>
 			<li>Tell the story.</li>
 			<li>Discover your character.</li>
 		</ul>
-		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 			<p>For more information, see the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a>, pages 9 and 108.</p>
 		</div>
 	</div>
@@ -8913,7 +8971,7 @@
 		<li>Roll the Duality Dice, sum the results, and apply any relevant <a href="#define-modifier">modifiers</a>.</li>
 		<li>Announce the total, and compare it to the <a href="#define-difficulty">Difficulty</a>.</li>
 		<li>Compare the result of each Duality Dice, announcing which is higher&mdash;<strong>Hope</strong> or <strong>Fear</strong>.</li>
-	</ul>
+	</ul>	
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 		<caption>Action Roll Outcomes</caption>
 		<thead>
@@ -8958,12 +9016,10 @@
 		</tbody>
 	</table></div>
 </div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>A Critical Success counts as a roll with <a href="#define-hope">Hope</a>. After resolving the action roll, work together to weave the outcome into the narrative.</p>
+	<p>Every time you roll your Duality Dice, the scene changes&mdash;there are no rolls where "nothing happens".</p>
 </div>
-<h5 class="h6">Failing Forward</h5>
-<ul class="og-list-inline og-ref og-omit"><li>Page 95</li></ul>
-<p>Every time you roll your Duality Dice, the scene changes in some way. There are no rolls where "nothing happens"&mdash;the fiction constantly evolves based on the PCs' successes and failures.</p>
 <div id="define-procedure">
 	<h4 id="procedure">Procedure<a class="og-h-anchor" href="#procedure" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 92</li></ul>
@@ -8998,7 +9054,7 @@
 	<p>For example, <strong>Agility Roll (12)</strong> means the action roll adds your <a href="#define-agility">Agility</a> modifer, and has a <a href="#define-difficulty">Difficulty</a> of 12. If no Difficulty is specified, the GM decides it.</p>
 	<p>Features and effects that affect trait rolls also affect any action roll that uses that trait, including <a href="#define-attack-roll">attack rolls</a> and <a href="#define-spellcast-roll">Spellcast Rolls</a>.</p>
 </div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>For example, a <a href="#define-katari">katari</a> with the <strong><em>Feline Instincts</em></strong> feature allows them to reroll an Agility Roll. This feature applies to any <a href="#define-action-roll">action roll</a> where <a href="#define-agility">Agility</a> is the assigned <a href="#define-trait">trait</a>, including sprinting across a stretch of dangerous terrain, or makng an <a href="#define-attack-roll">attack roll</a> made with a <a href="#define-weapon">weapon</a> that uses Agility.</p>
 </div>
 <div id="define-spellcast-roll">
@@ -9008,10 +9064,8 @@
 	<p>Spellcast Rolls are only made when a character uses a feature that requires one. A successful Spellcast Roll activates the effect as described by the feature.</p>
 	<p>For example, if you are a <a href="#define-bard-troubador">troubaddor</a> <a href="#define-bard">bard</a> and must make a <strong>Spellcast Roll (15)</strong>, that means you add your <a href="#define-presence">Presence</a> modifer, and the roll has a <a href="#define-difficulty">Difficulty</a> of 15. If no Difficulty is specified, the GM decides it.</p>
 </div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p>A Spellcast Roll that can damage a target is also considered an <a href="#define-attack-roll">attack roll</a>.</p>
-	<p>When you cast a spell, the text tells you when the effect ends. The GM can spend a <a href="#define-fear">Fear</a> to end a temporary effect. If your spell doesn't specify when it ends, it ends when you choose or at a natural moment of the story. You can choose to end your spell early.</p>
-	<p>You can cast and maintain the effects of more than one spell at the same time.</p>
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p>A Spellcast Roll that can damage a target is also an <a href="#define-attack-roll">attack roll</a>. You maintain the effects of more than one spell at the same time. Each spells' <a href="#define-domain-card">domain card</a> tells you when the effect ends. If a spell doesn't specify when it ends, it ends when you choose or at a natural moment of the story.</p>
 </div>
 <div id="define-reaction-roll">
 	<h5 id="reaction-rolls">Reaction Rolls<a class="og-h-anchor" href="#reaction-rolls" title="Permalink" aria-hidden="true"></a></h5>
@@ -9037,71 +9091,65 @@
 	<p>On a <a href="#define-action-roll">roll with Hope</a>, all PCs involved gain a Hope. On a <a href="#define-action-roll">roll with Fear</a>, the GM gains a <a href="#define-fear">Fear</a> for each PC.</p>
 	<p>If Tag Team Roll is a successful attack, both players make a <a href="#define-damage-roll">damage roll</a> and add their totals together to determine the damage dealt. If the attacks deal different <a href="#define-damage-type">damage type</a>, the players choose which type is dealt.</p>
 </div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>A Tag Team Roll counts as a single <a href="#define-action-roll">action roll</a> for the purposes of any <a href="#define-countdown">Countdowns</a> or features that track <a href="#define-action-roll">action rolls</a>.</p>
 	<p>Each player can initiate one Tag Team Roll per session, but a PC can be involved in multiple Tag Team Rolls.</p>
 </div>
 <div id="define-advantage">
 	<h4 id="advantage-and-disadvantage">Advantage and Disadvantage<a class="og-h-anchor" href="#advantage-and-disadvantage" title="Permalink" aria-hidden="true"></a></h4>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 100</li></ul>
-	<p><strong>Advantage</strong> and <strong>disadvantage</strong> on a roll can be the result of features, mechanical triggers, or the GM's discretion depending on the situation.</p>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 100</li><li>Page 160</li></ul>
+	<p><strong>Advantage</strong> and <strong>disadvantage</strong> on a roll can be the result of features, mechanical triggers, or the GM's discretion depending on favorable or unfavorable circumstances.</p>
 	<ul class="og-list-disc">
 		<li><strong>Advantage</strong> represents an opportunity that you seize to increase your chances of success. When you roll with advantage, you roll a <strong>d6</strong> advantage die with your dice pool and add its result to your total.</li>
 		<li><strong>Disadvantage</strong> represents an additional difficulty, hardship, or challenge you face when attempting an <a href="#define-action">action</a>. When you roll with disadvantage, you roll a <strong>d6</strong> disadvantage die with your dice pool and subtract its result from your total.</li>
 	</ul>
 	<p>Advantage and disadvantage dice cancel each out, one-for-one, so you'll never roll both at the same time. If you have advantage or disadvantage from other sources that don't affect your own dice pool&mdash;for example, another player's <a href="#define-hope">Help an Ally</a> move&mdash;their roll is applied as a <a href="#define-modifier">modifier</a> your result.</p>
 </div>
+<hr>
 <div id="define-hope-and-fear">
-	<h4 id="hope-and-fear">Hope and Fear<a class="og-h-anchor" href="#hope-and-fear" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="hope-and-fear">Hope and Fear<a class="og-h-anchor" href="#hope-and-fear" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 90</li></ul>
 	<p><a href="#define-hope">Hope</a> and <a href="#define-fear">Fear</a> are metacurrencies representing the cosmic forces that shape the events of your table's story. Hope powers PC abilities and features, while Fear powers the abilities of the GM and the <a href="#define-adversary">adversaries</a> and <a href="#define-environment">environments</a> they control.</p>
 </div>
-<div id="define-hope">
-	<h5 id="hope">Hope<a class="og-h-anchor" href="#hope" title="Permalink" aria-hidden="true"></a></h5>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 90</li></ul>
-	<p>Every PC starts with 2 <strong>Hope</strong> at <a href="#define-character-creation">character creation</a> and gains more throughout play. A PC can have a maximum of 6 Hope at one time, and Hope carries over between sessions.</p>
-	<p>Players can spend Hope to:</p>
-	<ul class="og-list-disc">
-		<li><strong>Help an Ally (1 Hope):</strong> You help a PC with an <a href="#define-action-roll">action roll</a>. Describe how you help, roll your own <a href="#define-advantage">advantage</a> die, and apply the result as a <a href="#modifier">modifier</a> to their roll. Multiple PCs can help, but only the highest modifier rolled is added to the result. </li>
-		<li><strong>Utilize an Experience (1 Hope):</strong> When you Utilize an <a href="#define-experience">Experience</a> on a relevant roll, add its <a href="#define-modifier">modifier</a> to the result. You can spend additional Hope to utilize additional relevant Experiences.</li>
-		<li><strong>Tag Team Roll (3 Hope):</strong> Initiate a <a href="#define-tag-team-roll">Tag Team Roll</a>.</li>
-		<li><strong>Class Hope Feature (3 Hope):</strong> Each <a href="#define-class">class</a> provides a Class Hope Feature</li>
-		<li><strong>Other Uses for Hope:</strong> Other uses for Hope are defined by <a href="#define-class">class</a> or <a href="#define-class">subclass</a> features, <a href="#define-domain-cards">domain cards</a>, and <a href="#define-equipment">equipment</a>.</li>
-	</ul>
-</div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p>When using a <a href="#define-hope">Hope Feature</a>, if you rolled with <a href="#define-action-roll">Hope</a> for that <a href="#define-action">action</a>, the Hope you gain from that roll can be spent on that feature (or toward it, if it requires spending multiple Hope).</p>
-</div>
-<div id="define-fear">
-	<h5 id="fear">Fear<a class="og-h-anchor" href="#fear" title="Permalink" aria-hidden="true"></a></h5>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-	<p>The GM gains <strong>Fear</strong> whenever a player <a href="#define-action-roll">rolls with Fear</a> and can spend Fear at any time to make or enhance a <a href="#define-gm-move">GM move</a> or to use a <a href="#define-fear-feature">Fear Feature</a>. The GM can have up to 12 Fear at one time. Fear carries over between sessions.</p>
-</div>
-<div id="define-gm-move">
-	<h4 id="gm-moves-and-adversary-actions">GM Moves and Adversary Actions<a class="og-h-anchor" href="#gm-moves-and-adversary-actions" title="Permalink" aria-hidden="true"></a></h4>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 89</li></ul>
-	<p><a href="#define-making-gm-moves">GMs also make moves</a>. They should consider making a move when a player does one of the following things:</p>
-	<ul class="og-list-disc">
-		<li>Rolls with Fear on an <a href="#define-action-roll">action roll</a>.</li>
-		<li>Fails an <a href="#define-action-roll">action roll</a>.</li>
-		<li>Does something that would have consequences.</li>
-		<li>Gives them a golden opportunity.</li>
-		<li>Looks to them for what happens next.</li>
-	</ul>
-	<p>After the GM turn is done, the <a href="#define-spotlight">spotlight</a> goes back to the PCs. Many <a href="#define-adversary">adversaries</a> and <a href="#define-environment">environments</a> have <a href="#define-fear-feature">Fear Features</a>, especially powerful or consequential moves that the GM must spend <a href="#define-fear">Fear</a> to activate.</p>
-</div>
-<div id="adversaries-and-environments-action">
-	<h5 id="adversary-actions">Adversary Actions<a class="og-h-anchor" href="#adversary-actions" title="Permalink" aria-hidden="true"></a></h5>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 100</li></ul>
-	<p>When play passes to the GM, the GM can make a <a href="#define-gm-move">GM move</a> to <a href="#define-spotlight">spotlight</a> an <a href="#define-adversary">adversary</a>. A spotlighted adversary can:</p>
-	<ul class="og-list-disc">
-		<li>Move within <a href="#define-range">Close</a> range and make a standard attack</li>
-		<li>Move within <a href="#define-range">Close</a> range and use an <a href="#define-fear-feature">adversary action</a></li>
-		<li>Clear a <a href="#define-condition">condition</a></li>
-		<li>Sprint within Far or <a href="#define-range">Very Far</a> range on the battlefield</li>
-		<li>Do anything else the fiction demands or the GM deems appropriate</li>
-	</ul>
-	<p>The GM can spend additional <a href="#define-fear">Fear</a> to <a href="#define-spotlight">spotlight</a> additional adversaries. Once the GM has finished, the <a href="#define-spotlight">spotlight</a> swings back to the PCs.</p>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<div id="define-hope">
+			<h4 id="hope">Hope<a class="og-h-anchor" href="#hope" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 90</li></ul>
+			<p>Every PC starts with 2 <strong>Hope</strong> at <a href="#define-character-creation">character creation</a> and gains more throughout play (up to a maximum of 6).</p>
+			<p>Players can spend Hope to:</p>
+			<ul class="og-list-disc">
+				<li><strong>Help an Ally (1 Hope):</strong> You help a PC with an <a href="#define-action-roll">action roll</a>. Describe how you help, roll your own <a href="#define-advantage">advantage</a> die, and apply the result as a <a href="#modifier">modifier</a> to their roll. Multiple PCs can help, but only the highest modifier rolled is added to the result. </li>
+				<li><strong>Utilize an Experience (1 Hope):</strong> When you Utilize an <a href="#define-experience">Experience</a> on a relevant roll, add its <a href="#define-modifier">modifier</a> to the result. You can spend additional Hope to utilize additional relevant Experiences.</li>
+				<li><strong>Tag Team Roll (3 Hope):</strong> Initiate a <a href="#define-tag-team-roll">Tag Team Roll</a>.</li>
+				<li><strong>Class Hope Feature (3 Hope):</strong> Each <a href="#define-class">class</a> provides a Class Hope Feature</li>
+				<li><strong>Other Uses for Hope:</strong> Other uses for Hope are defined by <a href="#define-class">class</a> or <a href="#define-class">subclass</a> features, <a href="#define-domain-cards">domain cards</a>, and <a href="#define-equipment">equipment</a>.</li>
+			</ul>
+			<p>Hope carries over between sessions.</p>
+		</div>
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>When using a <a href="#define-hope">Hope Feature</a>, if you rolled with <a href="#define-action-roll">Hope</a> for that <a href="#define-action">action</a>, the Hope you gain from that roll can be spent on that feature (or toward it, if it requires spending multiple Hope).</p>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div id="define-fear">
+			<h4 id="fear">Fear<a class="og-h-anchor" href="#fear" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 91</li><li>Page 154</li></ul>
+			<p>The GM starts the game with 1 <strong>Fear</strong>, and gains a Fear when:</p>
+			<ul class="og-list-disc">
+				<li>A PC <a href="#define-action-roll">rolls with Fear</a></li>
+				<li>The PCs take a <a href="#define-short-rest">short rest</a> or <a href="#define-long-rest">long rest</a></li>
+				<li>Whenever a mechanical trigger causes it</li>
+			</ul>
+			<p>The GM gains more Fear throughout play (up to a maximum of 12), and spends it to:</p>
+			<ul class="og-list-disc">
+				<li>Make <a href="#define-gm-move">GM moves</a>, including causing <a href="#define-adversary-action">adversaries in combat</a> to take action.</li>
+				<li>Add an <a href="#define-adversary">adversary</a>'s <a href="#define-experience">Experience</a> as a <a href="#define-modifier">modifier</a>.</li>
+				<li>Activate an <a href="#define-adversary">adversary</a> or <a href="#define-environment">environment</a>'s <a href="#define-adversary-feature">Fear Features</a>.</li>
+			</ul>
+			<p>Like <a href="#define-hope">Hope</a>, Fear carries over between sessions.</p>
+		</div>
+	</div>
 </div>
 <hr>
 <h3 id="additional-rules">Additional Rules<a class="og-h-anchor" href="#additional-rules" title="Permalink" aria-hidden="true"></a></h3>
@@ -9109,46 +9157,30 @@
 <p>The following rules apply to many aspects of the game.</p>
 <div class="row">
 	<div class="col-12 col-md-6">
-		<h4 class="h6">Rounding Up</h4>
-		<p>This game doesn't use fractions; if you need to round to a whole number, round up unless otherwise specified. When in doubt, resolve any ambiguity in favor of the PCs.</p>
-		<h4 class="h6">Rerolling Dice</h4>
+		<h4 class="h6 og-tab">Rounding Up</h4>
+		<p>Round up to the nearest whole number unless otherwise specified. When in doubt, resolve any ambiguity in favor of the PCs.</p>
+		<h4 class="h6 og-tab">Rerolling Dice</h4>
 		<p>When a feature allows you to reroll a die, you always take the new result unless the feature specifically says otherwise.</p>
-		<h4 class="h6">Incoming Damage</h4>
+		<h4 class="h6 og-tab">Incoming Damage</h4>
 		<p>Incoming damage means the total damage from a single attack or source, before <a href="#armor">Armor Slots</a> are marked.</p>
-		<h4 class="h6">Simultaneous Effects</h4>
+		<h4 class="h6 og-tab">Simultaneous Effects</h4>
 		<p>If the resolution order of multiple effects is unclear, the person in control of the effects (player or GM) decides what order to resolve them in.</p>
 	</div>
 	<div class="col-12 col-md-6">
-		<h4 class="h6" >Stacking Effects</h4>
+		<h4 class="h6 og-tab" >Stacking Effects</h4>
 		<p>Unless stated otherwise, all effects except <a href="#define-condition">conditions</a> and <a href="#define-advantage">advantage and disadvantage</a> can stack.</p>
-		<h4 class="h6">Ongoing Spell Effects</h4>
+		<h4 class="h6 og-tab">Ongoing Spell Effects</h4>
 		<p>If an effect doesn't have a listed mechanical expiration, it only ends when decided by the controlling player, the GM, or the demands of the fiction.</p>
-		<h4 class="h6">Spending Resources</h4>
+		<h4 class="h6 og-tab">Spending Resources</h4>
 		<p>Unless an effect states otherwise, you can't spend Hope or mark <a href="#define-stress">Stress</a> multiple times on the same feature to increase or repeat its effects on the same roll.</p>
-		<h4 class="h6">Using Features After a Roll</h4>
+		<h4 class="h6 og-tab">Using Features After a Roll</h4>
 		<p>If a feature allows you to affect a roll after the result has been totaled, you can use it after the GM declares whether the roll succeeds or fails, but not after the consequences unfold or another roll is made.</p>
-	</div>
-</div>
-<div class="alert ps-4 pb-0">
-	<div id="define-optional-rules">
-		<h4 id="optional-rules">Optional Rules<a class="og-h-anchor" href="#optional-rules" title="Permalink" aria-hidden="true"></a></h4>
-		<p>The GM might use optional rules for the game:</p>
-		<ul class="list-unstyled og-qr">
-			<li><a href="#define-pvp">Conflict Between PCs</a></li>
-			<li><a href="#define-optional-rule-defined-ranges">Defined Ranges</a></li>
-			<li><a href="#define-falling">Falling and Collision Damage</a></li>
-			<li><a href="#define-fate-roll">Fate Rolls</a></li>
-			<li><a href="#define-gold">Gold Coins</a></li>
-			<li><a href="#define-optional-rule-massive-damage">Massive Damage</a></li>
-			<li><a href="#define-underwater">Moving and Fighting Underwater</a></li>
-			<li><a href="#define-optional-rule-spotlight-tracker-tool">Spotlight Tracker Tool</a></li>
-		</ul>
 	</div>
 </div>
 <hr>
 <h2 id="combat">Combat<a class="og-h-anchor" href="#combat" title="Permalink" aria-hidden="true"></a></h2>
 <ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-<p>Though <a href="#define-daggerheart">Daggerheart</a> relies on the same flow of collaborative storytelling in and out of combat, physical conflicts rely more heavily on several key mechanics related to attacking, maneuvering, and taking damage.</p>
+<p><a href="#define-daggerheart">Daggerheart</a> relies on the same <a href="#define-flow-of-the-game">flow of the game</a> in and out of combat, but physical conflicts rely more heavily on mechanics related to attacking, maneuvering, and taking damage.</p>
 <hr>
 <div id="define-evasion">
 	<h3 id="evasion">Evasion<a class="og-h-anchor" href="#evasion" title="Permalink" aria-hidden="true"></a></h3>
@@ -9252,8 +9284,8 @@
 <div id="define-multi-target-attack">
 	<div id="define-multi-target-attack-roll">
 		<h4 id="multi-target-attack-rolls">Multi-Target Attack Rolls<a class="og-h-anchor" href="#multi-target-attack-rolls" title="Permalink" aria-hidden="true"></a></h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 104</li></ul>
-		<p>If a spell or ability allows you to target multiple adversaries, make one <a href="#define-attack-roll">attack roll</a> and one <a href="#define-damage-roll">damage roll</a>, then apply the results to each target individually.</p>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 104</li><li>Page 160</li></ul>
+		<p>If a spell or ability allows you to target multiple adversaries, make one <a href="#define-attack-roll">attack roll</a> and  compare it to each target's <a href="#define-evasion">Evasion</a>. Then make <a href="#define-damage-roll">damage roll</a> and apply the results to each target the attack succeeded against.</p>
 	</div>
 </div>
 <div id="define-multiple-damage-sources">
@@ -9261,6 +9293,33 @@
 	<ul class="og-list-inline og-ref og-omit"><li>Page 98</li></ul>
 	<p>Damage dealt simultaneously from multiple sources is always totaled before it's compared to its target's <a href="#define-hit-point">damage thresholds</a>.</p>
 	<p>For example, if a PC with <a href="#define-orc">orc</a> ancestry makes a successful attack against a target in <a href="#define-range">Melee</a> range and decides to spend a <a href="#define-hope">Hope</a> to use their <strong><em>Tusks</em></strong> feature (which gives them an extra <strong>1d6</strong> damage on a <a href="#define-damage-roll">damage roll</a>), they would roll their normal <a href="#define-weapon">weapon</a> damage and add a <strong>d6</strong> to the result, then deal that total damage to the <a href="#define-adversary">adversary</a>.</p>
+</div>
+<hr>
+<div id="define-adversary-action">
+	<h3 id="adversaries-in-combat">Adversaries in Combat<a class="og-h-anchor" href="#adversaries-in-combat" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 89</li><li>Page 100</li><li>Page 148</li><li>Page 194</li></ul>
+	<p><a href="#define-gm-move">GM move</a>, the GM can <a href="#define-spotlight">spotlight</a> an <a href="#define-adversary">adversary</a>, spending additional <a href="#define-fear">Fear</a> to spotlight additional adversaries, prompting them to take an <strong>adversary action</strong>, including:</p>
+	<ul class="og-list-disc">
+		<li>Move within <a href="#define-range">Close</a> range and make a standard attack</li>
+		<li>Move within <a href="#define-range">Close</a> range and use an <a href="#define-adversary-feature">adversary feature</a></li>
+		<li>Clear a <a href="#define-condition">condition</a></li>
+		<li>Sprint within <a href="#define-range">Far</a> or <a href="#define-range">Very Far</a> range</li>
+		<li>Take another appropriate action the fiction demands</li>
+	</ul>
+	<p>Afterward, the <a href="#define-spotlight">spotlight</a> swings back to the PCs.</p>
+	<h4 id="adversary-rolls">The GM's Die: Adversary Rolls<a class="og-h-anchor" href="#adversary-rolls" title="Permalink" aria-hidden="true"></a></h4>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 148</li><li>Page 160</li></ul>
+	<p>When an <a href="#define-adversary">adversary</a> opposes the PCs, the GM rolls the <strong>GM's Die</strong>&mdash;a <strong>d20</strong>&mdash;instead of <a href="#define-action-roll">Duality Dice</a>, applying appropriate <a href="#define-modifier">modifiers</a> to the result.</p>
+	<ul class="og-list-disc">
+		<li><strong>Attack Rolls:</strong> If an <a href="#define-attack-roll">attack roll</a> meets or beats the target's <a href="#define-evasion">Evasion</a>, the attack succeeds, and the GM rolls appropriate <a href="#define-damage-roll">damage dice</a> and applies the <a href="#define-damage-type">damage type</a> to the target. If the roll results in a  <strong>natural 20</strong>, the attack succeeds automatically and deals <a href="#define-critical-damage">critical damage</a>.</li>
+		<li><strong>Reaction Rolls:</strong> A natural 20 on an <a href="#define-reaction-roll">reaction roll</a> automatically succeeds.</li>
+		<li><strong>Advantage:</strong> If an <a href="#define-adversary">adversary</a> has <a href="#define-advantage">advantage</a> on an action roll, the GM rolls an second <strong>d20</strong> and uses the higher result.</li>
+		<li><strong>Disdvantage:</strong> If an adversary has disadvantage on an <a href="#define-action-roll">action roll</a>, the GM rolls an second <strong>d20</strong> and uses the lower result.</li>
+	</ul>
+</div>
+<p><a href="#define-adversary">Adversaries</a> don't normally make other types of <a href="#define-action-roll">action rolls</a>. The rest of the time, the GM decides what they do by making <a href="#define-gm-move">GM moves</a>.</p>
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p>If the GM decides an adversary's action to has a chance of failure, it's best to have appropriate PCs make <a href="#define-reaction-roll">reaction rolls</a> instead. For dramatic or difficult tasks the PCs can't influence, the GM might assign them an d20 roll anyway.</p>
 </div>
 <hr>
 <div id="define-condition">
@@ -9464,6 +9523,19 @@
 	<h5 class="h6">Long Rest Consequences</h5>
 	<p>The GM gains <a href="#define-fear">Fear</a> equal to <strong>1d4</strong> + the number of PCs, and they <span class="og-omit">can</span> advance a long-term <a href="#define-countdown">countdown</a><span class="og-omit"> of their choice</span>.</p>
 </div>
+<div id="define-downtime-extended">
+	<h5 id="extended-downtime">Extended Downtime<a class="og-h-anchor" href="#extended-downtime" title="Permalink" aria-hidden="true"></a></h5>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
+	<p>When you fast-forward the story across an extended period, use montages to illustrate the passage of time. You gain <strong>1d6</strong> <a href="#define-fear">Fear</a> per PC and advance any <a href="#define-countdown">Long-Term Countdowns</a> as appropriate.</p>
+</div>
+
+<h5 id="projects-during-downtime">Projects During Downtime<a class="og-h-anchor" href="#projects-during-downtime" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
+<p>The <a href="#define-long-rest">Work on a Project</a> downtime move requires more GM input than other downtime moves and is best suited for long-term endeavors the PCs wish to undertake.</p>
+<p>These projects are typically tracked using a <a href="#define-countdown">Progress Countdown</a>. When deciding the starting value of the countdown, consider the complexity of the project, the availability of relevant tools, and the impact of the project on the story.</p>
+<p>Simple projects advance their countdown each time a player uses the <strong>Work on a Project</strong> move, but complex projects require a <a href="#define-action-roll">roll</a>.</p>
+
+
 <hr>
 <h2 id="gm-guidance">GM Guidance<a class="og-h-anchor" href="#gm-guidance" title="Permalink" aria-hidden="true"></a></h2>
 <!--
@@ -9475,83 +9547,72 @@
 <h3 id="running-an-adventure">Running an Adventure<a class="og-h-anchor" href="#running-an-adventure" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 140</li></ul>
 <p>The <strong>GM</strong> is responsible for guiding the narrative and roleplaying the world the PCs inhabit. This section provides you with advice for running <a href="#define-daggerheart">Daggerheart</a>.</p>
-<h4 id="principles-practices-and-pitfalls">Principles, Practices, and Pitfalls<a class="og-h-anchor" href="#principles-practices-and-pitfalls" title="Permalink" aria-hidden="true"></a></h4>
-<p>These three sections provide a foundation to help you get the most out of this game.</p>
+<p>These three sections offer <a href="#gm-principles">GM Principles">principles</a>, <a href="#gm-practices">practices</a>, and <a href="#gm-pitfalls">pitfalls</a> to avoid when <strong>running an adventure</strong>.</p>
 <hr>
-<h5 id="gm-principles">GM Principles<a class="og-h-anchor" href="#gm-principles" title="Permalink" aria-hidden="true"></a></h5>
+<h4 id="gm-principles">GM Principles<a class="og-h-anchor" href="#gm-principles" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 142</li></ul>
 <p>These <strong>GM Principles</strong> are your guiding star&mdash;when in doubt, return to these principles.<p>
-<h6 class="og-tab">Begin and end with the fiction</h6>
+<h5 class="h6 og-tab">Begin and end with the fiction</h5>
 <p>Use the fiction to drive mechanics, then connect the mechanics back to the fiction.</p>
-<h6 class="og-tab">Collaborate at all times, especially during conflict</h6>
+<h5 class="h6 og-tab">Collaborate at all times, especially during conflict</h5>
 <p>The PCs are the protagonists of the campaign; antagonism between player and GM should exist only in the fiction.</p>
-<h6 class="og-tab">Fill the world with life, wonder, and danger</h6>
+<h5 class="h6 og-tab">Fill the world with life, wonder, and danger</h5>
 <p>Showcase rich cultures, take the PCs to wondrous places, and introduce them to dangerous creatures.</p>
-<h6 class="og-tab">Ask questions and incorporate the answers</h6>
+<h5 class="h6 og-tab">Ask questions and incorporate the answers</h5>
 <p>Ensuring that the players' ideas are included results in a narrative that supports the whole group's creativity.</p>
-<h6 class="og-tab">Give every roll impact</h6>
+<h5 class="h6 og-tab">Give every roll impact</h5>
 <p>Only ask the players to roll during meaningful moments.</p>
-<h6 class="og-tab">Play to find out what happens</h6>
+<h5 class="h6 og-tab">Play to find out what happens</h5>
 <p>Be surprised by what the characters do, the choices they make, and the people they become.</p>
-<h6 class="og-tab">Hold on gently</h6>
+<h5 class="h6 og-tab">Hold on gently</h5>
 <p>Don't worry if you need to abandon or alter something that came before.</p>
 <hr>
-<h5 id="gm-practices">GM Practices</h5>
+<h4 id="gm-practices">GM Practices</h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 144</li></ul>
-<h6 class="og-tab">Cultivate a curious table</h6>
+<h5 class="h6 og-tab">Cultivate a curious table</h5>
 <p>Follow what catches the players' interest to foster an environment of creative inquiry.</p>
-<h6 class="og-tab">Gain your players' trust</h6>
+<h5 class="h6 og-tab">Gain players' trust</h5>
 <p>Act in good faith, follow through on your promises, admit your mistakes.</p>
-<h6 class="og-tab">Keep the story moving forward</h6>
+<h5 class="h6 og-tab">Keep the story moving forward</h5>
 <p>Advance the story through escalating action, new information, or changing circumstances after every <A href="#define-action-roll">action roll</a>, whether it succeeds or fails.</p>
-<h6 class="og-tab">Cut to the action</h6>
+<h5 class="h6 og-tab">Cut to the action</h5>
 <p>Skip past the boring bits. When a scene drags on, end it.</p>
-<h6 class="og-tab">Help the players use the game</h6>
+<h5 class="h6 og-tab">Help the players use the game</h5>
 <p>Players have more fun when you help them understand the system.</p>
-<h6 class="og-tab">Create a meta conversation</h6>
+<h5 class="h6 og-tab">Create a meta conversation</h5>
 <p>Empower players to speak out of character, use safety tools, and ask for clarification.</p>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>For an example of safety tools, see Monte Cook Games' excellent <a href="https://www.montecookgames.com/store/product/consent-in-gaming/">Consent in Gaming</a> checklist.</p>
 </div>
-<h6 class="og-tab">Tell them what they would know</h6>
+<h5 class="h6 og-tab">Tell them what they would know</h5>
 <p>Don't hide obvious details or important information from the players.</p>
-<h6 class="og-tab">Tell them what they would know</h6>
+<h5 class="h6 og-tab">Tell them what they would know</h5>
 <p>An NPC's <a href="#define-gm-move">actions</a> flow from their goals and desires.</p>
-<h6 class="og-tab">Bring the game's mechanics to life</h6>
+<h5 class="h6 og-tab">Bring the game's mechanics to life</h5>
 <p>Set a good example of how fiction and mechanics work together to enhance the game experience.</p>
-<h6 class="og-tab">Reframe rather than reject</h6>
+<h5 class="h6 og-tab">Reframe rather than reject</h5>
 <p>If a player's contribution conflicts with the fiction, work with them to reshape it.</p>
-<h6 class="og-tab">Work in moments and montages</h6>
+<h5 class="h6 og-tab">Work in moments and montages</h5>
 <p>When framing a scene, decide which beats should be savored and which shouldn't linger.</p>
 <hr>
-<h5 id="pitfalls-to-avoid">Pitfalls to Avoid<a class="og-h-anchor" href="#pitfalls-to-avoid" title="Permalink" aria-hidden="true"></a></h5>
+<h4 id="pitfalls-to-avoid">Pitfalls to Avoid<a class="og-h-anchor" href="#pitfalls-to-avoid" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 146</li></ul>
 <p>If a <a href="#define-action-roll">roll</a> doesn't go well, show how it was impacted by an <a href="#define-adversary">adversary</a>'s prowess, environmental factors, or unexpected surprises, rather than the PC's incompetence.</p>
-<h6 class="og-tab">Always telling the players what to roll<a class="og-h-anchor" href="#always-telling-the-players-what-to-roll" title="Permalink" aria-hidden="true"></a></h6>
+<h5 class="h6 og-tab">Always telling the players what to roll<a class="og-h-anchor" href="#always-telling-the-players-what-to-roll" title="Permalink" aria-hidden="true"></a></h5>
 <p>Let the players decide how to handle a challenge.</p>
-<h6 class="og-tab">Letting scenes drag</h6>
+<h5 class="h6 og-tab">Letting scenes drag</h5>
 <p>Shake it up or cut away when a scene has concluded, the table's energy is flagging, or people are talking in circles.</p>
-<h6 class="og-tab">Singular solutions</h6>
+<h5 class="h6 og-tab">Singular solutions</h5>
 <p>Don't get hung up on one right answer to a problem. If the players have a clever idea, make it work.</p>
-<h6 class="og-tab">Overplanning</h6>
+<h5 class="h6 og-tab">Overplanning</h5>
 <p>Spend your prep time inventing situations instead of scripting scenes. If the players surprise you, take a break to think through your options.</p>
-<h6 class="og-tab">Hoarding fear</h6>
+<h5 class="h6 og-tab">Hoarding fear</h5>
 <p>Spend <a href="#define-fear">Fear</a> when you have the opportunity. The players will always generate more.</p>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>For more in-depth GM guidance, see the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a>, page 140.</p>
 </div>
 <hr>
 <h3 id="core-gm-mechanics">Core GM Mechanics<a class="og-h-anchor" href="#core-gm-mechanics" title="Permalink" aria-hidden="true"></a></h3>
-<h4 id="rolling-dice">Rolling Dice<a class="og-h-anchor" href="#rolling-dice" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 148</li></ul>
-<p>The GM has no <a href="#define-action-roll">Duality Dice</a>; instead, they roll a single <strong>d20</strong> called the <strong>GM's Die</strong>.</p>
-<h4 id="adversary-attack-rolls">Adversary Attack Rolls<a class="og-h-anchor" href="#adversary-attack-rolls" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 148</li></ul>
-<p>When an <a href="#define-adversary">adversary</a> attacks a PC, roll your <strong>d20</strong> and add the <a href="#define-adversary">adversary</a>'s <strong>attack bonus</strong> to the result. If the total meets or beats the target's <a href="#define-evasion">Evasion</a>, the attack succeeds; otherwise, the attack fails. On a successful attack, roll the attack's <a href="#define-damage-roll">damage dice</a> to determine how much it deals.</p>
-<p>If you roll a <strong>natural 20</strong> on an <a href="#define-attack-roll">attack</a>, the <a href="#define-adversary">adversary</a> automatically succeeds and deals <a href="#define-critical-damage">critical damage</a>.</p>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p>a critical success on an <a href="#define-adversary">adversary</a>'s <a href="#define-reaction-roll">reaction roll</a> automatically succeeds, but confers no additional benefit.</p>
-</div>
 <h4 id="gm-player-action-rolls">Player Action Rolls<a class="og-h-anchor" href="#gm-player-action-rolls" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 148</li></ul>
 <p>After a player describes a <a href="#define-action">move</a> they want to make during the game, you might decide an <a href="#define-action-roll">action roll</a> is necessary to determine how the scene progresses. Use this guide to determine what to present the player, choosing whichever option best fits the situation:</p>
@@ -9570,114 +9631,97 @@
 	<li><strong>Failure with Hope:</strong> No, but&mldr; <em>(Things don't go as planned, but you gain a <a href="#define-hope">Hope</a>.)</em></li>
 	<li><strong>Failure with Fear:</strong> No, and&mldr; <em>(Things don't go as planned and it gets worse. The GM gains a <a href="#define-fear">Fear</a>.)</em></li>
 </ul>
-<p>If the move you should make is not obvious from the fiction, draw inspiration from the <a href="#define-making-gm-moves">Example GM Moves</a> list:</p>
+<p>If an outcome is not obvious, try one of the following:</p>
 <ul class="og-list-disc">
-	<li>Introduce a new obstacle or enemy</li>
 	<li>Ask the player what happens</li>
 	<li>Have the PC mark a <a href="#define-stress">Stress</a></li>
 	<li>Tell the players "everything is fine&mldr;for now."</li>
+	<li>Consult the <a href="#define-gm-move-examples">Example GM Moves</a></li>
 </ul>
 <hr>
-<div id="define-making-gm-moves">
-	<h3 id="gm-moves">GM Moves<a class="og-h-anchor" href="#gm-making-moves" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 152</li></ul>
-	<p><span class="og-omit">As the GM, you have </span><strong>GM moves</strong> <span class="og-omit">that</span> change the story in response to <span class="og-omit">the</span> player<span class="og-omit">s'</span> action<span class="og-omit">s. GM moves aren't bound by specific spells or effects&mdash;</span><span class="og-tooltip-inline"> W</span><span class="og-omit">w</span>hen you make a GM move, <span class="og-omit">you can</span> describe the action in whatever way the fiction demands. GM moves happen during GM turns. A GM turn begins when the <a href="#define-spotlight">spotlight</a> passes to them and ends when the spotlight passes back to the players.</p>
-	<h4 class="h6" id="example-gm-moves">Example GM Moves</h4>
-	<ul class="og-list-disc og-omit">
-		<li>Show how the world reacts</li>
-		<li>Ask a question and build on the answer</li>
-		<li>Make an NPC act in accordance with their motive</li>
-		<li>Drive a PC to take action by dangling their goals in front of them</li>
-		<li>Signal an imminent off-screen threat</li>
-		<li>Reveal an unwelcome truth or unexpected danger</li>
-		<li>Force the group to split up</li>
-		<li>Make a PC mark <a href="#define-stress">Stress</a></li>
-		<li>Make a <a href="#define-gm-move">GM move</a> the characters don't see</li>
-		<li>Show the collateral damage</li>
-		<li>Clear an <a href="#define-adversary">adversary</a>'s <a href="#define-condition">condition</a></li>
-		<li>Shift the environment</li>
-		<li><a href="#define-spotlight">Spotlight</a> an <a href="#define-adversary">adversary</a></li>
-		<li>Capture someone or something important</li>
-		<li>Use a PC's backstory against them</li>
-		<li>Take away an opportunity permanently</li>
-	</ul>
-	<ul class="list-unstyled og-qr og-tooltip-block">
-		<li><p>Show how the world reacts</p></li>
-		<li><p>Ask a question and build on the answer</p></li>
-		<li><p>Make an NPC act<span class="og-omit"> in accordance with their motive</span></p></li>
-		<li><p>Drive a PC to take <a href="#define-action">action</a><span class="og-omit"> by dangling their goals in front of them</span></p></li>
-		<li><p>Signal an imminent <span class="og-omit">off-screen</span> threat</p></li>
-		<li><p>Reveal <span class="og-omit">an unwelcome</span> truth or <span class="og-omit">unexpected</span> danger</p></li>
-		<li><p>Force the group to split up</p></li>
-		<li><p>Make a PC mark <a href="#define-stress">Stress</a></p></li>
-		<li><p>Make a <a href="#define-gm-move">move</a> the characters don't see</p></li>
-		<li><p>Show the collateral damage</p></li>
-		<li><p>Clear a<span class="og-omit">n <a href="#define-adversary">adversary</a>'s</span> <a href="#define-condition">condition</a></p></li>
-		<li><p>Shift the environment</p></li>
-		<li><p><a href="#define-spotlight">Spotlight</a> an <a href="#define-adversary">adversary</a></p></li>
-		<li><p>Capture someone or something<span class="og-omit"> important</span></p></li>
-		<li><p>Use a PC's backstory<span class="og-omit"> against them</span></p></li>
-		<li><p>Take away an opportunity<span class="og-omit"> permanently</span></p></li>
-	</ul>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<div id="define-gm-move">
+			<h3 id="gm-moves">GM Moves<a class="og-h-anchor" href="#gm-moves" title="Permalink" aria-hidden="true"></a></h3>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 89</li><li>Page 149</li><li>Page 150</li></ul>
+			<p>When the <a href="#define-spotlight">spotlight</a> passes to you, you can make <strong>GM moves</strong> that change the story in response to the PC's <a href="#define-action">actions</a>. Consider making a move when:</p>
+			<ul class="og-list-disc">
+				<li>A player <a href="#define-action-roll">Rolls with Fear</a> or fails an <a href="#define-action-roll">action roll</a></li>
+				<li>A PC <a href="#define-action">action</a> would create immediate consequences</li>
+				<li>Something provides a golden opportunity in the narrative</li>
+				<li>The players look to you for what happens next</li>
+			</ul>
+			<p>Make sure the the frequency and severity of your GM moves support the type and tone of the story, and are responsive to the <a href="#define-action">action</a> the PC takes&mdash;and outcome of their <a href="#define-action-roll">action roll</a>.</p>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Ranger Companion Advancements</caption>
+			<thead>
+				<tr>
+					<th scope="col">Event</th>
+					<th scope="col">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal">Success with Hope</th>
+					<td>Let the player describe their success, then you show how the world reacts to it.</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Success with Fear</th>
+					<td>Work with the player to describe their success, then introduce a minor consequence, complication, or cost</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Failure with Hope</th>
+					<td>Describe how the PC fails to get what they want, introduce a minor consequence, complication, or cost</td>
+				</tr>
+				<tr>
+					<th class="fw-normal"></th>
+					<td>Describe how the PC fails to get what they want, introduce a major consequence, complication, or cost</td>
+				</tr>
+				<tr>
+					<th class="fw-normal">Critical Success</th>
+					<td>Let the player describe their success, then give them an additional opportunity or <a href="#define-advantage">advantage</a>.</td>
+				</tr>
+			</tbody>
+		</table></div>
+	</div>
 </div>
-<h4 id="when-to-make-a-move">When to Make a Move<a class="og-h-anchor" href="#when-to-make-a-move" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 149</li></ul>
-<p>The GM can make a <a href="#define-gm-move">GM move</a> whenever you want, but the frequency and severity depends on the type of story you're telling, the <a href="#define-action">actions</a> your players take, and the tone of the session you're running.</p>
-<p>Make a GM move when the players:</p>
-<ul class="og-list-disc">
-	<li><a href="#define-action-roll">Roll with Fear</a></li>
-	<li>Fail an <a href="#define-action-roll">action roll</a></li>
-	<li>Do something that has unavoidable consequences</li>
-	<li>Give you a golden opportunity (an opening that demands an immediate response)</li>
-	<li>Look to you for what happens next</li>
-</ul>
-<h4 id="choosing-gm-moves">Choosing GM Moves<a class="og-h-anchor" href="#choosing-gm-moves" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 150</li></ul>
-<p>The result of a player's <a href="#define-action-roll">action roll</a> determines your response: On a <a href="#define-action-roll">Critical Success</a>, you let the player describe their success, then give them an additional opportunity or advantage.</p>
-<p>On a <a href="#define-action-roll">Success with Hope</a>, you let the player describe their success, then you show how the world reacts to it. On a <a href="#define-action-roll">Success with Fear</a>, you work with the player to describe their success, then take a Fear and make a <a href="#define-gm-move">GM move</a> to introduce a minor consequence, complication, or cost:</p>
-<ul class="og-list-disc">
-	<li>An <a href="#define-adversary">adversary</a> attacks</li>
-	<li>The PC marks a <a href="#define-stres">Stress</a></li>
-	<li>You introduce a new threat</li>
-	<li>You raise the stakes of the conflict</li>
-</ul>
-<p>On a <a href="#define-action-roll">Failure with Hope</a>, you describe how the PC fails to get what they want, then make a <a href="#define-gm-move">GM move</a> to introduce a minor consequence, complication, or cost:</p>
-<ul class="og-list-disc">
-	<li>An <a href="#define-adversary">adversary</a> attacks</li>
-	<li>The PC marks a <a href="#define-stres">Stress</a></li>
-	<li>You introduce a new threat</li>
-	<li>You raise the stakes of the conflict</li>
-</ul>
-<p>On a <a href="#define-action-roll">Failure with Fear</a>, you describe how things go wrong, then make a <a href="#define-gm-move">GM move</a> to introduce a major consequence, complication, or cost:</p>
-<ul class="og-list-disc">
-	<li>You put them in immediate danger</li>
-	<li>They become the focus of multiple adversaries</li>
-	<li>They are separated from their party</li>
-	<li>They lose an important opportunity for good</li>
-</ul>
+<div class="og-topbar">
+	<div id="define-gm-move-examples">
+		<h4 class="h6" id="example-gm-moves">Example GM Moves</h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 152</li></ul>
+		<ul class="og-list-disc og-qr">
+			<li><a href="#define-spotlight">Spotlight</a> an <a href="#define-adversary">adversary</a> to take an <a href="#define-adversary-feature">adversary action</a></li>
+			<li>Clear an <a href="#define-adversary">adversary</a>'s <a href="#define-condition">condition</a></li>
+			<li>Make a PC mark <a href="#define-stress">Stress</a></li>
+			<li>Change the <a href="#define-environment">environment</a></li>
+			<li>Make an <a href="#define-npc">NPC</a> act in accordance with their motive</li>
+			<li>Ask a question and build on the answer</li>
+			<li>Show how the world reacts</li>
+			<li>Show the collateral damage</li>
+			<li>Signal an imminent threat</li>
+			<li>Reveal an unwelcome truth or unexpected danger</li>
+			<li>Take away an opportunity</li>
+			<li>Capture someone or something</li>
+			<li>Dangle a PC's goal in front of them</li>
+			<li>Use a PC's backstory against them</li>
+			<li>Force the group to split up</li>
+			<li>Cause something to happen elsewhere that the PCs are unaware of</li>
+
+		</ul>
+	</div>
+</div>
 <h4 id="soft-and-hard-moves">Soft and Hard Moves<a class="og-h-anchor" href="#soft-and-hard-moves" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 151</li></ul>
 <p>Soft moves go easier on the players&mdash;they give the party new information about the scene and offer them an opportunity to react to it. Hard moves are harsher, more impactful, or more direct&mdash;the PCs don't get an opening to interrupt, alter, or anticipate the outcome.</p>
 <p>Use softer moves on <a href="#define-action-roll">rolls with Hope</a> and harder moves on <a href="#define-action-roll">rolls with Fear</a>.</p>
-<h4 id="using-fear">Using Fear<a class="og-h-anchor" href="#using-fear" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 154</li></ul>
-<ul class="og-list-disc">
-	<li>You start a campaign with 1 Fear per PC in the party.</li>
-	<li>You gain <a href="#define-fear">Fear</a> whenever a PC rolls with Fear, the PCs take a rest (see: Downtime), or when an ability or effect tells you to.</li>
-	<li>You can never have more than 12 <a href="#define-fear">Fear</a> at one time.</li>
-	<li>Fear carries over between sessions.</li>
-</ul>
-<p class="lead">Spend a Fear to:</p>
-<ul class="og-list-disc">
-	<li>Interrupt the players to steal the <a href="#define-spotlight">spotlight</a> and make a <a href="#define-gm-move">GM move</a></li>
-	<li>Make an additional <a href="#define-gm-move">GM move</a></li>
-	<li>Use an <a href="#define-adversary">adversary</a>'s <a href="#define-fear-feature">Fear Feature</a></li>
-	<li>Use an environment's <a href="#define-fear-feature">Fear Feature</a></li>
-	<li>Add an <a href="#define-adversary">adversary</a>'s <a href="#define-experience">Experience</a> to a roll or <a href="#define-difficulty">Difficulty</a></li>
-</ul>
 <p>The dramatic tension of a scene correlates with the amount of <a href="#define-fear">Fear</a> you spend during it. For guidance on how much <a href="#define-fear">Fear</a> you should spend in a scene, consult the following table:</p>
+
+155
 <div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Ranger Companion Advancements</caption>
+	<caption>Soft and Hard Moves</caption>
 	<thead>
 		<tr>
 			<th scope="col">Event</th>
@@ -9713,14 +9757,14 @@
 		</tr>
 	</tbody>
 </table></div>
-<p class="lead">If you have a large amount of Fear:</p>
-<p>Spending <a href="#define-fear">Fear</a> to make a <a href="#define-gm-move">GM move</a> communicates the increased impact of your action.</p>
+<h5 class="h6 og-tab">Spending Multiple Fear</h5>
+<p>If you have a large amount of <a href="#define-fear">Fear</a>, spend several on a <a href="#define-gm-move">GM move</a> to create an even bigger impact.</p>
 <ul class="og-list-disc">
 	<li><strong>Spending Fast:</strong> Spend <a href="#define-fear">Fear</a> before the players have a chance to react</li>
 	<li><strong>Spending Often:</strong> Spend <a href="#define-fear">Fear</a> every time the <a href="#define-spotlight">spotlight</a> swings to you</li>
 	<li><strong>Spending Big:</strong> Spend <a href="#define-fear">Fear</a> to make multiple <a href="#define-gm-move">GM moves</a> in a row</li>
 </ul>
-<p class="lead">Fear moves include:</p>
+<h5 class="h6 og-tab">Fear Move Examples</h5>
 <ul class="og-list-disc">
 	<li>Introducing new <a href="#define-adversary">adversaries</a> to a scene when their appearance hasn't been foreshadowed or lacks context.</li>
 	<li>An adversary activating a powerful spell or transformation to deal massive damage or boost their capabilities.</li>
@@ -10059,22 +10103,6 @@
 	</table></div>
 </div>
 <hr>
-<h3 id="giving-advantage-and-disadvantge">Giving Advantage and Disadvantage<a class="og-h-anchor" href="#giving-advantage-and-disadvantge" title="Permalink" aria-hidden="true"></a></h3>
-<ul class="og-list-inline og-ref og-omit"><li>Page 160</li></ul>
-<p>To viscerally convey how a PC's <a href="#define-action">actions</a> or circumstances affect their ability to act, grant them <a href="#define-advantage">advantage</a> die (or impose <a href="#define-advantage">disadvantage</a> die) instead of adjusting the <a href="#define-difficulty">Difficulty</a> of an <a href="#define-action-roll">action roll</a>.</p>
-<h4 id="adversary-action-rolls">Adversary Action Rolls<a class="og-h-anchor" href="#adversary-action-rolls" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 160</li></ul>
-<p>By default, <a href="#define-adversary">adversaries</a> don't normally make action rolls except for <a href="#define-attack-roll">attack rolls</a> and any unique actions described in their stat blocks. Any other action an adversary attempts simply succeeds without an action roll; if you want an adversary's action to have a chance of failure, have any relevant PCs make <a href="#define-reaction-roll">reaction rolls</a> instead.</p>
-<p>However, for especially dramatic or difficult tasks that the PCs can't influence, you can give an adversary an action roll anyway. For an adversary's action roll, roll a <strong>d20</strong>. If the result is equal to or greater than the action's <a href="#define-difficulty">Difficulty</a>, the action succeeds&mdash;otherwise it fails. You can spend a <a href="#define-fear">Fear</a> before rolling to add a relevant <a href="#define-experience">Experience</a> from the adversary's stat block to the total. Use the same procedure when an adversary makes a <a href="#define-reaction-roll">reaction roll</a>.</p>
-<h4 id="adversary-advantage-and-disadvantge">Adversary Advantage and Disadvantage<a class="og-h-anchor" href="#adversary-advantage-and-disadvantge" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 160</li></ul>
-<p>If an <a href="#define-adversary">adversary</a> has <a href="#define-advantage">advantage</a> on an action roll, the GM rolls an extra <strong>d20</strong> and counts only the higher result. If an adversary has disadvantage on an <a href="#define-action-roll">action roll</a>, the GM rolls an extra <strong>d20</strong> and counts only the lower result.</p>
-<h5 id="adversary-tactics">Adversary Tactics<a class="og-h-anchor" href="#adversary-tactics" title="Permalink" aria-hidden="true"></a></h5>
-<ul class="og-list-inline og-ref og-omit"><li>Page 160</li></ul>
-<p>When an adversary attacks a PC, the GM rolls a <strong>d20</strong> and adds the adversary's <strong>Attack Modifier</strong> to the result. If the total meets or beats the target's <a href="#define-evasion">Evasion</a>, the attack succeeds; otherwise, it fails. Before rolling, the GM can grant the attacking adversary <a href="#define-advantage">advantage</a>, impose <a href="#define-advantage">disadvantage</a>, or spend a <a href="#define-fear">Fear</a> to add a relevant <a href="#define-experience">Experience</a> from the adversary's stat block to the total.</p>
-<p>On a success, the adversary deals the <a href="#define-damage-roll">damage</a> listed in their stat block to the target.</p>
-<p>When an adversary's <a href="#define-gm-move">action</a> lets the GM make an attack against <a href="#define-multi-target-attack">multiple targets</a>, they make one <a href="#define-attack-roll">attack roll</a> and compare it to each target's <a href="#define-evasion">Evasion</a> separately.</p>
-<hr>
 <div id="define-countdown">
 	<h3 id="countdowns">Countdowns<a class="og-h-anchor" href="#countdowns" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 162</li></ul>
@@ -10136,110 +10164,43 @@
 	</tbody>
 </table></div>
 <hr>
-<h3 id="giving-out-loot">Giving Out Loot<a class="og-h-anchor" href="#giving-out-loot" title="Permalink" aria-hidden="true"></a></h3>
-<ul class="og-list-inline og-ref og-omit"><li>Page 165</li></ul>
-<p>It's up to you and your players how much importance you want to place on <a href="#define-gold">gold</a>, <a href="#define-equipment">Equipment</a>, and <a href="#define-loot">loot</a> in your campaign. Adjust the availability and utility of wealth and equipment to reflect the tone, themes, and setting of your campaign.</p>
-<p>If you don't wish to track gold, then when PCs go shopping for new items let them pick one or two from a short, preselected list that aligns with your campaign setting and the party's current location.</p>
-<h4 id="average-costs">Average Costs<a class="og-h-anchor" href="#average-costs" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 165</li></ul>
-<p>Otherwise, set the prices of goods and services by adjusting the entries in the following table to reflect your campaign setting:</p>
-<div class="table-responsive og-omit">
-	<table class="table table-light table-striped table-sm mb-3">
-		<caption>Average Costs</caption>
-		<thead>
-			<tr>
-				<th scope="col">Goods and Services</th>
-				<th class="text-center" scope="col">Cost</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th class="fw-normal">Meals for a party of adventurers per night</th>
-				<td class="text-center og-nowrap">1 Handful</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Standard inn room per night</th>
-				<td class="text-center og-nowrap">1 Handful</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Luxury inn room per night</th>
-				<td class="text-center og-nowrap">1 Bag</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Carriage ride</th>
-				<td class="text-center og-nowrap">2 Handfuls</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Mount (horse, mule, etc.)</th>
-				<td class="text-center og-nowrap">3 Bags</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Specialized tools</th>
-				<td class="text-center og-nowrap">3 Handfuls</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Fine clothing</th>
-				<td class="text-center og-nowrap">3 Handfuls</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Luxury clothing</th>
-				<td class="text-center og-nowrap">1 Bag</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Tier 1 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
-				<td class="text-center og-nowrap">1&ndash;5 Handfuls</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Tier 2 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
-				<td class="text-center og-nowrap">1&ndash;2 Bags</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Tier 3 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
-				<td class="text-center og-nowrap">5&ndash;10 Bags</td>
-			</tr>
-			<tr>
-				<th class="fw-normal">Tier 4 <a href="#define-equipment">Equipment</a> (<a href="#define-weapon">weapons</a>, <a href="#define-armor">armor</a>)</th>
-				<td class="text-center og-nowrap">1&ndash;2 Chests</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<hr>
 <h3 id="additional-gm-guidance">Additional GM Guidance<a class="og-h-anchor" href="#additional-gm-guidance" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 173</li></ul>
-<h4 id="story-beats">Story Beats<a class="og-h-anchor" href="#story-beats" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 173</li></ul>
-<p>In storytelling, a beat is a moment that changes the trajectory of the narrative&mdash;a shift in the world, a significant action or reaction, an emotional revelation, or an important decision. Take turns with the players, narrating a beat and then letting them react and carry the scene forward with their own beats. When preparing for a session, plan in terms of the moments that give shape to each scene or sequence, rather than pre-scripting specific details or exchanges.</p>
-<h4 id="preparing-combat-encounter">Preparing Combat Encounters<a class="og-h-anchor" href="#preparing-combat-encounter" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
-<p>Build the hurdles the PCs face around the question of "What helps tell the story?" Enemies, environments, and hazards are the tools for heightening tension and creating drama. Ensure that combat is being used to give players more information about the unfolding story, revealing the world, the plot, or the characters.</p>
-<h4 id="battles-and-narrative">Battles and Narrative<a class="og-h-anchor" href="#battles-and-narrative" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
-<p>Dynamic battles create suspense by forcing players to choose between their various objectives, engaging their character's motivations and weaknesses, and creating the crucible that the players use to forge their characters into legendary heroes. When preparing combat encounters:</p>
-<ul class="og-list-disc">
- 	<li>Consider the narrative function of the battle</li>
- 	<li>Base <a href="#define-adversary">adversary</a> moves on their motives</li>
- 	<li>Use dynamic environments to bring the battleground to life</li>
- 	<li>Add enemies that can interact with the PCs' features and special Abilities</li>
-</ul>
-<h4 id="session-rewards">Session Rewards<a class="og-h-anchor" href="#session-rewards" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 176</li></ul>
-<p>Reward players at the end of a session with:</p>
-<ul class="og-list-disc">
- 	<li>Useful information</li>
- 	<li>Story hooks</li>
- 	<li><a href="#define-loot">Loot</a></li>
- 	<li><a href="#define-gold">Gold</a></li>
- 	<li>Access to new equipment or enhancements</li>
-</ul>
-<h4 id="crafting-scenes">Session Rewards<a class="og-h-anchor" href="#crafting-scenes" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 177</li></ul>
-<p>Whenever you start a session, arrive at a new place, or change the situation, tell the players what they need to know by thinking with all of your senses and sharing something unique or unexpected about the fiction.</p>
 <div class="row">
+	<div class="col-12 col-md-6">
+		<h4 id="story-beats">Story Beats<a class="og-h-anchor" href="#story-beats" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 173</li></ul>
+		<p>In storytelling, a beat is a moment that changes the trajectory of the narrative&mdash;a shift in the world, a significant action or reaction, an emotional revelation, or an important decision. Take turns with the players, narrating a beat and then letting them react and carry the scene forward with their own beats. When preparing for a session, plan in terms of the moments that give shape to each scene or sequence, rather than pre-scripting specific details or exchanges.</p>
+		<h4 id="crafting-scenes">Crafting Scenes<a class="og-h-anchor" href="#crafting-scenes" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 177</li></ul>
+		<p>Whenever you start a session, arrive at a new place, or change the situation, tell the players what they need to know by thinking with all of your senses and sharing something unique or unexpected about the fiction.</p>
+		<h4 id="preparing-combat-encounter">Preparing Combat Encounters<a class="og-h-anchor" href="#preparing-combat-encounter" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
+		<p>Build the hurdles the PCs face around the question of "What helps tell the story?" Enemies, environments, and hazards are the tools for heightening tension and creating drama. Ensure that combat is being used to give players more information about the unfolding story, revealing the world, the plot, or the characters.</p>
+	</div>
+	<div class="col-12 col-md-6">
+		<h4 id="battles-and-narrative">Battles and Narrative<a class="og-h-anchor" href="#battles-and-narrative" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
+		<p>Dynamic battles create suspense by forcing players to choose between their various objectives, engaging their character's motivations and weaknesses, and creating the crucible that the players use to forge their characters into legendary heroes. When preparing combat encounters:</p>
+		<ul class="og-list-disc">
+			<li>Consider the narrative function of the battle</li>
+			<li>Base <a href="#define-adversary">adversary</a> moves on their motives</li>
+			<li>Use dynamic environments to bring the battleground to life</li>
+			<li>Add enemies that can interact with the PCs' features and special Abilities</li>
+		</ul>
+		<h4 id="phased-battles">Phased Battles<a class="og-h-anchor" href="#phased-battles" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 180</li></ul>
+		<p>Make battles by shifting the nature of its enemies or environment mid-combat:</p>
+		<ul class="og-list-disc">
+			<li>Change the terms of engagement</li>
+			<li>Alter the environment</li>
+			<li>Evolve the opposition</li>
+		</ul>
+	</div>
 	<div class="col-12 col-md-6">
 		<h4 id="engaging-players">Engaging Players<a class="og-h-anchor" href="#engaging-players" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 176</li></ul>
-		<p>Keep your players engaged by:</p>
+		<p>Keep players engaged by:</p>
 		<ul class="og-list-disc">
 			<li>Rotating the focus between the PCs</li>
 			<li>Tying together story elements</li>
@@ -10250,14 +10211,9 @@
 			<li>Raise the stakes by spending <a href="#define-fear">Fear</a></li>
 			<li>Layering <a href="#define-random-objectives">goals other than attrition</a> into combat</li>
 		</ul>
-		<h4 id="phased-battles">Phased Battles<a class="og-h-anchor" href="#phased-battles" title="Permalink" aria-hidden="true"></a></h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 180</li></ul>
-		<p>Make battles by shifting the nature of its enemies or environment mid-combat:</p>
-		<ul class="og-list-disc">
-			<li>Change the terms of engagement</li>
-			<li>Alter the environment</li>
-			<li>Evolve the opposition</li>
-		</ul>
+		<h4 id="using-downtime">Using Downtime<a class="og-h-anchor" href="#using-downtime" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
+		<p>Use <a href="#define-downtime">downtime</a> scenes as a pressure release valve to vary the intensity of the story and give the PCs room to breathe. Empower players to frame their own downtime scenes. Ask the players what it looks like as they tend to their wounds or unwind together, encouraging them to take the reins and work with other players whose characters are involved.</p>
 	</div>
 	<div class="col-12 col-md-6">
 		<div id="define-random-objectives">
@@ -10325,61 +10281,90 @@
 		</div>
 	</div>
 </div>
-<h4 id="using-downtime">Using Downtime<a class="og-h-anchor" href="#using-downtime" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
-<p>Use <a href="#define-downtime">downtime</a> scenes as a pressure release valve to vary the intensity of the story and give the PCs room to breathe. Empower your players to frame their own downtime scenes. Ask the players what it looks like as they tend to their wounds or unwind together, encouraging them to take the reins and work with other players whose characters are involved.</p>
-<h5 id="projects-during-downtime">Projects During Downtime<a class="og-h-anchor" href="#projects-during-downtime" title="Permalink" aria-hidden="true"></a></h5>
-<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
-<p>The <a href="#define-long-rest">Work on a Project</a> downtime move requires more GM input than other downtime moves and is best suited for long-term endeavors the PCs wish to undertake.</p>
-<p>These projects are typically tracked using a <a href="#define-countdown">Progress Countdown</a>. When deciding the starting value of the countdown, consider the complexity of the project, the availability of relevant tools, and the impact of the project on the story.</p>
-<p>Simple projects advance their countdown each time a player uses the <strong>Work on a Project</strong> move, but complex projects require a <a href="#define-action-roll">roll</a>.</p>
-<h5 id="extended-downtime">Extended Downtime<a class="og-h-anchor" href="#extended-downtime" title="Permalink" aria-hidden="true"></a></h5>
-<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
-<p>When you fast-forward the story across an extended period, use montages to illustrate the passage of time. You gain <strong>1d6</strong> <a href="#define-fear">Fear</a> per PC and advance any <a href="#define-countdown">Long-Term Countdowns</a> as appropriate.</p>
+<h4 id="session-rewards">Session Rewards<a class="og-h-anchor" href="#session-rewards" title="Permalink" aria-hidden="true"></a></h4>
+<ul class="og-list-inline og-ref og-omit"><li>Page 176</li></ul>
+<p>Reward players at the end of a session with:</p>
+<ul class="og-list-disc">
+	<li>Useful information</li>
+	<li>Story hooks</li>
+	<li><a href="#define-loot">Loot</a></li>
+	<li><a href="#define-gold">Gold</a></li>
+	<li>Access to new <a href="#define-equipment">equipment</a> or enhancements</li>
+</ul>
 <hr>
-<h3 id="optional-gm-mechanics">Optional GM Mechanics<a class="og-h-anchor" href="#optional-gm-mechanics" title="Permalink" aria-hidden="true"></a></h3>
-<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
-<div id="define-fate-roll">
-	<h4 id="fate-rolls">Fate Rolls<a class="og-h-anchor" href="#fate-rolls" title="Permalink" aria-hidden="true"></a></h4>
+<div id="define-optional-rules">
+	<h3 id="optional-rules">Optional Rules<a class="og-h-anchor" href="#optional-rules" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
-	<p>When the GM wants to leave an outcome entirely up to chance, they call for a <strong>fate roll</strong>. The GM establishes what's at stake and how the roll will be interpreted. Then a player rolls one of their <a href="#define-action-roll">Duality Dice</a> and interprets the result.</p>
-	<h5 class="h6">Fate Roll Examples</h5>
-	<ul class="og-list-disc">
-		<li>"Roll your <a href="#define-action-roll">Fear Die</a>. On a 4 or lower, the fire spreads beyond this house."</li>
-		<li>"I think it's really up to chance whether reinforcements will make it to you in time. Go ahead and roll your <a href="#define-action-roll">Fear Die</a>&mdash;that'll determine the starting size of the <a href="#define-countdown">Countdown</a>. When that triggers, reinforcements will arrive in your <a href="#define-far">Far</a> range."</li>
-		<li>"Go ahead and roll your <a href="#define-action-roll">Hope Die</a> to see how big the crowd at the inn is tonight. The higher the roll, the bigger the crowd."</li>
-		<li>"Make a roll using your <a href="#define-action-roll">Hope Die</a> to determine the number of <a href="#define-loot-stamina-potion">Stamina Potions</a> the shop has in stock."</li>
+	<p>The GM might use optional rules for the game, including:</p>
+	<div class="alert ps-4 pb-0 og-omit">
+		<ul class="list-unstyled og-qr">
+			<li><a href="#define-pvp">Conflict Between PCs</a></li>
+			<li><a href="#define-optional-rule-defined-ranges">Defined Ranges</a></li>
+			<li><a href="#define-falling">Falling and Collision Damage</a></li>
+			<li><a href="#define-fate-roll">Fate Rolls</a></li>
+			<li><a href="#define-gold">Gold Coins</a></li>
+			<li><a href="#define-optional-rule-massive-damage">Massive Damage</a></li>
+			<li><a href="#define-underwater">Moving and Fighting Underwater</a></li>
+			<li><a href="#define-optional-rule-spotlight-tracker-tool">Spotlight Tracker Tool</a></li>
+		</ul>
+	</div>
+	<ul class="list-unstyled og-qr og-tooltip-block">
+		<li><a href="#define-pvp">Conflict Between PCs</a></li>
+		<li><a href="#define-optional-rule-defined-ranges">Defined Ranges</a></li>
+		<li><a href="#define-falling">Falling and Collision Damage</a></li>
+		<li><a href="#define-fate-roll">Fate Rolls</a></li>
+		<li><a href="#define-gold">Gold Coins</a></li>
+		<li><a href="#define-optional-rule-massive-damage">Massive Damage</a></li>
+		<li><a href="#define-underwater">Moving and Fighting Underwater</a></li>
+		<li><a href="#define-optional-rule-spotlight-tracker-tool">Spotlight Tracker Tool</a></li>
 	</ul>
 </div>
-<div id="define-falling">
-	<h4 id="falling-and-collision-damage">Falling and Collision Damage<a class="og-h-anchor" href="#falling-and-collision-damage" title="Permalink" aria-hidden="true"></a></h4>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
-	<p>If a character falls to the ground, you can use the following as a guide to determine the damage they take:</p>
-	<ul class="og-list-disc">
-		<li>A fall from <a href="#define-range">Very Close</a> range deals <strong>1d10+3</strong> <a href="#define-damage-type">physical damage</a>.</li>
-		<li>A fall from <a href="#define-range">Close</a> range deals <strong>1d20+5</strong> <a href="#define-damage-type">physical damage</a>.</li>
-		<li>A fall from <a href="#define-range">Far</a> or <a href="#define-range">Very Far</a> range deals <strong>1d100+15</strong> <a href="#define-damage-type">physical damage</a>, or <a href="#define-death">death</a> at the GM's discretion.</li>
-		<li>If a character collides with an object or another character at a dangerous speed, they take <strong>1d20+5</strong> <a href="#define-damage-type">direct physical damage</a>.</li>
-	</ul>
-</div>
-<div id="define-underwater">
-	<h4 id="moving-and-fighting-underwater">Moving and Fighting Underwater<a class="og-h-anchor" href="#moving-and-fighting-underwater" title="Permalink" aria-hidden="true"></a></h4>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
-	<p>By default, <a href="#define-attack-roll">attack rolls</a> made while the attacker is underwater have <a href="#define-advantage">disadvantage</a>.</p>
-	<p>For creatures that can't breathe underwater, use a standard <a href="#define-countdown">Countdown</a> <strong>(3)</strong> to track how long they can hold their breath. Advance the <a href="#define-countdown">Countdown</a> whenever the PC takes an <a href="#define-action">action</a>. In addition if they fail a <a href="#define-action-roll">roll</a> or <a href="#define-action-roll">roll with Fear</a> while underwater, you can spend your <a href="#define-gm-move">GM move</a> to advance it an additional time&mdash;or twice, if they rolled a <a href="#define-action-roll">failure with Fear</a>.</p>
-	<p>Once the <a href="#define-countdown">Countdown</a> ends, the underwater PC must mark a <a href="#define-stress">Stress</a> whenever they take an action.</p>
-</div>
-<div id="define-pvp">
-	<h4 id="conflict-between-pcs">Conflict Between PCs<a class="og-h-anchor" href="#conflict-between-pcs" title="Permalink" aria-hidden="true"></a></h4>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
-	<p>Sometimes a player might want their character to act against another PC in the scene. Before jumping to rolling dice, discuss the situation with both players to decide how to resolve the conflict. A roll might not be necessary to reach an outcome&mdash;but if rolling will be fun for everyone involved, come to a consensus on the terms of the roll, then facilitate the scene according to the results.</p>
-	<p>On an <a href="#define-attack-roll">attack roll</a> against a PC, the attacker rolls against the defender's <a href="#define-evasion">Evasion</a>, just like an <a href="#define-adversary">adversary</a>. On any other kind of action roll, the instigator makes an action roll and the target makes a <a href="#define-reaction-roll">reaction roll</a>. To succeed, the instigator must beat a <a href="#define-difficulty">Difficulty</a> equal to the total value of the reaction roll.</p>
-</div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p>Players can have very different reactions to PVP in a session. Make sure that opposed rolls between PCs are creating a good time and a good story for everyone involved.</p>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<div id="define-fate-roll">
+			<h4 id="fate-rolls">Fate Rolls<a class="og-h-anchor" href="#fate-rolls" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
+			<p>When the GM wants to leave an outcome entirely up to chance, they call for a <strong>fate roll</strong>. The GM establishes what's at stake and how the roll will be interpreted. Then a player rolls one of their <a href="#define-action-roll">Duality Dice</a> and interprets the result.</p>
+			<h5 class="h6">Fate Roll Examples</h5>
+			<ul class="og-list-disc">
+				<li>"Roll your <a href="#define-action-roll">Fear Die</a>. On a 4 or lower, the fire spreads beyond this house."</li>
+				<li>"I think it's really up to chance whether reinforcements will make it to you in time. Go ahead and roll your <a href="#define-action-roll">Fear Die</a>&mdash;that'll determine the starting size of the <a href="#define-countdown">Countdown</a>. When that triggers, reinforcements will arrive in your <a href="#define-far">Far</a> range."</li>
+				<li>"Go ahead and roll your <a href="#define-action-roll">Hope Die</a> to see how big the crowd at the inn is tonight. The higher the roll, the bigger the crowd."</li>
+				<li>"Make a roll using your <a href="#define-action-roll">Hope Die</a> to determine the number of <a href="#define-loot-stamina-potion">Stamina Potions</a> the shop has in stock."</li>
+			</ul>
+		</div>
+		<div id="define-falling">
+			<h4 id="falling-and-collision-damage">Falling and Collision Damage<a class="og-h-anchor" href="#falling-and-collision-damage" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
+			<p>If a character falls to the ground, you can use the following as a guide to determine the damage they take:</p>
+			<ul class="og-list-disc">
+				<li>A fall from <a href="#define-range">Very Close</a> range deals <strong>1d10+3</strong> <a href="#define-damage-type">physical damage</a>.</li>
+				<li>A fall from <a href="#define-range">Close</a> range deals <strong>1d20+5</strong> <a href="#define-damage-type">physical damage</a>.</li>
+				<li>A fall from <a href="#define-range">Far</a> or <a href="#define-range">Very Far</a> range deals <strong>1d100+15</strong> <a href="#define-damage-type">physical damage</a>, or <a href="#define-death">death</a> at the GM's discretion.</li>
+				<li>If a character collides with an object or another character at a dangerous speed, they take <strong>1d20+5</strong> <a href="#define-damage-type">direct physical damage</a>.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div id="define-underwater">
+			<h4 id="moving-and-fighting-underwater">Moving and Fighting Underwater<a class="og-h-anchor" href="#moving-and-fighting-underwater" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
+			<p>By default, <a href="#define-attack-roll">attack rolls</a> made while the attacker is underwater have <a href="#define-advantage">disadvantage</a>.</p>
+			<p>For creatures that can't breathe underwater, use a standard <a href="#define-countdown">Countdown</a> <strong>(3)</strong> to track how long they can hold their breath. Advance the <a href="#define-countdown">Countdown</a> whenever the PC takes an <a href="#define-action">action</a>. In addition if they fail a <a href="#define-action-roll">roll</a> or <a href="#define-action-roll">roll with Fear</a> while underwater, you can spend your <a href="#define-gm-move">GM move</a> to advance it an additional time&mdash;or twice, if they rolled a <a href="#define-action-roll">failure with Fear</a>.</p>
+			<p>Once the <a href="#define-countdown">Countdown</a> ends, the underwater PC must mark a <a href="#define-stress">Stress</a> whenever they take an action.</p>
+		</div>
+		<div id="define-pvp">
+			<h4 id="conflict-between-pcs">Conflict Between PCs<a class="og-h-anchor" href="#conflict-between-pcs" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
+			<p>Sometimes a player might want their character to act against another PC in the scene. Before jumping to rolling dice, discuss the situation with both players to decide how to resolve the conflict. A roll might not be necessary to reach an outcome&mdash;but if rolling will be fun for everyone involved, come to a consensus on the terms of the roll, then facilitate the scene according to the results.</p>
+			<p>On an <a href="#define-attack-roll">attack roll</a> against a PC, the attacker rolls against the defender's <a href="#define-evasion">Evasion</a>, just like an <a href="#define-adversary">adversary</a>. On any other kind of action roll, the instigator makes an action roll and the target makes a <a href="#define-reaction-roll">reaction roll</a>. To succeed, the instigator must beat a <a href="#define-difficulty">Difficulty</a> equal to the total value of the reaction roll.</p>
+		</div>
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>Players can have very different reactions to PVP in a session. Make sure that opposed rolls between PCs are creating a good time and a good story for everyone involved.</p>
+		</div>
+	</div>
 </div>
 <hr>
-
 <h3 id="campaign-frames">Campaign Frames<a class="og-h-anchor" href="#campaign-frames" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 253</li></ul>
 <p>A <strong>campaign frame</strong> provides inspiration, tools, and mechanics to support a particular type of story at the table.</p>
@@ -10427,7 +10412,7 @@
 </div>
 <h5 id="campaign-frame-pitch">The Pitch<a class="og-h-anchor" href="#campaign-frame-pitch" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 254</li></ul>
-<p><em>Read this section to your players to introduce them to the campaign.</em></p>
+<p><em>Read this section to players to introduce them to the campaign.</em></p>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p><a href="#define-fanewick">Fanewick</a> was once a place of great abundance and peace&mdash;dangerous to those unfamiliar with the land, but a cornucopia to those who respected its ways. When <a href="#define-haven">Haven</a> invaded the wilds and forced the land into eternal spring, a dangerous bloom known as the <a href="#define-witherwild">Witherwild</a> took hold and now threatens the lives of all who live there. In a Witherwild campaign, you'll play unlikely heroes from humble beginnings who are reckoning with their newfound duty to save Fanewick's people from dangerous <a href="#define-withered">corruption</a>.</p>
 </div>
@@ -10470,7 +10455,7 @@
 </div>
 <h5 id="campaign-frame-overview">Overview<a class="og-h-anchor" href="#campaign-frame-overview" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 255</li></ul>
-<p><em>If your group decides to play this campaign, give your players the following information before <a href="#define-character-creation">character creation</a>.</em></p>
+<p><em>If your group decides to play this campaign, give players the following information before <a href="#define-character-creation">character creation</a>.</em></p>
 <div id="define-fanewick">
 	<p class="lead og-tooltip-block">Fanewick</p>
 	<p><strong>Fanewick</strong> is a wild and untamed land, long avoided by outside forces. The woods are dark and twisting, filled with <a href="#define-faint-divinities">Faint Divinities</a> who perform small miracles and services for its inhabitants, but are just as likely to lure travelers off narrow paths to their ruin. Seemingly harmless expanses of field hide bogs that engulf entire armies, consuming heavy artillery as quickly as it can cross the border. This wilderness fosters hardy people who are bold enough to raise families where others have not and strictly follow the unique rules that keep them safe. These <strong>Wicklings</strong> remained insulated from their neighbors' wars until plague forced the people of Haven to desperate acts.</p>
@@ -10487,7 +10472,7 @@
 <p>Prior to the <a href="#define-serpents-sickness">Serpent's Sickness</a> and the Shepherd's endless growth, your party lived a peaceful life in Fanewick or a life of toil and conquest in Haven. But when the danger demands a response, even the unprepared&mdash;and unwilling&mdash;must make a stand.</p>
 <h5 id="campaign-frame-communities">Communities<a class="og-h-anchor" href="#campaign-frame-communities" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 256</li></ul>
-<p><em>All <a href="#define-community">communities</a> are available, but some have unique aspects within a Witherwild campaign. As needed, provide the following information to your players and choose one or more of the questions to ask them during your session zero.</em></p>
+<p><em>All <a href="#define-community">communities</a> are available, but some have unique aspects within a Witherwild campaign. As needed, provide the following information to players and choose one or more of the questions to ask them during your session zero.</em></p>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<h6 class="og-tab">Loreborne and Highborne</h6>
@@ -10567,7 +10552,7 @@
 </div>
 <h5 id="campaign-frame-ancestries">Ancestries<a class="og-h-anchor" href="#campaign-frame-ancestries" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 257</li></ul>
-<p><em>All <a href="#define-ancestry">ancestries</a> are available, but some have unique> aspects within a Witherwild campaign. As needed, provide the following information to your players.</em></p>
+<p><em>All <a href="#define-ancestry">ancestries</a> are available, but some have unique> aspects within a Witherwild campaign. As needed, provide the following information to players.</em></p>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<h6 class="og-tab">Clanks</h6>
@@ -10588,7 +10573,7 @@
 </div>
 <h5 id="campaign-frame-classes">Classes<a class="og-h-anchor" href="#campaign-frame-classes" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 257</li></ul>
-<p><em>All <a href="#define-class">classes</a> are available, but some have unique aspects within a Witherwild campaign. As needed, provide the following information to your players.</em></p>
+<p><em>All <a href="#define-class">classes</a> are available, but some have unique aspects within a Witherwild campaign. As needed, provide the following information to players.</em></p>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<h6 class="og-tab">Druids, Rangers, and Sorcerers</h6>
@@ -10609,7 +10594,7 @@
 </div>
 <h5 id="campaign-frame-principles-player">Player Principles<a class="og-h-anchor" href="#campaign-frame-principles-player" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 258</li></ul>
-<p><em>If your group decides to play this campaign, give your players the following information before <a href="#define-character-creation">character creation</a>.</em></p>
+<p><em>If your group decides to play this campaign, give players the following information before <a href="#define-character-creation">character creation</a>.</em></p>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<h6 class="og-tab">Make the Invasion Personal</h6>
@@ -10634,7 +10619,7 @@
 	</div>
 	<div class="col-12 col-md-6">
 		<h6 class="og-tab">Show Them True Danger</h6>
-		<p>Though it may be tragic, bodily harm is not the worst tragedy that can befall the characters. To illustrate what's truly at stake, use the PCs' origins in Fanewick or <a href="#define-haven">Haven</a> to show them what they stand to lose, be it their homes, family, friends, communities, or even their core truths and beliefs. The events of this campaign may change, threaten, or destroy these aspects of their past&mdash;when your players create and are invested in their character's backstory, they have something to fight for.</p>
+		<p>Though it may be tragic, bodily harm is not the worst tragedy that can befall the characters. To illustrate what's truly at stake, use the PCs' origins in Fanewick or <a href="#define-haven">Haven</a> to show them what they stand to lose, be it their homes, family, friends, communities, or even their core truths and beliefs. The events of this campaign may change, threaten, or destroy these aspects of their past&mdash;when players create and are invested in their character's backstory, they have something to fight for.</p>
 	</div>
 	<div class="col-12 col-md-6">
 		<h6 class="og-tab">Offer Alternatives to Violence</h6>
@@ -10647,7 +10632,7 @@
 </div>
 <h5 id="campaign-frame-distinctions">Distinctions<a class="og-h-anchor" href="#campaign-frame-distinctions" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 259</li><li>Page 260</li></ul>
-<p><em>Use this information to prepare your campaign. You can also share it with your players as needed.</em></p>
+<p><em>Use this information to prepare your campaign. You can also share it with players as needed.</em></p>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<div id="define-weeks">
@@ -10738,7 +10723,7 @@
 </div>
 <h5 id="campaign-frame-questions">Session Zero Questions<a class="og-h-anchor" href="#campaign-frame-questions" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 261</li></ul>
-<p><em>Ask any of these questions to your players, or make your own.</em></p>
+<p><em>Ask any of these questions to players, or make your own.</em></p>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<ul class="og-list-disc">
 		<li>What dangerous animal comes out during the week of night that isn't out during the week of day?</li>
@@ -10807,48 +10792,31 @@
 			<h3 id="adversaries">Adversaries<a class="og-h-anchor" href="#adversaries" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 193</li></ul>
 			<p><strong>Adversaries</strong> are creatures controlled by the GM that act in opposition to the PCs. Adversary stat blocks include:<p>
-			<dl class="og-omit">
+			<dl>
 				<dt>Name</dt>
-				<dd>Effects can affect all adversaries with that name&mdash;regardless of their in-story name.</dd>
+				<dd>Some effects apply to all adversaries with the same stat block.</dd>
 				<dt>Tier</dt>
-				<dd>Each adversary is designed to oppose a certain <a href="#define-tier">tier</a> of PCs. <span class="og-omit">If you confront the party with an adversary from another tier, adjust their stats.</span></dd>
+				<dd>The recommended <a href="#define-tier">tier</a> of PCs the creature should oppose.</dd>
 				<dt>Type</dt>
 				<dd>An adversary's <a href="#define-adversary-type">type</a> represents the role they play in a conflict.</dd>
-				<dt>Description</dt>
-				<dd>The adversary's look and mannerisms.</dd>
-				<dt>Motives and Tactics</dt>
-				<dd>How they get what they want.</dd>
+				<dt class="og-omit">Description, Motives, and Tactics</dt>
+				<dd class="og-omit">The adversary's look, mannerisms, and how they get what they want.</dd>
 				<dt>Difficulty</dt>
-				<dd>The <a href="#define-difficulty">Difficulty</a> of any <a href="#define-action-roll">roll</a> made against them, unless otherwise noted.</dd>
+				<dd>The <a href="#define-difficulty">Difficulty</a> of most <a href="#define-action-roll">action rolls</a> made against them.</dd>
 				<dt>Damage</dt>
-				<dd>Like PCs, NPCs can have <a href="#define-hit-point">Hit Points</a>, <a href="#define-hit-point">damage thresholds</a> and <a href="#define-stress">Stress</a>.</dd>
-				<dt>Attack Modifier</dt>
-				<dd>Apply this bonus or penalty to the adversary's <a href="#define-attack-roll">attack roll</a>.</dd>
-				<dt>Standard Attack</dt>
-				<dd>Includes the attack's name, <a href="#define-range">range</a>, and <a href="#define-damage-roll">damage roll</a>. Using a standard attack is a <a href="#define-gm-move">GM move</a>.</dd>
+				<dd><a href="#define-hit-point">Hit Points</a>, <a href="#define-hit-point">damage thresholds</a> and <a href="#define-stress">Stress</a> work exactly the same as for PCs.</dd>
+				<dt>Attacks</dt>
+				<dd>Includes <a href="#define-attack-roll">attack roll</a> <a href="#define-modidier">modifier</a>, name, <a href="#define-range">range</a>, and <a href="#define-damage-roll">damage roll</a>.</dd>
 				<dt>Experience</dt>
-				<dd>The GM can spend a <a href="#define-fear">Fear</a> to add <a href="#define-experience">Experience</a> as a <a href="#define-modifier">modifier</a>&mdash;adding it as a bonus to an <a href="#define-attack-roll">attack roll</a>, or increasing the <a href="#define-difficult">Difficulty</a> of a roll against them.</dd>
+				<dd>The GM can spend a <a href="#define-fear">Fear</a> to add <a href="#define-experience">Experience</a> as a <a href="#define-modifier">modifier</a> to an <a href="#define-adversary-action">adversary action</a> roll, or to modify the <a href="#define-difficult">Difficulty</a> of a roll made against them.</dd>
 				<dt>Features</dt>
-				<dd>Includes <strong>actions</strong>, <strong>reactions</strong>, and <strong>passives</strong>. <a href="#define-stress">Stress</a> spent to activate a feature must come from the adversary using the it. If a feature requires the GM to spend <a href="#define-fear">Fear</a>, it is in addition to Fear spent to interrupt the PCs and swing the <a href="#define-spotlight">spotlight</a>.</dd>
+				<dd>Additional <a href="#define-adversary-feature">adversary features</a>.</dd>
 			</dl>
-			<ul class="og-list-disc og-tooltip-block">
-				<li><strong>Name:</strong> Can be targeted by the stat block's name&mdash;regardless of in-story name.</li>
-				<li><strong>Tier:</strong> The recommended <a href="#define-tier">tier</a> of PC.</li>
-				<li><strong>Type:</strong> The role they play in a conflict.</li>
-				<li><strong>Decription:</strong> The adversary's look and mannerisms.</li>
-				<li><strong>Motives and Tactics:</strong> How they get what they want.</li>
-				<li><strong>Difficulty:</strong> The <a href="#define-difficulty">Difficulty</a> of <a href="#define-action-roll">rolls</a> made against them<span class="og-omit">, unless otherwise noted</span>.</li>
-				<li><strong>Damage:</strong> Includes <a href="#define-hit-point">Hit Points</a>, <a href="#define-hit-point">damage thresholds</a> (Major and Severe) and <a href="#define-stress">Stress</a>.</li>
-				<li><strong>Attack Modifier:</strong> Apply this bonus to the adversary's <a href="#define-attack-roll">attack roll</a>.</li>
-				<li><strong>Standard Attack:</strong> Includes the attack's name, <a href="#define-range">range</a>, and <a href="#define-damage-roll">damage roll</a>. Using a standard attack is a <a href="#define-gm-move">GM move</a>.</li>
-				<li><strong>Experience:</strong> The GM can spend a <a href="#define-fear">Fear</a> to add <a href="#define-experience">Experience</a> as a <a href="#define-modifier">modifier</a>&mdash;adding it as a bonus to an <a href="#define-attack-roll">attack roll</a>, or increasing the <a href="#define-difficult">Difficulty</a> of a roll against them.</li>
-				<li><strong>Features:</strong> Includes <strong>actions</strong>, <strong>reactions</strong>, and <strong>passives</strong>.</li>
-			</ul>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div id="define-adversary-type">
-			<h4 class="h6 og-tab">Adversary Types</h4>
+			<h4 id="adversary-types">Adversary Types<a class="og-h-anchor" href="#adversary-types" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 194</li></ul>
 			<dl class="og-omit">
 				<dt>Bruisers</dt>
@@ -10885,79 +10853,92 @@
 				<li><strong>Supports:</strong> Enhances their allies and disrupt their opponents.</li>
 			</ul>
 		</div>
-		<div class="og-topbar">
-			<h4 class="h6">Example Experiences</h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 194</li></ul>
-			<ul class="list-unstyled og-qr">
-				<li>Acrobatics</li>
-				<li>Hunt from Above</li>
-				<li>Navigation</li>
-				<li>Ambusher</li>
-				<li>Intimidation</li>
-				<li>Nobility</li>
-				<li>Bartering</li>
-				<li>Intrusion</li>
-				<li>Quick Reflexes</li>
-				<li>Blademaster</li>
-				<li>Keen Senses</li>
-				<li>Socialite</li>
-				<li>Bodyguard Magical</li>
-				<li>Knowledge</li>
-				<li>Stealth</li>
-				<li>Commander</li>
-				<li>Nature's Friend</li>
-				<li>Tracker</li>
-			</ul>
-		</div>
 	</div>
 </div>
-<div id="define-fear-feature">
-	<h4>Adversary Features<a class="og-h-anchor" href="#adversary-features" title="Permalink" aria-hidden="true"></a></h4>
+<div class="og-topbar">
+	<h4 class="h6">Example Adversary Experiences</h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 194</li></ul>
-	<dl>
-		<dt>Action</dt>
-		<dd>A special attack or other unique action that the <a href="#define-adversary">adversary</a> can perform when the <a href="#define-spotlight">spotlight</a> is on them.</dd>
-		<dt>Reaction</dt>
-		<dd>Special effects that take effect when their trigger occurs, regardless of whether the <a href="#define-spotlight">spotlight</a> is on the adversary.</dd>
-		<dt>Passive</dt>
-		<dd>Special abilities that remain in effect by default and require no resources or triggers to activate.</dd>
-		<dt>Fear Features</dt>
-		<dd>High-impact effects that cost a <a href="#define-fear">Fear</a> to activate&mdash;in addition to <a href="#define-fear">Fear</a> used seize the <a href="#define-spotlight">spotlight</a> or use a <a href="gm-move">GM move</a>.</dd>
-	</dl>
+	<ul class="list-unstyled og-qr-compact">
+		<li>Acrobatics</li>
+		<li>Hunt from Above</li>
+		<li>Navigation</li>
+		<li>Ambusher</li>
+		<li>Intimidation</li>
+		<li>Nobility</li>
+		<li>Bartering</li>
+		<li>Intrusion</li>
+		<li>Quick Reflexes</li>
+		<li>Blademaster</li>
+		<li>Keen Senses</li>
+		<li>Socialite</li>
+		<li>Bodyguard Magical</li>
+		<li>Knowledge</li>
+		<li>Stealth</li>
+		<li>Commander</li>
+		<li>Nature's Friend</li>
+		<li>Tracker</li>
+	</ul>
 </div>
 <div class="row">
 	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Example Actions</h5>
-		<ul class="list-unstyled">
-			<li><p><strong><em>Haymaker&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X direct physical damage.</p></li>
-			<li><p><strong><em>Shredding Strike&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X physical damage and the target must mark an <a href="#define-armor">Armor Slot</a> without gaining its benefit (they can still use armor to reduce the damage).</p></li>
-			<li><p><strong><em>More Where That Came From&mdash;Action:</em></strong> Summon three <strong>Jagged Knife Lackeys</strong>, who appear at <a href="#define-range">Far</a> range.</p></li>
-		</ul>
+		<div id="define-adversary-feature">
+			<h4 id="adversary-features">Adversary Features<a class="og-h-anchor" href="#adversary-features" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 195</li></ul>
+			<p>There are four types of <strong>adversary features</strong>:</p>
+			<dl>
+				<dt>Passive</dt>
+				<dd>These features remain in effect at all times.</dd>
+				<dt>Action</dt>
+				<dd>A special attack or other unique action.</dd>
+				<dt>Reaction</dt>
+				<dd>Something triggered by another <a href="#define-action">action</a> or situation occurs, regardless who has the <a href="#define-spotlight">spotlight</a>.</dd>
+				<dt>Fear Features</dt>
+				<dd>These high-impact features cost additional <a href="#define-fear">Fear</a> to activate.</dd>
+			</dl>
+		</div>
+
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>For more information on adversary actions, see <a href="#define-adversary-action">Adversaries in Combat</a>.</p>
+		</div>
+		<div class="og-topbar">
+			<h5 class="h6">Example Adversary Passive Fearues</h5>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 195</li></ul>
+			<ul class="list-unstyled">
+				<li><p><strong><em>Horde (X)&mdash;Passive:</em></strong> When the Horde has marked half or more of their <a href="#define-hit-point">Hit Points</a>, their standard attack deals X damage instead.</p></li>
+				<li><p><strong><em>Minion (X)&mdash;Passive:</em></strong> This adversary is defeated when they take any damage. For every X damage a PC deals to this adversary, defeat an additional <strong>Minion</strong> within range the attack would succeed against.</p></li>
+				<li><p><strong><em>Relentless (X)&mdash;Passive:</em></strong> This adversary can be <a href="#define-spotlight">spotlight</a>ed up to X times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to spotlight them.</p></li>
+				<li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> this adversary and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> this adversary and they have a token on their stat block, clear the token and they can act.</p></li>
+				<li><p><strong><em>Arcane Form&mdash;Passive:</em></strong> This adversary is resistant to <a href="#define-damage-type">magic damage</a>.</p></li>
+				<li><p><strong><em>Armored Carapace&mdash;Passive:</em></strong> When this adversary takes <a href="#define-damage-type">physical damage</a>, reduce it by X.</p></li>
+			</ul>
+		</div>
 	</div>
 	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Example Reactions</h5>
-		<ul class="list-unstyled">
-			<li><p><strong><em>Heavy Hitter&mdash;Reaction:</em></strong> When this adversary deals damage with a standard <a href="#define-attack-roll">attack</a>, you can spend a <a href="#define-fear">Fear</a> to gain a +X bonus to the <a href="#define-damage-roll">damage roll</a>.</p></li>
-			<li><p><strong><em>Team-Up&mdash;Reaction:</em></strong> When another adversary within <a href="#define-range">Very Close</a> range of this adversary deals X damage to a creature, you can mark a Stress to make a standard <a href="#define-attack-roll">attack</a> against that same creature. On a success, combine the damage.</p></li>
-			<li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When this adversary makes a successful <a href="#define-attack-roll">attack</a> against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
-		</ul>
-	</div>
-	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Example Passive</h5>
-		<ul class="list-unstyled">
-			<li><p><strong><em>Horde (X)&mdash;Passive:</em></strong> When the Horde has marked half or more of their <a href="#define-hit-point">Hit Points</a>, their standard attack deals X damage instead.</p></li>
-			<li><p><strong><em>Minion (X)&mdash;Passive:</em></strong> This adversary is defeated when they take any damage. For every X damage a PC deals to this adversary, defeat an additional <strong>Minion</strong> within range the attack would succeed against.</p></li>
-			<li><p><strong><em>Relentless (X)&mdash;Passive:</em></strong> This adversary can be <a href="#define-spotlight">spotlight</a>ed up to X times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to spotlight them.</p></li>
-			<li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> this adversary and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> this adversary and they have a token on their stat block, clear the token and they can act.</p></li>
-			<li><p><strong><em>Arcane Form&mdash;Passive:</em></strong> This adversary is resistant to <a href="#define-damage-type">magic damage</a>.</p></li>
-			<li><p><strong><em>Armored Carapace&mdash;Passive:</em></strong> When this adversary takes <a href="#define-damage-type">physical damage</a>, reduce it by X.</p></li>
-		</ul>
-	</div>
-	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Example Fear Features</h5>
-		<ul class="list-unstyled">
-			<li><p><strong><em>Explosion&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to erupt in a fiery explosion. Make an attack against all targets within <a href="#define-range">Close</a> range. Targets the adversary succeeds against take <strong>1d8</strong> magic damage and are knocked back to <a href="#define-range">Far</a> range.</p></li>
-		</ul>
+		<div class="og-topbar">
+			<h5 class="h6">Example Adversary Actions</h5>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 195</li></ul>
+			<ul class="list-unstyled">
+				<li><p><strong><em>Haymaker&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X direct physical damage.</p></li>
+				<li><p><strong><em>Shredding Strike&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X physical damage and the target must mark an <a href="#define-armor">Armor Slot</a> without gaining its benefit (they can still use armor to reduce the damage).</p></li>
+				<li><p><strong><em>More Where That Came From&mdash;Action:</em></strong> Summon three <strong>Jagged Knife Lackeys</strong>, who appear at <a href="#define-range">Far</a> range.</p></li>
+			</ul>
+		</div>
+		<div class="og-topbar">
+			<h5 class="h6">Example Adversary Reactions</h5>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 195</li></ul>
+			<ul class="list-unstyled">
+				<li><p><strong><em>Heavy Hitter&mdash;Reaction:</em></strong> When this adversary deals damage with a standard <a href="#define-attack-roll">attack</a>, you can spend a <a href="#define-fear">Fear</a> to gain a +X bonus to the <a href="#define-damage-roll">damage roll</a>.</p></li>
+				<li><p><strong><em>Team-Up&mdash;Reaction:</em></strong> When another adversary within <a href="#define-range">Very Close</a> range of this adversary deals X damage to a creature, you can mark a Stress to make a standard <a href="#define-attack-roll">attack</a> against that same creature. On a success, combine the damage.</p></li>
+				<li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When this adversary makes a successful <a href="#define-attack-roll">attack</a> against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
+			</ul>
+		</div>
+		<div class="og-topbar">
+			<h5 class="h6">Example Fear Features</h5>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 196</li></ul>
+			<ul class="list-unstyled">
+				<li><p><strong><em>Explosion&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to erupt in a fiery explosion. Make an attack against all targets within <a href="#define-range">Close</a> range. Targets the adversary succeeds against take <strong>1d8</strong> magic damage and are knocked back to <a href="#define-range">Far</a> range.</p></li>
+			</ul>
+		</div>
 	</div>
 </div>
 <hr>
