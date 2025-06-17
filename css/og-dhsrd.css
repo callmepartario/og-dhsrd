@@ -481,6 +481,22 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 	font-size: 1.25rem;
 	text-align: center;
 }
+
+.og-topbar {
+	border-top: 0.2rem solid;
+	border-bottom: 0.2rem solid;
+	border-color: #146;
+	padding: 1rem 0.5rem 0rem 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.og-topbar2 {
+	margin-top: 0.5rem;
+	padding-top: 0.5rem;
+	border-top: 0.1rem dotted;
+	border-color: #146;
+}
+
 .og-sidebar {
 	font-style: italic;
 	border-left: 0.25rem solid #146;
@@ -496,8 +512,8 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .alert { 
 	border: 0.25rem solid #146;
 }
-.theme-light .alert { background-image: linear-gradient(180deg, #f2fcff, #ffffff); }
-.theme-dark .alert { background-image: linear-gradient(180deg, #222829, #111415); }
+.theme-light .alert, .theme-light .og-topbar { background-image: linear-gradient(180deg, #f2fcff, #ffffff); }
+.theme-dark .alert, .theme-dark .og-topbar { background-image: linear-gradient(180deg, #222829, #111415); }
 
 /* quick-reference */
 ul.og-qr {
@@ -565,21 +581,32 @@ ul.og-list-disc {
 ul.og-list-disc li {
 	margin-bottom: 0.25em;
 }
+
+ul.og-list-inline {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
 ul.og-list-inline li {
 	display: inline-block;
-	padding-right: 0.25rem;
+	padding-right: 0.75rem;
 	white-space: nowrap;
 }
 ul.og-list-inline li::before {
 	position: relative;
-	top: 0.25rem;
+	top: 0.15rem;
 	border-radius: 0.15rem;
 	content: '';
 	display: inline-block;
 	background-color: #146;
-	width: 0.4rem;
+	width: 0.25rem;
 	height: 1rem;
-	margin-right: 0.2rem;
+	margin-right: 0.5rem;
+}
+
+ul.og-list-inline li ul {
+	display: inline;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 .theme-light ul.og-list-inline li {
@@ -589,13 +616,6 @@ ul.og-list-inline li::before {
 	border-color: #fff;
 }
 
-ul.og-list-class {
-	border-top: 0.1rem solid #146;
-	border-bottom: 0.1rem solid #146;
-	padding-top: 1rem;
-	padding-bottom: 0rem;
-	margin-bottom: 1rem;
-}
 ul.og-ref {
 	margin: 0 0 0.5rem 0;
 	padding: 0 0 0 0;
@@ -663,14 +683,15 @@ body.theme-dark .tooltip-inner {
 .tooltip-inner p {
 	margin-bottom: 0.5rem;
 }
-.tooltip-inner ul.og-list-inline-tooltip li {
-	display: inline-block;
-	margin-right: 1.5rem;
-}
 
-ul.og-list-class {
-	padding-top: 0.5rem;
-	margin-bottom: 0.5rem;
+.tooltip-inner div.og-topbar ul.list-unstyled li {
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: 1rem;
+}
+.tooltip-inner div.og-topbar ul.list-unstyled li.d-block {
+	display: block;
+	white-space: normal;
 }
 
 .tooltip-inner .og-omit { display: none !important; }
@@ -685,6 +706,7 @@ ul.og-list-class {
 
 .og-tooltip-ed { display: none; }
 .tooltip-inner .og-tooltip-ed { 
+	margin-top: 0.5rem;
 	display: block; 
 	font-style: italic;
 }
