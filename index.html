@@ -51,8 +51,9 @@
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-core-rules" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rules</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-core-rules">
 						<li><a class="dropdown-item og-nav" href="#core-mechanics">Core Mechanics</a></li>
-						<li><a class="dropdown-item og-nav" href="#turn-order-and-action-economy">Turn Order and Spotlight</a></li>
+						<li><a class="dropdown-item og-nav" href="#the-spotlight">The Spotlight</a></li>
 						<li><a class="dropdown-item og-nav" href="#making-moves-and-taking-action">Making Moves and Taking Action</a></li>
+						<li><a class="dropdown-item og-nav" href="#special-rolls">Special Rolls</a></li>
 						<li><a class="dropdown-item og-nav" href="#advantage-and-disadvantage">Advantage and Disadvantage</a></li>
 						<li><a class="dropdown-item og-nav" href="#hope-and-fear">Hope and Fear</a></li>
 						<li><a class="dropdown-item og-nav" href="#gm-moves">GM Moves and Adversary Actions</a></li>
@@ -110,7 +111,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.70m (2025-06-17)</p>
+<p class="small text-center">version 0.70n (2025-06-17)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -195,17 +196,6 @@
 			<li><a href="#step-9">Create party connections</a></li>
 		</ol>
 	</div>
-	<ol class="og-tooltip-block">
-		<li><a href="#step-1">Choose a class and subclass</a></li>
-		<li><a href="#step-2">Choose a heritage</a></li>
-		<li><a href="#step-3">Assign traits</a></li>
-		<li><a href="#step-4">Record additional PC information</a></li>
-		<li><a href="#step-5">Choose equipment</a></li>
-		<li><a href="#step-6">Create a background</a></li>
-		<li><a href="#step-7">Create two Experiences</a></li>
-		<li><a href="#step-8">Choose two domain cards</a></li>
-		<li><a href="#step-9">Create party connections</a></li>
-	</ol>
 </div>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
 	<p>You'll need somehwere to record information about your PC. You can download the official <a href="https://www.daggerheart.com/downloads/">Daggerheart Character Sheets and Guides</a>, or create your own solution.</p>
@@ -230,13 +220,15 @@
 	<li><strong>Community:</strong> <a href="#define-community">Community</a> represents culture or environment of origin. Each assigns a <strong>community feature</strong>.</li>
 </ul>
 <hr>
-<h3 id="step-3">Step 3<a class="og-h-anchor" href="#step-3" title="Permalink" aria-hidden="true"></a></h3>
-<ul class="og-list-inline og-ref og-omit"><li>Page 17</li></ul>
-<p class="lead">Assign traits.</p>
-<p>Your <strong>traits</strong>&mdash;<a href="#define-agility">Agility</a>, <a href="#define-strength">Strength</a>, <a href="#define-finesse">Finesse</a>, <a href="#define-instinct">Instinct</a>, <a href="#define-presence">Presence</a>, and <a href="#define-knowledge">Knowledge</a>&mdash;represent physical, mental, and social aptitudes. Each <a href="#define-trait">trait</a> has a <a href="#define-modifier">modifier</a> that is added to relevant <a href="#define-action-roll">action rolls</a>.</p>
-<ul class="og-list-disc">
-	<li><strong>Traits:</strong> Distribute the following array of modifiers to each <a href="#define-trait">trait</a> in any order you choose: +2, +1, +1, +0, +0, &minus;1.</li>
-</ul>
+<div id="define-trait-array">
+	<h3 id="step-3 og-omit">Step 3<a class="og-h-anchor" href="#step-3" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 17</li></ul>
+	<p class="lead">Assign traits.</p>
+	<p>Your <strong>traits</strong>&mdash;<a href="#define-agility">Agility</a>, <a href="#define-strength">Strength</a>, <a href="#define-finesse">Finesse</a>, <a href="#define-instinct">Instinct</a>, <a href="#define-presence">Presence</a>, and <a href="#define-knowledge">Knowledge</a>&mdash;represent physical, mental, and social aptitudes. Each <a href="#define-trait">trait</a> has a <a href="#define-modifier">modifier</a> that is added to relevant <a href="#define-action-roll">action rolls</a>.</p>
+	<ul class="og-list-disc">
+		<li><strong>Traits:</strong> Distribute the following array of modifiers to each <a href="#define-trait">trait</a> in any order you choose: +2, +1, +1, +0, +0, &minus;1.</li>
+	</ul>
+</div>
 <hr>
 <h3 id="step-4">Step 4<a class="og-h-anchor" href="#step-4" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 18</li></ul>
@@ -572,7 +564,7 @@
 				<li><p><strong><em>Elemental Incarnation:</em></strong> Mark a <a href="#define-stress">Stress</a> to Channel one of the following elements until you take Severe damage or until your next <a href="#define-downtime">rest</a>:</p>
 					<ul class="og-list-disc">
 						<li><strong><em>Fire:</em></strong> When an <a href="#define-adversary">adversary</a> within <a href="#define-range">Melee</a> range deals damage to you, they take <strong>1d10</strong> <a href="#define-damage-type">magic damage</a>.</li>
-						<li><strong><em>Earth:</em></strong> Gain a bonus to your <a href="define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</li>
+						<li><strong><em>Earth:</em></strong> Gain a bonus to your <a href="#define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</li>
 						<li><strong><em>Water:</em></strong> When you deal damage to an <a href="#define-adversary">adversary</a> within <a href="#define-range">Melee</a> range, all other adversaries within <a href="#define-range">Very Close</a> range must mark a <a href="#define-stress">Stress</a>.</li>
 						<li><strong><em>Air:</em></strong> You can hover, gaining <a href="#define-advantage">advantage</a> on <a href="#define-trait-rolls">Agility Rolls</a>.</li>
 					</ul>
@@ -928,7 +920,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Rampage:</em></strong> When you roll a 1 on a <a href="#define-damage-roll">damage die</a>, you can roll a <strong>d10</strong> and add the result to the <a href="#define-damage-roll">damage roll</a>. Additionally, before you make an <a href="#define-attack-roll">attack roll</a>, you can mark a <a href="#define-stress">Stress</a> to gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for that attack</p></li>
-				<li><p><strong><em>Thick Hide:</em></strong> You gain a +2 bonus to your <a href="define-hit-point">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Thick Hide:</em></strong> You gain a +2 bonus to your <a href="#define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -970,7 +962,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Bird's-Eye View:</em></strong> You can fly at will. Once per <a href="#define-downtime">rest</a> while you are airborne, you can ask the GM a question about the scene below you without needing to roll. The first time a character makes a roll to act on this information, they gain <a href="#define-advantage">advantage</a> on the roll.</p></li>
-				<li><p><strong><em>Hollow Bones:</em></strong> You gain a &minus;2 penalty to your <a href="define-hit-point">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Hollow Bones:</em></strong> You gain a &minus;2 penalty to your <a href="#define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -1093,7 +1085,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Physical Defense:</em></strong> You gain a +3 bonus to your <a href="define-hit-point">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Physical Defense:</em></strong> You gain a +3 bonus to your <a href="#define-hit-point">damage thresholds</a>.</p></li>
 				<li><p><strong><em>Snapping Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can spend a <a href="#define-hope">Hope</a> to clamp that opponent in your jaws, making them temporarily <a href="#define-restrained"><em>Restrained</em></a> and <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
 			</ul>
 		</div>
@@ -1141,7 +1133,7 @@
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to four willing allies with you when you move.</p></li>
 				<li><p><strong><em>Demolish:</em></strong> spend a <a href="#define-hope">Hope</a> to move up to <a href="#define-range">Far</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-proficiency">Proficiency</a> and are temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
-				<li><p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href="define-hit-point">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href="#define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -1643,7 +1635,7 @@
 		</ul>
 		<h6>Mastery Features</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Ascendant:</em></strong> Gain a permanent +4 bonus to your Severe <a href="define-hit-point">damage threshold</a>.</p></li>
+			<li><p><strong><em>Ascendant:</em></strong> Gain a permanent +4 bonus to your Severe <a href="#define-hit-point">damage threshold</a>.</p></li>
 			<li><p><strong><em>Power of the Gods:</em></strong> While flying, you deal an extra <strong>1d12</strong> damage instead of <strong>1d8</strong> from your <strong><em>Wings of Light</em></strong> feature.</p></li>
 		</ul>
 	</div>
@@ -1716,7 +1708,7 @@
 			</ul>
 			<h6>Foundation Feature</h6>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Elementalist:</em></strong> Choose one of the following elements at <a href="#define-character-creation">character creation</a>: air, earth, fire, lightning, water. You can shape this element into harmless effects.</p><p>Additionally, spend a <a href="define-hope">Hope</a> and describe how your control over this element helps an <a href="#define-action-roll">action roll</a> you're about to make, then either gain a +2 bonus to the roll or a +3 bonus to the roll's damage.</p></li>
+				<li><p><strong><em>Elementalist:</em></strong> Choose one of the following elements at <a href="#define-character-creation">character creation</a>: air, earth, fire, lightning, water. You can shape this element into harmless effects.</p><p>Additionally, spend a <a href="#define-hope">Hope</a> and describe how your control over this element helps an <a href="#define-action-roll">action roll</a> you're about to make, then either gain a +2 bonus to the roll or a +3 bonus to the roll's damage.</p></li>
 			</ul>
 		</div>
 		<h6>Specialization Feature</h6>
@@ -2027,7 +2019,7 @@
 <div id="define-domain-card">
 	<h3 id="domain-cards">Domain Cards<a class="og-h-anchor" href="#domain-cards" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 26</li></ul>
-	<p>PCs acquire two 1st-level <strong>domain cards</strong> at <a href="#define-character-creation">character creation</a>, and and gain one domain card at or below their <a href="#define-level">level</a> each time they gain a <a href="#define-level">level</a>. Domain cards provide unique <a href="#define-action">moves</a>, passive bonuses, <a href="#define-downtime">downtime moves</a> , or temporary benefits to your PC.</p>
+	<p>You start with two Level 1 <strong>domain cards</strong> at <a href="#define-character-creation">character creation</a>, and and gain one domain card each time you gain a <a href="#define-level">level</a>. Domain cards provide unique <a href="#define-action">moves</a>, passive bonuses, <a href="#define-downtime">downtime moves</a> , or temporary benefits to your PC.</p>
 	<h4 class="h6">Domain Card Anatomy</h4>
 	<p>Each domain card includes six elements:</p>
 	<dl>
@@ -2052,9 +2044,8 @@
 	<h4 id="loadout-and-vault">Loadout and Vault<a class="og-h-anchor" href="#loadout-and-vault" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 101</li></ul>
 	<p>Your <strong>loadout</strong> is the set of <a href="#define-domain-card">domain cards</a> you can use during play. You can have up to 5 domain cards in your loadout. Once you acquired six domain cards, choose five to keep in your loadout. The rest are placed in your <strong>vault</strong>, where they don't provide you any benefits.</p>
+	<p>At the start of a <a href="#define-downtime">rest</a>, before using <a href="#define-downtime">downtime moves</a> , you can exchange cards between your loadout and your vault. At any other time, you must mark a number of <a href="#define-stress">Stress</a> equal to the vaulted card's <strong>Recall Cost</strong>.</p>
 </div>
-<p>At the start of a <a href="#define-downtime">rest</a>, before using <a href="#define-downtime">downtime moves</a> , you can exchange cards between your loadout and your vault. At any other time, you must mark a number of <a href="#define-stress">Stress</a> equal to the vaulted card's <strong>Recall Cost</strong>.</p>
-<p>When you gain a new <a href="#define-domain-card">domain card</a> ech time you gain a <a href="#define-level">level</a> and have a full loadout, you can immediately exchange your new card into your loadout. Otherwise it enters your vault.</p>
 <h4 id="usage-limits">Usage Limits<a class="og-h-anchor" href="#usage-limits" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 101</li></ul>
 <p>If a <a href="#define-domain-card">domain card</a> restricts how often it can be used.</p>
@@ -3137,7 +3128,7 @@
             <li class="fw-bold">Level 3 Arcana Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. On a success, place a number of tokens equal to your <a href="#define-agility">Agility</a> on this card (minimum 1). When you make an <a href="#define-action-roll">action roll</a> while flying, spend a token from this card. After the <a href="define-action">action</a> that spends the last token is resolved, you descend to the ground directly below you.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. On a success, place a number of tokens equal to your <a href="#define-agility">Agility</a> on this card (minimum 1). When you make an <a href="#define-action-roll">action roll</a> while flying, spend a token from this card. After the <a href="#define-action">action</a> that spends the last token is resolved, you descend to the ground directly below you.</p>
             </li>
         </ul>
     </div></div>
@@ -3263,7 +3254,7 @@
             <li class="fw-bold">Level 9 Arcana Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(16)</strong>. Once per <a href="#define-downtime">rest</a> on a success, all targets within <a href="#define-range">Very Far</a> range who aren't flying must make a Reaction Roll <strong>(18)</strong>. Targets who fail take <strong>3d10+8</strong> <a href="#define-damage-type">physical damage</a> and are <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-vulnerable"><em>Vulnerable</em></a>. Targets who succeed take half damage.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(16)</strong>. Once per <a href="#define-downtime">rest</a> on a success, all targets within <a href="#define-range">Very Far</a> range who aren't flying must make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(18)</strong>. Targets who fail take <strong>3d10+8</strong> <a href="#define-damage-type">physical damage</a> and are <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-vulnerable"><em>Vulnerable</em></a>. Targets who succeed take half damage.</p>
                 <p>Additionally, when you succeed on the <a href="#define-spellcast-roll">Spellcast Roll</a>, all terrain within <a href="#define-range">Very Far</a> range becomes difficult to move through and structures within this range might sustain damage or crumble.</p>
             </li>
         </ul>
@@ -3552,7 +3543,7 @@
             <li class="fw-bold">Recall Cost: 3</li>
             <li class="mt-3">
                 <p>When you successfully make an attack with your <a href="#define-weapon">weapon</a>, you never deal damage beneath a target's Major <a href="#define-hit-point">damage threshold</a> (the target always marks a minimum of 2 <a href="#define-hit-point">Hit Points</a>).</p>
-                <p>Additionally, when a creature within your weapon's range deals damage to an ally with an attack that doesn't include you, you can mark a <a href="#define-stress">Stress</a> to force them to make a Reaction Roll <strong>(15)</strong>. On a failure, the target must mark a <a href="#define-hit-point">Hit Point</a>.</p>
+                <p>Additionally, when a creature within your weapon's range deals damage to an ally with an attack that doesn't include you, you can mark a <a href="#define-stress">Stress</a> to force them to make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(15)</strong>. On a failure, the target must mark a <a href="#define-hit-point">Hit Point</a>.</p>
             </li>
         </ul>
     </div>
@@ -3691,7 +3682,7 @@
             <li class="fw-bold">Level 5 Bone Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Name and describe your signature combat move. Once per <a href="#define-downtime">rest</a>, when you perform this signature move as part of an <a href="define-action">action</a> you're taking, you can roll a <strong>d20</strong> as your <a href="#define-action-roll">Hope Die</a>. On a success, clear a <a href="#define-stress">Stress</a>.</p>
+                <p>Name and describe your signature combat move. Once per <a href="#define-downtime">rest</a>, when you perform this signature move as part of an <a href="#define-action">action</a> you're taking, you can roll a <strong>d20</strong> as your <a href="#define-action-roll">Hope Die</a>. On a success, clear a <a href="#define-stress">Stress</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -3910,7 +3901,7 @@
                 <p><strong><em>Levitation:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to <a href="#temporary-tags-and-special-conditions">temporarily</a> lift a target you can see up into the air and move them within <a href="#define-range">Close</a> range of their original position.</p>
             </li>
             <li>
-                <p><strong><em>Recant:</em></strong> Spend a <a href="#define-hope">Hope</a> to force a target within <a href="#define-range">Melee</a> range to make a Reaction Roll <strong>(15)</strong>. On a failure, they forget the last minute of your conversation.</p>
+                <p><strong><em>Recant:</em></strong> Spend a <a href="#define-hope">Hope</a> to force a target within <a href="#define-range">Melee</a> range to make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(15)</strong>. On a failure, they forget the last minute of your conversation.</p>
             </li>
             <li>
                 <p><strong><em>Rune Circle:</em></strong> Mark a <a href="#define-stress">Stress</a> to create a temporary magical circle on the ground where you stand. All adversaries within <a href="#define-range">Melee</a> range, or who enter <a href="#define-range">Melee</a> range, take <strong>2d12+4</strong> <a href="#define-damage-type">magic damage</a> and are knocked back to <a href="#define-range">Very Close</a> range.</p>
@@ -3927,7 +3918,7 @@
                 <p><strong><em>Mystic Tether:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, they're <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-restrained"><em>Restrained</em></a> and must mark a <a href="#define-stress">Stress</a>. If you target a flying creature, this spell grounds and <a href="#temporary-tags-and-special-conditions">temporarily</a> Restrains them.</p>
             </li>
             <li>
-                <p><strong><em>Fireball:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Very Far</a> range. On a success, hurl a sphere of fire toward them that explodes on impact. The target and all creatures within <a href="#define-range">Very Close</a> range of them must make a Reaction Roll <strong>(13)</strong>. Targets who fail take <strong>d20+5</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency-type">Proficiency</a>. Targets who succeed take half damage.</p>
+                <p><strong><em>Fireball:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Very Far</a> range. On a success, hurl a sphere of fire toward them that explodes on impact. The target and all creatures within <a href="#define-range">Very Close</a> range of them must make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(13)</strong>. Targets who fail take <strong>d20+5</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency-type">Proficiency</a>. Targets who succeed take half damage.</p>
             </li>
         </ul>
     </div></div>
@@ -3941,7 +3932,7 @@
                 <p><strong><em>Repudiate:</em></strong> You can interrupt a magical effect taking place. Make a <a href="#define-reaction-roll">reaction roll</a> using your <a href="#define-subclass">Spellcast trait</a>. Once per <a href="#define-downtime">rest</a> on a success, the effect stops and any consequences are avoided.</p>
             </li>
             <li>
-                <p><strong><em>Create Construct:</em></strong> Spend a <a href="#define-hope">Hope</a> to choose a group of objects around you and create an animated construct from them that obeys basic commands. Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to command them to take <a href="define-action">action</a>. When necessary, they share your <a href="#define-evasion">Evasion</a> and traits and their attacks deal <strong>2d10+3</strong> <a href="#define-damage-type">physical damage</a>. You can only maintain one construct at a time, and they fall apart when they take any amount of damage.</p>
+                <p><strong><em>Create Construct:</em></strong> Spend a <a href="#define-hope">Hope</a> to choose a group of objects around you and create an animated construct from them that obeys basic commands. Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to command them to take <a href="#define-action">action</a>. When necessary, they share your <a href="#define-evasion">Evasion</a> and traits and their attacks deal <strong>2d10+3</strong> <a href="#define-damage-type">physical damage</a>. You can only maintain one construct at a time, and they fall apart when they take any amount of damage.</p>
             </li>
         </ul>
     </div></div>
@@ -4192,7 +4183,7 @@
             <li class="fw-bold">Level 3 Grace Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all adversaries in front of you within <a href="#define-range">Close</a> range. Once per <a href="#define-downtime">rest</a> on a success, create an illusion of flashing colors and lights that <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Stuns</em> targets you succeed against and forces them to mark a <a href="#define-stress">Stress</a>. While <em>Stunned</em>, they can't use reactions and can't take any other <a href="define-action">actions</a> until they clear this <a href="#define-condition">condition</a>.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all adversaries in front of you within <a href="#define-range">Close</a> range. Once per <a href="#define-downtime">rest</a> on a success, create an illusion of flashing colors and lights that <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Stuns</em> targets you succeed against and forces them to mark a <a href="#define-stress">Stress</a>. While <em>Stunned</em>, they can't use reactions and can't take any other <a href="#define-action">actions</a> until they clear this <a href="#define-condition">condition</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4585,7 +4576,7 @@
             <li class="fw-bold">Level 9 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-long-rest">long rest</a>, choose any targets within <a href="#define-range">Very Close</a> range to perceive you as a nightmarish horror. The targets must succeed on a Reaction Roll <strong>(16)</strong> or become <a href="#temporary-tags-and-special-conditions">temporarily</a> Horrified. While Horrified, they're <a href="#define-vulnerable"><em>Vulnerable</em></a>. Steal a number of <a href="#define-fear">Fear</a> from the GM equal to the number of targets that are Horrified (up to the number of <a href="#define-fear">Fear</a> in the GM's pool). Roll a number of <strong>d6s</strong> equal to the number of stolen <a href="#define-fear">Fear</a> and deal the total damage to each Horrified target. Discard the stolen <a href="#define-fear">Fear</a>.</p>
+                <p>Once per <a href="#define-long-rest">long rest</a>, choose any targets within <a href="#define-range">Very Close</a> range to perceive you as a nightmarish horror. The targets must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(16)</strong> or become <a href="#temporary-tags-and-special-conditions">temporarily</a> Horrified. While Horrified, they're <a href="#define-vulnerable"><em>Vulnerable</em></a>. Steal a number of <a href="#define-fear">Fear</a> from the GM equal to the number of targets that are Horrified (up to the number of <a href="#define-fear">Fear</a> in the GM's pool). Roll a number of <strong>d6s</strong> equal to the number of stolen <a href="#define-fear">Fear</a> and deal the total damage to each Horrified target. Discard the stolen <a href="#define-fear">Fear</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4729,7 +4720,7 @@
                 <ul class="og-list-disc">
                     <li>You pull the target into <a href="#define-range">Melee</a> range or pull yourself into <a href="#define-range">Melee</a> range of them.</li>
                     <li>You constrict the target and force them to mark 2 <a href="#define-stress">Stress</a>.</li>
-                    <li>All adversaries between you and the target must succeed on a Reaction Roll <strong>(13)</strong> or be hit by vines, taking <strong>3d6+2</strong> <a href="#define-damage-type">physical damage</a>.</li>
+                    <li>All adversaries between you and the target must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(13)</strong> or be hit by vines, taking <strong>3d6+2</strong> <a href="#define-damage-type">physical damage</a>.</li>
                 </ul>
                 <p>On a success, vines reach out from your hands, causing the chosen effect and <a href="#temporary-tags-and-special-conditions">temporarily</a> Restraining the target.</p>
             </li>
@@ -5112,7 +5103,7 @@
             <li class="fw-bold">Level 8 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to unleash powerful rays of burning sunlight against all adversaries in front of you within <a href="#define-range">Far</a> range. On a success, spend any number of <a href="#define-hope">Hope</a> and force that many targets you succeeded against to make a Reaction Roll <strong>(14)</strong>. Targets who succeed take <strong>3d20+3</strong> <a href="#define-damage-type">magic damage</a>. Targets who fail take <strong>4d20+5</strong> <a href="#define-damage-type">magic damage</a> and are <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Stunned</em>. While <em>Stunned</em>, they can't use reactions and can't take any other actions until they clear this <a href="#define-condition">condition</a>.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to unleash powerful rays of burning sunlight against all adversaries in front of you within <a href="#define-range">Far</a> range. On a success, spend any number of <a href="#define-hope">Hope</a> and force that many targets you succeeded against to make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(14)</strong>. Targets who succeed take <strong>3d20+3</strong> <a href="#define-damage-type">magic damage</a>. Targets who fail take <strong>4d20+5</strong> <a href="#define-damage-type">magic damage</a> and are <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Stunned</em>. While <em>Stunned</em>, they can't use reactions and can't take any other actions until they clear this <a href="#define-condition">condition</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -5363,7 +5354,7 @@
             <li class="fw-bold">Level 8 Valor Ability</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Spend 2 <a href="#define-hope">Hope</a> to strike the ground where you stand and make a <a href="#define-trait-roll">Strength Roll</a> against all targets within <a href="#define-range">Very Close</a> range. Targets you succeed against are thrown back to <a href="#define-range">Far</a> range and must make a Reaction Roll <strong>(17)</strong>. Targets who fail take <strong>4d10+8</strong> damage. Targets who succeed take half damage.</p>
+                <p>Spend 2 <a href="#define-hope">Hope</a> to strike the ground where you stand and make a <a href="#define-trait-roll">Strength Roll</a> against all targets within <a href="#define-range">Very Close</a> range. Targets you succeed against are thrown back to <a href="#define-range">Far</a> range and must make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(17)</strong>. Targets who fail take <strong>4d10+8</strong> damage. Targets who succeed take half damage.</p>
             </li>
         </ul>
     </div></div>
@@ -5440,8 +5431,8 @@
 		</ul>
 	</div>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 52</li></ul>
-	<p><strong>Ancestries</strong> represent a PC's lineage, physical appearance. The following section describes each ancestry in <a href="#define-daggerheart">Daggerheart</a> and characteristics shared by most with that ancestry, however, each player decides how much their character aligns with the average expression of their ancestry.</p>
-	<p>There are eighteen ancestries in the Daggerheart core materials.</p>
+	<p><strong>Ancestries</strong> represent a PC's lineage, physical appearance. The following section describes each ancestry. Each description includes haracteristics shared by most with that ancestry, but each player decides how much their PCs aligns with the average expression of their ancestry.</p>
+	<p>There are eighteen ancestries in the <a href="#define-daggerheart">Daggerheart</a> core materials.</p>
 	<ul class="og-list-inline og-tooltip-block">
 		<li><a href="#clank">Clank</a></li>
 		<li><a href="#drakona">Drakona</a></li>
@@ -5462,12 +5453,12 @@
 		<li><a href="#ribbet">Ribbet</a></li>
 		<li><a href="#simiah">Simiah</a></li>
 		<li><a href="#mixed-ancestry">Mixed Ancestry</a></li>
-	</ul>
+	</ul>	
+	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+		<p><strong>People</strong> refers to all ancestries. Some ancestries are described as <strong>humanoid</strong>, but this doesn't imply genetic relation to <a href="#define-human">humans</a>, but rather to the set of physical characteristics humans recognize from their anatomy, for example, bipedal movement, upright posture, and facial layout.</p>
+	</div>
 	<h3 class="h6">Ancestry Features</h3>
-	<p>Each ancestry grants two ancestry features. While some features (such as the ability to fly) are implicitly tied to an ancestry's anatomy, players determine their characters' physical form. Work with the GM to re-flavor any implied traits that don't align with your character concept.</p>
-</div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p><strong>People</strong> refers to all ancestries. Some ancestries are described as <strong>humanoid</strong>, but this doesn't imply genetic relation to <a href="#define-human">humans</a>, but rather to the set of physical characteristics humans recognize from their anatomy, for example, bipedal movement, upright posture, and facial layout.</p>
+	<p>Each ancestry grants two ancestry features. While some features (such as the ability to fly) are implicitly tied to anatomy, players determine their PC's physical form. Work with the GM to change any implied traits that don't align with your character concept.</p>
 </div>
 <hr>
 <div id="define-clank">
@@ -5570,7 +5561,7 @@
 	<p class="og-omit">Galapa come in a variety of earth tones&mdash;most often shades of green and brown&mdash; and possess unique patterns on their shells. Members of this ancestry can draw their head, arms, and legs into their shell for protection to use it as a natural shield when defensive measures are needed. Some supplement their shell's strength or appearance by attaching armor or carving unique designs, but the process is exceedingly painful. Most galapa move slowly no matter their age, and they can live approximately 150 years.</p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Shell:</em></strong> Gain a bonus to your  <a href="define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</p></li>
+		<li><p><strong><em>Shell:</em></strong> Gain a bonus to your  <a href="#define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</p></li>
 		<li><p><strong><em>Retract:</em></strong> Mark a <a href="#define-stress">Stress</a> to retract into your shell. While in your shell, you have resistance to <a href="#define-damage-type">physical damage</a>, you have <a href="#define-advantage">disadvantage</a> on <a href="#define-action-roll">action rolls</a>, and you can't move.</p></li>
 	</ul>
 </div>
@@ -5706,7 +5697,7 @@
 		</ul>
 	</div>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 72</li></ul>
-	<p>Communities represent <strong>culture</strong>, <strong>class</strong>, or <strong>environment of origin</strong> that has had influence over a PC's upbringing.</p>
+	<p>Communities represent the <strong>culture</strong>, <strong>class</strong>, or <strong>environment of origin</strong> that has had a significant on a PC's upbringing.</p>
 	<p>There are nine communities in the <a href="#define-daggerheart">Daggerheart</a> core materials.</p>
 	<ul class="og-list-inline og-tooltip-block">
 		<li><a href="#define-highborne">Highborne</a></li>
@@ -5719,7 +5710,8 @@
 		<li><a href="#define-wanderborne">Wanderborne</a></li>
 		<li><a href="#define-wildborne">Wildborne</a></li>
 	</ul>
-	<p>Your character's community grants them a <strong>community feature</strong>. Each community card also lists six adjectives you can use as inspiration to create your character's personality, their relationship to their peers, their attitude toward their upbringing, or the demeanor with which they interact with the rest of the party.</p>
+	<h3 class="h6">Community Features</h3>
+	<p>Your community grants you a <strong>community feature</strong>.</p>
 </div>
 <hr>
 <div id="define-highborne">
@@ -5834,7 +5826,8 @@
 		<li><a href="#presence">Presence</a></li>
 		<li><a href="#knowledge">Knowledge</a></li>
 	</ul>
-	<p>When you <a href="#define-trait-roll">roll with a trait</a>, that trait's <a href="#define-modifier">modifier</a> is added to the roll's total. You can increase traits when you gain a <a href="#define-level">level</a>.</p>
+	<p>When you <a href="#define-trait-roll">roll with a trait</a>, that trait's <a href="#define-modifier">modifier</a> is added to the roll's total.</p>
+	<p>Your traits start with <a href="#define-trait-array">array</a> of modifiers assigned during <a href="#define-character-creation">character creation</a>. You can increase purchase an <a href="#define-advancement">advancement</a> to increase the modifiers of two traits when you gain a <a href="#define-level">level</a>.</p>
 </div>
 <div class="og-topbar">
 	<div class="row">
@@ -5912,7 +5905,7 @@
 	<ul class="og-list-inline og-ref og-omit"><li>Page 20</li></ul>
 	<p>An <strong>Experience</strong> is a word or phrase that evokes a set of skills, personality traits, or aptitudes a PC has acquired over the course of their life. They can relate to your backstory, characteristics, specialties, skills.</p>
 	<p>Experiences start with a +2 <a href="#define-modifier">modifier</a>. PCs can spend a <a href="#define-hope">Hope</a> to add an Experience's modifier to a relevant <a href="#define-action-roll">action roll</a>.</p>
-	<p>You can purchase an <a href="#define-advancement">advancement</a> to increase an Experience's modifier when you gain a <a href="#define-level">level</a>, and you create new Experiences each time you reach a new <a href="#define-tier">tier</a>.</p>
+	<p>You start with two Experiences you created during <a href="#define-character-creation">character creation</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase an Experience's modifier when you gain a <a href="#define-level">level</a>, and you create new Experiences each time you reach a new <a href="#define-tier">tier</a>.</p>
 </div>
 <div class="og-topbar">
 	<div id="define-experience-examples">
@@ -5933,12 +5926,12 @@
 	<h2 id="leveling-up">Gaining Levels<a class="og-h-anchor" href="#leveling-up" title="Permalink" aria-hidden="true"></a></h2>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 109</li></ul>
 	<p>The PCs gain a <strong>level</strong> when the GM decides you've reached a narrative milestone (usually about every 3 sessions).</p>
-	<p>There are ten PC <strong>levels</strong>, divided into four <strong>tiers</strong>.</p>
+	<p>There are ten PC levels, which are divided into four <a href="#define-tier">tiers</a>.</p>
 </div>
 <div id="define-tier">
     <h4 id="level-up-step-1"><span class="og-omit">Step 1: </span>Tier<span class="og-omit"> Achievements</span><a class="og-h-anchor" href="#level-up-step-1" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 109</li></ul>
-	<p>Your <strong>tier</strong> affects your <strong>tier achievements</strong>, and access to <strong>advancements</strong>.</p>
+	<p>Your <strong>tier</strong> affects your <strong>tier achievements</strong>, and access to <a href="#define-advancements">advancements</a>.</p>
 	<p>When gaining a <a href="#define-level">level</a> causes you reach a new tier&mdash;at <strong>Level 2</strong>, <strong>Level 5</strong>, and <strong>Level 8</strong>&mdash;you gain tier achievements.</p>
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 		<caption>Levels, Tiers, and Tier Achievements</caption>
@@ -6076,7 +6069,7 @@
 	<div id="define-multiclass">
 		<h5 id="multiclassing">Multiclassing<a class="og-h-anchor" href="#multiclassing" title="Permalink" aria-hidden="true"></a></h5>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
-		<p>Starting at <a href="#define-level">level 5</a>, you can choose <strong>multiclassing</strong> as a <a href="#define-advancement">advancement</a>. When you multiclass, you choose an additional <a href="#define-class">class</a>, gain access to one of its <a href="#define-domain">domains</a>, and acquire its <strong>class feature</strong>. Take the appropriate multiclass module and add it to the right side of your character sheet, then choose a foundation card from one of its <a href="#define-subclass">subclasses</a>. If your foundation cards specify different <a href="#define-subclass">Spellcast traits</a>, you can choose which one to apply when making a <a href="#define-spellcast-roll">Spellcast Roll</a>.</p>
+		<p>Starting at <a href="#define-level">level 5</a>, you can choose <strong>multiclassing</strong> as a <a href="#define-advancement">advancement</a>. When you multiclass, you choose an additional <a href="#define-class">class</a> , gain access to one of its <a href="#define-domain">domains</a>, and acquire its <strong>class feature</strong>. You also choose a <a href="#define-subclass">subclasses</a> for your new class and gain its foundation features. If you gain a second <a href="#define-subclass">Spellcast trait</a>, you can choose which <a href="#define-modifier">modifier</a> to apply when making a <a href="#define-spellcast-roll">Spellcast Roll</a>.</p>
 		<p>Whenever you have the option to acquire a new <a href="#define-domain-card">domain card</a>, you can choose from cards at or below half your current level (rounded up) from the domain you chose when you selected the multiclass advancement.</p>
 	</div>
 </div>
@@ -6085,7 +6078,9 @@
 <p>Increase all <a href="#define-hit-point">damage thresholds</a> by 1.</p>
 <h4 id="level-up-step-4">Step 4: Domain Cards<a class="og-h-anchor" href="#level-up-step-4" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
-<p>Acquire a new <a href="#define-domain-card">domain card</a> at your level or lower from one of the <a href="#define-domain">domains</a> for your <a href="#define-class">class</a> and add it to your <a href="#define-loadout">loadout or vault</a>. If your loadout is already full, you can't add the new card to it until you move another into your vault. You can also exchange one domain card you've previously acquired for a different domain card of the same level or lower.</p>
+<p>Acquire a new <a href="#define-domain-card">domain card</a> at your level or lower from one of the <a href="#define-domain">domains</a> for your <a href="#define-class">class</a> and add it to your <a href="#define-loadout">loadout or vault</a>. If your loadout is already full, you can immediately exchange your a card into your loadout to make room. Otherwise, the new card enters your vault.</p>
+</p>
+<p>You can also exchange one domain card you've previously acquired for a different domain card of the same level or lower.</p>
 <hr>
 <div id="define-equipment">
 	<h2 id="equipment">Equipment<a class="og-h-anchor" href="#define-equipment" title="Permalink" aria-hidden="true"></a></h2>
@@ -6182,7 +6177,7 @@
 		<dt>Damage Type</dt>
 		<dd>Weapons that deal <a href="#define-damage-type">magic damage</a> require a <a href="#define-subclass">Spellcast trait</a> to equip.</dd>
 		<dt>Burden</dt>
-		<dd>The number of <strong>hands</strong> it occupies when equipped. A PC's maximum burden is two hands.</dd>
+		<dd>The number of <strong>hands</strong> it occupies when equipped. PCs have two hands.</dd>
 		<dt>Feature</dt>
 		<dd>Some weapons grant a <strong>feature</strong> when equipped.</dd>
 	</dl>
@@ -6766,7 +6761,7 @@
             <td class="text-center og-nowrap">Melee</td>
             <td class="text-center og-nowrap">d8+6 mag</td>
             <td class="text-center og-nowrap">Two-Handed</td>
-            <td><em><strong>Eruptive:</strong></em> On a successful attack against a target within <a href="#define-range">Melee</a> range, all other adversaries within <a href="#define-range">Very Close</a> range must succeed on a <a href="#define-reaction-roll">reaction roll</a> (14) or take half damage.</td>
+            <td><em><strong>Eruptive:</strong></em> On a successful attack against a target within <a href="#define-range">Melee</a> range, all other adversaries within <a href="#define-range">Very Close</a> range must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> (14) or take half damage.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Yutari Bloodbow</th>
@@ -6961,7 +6956,7 @@
             <td class="text-center og-nowrap">Melee</td>
             <td class="text-center og-nowrap">d12+7 phy</td>
             <td class="text-center og-nowrap">Two-Handed</td>
-            <td><em><strong>Brave:</strong></em> &minus;1 to <a href="#define-evasion">Evasion</a>; +3 to Severe <a href="define-hit-point">damage threshold</a></td>
+            <td><em><strong>Brave:</strong></em> &minus;1 to <a href="#define-evasion">Evasion</a>; +3 to Severe <a href="#define-hit-point">damage threshold</a></td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Hammer of Wrath</th>
@@ -7218,7 +7213,7 @@
             <td class="text-center og-nowrap">Close</td>
             <td class="text-center og-nowrap">d8+9 phy</td>
             <td class="text-center-og-nowrap">One-Handed</td>
-            <td><em><strong>Grappling:</strong></em> On a successful <a href="#define-attack">attack</a>, you can spend a Hope to Restrain the target or pull them into <a href="#define-range">Melee</a> range with you.</td>
+            <td><em><strong>Grappling:</strong></em> On a successful <a href="#define-attack">attack</a>, you can spend a <a href="#define-hope">Hope</a> to <a href="#define-restrained"><em>Restrain</em></a> the target or pull them into <a href="#define-range">Melee</a> range with you.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Ricochet Axes</th>
@@ -7432,7 +7427,7 @@
 			<li>"I pull my brakes and skid to a halt, turning in my seat to level my bow at the intruder."</li>
 		</ul>
 		<h5 class="h6">Consequences</h5>
-		<p>GMs should avoid breaking a character's wheelchair or otherwise removing it from play as a consequence, unless everyone at the table, especially the wheelchair user's player, gives their approval.</p>
+		<p>GMs should avoid breaking a character's wheelchair or otherwise removing it from play as a consequence, unless everyone&mdash;especially the wheelchair user's player&mdash;gives their approval.</p>
 		<p>Here are some ways you might describe complications you encounter when your character uses their wheelchair:</p>
 		<ul class="og-list-disc">
 			<li>"I pull my brakes, but I don't think to account for the loose gravel on the ground."</li>
@@ -7455,7 +7450,7 @@
 	<p>Though tough, these wheelchairs have light frames that allow the chair to move with your character in more acrobatic ways. These models are best suited to adventurers who rely on speed and flexibility.</p>
 	<p>Light frame models have the following feature:</p>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Quick:</em></strong> When you make an <a href="#define-attack-roll">attack</a>, you can mark a <a href="#define-stress">Stress</a> to target another creature within <a href="define-range">range</a>.</li>
+		<li><p><strong><em>Quick:</em></strong> When you make an <a href="#define-attack-roll">attack</a>, you can mark a <a href="#define-stress">Stress</a> to target another creature within <a href="#define-range">range</a>.</li>
 	</ul>
 </div>
 <div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
@@ -7874,7 +7869,7 @@
             <td class="text-center og-nowrap">Close</td>
             <td class="text-centr og-nowrap">d6+4 phy</td>
             <td class="text-center og-nowrap">One-Handed</td>
-            <td><em><strong>Charged:</strong></em> Mark a <a href="#define-stress">Stress</a> to gain a +1 bonus to your Proficiency on a <a href="define-weapon">primary weapon</a> attack.</td>
+            <td><em><strong>Charged:</strong></em> Mark a <a href="#define-stress">Stress</a> to gain a +1 bonus to your Proficiency on a <a href="#define-weapon">primary weapon</a> attack.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Hand Sling</th>
@@ -8087,7 +8082,7 @@
             <th class="fw-normal" scope="row">Elundrian Chain Armor</th>
             <td class="text-center og-nowrap">9 / 21</td>
             <td class="text-center og-nowrap">4</td>
-            <td><em><strong>Warded:</strong></em> You reduce incoming <a href="#define-damage-type">magic damage</a> by your <a href="#armor">Armor Score</a> before applying it to your <a href="define-hit-point">damage thresholds</a>.</td>
+            <td><em><strong>Warded:</strong></em> You reduce incoming <a href="#define-damage-type">magic damage</a> by your <a href="#armor">Armor Score</a> before applying it to your <a href="#define-hit-point">damage thresholds</a>.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Harrowbone Armor</th>
@@ -8099,7 +8094,7 @@
             <th class="fw-normal" scope="row">Irontree Breastplate Armor</th>
             <td class="text-center og-nowrap">9 / 20</td>
             <td class="text-center og-nowrap">4</td>
-            <td><em><strong>Reinforced:</strong></em> When you mark your last <a href="#define-armor">Armor Slot</a>, increase your <a href="define-hit-point">damage thresholds</a> by +2 until you clear at least 1 Armor Slot.</td>
+            <td><em><strong>Reinforced:</strong></em> When you mark your last <a href="#define-armor">Armor Slot</a>, increase your <a href="#define-hit-point">damage thresholds</a> by +2 until you clear at least 1 Armor Slot.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Runetan Floating Armor</th>
@@ -8278,9 +8273,8 @@
 		<div id="define-loot">
 			<h3 id="loot">Loot<a class="og-h-anchor" href="#loot" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 129</li></ul>
-			<p><strong>Loot</strong> comprises any consumables or reusable items the party acquires.</p>
-			<p><strong>Items</strong> can be used until sold, discarded, or lost.</p>
-			<p>To generate a random item, choose a rarity, roll the designated dice, and match the total to the item in the table:</p>
+			<p><strong>Loot</strong> comprises any <a href="#define-consumable">consumables</a> or reusable items the party acquires, which can be used until sold, discarded, or lost.</p>
+			<p>To generate a random piece of loot, choose a rarity, roll the designated dice, and match the total to the item in the table:</p>
 			<ul class="og-list-disc">
 				<li><strong>Common:</strong> 1d12 or 2d12</li>
 				<li><strong>Uncommon:</strong> 2d12 or 3d12</li>
@@ -8549,7 +8543,7 @@
 		<div id="define-consumable">
 			<h4 id="consumables">Consumables<a class="og-h-anchor" href="#consumables" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 132</li></ul>
-			<p>Consumables are loot that can only be used once. You can hold up to five of each consumable at a time. Using a consumable doesn't require a roll unless required by the GM or the demands of the fiction.</p>
+			<p>Consumables are <a href="#define-loot">loot</a> that can only be used once. You can carry up to five of each consumable at a time in your inventory. Using a consumable doesn't require a roll unless required by the GM.</p>
 			<p>To generate a random consumable, choose a rarity, roll the designated dice, and match the total to the item in the table:</p>
 			<ul class="og-list-disc">
 				<li><strong>Common:</strong> 1d12 or 2d12</li>
@@ -8609,7 +8603,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">11</th>
-					<td><div id="define-loot-vial-of-moondrip"><strong><em>Vial of Moondrip:</em></strong> When you drink the contents of this vial, you can see in total darkness until your next <a href="#define-downtime">rest</a></div>.</td>
+					<td><div id="define-loot-vial-of-moondrip"><strong><em>Vial of Moondrip:</em></strong> When you drink the contents of this vial, you can see in total darkness until your next <a href="#define-downtime">rest</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">12</th>
@@ -8816,9 +8810,12 @@
 <div id="define-gold">
 	<h3 id="gold">Gold<a class="og-h-anchor" href="#gold" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 104</li></ul>
-	<p><strong>Gold</strong> is an abstract measurement of how much <strong>wealth</strong> a character has, and is measured in handfuls, bags, and chests, with 10 handfuls to 1 bag, and 10 bags to 1 chest. When you have marked all of the slots in a category and you gain another gold reward in that category, mark a slot in the following category and clear all the slots in the current one.</p>
-	<p>For example, if you have 9 handfuls and gain another, you instead mark 1 bag and erase all handfuls. If you have 9 bags and gain another, you mark 1 chest and erase all bags.</p>
-	<p>You can't have more than 1 chest, so if all your Gold slots are marked, you'll need to spend some of your gold or store it somewhere else before you can acquire more.</p>
+	<p><strong>Gold</strong> is an abstract measurement wealth measured in handfuls, bags, and chests:</p>
+	<ul class="og-list-disc">
+		<li>10 handfuls of gold equals 1 bag</li>
+		<li>10 bags of gold equals 1 chest</li>
+	</ul>
+	<p>You can't carry more than 1 chest, so you'll need to spend some or store it somewhere before you can acquire more.</p>
 </div>
 <div class="og-topbar">
 	<div id="define-optional-rule-gold">
@@ -8833,11 +8830,11 @@
 <div id="define-flow-of-the-game">
 	<h3 id="flow-of-the-game">Flow of the Game<a class="og-h-anchor" href="#flow-of-the-game" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 87</li></ul>
-	<p><a href="#define-daggerheart">Daggerheart</a> is a conversation. The GM describes fictional scenarios involving the PCs, and the players take turns describing how their characters react. The goal of every person at the table is to build upon everyone else's ideas and collaboratively tell a satisfying story. <span class="og-omit">The system facilitates this collaborative process by providing structure to the conversation and mechanics for resolving moments of tension where fate or fortune determine the outcome of events.</span></p>
+	<p><a href="#define-daggerheart">Daggerheart</a> is a conversation. The GM describes fictional scenarios involving the PCs, and the players take turns describing how their PC reacts. The goal of is to build upon everyone's ideas and tell a collaborative, satisfying story. <span class="og-omit">The system facilitates collaboration by providing structure to the conversation and mechanics for resolving moments of tension where fate or fortune determine the outcome of events.</span></p>
 </div>
 <h4 id="player-princieples-and-best-practices">Player Principles and Best Practices<a class="og-h-anchor" href="#player-princieples-and-best-practices" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 9</li></ul>
-<p>To get the most out of <a href="#define-daggerheart">Daggerheart</a>, we recommend players keep the following principles and practices in mind throughout each session:</p>
+<p>Players should keep the following principles and practices in mind:</p>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<h5 class="h6">Principles</h5>
@@ -8868,37 +8865,35 @@
 	<h3 id="core-gameplay-loop">Core Gameplay Loop<a class="og-h-anchor" href="#core-gameplay-loop" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 88</li></ul>
 	<p>The core gameplay loop is the procedure that drives every scene, both in and out of combat.</p>
-	<h4 class="h6">Step 1: Set the Scene</h4>
-	<p>The GM describes a scenario, establishing the PCs' surroundings and any dangers, NPCs, or other important details the characters would notice.</p>
-	<h4 class="h6">Step 2: Ask and Answer Questions</h4>
-	<p>The players ask clarifying questions to explore the scene more deeply and gather information that could inform their characters' actions. <span class="og-omit">The GM responds to these questions by giving the players information their characters could easily obtain, or by asking questions of their own to the players.</span> The players also respond to any questions the GM poses to them. <span class="og-omit">In this way, the table builds out the fiction collaboratively.</span></p>
-	<h4 class="h6">Step 3: Build on the Fiction</h4>
-	<p>As the scene develops, the players find opportunities to take action&mdash;problems to solve, obstacles to overcome, mysteries to investigate, and so on. The players describe how their characters proceed; if their proposed actions carry no chance of failure (or if failure would be boring), they automatically succeed. But if the outcome of their action is unknown, the GM calls for an <a href="#define-action-roll">action roll</a>. <span class="og-omit">Either way, the table works the outcome into the story and moves the fiction forward, narrating how the PC's actions have changed things.</span></p>
-	<h4 class="h6">Step 4: Go Back to Step 1</h4>
-	<p>The process repeats from the beginning, with the GM relaying any updated details or material changes to the players. <span class="og-omit">This process continues until the end of the scene is triggered by a mechanic or arrives organically.</span></p>
+	<h4 class="h6 og-tab">Step 1: Set the Scene</h4>
+	<p>The GM describes a scenario, establishing the surroundings, and any dangers, NPCs, or other important details the PCs would notice.</p>
+	<h4 class="h6 og-tab">Step 2: Ask and Answer Questions</h4>
+	<p>The players ask clarifying questions to explore the scene more deeply, gathering information that could inform their PC's <a href="#define-acton">action</a>. The GM responds to these questions by giving the players information their characters could easily obtain, or by asking questions of the players.</p>
+	<h4 class="h6 og-tab">Step 3: Build on the Fiction</h4>
+	<p>As the scene develops and the players take <a href="#define-acton">action</a>&mdash;solving problems, overcoming obstacles, and solving mysteries. If their actions carry no chance of failure (or if failure would be boring), they succeed automatically. If the outcome of an action is unknown, the GM calls for an <a href="#define-action-roll">action roll</a>. Either way, outcome becomes part of the story, and the GM narrates how the PC's actions change things.</p>
+	<h4 class="h6 og-tab">Step 4: Go Back to Step 1</h4>
+	<p>The process repeats, until the end of the scene is triggered by a mechanic or arrives organically.</p>
 </div>
 <hr>
-<div id="define-turn-order-and-action-economy">
-	<h3 id="turn-order-and-action-economy">Turn Order and Action Economy<a class="og-h-anchor" href="#turn-order-and-action-economy" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 89</li></ul>
-	<p>Daggerheart's turns don't follow a traditional, rigid format: there is no explicit initiative mechanic and characters don't have a set number of <a href="#define-action">actions</a> they can take or things they can do before the <a href="#define-spotlight">spotlight</a> passes to someone else. A player with the spotlight describes what their character does and the spotlight simply swings to whoever:</p>
-	<ol>
-		<li>The fiction would naturally turn it toward</li>
-		<li>Hasn't had the focus in a while, or</li>
-		<li>A triggered mechanic puts it on</li>
-	</ol>
-</div>
 <div id="define-spotlight">
-	<h4 id="the-spotlight">The Spotlight<a class="og-h-anchor" href="#the-spotlight" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="the-spotlight">The Spotlight<a class="og-h-anchor" href="#the-spotlight" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 89</li></ul>
-	<p>The spotlight is a symbol that represents the table's attention&mdash;and therefore the immediate focus of both the narrative and the game mechanics. Any time a character or player becomes the focus of a scene, they <strong>are in the spotlight</strong> or <strong>have the spotlight.</strong></p>
-	<p>The spotlight moves around the table organically as scenes unfold unless a mechanical trigger determines where the spotlight goes next. For example, when a player fails an <a href="#define-action-roll">action roll</a>, the mechanics prompt the GM to seize the spotlight and make a <a href="#define-gm-move">GM move</a>.</p>
+	<p><a href="#define-daggerheart">Daggerheart</a> doesn't have a rigid turn order, and characters don't have a set number of <a href="#define-action">actions</a> they can perform before the <strong>spotlight</strong> passes to someone else. The spotlight is a symbol that represents the immediate focus of both narrative and game mechanics.</p>
+	<p>A player with the spotlight describes what their PC does, and the spotlight swings:</p>
+	<ul>
+		<li>Toward whoever or whatever the fiction would naturally turn it toward</li>
+		<li>Toward someone who hasn't had the spotlight in a while, or</li>
+		<li>A triggered mechanic determines where the spotlight swings next</li>
+	</ul>
+	<p>For example, when a player fails an <a href="#define-action-roll">action roll</a>, the mechanics prompt the GM to seize the spotlight and make a <a href="#define-gm-move">GM move</a>.</p>
 </div>
 <div class="og-topbar">
 	<div id="define-optional-rule-spotlight-tracker-tool">
-		<h5 id="optional-rule-spotlight-tracker-tool">Optional Rule: Spotlight Tracker Tool<a class="og-h-anchor" href="#optional-rule-spotlight-tracker-tool" title="Permalink" aria-hidden="true"></a></h5>
+		<h4 id="optional-rule-spotlight-tracker-tool">Optional Rule: Spotlight Tracker Tool<a class="og-h-anchor" href="#optional-rule-spotlight-tracker-tool" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 89</li></ul>
-		<p>If your group prefers a more traditional <a href="#define-turn-order-and-action-economy">action economy</a>, you can use tokens to track how many times a player has had the <a href="#define-spotlight">spotlight</a>: At the start of a session or scene, each player adds a certain number of tokens (we recommend 3) to their character sheet and removes a token each time they take an <a href="define-action">action</a>. If the <a href="#define-spotlight">spotlight</a> would swing to someone without any tokens, it swings to someone else instead. Once every player has used all their available tokens, players refill their character sheet with the same number of tokens as before, then continue playing.</p>
+		<p>If your group prefers a more traditional <strong>action economy</strong>, you can use tokens to track how many times a player has had the <a href="#define-spotlight">spotlight</a>.</p>
+		<p>At the start of a session or scene, each player adds a certain number of tokens (recommended: 3), and removes a token each time they take an <a href="#define-action">action</a>. If the spotlight would swing to someone without tokens, it swings to someone else instead.</p>
+		<p>Once every player has used all their tokens, players regain their tokens and continue playing.</p>
 	</div>
 </div>
 <hr>
@@ -8906,16 +8901,14 @@
 	<div id="define-action">
 		<h3 id="making-moves-and-taking-action">Making Moves and Taking Action<a class="og-h-anchor" href="#making-moves-and-taking-action" title="Permalink" aria-hidden="true"></a></h3>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 89</li></ul>
-		<p>Any time a character does something to advance the story, such as speaking with another character, interacting with the environment, making an <a href="#define-attack-roll">attack</a>, casting a spell, or using a <a href="#define-class">class</a> feature, they are making a move.</p>
+		<p>Any time a PC takes an <strong>action</strong> to advance the story&mdash;speaking with another character, interacting with the environment, making an <a href="#define-attack-roll">attack</a>, casting a spell, or using a <a href="#define-class">class</a> feature&mdash;they are making a <strong>move</strong>.</p>
 	</div>
 </div>
 <div id="define-action-roll">
 	<h4 id="action-rolls">Action Rolls<a class="og-h-anchor" href="#action-rolls" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 90</li></ul>
-	<div class="og-omit">
-		<p>Any move where success would be trivial or failure would be boring automatically succeeds, but any move that's difficult to accomplish or risky to attempt triggers an action roll.</p>
-		<h5 class="h6">Overview</h5>
-	</div>
+	<p>A <a href="#define-move">move</a> where success would be trivial or failure would be boring automatically succeeds. A move that's difficult or risky triggers an <strong>action roll</strong>.</p>
+	<h5 class="h6">Duality Dice</h5>
 	<p>Action rolls require two distinct <strong>d12s</strong> called <strong>Duality Dice</strong>. One represents <a href="#define-hope">Hope</a>, and the other <a href="#define-fear">Fear</a>. To make an action roll:</p>
 	<ul class="og-list-disc">
 		<li>Roll the Duality Dice, sum the results, and apply any relevant <a href="#define-modifier">modifiers</a>.</li>
@@ -8967,55 +8960,57 @@
 	</table></div>
 </div>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p>A Critical Success counts as a roll with <a href="#define-hope">Hope</a>. After resolving the action roll, the table works together to weave the outcome into the narrative and play continues.</p>
+	<p>A Critical Success counts as a roll with <a href="#define-hope">Hope</a>. After resolving the action roll, work together to weave the outcome into the narrative.</p>
 </div>
 <h5 class="h6">Failing Forward</h5>
 <ul class="og-list-inline og-ref og-omit"><li>Page 95</li></ul>
-<p>In <a href="#define-daggerheart">Daggerheart</a>, every time you roll the dice, the scene changes in some way. There is no such thing as a roll where "nothing happens," because the fiction constantly evolves based on the successes and failures of the characters.</p>
+<p>Every time you roll your Duality Dice, the scene changes in some way. There are no rolls where "nothing happens"&mdash;the fiction constantly evolves based on the PCs' successes and failures.</p>
 <div id="define-procedure">
 	<h4 id="procedure">Procedure<a class="og-h-anchor" href="#procedure" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 92</li></ul>
 	<p>The following steps describe in more detail the procedure that all <a href="#define-action-roll">action rolls</a> utilize:</p>
-	<h5 class="h6">Step 1: Pick an Appropriate Trait</h5>
-	<p>Some <a href="define-action">actions</a> and effects specify in their description which <a href="#define-trait">trait</a> applies to the roll; otherwise, the GM tells the acting player which character trait best applies to the action being attempted. <span class="og-omit">If more than one trait could apply to the roll, the GM chooses or lets the acting player decide.</span></p>
-	<h5 class="h6">Step 2: Determine the Difficulty</h5>
-	<p>Some <a href="define-action">actions</a> and features say in their description what the <a href="#define-difficulty">Difficulty</a> is. Otherwise, the GM determines the Difficulty based on the scenario. <span class="og-omit">The GM can choose whether to share the Difficulty with the table. In either case, the GM should communicate the potential consequences of failure to the acting player.</span></p>
+	<h5 class="h6 og-tab">Step 1: Pick an Appropriate Trait</h5>
+	<p>Some <a href="#define-action">actions</a> and effects specify in their description which <a href="#define-trait">trait</a> applies to the roll; otherwise, the GM tells the acting player which character trait best applies to the action being attempted. <span class="og-omit">If more than one trait could apply to the roll, the GM chooses or lets the acting player decide.</span></p>
+	<h5 class="h6 og-tab">Step 2: Determine the Difficulty</h5>
+	<p>Some <a href="#define-action">actions</a> and features say in their description what the <a href="#define-difficulty">Difficulty</a> is. Otherwise, the GM determines the Difficulty based on the scenario. <span class="og-omit">The GM can choose whether to share the Difficulty with the players. In either case, the GM should communicate the potential consequences of failure to the acting player.</span></p>
 	<div id="define-modifier">
-		<h5 class="h6">Step 3: Apply Extra Dice and Modifiers</h5>
+		<h5 class="h6 og-tab">Step 3: Apply Extra Dice and Modifiers</h5>
 		<p>The acting player decides whether to <a href="#define-hope">Utilize an Experience</a> or activate other effects, then<span class="og-omit">, if applicable,</span> adds the appropriate tokens and dice <span class="og-omit">(such as <a href="#define-advantage">advantage</a> or <a href="#define-bard">Rally dice</a>)</span> to their dice pool.</p>
-		<p>Unless an <a href="define-action">action</a>, ability, or feature specifically allows for it, a player must declare the use of any <a href="#define-experience">Experiences</a>, extra dice, or other modifiers before they roll.</p>
+		<p>Unless an <a href="#define-action">action</a>, ability, or feature specifically allows for it, a player must declare the use of any <a href="#define-experience">Experiences</a>, extra dice, or other modifiers before they roll.</p>
 	</div>
-	<h5 class="h6">Step 4: Roll the Dice</h5>
+	<h5 class="h6 og-tab">Step 4: Roll the Dice</h5>
 	<p>The acting player rolls their entire dice pool and announces the results in the format of <strong>[total result] with [<a href="#define-hope">Hope</a>/<a href="#define-fear">Fear</a>]</strong>&mdash;or <strong>Critical Success!</strong> in the case of matching <a href="#define-action-roll">Duality Dice</a>.</p>
 	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p><strong>Example:</strong> A player is making an <a href="define-action-roll">action roll</a> with a +1 in the relevant trait and no other <a href="#define-modifier">modifiers</a>; they roll the Duality Dice and get a result of 5 on their <a href="#define-action-roll">Hope Die</a> and 7 on their <a href="#define-action-roll">Fear Die</a>, then announce "I rolled a 13 with Fear!"</p>
+		<p>For example, if a player is making an <a href="#define-action-roll">action roll</a> with a +1 in the relevant trait and no other <a href="#define-modifier">modifiers</a>; they roll the Duality Dice and get a result of 5 on their <a href="#define-action-roll">Hope Die</a> and 7 on their <a href="#define-action-roll">Fear Die</a>, then announce "I rolled a 13 with Fear!"</p>
 	</div>
-	<h5 class="h6">Step 5: Resolve the Outcome</h5>
-	<p>The active player and the GM work together<span class="og-omit">, along with the suggestions and support of the rest of the table,</span> to resolve the outcome of the <a href="define-action">action</a>.</p>
+	<h5 class="h6 og-tab">Step 5: Resolve the Outcome</h5>
+	<p>The active player and the GM work together<span class="og-omit">&mdash;along with the suggestions and support of everyone else&mdash;</span> to resolve the outcome of the <a href="#define-action">action</a>.</p>
 </div>
 <div id="define-special-rolls">
 	<h4 id="special-rolls">Special Rolls<a class="og-h-anchor" href="#special-rolls" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
-	<p>Some rolls have unique specifications or otherwise modify the <a href="#define-action-roll">action roll</a> <a href="#define-procedure">procedure</a>: <a href="#define-trait-roll">trait rolls</a>, <a href="#define-spellcast-roll">Spellcast Rolls</a>, <a href="#define-attack-roll">attack rolls</a>, and <a href="#define-damage-roll">damage rolls</a>. Unless otherwise noted, you can apply any bonus, <a href="#define-modifier">modifier</a>, or effect to a special roll as if it were a standard <a href="#define-action-roll">action roll</a>.</p>
+	<p>There are a few special kinds of <a href="#define-action-roll">action rolls</a> that modify the usual <a href="#define-procedure">procedure</a></p>
+	<p>These include <a href="#define-trait-roll">trait rolls</a>, <a href="#define-spellcast-roll">Spellcast Rolls</a>, <a href="#define-attack-roll">attack rolls</a>, and <a href="#define-damage-roll">damage rolls</a>.</p>
 </div>
 <div id="define-trait-roll">
 	<h5 id="trait-rolls">Trait Rolls<a class="og-h-anchor" href="#trait-rolls" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
-	<p>An <a href="#define-action-roll">action roll</a> that specifies which character <a href="#define-trait">trait</a> applies to it is called a <strong>trait roll</strong>. In the text of a feature or effect, a trait roll is referenced with the format <strong>[Trait] Roll (Difficulty)</strong>, for example, <strong>Agility Roll (12)</strong>. If the text of an effect doesn't specify a trait roll's <a href="#define-difficulty">Difficulty</a>, the GM sets the Difficulty based on the circumstances.</p>
-	<p>Features and effects that affect a trait roll also affect any action roll that uses the same trait, including <a href="#define-attack-roll">attack rolls</a>, <a href="#define-spellcast-roll">Spellcast Rolls</a>, and standard action rolls.</p>
+	<p><strong>Trait rolls</strong> define the <a href="#define-trait">trait</a> <a href="#define-modifier">modifier</a> that applies to an <a href="#define-action-roll">action roll</a>.</p>
+	<p>For example, <strong>Agility Roll (12)</strong> means the action roll adds your <a href="#define-agility">Agility</a> modifer, and has a <a href="#define-difficulty">Difficulty</a> of 12. If no Difficulty is specified, the GM decides it.</p>
+	<p>Features and effects that affect trait rolls also affect any action roll that uses that trait, including <a href="#define-attack-roll">attack rolls</a> and <a href="#define-spellcast-roll">Spellcast Rolls</a>.</p>
 </div>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p><strong>Example:</strong> A player is making an <a href="#define-action-roll">action roll</a> with a +1 in the relevant trait and no other <a href="#define-modifier">modifiers</a>; they roll the <a href="#define-action-roll">Duality Dice</a> and get a result of 5 on their <a href="#define-action-roll">Hope Die</a> and 7 on their <a href="#define-action-roll">Fear Die</a>, then announce "I rolled a 13 with Fear!"</p>
-	<p>The katari's ancestry feature <strong><em>Feline Instincts</em></strong>, which allows the katari to reroll an <a href="#define-trait-roll">Agility Roll</a>, can also be used on a standard action roll using <a href="#define-agility">Agility</a> to traverse dangerous terrain or on an <a href="#define-attack-roll">attack roll</a> made with a <a href="#define-weapon">weapon</a> that uses <a href="#define-agility">Agility</a>.</p>
+	<p>For example, a <a href="#define-katari">katari</a> with the <strong><em>Feline Instincts</em></strong> feature allows them to reroll an Agility Roll. This feature applies to any <a href="#define-action-roll">action roll</a> where <a href="#define-agility">Agility</a> is the assigned <a href="#define-trait">trait</a>, including sprinting across a stretch of dangerous terrain, or makng an <a href="#define-attack-roll">attack roll</a> made with a <a href="#define-weapon">weapon</a> that uses Agility.</p>
 </div>
 <div id="define-spellcast-roll">
 	<h5 id="spellcast-rolls">Spellcast Rolls<a class="og-h-anchor" href="#spellcast-rolls" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 	<p><strong>Spellcast Rolls</strong> are <a href="#define-trait-roll">trait rolls</a> that require you to use your <strong>Spellcast trait</strong>. Your Spellcast trait, if you have one, is determined by your <a href="#define-subclass">subclass</a>.</p>
 	<p>Spellcast Rolls are only made when a character uses a feature that requires one. A successful Spellcast Roll activates the effect as described by the feature.</p>
+	<p>For example, if you are a <a href="#define-bard-troubador">troubaddor</a> <a href="#define-bard">bard</a> and must make a <strong>Spellcast Roll (15)</strong>, that means you add your <a href="#define-presence">Presence</a> modifer, and the roll has a <a href="#define-difficulty">Difficulty</a> of 15. If no Difficulty is specified, the GM decides it.</p>
 </div>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p><strong>Notes:</strong> A Spellcast Roll that can damage a target is also considered an <a href="#define-attack-roll">attack roll</a>.</p>
+	<p>A Spellcast Roll that can damage a target is also considered an <a href="#define-attack-roll">attack roll</a>.</p>
 	<p>When you cast a spell, the text tells you when the effect ends. The GM can spend a <a href="#define-fear">Fear</a> to end a temporary effect. If your spell doesn't specify when it ends, it ends when you choose or at a natural moment of the story. You can choose to end your spell early.</p>
 	<p>You can cast and maintain the effects of more than one spell at the same time.</p>
 </div>
@@ -9023,13 +9018,14 @@
 	<h5 id="reaction-rolls">Reaction Rolls<a class="og-h-anchor" href="#reaction-rolls" title="Permalink" aria-hidden="true"></a></h5>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 99</li></ul>
 	<p>A <strong>reaction roll</strong> is made in response to an attack or a hazard, representing a character's attempt to avoid or withstand an imminent effect.</p>
-	<p><strong>Reaction rolls</strong> work like <a href="#define-action-roll">action rolls</a>, except they don't generate <a href="#define-hope">Hope</a> or <a href="#define-fear">Fear</a>, don't trigger additional <a href="#define-gm-move">GM moves</a>, and other characters can't aid you with <a href="#define-hope">Help an Ally</a>.</p>
-	<p>If you critically succeed on a <a href="#define-reaction-roll">reaction roll</a>, you don't clear a <a href="#define-stress">Stress</a> or gain a Hope, but you do ignore any effects that would have impacted you on a success, such as taking damage or marking Stress.</p>
+	<p>Reaction rolls don't generate <a href="#define-hope">Hope</a> or <a href="#define-fear">Fear</a>, don't trigger additional <a href="#define-gm-move">GM moves</a>, and other characters can't aid you with <a href="#define-hope">Help an Ally</a>.</p>
+	<p>If you <a href="#define-action-roll">critically succeed</a> on a <a href="#define-reaction-roll">reaction roll</a>, you don't clear a <a href="#define-stress">Stress</a> or gain a <a href="#define-hope">Hope</a>, but you do ignore any effects that would have impacted you on a success, such as markng <a href="#define-hit-point">Hit Points</a> or marking Stress.</p>
+	<p>For example, if you must make a <strong>Reaction Roll (14)</strong>, that means the roll has a <a href="#define-difficulty">Difficulty</a> of 14. If no Difficulty is specified, the GM decides it. Just like the usual <a href="#define-procedure">procedure</a>, the GM assigns which <a href="#define-trait">trait</a> <a href="#define-modifier">modifier</a> applies to the roll.</p>
 </div>
 <div id="define-group-action-roll">
 	<h5 id="group-action-rolls">Group Action Rolls<a class="og-h-anchor" href="#group-action-rolls" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 97</li></ul>
-	<p>When multiple PCs take <a href="define-action">action</a> together, the party chooses one PC to lead the action. Each other player then describes how their character collaborates on the task. The leader makes an <a href="#define-action-roll">action roll</a> as usual, while the other players make <a href="#define-reaction-roll">reaction rolls</a> using whichever <a href="#define-trait">traits</a> they and the GM decide fit best. The lead PC's action roll gains a bonus based on the results of each reaction roll:</p>
+	<p>When multiple PCs take <a href="#define-action">action</a> together, the party chooses someone to lead the action. The other players describes how their character cooperates on the task, and the leader makes an <a href="#define-action-roll">action roll</a>. Then, the cooperating PCs each make <a href="#define-reaction-roll">reaction rolls</a>. The leader's action roll is modified based on each reaction roll's result:</p>
 	<ul class="og-list-disc">
 		<li><strong>Success</strong> +1</li>
 		<li><strong>Failure:</strong> &minus;1</li>
@@ -9038,23 +9034,23 @@
 <div id="define-tag-team-roll">
 	<h5 id="tag-team-rolls">Tag Team Rolls<a class="og-h-anchor" href="#tag-team-rolls" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 97</li></ul>
-	<p>Each player can, once per session, initiate a Tag Team Roll between their character and another PC by spending 3 <a href="#define-hope">Hope</a>. The players work with one another to describe how they combine their <a href="define-action">actions</a> in a unique and exciting way. Both players make separate <a href="#define-action-roll">action rolls</a>; before resolving the roll's outcome, choose one of the rolls to apply to both actions. On a roll with Hope, all PCs involved gain a Hope. On a roll with Fear, the GM gains a Fear token for each PC involved.</p>
-	<p>On a successful Tag Team <a href="#define-attack-roll">attack roll</a>, both players roll damage and add the totals together to determine the damage dealt, which is then treated as if it came from a single source. If the attacks deal different types of damage, the players choose which type to deal.</p>
+	<p>Once per session, each player can spend 3 <a href="#define-hope">Hope</a> to initiate a <strong>Tag Team Roll</strong> involving another PC. The two players work togther to describe how they coordinate their <a href="#define-action">actions</a>. Each player makes an <a href="#define-action-roll">action roll</a>, and they choose one roll's results to apply to the Tag Team Roll.</p>
+	<p>On a <a href="#define-action-roll">roll with Hope</a>, all PCs involved gain a Hope. On a <a href="#define-action-roll">roll with Fear</a>, the GM gains a <a href="#define-fear">Fear</a> for each PC.</p>
+	<p>If Tag Team Roll is a successful attack, both players make a <a href="#define-damage-roll">damage roll</a> and add their totals together to determine the damage dealt. If the attacks deal different <a href="#define-damage-type">damage type</a>, the players choose which type is dealt.</p>
 </div>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p><strong>Notes:</strong> A Tag Team Roll counts as a single <a href="#define-action-roll">action roll</a> for the purposes of any <a href="#define-countdown">Countdowns</a> or features that track <a href="#define-action-roll">action rolls</a>.</p>
-	<p>Though each player may only initiate one Tag Team Roll per session, one PC can be involved in multiple Tag Team Rolls.</p>
+	<p>A Tag Team Roll counts as a single <a href="#define-action-roll">action roll</a> for the purposes of any <a href="#define-countdown">Countdowns</a> or features that track <a href="#define-action-roll">action rolls</a>.</p>
+	<p>Each player can initiate one Tag Team Roll per session, but a PC can be involved in multiple Tag Team Rolls.</p>
 </div>
 <div id="define-advantage">
 	<h4 id="advantage-and-disadvantage">Advantage and Disadvantage<a class="og-h-anchor" href="#advantage-and-disadvantage" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 100</li></ul>
-	<p>Some features and effects let you roll with advantage or disadvantage on an <a href="#define-action-roll">action</a> or <a href="#define-reaction-roll">reaction roll</a>:</p>
+	<p><strong>Advantage</strong> and <strong>disadvantage</strong> on a roll can be the result of features, mechanical triggers, or the GM's discretion depending on the situation.</p>
 	<ul class="og-list-disc">
 		<li><strong>Advantage</strong> represents an opportunity that you seize to increase your chances of success. When you roll with advantage, you roll a <strong>d6</strong> advantage die with your dice pool and add its result to your total.</li>
-		<li><strong>Disadvantage</strong> represents an additional difficulty, hardship, or challenge you face when attempting an <a href="define-action">action</a>. When you roll with disadvantage, you roll a <strong>d6</strong> disadvantage die with your dice pool and subtract its result from your total.</li>
+		<li><strong>Disadvantage</strong> represents an additional difficulty, hardship, or challenge you face when attempting an <a href="#define-action">action</a>. When you roll with disadvantage, you roll a <strong>d6</strong> disadvantage die with your dice pool and subtract its result from your total.</li>
 	</ul>
-	<p>Advantage or disadvantage can be granted or imposed by mechanical triggers or at the GM's discretion. When a PC aids you with <a href="#define-hope">Help an Ally</a>, they roll their own advantage die and you add it to your total.</p>
-	<p>Advantage and disadvantage dice cancel each out, one-for-one, when they would be added to the same dice pool, so you'll never roll both at the same time. If you have advantage or disadvantage from other sources that don't affect your own dice pool, such as another player's Help an Ally move, their effects stack with your rolled results.</p>
+	<p>Advantage and disadvantage dice cancel each out, one-for-one, so you'll never roll both at the same time. If you have advantage or disadvantage from other sources that don't affect your own dice pool&mdash;for example, another player's <a href="#define-hope">Help an Ally</a> move&mdash;their roll is applied as a <a href="#define-modifier">modifier</a> your result.</p>
 </div>
 <div id="define-hope-and-fear">
 	<h4 id="hope-and-fear">Hope and Fear<a class="og-h-anchor" href="#hope-and-fear" title="Permalink" aria-hidden="true"></a></h4>
@@ -9067,15 +9063,15 @@
 	<p>Every PC starts with 2 <strong>Hope</strong> at <a href="#define-character-creation">character creation</a> and gains more throughout play. A PC can have a maximum of 6 Hope at one time, and Hope carries over between sessions.</p>
 	<p>Players can spend Hope to:</p>
 	<ul class="og-list-disc">
-		<li><strong>Help an Ally:</strong> When you Help an Ally who is making an <a href="#define-action-roll">action roll</a>, describe how you do so and roll an <a href="#define-advantage">advantage</a> die. Multiple players can spend Hope to help the same acting player, but that player only adds the highest result to their final total.</li>
-		<li><strong>Utilize an Experience:</strong> When you Utilize an <a href="#define-experience">Experience</a> on a relevant roll, add its <a href="#define-modifier">modifier</a> to the result. You can spend multiple Hope to utilize multiple Experiences.</li>
-		<li><strong>Initiate a Tag Team Roll:</strong> Spend 3 Hope to initiate a <a href="#define-tag-team-roll">Tag Team Roll</a>, combining the <a href="define-action">actions</a> of two PCs into one impressive act of synergy. When you make a Tag Team Roll, both players roll their <a href="#define-action-roll">action rolls</a> and then choose which set of results to apply to the outcome.</li>
-		<li><strong>Activate a Hope Feature:</strong> A Hope Feature is any effect that allows (or requires) you to spend a specified amount of <a href="#defion-hope">Hope</a> to activate it. Class Hope Features are <a href="#define-class">class</a>-specific features, detailed on your character sheet, that cost 3 Hope to activate.</li>
+		<li><strong>Help an Ally (1 Hope):</strong> You help a PC with an <a href="#define-action-roll">action roll</a>. Describe how you help, roll your own <a href="#define-advantage">advantage</a> die, and apply the result as a <a href="#modifier">modifier</a> to their roll. Multiple PCs can help, but only the highest modifier rolled is added to the result. </li>
+		<li><strong>Utilize an Experience (1 Hope):</strong> When you Utilize an <a href="#define-experience">Experience</a> on a relevant roll, add its <a href="#define-modifier">modifier</a> to the result. You can spend additional Hope to utilize additional relevant Experiences.</li>
+		<li><strong>Tag Team Roll (3 Hope):</strong> Initiate a <a href="#define-tag-team-roll">Tag Team Roll</a>.</li>
+		<li><strong>Class Hope Feature (3 Hope):</strong> Each <a href="#define-class">class</a> provides a Class Hope Feature</li>
+		<li><strong>Other Uses for Hope:</strong> Other uses for Hope are defined by <a href="#define-class">class</a> or <a href="#define-class">subclass</a> features, <a href="#define-domain-cards">domain cards</a>, and <a href="#define-equipment">equipment</a>.</li>
 	</ul>
 </div>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-	<p>A Tag Team Roll counts as a single <a href="#define-action-roll">action roll</a> for the purposes of any <a href="#define-countdown">Countdowns</a> or features that track action rolls.</p>
-	<p>When using a <a href="#define-hope">Hope Feature</a>, if you rolled with <a href="#define-action-roll">Hope</a> for that <a href="define-action">action</a>, the Hope you gain from that roll can be spent on that feature (or toward it, if it requires spending multiple Hope).</p>
+	<p>When using a <a href="#define-hope">Hope Feature</a>, if you rolled with <a href="#define-action-roll">Hope</a> for that <a href="#define-action">action</a>, the Hope you gain from that roll can be spent on that feature (or toward it, if it requires spending multiple Hope).</p>
 </div>
 <div id="define-fear">
 	<h5 id="fear">Fear<a class="og-h-anchor" href="#fear" title="Permalink" aria-hidden="true"></a></h5>
@@ -9264,7 +9260,7 @@
 <div id="define-multiple-damage-sources">
 	<h4 id="multiple-damage-sources">Multiple Damage Sources<a class="og-h-anchor" href="#multiple-damage-sources" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 98</li></ul>
-	<p>Damage dealt simultaneously from multiple sources is always totaled before it's compared to its target's <a href="define-hit-point">damage thresholds</a>.</p>
+	<p>Damage dealt simultaneously from multiple sources is always totaled before it's compared to its target's <a href="#define-hit-point">damage thresholds</a>.</p>
 	<p>For example, if a PC with <a href="#define-orc">orc</a> ancestry makes a successful attack against a target in <a href="#define-range">Melee</a> range and decides to spend a <a href="#define-hope">Hope</a> to use their <strong><em>Tusks</em></strong> feature (which gives them an extra <strong>1d6</strong> damage on a <a href="#define-damage-roll">damage roll</a>), they would roll their normal <a href="#define-weapon">weapon</a> damage and add a <strong>d6</strong> to the result, then deal that total damage to the <a href="#define-adversary">adversary</a>.</p>
 </div>
 <hr>
@@ -9281,7 +9277,7 @@
 	</div>
 	<div id="define-restrained">
 		<h5 class="h6" id="restrained">Restrained</h5>
-		<p><em>Restrained</em> characters can't move, but you can still take <a href="#define-action">actions</a> from their current position.</p>
+		<p><em>Restrained</em> characters can't move, but can still take <a href="#define-action">actions</a> from their current position.</p>
 	</div>
 	<div id="define-vulnerable">
 		<h5 class="h6" id="vulnerable">Vulnerable</h5>
@@ -9557,7 +9553,7 @@
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p>a critical success on an <a href="#define-adversary">adversary</a>'s <a href="#define-reaction-roll">reaction roll</a> automatically succeeds, but confers no additional benefit.</p>
 </div>
-<h4 id="gm-action-rolls">Action Rolls<a class="og-h-anchor" href="#gm-action-rolls" title="Permalink" aria-hidden="true"></a></h4>
+<h4 id="gm-player-action-rolls">Player Action Rolls<a class="og-h-anchor" href="#gm-player-action-rolls" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 148</li></ul>
 <p>After a player describes a <a href="#define-action">move</a> they want to make during the game, you might decide an <a href="#define-action-roll">action roll</a> is necessary to determine how the scene progresses. Use this guide to determine what to present the player, choosing whichever option best fits the situation:</p>
 <ul class="og-list-disc">
