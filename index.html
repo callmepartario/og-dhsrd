@@ -49,7 +49,7 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-core-mechanics" role="button" data-bs-toggle="dropdown" aria-expanded="false">Core Mechanics</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-core-mechanics">
-						<li><a class="dropdown-item og-nav" href="#flow-of-the-game">Flow of the Game</a></li>
+						<li><a class="dropdown-item og-nav" href="#core-mechanics">Flow of the Game</a></li>
 						<li><a class="dropdown-item og-nav" href="#core-gameplay-loop">Core Gameplay Loop</a></li>
 						<li><a class="dropdown-item og-nav" href="#the-spotlight">The Spotlight</a></li>
 						<li><a class="dropdown-item og-nav" href="#making-moves-and-taking-action">Making Moves and Taking Action</a></li>
@@ -89,7 +89,7 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-encounters" role="button" data-bs-toggle="dropdown" aria-expanded="false">Encounters</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-encounters">
-						<li><a class="dropdown-item og-nav" href="#npcs">NPCs</a></li>
+						<li><a class="dropdown-item og-nav" href="#encounters">NPCs</a></li>
 						<li><a class="dropdown-item og-nav" href="#adversaries">Adversaries</a></li>
 						<li><a class="dropdown-item og-nav" href="#building-encounters">Building Encounters</a></li>
 						<li><a class="dropdown-item og-nav" href="#adversary-stat-blocks">Adversary Stat Blocks</a></li>
@@ -109,7 +109,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.70q (2025-06-17)</p>
+<p class="small text-center">version 0.70r (2025-06-17)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -526,7 +526,7 @@
 			<li><strong>Domains:</strong> <a href="#define-sage">Sage</a> and <a href="#define-arcana">Arcana</a></li>
 			<li><strong><span class="og-omit">Starting</span> Evasion:</strong> 10</li>
 			<li><strong><span class="og-omit">Starting</span> Hit Points:</strong> 6</li>
-			<li class="d-block"><strong>Class Items:</strong> A small bag of rocks and bones, or a strange pendant found in tirt</li>
+			<li class="d-block"><strong>Class Items:</strong> A small bag of rocks and bones, or a strange pendant found in the dirt</li>
 		</ul>
 	</div>
 	<h4 class="h6">Druid's Hope Feature</h4>
@@ -1211,6 +1211,106 @@
 	</div>
 </div>
 <hr>
+<div id="define-guardian">
+	<h3 class="og-tab" id="guardian">Guardian<a class="og-h-anchor" href="#guardian" title="Permalink" aria-hidden="true"></a></h3>
+	<p>The title of guardian represents an array of martial professions, speaking more to their moral compass and unshakeable fortitude than the means by which they fight. <span class="og-omit">While many guardians join groups of militants for either a country or cause, they're more likely to follow those few they truly care for, majority be damned. Guardians are known for fighting with remarkable ferocity even against overwhelming odds, defending their cohort above all else. Woe betide those who harm the ally of a guardian, as the guardian will answer this injury in kind.</span></p>
+	<div class="og-topbar">
+		<ul class="list-unstyled">
+			<li><p><strong>Domains:</strong> <a href="#define-valor">Valor</a> and <a href="#define-blade">Blade</a></p></li>
+			<li><p><strong><span class="og-omit">Starting</span> Evasion:</strong> 9</p></li>
+			<li><p><strong><span class="og-omit">Starting</span> Hit Points:</strong> 7</p></li>
+			<li class="og-omit"><p><strong>Class Items:</strong> A totem from your mentor, or a secret key</p></li>
+		</ul>
+	</div>
+	<h4 class="h6">Guardian's Hope Feature</h4>
+	<ul class="list-unstyled">
+		<li><p><strong><em>Frontline Tank:</em></strong> Spend 3 <a href="#define-hope">Hope</a> to clear 2 <a href="#armor">Armor Slots</a>.</p></li>
+	</ul>
+	<h4 class="h6">Class Feature</h4>
+	<ul class="list-unstyled">
+		<li><p><strong><em>Unstoppable:</em></strong> Once per <a href="#define-long-rest">long rest</a>, you can become <em>Unstoppable</em>. You gain an Unstoppable Die. At level 1, your Unstoppable Die is a <strong>d4</strong>. Place it on your character sheet in the space provided, starting with the 1 value facing up. After you make a <a href="#define-damage-roll">damage roll</a> that deals 1 or more <a href="#define-hp">Hit Points</a> to a target, increase the Unstoppable Die value by one. When the die's value would exceed its maximum value or when the scene ends, remove the die and drop out of <em>Unstoppable</em>. At level 5, your Unstoppable Die increases to a <strong>d6</strong>.</p>
+			<p>While <em>Unstoppable</em>, you gain the following benefits:</p>
+			<ul class="og-list-disc">
+				<li>You reduce the severity of <a href="#define-damage-type">physical damage</a> by one threshold (Severe to Major, Major to Minor, Minor to None).</li>
+				<li>You add the current value of the Unstoppable Die to your damage roll.</li>
+				<li>You can't be <a href="#define-restrained"><em>Restrained</em></a> or <a href="#define-vulnerble"><em>Vulnerable</em></a>.</li>
+			</ul>
+		</li>
+	</ul>
+	<p class="og-tooltip-ed">See full text for details.</p>
+</div>
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
+	<p><strong>Tip:</strong> If your Unstoppable Die is a <strong>d4</strong> and the 4 is currently facing up, you remove the die the next time you would increase it. However, if your Unstoppable Die has increased to a <strong>d6</strong> and the 4 is currently facing up, you'll turn it to 5 the next time you would increase it. In this case, you'll remove the die after you would need to increase it higher than 6.</p>
+</div>
+<h4 id="guardian-subclasses">Guardian Subclasses<a class="og-h-anchor" href="#guardian-subclasses" title="Permalink" aria-hidden="true"></a></h4>
+<p>Choose either the <a href="#define-guardian-stalwart">Stalwart</a> or <a href="#define-guardian-vengeance">Vengeance</a> subclass.</p>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<div id="define-guardian-stalwart">
+			<h5 class="og-tab" id="guardian-stalwart">stalwart<a class="og-h-anchor" href="#guardian-stalwart" title="Permalink" aria-hidden="true"></a></h5>
+			<p>Play the Stalwart if you want to take heavy blows and keep fighting.</p>
+			<h6>Foundation Features</h6>
+			<ul class="list-unstyled">
+				<li><p><strong><em>Unwavering:</em></strong> Gain a permanent +1 bonus to your <a href="define-hp">damage thresholds</a>.</p></li>
+				<li><p><strong><em>Iron Will:</em></strong> When you take <a href="#define-damage-type">physical damage</a>, you can mark an additional <a href="#define-armor">Armor Slot</a> to reduce the severity.</p></li>
+			</ul>
+			<p class="og-tooltip-ed">See full text for details.</p>
+		</div>
+		<h6>Specialization Features</h6>
+		<ul class="list-unstyled">
+			<li><p><strong><em>Unrelenting:</em></strong> Gain a permanent +2 bonus to your <a href="define-hp">damage thresholds</a>.</p></li>
+			<li><p><strong><em>Partners-in-Arms:</em></strong> When an ally within <a href="#define-range">Very Close</a> range takes damage, you can mark an <a href="#define-armor">Armor Slot</a> to reduce the severity by one threshold.</p></li>
+		</ul>
+		<h6>Mastery Features</h6>
+		<ul class="list-unstyled">
+			<li><p><strong><em>Undaunted:</em></strong> Gain a permanent +3 bonus to your <a href="define-hp">damage thresholds</a>.</p></li>
+			<li><p><strong><em>Loyal Protector:</em></strong> When an ally within <a href="#define-range">Close</a> range has 2 or fewer <a href="#define-hp">Hit Points</a> and would take damage, you can mark a <a href="#define-stress">Stress</a> to sprint to their side and take the damage instead.</p></li>
+		</ul>
+	</div>
+	<div class="col-12 col-md-6">
+		<div id="define-guardian-vengeance">
+			<h5 class="og-tab" id="guardian-vengeance">Vengeance<a class="og-h-anchor" href="#guardian-vengeance" title="Permalink" aria-hidden="true"></a></h5>
+			<p>Play the Vengeance if you want to strike down enemies who harm you or your allies.</p>
+			<h6>Foundation Features</h6>
+			<ul class="list-unstyled">
+				<li><p><strong><em>At Ease:</em></strong> Gain an additional <a href="#define-stress">Stress</a> slot.</p></li>
+				<li><p><strong><em>Revenge:</em></strong> When an <a href="#define-adversary">adversary</a> within <a href="#define-range">Melee</a> range succeeds on an attack against you, you can mark 2 <a href="#define-stress">Stress</a> to force the attacker to mark a <a href="#define-hp">Hit Point</a>.</p></li>
+			</ul>
+			<p class="og-tooltip-ed">See full text for details.</p>
+		</div>
+		<h6>Specialization Feature</h6>
+		<ul class="list-unstyled">
+			<li><p><strong><em>Act of Reprisal:</em></strong> When an <a href="#define-adversary">adversary</a> damages an ally within <a href="#define-range">Melee</a> range, you gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for the next successful attack you make against that adversary.</p></li>
+		</ul>
+		<h6>Mastery Feature</h6>
+		<ul class="list-unstyled">
+			<li><p><strong><em>Nemesis:</em></strong> Spend 2 <a href="#define-hope">Hope</a> to Prioritize an <a href="#define-adversary">adversary</a> until your next <a href="#define-downtime">rest</a>. When you make an attack against your <em>Prioritized</em> adversary, you can swap the results of your <a href="#define-action-roll">Hope and Fear Dice</a>. You can only Prioritize one adversary at a time.</p></li>
+		</ul>
+	</div>
+</div>
+<div class="og-topbar">
+	<div class="row">
+		<div class="col-12 col-md-6">
+			<h4 class="h6">Background Questions</h4>
+			<p><em>Answer any of the following background questions. You can also create your own questions.</em></p>
+			<ul class="og-list-disc">
+				<li>Who from your community did you fail to protect, and why do you still think of them?</li>
+				<li>You've been tasked with protecting something important and delivering it somewhere dangerous. What is it, and where does it need to go?</li>
+				<li>You consider an aspect of yourself to be a weakness. What is it, and how has it affected you?</li>
+			</ul>
+		</div>
+		<div class="col-12 col-md-6">
+			<h4 class="h6">Connections</h4>
+			<p><em>Ask your fellow players one of the following questions for their character to answer, or create your own questions.</em></p>
+			<ul class="og-list-disc">
+				<li>How did I save your life the first time we met?</li>
+				<li>What small gift did you give me that you notice I always carry with me?</li>
+				<li>What lie have you told me about yourself that I absolutely believe?</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<hr>
 <div id="define-ranger">
 	<h3 class="og-tab" id="ranger">Ranger<a class="og-h-anchor" href="#ranger" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="list-unstyled og-list-inline og-ref og-omit"><li>Page 38</li></ul>
@@ -1292,7 +1392,7 @@
 		</ul>
 	</div>
 </div>
-<div class="alert ps-4 pb-0">
+<div class="og-topbar">
 	<div class="row">
 		<div class="col-12 col-md-6">
 			<h4 class="h6">Background Questions</h4>
@@ -9064,14 +9164,15 @@
 	<h5 class="h6 og-tab">Step 5: Resolve the Outcome</h5>
 	<p>The active player and the GM work together<span class="og-omit">&mdash;along with the suggestions and support of everyone else&mdash;</span> to resolve the outcome of the <a href="#define-action">action</a>.</p>
 </div>
+<hr>
 <div id="define-special-rolls">
-	<h4 id="special-rolls">Special Rolls<a class="og-h-anchor" href="#special-rolls" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="special-rolls">Special Rolls<a class="og-h-anchor" href="#special-rolls" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 	<p>There are a few special kinds of <a href="#define-action-roll">action rolls</a> that modify the usual <a href="#define-procedure">procedure</a></p>
 	<p>These include <a href="#define-trait-roll">trait rolls</a>, <a href="#define-spellcast-roll">Spellcast Rolls</a>, <a href="#define-attack-roll">attack rolls</a>, and <a href="#define-damage-roll">damage rolls</a>.</p>
 </div>
 <div id="define-trait-roll">
-	<h5 id="trait-rolls">Trait Rolls<a class="og-h-anchor" href="#trait-rolls" title="Permalink" aria-hidden="true"></a></h5>
+	<h4 id="trait-rolls">Trait Rolls<a class="og-h-anchor" href="#trait-rolls" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 	<p><strong>Trait rolls</strong> define the <a href="#define-trait">trait</a> <a href="#define-modifier">modifier</a> that applies to an <a href="#define-action-roll">action roll</a>.</p>
 	<p>For example, <strong>Agility Roll (12)</strong> means the action roll adds your <a href="#define-agility">Agility</a> modifer, and has a <a href="#define-difficulty">Difficulty</a> of 12. If no Difficulty is specified, the GM decides it.</p>
@@ -9081,7 +9182,7 @@
 	<p>For example, a <a href="#define-katari">katari</a> with the <strong><em>Feline Instincts</em></strong> feature allows them to reroll an Agility Roll. This feature applies to any <a href="#define-action-roll">action roll</a> where <a href="#define-agility">Agility</a> is the assigned <a href="#define-trait">trait</a>, including sprinting across a stretch of dangerous terrain, or makng an <a href="#define-attack-roll">attack roll</a> made with a <a href="#define-weapon">weapon</a> that uses Agility.</p>
 </div>
 <div id="define-spellcast-roll">
-	<h5 id="spellcast-rolls">Spellcast Rolls<a class="og-h-anchor" href="#spellcast-rolls" title="Permalink" aria-hidden="true"></a></h5>
+	<h4 id="spellcast-rolls">Spellcast Rolls<a class="og-h-anchor" href="#spellcast-rolls" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 	<p><strong>Spellcast Rolls</strong> are <a href="#define-trait-roll">trait rolls</a> that require you to use your <strong>Spellcast trait</strong>. Your Spellcast trait, if you have one, is determined by your <a href="#define-subclass">subclass</a>.</p>
 	<p>Spellcast Rolls are only made when a character uses a feature that requires one. A successful Spellcast Roll activates the effect as described by the feature.</p>
@@ -9091,7 +9192,7 @@
 	<p>A Spellcast Roll that can damage a target is also an <a href="#define-attack-roll">attack roll</a>. You maintain the effects of more than one spell at the same time. Each spells' <a href="#define-domain-card">domain card</a> tells you when the effect ends. If a spell doesn't specify when it ends, it ends when you choose or at a natural moment of the story.</p>
 </div>
 <div id="define-reaction-roll">
-	<h5 id="reaction-rolls">Reaction Rolls<a class="og-h-anchor" href="#reaction-rolls" title="Permalink" aria-hidden="true"></a></h5>
+	<h4 id="reaction-rolls">Reaction Rolls<a class="og-h-anchor" href="#reaction-rolls" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 99</li></ul>
 	<p>A <strong>reaction roll</strong> is made in response to an attack or a hazard, representing a character's attempt to avoid or withstand an imminent effect.</p>
 	<p>Reaction rolls don't generate <a href="#define-hope">Hope</a> or <a href="#define-fear">Fear</a>, don't trigger additional <a href="#define-gm-move">GM moves</a>, and other characters can't aid you with <a href="#define-hope">Help an Ally</a>.</p>
@@ -9099,7 +9200,7 @@
 	<p>For example, if you must make a <strong>Reaction Roll (14)</strong>, that means the roll has a <a href="#define-difficulty">Difficulty</a> of 14. If no Difficulty is specified, the GM decides it. Just like the usual <a href="#define-procedure">procedure</a>, the GM assigns which <a href="#define-trait">trait</a> <a href="#define-modifier">modifier</a> applies to the roll.</p>
 </div>
 <div id="define-group-action-roll">
-	<h5 id="group-action-rolls">Group Action Rolls<a class="og-h-anchor" href="#group-action-rolls" title="Permalink" aria-hidden="true"></a></h5>
+	<h4 id="group-action-rolls">Group Action Rolls<a class="og-h-anchor" href="#group-action-rolls" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 97</li></ul>
 	<p>When multiple PCs take <a href="#define-action">action</a> together, the party chooses someone to lead the action. The other players describes how their character cooperates on the task, and the leader makes an <a href="#define-action-roll">action roll</a>. Then, the cooperating PCs each make <a href="#define-reaction-roll">reaction rolls</a>. The leader's action roll is modified based on each reaction roll's result:</p>
 	<ul class="og-list-disc">
@@ -9108,7 +9209,7 @@
 	</ul>
 </div>
 <div id="define-tag-team-roll">
-	<h5 id="tag-team-rolls">Tag Team Rolls<a class="og-h-anchor" href="#tag-team-rolls" title="Permalink" aria-hidden="true"></a></h5>
+	<h4 id="tag-team-rolls">Tag Team Rolls<a class="og-h-anchor" href="#tag-team-rolls" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 97</li></ul>
 	<p>Once per session, each player can spend 3 <a href="#define-hope">Hope</a> to initiate a <strong>Tag Team Roll</strong> involving another PC. The two players work togther to describe how they coordinate their <a href="#define-action">actions</a>. Each player makes an <a href="#define-action-roll">action roll</a>, and they choose one roll's results to apply to the Tag Team Roll.</p>
 	<p>On a <a href="#define-action-roll">roll with Hope</a>, all PCs involved gain a Hope. On a <a href="#define-action-roll">roll with Fear</a>, the GM gains a <a href="#define-fear">Fear</a> for each PC.</p>
@@ -9118,8 +9219,9 @@
 	<p>A Tag Team Roll counts as a single <a href="#define-action-roll">action roll</a> for the purposes of any <a href="#define-countdown">Countdowns</a> or features that track <a href="#define-action-roll">action rolls</a>.</p>
 	<p>Each player can initiate one Tag Team Roll per session, but a PC can be involved in multiple Tag Team Rolls.</p>
 </div>
+<hr>
 <div id="define-advantage">
-	<h4 id="advantage-and-disadvantage">Advantage and Disadvantage<a class="og-h-anchor" href="#advantage-and-disadvantage" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="advantage-and-disadvantage">Advantage and Disadvantage<a class="og-h-anchor" href="#advantage-and-disadvantage" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 100</li><li>Page 160</li></ul>
 	<p><strong>Advantage</strong> and <strong>disadvantage</strong> on a roll can be the result of features, mechanical triggers, or the GM's discretion depending on favorable or unfavorable circumstances.</p>
 	<ul class="og-list-disc">
@@ -9238,8 +9340,9 @@
 		<p>If a character ever takes damage equal to twice their Severe threshold, they mark 4 <a href="#define-hit-point">Hit Points</a> instead of 3.</p>
 	</div>
 </div>
+<hr>
 <div id="define-death">
-	<h4 id="death">Death<a class="og-h-anchor" href="#death" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="death">Death<a class="og-h-anchor" href="#death" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 106</li></ul>
 	<p>When a PC marks their last <a href="#define-hit-point">Hit Point</a>, they must make a <strong>death move</strong> by choosing one of the following options:</p>
 	<ul class="og-list-disc">
@@ -10304,7 +10407,7 @@
 	<div class="col-12 col-md-6">
 		<h4 id="preparing-combat-encounter">Preparing Combat Encounters<a class="og-h-anchor" href="#preparing-combat-encounter" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
-		<p>The obstacles you create in the form of <a href="#define-adversary">adversaries</a>, <a a href="#define-combat">environments</a>, and hazards are powerful tools for heightening meaningful tension drama. Use combat and action to reveal information to players about the unfolding story, the world, and the characters in the setting.</p>
+		<p>The obstacles you create in the form of <a href="#define-adversary">adversaries</a>, <a href="#define-combat">environments</a>, and hazards are powerful tools for heightening meaningful tension drama. Use combat and action to reveal information to players about the unfolding story, the world, and the characters in the setting.</p>
 		<p>When choosing opposition or <a href="#building-encounters">building encounter</a>, always ask yourself: "What helps tell the story?"</p>
 		<h5 id="battles-and-narrative">Battles and Narrative<a class="og-h-anchor" href="#battles-and-narrative" title="Permalink" aria-hidden="true"></a></h5>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
@@ -11126,7 +11229,7 @@
 	</tbody>
 </table></div>
 <div class="alert ps-4 pb-0 og-omit">
-	<h4 id="adversary-stat-blocks">Adversary Stat Blocks<a class="og-h-anchor" href="#adversary-statblocks" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="adversary-stat-blocks">Adversary Stat Blocks<a class="og-h-anchor" href="#adversary-statblocks" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 209</li></ul>
 	<!--<p>This section contains the following stat blocks:<p>-->
 	<p><em>Stat blocks aren't available in the OG-DHSRD at this time. If you'd like to support this work, buy Old Gus a <a href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a>!</em></p>
@@ -11372,7 +11475,7 @@
 	</tbody>
 </table></div>
 <div class="alert ps-4 pb-0 og-omit">
-	<h4 id="environment-stat-blocks">Environment Stat Blocks by Tier<a class="og-h-anchor" href="#environment-stat-blocks" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="environment-stat-blocks">Environment Stat Blocks by Tier<a class="og-h-anchor" href="#environment-stat-blocks" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 242</li></ul>
 	<p><em>Stat blocks aren't available in the OG-DHSRD at this time. If you'd like to support this work, buy Old Gus a <a href="https://ko-fi.com/oldgus">☕ Ko-fi</a>!</em></p>
 	<p class="lead">Tier 1 (Level 1)</p>
