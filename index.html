@@ -554,7 +554,7 @@
 			</ul>
 			<h6>Foundation Feature</h6>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Elemental Incarnation:</em></strong> Mark a <a href="#define-stress">Stress</a> to Channel one of the following elements until you take Severe damage or until your next <a href="#define-downtime">rest</a>:</p>
+				<li><p><strong><em>Elemental Incarnation:</em></strong> Mark a <a href="#define-stress">Stress</a> to Channel one of the following elements until you take <a href="#define-damage-threshold">Severe</a> damage or until your next <a href="#define-downtime">rest</a>:</p>
 					<ul class="og-list-disc">
 						<li><strong><em>Fire:</em></strong> When an <a href="#define-adversary">adversary</a> within <a href="#define-range">Melee</a> range deals damage to you, they take <strong>1d10</strong> <a href="#define-damage-type">magic damage</a>.</li>
 						<li><strong><em>Earth:</em></strong> Gain a bonus to your <a href="#define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</li>
@@ -798,7 +798,7 @@
 					<li><a href="#define-range">Melee</a> <a href="#define-strength">Strength</a> d8+2 <a href="#define-damage-type">phy</a></li>
 				</ul>
 				<div class="og-topbar2">
-					<p><strong>Gain advantage on:</strong> attack, sprint, trac</p>
+					<p><strong>Gain advantage on:</strong> attack, sprint, track</p>
 				</div>
 			</div>
 			<ul class="list-unstyled">
@@ -1034,7 +1034,7 @@
 				<li><p><strong><em>Evolved:</em></strong> Pick a Tier 1 <a href="#druid-beastform-options-by-tier">Beastform option</a> and become a larger, more powerful version of that creature. While you're in this form, you retain all traits and features from the original form and gain the following bonuses:</p>
 					<ul class="og-list-disc">
 						<li>A +6 bonus to <a href="#define-damage-roll">damage rolls</a></li>
-						<li>A +1 bonus to the trait used by this form</li>
+						<li>A +1 bonus to the <a href="#define-trait">trait</a> used by this form</li>
 						<li>A +2 bonus to <a href="#define-evasion">Evasion</a></li>
 					</ul>
 				</li>
@@ -1159,7 +1159,7 @@
 				<li><p><strong><em>Evolved:</em></strong> Pick a Tier 1 or Tier 2 <a href="#druid-beastform-options-by-tier">Beastform option</a> and become a larger, more powerful version of that creature. While you're in this form, you retain all traits and features from the original form and gain the following bonuses:</p>
 					<ul class="og-list-disc">
 						<li>A +9 bonus to <a href="#define-damage-roll">damage rolls</a></li>
-						<li>A +2 bonus to the trait used by this form</li>
+						<li>A +2 bonus to the <a href="#define-trat">trait</a> used by this form</li>
 						<li>A +3 bonus to <a href="#define-evasion">Evasion</a></li>
 						<li>Your damage die increases by one size (<strong>d6</strong> becomes <strong>d8</strong>, <strong>d8</strong> becomes <strong>d10</strong>, <em>etc.</em>)</li>
 					</ul>
@@ -1203,7 +1203,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Devastating Strikes:</em></strong> When you deal Severe damage to a target within <a href="#define-range">Melee</a> range, you can mark a <a href="#define-stress">Stress</a> to force them to mark an additional <a href="#define-hit-point">Hit Point</a>.</p></li>
+				<li><p><strong><em>Devastating Strikes:</em></strong> When you deal <a href="#define-damage-threshold">Severe</a> damage to a target within <a href="#define-range">Melee</a> range, you can mark a <a href="#define-stress">Stress</a> to force them to mark an additional <a href="#define-hit-point">Hit Point</a>.</p></li>
 				<li><p><strong><em>Massive Stride:</em></strong> You can move up to <a href="#define-range">Far</a> range without rolling. You ignore rough terrain (at the GM's discretion) due to your size.</p></li>
 			</ul>
 		</div>
@@ -1382,7 +1382,7 @@
 			</ul>
 			<h6>Foundation Features</h6>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Ruthless Predator:</em></strong> When you make a <a href="#define-damage-roll">damage roll</a>, you can mark a <a href="#define-stress">Stress</a> to gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a>. Additionally, when you deal Severe damage to an <a href="#define-adversary">adversary</a>, they must mark a <a href="#define-stress">Stress</a>.</p></li>
+				<li><p><strong><em>Ruthless Predator:</em></strong> When you make a <a href="#define-damage-roll">damage roll</a>, you can mark a <a href="#define-stress">Stress</a> to gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a>. Additionally, when you deal <a href="#define-damage-threshold">Severe</a> damage to an <a href="#define-adversary">adversary</a>, they must mark a <a href="#define-stress">Stress</a>.</p></li>
 				<li><p><strong><em>Path Forward:</em></strong> When you're traveling to a place you've previously visited or you carry an object that has been at the location before, you can identify the shortest, most direct path to your destination.</p></li>
 			</ul>
 		</div>
@@ -3401,7 +3401,7 @@
             <li class="fw-bold">Level 1 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When you take Severe damage, you can mark a <a href="#define-stress">Stress</a> to reduce the severity by one threshold.
+                <p>When you take <a href="#define-damage-threshold">Severe</a> damage, you can mark a <a href="#define-stress">Stress</a> to reduce the severity by one threshold.
             </li>
         </ul>
     </div></div>
@@ -3861,7 +3861,7 @@
             <li class="fw-bold">Level 9 Bone Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When you have 2 or fewer <a href="#define-hit-point">Hit Points</a> unmarked, you don't take Minor damage.</p>
+                <p>When you have 2 or fewer <a href="#define-hit-point">Hit Points</a> unmarked, you don't take <a href="#define-damage-threshold">Minor</a> damage.</p>
             </li>
         </ul>
     </div></div>
@@ -4577,7 +4577,7 @@
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
                 <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Close</a> range. On a success, spend a <a href="#define-hope">Hope</a> to conjure suppressive magic around the target that encompasses everything within <a href="#define-range">Very Close</a> range of them and follows them as they move.</p>
-                <p> The target and anything within the area is <em>Silenced</em> until the GM spends a <a href="#define-fear">Fear</a> on their turn to clear this <a href="#define-condition">condition</a>, you cast Hush again, or you take Major damage. While <em>Silenced</em>, they can't make noise and can't cast spells.</p>
+                <p> The target and anything within the area is <em>Silenced</em> until the GM spends a <a href="#define-fear">Fear</a> on their turn to clear this <a href="#define-condition">condition</a>, you cast Hush again, or you take <a href="#define-damage-threshold">Major</a> damage. While <em>Silenced</em>, they can't make noise and can't cast spells.</p>
             </li>
         </ul>
     </div></div>
@@ -4701,7 +4701,7 @@
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
                 <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(16)</strong>. Once per <a href="#define-long-rest">long rest</a> on a success, plunge the entire area within <a href="#define-range">Far</a> range into complete darkness only you and your allies can see through. Attack rolls have <a href="#define-advantage">disadvantage</a> when targeting you or an ally within this shadow. Additionally, when you or an ally succeeds with <a href="#define-hope">Hope</a> against an <a href="#define-adversary">adversary</a> within this shadow, the target must mark a <a href="#define-stress">Stress</a>.</p>
-                <p>This spell lasts until the GM spends a <a href="#define-fear">Fear</a> on their turn to clear this effect or you take Severe damage.</p>
+                <p>This spell lasts until the GM spends a <a href="#define-fear">Fear</a> on their turn to clear this effect or you take <a href="#define-damage-threshold">Severe</a> damage.</p>
             </li>
         </ul>
     </div></div>
@@ -5581,7 +5581,7 @@
 	<p>Drakona resemble wingless dragons in humanoid form and possess a powerful elemental breath. <span class="og-omit">All drakona have thick scales that provide excellent natural armor against both attacks and the forces of nature. They are large in size, ranging from 5&ndash;7 feet (1.5&ndash;2.1m) on average, with long sharp teeth. New teeth grow throughout a drakona's approximately 350-year lifespan, so they are never in danger of permanently losing an incisor. Unlike their dragon ancestors, drakona don't have wings and can't fly without magical aid. Members of this ancestry pass down the element of their breath through generations, though in rare cases, a drakona's elemental power will differ from the rest of their family's.</span></p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Scales:</em></strong> Your scales act as natural protection. When you would take Severe damage, you can mark a <a href="#define-stress">Stress</a> to mark 1 fewer <a href="#define-hit-point">Hit Points</a>.</p></li>
+		<li><p><strong><em>Scales:</em></strong> Your scales act as natural protection. When you would take <a href="#define-damage-threshold">Severe</a> damage, you can mark a <a href="#define-stress">Stress</a> to mark 1 fewer <a href="#define-hit-point">Hit Points</a>.</p></li>
 		<li><p><strong><em>Elemental Breath:</em></strong> Choose an element for your breath (such as electricity, fire, or ice). You can use this breath against a target or group of targets within <a href="#define-range">Very Close</a> range, treating it as an <a href="#define-instint">Instinct</a> <a href="#define-weapon">weapon</a> that deals <strong>d8</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency">Proficiency</a>.</p></li>
 	</ul>
 </div>
@@ -5593,7 +5593,7 @@
 	<p class="og-omit">Their hair grows thickly&mdash;usually on their heads, but some dwarves have thick hair across their bodies as well. Dwarves of all genders can grow facial hair, which they often style in elaborate arrangements. Typically, dwarves live up to 250 years of age, maintaining their muscle mass well into later life.</p>
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Thick Skin:</em></strong> When you take Minor damage, you can mark 2 <a href="#define-stress">Stress</a> instead of marking a <a href="#define-hit-point">Hit Point</a>.</p></li>
+		<li><p><strong><em>Thick Skin:</em></strong> When you take <a href="#define-damage-threshold">Minor</a> damage, you can mark 2 <a href="#define-stress">Stress</a> instead of marking a <a href="#define-hit-point">Hit Point</a>.</p></li>
 		<li><p><strong><em>Increased Fortitude:</em></strong> Spend 3 <a href="#define-hope">Hope</a> to halve incoming <a href="#define-damage-type">physical damage</a>.</p></li>
 	</ul>
 </div>
@@ -6264,12 +6264,12 @@
 		<li><strong>Active Weapons:</strong> You can equip one active <strong>primary</strong> weapon and one <strong>secondary</strong> weapon. You can't attack with unequipped weapons.</li>
 		<li><strong>Tier Limits:</strong> You can't equip weapons or armor with a higher <a href="#define-tier">tier</a> than you.</li>
 		<li><strong>Inventory Weapons:</strong> You can carry up to two additional weapons in your inventory.</li>
-		<li><strong>Swapping Weapons:</strong> You can swap an Inventory Weapon with an Active Weapon of the same burden during <a href="#define-downtime">rest</a> or a moment of calm. In danger, you must mark a <a href="#define-stress">Stress</a> to do so.</li>
+		<li><strong>Swapping Weapons:</strong> You can swap an Inventory Weapon with an Active Weapon of the same burden during a <a href="#define-downtime">downtime</a> or a moment of calm. In danger, you must mark a <a href="#define-stress">Stress</a> to do so.</li>
 		<li><strong>Throwing Weapons:</strong> You can make an <a href="#define-finesse">Finesse</a> <a href="#define-attack-roll">attack roll</a> to throw a weapon within <a href="#define-range">Very Close</a> range, dealing the weapon's usual <a href="#define-damage-roll">damage</a> on a success. Once thrown, the weapon isn't equipped.</li>
 	</ul><h4 class="h6">Weapon Anatomy</h4>
 	<dl>
 		<dt>Trait</dt>
-		<dd>The <a href="#define-trait">trait</a> used for <a href="#define-attack-roll">attack roll</a> with the weapon.</dd>
+		<dd>The <a href="#define-trait">trait</a> used for <a href="#define-attack-roll">attack rolls</a> with the weapon.</dd>
 		<dt>Range</dt>
 		<dd>The maximum <a href="#define-range">range</a> between attacker and target.</dd>
 		<dt>Damage</dt>
@@ -6686,7 +6686,7 @@
             <td class="text-center og-nowrap">Melee</td>
             <td class="text-center og-nowrap">d8+3 phy</td>
             <td class="text-center og-nowrap">One-Handed</td>
-            <td><em><strong>Deadly:</strong></em> When you deal Severe damage, the target must mark an additional <a href="#define-hit-point">Hit Point</a>.
+            <td><em><strong>Deadly:</strong></em> When you deal <a href="#define-damage-threshold">Severe</a> damage, the target must mark an additional <a href="#define-hit-point">Hit Point</a>.
             </td>
         </tr>
         <tr>
@@ -9325,19 +9325,19 @@
 <div id="define-hit-point">
 	<h3 id="hit-points-and-damage-thresholds">Hit Points and Damage Thresholds<a class="og-h-anchor" href="#hit-points-and-damage-thresholds" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-	<p><strong>Hit Points</strong> represent a character's ability to withstand physical injury.</p>
-	<p>When a character takes damage, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>:</p>
-	<ul class="og-list-disc">
-		<li>If the damage meets or beats their <strong>Severe</strong> damage threshold, the target marks 3 Hit Points.</li>
-		<li>If the damage meets or beats their <strong>Major</strong> damage threshold, but is below their <strong>Severe</strong> damage threshold, the target marks 2 Hit Points.</li>
-		<li>If the damage is below their <strong>Major</strong> damage threshold, the target marks 1 Hit Point.</li>
-		<li>If incoming damage is reduced to 0 (for example, by reducing damage by marking <a href="#define-armor">Armor Slots</a>), no Hit Points are marked.</li>
-		<li>If a PC marks their last Hit Point, they make a <a href="#define-death">death move</a>.</li>
-		<li>If an <a href="#define-adversary">adversary</a>'s last <a href="#define-hit-point">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</li>
-	</ul>
-	<p>PCs can clear Hit Points by making <a href="#define-downtime">downtime moves</a> or activating certain features.</p>
-	<p>Your starting Hit Points are determined by your <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>.</p>
-	<p>A PC's base <strong>damage thresholds</strong> are determined by their <a href="#define-armor">armor</a>, and gain a bonus equal to the PC's <a href="#define-level">level</a>.</p>
+	<p><strong>Hit Points</strong> represent a character's ability to withstand physical injury. When a character takes damage, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>. If a you mark your last Hit Point, make a <a href="#define-death">death move</a>. If an <a href="#define-adversary">adversary</a>'s last <a href="#define-hit-point">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</p>
+	<p>You can clear Hit Points by making <a href="#define-downtime">downtime moves</a> or activating certain features.</p>
+	<p>Your starting Hit Points are determined by your <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>. Your <strong>damage thresholds</strong> are determined by your <a href="#define-armor">armor</a> and <a href="#define-level">level</a>:</p>
+	<dl>
+		<dt>Severe Damage</dt>
+		<dd>If the damage meets or beats their <strong>Severe</strong> damage threshold, the target marks 3 Hit Points.</dd>
+		<dt>Major Damage</dt>
+		<dd>If the damage meets or beats their <strong>Major</strong> damage threshold, but is below their <strong>Severe</strong> damage threshold, the target marks 2 Hit Points.</dd>
+		<dt>Minor Damage</dt>
+		<dd>If the damage is below their <strong>Major</strong> damage threshold, the target marks 1 Hit Point.</dd>
+		<dt>Reducing Damage</dt>
+		<dd>You can reduce damage by marking <a href="#define-armor">Armor Slots</a>. Some features allow you to mark <a href="#define-stress">Stress</a> instead of Hit Points.</dd>
+	</dt>
 </div>
 <div class="og-topbar">
 	<div id="define-optional-rule-massive-damage">
@@ -10858,7 +10858,7 @@
 	<p><a href="#define-adversary">Adversaries</a> and <a href="#define-environment">environments</a> in this campaign can gain an additional type called <strong>Withered</strong>. When an adversary is <em>Withered</em>, describe how the <a href="#define-witherwild">Witherwild</a> changed or impacted how they would normally appear or operate.</p>
 	<dl>
 		<dt>Withered</dt>
-		<dd>Any time a PC takes Severe damage from a Withered adversary or environment, gain a <strong>Wither token</strong> and place it on that PC's character sheet. When you do, the PC must roll their <a href="#define-action-roll">Fear Die</a>. If they roll equal to or below the number of Wither tokens on their sheet, they immediately gain a <a href="#define-death">scar</a> and clear all tokens, describing how the <a href="#define-witherwild">Witherwild</a> changes them permanently.</dd>
+		<dd>Any time a PC takes <a href="#define-damage-threshold">Severe</a> damage from a <em>Withered</em> adversary or environment, gain a <strong>Wither token</strong> and place it on that PC's character sheet. When you do, the PC must roll their <a href="#define-action-roll">Fear Die</a>. If they roll equal to or below the number of Wither tokens on their sheet, they immediately gain a <a href="#define-death">scar</a> and clear all tokens, describing how the <a href="#define-witherwild">Witherwild</a> changes them permanently.</dd>
 	</dl>
 	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 		<p>You also need about 20 Wither tokens (these can be the same as the tokens you use for <a href="#define-fear">Fear</a>).</p>
