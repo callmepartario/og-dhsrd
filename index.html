@@ -77,8 +77,9 @@
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-gms" role="button" data-bs-toggle="dropdown" aria-expanded="false">GMs</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-gms">
 						<li><a class="dropdown-item og-nav" href="#gm-guidance">Running an Adventure</a></li>
-						<li><a class="dropdown-item og-nav" href="#gm-moves">GM Moves</a></li>
 						<li><a class="dropdown-item og-nav" href="#difficulty">Difficulty</a></li>
+						<li><a class="dropdown-item og-nav" href="#resolving-actions">Resolving Actions</a></li>
+						<li><a class="dropdown-item og-nav" href="#gm-moves">GM Moves</a></li>
 						<li><a class="dropdown-item og-nav" href="#countdowns">Countdowns</a></li>
 						<li><a class="dropdown-item og-nav" href="#additional-gm-guidance">Additional GM Guidance</a></li>
 						<li><a class="dropdown-item og-nav" href="#optional-rules">Optional Rules</a></li>
@@ -109,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.70u (2025-06-17)</p>
+<p class="small text-center">version 0.70v (2025-06-17)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -121,7 +122,7 @@
 		<h2 id="introduction">Introduction<a class="og-h-anchor" href="#introduction" title="Permalink" aria-hidden="true"></a></h2>
 		<p class="lead">Welcome Reader&mdash;</p>
 		<p><strong>Old Gus' Daggerheart System Reference Document (OG-DHSRD)</strong> is a hypertext version of the <a href="https://www.daggerheart.com/srd/">Daggerheart System Reference Document 1.0</a>, &copy; Critical Role, LLC, under the terms of the <a href="http://www.darringtonpress.com/license">Darrington Press Community Gaming (DPCGL) License</a>.</p>
-		<p>This document has been edited in accordance with the <a href="#ed-mission">editorial principles</a> in the next sections. You can use this edition to quickly look up <a href="#define-daggerheart">Daggerheart</a> rules online, share them with others, or copy text into a character sheet that works for you. There are no previous modifications by others.</p>
+		<p>This document has been edited. You can use this edition to quickly look up <a href="#define-daggerheart">Daggerheart</a> rules online, share them with others, or copy text into a character sheet that works for you. There are no previous modifications by others.</p>
 		<p>The OG-DHSRD is not a replacement for the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a>, which contains setting information, additional examples of various gameplay elements, and tons of great advice for playing Daggerheart&mdash;not to mention gorgeous artwork and the seductive odor of book glue.</p>
 		<p>Thanks to the <a href="https://www.daggerheart.com/">Daggerheart</a> team for this amazing resource, and thank you for reading&mdash;and may this record bring you and yours many happy adventures!</p>
 		<p class="lead">&mdash;Old Gus</p>
@@ -447,7 +448,7 @@
 				<li><p><strong><em>Gifted Performer:</em></strong> You can play three different types of songs, once each per <a href="#define-long-rest">long rest</a>; describe how you perform for others to gain the listed benefit:</p>
 					<ul class="og-list-disc">
 						<li><strong><em>Relaxing Song:</em></strong> You and all allies within <a href="#define-range">Close</a> range clear a <a href="#define-hit-point">Hit Point</a>.</li>
-						<li><strong><em>Epic Song:</em></strong> Make a target within <a href="#define-range">Close</a> range temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</li>
+						<li><strong><em>Epic Song:</em></strong> Make a target within <a href="#define-range">Close</a> range temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</li>
 						<li><strong><em>Heartbreaking Song:</em></strong> You and all allies within <a href="#define-range">Close</a> range gain a <a href="#define-hope">Hope</a>.</li>
 					</ul>
 				</li>
@@ -536,7 +537,7 @@
 	</ul>
 	<h4 class="h6">Class Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Beastform:</em></strong> Mark a <a href="#define-stress">Stress</a> to magically transform into a creature of your <a href="#define-tier">tier</a> or lower from the <a href="#define-druid-beastform-options">Beastform</a> list. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href="#define-domain-card">domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href="#define-evasion">Evasion</a> bonus to your Evasion, and use the trait specified in their statistics for your attack. While you're in a Beastform, your armor becomes part of your body and you mark <a href="#define-armor">Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href="#define-armor">Armor Slot</a>s remain marked. If you mark your last <a href="#define-hit-point">Hit Point</a>, you automatically drop out of this form.</p></li>
+		<li><p><strong><em>Beastform:</em></strong> Mark a <a href="#define-stress">Stress</a> to magically transform into a creature of your <a href="#define-tier">tier</a> or lower from the <a href="#define-druid-beastform-options">Beastform</a> list. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href="#define-domain-card">domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href="#define-evasion">Evasion</a> bonus to your Evasion, and use the trait specified in their statistics for your attack. While you're in a Beastform, your armor becomes part of your body and you mark <a href="#define-armor">Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href="#define-armor">Armor Slots</a> remain marked. If you mark your last <a href="#define-hit-point">Hit Point</a>, you automatically drop out of this form.</p></li>
 		<li><p><strong><em>Wildtouch:</em></strong> You can perform harmless, subtle effects that involve nature&mdash;such as causing a flower to rapidly grow, summoning a slight gust of wind, or starting a campfire&mdash;at will.</p></li>
 	</ul>
 </div>
@@ -582,7 +583,7 @@
 				<ul class="og-list-disc">
 					<li><strong><em>Fire:</em></strong> You gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for attacks and spells that deal damage.</li>
 					<li><strong><em>Earth:</em></strong> When you would mark <a href="#define-hit-point">Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li>
-					<li><strong><em>Water:</em></strong> When an attack against you succeeds, you can mark a <a href="#define-stress">Stress</a> to make the attacker temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</li>
+					<li><strong><em>Water:</em></strong> When an attack against you succeeds, you can mark a <a href="#define-stress">Stress</a> to make the attacker temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</li>
 					<li><strong><em>Air:</em></strong> You gain a +1 bonus to your <a href="#define-evasion">Evasion</a> and can fly.</li>
 				</ul>
 			</li>
@@ -635,23 +636,22 @@
 <div id="define-druid-beastform-options">
 	<h4 id="druid-beastform-options">Beastform Options<a class="og-h-anchor" href="#druid-beastform-options" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 32</li></ul>
-	<p>When you use <a href="#define-druid">Beastform</a>, choose a creature category of your <a href="#define-tier">tier</a> or lower. Beastform categories are divided by <a href="#define-tier">tier</a>.</p>
-	<p>Each entry includes modifications that apply until you drop out of <a href="#define-druid">Beastform</a>:</p>
+	<p>When you use <a href="#define-druid">Beastform</a>, choose a creature category of your <a href="#define-tier">tier</a> or lower. Beastform categories are divided by <a href="#define-tier">tier</a>. Each entry includes modifications that apply until you drop out of <a href="#define-druid">Beastform</a>, including:</p>
+	<dl>
+		<dt>Creature Category</dt>
+		<dd>Role or behavior, with examples of frorms. <span class="og-omit">For example, an <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form could be a fox, mouse, weasel, or other creature the GM approves.</span></dd>
+		<dt>Trait</dt>
+		<dd>You gain a bonus to the listed <a href="#define-trat">trait</a>. <span class="og-omit">For example, as an <a href="#define-druid-beastform-agile-scout">Agile Scout</a>, you gain a +1 bonus to your <a href="#define-agility">Agility</a>.</span></dd>
+		<dt>Evasion</dt>
+		<dd>Add your Beastform's <a href="#define-evasion">Evasion</a> bonus to your Evasion. <span class="og-omit">For example, if your Evasion is usually 10, your <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form's +2 bonus raises it to 12.</span></dd>
+		<dt>Attack Rolls</dt>
+		<dd>Your <a href="#define-attack-roll">attack rolls</a> are replaced by your form's <a href="#define-range">range</a>, <a href="#define-trait">trait</a>, and <a href="#define-damage-roll">damage dice</a>. <span class="og-omit">For example, as a <a href="#define-level">Level 1</a> <a href="#define-druid">druid</a>, your <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form makes <a href="#define-range">Melee</a> range attacks with <a href="#define-agility">Agility</a>, dealing <strong>1d4</strong> <a href="#define-damage-type">physical damage</a> on a success.</span></dd>
+		<dt>Advantages</dt>
+		<dd>You gain <a href="#define-advantage">advantage</a> on <a href="#define-action-roll">action rolls</a> and <a href="#define-reaction-roll">reaction rolls</a> related to these activities. <span class="og-omit">For example, an <a href="#define-druid-beastform-agile-scout">Agile Scout</a> for  gains advantage on rolls to sneak around and search for objects.</span></dd>
+		<dt>Features</dt>
+		<dd>Each form includes unique features. <span class="og-omit">For example, an <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form excels at silent, dexterous movement&mdash;but it's easier force you to drop out of <a href="#define-druid">Beastform</a>.</span></dd>
+	</dl>
 </div>
-<dl>
-	<dt>Creature Category</dt>
-	<dd>Role or behavior, followed by examples of creatures that fit the category. For example, an <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form could be a fox, mouse, weasel, or other similar creature the GM approves.</dd>
-	<dt>Trait</dt>
-	<dd>You gain a bonus to the listed <a href="#define-trat">trait</a>. For example, in the form of an <a href="#define-druid-beastform-agile-scout">Agile Scout</a>, you gain a +1 bonus to your <a href="#define-agility">Agility</a>.</dd>
-	<dt>Evasion</dt>
-	<dd>Add your Beastform's <a href="#define-evasion">Evasion</a> bonus to your Evasion. For example, if your Evasion is usually 10, your <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form's +2 bonus raises it to 12.</dd>
-	<dt>Attack Rolls</dt>
-	<dd>Your <a href="#define-attack-roll">attack rolls</a> are replaced by your form's <a href="#define-range">range</a>, <a href="#define-trait">trait</a>, and <a href="#define-damage-roll">damage dice</a>. For example, as a <a href="#define-level">Level 1</a> <a href="#define-druid">druid</a>, your <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form makes <a href="#define-range">Melee</a> range attacks with <a href="#define-agility">Agility</a>, dealing <strong>1d4</strong> <a href="#define-damage-type">physical damage</a> on a success.</dd>
-	<dt>Advantages</dt>
-	<dd>Each form is especially suited to certain <a href="#define-action">actions</a>. You gain <a href="#define-advantage">advantage</a> on <a href="#define-action-roll">action roll</a> or <a href="#define-reaction-roll">reaction roll</a> related to one of these activities. For example, an <a href="#define-druid-beastform-agile-scout">Agile Scout</a> for  gains advantage on rolls to sneak around, search for objects or creatures, and related activities.</dd>
-	<dt>Features</dt>
-	<dd>Each form includes unique features. For example, an <a href="#define-druid-beastform-agile-scout">Agile Scout</a> form excels at silent, dexterous movement&mdash;but it's easier force you to drop out of Beastform.</dd>
-</dl>
 <div class="alert ps-4 pb-0">
 	<h5 id="druid-beastform-options-by-tier">Beastform Options by Tier<a class="og-h-anchor" href="#druid-beastform-options-by-tier" title="Permalink" aria-hidden="true"></a></h5>
 	<div class="row">
@@ -804,7 +804,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Hobbling Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can mark a <a href="#define-stress">Stress</a> to make the target temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Hobbling Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can mark a <a href="#define-stress">Stress</a> to make the target temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 				<li><p><strong><em>Pack Hunting:</em></strong> When you succeed on an attack against the same target as an ally who acts immediately before you, add a <strong>d8</strong> to your <a href="#define-damage-roll">damage roll</a>.</p></li>
 			</ul>
 		</div>
@@ -826,7 +826,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Venomous Bite:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, the target becomes temporarily <em>Poisoned</em>. A <em>Poisoned</em> creature takes <strong>1d10</strong> <a href="#define-damage-type">direct physical damage</a> each time they act.</p></li>
-				<li><p><strong><em>Webslinger:</em></strong> You can create a strong web material useful for both adventuring and battle. The web is resilient enough to support one creature. You can temporarily <a href="#define-restrained"><em>Restrain</em></a> a target within <a href="#define-range">Close</a> range by succeeding on a <a href="#define-trait-rolls">Finesse Roll</a> against them.</p></li>
+				<li><p><strong><em>Webslinger:</em></strong> You can create a strong web material useful for both adventuring and battle. The web is resilient enough to support one creature. You can temporarily <a href="#define-condition"><em>Restrain</em></a> a target within <a href="#define-range">Close</a> range by succeeding on a <a href="#define-trait-rolls">Finesse Roll</a> against them.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -872,7 +872,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to two willing allies with you when you move.</p></li>
-				<li><p><strong><em>Trample:</em></strong> Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+1</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-proficiency">Proficiency</a> and are temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Trample:</em></strong> Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+1</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-proficiency">Proficiency</a> and are temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -981,7 +981,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Aquatic:</em></strong> You can breathe and move naturally underwater.</p></li>
-				<li><p><strong><em>Vicious Maul:</em></strong> When you succeed on an attack against a target, you can spend a <a href="#define-hope">Hope</a> to make them <a href="#define-vulnerable"><em>Vulnerable</em></a> and gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for this attack.</p></li>
+				<li><p><strong><em>Vicious Maul:</em></strong> When you succeed on an attack against a target, you can spend a <a href="#define-hope">Hope</a> to make them <a href="#define-condition"><em>Vulnerable</em></a> and gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for this attack.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -1002,7 +1002,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to two willing allies with you when you move.</p></li>
-				<li><p><strong><em>Vicious Maul:</em></strong> When you succeed on an attack against a target, you can spend a <a href="#define-hope">Hope</a> to make them temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a> and gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for this attack.</p></li>
+				<li><p><strong><em>Vicious Maul:</em></strong> When you succeed on an attack against a target, you can spend a <a href="#define-hope">Hope</a> to make them temporarily <a href="#define-condition"><em>Vulnerable</em></a> and gain a +1 bonus to your <a href="#define-proficiency">Proficiency</a> for this attack.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -1080,7 +1080,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Physical Defense:</em></strong> You gain a +3 bonus to your <a href="#define-hit-point">damage thresholds</a>.</p></li>
-				<li><p><strong><em>Snapping Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can spend a <a href="#define-hope">Hope</a> to clamp that opponent in your jaws, making them temporarily <a href="#define-restrained"><em>Restrained</em></a> and <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Snapping Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can spend a <a href="#define-hope">Hope</a> to clamp that opponent in your jaws, making them temporarily <a href="#define-condition"><em>Restrained</em></a> and <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -1104,7 +1104,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Ocean Master:</em></strong> You can breathe and move naturally underwater. When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can temporarily <a href="#define-restrained"><em>Restrain</em></a> them.</p></li>
+				<li><p><strong><em>Ocean Master:</em></strong> You can breathe and move naturally underwater. When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can temporarily <a href="#define-condition"><em>Restrain</em></a> them.</p></li>
 				<li><p><strong><em>Unyielding:</em></strong> When you would mark an <a href="#define-armor">Armor Slot</a>, roll a <strong>d6</strong>. On a result of 5 or higher, reduce the severity by one threshold without marking an Armor Slot.</p></li>
 			</ul>
 		</div>
@@ -1126,7 +1126,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to four willing allies with you when you move.</p></li>
-				<li><p><strong><em>Demolish:</em></strong> spend a <a href="#define-hope">Hope</a> to move up to <a href="#define-range">Far</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-proficiency">Proficiency</a> and are temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Demolish:</em></strong> spend a <a href="#define-hope">Hope</a> to move up to <a href="#define-range">Far</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-proficiency">Proficiency</a> and are temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 				<li><p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href="#define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div>
@@ -1235,7 +1235,7 @@
 			<ul class="og-list-disc">
 				<li>You reduce the severity of <a href="#define-damage-type">physical damage</a> by one threshold (Severe to Major, Major to Minor, Minor to None).</li>
 				<li>You add the current value of the Unstoppable Die to your damage roll.</li>
-				<li>You can't be <a href="#define-restrained"><em>Restrained</em></a> or <a href="#define-vulnerble"><em>Vulnerable</em></a>.</li>
+				<li>You can't be <a href="#define-condition"><em>Restrained</em></a> or <a href="#define-vulnerble"><em>Vulnerable</em></a>.</li>
 			</ul>
 		</li>
 	</ul>
@@ -1557,7 +1557,7 @@
 	</ul>
 	<h4 class="h6">Class Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Cloaked:</em></strong> Any time you would be <a href="#define-hidden"><em>Hidden</em></a>, you are instead <em>Cloaked</em>. In addition to the benefits of the <a href="#define-hidden"><em>Hidden</em></a> condition, while <em>Cloaked</em> you remain unseen if you are stationary when an <a href="#define-adversary">adversary</a> moves to where they would normally see you. After you make an <a href="#define-attack-roll">attack</a> or end a<strong> m</strong>ove within line of sight of an adver<a href="#define-stress">sary, </a>you are no longer <em>Cloaked</em>.</p></li>
+		<li><p><strong><em>Cloaked:</em></strong> Any time you would be <a href="#define-condition"><em>Hidden</em></a>, you are instead <em>Cloaked</em>. In addition to the benefits of the <a href="#define-condition"><em>Hidden</em></a> condition, while <em>Cloaked</em> you remain unseen if you are stationary when an <a href="#define-adversary">adversary</a> moves to where they would normally see you. After you make an <a href="#define-attack-roll">attack</a> or end a<strong> m</strong>ove within line of sight of an adver<a href="#define-stress">sary, </a>you are no longer <em>Cloaked</em>.</p></li>
 		<li><p><strong><em>Sneak Attack:</em></strong> When you succeed on an attack while <em>Cloaked</em> or while an ally is within <a href="#define-range">Melee</a> range of your target, add a number of <strong>d6s</strong> equal to your <a href="#define-tier">tier</a> to your <a href="#define-damage-roll">damage roll</a>.</p></li>
 	</ul>
 </div>
@@ -1582,7 +1582,7 @@
 		<h6>Specialization Features</h6>
 		<ul class="list-unstyled">
 			<li><p><strong><em>Dark Cloud:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. On a success, create a temporary dark cloud that covers any area within <a href="#define-range">Close</a> range. Anyone in this cloud can't see outside of it, and anyone outside of it can't see in. You're considered <em>Cloaked</em> from any <a href="#define-adversary">adversary</a> for whom the cloud blocks line of sight.</p></li>
-			<li><p><strong><em>Adrenaline:</em></strong> While you're <a href="#define-vulnerable">Vulnerable</a>, add your level to your <a href="#define-damage-roll">damage rolls</a>.</p></li>
+			<li><p><strong><em>Adrenaline:</em></strong> While you're <a href="#define-condition">Vulnerable</a>, add your level to your <a href="#define-damage-roll">damage rolls</a>.</p></li>
 		</ul>
 		<h6>Mastery Features</h6>
 		<ul class="list-unstyled">
@@ -3194,7 +3194,7 @@
             <li class="fw-bold">Level 2 Arcana Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Melee</a> range. On a success, the target instantly bursts into flames, takes <strong>1d20+3</strong> <a href="#define-damage-type">magic damage</a>, and is <a href="#temporary-tags-and-special-conditions">temporarily</a> lit <em>On Fire</em>. When a creature acts while <em>On Fire</em>, they must take an extra <strong>2d6</strong> <a href="#define-damage-type">magic damage</a> if they are still <em>On Fire</em> at the end of their action.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Melee</a> range. On a success, the target instantly bursts into flames, takes <strong>1d20+3</strong> <a href="#define-damage-type">magic damage</a>, and is <a href="#define-condition">temporarily</a> lit <em>On Fire</em>. When a creature acts while <em>On Fire</em>, they must take an extra <strong>2d6</strong> <a href="#define-damage-type">magic damage</a> if they are still <em>On Fire</em> at the end of their action.</p>
             </li>
         </ul>
     </div></div>
@@ -3353,7 +3353,7 @@
             <li class="fw-bold">Level 9 Arcana Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(16)</strong>. Once per <a href="#define-downtime">rest</a> on a success, all targets within <a href="#define-range">Very Far</a> range who aren't flying must make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(18)</strong>. Targets who fail take <strong>3d10+8</strong> <a href="#define-damage-type">physical damage</a> and are <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-vulnerable"><em>Vulnerable</em></a>. Targets who succeed take half damage.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(16)</strong>. Once per <a href="#define-downtime">rest</a> on a success, all targets within <a href="#define-range">Very Far</a> range who aren't flying must make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(18)</strong>. Targets who fail take <strong>3d10+8</strong> <a href="#define-damage-type">physical damage</a> and are <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>. Targets who succeed take half damage.</p>
                 <p>Additionally, when you succeed on the <a href="#define-spellcast-roll">Spellcast Roll</a>, all terrain within <a href="#define-range">Very Far</a> range becomes difficult to move through and structures within this range might sustain damage or crumble.</p>
             </li>
         </ul>
@@ -3999,7 +3999,7 @@
             <li class="fw-bold">Level 3 Codex Grimoire</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p><strong><em>Levitation:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to <a href="#temporary-tags-and-special-conditions">temporarily</a> lift a target you can see up into the air and move them within <a href="#define-range">Close</a> range of their original position.</p>
+                <p><strong><em>Levitation:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to <a href="#define-condition">temporarily</a> lift a target you can see up into the air and move them within <a href="#define-range">Close</a> range of their original position.</p>
             </li>
             <li>
                 <p><strong><em>Recant:</em></strong> Spend a <a href="#define-hope">Hope</a> to force a target within <a href="#define-range">Melee</a> range to make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(15)</strong>. On a failure, they forget the last minute of your conversation.</p>
@@ -4016,7 +4016,7 @@
             <li class="fw-bold">Level 3 Codex Grimoire</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p><strong><em>Mystic Tether:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, they're <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-restrained"><em>Restrained</em></a> and must mark a <a href="#define-stress">Stress</a>. If you target a flying creature, this spell grounds and <a href="#temporary-tags-and-special-conditions">temporarily</a> Restrains them.</p>
+                <p><strong><em>Mystic Tether:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, they're <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restrained</em></a> and must mark a <a href="#define-stress">Stress</a>. If you target a flying creature, this spell grounds and <a href="#define-condition">temporarily</a> Restrains them.</p>
             </li>
             <li>
                 <p><strong><em>Fireball:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Very Far</a> range. On a success, hurl a sphere of fire toward them that explodes on impact. The target and all creatures within <a href="#define-range">Very Close</a> range of them must make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(13)</strong>. Targets who fail take <strong>d20+5</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency-type">Proficiency</a>. Targets who succeed take half damage.</p>
@@ -4172,7 +4172,7 @@
                 <p><strong><em>Transform:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. On a success, transform into an inanimate object no larger than twice your normal size. You can remain in this shape until you take damage.</p>
             </li>
             <li>
-                <p><strong><em>Eternal Enervation:</em></strong> Once per <a href="#define-long-rest">long rest</a>, make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Close</a> range. On a success, they become permanently <a href="#define-vulnerable"><em>Vulnerable</em></a>. They can't clear this <a href="#define-condition">condition</a> by any means.</p>
+                <p><strong><em>Eternal Enervation:</em></strong> Once per <a href="#define-long-rest">long rest</a>, make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Close</a> range. On a success, they become permanently <a href="#define-condition"><em>Vulnerable</em></a>. They can't clear this <a href="#define-condition">condition</a> by any means.</p>
             </li>
         </ul>
     </div></div>
@@ -4194,7 +4194,7 @@
             <li class="fw-bold">Level 10 Codex Grimoire</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p><strong><em>Timejammer:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(18)</strong>. On a success, time <a href="#temporary-tags-and-special-conditions">temporarily</a> slows to a halt for everyone within <a href="#define-range">Far</a> range except for you. It resumes the next time you make an <a href="#define-action-roll">action roll</a> that targets another creature.</p>
+                <p><strong><em>Timejammer:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(18)</strong>. On a success, time <a href="#define-condition">temporarily</a> slows to a halt for everyone within <a href="#define-range">Far</a> range except for you. It resumes the next time you make an <a href="#define-action-roll">action roll</a> that targets another creature.</p>
             </li>
             <li>
                 <p><strong><em>Magic Immunity:</em></strong> Spend 5 <a href="#define-hope">Hope</a> to become immune to <a href="#define-damage-type">magic damage</a> until your next <a href="#define-downtime">rest</a>.</p>
@@ -4235,7 +4235,7 @@
             <li class="fw-bold">Level 1 Grace Spell</li>
             <li class="fw-bold">Recall Cost: 0</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Close</a> range. On a success, they become <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Enraptured</em>. While <em>Enraptured</em>, a target's attention is fixed on you, narrowing their field of view and drowning out any sound but your voice. Once per <a href="#define-downtime">rest</a> on a success, you can mark a <a href="#define-stress">Stress</a> to force the <em>Enraptured</em> target to mark a <a href="#define-stress">Stress</a> as well.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Close</a> range. On a success, they become <a href="#define-condition">temporarily</a> <em>Enraptured</em>. While <em>Enraptured</em>, a target's attention is fixed on you, narrowing their field of view and drowning out any sound but your voice. Once per <a href="#define-downtime">rest</a> on a success, you can mark a <a href="#define-stress">Stress</a> to force the <em>Enraptured</em> target to mark a <a href="#define-stress">Stress</a> as well.</p>
             </li>
         </ul>
     </div></div>
@@ -4285,7 +4285,7 @@
             <li class="fw-bold">Level 3 Grace Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all adversaries in front of you within <a href="#define-range">Close</a> range. Once per <a href="#define-downtime">rest</a> on a success, create an illusion of flashing colors and lights that <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Stuns</em> targets you succeed against and forces them to mark a <a href="#define-stress">Stress</a>. While <em>Stunned</em>, they can't use reactions and can't take any other <a href="#define-action">actions</a> until they clear this <a href="#define-condition">condition</a>.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all adversaries in front of you within <a href="#define-range">Close</a> range. Once per <a href="#define-downtime">rest</a> on a success, create an illusion of flashing colors and lights that <a href="#define-condition">temporarily</a> <em>Stuns</em> targets you succeed against and forces them to mark a <a href="#define-stress">Stress</a>. While <em>Stunned</em>, they can't use reactions and can't take any other <a href="#define-action">actions</a> until they clear this <a href="#define-condition">condition</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4414,7 +4414,7 @@
             <li class="fw-bold">Level 8 Grace Spell</li>
             <li class="fw-bold">Recall Cost: 3</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all targets within <a href="#define-range">Far</a> range. Targets you succeed against become <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Enraptured</em>. While <em>Enraptured</em>, a target's attention is fixed on you, narrowing their field of view and drowning out any sound but your voice. Mark a <a href="#define-stress">Stress</a> to force all <em>Enraptured</em> targets to mark a <a href="#define-stress">Stress</a>, ending this spell.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all targets within <a href="#define-range">Far</a> range. Targets you succeed against become <a href="#define-condition">temporarily</a> <em>Enraptured</em>. While <em>Enraptured</em>, a target's attention is fixed on you, narrowing their field of view and drowning out any sound but your voice. Mark a <a href="#define-stress">Stress</a> to force all <em>Enraptured</em> targets to mark a <a href="#define-stress">Stress</a>, ending this spell.</p>
             </li>
         </ul>
     </div></div>
@@ -4486,7 +4486,7 @@
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
                 <p>Spend a <a href="#define-hope">Hope</a> to make a <a href="#define-spellcast-roll">Spellcast Roll</a> and conjure throwing blades that strike out at all targets within <a href="#define-range">Very Close</a> range. Targets you succeed against take <strong>d8+2</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency-type">Proficiency</a>.</p>
-                <p>If a target you hit is <a href="#define-vulnerable"><em>Vulnerable</em></a>, they take an extra <strong>1d8</strong> damage.</p>
+                <p>If a target you hit is <a href="#define-condition"><em>Vulnerable</em></a>, they take an extra <strong>1d8</strong> damage.</p>
             </li>
         </ul>
     </div></div>
@@ -4521,7 +4521,7 @@
             <li class="fw-bold">Level 2 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 0</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all adversaries within <a href="#define-range">Very Close</a> range. Targets you succeed against are <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-restrained"><em>Restrained</em></a> as their shadow binds them in place.
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all adversaries within <a href="#define-range">Very Close</a> range. Targets you succeed against are <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restrained</em></a> as their shadow binds them in place.
             </li>
         </ul>
     </div></div>
@@ -4532,8 +4532,8 @@
             <li class="fw-bold">Level 3 Midnight Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When you position yourself behind a creature who's about your size, you can mark a <a href="#define-stress">Stress</a> to pull them into a chokehold, making them <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p>
-                <p>When a creature attacks a target who is <a href="#define-vulnerable"><em>Vulnerable</em></a> in this way, they deal an extra <strong>2d6</strong> damage.</p>
+                <p>When you position yourself behind a creature who's about your size, you can mark a <a href="#define-stress">Stress</a> to pull them into a chokehold, making them <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</p>
+                <p>When a creature attacks a target who is <a href="#define-condition"><em>Vulnerable</em></a> in this way, they deal an extra <strong>2d6</strong> damage.</p>
             </li>
         </ul>
     </div></div>
@@ -4544,7 +4544,7 @@
             <li class="fw-bold">Level 3 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(13)</strong>. On a success, you can create a temporary curtain of darkness between two points within <a href="#define-range">Far</a> range. Only you can see through this darkness. You're considered <a href="#define-hidden"><em>Hidden</em></a> to adversaries on the other side of the veil, and you have <a href="#define-advantage">advantage</a> on attacks you make through the darkness. The veil remains until you cast another spell.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(13)</strong>. On a success, you can create a temporary curtain of darkness between two points within <a href="#define-range">Far</a> range. Only you can see through this darkness. You're considered <a href="#define-condition"><em>Hidden</em></a> to adversaries on the other side of the veil, and you have <a href="#define-advantage">advantage</a> on attacks you make through the darkness. The veil remains until you cast another spell.</p>
             </li>
         </ul>
     </div></div>
@@ -4555,7 +4555,7 @@
             <li class="fw-bold">Level 4 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Very Close</a> range. On a success, spend a <a href="#define-hope">Hope</a> to conjure a dark glyph upon their body that exposes their weak points, <a href="#temporary-tags-and-special-conditions">temporarily</a> reducing the target's <a href="#define-difficulty">Difficulty</a> by a value equal to your <a href="#define-knowledge">Knowledge</a> (minimum 1).</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Very Close</a> range. On a success, spend a <a href="#define-hope">Hope</a> to conjure a dark glyph upon their body that exposes their weak points, <a href="#define-condition">temporarily</a> reducing the target's <a href="#define-difficulty">Difficulty</a> by a value equal to your <a href="#define-knowledge">Knowledge</a> (minimum 1).</p>
             </li>
         </ul>
     </div></div>
@@ -4645,7 +4645,7 @@
             <li class="fw-bold">Level 7 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When an attack made against you that would deal <a href="#define-damage-type">physical damage</a> fails, you can spend a <a href="#define-hope">Hope</a> to envelop yourself in shadow, becoming <a href="#define-hidden"><em>Hidden</em></a> and teleporting to a point within <a href="#define-range">Close</a> range of the attacker. You remain <a href="#define-hidden"><em>Hidden</em></a> until the next time you make an <a href="#define-action-roll">action roll</a>.</p>
+                <p>When an attack made against you that would deal <a href="#define-damage-type">physical damage</a> fails, you can spend a <a href="#define-hope">Hope</a> to envelop yourself in shadow, becoming <a href="#define-condition"><em>Hidden</em></a> and teleporting to a point within <a href="#define-range">Close</a> range of the attacker. You remain <a href="#define-condition"><em>Hidden</em></a> until the next time you make an <a href="#define-action-roll">action roll</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4679,7 +4679,7 @@
             <li class="fw-bold">Level 9 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-long-rest">long rest</a>, choose any targets within <a href="#define-range">Very Close</a> range to perceive you as a nightmarish horror. The targets must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(16)</strong> or become <a href="#temporary-tags-and-special-conditions">temporarily</a> Horrified. While Horrified, they're <a href="#define-vulnerable"><em>Vulnerable</em></a>. Steal a number of <a href="#define-fear">Fear</a> from the GM equal to the number of targets that are Horrified (up to the number of <a href="#define-fear">Fear</a> in the GM's pool). Roll a number of <strong>d6s</strong> equal to the number of stolen <a href="#define-fear">Fear</a> and deal the total damage to each Horrified target. Discard the stolen <a href="#define-fear">Fear</a>.</p>
+                <p>Once per <a href="#define-long-rest">long rest</a>, choose any targets within <a href="#define-range">Very Close</a> range to perceive you as a nightmarish horror. The targets must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(16)</strong> or become <a href="#define-condition">temporarily</a> Horrified. While Horrified, they're <a href="#define-condition"><em>Vulnerable</em></a>. Steal a number of <a href="#define-fear">Fear</a> from the GM equal to the number of targets that are Horrified (up to the number of <a href="#define-fear">Fear</a> in the GM's pool). Roll a number of <strong>d6s</strong> equal to the number of stolen <a href="#define-fear">Fear</a> and deal the total damage to each Horrified target. Discard the stolen <a href="#define-fear">Fear</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4759,7 +4759,7 @@
             <li class="fw-bold">Level 1 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, roots and vines reach out from the ground, dealing <strong>1d8+1</strong> <a href="#define-damage-type">physical damage</a> and <a href="#temporary-tags-and-special-conditions">temporarily</a> Restraining the target. Additionally on a success, you can spend a <a href="#define-hope">Hope</a> to <a href="#temporary-tags-and-special-conditions">temporarily</a> Restrain another <a href="#define-adversary">adversary</a> within <a href="#define-range">Very Close</a> range of your target.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, roots and vines reach out from the ground, dealing <strong>1d8+1</strong> <a href="#define-damage-type">physical damage</a> and <a href="#define-condition">temporarily</a> Restraining the target. Additionally on a success, you can spend a <a href="#define-hope">Hope</a> to <a href="#define-condition">temporarily</a> Restrain another <a href="#define-adversary">adversary</a> within <a href="#define-range">Very Close</a> range of your target.</p>
             </li>
         </ul>
     </div></div>
@@ -4825,7 +4825,7 @@
                     <li>You constrict the target and force them to mark 2 <a href="#define-stress">Stress</a>.</li>
                     <li>All adversaries between you and the target must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(13)</strong> or be hit by vines, taking <strong>3d6+2</strong> <a href="#define-damage-type">physical damage</a>.</li>
                 </ul>
-                <p>On a success, vines reach out from your hands, causing the chosen effect and <a href="#temporary-tags-and-special-conditions">temporarily</a> Restraining the target.</p>
+                <p>On a success, vines reach out from your hands, causing the chosen effect and <a href="#define-condition">temporarily</a> Restraining the target.</p>
             </li>
         </ul>
     </div></div>
@@ -4986,7 +4986,7 @@
                 <ul class="og-list-disc">
                     <li>When you succeed on an attack or <a href="#define-spellcast-roll">Spellcast Roll</a>, gain a +10 bonus to the <a href="#define-damage-roll">damage roll</a>.</li>
                     <li>When you deal enough damage to defeat a creature within <a href="#define-range">Close</a> range, you absorb them and clear an <a href="#define-armor">Armor Slot</a>.</li>
-                    <li>You can't be <a href="#define-restrained"><em>Restrained</em></a>.</li>
+                    <li>You can't be <a href="#define-condition"><em>Restrained</em></a>.</li>
                 </ul>
                 <p>Before you make an <a href="#define-action-roll">action roll</a>, you must spend a <a href="#define-hope">Hope</a>. If you can't, you revert to your normal form.</p>
             </li>
@@ -5001,7 +5001,7 @@
             <li class="mt-3">
                 <p>Choose one of the following tempests and make a <a href="#define-spellcast-roll">Spellcast Roll</a> against all targets within <a href="#define-range">Far</a> range. Targets you succeed against experience its effects until the GM spends a <a href="#define-fear">Fear</a> on their turn to end this spell.</p>
                 <ul class="og-list-disc">
-                    <li><strong><em>Blizzard:</em></strong> Deal <strong>2d20+8</strong> <a href="#define-damage-type">magic damage</a> and targets are temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</li>
+                    <li><strong><em>Blizzard:</em></strong> Deal <strong>2d20+8</strong> <a href="#define-damage-type">magic damage</a> and targets are temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</li>
                     <li><strong><em>Hurricane:</em></strong> Deal <strong>3d10+10</strong> <a href="#define-damage-type">magic damage</a> and choose a direction the wind is blowing. Targets can't move against the wind.</li>
                     <li><strong><em>Sandstorm:</em></strong> Deal <strong>5d6+9</strong> <a href="#define-damage-type">magic damage</a>. Attacks made from beyond <a href="#define-range">Melee</a> range have <a href="#define-advantage">disadvantage</a>.</li>
                 </ul>
@@ -5020,7 +5020,7 @@
             <li class="fw-bold">Level 1 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, spend a <a href="#define-hope">Hope</a> to send a bolt of shimmering light toward them, dealing <strong>d8+2</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency-type">Proficiency</a>. The target becomes <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-vulnerable"><em>Vulnerable</em></a> and glows brightly until this <a href="#define-condition">condition</a> is cleared.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, spend a <a href="#define-hope">Hope</a> to send a bolt of shimmering light toward them, dealing <strong>d8+2</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency-type">Proficiency</a>. The target becomes <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a> and glows brightly until this <a href="#define-condition">condition</a> is cleared.</p>
             </li>
         </ul>
     </div></div>
@@ -5146,7 +5146,7 @@
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
                 <p>After a <a href="#define-long-rest">long rest</a>, place a number of tokens equal to your <a href="#define-subclass">Spellcast trait</a> on this card. Touch a creature and spend any number of tokens to clear 2 <a href="#define-hit-point">Hit Points</a> or 2 <a href="#define-stress">Stress</a> for each token spent.</p>
-                <p> You can also spend a token from this card when touching a creature to clear the <a href="#define-vulnerable"><em>Vulnerable</em></a> <a href="#define-condition">condition</a> or heal a physical or magical ailment (the GM might require additional tokens depending on the strength of the ailment). When you take a <a href="#define-long-rest">long rest</a>, clear all unspent tokens.</p>
+                <p> You can also spend a token from this card when touching a creature to clear the <a href="#define-condition"><em>Vulnerable</em></a> <a href="#define-condition">condition</a> or heal a physical or magical ailment (the GM might require additional tokens depending on the strength of the ailment). When you take a <a href="#define-long-rest">long rest</a>, clear all unspent tokens.</p>
             </li>
         </ul>
     </div></div>
@@ -5206,7 +5206,7 @@
             <li class="fw-bold">Level 8 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to unleash powerful rays of burning sunlight against all adversaries in front of you within <a href="#define-range">Far</a> range. On a success, spend any number of <a href="#define-hope">Hope</a> and force that many targets you succeeded against to make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(14)</strong>. Targets who succeed take <strong>3d20+3</strong> <a href="#define-damage-type">magic damage</a>. Targets who fail take <strong>4d20+5</strong> <a href="#define-damage-type">magic damage</a> and are <a href="#temporary-tags-and-special-conditions">temporarily</a> <em>Stunned</em>. While <em>Stunned</em>, they can't use reactions and can't take any other actions until they clear this <a href="#define-condition">condition</a>.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> to unleash powerful rays of burning sunlight against all adversaries in front of you within <a href="#define-range">Far</a> range. On a success, spend any number of <a href="#define-hope">Hope</a> and force that many targets you succeeded against to make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(14)</strong>. Targets who succeed take <strong>3d20+3</strong> <a href="#define-damage-type">magic damage</a>. Targets who fail take <strong>4d20+5</strong> <a href="#define-damage-type">magic damage</a> and are <a href="#define-condition">temporarily</a> <em>Stunned</em>. While <em>Stunned</em>, they can't use reactions and can't take any other actions until they clear this <a href="#define-condition">condition</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -5286,7 +5286,7 @@
             <li class="fw-bold">Recall Cost: 0</li>
             <li class="mt-3">
                 <p>Make an attack with your primary <a href="#define-weapon">weapon</a> against a target within <a href="#define-range">Melee</a> range. On a success, you deal damage and knock them back to <a href="#define-range">Close</a> range. On a success with <a href="#define-hope">Hope</a>, add a <strong>d6</strong> to your <a href="#define-damage-roll">damage roll</a>.</p>
-                <p>Additionally, you can spend a <a href="#define-hope">Hope</a> to make them <a href="#temporary-tags-and-special-conditions">temporarily</a> <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p>
+                <p>Additionally, you can spend a <a href="#define-hope">Hope</a> to make them <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</p>
             </li>
         </ul>
     </div></div>
@@ -5469,7 +5469,7 @@
             <li class="fw-bold">Level 9 Valor Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Describe the defensive stance you take and spend a <a href="#define-hope">Hope</a>. If an <a href="#define-adversary">adversary</a> moves within <a href="#define-range">Very Close</a> range, they're pulled into <a href="#define-range">Melee</a> range and <a href="#define-restrained"><em>Restrained</em></a>.</p>
+                <p>Describe the defensive stance you take and spend a <a href="#define-hope">Hope</a>. If an <a href="#define-adversary">adversary</a> moves within <a href="#define-range">Very Close</a> range, they're pulled into <a href="#define-range">Melee</a> range and <a href="#define-condition"><em>Restrained</em></a>.</p>
                 <p>This <a href="#define-condition">condition</a> lasts until you move or fail a roll with <a href="#define-fear">Fear</a>, or the GM spends 2 <a href="#define-fear">Fear</a> on their turn to clear it.</p>
             </li>
         </ul>
@@ -5735,7 +5735,7 @@
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
 		<li><p><strong><em>Feline Instincts:</em></strong> When you make an <a href="#define-trait-roll">Agility Roll</a>, you can spend 2 <a href="#define-hope">Hope</a> to reroll your <a href="#define-action-roll">Hope Die</a>.</p></li>
-		<li><p><strong><em>Retracting Claws:</em></strong> Make an <a href="#define-trait-roll">Agility Roll</a> to scratch a target within <a href="#define-range">Melee</a> range. On a success, they become temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</p></li>
+		<li><p><strong><em>Retracting Claws:</em></strong> Make an <a href="#define-trait-roll">Agility Roll</a> to scratch a target within <a href="#define-range">Melee</a> range. On a success, they become temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 	</ul>
 </div>
 <hr>
@@ -6294,6 +6294,9 @@
 </div>
 <h6 id="weapons-primary-tier-1-physical">Physical Weapons<a class="og-h-anchor" href="#weapons-primary-tier-1-physical" title="Permalink" aria-hidden="true"></a></h6>
 <ul class="og-list-inline og-ref og-omit"><li>Page 115</li></ul>
+<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p><strong>Editor's Notes &mdash;</strong> The spear row contains two likely misprints duplicated from the halberd's row. If the GM agrees, change the spear's damage to d10 and remove the <em>Cumbersome</em> feature.</p>
+</div>
 <div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 	<caption>Tier 1 Primary Weapons &mdash; Physical</caption>
     <thead>
@@ -7315,7 +7318,7 @@
             <td class="text-center og-nowrap">Close</td>
             <td class="text-center og-nowrap">d8+9 phy</td>
             <td class="text-center-og-nowrap">One-Handed</td>
-            <td><em><strong>Grappling:</strong></em> On a successful <a href="#define-attack">attack</a>, you can spend a <a href="#define-hope">Hope</a> to <a href="#define-restrained"><em>Restrain</em></a> the target or pull them into <a href="#define-range">Melee</a> range with you.</td>
+            <td><em><strong>Grappling:</strong></em> On a successful <a href="#define-attack">attack</a>, you can spend a <a href="#define-hope">Hope</a> to <a href="#define-condition"><em>Restrain</em></a> the target or pull them into <a href="#define-range">Melee</a> range with you.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Ricochet Axes</th>
@@ -8085,19 +8088,19 @@
 	<h3 id="armor">Armor<a class="og-h-anchor" href="#armor" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 112</li><li>Page 114</li><li>Page 126</li></ul>
 	<h4 class="h6">Unarmored</h4>
-	<p>While <strong>unarmored</strong>, your character's base Armor Score is 0, their Major threshold is equal to their <a href="#define-level">level</a>, and their Severe threshold is equal to twice their <a href="#define-level">level</a>.</p>
+	<p>While <strong>unarmored</strong>, your base Armor Score is 0, your Major threshold is equal to your <a href="#define-level">level</a>, and your Severe threshold is equal to twice your <a href="#define-level">level</a>.</p>
 	<h4 class="h6">Equipping Armor</h4>
 	<ul class="og-list-disc">
 		<li><strong>Equipping:</strong> You can't equip armor while in danger or under pressure, and you can't equip armor with a higher <a href="#define-tier">tier</a> than you.</li>
-		<li><strong>Active Armor:</strong> You can equip one Active Armor at a time.</li>
-		<li><strong>Exchanging Armor:</strong> Each armor has its own Armor Slots. If you change your armor, track how many slots are marked, then recalculate your <a href="#define-hit-point">damage thresholds</a>. You can't carry armor in your inventory.</li>
+		<li><strong>Active Armor:</strong> You can equip one Active Armor.</li>
+		<li><strong>Exchanging Armor:</strong> Each armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</li>
 	</ul>
 	<h4 class="h6">Armor Anatomy</h4>
 	<dl>
 		<dt>Armor Score and Armor Slots</dt>
-		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Armor Slots</strong> plus any <a href="#define-modifier">modifiers</a> to your Armor Score (to a maximum of 12). When you would mark <a href="#define-hit-point">Hit Points</a>, you can mark <strong>Armor Slots</strong> instead. If you Armor Score is temporarily increased, your Armor Slots increase by the same amount, and when the effect ends, so does their availability.</dd>
+		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href="#define-modifier">modifiers</a> (to a maximum of 12). When you would mark a <a href="#define-hit-point">Hit Point</a>, you can mark an <strong>Armor Slot</strong> instead. If your Armor Score gains a bonus, your available Armor Slots increase by the same amount.</dd>
 		<dt>Base Thresholds</dt>
-		<dd>An armor's base thresholds contributes to your Major and Severe <a href="#define-hit-point">damage thresholds</a>. Be sure to add your <a href="#define-level">level</a> when calculating your final damage threshold.</dd>
+		<dd>An armor's base thresholds determines your Major and Severe <a href="#define-hit-point">damage thresholds</a>, and gains a bonus equal to your <a href="#define-level">level</a>.</dd>
 		<dt>Feature</dt>
 		<dd>Some armors grant a feature when equipped.</dd>
 	</dl>
@@ -8520,7 +8523,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">31</th>
-					<td><div id="define-loot-bag-of-ficklesand"><strong><em>Bag of Ficklesand:</em></strong> You can convince this small bag of sand to be much heavier or lighter with a successful <a href="#define-trait-roll">Presence Roll</a> <strong>(10)</strong>. Additionally, on a successful <a href="#define-trait-roll">Finesse Roll</a> <strong>(10)</strong>, you can blow a bit of sand into a target's face to make them temporarily <a href="#define-vulnerable"><em>Vulnerable</em></a>.</div></td>
+					<td><div id="define-loot-bag-of-ficklesand"><strong><em>Bag of Ficklesand:</em></strong> You can convince this small bag of sand to be much heavier or lighter with a successful <a href="#define-trait-roll">Presence Roll</a> <strong>(10)</strong>. Additionally, on a successful <a href="#define-trait-roll">Finesse Roll</a> <strong>(10)</strong>, you can blow a bit of sand into a target's face to make them temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">32</th>
@@ -8548,7 +8551,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">38</th>
-					<td><div id="define-loot-"><strong><em>Elusive Amulet:</em></strong> Once per <a href="#define-long-rest">long rest</a>, you can activate this amulet to become <a href="#define-hidden"><em>Hidden</em></a> until you move. While <em>Hidden</em> in this way, you remain unseen even if an <a href="#define-adversary">adversary</a> moves to where they would normally see you.</div></td>
+					<td><div id="define-loot-"><strong><em>Elusive Amulet:</em></strong> Once per <a href="#define-long-rest">long rest</a>, you can activate this amulet to become <a href="#define-condition"><em>Hidden</em></a> until you move. While <em>Hidden</em> in this way, you remain unseen even if an <a href="#define-adversary">adversary</a> moves to where they would normally see you.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">39</th>
@@ -9052,7 +9055,7 @@
 	<ul class="og-list-inline og-ref og-omit"><li>Page 88</li></ul>
 	<p>The core gameplay loop is the procedure that drives every scene, both in and out of combat.</p>
 	<h4 class="h6 og-tab">Step 1: Set the Scene</h4>
-	<p>The GM describes a scenario, establishing the surroundings, and any dangers, NPCs, or other important details the PCs would notice.</p>
+	<p>The GM describes a scenario, establishing the surroundings, and any dangers, <a href="#define-npc">NPCs</a>, or other important details the PCs would notice.</p>
 	<h4 class="h6 og-tab">Step 2: Ask and Answer Questions</h4>
 	<p>The players ask clarifying questions to explore the scene more deeply, gathering information that could inform their PC's <a href="#define-acton">action</a>. The GM responds to these questions by giving the players information their characters could easily obtain, or by asking questions of the players.</p>
 	<h4 class="h6 og-tab">Step 3: Build on the Fiction</h4>
@@ -9324,20 +9327,19 @@
 <div id="define-hit-point">
 	<h3 id="hit-points-and-damage-thresholds">Hit Points and Damage Thresholds<a class="og-h-anchor" href="#hit-points-and-damage-thresholds" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-	<h4 class="h6">Hit Points</h4>
-	<p><strong>Hit Points</strong> represent a character's ability to withstand physical injury. When a character takes damage, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>:</p>
+	<p><strong>Hit Points</strong> represent a character's ability to withstand physical injury.</p>
+	<p>When a character takes damage, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>:</p>
 	<ul class="og-list-disc">
-		<li>If the damage meets or beats a <strong>Severe</strong> damage threshold, the target marks 3 Hit Points.</li>
-		<li>If the damage meets or beats a <strong>Major</strong> damage threshold but below their <strong>Severe</strong> damage threshold, the target marks 2 Hit Points.</li>
-		<li>If the damage is below a <strong>Major</strong> damage threshold, the target mark 1 Hit Point.</li>
-		<li>If incoming damage is reduced to 0, no Hit Points are marked.</li>
+		<li>If the damage meets or beats their <strong>Severe</strong> damage threshold, the target marks 3 Hit Points.</li>
+		<li>If the damage meets or beats their <strong>Major</strong> damage threshold, but is below their <strong>Severe</strong> damage threshold, the target marks 2 Hit Points.</li>
+		<li>If the damage is below their <strong>Major</strong> damage threshold, the target marks 1 Hit Point.</li>
+		<li>If incoming damage is reduced to 0 (for example, by reducing damage by marking <a href="#define-armor">Armor Slots</a>), no Hit Points are marked.</li>
 		<li>If a PC marks their last Hit Point, they make a <a href="#define-death">death move</a>.</li>
 		<li>If an <a href="#define-adversary">adversary</a>'s last <a href="#define-hit-point">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</li>
 	</ul>
 	<p>PCs can clear Hit Points by making <a href="#define-downtime">downtime moves</a> or activating certain features.</p>
-	<p>Your starting Hit Points are determined by their <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>.</p>
-	<h4 class="h6">Damage Thresholds</h4>
-	<p>A PC's base <strong>damage thresholds</strong> are determined by their <a href="#define-armor">armor</a>, and gain a bonus equal to the PC's <a href="#define-level">level</a>.
+	<p>Your starting Hit Points are determined by your <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>.</p>
+	<p>A PC's base <strong>damage thresholds</strong> are determined by their <a href="#define-armor">armor</a>, and gain a bonus equal to the PC's <a href="#define-level">level</a>.</p>
 </div>
 <div class="og-topbar">
 	<div id="define-optional-rule-massive-damage">
@@ -9362,9 +9364,9 @@
 <div id="define-stress">
 	<h3 id="stress">Stress<a class="og-h-anchor" href="#stress" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 92</li></ul>
-	<p><strong>Stress</strong> represents how much physical, mental, and emotional strain a character can endure. Activating some features require marking Stress. Addtionally the GM can require a PC to mark Stress as a <a href="#define-gm-move">GM move</a>, or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>.<p>
+	<p><strong>Stress</strong> represents how much physical, mental, and emotional strain a character can endure. Activating some features require marking Stress. Addtionally, the GM can require a PC to mark Stress as a <a href="#define-gm-move">GM move</a>, or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>.<p>
 	<p>
-	<p>When a character marks their last Stress, they become <a href="#define-vulnerable"><em>Vulnerable</em></a> until they clear at least 1 Stress. If all of a character's Stress slots are marked, they can't use features that requires them to mark Stress, and if something else requires them mark Stress, they mark a <a href="#define-hit-point">Hit Point</a> instead.  Stress is cleared during <a href="#define-downtime">rests</a>.</p>
+	<p>When a character marks their last Stress, they become <a href="#define-condition"><em>Vulnerable</em></a> until they clear at least 1 Stress. If all of a character's Stress slots are marked, they can't use features that requires them to mark Stress, and if something else requires them mark Stress, they mark a <a href="#define-hit-point">Hit Point</a> instead.  Stress is cleared during <a href="#define-downtime">rests</a>.</p>
 	<p>A PC starts with 6 Stress slots. You can purchase an <a href="#define-advancement">advancement</a> to increase your Stress slots when you gain a <a href="#define-level">level</a>.</p>
 </div>
 <hr>
@@ -9373,7 +9375,7 @@
 <div id="define-attack-roll">
 	<h4 id="attack-rolls">Attack Rolls<a class="og-h-anchor" href="#attack-rolls" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
-	<p>An <a href="#define-attack-roll">attack roll</a> is an <a href="#define-action-roll">action roll</a> intended to inflict harm. The <a href="#define-trait">trait</a> that applies to an attack roll is specified by the <a href="#define-weapon">weapon</a> or spell being used. Unarmed attack rolls use either <a href="#define-stength">Strength</a> or <a href="#define-finesse">Finesse</a> (GM's choice). An attack roll's <a href="#define-difficulty">Difficulty</a>, unless otherwise noted, is equal to the Difficulty score of its target.</p>
+	<p>An <a href="#define-attack-roll">attack roll</a> is an <a href="#define-action-roll">action roll</a> intended to inflict harm. The <a href="#define-trait">trait</a> that applies to an attack roll is specified by the <a href="#define-weapon">weapon</a> or spell being used. Unarmed attack rolls use either <a href="#define-stength">Strength</a> or <a href="#define-finesse">Finesse</a> (GM's choice). An attack roll's <a href="#define-difficulty">Difficulty</a>, is usually equal to the Difficulty score of its target.</p>
 </div>
 <div id="define-damage-roll">
 	<h4 id="damage-rolls">Damage Rolls<a class="og-h-anchor" href="#damage-rolls" title="Permalink" aria-hidden="true"></a></h4>
@@ -9459,35 +9461,26 @@
 <div id="define-condition">
 	<h3 id="conditions">Conditions<a class="og-h-anchor" href="#conditions" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 102</li></ul>
-	<p>Conditions are effects that grant specific benefits or drawbacks to the target they are attached to. Some features can apply special or unique conditions, which work as described in the feature text. Unless otherwise noted, the same condition can't be applied more than once to the same target.</p>
-	<h4 id="standard-conditions">Standard Conditions<a class="og-h-anchor" href="#standard-conditions" title="Permalink" aria-hidden="true"></a></h4>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 102</li></ul>
-	<p>Daggerheart has three standard conditions: <span class="og-tooltip-inline"><em>Hidden</em>, <em>Restrained</em>, and <em>Vulnerable</em>.</span></p>
-	<div id="define-hidden">
-		<h5 class="h6" id="hidden">Hidden</h5>
-		<p>While you're out of sight from all enemies and they don't otherwise know your location, you gain the <em>Hidden</em> condition. Any rolls against a Hidden creature have disadvantage. After an <a href="#define-adversary">adversary</a> moves to where they would see you, you move into their line of sight, or you make an attack, you are no longer Hidden.</p>
-	</div>
-	<div id="define-restrained">
-		<h5 class="h6" id="restrained">Restrained</h5>
-		<p><em>Restrained</em> characters can't move, but can still take <a href="#define-action">actions</a> from their current position.</p>
-	</div>
-	<div id="define-vulnerable">
-		<h5 class="h6" id="vulnerable">Vulnerable</h5>
-		<p>When a creature is <em>Vulnerable</em>, all rolls targeting them have <a href="#define-advantage">advantage</a>.</p>
-	</div>
+	<p>Conditions are effects that grant specific benefits or drawbacks. Usually, the same condition can't be applied to the same target more than once.</p>
+	<dl>
+		<dt>Hidden</dt>
+		<dd><em>Hidden</em> characters can't be seen, their location is unknown to their enemies, and rolls against them have <a href="#define-advantage">disadvantage</a>. They can remain <em>Hidden</em> until an enemy moves to where they have line of sight, or the <em>Hidden</em> character <a href="#define-attack-roll">attacks</a>.</dd>
+		<dt>Restrained</dt>
+		<dd><em>Restrained</em> characters can't move, but can still take <a href="#define-action">actions</a> from their current position.</dd>
+		<dt>Vulnerable</dt>
+		<dd>Rolls against <em>Vulnerable</em> characters have <a href="#define-advantage">advantage</a>.</dd>
+		<dt>Temporary Conditions</dt>
+		<dd>PCs can usually clear a temporary condition with a successful <a href="#define-trait-roll">trait roll</a>. An <a href="#define-adversary">adversary</a> clears them with a <a href="#define-gm-move">GM move</a>.</dd>
+		<dt>Special Conditions</dt>
+		<dd>Special conditions be cleared only after specific requirements are met, for example, completing a certain <a href="#define-action">action</a> or using a particular item.</dd>
+	</dl>
 </div>
-<h4 id="temporary-tags-and-special-conditions">Temporary Tags and Special Conditions<a class="og-h-anchor" href="#temporary-tags-and-special-conditions" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 102</li></ul>
-<p>The temporary tag denotes a <a href="#define-condition">conditions</a> or effect that the affected creature can clear by making a <a href="#define-action">move</a> against it. When an affected PC makes a move to clear a temporary condition or effect, it normally requires a successful <a href="#define-action-roll">action roll</a> using an appropriate <a href="#define-trait">trait</a>. When an affected <a href="#define-adversary">adversary</a> makes a <a href="#define-gm-move">GM move</a> to clear a temporary condition or effect, the GM puts the <a href="#define-spotlight">spotlight</a> on the adversary and describes how they do it; this doesn't require a roll but it does use up that adversary's spotlight.</p>
-<p><strong>Special conditions</strong> are only cleared when specific requirements are met, such as completing a certain action or using a particular item. The requirements for clearing these conditions are stated in the text of the effect that applies the condition.</p>
 <hr>
 <div id="define-range">
 	<h3 id="maps-range-and-movement">Maps, Range, and Movement<a class="og-h-anchor" href="#maps-range-and-movement" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 103</li></ul>
-	<p class="og-omit">You can play <a href="#define-daggerheart">Daggerheart</a> using <strong>theater of the mind</strong>.</p>
-	<p class="og-omit">Daggerheart uses the following ranges to translate fictional positioning into relative distance for the purposes of targeting, movement, and other game mechanics.</p>
-	<p class="og-omit">Range is measured from the source of an effect, such as the attacker or spellcaster, to the target or object of an effect.</p>
-	<p class="og-omit">A <a href="#define-weapon">weapon</a>, spell, ability, item, or other effect's stated range is a maximum range; unless otherwise noted, it can be used at closer distances.</p>
+	<p class="og-omit">The following ranges translate fictional positioning into relative distances for the purposes of targeting, movement, and other game mechanics.</p>
+	<p class="og-omit">Range is measured from the source of an effect (for example, the attacker or spellcaster) to the target or object of an effect. A <a href="#define-weapon">weapon</a>, spell, ability, item, or other effect's stated range is a maximum range. Usually, it can be used at closer distances.</p>
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 		<caption>Range</caption>
 		<thead>
@@ -9549,7 +9542,7 @@
 	<div id="define-optional-rule-defined-ranges">
 		<h4 id="optional-rule-defined-ranges">Optional Rule: Defined Ranges<a class="og-h-anchor" href="#optional-rule-defined-ranges" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 103</li></ul>
-		<p>If your table would rather operate with more precise range rules using <strong>maps and miniatures</strong>. The conversions below from abstract ranges to physical measurements assume 1 inch (2.5 cm) of map represents about 5 feet (1.5 m) of fictional space.</p>
+		<p>If you would rather play with more precise range rules, the conversions below assume 1 inch (2.5 cm) of map represents 5 feet (1.5 m).</p>
 		<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 			<caption>Defined Ranges</caption>
 			<thead>
@@ -9718,7 +9711,7 @@
 <h5 class="h6 og-tab">Tell them what they would know</h5>
 <p>Don't hide obvious details or important information from the players.</p>
 <h5 class="h6 og-tab">Tell them what they would know</h5>
-<p>An NPC's <a href="#define-gm-move">actions</a> flow from their goals and desires.</p>
+<p>An <a href="#define-npc">NPC</a>'s <a href="#define-gm-move">actions</a> flow from their goals and desires.</p>
 <h5 class="h6 og-tab">Bring the game's mechanics to life</h5>
 <p>Set a good example of how fiction and mechanics work together to enhance the game experience.</p>
 <h5 class="h6 og-tab">Reframe rather than reject</h5>
@@ -9743,192 +9736,7 @@
 	<p>For more in-depth GM guidance, see the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a>, page 140.</p>
 </div>
 <hr>
-<h3 id="core-gm-mechanics">Core GM Mechanics<a class="og-h-anchor" href="#core-gm-mechanics" title="Permalink" aria-hidden="true"></a></h3>
-<h4 id="gm-player-action-rolls">Player Action Rolls<a class="og-h-anchor" href="#gm-player-action-rolls" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 148</li></ul>
-<p>After a player describes a <a href="#define-action">move</a> they want to make during the game, you might decide an <a href="#define-action-roll">action roll</a> is necessary to determine how the scene progresses. Use this guide to determine what to present the player, choosing whichever option best fits the situation:</p>
-<ul class="og-list-disc">
-	<li>Determine whether the roll is necessary, considering the PC's Experiences or backstory, the pressure they're acting under, and the possible outcomes.</li>
-	<li>Establish the stakes of an <A href="#define-action-roll">action roll</a> before the player makes it.</li>
-	<li>Communicate any unavoidable consequences.</li>
-	<li>If desired, you can offer the player the opportunity to forgo an <a href="#define-action">action roll</a> in exchange for agreeing to an interesting outcome, cost, or complication.</li>
-</ul>
-<h5 id="resolving-action-rolls">Resolving Action Rolls<a class="og-h-anchor" href="#resolving-action-rolls" title="Permalink" aria-hidden="true"></a></h5>
-<ul class="og-list-inline og-ref og-omit"><li>Page 150</li></ul>
-<p>If you're unsure how to resolve a <a href="#define-action-roll">roll</a>, think about these quick phrases:</p>
-<ul class="og-list-disc">
-	<li><strong>Success with Hope:</strong> Yes, and&mldr; <em>(You get what you want and gain a <a href="#define-hope">Hope</a>.)</em></li>
-	<li><strong>Success with Fear:</strong> Yes, but&mldr; <em>(You get what you want, but there's a consequence, and the GM gains a <a href="#define-fear">Fear</a>.)</em></li>
-	<li><strong>Failure with Hope:</strong> No, but&mldr; <em>(Things don't go as planned, but you gain a <a href="#define-hope">Hope</a>.)</em></li>
-	<li><strong>Failure with Fear:</strong> No, and&mldr; <em>(Things don't go as planned and it gets worse. The GM gains a <a href="#define-fear">Fear</a>.)</em></li>
-</ul>
-<p>If an outcome is not obvious, try one of the following:</p>
-<ul class="og-list-disc">
-	<li>Ask the player what happens</li>
-	<li>Have the PC mark a <a href="#define-stress">Stress</a></li>
-	<li>Tell the players "everything is fine&mldr;for now."</li>
-	<li>Consult the full list of <a href="#define-gm-move-examples">Example GM Moves</a></li>
-</ul>
-<hr>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<div id="define-gm-move">
-			<h3 id="gm-moves">GM Moves<a class="og-h-anchor" href="#gm-moves" title="Permalink" aria-hidden="true"></a></h3>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 89</li><li>Page 149</li><li>Page 150</li></ul>
-			<p>When the <a href="#define-spotlight">spotlight</a> passes to you, you can make <strong>GM moves</strong> that change the story in response to the PC's <a href="#define-action">actions</a>. Consider making a move when:</p>
-			<ul class="og-list-disc">
-				<li>A player <a href="#define-action-roll">Rolls with Fear</a> or fails an <a href="#define-action-roll">action roll</a></li>
-				<li>A PC <a href="#define-action">action</a> would create immediate consequences</li>
-				<li>Something provides a golden opportunity in the narrative</li>
-				<li>The players look to you for what happens next</li>
-			</ul>
-			<p>Make sure the the frequency and severity of your GM moves support the type and tone of the story, and are responsive to the <a href="#define-action">action</a> the PC takes&mdash;and outcome of their <a href="#define-action-roll">action roll</a>.</p>
-			<h4 class="h6">Example GM Moves</h4>
-			<ul class="og-list-disc og-qr">
-				<li><a href="#define-spotlight">Spotlight</a> an <a href="#define-adversary">adversary</a> to take an <a href="#define-adversary-feature">adversary action</a></li>
-				<li>Clear an <a href="#define-adversary">adversary</a>'s <a href="#define-condition">condition</a></li>
-				<li>Make a PC mark <a href="#define-stress">Stress</a></li>
-				<li>Change the <a href="#define-environment">environment</a></li>
-				<li>Show how the world reacts</li>
-				<li>Signal an imminent threat</li>
-				<li>Take away an opportunity</li>
-				<li>Cause something to happen elsewhere that the PCs are unaware of</li>
-			</ul>
-		</div>
-	</div>
-	<div class="col-12 col-md-6">
-		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-			<caption>Ranger Companion Advancements</caption>
-			<thead>
-				<tr>
-					<th scope="col">Event</th>
-					<th scope="col">Description</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th class="fw-normal">Success with Hope</th>
-					<td>Let the player describe their success, then you show how the world reacts to it.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal">Success with Fear</th>
-					<td>Work with the player to describe their success, then introduce a minor consequence, complication, or cost</td>
-				</tr>
-				<tr>
-					<th class="fw-normal">Failure with Hope</th>
-					<td>Describe how the PC fails to get what they want, introduce a minor consequence, complication, or cost</td>
-				</tr>
-				<tr>
-					<th class="fw-normal">Failure with Fear</th>
-					<td>Describe how the PC fails to get what they want, introduce a major consequence, complication, or cost</td>
-				</tr>
-				<tr>
-					<th class="fw-normal">Critical Success</th>
-					<td>Let the player describe their success, then give them an additional opportunity or <a href="#define-advantage">advantage</a>.</td>
-				</tr>
-			</tbody>
-		</table></div>
-	</div>
-</div>
-<div class="og-topbar">
-	<div id="define-gm-move-examples">
-		<h4 class="h6">Example GM Moves</h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 152</li></ul>
-		<ul class="og-list-disc og-qr">
-			<li><a href="#define-spotlight">Spotlight</a> an <a href="#define-adversary">adversary</a> to take an <a href="#define-adversary-feature">adversary action</a></li>
-			<li>Clear an <a href="#define-adversary">adversary</a>'s <a href="#define-condition">condition</a></li>
-			<li>Make a PC mark <a href="#define-stress">Stress</a></li>
-			<li>Change the <a href="#define-environment">environment</a></li>
-			<li>Make an <a href="#define-npc">NPC</a> act in accordance with their motive</li>
-			<li>Ask a question and build on the answer</li>
-			<li>Show how the world reacts</li>
-			<li>Show the collateral damage</li>
-			<li>Signal an imminent threat</li>
-			<li>Reveal an unwelcome truth or unexpected danger</li>
-			<li>Take away an opportunity</li>
-			<li>Capture someone or something</li>
-			<li>Dangle a PC's goal in front of them</li>
-			<li>Use a PC's backstory against them</li>
-			<li>Force the group to split up</li>
-			<li>Cause something to happen elsewhere that the PCs are unaware of</li>
-		</ul>
-	</div>
-</div>
-<h4 id="soft-and-hard-moves">Soft and Hard Moves<a class="og-h-anchor" href="#soft-and-hard-moves" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 151</li></ul>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Soft Moves</h5>
-		<p>Soft moves go easier on the players&mdash;they give the party new information about the scene and offer them an opportunity to react to it.</p>
-		<p><em>Respond to <a href="#define-action-roll">roll with Hope</a> with a softer move.</em></p>
-	</div>
-	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Hard Moves</h5>
-		<p>Hard moves are harsher, more impactful, or more direct&mdash;the PCs can't interrupt, alter, or anticipate the outcome.</p>
-		<p><em>Respond to <a href="#define-action-roll">rolls with Fear</a> with a harder move.</em></p>
-	</div>
-</div>
-<h4 id="dramatic-tention">Dramatic Tension<a class="og-h-anchor" href="#dramatic-tention" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 155</li></ul>
-<p>The dramatic tension of a scene correlates with the amount of <a href="#define-fear">Fear</a> spent during it. This table recommends a number of <a href="#define-fear">Fear</a> to spend in a scene:</p>
-<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Dramatic Tension</caption>
-	<thead>
-		<tr>
-			<th scope="col">Event</th>
-			<th scope="col">Description</th>
-			<th class="text-center" scope="col">Fear</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th class="fw-normal">Incidental</th>
-			<td>A catch-up between PCs after an emotionally charged scene; gathering information; resupplying at a local market; resting during <a href="#define-downtime">downtime</a>.</td>
-			<td class="text-center og-nowrap">0&mdash;1</td>
-		</tr>
-		<tr>
-			<th class="fw-normal">Minor</th>
-			<td>A travel sequence; a minor skirmish that introduces new foes or signals future trouble.</td>
-			<td class="text-center og-nowrap">1&mdash;3</td>
-		</tr>
-		<tr>
-			<th class="fw-normal">Standard</th>
-			<td>A substantial battle with a notable objective; perilous travel that tests might and wit; a tense social encounter seeking crucial information or aid.</td>
-			<td class="text-center og-nowrap">2&mdash;4</td>
-		</tr>
-		<tr>
-			<th class="fw-normal">Major</th>
-			<td>A large battle with a <a href="#define-adversary-type">Solo</a> or <a href="#define-adversary-type">Leader</a> <a href="#define-adversary">adversary</a>; a character-defining scene with a significant change to a character's personal story (such as revelation, growth, and betrayal).</td>
-			<td class="text-center og-nowrap">4&mdash;8</td>
-		</tr>
-		<tr>
-			<th class="fw-normal">Climactic</th>
-			<td>A major confrontation with the villain of a story arc; an epic set piece battle; a judicial duel to determine an important NPC's fate.</td>
-			<td class="text-center og-nowrap">6&mdash;12</td>
-		</tr>
-	</tbody>
-</table></div>
-</div>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Spending Multiple Fear</h5>
-		<p>If you have a large amount of <a href="#define-fear">Fear</a>, spend several on a <a href="#define-gm-move">GM move</a> to create an even bigger impact.</p>
-		<ul class="og-list-disc">
-			<li><strong>Spending Fast:</strong> Spend <a href="#define-fear">Fear</a> before the players have a chance to react</li>
-			<li><strong>Spending Often:</strong> Spend <a href="#define-fear">Fear</a> every time the <a href="#define-spotlight">spotlight</a> swings to you</li>
-			<li><strong>Spending Big:</strong> Spend <a href="#define-fear">Fear</a> to make multiple <a href="#define-gm-move">GM moves</a> in a row</li>
-		</ul>
-	</div>
-	<div class="col-12 col-md-6">
-		<h5 class="h6 og-tab">Fear Move Examples</h5>
-		<ul class="og-list-disc">
-			<li>Introducing new <a href="#define-adversary">adversaries</a> to a scene when their appearance hasn't been foreshadowed or lacks context.</li>
-			<li>An adversary activating a powerful spell or transformation to deal massive damage or boost their capabilities.</li>
-			<li>An environment exerting a strong negative effect on the party.</li>
-		</ul>
-	</div>
-</div>
-<hr>
+
 <div id="define-difficulty">
 	<h3 id="difficulty">Difficulty<a class="og-h-anchor" href="#difficulty" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 157</li></ul>
@@ -10267,22 +10075,210 @@
 	</table></div>
 </div>
 <hr>
+<h3 id="resolving-actions">Resolving Actions<a class="og-h-anchor" href="#resolving-actions" title="Permalink" aria-hidden="true"></a></h3>
+<ul class="og-list-inline og-ref og-omit"><li>Page 148</li><li>Page 149</li><li>Page 150</li></ul>
+<p>When a PC makes <a href="#define-action">move</a>:</p>
+<ul class="og-list-disc">
+	<li><strong>No Roll:</strong> You don't need to call for <a href="#define-action-roll">action roll</a> in response to everything the PCs do.  Consider the PC's <a href="#define-experience">Experiences</a>, the pressure they're under, and the possible interesting outcomes for the <a href="#define-action">action</a>. It might be best if they succeed automatically, or you can provide them an opprtunity to forgo an <a href="#define-action">action roll</a> in exchange for an interesting outcome, cost, or complication.</li>
+	<li><strong>Action Roll:</strong> As you go through the <a href="#define-procedure">action roll procedure</a>, communicate the stakes of the <A href="#define-action-roll">action roll</a>&mdash;including any unavoidable consequences&mdash;before the <A href="#define-action-roll">Dualty Dice</a> are rolled.</li>
+</ul>
+<p>If an outcome is not obvious, try one of the following:</p>
+<ul class="og-list-disc">
+	<li>Ask the player what happens</li>
+	<li>Have the PC mark a <a href="#define-stress">Stress</a></li>
+	<li>Tell the players "everything is fine&mldr;for now."</li>
+	<li>Consult the list of <a href="#define-gm-move-examples">Example GM Moves</a></li>
+</ul>
+<p>The following table can help you quickly resolve <a href="#define-action-roll">action rolls</a>:</p>
+<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Resolving Actions</caption>
+	<thead>
+		<tr>
+			<th scope="col">Action Roll</th>
+			<th scope="col">Phrase</th>
+			<th scope="col">Resolution</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal og-nowrap">Success with Hope</th>
+			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
+					<li>The player describes their success.</li>
+					<li>You describe how the world reacts to it.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Success with Fear</th>
+			<td class="og-nowrap">Yes, but&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
+					<li>Work with the player to describe their success.</li>
+					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a harder <a href="#define-gm-move">GM move</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Failure with Hope</th>
+			<td class="og-nowrap">No, but&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>You gain 1 <a href="#define-fear">Fear</a>.</li>
+					<li>You describe how the PC fails to get what they want.</li>
+					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a softer <a href="#define-gm-move">GM move</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Failure with Fear</th>
+			<td class="og-nowrap">No, and&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>You gain 1 <a href="#define-fear">Fear</a>.</li>
+					<li>Describe how the PC fails to get what they want.</li>
+					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a harder <a href="#define-gm-move">GM move</a></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Critical Success</th>
+			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>The PC gains 1 <a href="#define-hope">Hope</a> and clears 1 <a href="#stress">Stress</a>.</li>
+					<li>Let the player describe their success.</li>
+					<li>Provide the PC an additional opportunity, <a href="#define-advantage">advantage</a>, or reward.</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table></div>
+<hr>
+<div id="define-gm-move">
+	<h3 id="gm-moves">GM Moves<a class="og-h-anchor" href="#gm-moves" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 89</li><li>Page 149</li><li>Page 150</li></ul>
+	<p>When the <a href="#define-spotlight">spotlight</a> swings to you, you can make <strong>GM moves</strong> that change the story in response to the PC's <a href="#define-action">actions</a>. Make a GM move when:</p>
+	<ul class="og-list-disc">
+		<li>You gain the <a href="#define-spotlight">spotlight</a> after player fails an <a href="#define-action-roll">action roll</a> or <a href="#define-action-roll">rolls with Fear</a></li>
+		<li>A PC's <a href="#define-action">action</a> would create immediate consequences</li>
+		<li>Something provides a golden opportunity in the narrative</li>
+		<li>The players look to you for what happens next</li>
+	</ul>
+	<p>The frequency and severity of your GM moves should reflect the type and tone of the story, and be responsive to the PC's <a href="#define-action">action</a>&mdash;and of their <a href="#define-action-roll">action roll</a>.</p>
+	<dl>
+		<dt>Softer Moves</dt>
+		<dd>Soft moves go easier on the players&mdash;they give the party new information about the scene and offer them an opportunity to react to it. Respond to <a href="#define-action-roll">roll with Hope</a> with a softer move.</dd>
+		<dt>Harder Moves</dt>
+		<dd>Hard moves are harsher, more impactful, or more direct&mdash;the PCs can't interrupt, alter, or anticipate the outcome. Respond to <a href="#define-action-roll">rolls with Fear</a> with a harder move.</dd>
+	</dl>
+</div>
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p>Avoid using your GM moves to negate PC's successes.</p>
+</div>
+<div class="og-topbar">
+	<div id="define-gm-move-examples">
+		<h4 class="h6">Example GM Moves</h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 152</li></ul>
+		<ul class="og-list-disc og-qr">
+			<li>An <a href="#define-npc">NPC</a> or <a href="#define-adversary">adversary</a> takes action</li>
+			<li>An <a href="#define-adversary">adversary</a> clears a <a href="#define-condition">condition</a></li>
+			<li>A PC must mark <a href="#define-stress">Stress</a></li>
+			<li>The <a href="#define-environment">environment</a> changes</li>
+			<li>Describe how the world reacts</li>
+			<li>Describe collateral damage</li>
+			<li>Reveal a truth or danger</li>
+			<li>Remove an opportunity</li>
+			<li>Capture something</li>
+			<li>Signal an imminent threat</li>
+			<li>Dangle a PC's goal in front of them</li>
+			<li>Use a PC's backstory against them</li>
+			<li>Force the group to split up</li>
+			<li>Something happens elsewhere the PCs are unaware of</li>
+			<li>Ask a question and build on the answer</li>
+		</ul>
+	</div>
+</div>
+<h4 id="dramatic-tention">Dramatic Tension<a class="og-h-anchor" href="#dramatic-tention" title="Permalink" aria-hidden="true"></a></h4>
+<ul class="og-list-inline og-ref og-omit"><li>Page 155</li></ul>
+<p>The dramatic tension of a scene correlates with the amount of <a href="#define-fear">Fear</a> spent during it. This table recommends a number of <a href="#define-fear">Fear</a> to spend in a scene:</p>
+<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Dramatic Tension</caption>
+	<thead>
+		<tr>
+			<th scope="col">Event</th>
+			<th scope="col">Description</th>
+			<th class="text-center" scope="col">Fear</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal">Incidental</th>
+			<td>A catch-up between PCs after an emotionally charged scene; gathering information; resupplying at a local market; resting during <a href="#define-downtime">downtime</a>.</td>
+			<td class="text-center og-nowrap">0&mdash;1</td>
+		</tr>
+		<tr>
+			<th class="fw-normal">Minor</th>
+			<td>A travel sequence; a minor skirmish that introduces new foes or signals future trouble.</td>
+			<td class="text-center og-nowrap">1&mdash;3</td>
+		</tr>
+		<tr>
+			<th class="fw-normal">Standard</th>
+			<td>A substantial battle with a notable objective; perilous travel that tests might and wit; a tense social encounter seeking crucial information or aid.</td>
+			<td class="text-center og-nowrap">2&mdash;4</td>
+		</tr>
+		<tr>
+			<th class="fw-normal">Major</th>
+			<td>A large battle with a <a href="#define-adversary-type">Solo</a> or <a href="#define-adversary-type">Leader</a> <a href="#define-adversary">adversary</a>; a character-defining scene with a significant change to a character's personal story (such as revelation, growth, and betrayal).</td>
+			<td class="text-center og-nowrap">4&mdash;8</td>
+		</tr>
+		<tr>
+			<th class="fw-normal">Climactic</th>
+			<td>A major confrontation with the villain of a story arc; an epic set piece battle; a judicial duel to determine an important <a href="#define-npc">NPC</a>'s fate.</td>
+			<td class="text-center og-nowrap">6&mdash;12</td>
+		</tr>
+	</tbody>
+</table></div>
+</div>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<h5 class="h6 og-tab">Spending Multiple Fear</h5>
+		<p>If you have a large amount of <a href="#define-fear">Fear</a>, spend several on a <a href="#define-gm-move">GM move</a> to create an even bigger impact.</p>
+		<ul class="og-list-disc">
+			<li><strong>Spending Fast:</strong> Spend <a href="#define-fear">Fear</a> before the players have a chance to react</li>
+			<li><strong>Spending Often:</strong> Spend <a href="#define-fear">Fear</a> every time the <a href="#define-spotlight">spotlight</a> swings to you</li>
+			<li><strong>Spending Big:</strong> Spend <a href="#define-fear">Fear</a> to make multiple <a href="#define-gm-move">GM moves</a> in a row</li>
+		</ul>
+	</div>
+	<div class="col-12 col-md-6">
+		<h5 class="h6 og-tab">Fear Move Examples</h5>
+		<ul class="og-list-disc">
+			<li>Introducing new <a href="#define-adversary">adversaries</a> to a scene when their appearance hasn't been foreshadowed or lacks context.</li>
+			<li>An adversary activating a powerful spell or transformation to deal massive damage or boost their capabilities.</li>
+			<li>An environment exerting a strong negative effect on the party.</li>
+		</ul>
+	</div>
+</div>
+<hr>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<div id="define-countdown">
 			<h3 id="countdowns">Countdowns<a class="og-h-anchor" href="#countdowns" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 162</li></ul>
 			<p><strong>Countdowns</strong> represent a period of time or series of events that lead to a future event.</p>
-			<p>A Countdown begins with a starting value. For example, <strong>Countdown (3)</strong> Each time a counter <strong>advances</strong> subtract 1 from its value. When the counter reaches 0, its effects are triggered.</p>
+			<p>A Countdown begins with a starting value. For example, <strong>Countdown (3)</strong> Each time a counter ticks down, subtract 1 from its value. When the counter reaches 0, its effects are triggered.</p>
 			<dl class="og-list-disc">
 				<dt>Standard and Dynamic</dt>
-				<dd>Most countdowns advance each time a player makes a relevant <a href="#define-action-roll">action roll</a>. <strong>Standard</strong> countdowns advance by 1. <strong>Dynamic</strong> Countdowns advance by 1&ndash;3, depending on the results.</dd>
+				<dd>Most countdowns tick down each time a player makes a relevant <a href="#define-action-roll">action roll</a>. <strong>Standard</strong> countdowns tick down by 1. <strong>Dynamic</strong> Countdowns tick down by 1&ndash;3, depending on the results.</dd>
 				<dt>Consequence and Progress</dt>
 				<dd><strong>Consequences</strong> leads to negative effects, and <strong>Progress</strong> leads to positive effects. These can be <strong>Linked</strong>.</dd>
 				<dt>Loop</dt>
 				<dd>After triggering, the Countdown resets, possibly increasing or decreasing its starting or maximum value by 1.</dd>
 				<dt>Long-Term</dt>
-				<dd>Advance after <a href="#define-downtown">rests</a> instead of <a href="#define-action-roll">action rolls</a>.</dd>
+				<dd>Ticks down after <a href="#define-downtown">rests</a> instead of <a href="#define-action-roll">action rolls</a>.</dd>
 				<dt>Randomized</dt>
 				<dd>Randomized starting values.</dd>
 			</dl>
@@ -10297,19 +10293,19 @@
 			<thead>
 				<tr>
 					<th scope="col">Roll Result</th>
-					<th class="text-center" scope="col">Progress Advancement</th>
-					<th class="text-center" scope="col">Consequence Advancement</th>
+					<th class="text-center" scope="col">Progress Counter</th>
+					<th class="text-center" scope="col">Consequence Counter</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<th class="fw-normal" scope="row">Failure with Fear</th>
-					<td class="text-center">No advancement</td>
+					<td class="text-center">&mdash;</td>
 					<td class="text-center">&minus;3</td>
 				</tr>
 				<tr>
 					<th class="fw-normal" scope="row">Failure with Hope</th>
-					<td class="text-center">No advancement</td>
+					<td class="text-center">&mdash;</td>
 					<td class="text-center">&minus;2</td>
 				</tr>
 				<tr>
@@ -10320,17 +10316,17 @@
 				<tr>
 					<th class="fw-normal" scope="row">Success with Hope</th>
 					<td class="text-center">&minus;2</td>
-					<td class="text-center">No advancement</td>
+					<td class="text-center">&mdash;</td>
 				</tr>
 				<tr>
 					<th class="fw-normal" scope="row">Critical Success</th>
 					<td class="text-center">&minus;3</td>
-					<td class="text-center">No advancement</td>
+					<td class="text-center">&mdash;</td>
 				</tr>
 			</tbody>
 		</table></div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>You can track Countdowns by spinning down dice, ticking off boxes or however works for you.</p>
+			<p>You can track Countdowns by spinning down dice, ticking off boxes, or however works for you.</p>
 		</div>
 	</div>
 </div>
@@ -10422,27 +10418,6 @@
 		</table></div>
 	</div>
 	<div class="col-12 col-md-6">
-		<h4 id="preparing-combat-encounter">Preparing Combat Encounters<a class="og-h-anchor" href="#preparing-combat-encounter" title="Permalink" aria-hidden="true"></a></h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
-		<p>The obstacles you create in the form of <a href="#define-adversary">adversaries</a>, <a href="#define-combat">environments</a>, and hazards are powerful tools for heightening meaningful tension drama. Use combat and action to reveal information to players about the unfolding story, the world, and the characters in the setting.</p>
-		<p>When choosing opposition or <a href="#building-encounters">building encounter</a>, always ask yourself: "What helps tell the story?"</p>
-		<h5 id="battles-and-narrative">Battles and Narrative<a class="og-h-anchor" href="#battles-and-narrative" title="Permalink" aria-hidden="true"></a></h5>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
-		<p>Dynamic battles create suspense by forcing players to choose between their various objectives, engaging their character's motivations and weaknesses, and creating the crucible that the players use to forge their characters into legendary heroes. When preparing combat encounters:</p>
-		<ul class="og-list-disc">
-			<li>Consider the narrative function of the battle</li>
-			<li>Base <a href="#define-adversary">adversary</a> moves on their motives</li>
-			<li>Use dynamic environments to bring the battleground to life</li>
-			<li>Add enemies that can interact with the PCs' features and special Abilities</li>
-		</ul>
-		<h5 id="phased-battles">Phased Battles<a class="og-h-anchor" href="#phased-battles" title="Permalink" aria-hidden="true"></a></h5>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 180</li></ul>
-		<p>Make battles by shifting the nature of its enemies or <a href="#define-environment">environment</a> mid-combat:</p>
-		<ul class="og-list-disc">
-			<li>Change the terms of engagement</li>
-			<li>Alter the environment</li>
-			<li>Evolve the opposition</li>
-		</ul>
 		<h4 id="using-downtime">Using Downtime<a class="og-h-anchor" href="#using-downtime" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
 		<p>Use <a href="#define-downtime">downtime</a> scenes to relieve tension. Resting should stand in contrast to the intensity of the story and give the PCs room to reflect on and roleplay their response to recent events.</p>
@@ -10797,7 +10772,7 @@
 	</div>
 	<div class="col-12 col-md-6">
 		<h6 class="og-tab">Create Multidimensional Allies and Adversaries</h6>
-		<p>No <a href="#define-adversary">adversary</a> or ally is all good or all bad, and they each have multidimensional lives. Even the most congenial ally should be hiding darkness inside them, hoping their failings will go undiscovered. Those painted as evil should sometimes do the right thing, even if it's for the wrong reason. Just because a PC or NPC is from <a href="#define-haven">Haven</a> doesn't make them a villain, and, conversely, not all the inhabitants of <a href="#define-fanewick">Fanewick</a> are virtuous. Finding the nuance, complications, and deeper motivations of the people of <a href="#define-haven">Haven</a> and <a href="#define-fanewick">Fanewick</a> will lead to richer interactions, more complex moral choices, and a deeper sense of attachment to the world for the players.</p>
+		<p>No <a href="#define-adversary">adversary</a> or ally is all good or all bad, and they each have multidimensional lives. Even the most congenial ally should be hiding darkness inside them, hoping their failings will go undiscovered. Those painted as evil should sometimes do the right thing, even if it's for the wrong reason. Just because a PC or <a href="#define-npc">NPCs</a> is from <a href="#define-haven">Haven</a> doesn't make them a villain, and, conversely, not all the inhabitants of <a href="#define-fanewick">Fanewick</a> are virtuous. Finding the nuance, complications, and deeper motivations of the people of <a href="#define-haven">Haven</a> and <a href="#define-fanewick">Fanewick</a> will lead to richer interactions, more complex moral choices, and a deeper sense of attachment to the world for the players.</p>
 	</div>
 </div>
 <h5 id="campaign-frame-distinctions">Distinctions<a class="og-h-anchor" href="#campaign-frame-distinctions" title="Permalink" aria-hidden="true"></a></h5>
@@ -10905,13 +10880,15 @@
 </div>
 <hr>
 <h2 id="encounters">Encounters<a class="og-h-anchor" href="#encounters" title="Permalink" aria-hidden="true"></a></h2>
-<h3 id="npcs">NPCs<a class="og-h-anchor" href="#npcs" title="Permalink" aria-hidden="true"></a></h3>
-<p class="lead">Non-Player Characters</p>
-<ul class="og-list-inline og-ref og-omit"><li>Page 166</li></ul>
-<p>When you run NPCs as the GM, you should always strive to follow your GM principles and use them to bring the world to life. Differentiate NPCs with unique manners of speech and <a href="#define-gm-move">action</a>; let their individual goals and desires motivate their actions.</p>
-<p>The only essential elements for a NPC are their <strong>name</strong>, <strong>description</strong>, and <strong>motive</strong>. If it's likely that the PCs will roll <a href="#define-action">actions</a> against them, give them a <a href="#define-difficulty">Difficulty</a>. <a href="#define-adversary">Adversaries</a> can be invented or improvised by modifying the stat block of another adversary.</p>
-<p>If an NPC becomes an ally in combat, they don't need a stat block&mdash;just put the <a href="#define-spotlight">spotlight</a> on what they do and show how their involvement alters the fiction. If a PC capitalizes on their help during the scene, give the PC advantage. NPCs that don't have Hit Points or Stress can still be injured or killed if the fiction demands it.</p>
-<p>If you want an important NPC to mechanically interact with the system, you can give them one or more features with specific triggers and effects. An NPC might also have a choice that adjusts the parameters of their feature.</p>
+<div id="define-npc">
+	<h3 id="npcs">NPCs<a class="og-h-anchor" href="#npcs" title="Permalink" aria-hidden="true"></a></h3>
+	<p class="lead">Non-Player Characters</p>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 166</li></ul>
+	<p>When roleplaying NPCs, strive to follow your <a href="#gm-principles">GM principles</a> to bring the world to life. Differentiate each NPC with unique manners of speech, abilities, desires, and appetites.</p>
+	<p>Mechanically, the only essential elements of an NPC are their <strong>name</strong>, <strong>description</strong>, and <strong>motive</strong>, but If you think the PCs might make a <a href="#define-action">move</a> against them, give them a <a href="#define-difficulty">Difficulty</a>. An NPC can quickly become an <a href="#define-adversary">adversaries</a> by modifying an appropriate <a href="#adversry-stat-blck">stat block</a>.</p>
+	<p>If an NPC is an ally in combat, they don't need a stat block&mdash;just put the <a href="#define-spotlight">spotlight</a> on what they do and describe how their involvement alters the fiction. If a PC capitalizes on their help during the scene, give the PC <a href="#define-advantage">advantage</a>. NPCs that don't have <a href="#define-hit-point">Hit Points</a> or <a href="#define-stress">Stress</a> can still be injured or killed if the fiction demands it.</p>
+	<p>If an important NPC must mechanically interact with the system, give them one or more features with specific triggers and effects.</p>
+</div>
 <div class="og-topbar">
 	<h4 id="example-npc-feature">Example NPC Features<a class="og-h-anchor" href="#example-npc-feature" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 167</li></ul>
@@ -10920,38 +10897,38 @@
 			<h5 class="h6 og-tab">Arcane Hold</h5>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Choice:</em></strong> When the battle begins, choose a favored PC.</p></li>
-				<li><p><strong><em>Trigger:</em></strong> The first time during a battle the favored PC is within Close range and hit with an attack.</p></li>
-				<li><p><strong><em>Effect:</em></strong> Make an attack roll with a +6 modifier against the adversary. On a success, the target is temporarily Restrained by tendrils of powerful magic.</p></li>
+				<li><p><strong><em>Trigger:</em></strong> The first time during a battle the favored PC is within <a href="#define-close">Close</a> range and hit with an attack.</p></li>
+				<li><p><strong><em>Effect:</em></strong> Make an <a href="#define-attck-roll">attack roll</a> with a +6 <a href="#define-modifier">modifier</a> against the <a href="#define-adversary">adversary</a>. On a success, the target is temporarily <a href="#define-condition"><em>Restrained</em></a> by tendrils of powerful magic.</p></li>
 			</ul>
 		</div>
 		<div class="col-12 col-md-6 col-lg-4">
 			<h5 class="h6 og-tab">Volley of Arrows</h5>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Trigger:</em></strong> A battle begins and this NPC is involved.</p></li>
-				<li><p><strong><em>Effect:</em></strong> Activate a <a href="#define-countdown">Countdown</a> <strong>(Loop 3)</strong>. It ticks down when a PC misses an attack. When it triggers, this NPC releases a volley of arrows at a target of the PCs' choice, dealing 2d8+3 physical damage.</p></li>
+				<li><p><strong><em>Effect:</em></strong> Activate a <a href="#define-countdown">Countdown</a> <strong>(Loop 3)</strong>. It ticks down when a PC misses an <a href="#define-attck-roll">attack</a>. When it triggers, this NPC releases a volley of arrows at a target of the PCs' choice, dealing <strong>2d8+3</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
 			</ul>
 		</div>
 		<div class="col-12 col-md-6 col-lg-4">
 			<h5 class="h6 og-tab">Mentor</h5>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Choice:</em></strong> When the battle begins, choose a prot&eacute;g&eacute; PC.</p></li>
-				<li><p><strong><em>Trigger:</em></strong> Your prot&eacute;g&eacute; is within Close range and fails an attack roll.</p></li>
-				<li><p><strong><em>Effect:</em></strong> Move into Melee range with the PC and give them advice or guidance. The next attack roll they make has advantage.</p></li>
+				<li><p><strong><em>Trigger:</em></strong> Your prot&eacute;g&eacute; is within <a href="#define-close">Close</a> range and fails an <a href="#define-attack-roll">attack roll</a>.</p></li>
+				<li><p><strong><em>Effect:</em></strong> Move into <a href="#define-range">Melee</a> range with the PC and give them advice or guidance. The next <a href="#define-attack-roll">attack roll</a> they make has <a href="#define-advantage">advantage</a>.</p></li>
 			</ul>
 		</div>
 		<div class="col-12 col-md-6 col-lg-4">
 			<h5 class="h6 og-tab">Regroup</h5>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Choice:</em></strong> When a battle begins, choose a point within Far range.</p></li>
-				<li><p><strong><em>Trigger:</em></strong> All PCs have marked all of their Armor Slots.</p></li>
-				<li><p><strong><em>Effect:</em></strong> Teleport all PCs and this NPC to the chosen spot and clear an Armor Slot on each target.</p></li>
+				<li><p><strong><em>Choice:</em></strong> When a battle begins, choose a point within <a href="#define-range">Far</a> range.</p></li>
+				<li><p><strong><em>Trigger:</em></strong> All PCs have marked all of their <a href="#define-armor">Armor Slots</a>.</p></li>
+				<li><p><strong><em>Effect:</em></strong> Teleport all PCs and this NPC to the chosen spot and clear an <a href="#define-armor">Armor Slot</a> on each target.</p></li>
 			</ul>
 		</div>
 		<div class="col-12 col-md-6 col-lg-4">
 			<h5 class="h6 og-tab">Into the Night</h5>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Trigger:</em></strong> The PCs start a long rest with this NPC.</p></li>
-				<li><p><strong><em>Effect:</em></strong> Roll 1d4. On a 2 or less, this NPC steals 1 handful of gold from the party while they are sleeping, then disappears into the night.</p></li>
+				<li><p><strong><em>Trigger:</em></strong> The PCs start a <a href="#define-long-rest">long rest</a> with this NPC.</p></li>
+				<li><p><strong><em>Effect:</em></strong> Roll <strong>1d4</strong>. On a 2 or less, this NPC steals 1 handful of <a href="#define-gold">gold</a> from the party while they are sleeping, then disappears into the night.</p></li>
 			</ul>
 		</div>
 	</div>
@@ -11112,10 +11089,31 @@
 	</div>
 </div>
 <hr>
-<h3 id="building-encounters">Building Encounters<a class="og-h-anchor" href="#building-encounters" title="Permalink" aria-hidden="true"></a></h3>
-<ul class="og-list-inline og-ref og-omit"><li>Page 197</li></ul>
 <div class="row">
 	<div class="col-12 col-md-6">
+		<h3 id="building-encounters">Building Encounters<a class="og-h-anchor" href="#building-encounters" title="Permalink" aria-hidden="true"></a></h3>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 174</li></ul>
+		<p>The obstacles you create in the form of <a href="#define-adversary">adversaries</a>, <a href="#define-combat">environments</a>, and hazards are powerful tools for heightening meaningful tension drama. Use combat and action to reveal information to players about the unfolding story, the world, and the characters in the setting.</p>
+		<p>Dynamic battles create suspense by forcing players to choose between their various objectives, engaging their character's motivations and weaknesses, creating the crucible the players will use to forge their characters into legendary heroes.</p>
+		<p>When building encounters, ask yourself:</p>
+		<ul class="og-list-disc">
+			<li>What is the narrative function of the encounter?</li>
+			<li>What are the motives of the <a href="#define-npc">NPCs</a> and <a href="#define-adversary">adversaries</a>?</li>
+			<li>How can the <a href="#define-environment">environment</a> bring the encounter to life?</li>
+			<li>How do the enemies can interact with the PCs' features and special abilities?</li>
+		</ul>
+		<h4 id="phased-battles">Phased Battles<a class="og-h-anchor" href="#phased-battles" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 180</li></ul>
+		<p>You can up the stakes by shifting the nature of the <a href="#define-adversary">adversaries</a> or <a href="#define-environment">environment</a>:</p>
+		<ul class="og-list-disc">
+			<li>Change the terms of engagement</li>
+			<li>Alter the environment</li>
+			<li>Evolve the opposition</li>
+		</ul>
+	</div>
+	<div class="col-12 col-md-6">
+		<h4 id="battle-guide">Battle Guide<a class="og-h-anchor" href="#battle-guide" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 197</li></ul>
 		<h3 class="h6 og-tab">Calculate Battle Points</h3>
 		<p>Start with <strong>3 &times; the number of PCs + 2 Battle Points</strong>, and modify the results:</p>
 		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
@@ -11153,8 +11151,6 @@
 				</tr>
 			</tbody>
 		</table></div>
-	</div>
-	<div class="col-12 col-md-6">
 		<h3 class="h6 og-tab">Spend Battle Points</h3>
 		<p>Spend <strong>Battle Points</strong> to add <a href="#define-adversary">adversaries</a> to the encounter:</p>
 		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
@@ -11192,6 +11188,9 @@
 				</tr>
 			</tbody>
 		</table></div>
+	</div>
+	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p><strong>Editor's Notes &mdash;</strong> Battle point system doesn't account for additional complications introduced by the <a href="#define-environment">environment</a>.</p>
 	</div>
 </div>
 <h4 id="adversary-stat-block-benchmarks">Adversary Stat Block Benchmarks<a class="og-h-anchor" href="#adversary-stat-block-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
@@ -11245,11 +11244,14 @@
 		</tr>
 	</tbody>
 </table></div>
+
+<h3 id="adversary-stat-blocks">Adversary Stat Blocks<a class="og-h-anchor" href="#adversary-statblocks" title="Permalink" aria-hidden="true"></a></h3>
+<ul class="og-list-inline og-ref og-omit"><li>Page 209</li></ul>
+<!--<p>This section contains the following stat blocks:<p>-->
+<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p><strong>Editor's Notes &mdash;</strong> Stat blocks aren't available in the OG-DHSRD at this time. If you'd like to support this work, buy Old Gus a <a href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a>!</p>
+</div>
 <div class="alert ps-4 pb-0 og-omit">
-	<h3 id="adversary-stat-blocks">Adversary Stat Blocks<a class="og-h-anchor" href="#adversary-statblocks" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 209</li></ul>
-	<!--<p>This section contains the following stat blocks:<p>-->
-	<p><em>Stat blocks aren't available in the OG-DHSRD at this time. If you'd like to support this work, buy Old Gus a <a href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a>!</em></p>
 	<p class="lead">Tier 1 (Level 1)</p>
 	<ul class="list-unstyled og-qr-compact">
 		<li>Acid Burrower</li>
@@ -11399,7 +11401,7 @@
 		<div id="define-environment">
 			<h3 id="environments">Environments<a class="og-h-anchor" href="#environments" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 240</li></ul>
-			<p>Environments represent everything in a scene beyond the PCs and adversaries, such as the physical space, background NPCs, and natural forces. Environment stat blocks include:</p>
+			<p>Environments represent everything in a scene beyond the PCs and <a href="#define-adversary">adversaries</a>, such as the physical space, background <a href="#define-npc">NPCs</a>, and natural forces. Environment stat blocks include:</p>
 			<dl class="og-omit">
 				<dt>Tier</dt>
 				<dd>Each environment has a unique name.</dd>
@@ -11491,10 +11493,12 @@
 		</tr>
 	</tbody>
 </table></div>
+<h3 id="environment-stat-blocks">Environment Stat Blocks by Tier<a class="og-h-anchor" href="#environment-stat-blocks" title="Permalink" aria-hidden="true"></a></h3>
+<ul class="og-list-inline og-ref og-omit"><li>Page 242</li></ul>
+<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p><strong>Editor's Notes &mdash;</strong> Stat blocks aren't available in the OG-DHSRD at this time. If you'd like to support this work, buy Old Gus a <a href="https://ko-fi.com/oldgus">&#9749; Ko-fi</a>!</p>
+</div>
 <div class="alert ps-4 pb-0 og-omit">
-	<h3 id="environment-stat-blocks">Environment Stat Blocks by Tier<a class="og-h-anchor" href="#environment-stat-blocks" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 242</li></ul>
-	<p><em>Stat blocks aren't available in the OG-DHSRD at this time. If you'd like to support this work, buy Old Gus a <a href="https://ko-fi.com/oldgus">☕ Ko-fi</a>!</em></p>
 	<p class="lead">Tier 1 (Level 1)</p>
 	<ul class="list-unstyled og-qr">
 		<li>Abandoned Grove (<a href="#define-environment-type">Exploration</a>)</li>

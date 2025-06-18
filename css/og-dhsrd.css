@@ -239,6 +239,18 @@
 	font-style: normal;
 }
 
+/* editor's notes */
+@font-face {
+    font-family: 'Shantell Sans';
+    src:url('../fonts/ShantellSans-VariableFont_BNCE,INFM,SPAC,wght.ttf') format(truetype);
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Shantell Sans';
+    src:url('../fonts/ShantellSans-Italic-VariableFont_BNCE,INFM,SPAC,wght.ttf') format(truetype);
+	font-style: italic;
+}
+
 /* width, by percent */
 .w-95 { width: 95% !important; }
 .w-90 { width: 90% !important; }
@@ -305,7 +317,7 @@ body.theme-dark {
 strong { font-weight: bold; }
 
 /* override link and body coloration */
-#og-content.theme-light a, .theme-light .tooltip-inner a { color: #CF4A0C; }
+#og-content.theme-light a, .theme-light .tooltip-inner a { color: #cf4a0c; }
 #og-content.theme-light a:hover { color: #f26522; }
 #og-content.theme-dark a { color: #facc8e; }
 #og-content.theme-dark a:hover { color: #fca832; }
@@ -506,6 +518,31 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 }
 .theme-dark div.og-sidebar { 
 	background-color: #222829; 
+}
+
+.og-ed {
+	border-left: 0.25rem solid;
+}
+.og-ed {
+	font-family: 'Shantell Sans', Arial, sans-serif;
+	font-size: 85%;
+}
+
+.theme-light .og-ed {
+	color: #222829;
+	border-color: #64646d;
+	background-color: #e2ebe6 !important;
+}
+.theme-dark .og-ed {
+	color: #f2fcff;
+	border-color: #b1babb;
+	background-color: #313536 !important;
+}
+.theme-light .og-ed p strong {
+	color: #64646d;
+}
+.theme-dark .og-ed p strong {
+	color: #b1babb;
 }
 
 /* alert */
