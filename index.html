@@ -110,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.80a (2025-06-19)</p>
+<p class="small text-center">version 0.80b (2025-06-19)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -9106,7 +9106,7 @@
 	<p>A <a href="#define-action">move</a> where success would be trivial or failure would be boring automatically succeeds. A move that's difficult or risky triggers an <strong>action roll</strong>.</p>
 	<h5 class="h6">Duality Dice</h5>
 	<p>Action rolls require two distinct <strong>d12s</strong> called <strong>Duality Dice</strong>. One represents <a href="#define-hope">Hope</a>, and the other <a href="#define-fear">Fear</a>. Roll the Duality Dice, sum the results, and apply any relevant <a href="#define-procedure">modifiers</a>. Then, compare the result of the <strong>Hope Die</strong> and <strong>Fear Die</strong>, announcing which is higher. The GM compares your total to the <a href="#define-difficulty">Difficulty</a> to determine the outcome.</p>
-	<p>If your Duality Dice results are equal, the result is  <strong>Critical Success (Crit)</strong>, a special kind of Success with Hope. Your outcome exceeds your expectations, and you clear 1 <a href="#define-stress">Stress</a>. If the roll is an <a href="#define-attack-roll">attack roll</a>, deal <a href="#define-damage-roll">critical damage</a>.</p>
+	<p>If your Duality Dice results are equal, the result is  <strong>Critical Success (Crit)</strong>, a special kind of <strong>Success with Hope</strong>. In addition to gaining 1 <a href="#define-hope">Hope</a>, the outcome exceeds your expectations, and you clear 1 <a href="#define-stress">Stress</a>. If the roll is an <a href="#define-attack-roll">attack roll</a>, it deals <a href="#define-damage-roll">critical damage</a>.</p>
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 		<caption>Duality Dice Outcomes</caption>
 		<thead>
@@ -9657,8 +9657,10 @@
 	<p>If <span class="og-omit">a short rest is</span> interrupted, <span class="og-omit">such as by an <a href="#define-adversary">adversary</a>'s attack,</span> the characters don't gain <span class="og-omit">its</span> benefits.</p>
 	<p>At the end of a short rest, any features or effects with a limited number of uses per rest refresh and any features or effects that last until your next rest expire.</p>
 	<p>If a party takes three short rests<span class="og-omit"> in a row</span>, their next <span class="og-omit">rest</span> must be a <a href="#define-long-rest">long rest</a>.</p>
-	<h5 class="h6">Short Rest Consequences</h5>
-	<p>The GM gains <strong>1d4</strong> <a href="#define-fear">Fear</a>.</p>
+	<div class="og-topbar">
+		<h5 class="h6">Short Rest Consequences</h5>
+		<p>The GM gains <strong>1d4</strong> <a href="#define-fear">Fear</a>.</p>
+	</div>
 </div>
 <div id="define-long-rest">
 	<h4 id="long-rest">Long Rest<a class="og-h-anchor" href="#long-rest" title="Permalink" aria-hidden="true"></a></h4>
@@ -9673,8 +9675,10 @@
 	</ul>
 	<p>If <span class="og-omit">a long rest is</span> interrupted, the characters <span class="og-omit">only</span> gain the benefits of a <a href="#define-short-rest">short rest</a>.</p>
 	<p>At the end of a long rest, any features or effects with a limited number of uses per rest or per <a href="#define-long-rest">long rest</a> refresh and any features or effects that last until your next rest or until your next long rest expire.</p>
-	<h5 class="h6">Long Rest Consequences</h5>
-	<p>The GM gains <a href="#define-fear">Fear</a> equal to <strong>1d4</strong> + the number of PCs, and they <span class="og-omit">can</span> advance a long-term <a href="#define-countdown">countdown</a><span class="og-omit"> of their choice</span>.</p>
+	<div class="og-topbar">
+		<h5 class="h6">Long Rest Consequences</h5>
+		<p>The GM gains <a href="#define-fear">Fear</a> equal to <strong>1d4</strong> + the number of PCs, and they <span class="og-omit">can</span> advance a long-term <a href="#define-countdown">countdown</a><span class="og-omit"> of their choice</span>.</p>
+	</div>
 </div>
 <div id="define-downtime-extended">
 	<h5 id="extended-downtime">Extended Downtime<a class="og-h-anchor" href="#extended-downtime" title="Permalink" aria-hidden="true"></a></h5>
