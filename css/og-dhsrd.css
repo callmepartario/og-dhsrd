@@ -603,8 +603,6 @@ ul.og-qr-compact li {
 ol.og-list-alpha {
 	list-style-type: upper-alpha;
 }
-
-/* nested lists with disc bullets, used in deeper itemization on creatures, cyphers, and artifacts */
 .theme-dark ul.og-ref {
 	color: #9cd;
 }
@@ -639,7 +637,6 @@ ul.og-list-inline li::before {
 	height: 1rem;
 	margin-right: 0.5rem;
 }
-
 .theme-light ul.og-list-inline li::before { background-color: #9cd; }
 .theme-dark ul.og-list-inline li::before { background-color: #146; }
 
@@ -648,7 +645,6 @@ ul.og-list-inline li ul {
 	margin-left: 0;
 	padding-left: 0;
 }
-
 .theme-light ul.og-list-inline li {
 	border-color: #000;
 }
@@ -656,6 +652,44 @@ ul.og-list-inline li ul {
 	border-color: #fff;
 }
 
+/* indented lists for stat block */
+.og-statblock {
+	padding: 0.5rem 1rem 0rem 1rem;
+	border: 0.2rem solid #146;
+	border-radius: 0.25rem;
+	margin-bottom: 1rem;
+}
+ul.og-list-hang li { 
+	text-indent: -1rem;
+	margin-left: 1rem;
+}
+ul.og-list-hang li ol { 
+	padding-left: 0;
+	margin-left: 1.25rem;
+	margin-bottom: 1rem;
+}
+ul.og-list-hang li ol li { 
+	text-indent: 0rem;
+	margin-left: 0rem;
+}
+.og-divider { 
+	display: inline-block; 
+	white-space: nowrap;
+	padding-left: 0.5rem;
+}
+.og-divider::before {
+	position: relative;
+	top: 0.15rem;
+	border-radius: 0.15rem;
+	content: '';
+	display: inline-block;
+	background-color: #64646d;
+	width: 1px;
+	height: 1rem;
+	margin-right: 0.5rem;
+}
+
+/* page references */
 ul.og-ref {
 	margin: 0 0 0.5rem 0;
 	padding: 0 0 0 0;
