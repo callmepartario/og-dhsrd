@@ -110,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.90a (2025-06-20)</p>
+<p class="small text-center">version 0.90b (2025-06-20)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -537,7 +537,7 @@
 	</ul>
 	<h4 class="h6">Class Features</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Beastform:</em></strong> Mark a <a href="#define-stress">Stress</a> to magically transform into a creature of your <a href="#define-tier">tier</a> or lower from the <a href="#define-druid-beastform-options">Beastform</a> list. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href="#define-domain-card">domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href="#define-evasion">Evasion</a> bonus to your Evasion, and use the trait specified in their statistics for your attack. While you're in a Beastform, your armor becomes part of your body and you mark <a href="#define-armor">Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href="#define-armor">Armor Slots</a> remain marked. If you mark your last <a href="#define-hit-point">Hit Point</a>, you automatically drop out of this form.</p></li>
+		<li><p><strong><em>Beastform:</em></strong> Mark a <a href="#define-stress">Stress</a> to magically transform into a creature of your <a href="#define-tier">tier</a> or lower from the <a href="#define-druid-beastform-options">Beastform</a> list. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href="#define-domain-card">domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href="#define-evasion">Evasion</a> bonus to your Evasion, and use the <a href="#define-trait">trait</a> specified in their <a href="#define-druid-beastform-categories">statistics</a> for your <a href="#define-attack-roll">attack</a>. While you're in a Beastform, your armor becomes part of your body and you mark <a href="#define-armor">Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href="#define-armor">Armor Slots</a> remain marked. If you mark your last <a href="#define-hit-point">Hit Point</a>, you automatically drop out of this form.</p></li>
 		<li><p><strong><em>Wildtouch:</em></strong> You can perform harmless, subtle effects that involve nature&mdash;such as causing a flower to rapidly grow, summoning a slight gust of wind, or starting a campfire&mdash;at will.</p></li>
 	</ul>
 </div>
@@ -653,54 +653,57 @@
 	</dl>
 </div>
 <div class="alert ps-4 pb-0">
-	<h5 id="druid-beastform-options-by-tier">Beastform Options by Tier<a class="og-h-anchor" href="#druid-beastform-options-by-tier" title="Permalink" aria-hidden="true"></a></h5>
-	<div class="row">
-		<div class="col col-6 col-md-3">
-			<h6>Tier 1</h6>
-			<ul class="list-unstyled">
-				<li><a href="#define-druid-beastform-agile-scout">Agile Scout</a></li>
-				<li><a href="#define-druid-beastform-aquatic-scout">Aquatic Scout</a></li>
-				<li><a href="#define-druid-beastform-household-friend">Household Friend</a></li>
-				<li><a href="#define-druid-beastform-nimble-grazer">Nimble Grazer</a></li>
-				<li><a href="#define-druid-beastform-pack-predator">Pack Predator</a></li>
-				<li><a href="#define-druid-beastform-stalking-arachnid">Stalking Arachnid</a></li>
-			</ul>
-		</div>
-		<div class="col col-6 col-md-3">
-			<h6>Tier 2</h6>
-			<ul class="list-unstyled">
-				<li><a href="#define-druid-beastform-armored-sentry">Armored Sentry</a></li>
-				<li><a href="#define-druid-beastform-mighty-strider">Mighty Strider</a></li>
-				<li><a href="#define-druid-beastform-pouncing-predator">Pouncing Predator</a></li>
-				<li><a href="#define-druid-beastform-powerful-beast">Powerful Beast</a></li>
-				<li><a href="#define-druid-beastform-striking-serpent">Striking Serpent</a></li>
-				<li><a href="#define-druid-beastform-winged-beast">Winged Beast</a></li>
-			</ul>
-		</div>
-		<div class="col col-6 col-md-3">
-			<h6>Tier 3</h6>
-			<ul class="list-unstyled">
-				<li><a href="#define-druid-beastform-aquatic-predator">Aquatic Predator</a></li>
-				<li><a href="#define-druid-beastform-great-predator">Great Predator</a></li>
-				<li><a href="#define-druid-beastform-great-winged-beast">Great Winged Beast</a></li>
-				<li><a href="#define-druid-beastform-legendary-beast">Legendary Beast</a></li>
-				<li><a href="#define-druid-beastform-legendary-hybrid">Legendary Hybrid</a></li>
-				<li><a href="#define-druid-beastform-mighty-lizard">Mighty Lizard</a></li>
-			</ul>
-		</div>
-		<div class="col col-6 col-md-3">
-			<h6>Tier 4</h6>
-			<ul class="list-unstyled">
-				<li><a href="#define-druid-beastform-epic-aquatic-beast">Epic Aquatic Beast</a></li>
-				<li><a href="#define-druid-beastform-massive-behemoth">Massive Behemoth</a></li>
-				<li><a href="#define-druid-beastform-mythic-aerial-hunter">Mythic Aerial Hunter</a></li>
-				<li><a href="#define-druid-beastform-mythic-beast">Mythic Beast</a></li>
-				<li><a href="#define-druid-beastform-mythic-hybrid">Mythic Hybrid</a></li>
-				<li><a href="#define-druid-beastform-terrible-lizard">Terrible Lizard</a></li>
-			</ul>
+	<div id="define-druid-beastform-categories">
+		<h4 id="druid-beastform-options-by-tier">Beastform Creature Categories<a class="og-h-anchor" href="#druid-beastform-options-by-tier" title="Permalink" aria-hidden="true"></a></h4>
+		<div class="row">
+			<div class="col col-6 col-md-3">
+				<h5 class="h6">Tier 1</h5>
+				<ul class="list-unstyled">
+					<li><a href="#define-druid-beastform-agile-scout">Agile Scout</a></li>
+					<li><a href="#define-druid-beastform-aquatic-scout">Aquatic Scout</a></li>
+					<li><a href="#define-druid-beastform-household-friend">Household Friend</a></li>
+					<li><a href="#define-druid-beastform-nimble-grazer">Nimble Grazer</a></li>
+					<li><a href="#define-druid-beastform-pack-predator">Pack Predator</a></li>
+					<li><a href="#define-druid-beastform-stalking-arachnid">Stalking Arachnid</a></li>
+				</ul>
+			</div>
+			<div class="col col-6 col-md-3">
+				<h5 class="h6">Tier 2</h5>
+				<ul class="list-unstyled">
+					<li><a href="#define-druid-beastform-armored-sentry">Armored Sentry</a></li>
+					<li><a href="#define-druid-beastform-mighty-strider">Mighty Strider</a></li>
+					<li><a href="#define-druid-beastform-pouncing-predator">Pouncing Predator</a></li>
+					<li><a href="#define-druid-beastform-powerful-beast">Powerful Beast</a></li>
+					<li><a href="#define-druid-beastform-striking-serpent">Striking Serpent</a></li>
+					<li><a href="#define-druid-beastform-winged-beast">Winged Beast</a></li>
+				</ul>
+			</div>
+			<div class="col col-6 col-md-3">
+				<h5 class="h6">Tier 3</h5>
+				<ul class="list-unstyled">
+					<li><a href="#define-druid-beastform-aquatic-predator">Aquatic Predator</a></li>
+					<li><a href="#define-druid-beastform-great-predator">Great Predator</a></li>
+					<li><a href="#define-druid-beastform-great-winged-beast">Great Winged Beast</a></li>
+					<li><a href="#define-druid-beastform-legendary-beast">Legendary Beast</a></li>
+					<li><a href="#define-druid-beastform-legendary-hybrid">Legendary Hybrid</a></li>
+					<li><a href="#define-druid-beastform-mighty-lizard">Mighty Lizard</a></li>
+				</ul>
+			</div>
+			<div class="col col-6 col-md-3">
+				<h5 class="h6">Tier 4</h5>
+				<ul class="list-unstyled">
+					<li><a href="#define-druid-beastform-epic-aquatic-beast">Epic Aquatic Beast</a></li>
+					<li><a href="#define-druid-beastform-massive-behemoth">Massive Behemoth</a></li>
+					<li><a href="#define-druid-beastform-mythic-aerial-hunter">Mythic Aerial Hunter</a></li>
+					<li><a href="#define-druid-beastform-mythic-beast">Mythic Beast</a></li>
+					<li><a href="#define-druid-beastform-mythic-hybrid">Mythic Hybrid</a></li>
+					<li><a href="#define-druid-beastform-terrible-lizard">Terrible Lizard</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
+<h4 id="druid-beastform-modifications">Beastform Modifications<a class="og-h-anchor" href="#druid-beastform-modifications" title="Permalink" aria-hidden="true"></a></h4>
 <h5 id="druid-beastform-tier-1">Tier 1<a class="og-h-anchor" href="#druid-beastform-tier-1" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="list-unstyled og-list-inline og-ref og-omit"><li>Page 32</li></ul>
 <div class="row">
@@ -11263,45 +11266,42 @@
 		<li><a href="#define-adversary-pirate-tough">Pirate Tough</a> <em>(Bruiser)</em></li>
 		<li><a href="#define-adversary-sellsword">Sellsword</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-spellblade">Spellblade</a> <em>(Leader)</em></li>
+		<li><a href="#define-adversary-sylvan-soldier">Sylvan Soldier</a> <em>(Standard)</em></li>
 		<li>Weaponmaster <em>(Bruiser)</em></li>
 	</ul>
 	<h5 class="h6">Animals and Monsters</h5>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-acid-burrower">Acid Burrower</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-bear">Bear</a> <em>(Bruiser)</em></li>
+		<li><a href="#define-adversary-construct">Construct</a> <em>(Solo)</em></li>
+		<li><a href="#define-adversary-deeproot-defender">Deeproot Defender</a> <em>(Bruiser)</em></li>
 		<li><a href="#define-adversary-dire-wolf">Dire Wolf</a> <em>(Skulk)</em></li>
 		<li><a href="#define-adversary-giant-mosquitoes">Giant Mosquitoes</a> <em>(Horde)</em></li>
 		<li><a href="#define-adversary-giant-rat">Giant Rat</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-giant-scorpion">Giant Scorpion</a> <em>(Bruiser)</em></li>
 		<li><a href="#define-adversary-glass-snake">Glass Snake</a> <em>(Standard)</em></li>
 		<li><a href="#define-adversary-green-ooze">Green Ooze</a> <em>(Skulk)</em></li>
-		<li><a href="#define-adversary-red-ooze">Red Ooze</a> <em>(Skulk)</em></li>
-		<li><a href="#define-adversary-swarm-of-rats">Swarm of Rats</a> <em>(Horde)</em></li>
-		<li><a href="#define-adversary-tiny-green-ooze">Tiny Green Ooze</a> <em>(Skulk)</em></li>
-		<li><a href="#define-adversary-tiny-red-ooze">Tiny Red Ooze</a> <em>(Skulk)</em></li>
-	</ul>
-	<h5 class="h6">Magical Beings</h5>
-	<ul class="list-unstyled og-qr">
-		<li><a href="#define-adversary-construct">Construct</a> <em>(Solo)</em></li>
-		<li><a href="#define-adversary-deeproot-defender">Deeproot Defender</a> <em>(Bruiser)</em></li>
-		<li><a href="#define-adversary-minor-chaos-elemental">Minor Chaos Elemental</a> <em>(Solo)</em></li>
-		<li><a href="#define-adversary-minor-demon">Minor Demon</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-minor-fire-elemental">Minor Fire Elemental</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-minor-treant">Minor Treant</a> <em>(Minion)</em></li>
-		<li><a href="#define-adversary-sylvan-soldier">Sylvan Soldier</a> <em>(Standard)</em></li>
+		<li><a href="#define-adversary-red-ooze">Red Ooze</a> <em>(Skulk)</em></li>
+		<li><a href="#define-adversary-tiny-red-ooze">Tiny Red Ooze</a> <em>(Skulk)</em></li>
+		<li><a href="#define-adversary-tiny-green-ooze">Tiny Green Ooze</a> <em>(Skulk)</em></li>
+		<li><a href="#define-adversary-swarm-of-rats">Swarm of Rats</a> <em>(Horde)</em></li>
 		<li><a href="#define-adversary-tangle-bramble">Tangle Bramble</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-tangle-bramble-swarm">Tangle Bramble Swarm</a> <em>(Horde)</em></li>
 		<li><a href="#define-adversary-young-dryad">Young Dryad</a> <em>(Leader)</em></li>
 	</ul>
-	<h5 class="h6">Undead</h5>
+	<h5 class="h6">Supernatural Beings</h5>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-brawny-zombie">Brawny Zombie</a> <em>(Bruiser)</em></li>
+		<li><a href="#define-adversary-minor-chaos-elemental">Minor Chaos Elemental</a> <em>(Solo)</em></li>
+		<li><a href="#define-adversary-minor-demon">Minor Demon</a> <em>(Solo)</em></li>
+		<li><a href="#define-adversary-patchwork-zombie-hulk">Patchwork Zombie Hulk</a> <em>(Solo)</em></li>
+		<li><a href="#define-adversary-rotted-zombie">Rotted Zombie</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-skeleton-archer">Skeleton Archer</a> <em>(Ranged)</em></li>
 		<li><a href="#define-adversary-skeleton-dredge">Skeleton Dredge</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-skeleton-knight">Skeleton Knight</a> <em>(Bruiser)</em></li>
 		<li><a href="#define-adversary-skeleton-warrior">Skeleton Warrior</a> <em>(Standard)</em></li>
-		<li><a href="#define-adversary-patchwork-zombie-hulk">Patchwork Zombie Hulk</a> <em>(Solo)</em></li>
-		<li><a href="#define-adversary-rotted-zombie">Rotted Zombie</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-shambling-zombie">Shambling Zombie</a> <em>(Standard)</em></li>
 		<li><a href="#define-adversary-zombie-pack">Zombie Pack</a> <em>(Horde)</em></li>
 	</ul>
@@ -11341,13 +11341,10 @@
 		<li><a href="#define-adversary-siren">Siren</a> <em>(Skulk)</em></li>
 		<li><a href="#define-adversary-stonewraith">Stonewraith</a> <em>(Skulk)</em></li>
 	</ul>
-	<h5 class="h6">Magical Beings</h5>
-	<ul class="list-unstyled og-qr">
-		<li><a href="#define-adversary-demonic-hound-pack">Demonic Hound Pack</a> <em>(Horde)</em></li>
-	</ul>
-	<h5 class="h6">Undead</h5>
+	<h5 class="h6">Supernatural Beings</h5>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-chaos-skull">Chaos Skull</a> <em>(Ranged)</em></li>
+		<li><a href="#define-adversary-demonic-hound-pack">Demonic Hound Pack</a> <em>(Horde)</em></li>
 		<li><a href="#define-adversary-failed-experiment">Failed Experiment</a> <em>(Standard)</em></li>
 		<li><a href="#define-adversary-mortal-hunter">Mortal Hunter</a> <em>(Leader)</em></li>
 		<li><a href="#define-adversary-spectral-archer">Spectral Archer</a> <em>(Ranged)</em></li>
@@ -11364,29 +11361,26 @@
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-adult-flickerfly">Adult Flickerfly</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-dire-bat">Dire Bat</a> <em>(Skulk)</em></li>
+		<li><a href="#define-adversary-dryad">Dryad</a> <em>(Leader)</em></li>
+		<li><a href="#define-adversary-greater-earth-elemental">Greater Earth Elemental</a> <em>(Bruiser)</em></li>
+		<li><a href="#define-adversary-greater-water-elemental">Greater Water Elemental</a> <em>(Support)</em></li>
 		<li><a href="#define-adversary-huge-green-ooze">Huge Green Ooze</a> <em>(Skulk)</em></li>
 		<li><a href="#define-adversary-hydra">Hydra</a> <em>(Solo)</em></li>
+		<li><a href="#define-adversary-oak-treant">Oak Treant</a> <em>(Bruiser)</em></li>
+		<li><a href="#define-adversary-treant-sapling">Treant Sapling</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-young-ice-dragon">Young Ice Dragon</a> <em>(Solo)</em></li>
+		<li><a href="#define-adversary-vault-guardian-gaoler">Vault Guardian Gaoler</a> <em>(Support)</em></li>
+		<li><a href="#define-adversary-vault-guardian-sentinel">Vault Guardian Sentinel</a> <em>(Bruiser)</em></li>
+		<li><a href="#define-adversary-vault-guardian-turret">Vault Guardian Turret</a> <em>(Ranged)</em></li>
 	</ul>
-	<h4 class="h6">Magical Beings</h4>
+	<h4 class="h6">Supernatural Beings</h4>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-demon-of-avarice">Demon of Avarice</a> <em>(Support)</em></li>
 		<li><a href="#define-adversary-demon-of-despair">Demon of Despair</a> <em>(Skulk)</em></li>
 		<li><a href="#define-adversary-demon-of-hubris">Demon of Hubris</a> <em>(Leader)</em></li>
 		<li><a href="#define-adversary-demon-of-jealousy">Demon of Jealousy</a> <em>(Ranged)</em></li>
 		<li><a href="#define-adversary-demon-of-wrath">Demon of Wrath</a> <em>(Bruiser)</em></li>
-		<li><a href="#define-adversary-dryad">Dryad</a> <em>(Leader)</em></li>
 		<li><a href="#define-adversary-elemental-spark">Elemental Spark</a> <em>(Minion)</em></li>
-		<li><a href="#define-adversary-greater-earth-elemental">Greater Earth Elemental</a> <em>(Bruiser)</em></li>
-		<li><a href="#define-adversary-greater-water-elemental">Greater Water Elemental</a> <em>(Support)</em></li>
-		<li><a href="#define-adversary-oak-treant">Oak Treant</a> <em>(Bruiser)</em></li>
-		<li><a href="#define-adversary-treant-sapling">Treant Sapling</a> <em>(Minion)</em></li>
-		<li><a href="#define-adversary-vault-guardian-gaoler">Vault Guardian Gaoler</a> <em>(Support)</em></li>
-		<li><a href="#define-adversary-vault-guardian-sentinel">Vault Guardian Sentinel</a> <em>(Bruiser)</em></li>
-		<li><a href="#define-adversary-vault-guardian-turret">Vault Guardian Turret</a> <em>(Ranged)</em></li>
-	</ul>
-	<h4 class="h6">Undead</h4>
-	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-head-vampire">Head Vampire</a> <em>(Leader)</em></li>
 		<li><a href="#define-adversary-vampire">Vampire</a> <em>(Standard)</em></li>
 	</ul>
@@ -11398,8 +11392,13 @@
 		<li><a href="#define-adversary-volcanic-dragon-molten-scourge">Volcanic Dragon: Molten Scourge</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-volcanic-dragon-obsidian-predator">Volcanic Dragon: Obsidian Predator</a> <em>(Solo)</em></li>
 	</ul>
-	<h4 class="h6">Magical Beings</h4>
+	<h4 class="h6">Supernatural Beings</h4>
 	<ul class="list-unstyled og-qr">
+		<li><a href="#define-adversary-arch-necromancer">Arch-Necromancer</a> <em>(Leader)</em></li>
+		<li><a href="#define-adversary-fallen-shock-troop">Fallen Shock Troop</a> <em>(Minion)</em></li>
+		<li><a href="#define-adversary-fallen-sorcerer">Fallen Sorcerer</a> <em>(Support)</em></li>
+		<li><a href="#define-adversary-fallen-warlord-realm-breaker">Fallen Warlord: Realm-Breaker</a> <em>(Solo)</em></li>
+		<li><a href="#define-adversary-fallen-warlord-undefeated-champion">Fallen Warlord: Undefeated Champion</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-hallowed-archer">Hallowed Archer</a> <em>(Ranged)</em></li>
 		<li><a href="#define-adversary-hallowed-soldier">Hallowed Soldier</a> <em>(Minion)</em></li>
 		<li><a href="#define-adversary-high-seraph">High Seraph</a> <em>(Leader)</em></li>
@@ -11407,14 +11406,6 @@
 		<li><a href="#define-adversary-outer-realms-abomination">Outer Realms Abomination</a> <em>(Bruiser)</em></li>
 		<li><a href="#define-adversary-outer-realms-corruptor">Outer Realms Corruptor</a> <em>(Support)</em></li>
 		<li><a href="#define-adversary-outer-realms-thrall">Outer Realms Thrall</a> <em>(Minion)</em></li>
-	</ul>
-	<h4 class="h6">Undead</h4>
-	<ul class="list-unstyled og-qr">
-		<li><a href="#define-adversary-arch-necromancer">Arch-Necromancer</a> <em>(Leader)</em></li>
-		<li><a href="#define-adversary-fallen-shock-troop">Fallen Shock Troop</a> <em>(Minion)</em></li>
-		<li><a href="#define-adversary-fallen-sorcerer">Fallen Sorcerer</a> <em>(Support)</em></li>
-		<li><a href="#define-adversary-fallen-warlord-realm-breaker">Fallen Warlord: Realm-Breaker</a> <em>(Solo)</em></li>
-		<li><a href="#define-adversary-fallen-warlord-undefeated-champion">Fallen Warlord: Undefeated Champion</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-perfected-zombie">Perfected Zombie</a> <em>(Bruiser)</em></li>
 		<li><a href="#define-adversary-zombie-legion">Zombie Legion</a> <em>(Horde)</em></li>
 	</ul>
@@ -11634,7 +11625,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Grindeloth Venom&mdash;Passive:</em></strong> Targets who mark <a href="#define-hit-point">HP</a> from the Assassin's attacks are <a href="#define-condition"><em>Vulnerable</em></a> until they clear a <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Out of Nowhere&mdash;Passive:</em></strong> The Assassin has <a href="#define-advantage">advantage</a> on attacks if they are <a href="#define-condition"><em>Hidden</em></a>.</p></li>
-                    <li><p><strong><em>Fumigation&mdash;Action:</em></strong> Drop a smoke bomb that fills the air within <a href="#define-range">Close</a> range with smoke, Dizzilying all targets in this area. Dizzied targets have <a href="#define-advantage">disadvantage</a> on their next <a href="#define-action-roll">action roll</a>, then clear the condition.</p></li>
+                    <li><p><strong><em>Fumigation&mdash;Action:</em></strong> Drop a smoke bomb that fills the air within <a href="#define-range">Close</a> range with smoke, <em>Dizzying</em> all targets in this area. <em>Dizzied</em> targets have <a href="#define-advantage">disadvantage</a> on their next <a href="#define-action-roll">action roll</a>, then clear the condition.</p></li>
                 </ul>
             </div>
         </div>
@@ -12225,7 +12216,7 @@
                     <li><p><strong><em>Anger Unrelenting&mdash;Passive:</em></strong> The Demon's attacks deal <a href="#define-damage-type">direct damage</a>.</p></li>
                     <li><p><strong><em>Battle Lust&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to boil the blood of all PCs within <a href="#define-range">Far</a> range. They use a <strong>d20</strong> as their <a href="#define-action-roll">Fear Die</a> until the end of the scene.</p></li>
                     <li><p><strong><em>Retaliation&mdash;Reaction:</em></strong> When the Demon takes damage from an attack within <a href="#define-range">Close</a> range, you can mark a <a href="#define-stress">Stress</a> to make a standard attack against the attacker.</p></li>
-                    <li><p><strong><em>Blood and Souls&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(Loop 6)</strong>: Activate the first time an attack is made within sight of the Demon. It ticks down when a PC takes a violent action. When it triggers, summon <strong>1d4</strong> <a href="#defne-damage-threshold">Minor</a> Demons, who appear at <a href="#define-range">Close</a> range.</p></li>
+                    <li><p><strong><em>Blood and Souls&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(Loop 6)</strong>: Activate the first time an attack is made within sight of the Demon. It ticks down when a PC takes a violent action. When it triggers, summon <strong>1d4</strong> <a href="#define-adversary-minor-demon">Minor Demons</a>, who appear at <a href="#define-range">Close</a> range.</p></li>
                 </ul>
             </div>
         </div>
@@ -12558,7 +12549,7 @@
                     <li><p><strong><em>Tormenting Lash&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make a standard attack against all targets within <a href="#define-range">Very Close</a> range. When a target uses armor to reduce damage from this attack, they must mark 2 <a href="#define-armor">Armor Slots</a>.</p></li>
                     <li><p><strong><em>All-Consuming Rage&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(Decreasing 8)</strong>. When the Realm-Breaker is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When it triggers, create a torrent of incarnate rage that rends flesh from bone. All targets within <a href="#define-range">Far</a> range must make a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail take <strong>2d6+10</strong> <a href="#define-damage-type">direct magic damage</a>. Targets who succeed take half damage. For each <a href="#define-hit-point">HP</a> marked from this damage, summon a <a href="#define-adversary-fallen-shock-troop">Fallen Shock Troop</a> within <a href="#define-range">Very Close</a> range of the target who marked that <a href="#define-hit-point">HP</a>. If the countdown ever decreases its maximum value to 0, the Realm-Breaker marks their remaining <a href="#define-hit-point">HP</a> and all targets within <a href="#define-range">Far</a> range must mark all remaining <a href="#define-hit-point">HP</a> and make a <a href="#define-death">death move</a>.</p></li>
                     <li><p><strong><em>Doombringer&mdash;Reaction:</em></strong> When a target marks <a href="#define-hit-point">HP</a> from an attack by the Realm-Breaker, all PCs within <a href="#define-range">Far</a> range of the target must lose a <a href="#define-hope">Hope</a>.</p></li>
-                    <li><p><strong><em>I Have Never Known Defeat (Phase Change)&mdash;Reaction:</em></strong> When the Realm-Breaker marks their last <a href="#define-hit-point">HP</a>, replace them with the Undefeated Champion and immediately <a href="#define-spotlight">spotlight</a> them.</p></li>
+                    <li><p><strong><em>I Have Never Known Defeat (Phase Change)&mdash;Reaction:</em></strong> When the Realm-Breaker marks their last <a href="#define-hit-point">HP</a>, replace them with the <a href="#define-adversary-fallen-warlord-undefeated-champion">Undefeated Champion</a> and immediately <a href="#define-spotlight">spotlight</a> them.</p></li>
                 </ul>
             </div>
         </div>
@@ -12960,6 +12951,32 @@
                     <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Envelope&mdash;Action:</em></strong> Make a standard attack against a target within <a href="#define-range">Melee</a> range. On a success, the Ooze envelops them and the target must mark 2 <a href="#define-stress">Stress</a>. The target must mark an additional <a href="#define-stress">Stress</a> when they make an <a href="#define-action-roll">action roll</a>. If the Ooze takes <a href="#defne-damage-threshold">Severe</a> damage, the target is freed.</p></li>
                     <li><p><strong><em>Split&mdash;Reaction:</em></strong> When the Ooze has 3 or more <a href="#define-hit-point">HP</a> marked, you can spend a <a href="#define-fear">Fear</a> to split them into two <a href="#define-adversary-tine-green-ooze">Tiny Green Oozes</a> (with no marked <a href="#define-hit-point">HP</a> or <a href="#define-stress">Stress</a>). Immediately <a href="#define-spotlight">spotlight</a> both of them.</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="og-statblock">
+            <div id="define-adversary-tiny-green-ooze">
+                <h5 id="adversary-tiny-green-ooze">Tiny Green Ooze<a class="og-h-anchor" href="#adversary-tiny-green-ooze" title="Permalink" aria-hidden="true"></a></h5>
+                <ul class="og-list-inline og-ref og-omit"><li>Page 215</li></ul>
+                <ul class="list-unstyled">
+                    <li><strong><em>Tier 1 <a href="#define-adversary-type">Skulk</a></em></strong></li>
+                    <li><em>A small moving mound of translucent green slime.</em><li>
+                    <li><strong>Motives and Tactics:</strong> Camouflage, creep up</li>
+                </ul>
+                <div class="og-topbar">
+                    <ul class="og-list-inline">
+                        <li><strong>Difficulty:</strong> 14</li>
+                        <li><strong>Thresholds:</strong> 4/None</li>
+                        <li><strong>HP:</strong> 2</li>
+                        <li><strong>Stress:</strong> 1</li>
+                        <li class="d-block"><strong>ATK:</strong> &minus;1 <span class="og-divider"><strong>Ooze Appendage:</strong> <a href="#define-range">Melee</a> </span><span class="og-divider">1d4+1 <a href="#define-damage-type">mag</a></span></li>
+                    </ul>
+                </div>
+                <h6>Features</h6>
+                <ul class="list-unstyled og-list-hang">
+                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -14223,6 +14240,32 @@
     </div>
     <div class="col-12 col-md-6">
         <div class="og-statblock">
+            <div id="define-adversary-tiny-red-ooze">
+                <h5 id="adversary-tiny-red-ooze">Tiny Red Ooze<a class="og-h-anchor" href="#adversary-tiny-red-ooze" title="Permalink" aria-hidden="true"></a></h5>
+                <ul class="og-list-inline og-ref og-omit"><li>Page 216</li></ul>
+                <ul class="list-unstyled">
+                    <li><strong><em>Tier 1 <a href="#define-adversary-type">Skulk</a></em></strong></li>
+                    <li><em>A small moving mound of translucent flaming red slime.</em><li>
+                    <li><strong>Motives and Tactics:</strong> Blaze, camouflage</li>
+                </ul>
+                <div class="og-topbar">
+                    <ul class="og-list-inline">
+                        <li><strong>Difficulty:</strong> 11</li>
+                        <li><strong>Thresholds:</strong> 5/None</li>
+                        <li><strong>HP:</strong> 2</li>
+                        <li><strong>Stress:</strong> 1</li>
+                        <li class="d-block"><strong>ATK:</strong> &minus;1 <span class="og-divider"><strong>Ooze Appendage:</strong> <a href="#define-range">Melee</a> </span><span class="og-divider">1d4+2 <a href="#define-damage-type">mag</a></span></li>
+                    </ul>
+                </div>
+                <h6>Features</h6>
+                <ul class="list-unstyled og-list-hang">
+                    <li><p><strong><em>Burning&mdash;Reaction:</em></strong> When a creature within <a href="#define-range">Melee</a> range deals damage to the Ooze, they take <strong>1d6</strong> <a href="#define-damage-type">direct magic damage</a>.</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="og-statblock">
             <div id="define-adversary-rotted-zombie">
                 <h5 id="adversary-rotted-zombie">Rotted Zombie<a class="og-h-anchor" href="#adversary-rotted-zombie" title="Permalink" aria-hidden="true"></a></h5>
                 <ul class="og-list-inline og-ref og-omit"><li>Page 219</li></ul>
@@ -14843,58 +14886,6 @@
                     <li><p><strong><em>Horde (1d4+2)&mdash;Passive:</em></strong> When the Swarm has marked half or more of their <a href="#define-hit-point">HP</a>, their standard attack deals <strong>1d4+2</strong> <a href="#define-damage-type">physical damage</a> instead.</p></li>
                     <li><p><strong><em>Crush&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to deal <strong>2d6+8</strong> <a href="#define-damage-type">direct physical damage</a> to a target with 3 or more bramble tokens.</p></li>
                     <li><p><strong><em>Encumber&mdash;Reaction:</em></strong> When the Swarm succeeds on an attack, give the target a bramble token. If a target has any bramble tokens, they are <a href="#define-condition"><em>Restrained</em></a>. If a target has 3 or more bramble tokens, they are also <a href="#define-condition"><em>Vulnerable</em></a>. All bramble tokens can be removed by succeeding on a <a href="#define-trait-roll">Finesse Roll</a> (12 + the number of bramble tokens) or dealing <a href="#defne-damage-threshold">Major</a> or greater damage to the Swarm. If bramble tokens are removed from a target using a <a href="#define-trait-roll">Finesse Roll</a>, a number of <a href="#define-adversary-tangle-bramble">Tangle Bramble</a> <a href="#define-adversary-type">Minions</a> spawn within <a href="#define-range">Melee</a> range equal to the number of tokens removed.</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-md-6">
-        <div class="og-statblock">
-            <div id="define-adversary-tiny-green-ooze">
-                <h5 id="adversary-tiny-green-ooze">Tiny Green Ooze<a class="og-h-anchor" href="#adversary-tiny-green-ooze" title="Permalink" aria-hidden="true"></a></h5>
-                <ul class="og-list-inline og-ref og-omit"><li>Page 215</li></ul>
-                <ul class="list-unstyled">
-                    <li><strong><em>Tier 1 <a href="#define-adversary-type">Skulk</a></em></strong></li>
-                    <li><em>A small moving mound of translucent green slime.</em><li>
-                    <li><strong>Motives and Tactics:</strong> Camouflage, creep up</li>
-                </ul>
-                <div class="og-topbar">
-                    <ul class="og-list-inline">
-                        <li><strong>Difficulty:</strong> 14</li>
-                        <li><strong>Thresholds:</strong> 4/None</li>
-                        <li><strong>HP:</strong> 2</li>
-                        <li><strong>Stress:</strong> 1</li>
-                        <li class="d-block"><strong>ATK:</strong> &minus;1 <span class="og-divider"><strong>Ooze Appendage:</strong> <a href="#define-range">Melee</a> </span><span class="og-divider">1d4+1 <a href="#define-damage-type">mag</a></span></li>
-                    </ul>
-                </div>
-                <h6>Features</h6>
-                <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-md-6">
-        <div class="og-statblock">
-            <div id="define-adversary-tiny-red-ooze">
-                <h5 id="adversary-tiny-red-ooze">Tiny Red Ooze<a class="og-h-anchor" href="#adversary-tiny-red-ooze" title="Permalink" aria-hidden="true"></a></h5>
-                <ul class="og-list-inline og-ref og-omit"><li>Page 216</li></ul>
-                <ul class="list-unstyled">
-                    <li><strong><em>Tier 1 <a href="#define-adversary-type">Skulk</a></em></strong></li>
-                    <li><em>A small moving mound of translucent flaming red slime.</em><li>
-                    <li><strong>Motives and Tactics:</strong> Blaze, camouflage</li>
-                </ul>
-                <div class="og-topbar">
-                    <ul class="og-list-inline">
-                        <li><strong>Difficulty:</strong> 11</li>
-                        <li><strong>Thresholds:</strong> 5/None</li>
-                        <li><strong>HP:</strong> 2</li>
-                        <li><strong>Stress:</strong> 1</li>
-                        <li class="d-block"><strong>ATK:</strong> &minus;1 <span class="og-divider"><strong>Ooze Appendage:</strong> <a href="#define-range">Melee</a> </span><span class="og-divider">1d4+2 <a href="#define-damage-type">mag</a></span></li>
-                    </ul>
-                </div>
-                <h6>Features</h6>
-                <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Burning&mdash;Reaction:</em></strong> When a creature within <a href="#define-range">Melee</a> range deals damage to the Ooze, they take <strong>1d6</strong> <a href="#define-damage-type">direct magic damage</a>.</p></li>
                 </ul>
             </div>
         </div>
