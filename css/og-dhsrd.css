@@ -283,7 +283,7 @@ html {
 #og-navbar.theme-dark .navbar-brand { color: #fff; }
 
 #og-navbar.theme-light { 
-	background-color: #f2fffc !important;
+	background-color: #f2fcff !important;
 	border-bottom: 0.25em solid #146;
 }
 #og-navbar.theme-dark { 
@@ -396,6 +396,9 @@ h6, .h6 {
 	font-weight: 700;
 	text-transform: uppercase;
 }
+.og-statblock-q {
+	margin-left: 0.75rem;
+}
 
 /* anchor link iconography - position */
 h2 a.og-h-anchor,
@@ -471,7 +474,8 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .theme-light p.lead,
 .theme-light .og-quote,
 .theme-light .og-sidebar,
-.theme-light .og-detail-item {
+.theme-light .og-detail-item,
+.theme-light .og-statblock-q {
 	color: #146;
 	border-color: #146;
 }
@@ -484,7 +488,8 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .theme-dark p.lead,
 .theme-dark .og-quote,
 .theme-dark .og-sidebar,
-.theme-dark .og-detail-item {
+.theme-dark .og-detail-item,
+.theme-dark .og-statblock-q {
 	color: #9cd;
 	border-color: #146;
 }
@@ -639,7 +644,10 @@ ul.og-list-inline li::before {
 }
 .theme-light ul.og-list-inline li::before { background-color: #9cd; }
 .theme-dark ul.og-list-inline li::before { background-color: #146; }
-
+ul.og-list-inline li.d-block {
+	display: block;
+	white-space: normal;
+}
 ul.og-list-inline li ul {
 	display: inline;
 	margin-left: 0;
@@ -663,12 +671,17 @@ ul.og-list-hang li {
 	text-indent: -0.75rem;
 	margin-left: 0.75rem;
 }
-ul.og-list-hang li ol { 
+ul.og-list-hang li .og-list-hang-none { 
+	text-indent: 0;
+}
+ul.og-list-hang li ol,
+ul.og-list-hang li ul { 
 	padding-left: 0;
 	margin-left: 1.25rem;
 	margin-bottom: 1rem;
 }
-ul.og-list-hang li ol li { 
+ul.og-list-hang li ol li,
+ul.og-list-hang li ul li { 
 	text-indent: 0rem;
 	margin-left: 0rem;
 }
@@ -716,7 +729,7 @@ ul.og-ref li {
 	font-weight: 300;
 	max-width: 500px;
 	text-align: left;
-	padding: 0.25rem 0.75rem 0rem 0.75rem !important; 
+	padding: 0.5rem 0.75rem 0rem 0.75rem !important; 
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 .tooltip-inner h2, 
@@ -738,7 +751,7 @@ ul.og-ref li {
 body.theme-light .tooltip-inner {
 	color: #000 !important;
 	border: 0.25rem solid #146;
-	background-color: #f2fffc;
+	background-color: #f2fcff;
 }
 body.theme-dark .tooltip-inner {
 	color: #fff !important;
@@ -757,7 +770,6 @@ body.theme-dark .tooltip-inner {
 .tooltip-inner p {
 	margin-bottom: 0.5rem;
 }
-
 .tooltip-inner div.og-topbar ul.list-unstyled li {
 	display: inline-block;
 	white-space: nowrap;
@@ -767,20 +779,15 @@ body.theme-dark .tooltip-inner {
 	display: block;
 	white-space: normal;
 }
-
 .tooltip-inner .og-omit { display: none !important; }
-
 .og-tooltip-block { display: none; }
 .tooltip-inner .og-tooltip-block { 
 	display: block;
 	margin-bottom: 0.5rem;
 }
-
 .og-tooltip-inline { display: none; }
 .tooltip-inner ul.og-tooltip-inline li { display: inline; }
-
 .tooltip-inner caption { display: none; }
-
 .og-tooltip-ed { display: none; }
 .tooltip-inner .og-tooltip-ed { 
 	display: block; 
