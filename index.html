@@ -110,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.80b (2025-06-19)</p>
+<p class="small text-center">version 0.80c (2025-06-19)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -849,7 +849,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Armored Shell:</em></strong> Your hardened exterior gives you resistance to <a href="#define-damage-type">physical damage</a>. Additionally, mark an <a href="#define-armor">Armor Slot</a> to retract into your shell. While in your shell, <a href="#define-damage-type">physical damage</a> is reduced by a number equal to your <a href="#armor">Armor Score</a> (after applying resistance), but you can't perform other <a href="#define-action">actions</a> without leaving this form.</p></li>
+				<li><p><strong><em>Armored Shell:</em></strong> Your hardened exterior gives you <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a>. Additionally, mark an <a href="#define-armor">Armor Slot</a> to retract into your shell. While in your shell, <a href="#define-damage-type">physical damage</a> is reduced by a number equal to your <a href="#armor">Armor Score</a> (after applying resistance), but you can't perform other <a href="#define-action">actions</a> without leaving this form.</p></li>
 				<li><p><strong><em>Cannonball:</em></strong> Mark a <a href="#define-stress">Stress</a> to allow an ally to throw or launch you at an <a href="#define-adversary">adversary</a>. To do so, the ally makes an <a href="#define-attack-roll">attack roll</a> using <a href="#define-agility">Agility</a> or <a href="#define-strength">Strength</a> (their choice) against a target within <a href="#define-range">Close</a> range. On a success, the <a href="#define-adversary">adversary</a> takes <strong>d12+2</strong> <a href="#define-damage-type">physical damage</a> using the thrower's <a href="#define-proficiency">Proficiency</a>. You can spend a <a href="#define-hope">Hope</a> to target an additional adversary within <a href="#define-range">Very Close</a> range of the first. The second target takes half the damage dealt to the first target.</p></li>
 			</ul>
 		</div>
@@ -933,7 +933,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Venomous Strike:</em></strong> Make an attack against any number of targets within <a href="#define-range">Very Close</a> range. On a success, a target is temporarily <em>Poisoned</em>. A Poisoned creature takes <strong>1d10</strong> physical direct damage each time they act.</p></li>
+				<li><p><strong><em>Venomous Strike:</em></strong> Make an attack against any number of targets within <a href="#define-range">Very Close</a> range. On a success, a target is temporarily <em>Poisoned</em>. A Poisoned creature takes <strong>1d10</strong> physical <a href="#define-damage-type">direct damage</a> each time they act.</p></li>
 				<li><p><strong><em>Warning Hiss:</em></strong> Mark a <a href="#define-stress">Stress</a> to force any number of targets within <a href="#define-range">Melee</a> range to move back to <a href="#define-range">Very Close</a> range.</p></li>
 			</ul>
 		</div>
@@ -3535,7 +3535,7 @@
             <li class="fw-bold">Level 6 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p>Once per <a href="#define-long-rest">long rest</a> when you would make a Death Move, you can spend a <a href="#define-hope">Hope</a> to clear a <a href="#define-hit-point">Hit Point</a> instead.</p>
+                <p>Once per <a href="#define-long-rest">long rest</a> when you would make a <a href="#define-death">death move</a>, you can spend a <a href="#define-hope">Hope</a> to clear a <a href="#define-hit-point">Hit Point</a> instead.</p>
             </li>
         </ul>
     </div></div>
@@ -4015,7 +4015,7 @@
             <li class="fw-bold">Level 3 Codex Grimoire</li>
             <li class="fw-bold">Recall Cost: 2</li>
             <li class="mt-3">
-                <p><strong><em>Mystic Tether:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, they're <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restrained</em></a> and must mark a <a href="#define-stress">Stress</a>. If you target a flying creature, this spell grounds and <a href="#define-condition">temporarily</a> Restrains them.</p>
+                <p><strong><em>Mystic Tether:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, they're <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restrained</em></a> and must mark a <a href="#define-stress">Stress</a>. If you target a flying creature, this spell grounds and <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restrains</em></a> them.</p>
             </li>
             <li>
                 <p><strong><em>Fireball:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Very Far</a> range. On a success, hurl a sphere of fire toward them that explodes on impact. The target and all creatures within <a href="#define-range">Very Close</a> range of them must make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(13)</strong>. Targets who fail take <strong>d20+5</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-proficiency-type">Proficiency</a>. Targets who succeed take half damage.</p>
@@ -4196,7 +4196,7 @@
                 <p><strong><em>Timejammer:</em></strong> Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(18)</strong>. On a success, time <a href="#define-condition">temporarily</a> slows to a halt for everyone within <a href="#define-range">Far</a> range except for you. It resumes the next time you make an <a href="#define-action-roll">action roll</a> that targets another creature.</p>
             </li>
             <li>
-                <p><strong><em>Magic Immunity:</em></strong> Spend 5 <a href="#define-hope">Hope</a> to become immune to <a href="#define-damage-type">magic damage</a> until your next <a href="#define-downtime">rest</a>.</p>
+                <p><strong><em>Magic Immunity:</em></strong> Spend 5 <a href="#define-hope">Hope</a> to become <a href="#define-resistance">immune</a> to <a href="#define-damage-type">magic damage</a> until your next <a href="#define-downtime">rest</a>.</p>
             </li>
         </ul>
     </div></div>
@@ -4713,7 +4713,7 @@
             <li class="fw-bold">Level 10 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Mark a <a href="#define-stress">Stress</a> to become Spectral until you make an <a href="#define-action-roll">action roll</a> targeting another creature. While Spectral, you're immune to <a href="#define-damage-type">physical damage</a> and can float and pass through solid objects. Other creatures can still see you while you're in this form.</p>
+                <p>Mark a <a href="#define-stress">Stress</a> to become Spectral until you make an <a href="#define-action-roll">action roll</a> targeting another creature. While Spectral, you're <a href="#define-resistance">immune</a> to <a href="#define-damage-type">physical damage</a> and can float and pass through solid objects. Other creatures can still see you while you're in this form.</p>
             </li>
         </ul>
 	</div>
@@ -4758,7 +4758,7 @@
             <li class="fw-bold">Level 1 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, roots and vines reach out from the ground, dealing <strong>1d8+1</strong> <a href="#define-damage-type">physical damage</a> and <a href="#define-condition">temporarily</a> Restraining the target. Additionally on a success, you can spend a <a href="#define-hope">Hope</a> to <a href="#define-condition">temporarily</a> Restrain another <a href="#define-adversary">adversary</a> within <a href="#define-range">Very Close</a> range of your target.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> against a target within <a href="#define-range">Far</a> range. On a success, roots and vines reach out from the ground, dealing <strong>1d8+1</strong> <a href="#define-damage-type">physical damage</a> and <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restraining</em></a> the target. Additionally on a success, you can spend a <a href="#define-hope">Hope</a> to <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restrain</em></a> another <a href="#define-adversary">adversary</a> within <a href="#define-range">Very Close</a> range of your target.</p>
             </li>
         </ul>
     </div></div>
@@ -4824,7 +4824,7 @@
                     <li>You constrict the target and force them to mark 2 <a href="#define-stress">Stress</a>.</li>
                     <li>All adversaries between you and the target must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(13)</strong> or be hit by vines, taking <strong>3d6+2</strong> <a href="#define-damage-type">physical damage</a>.</li>
                 </ul>
-                <p>On a success, vines reach out from your hands, causing the chosen effect and <a href="#define-condition">temporarily</a> Restraining the target.</p>
+                <p>On a success, vines reach out from your hands, causing the chosen effect and <a href="#define-condition">temporarily</a> <a href="#define-condition"><em>Restraining</em></a> the target.</p>
             </li>
         </ul>
     </div></div>
@@ -4944,7 +4944,7 @@
             <li class="fw-bold">Level 8 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. Once per <a href="#define-downtime">rest</a> on a success, create a temporary barrier of protective energy around you at <a href="#define-range">Very Close</a> range. You and all allies within the barrier when this spell is cast clear <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a>. While the barrier is up, you and all allies within have resistance to <a href="#define-damage-type">physical damage</a> from outside the barrier.</p>
+                <p>Make a <a href="#define-spellcast-roll">Spellcast Roll</a> <strong>(15)</strong>. Once per <a href="#define-downtime">rest</a> on a success, create a temporary barrier of protective energy around you at <a href="#define-range">Very Close</a> range. You and all allies within the barrier when this spell is cast clear <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a>. While the barrier is up, you and all allies within have <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a> from outside the barrier.</p>
                 <p>When you move, the barrier follows you.</p>
             </li>
         </ul>
@@ -5665,7 +5665,7 @@
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
 		<li><p><strong><em>Shell:</em></strong> Gain a bonus to your  <a href="#define-hit-point">damage thresholds</a> equal to your <a href="#define-proficiency">Proficiency</a>.</p></li>
-		<li><p><strong><em>Retract:</em></strong> Mark a <a href="#define-stress">Stress</a> to retract into your shell. While in your shell, you have resistance to <a href="#define-damage-type">physical damage</a>, you have <a href="#define-advantage">disadvantage</a> on <a href="#define-action-roll">action rolls</a>, and you can't move.</p></li>
+		<li><p><strong><em>Retract:</em></strong> Mark a <a href="#define-stress">Stress</a> to retract into your shell. While in your shell, you have <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a>, you have <a href="#define-advantage">disadvantage</a> on <a href="#define-action-roll">action rolls</a>, and you can't move.</p></li>
 	</ul>
 </div>
 <hr>
@@ -8445,7 +8445,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">13</th>
-					<td><div id="define-loot-companion-case"><strong><em>Companion Case:</em></strong> This case can fit a small animal companion. While the companion is inside, the animal and case are immune to all damage and harmful effects.</div></td>
+					<td><div id="define-loot-companion-case"><strong><em>Companion Case:</em></strong> This case can fit a small animal companion. While the companion is inside, the animal and case are <a href="#define-resistance">immune</a> to all damage and harmful effects.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">14</th>
@@ -8824,7 +8824,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">40</th>
-					<td><div id="define-loot-circle-of-the-void"><strong><em>Circle of the Void:</em></strong> Mark a <a href="#define-stress">Stress</a> to create a void that extends up to <a href="#define-range">Far</a> range. No magic can be cast inside the void, and creatures within the void are immune to <a href="#define-damage-type">magic damage</a>.</div></td>
+					<td><div id="define-loot-circle-of-the-void"><strong><em>Circle of the Void:</em></strong> Mark a <a href="#define-stress">Stress</a> to create a void that extends up to <a href="#define-range">Far</a> range. No magic can be cast inside the void, and creatures within the void are <a href="#define-resistance">immune</a> to <a href="#define-damage-type">magic damage</a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">41</th>
@@ -9471,7 +9471,7 @@
 	</dl>
 </div>
 <div id="define-resistance">
-	<h5 id="resistance-immunity-and-direct-damage">Resistance, Immunity, and Direct Damage<a class="og-h-anchor" href="#resistance-immunity-and-direct-damage" title="Permalink" aria-hidden="true"></a></h5>
+	<h5 id="resistance-immunity-and-direct-damage">Resistance and Immunity<a class="og-h-anchor" href="#resistance-immunity-and-direct-damage" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 99</li></ul>
 	<p>If a target has <strong>resistance</strong> to a <a href="#define-damage-type">damage type</a>, then they reduce incoming damage of that type by half before comparing it to their <a href="#define-hit-point">Hit Points Thresholds</a>. If the target has additional ways of reducing incoming damage, such as marking <a href="#define-armor">Armor Slots</a>, they apply the resistance effect first. The effects of multiple resistances to the same damage type do not stack.</p>
 	<p>If a target has <strong>immunity</strong> to a damage type, they ignore incoming damage of that type.</p>
@@ -11043,7 +11043,7 @@
 				<li><p><strong><em>Minion (X)&mdash;Passive:</em></strong> This adversary is defeated when they take any damage. For every X damage a PC deals to this adversary, defeat an additional <strong>Minion</strong> within range the attack would succeed against.</p></li>
 				<li><p><strong><em>Relentless (X)&mdash;Passive:</em></strong> This adversary can be <a href="#define-spotlight">spotlight</a>ed up to X times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to spotlight them.</p></li>
 				<li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> this adversary and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> this adversary and they have a token on their stat block, clear the token and they can act.</p></li>
-				<li><p><strong><em>Arcane Form&mdash;Passive:</em></strong> This adversary is resistant to <a href="#define-damage-type">magic damage</a>.</p></li>
+				<li><p><strong><em>Arcane Form&mdash;Passive:</em></strong> This adversary is <a href="#define-resistance">resistant</a> to <a href="#define-damage-type">magic damage</a>.</p></li>
 				<li><p><strong><em>Armored Carapace&mdash;Passive:</em></strong> When this adversary takes <a href="#define-damage-type">physical damage</a>, reduce it by X.</p></li>
 			</ul>
 		</div>
@@ -11054,7 +11054,7 @@
 			<ul class="og-list-inline og-ref og-omit"><li>Page 195</li></ul>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Haymaker&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X direct physical damage.</p></li>
-				<li><p><strong><em>Shredding Strike&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X physical damage and the target must mark an <a href="#define-armor">Armor Slot</a> without gaining its benefit (they can still use armor to reduce the damage).</p></li>
+				<li><p><strong><em>Shredding Strike&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X physical damage and the target must mark an <a href="#define-armor">Armor Slot</a> without gaining its benefit (they can still use <a href="#define-armor">armor</a> to reduce the damage).</p></li>
 				<li><p><strong><em>More Where That Came From&mdash;Action:</em></strong> Summon three <strong>Jagged Knife Lackeys</strong>, who appear at <a href="#define-range">Far</a> range.</p></li>
 			</ul>
 		</div>
@@ -11217,7 +11217,7 @@
 			<td class="text-center og-nowrap">28&ndash;41</td>
 		</tr>
 		<tr>
-			<th class="fw-normal"><a href="#define-difficulty">Difficulty</a></th>
+			<th class="fw-normal"> <a href="#define-difficulty">Difficulty</a></th>
 			<td class="text-center og-nowrap">11</td>
 			<td class="text-center og-nowrap">14</td>
 			<td class="text-center og-nowrap">17</td>
@@ -11264,7 +11264,7 @@
 		<li><a href="#define-adversary-spellblade">Spellblade</a> <em>(Leader)</em></li>
 		<li>Weaponmaster <em>(Bruiser)</em></li>
 	</ul>
-	<h5 class="h6">Beasts and Monsters</h5>
+	<h5 class="h6">Animals and Monsters</h5>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-acid-burrower">Acid Burrower</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-bear">Bear</a> <em>(Bruiser)</em></li>
@@ -11328,7 +11328,7 @@
 		<li><a href="#define-adversary-spy">Spy</a> <em>(Social)</em></li>
 		<li><a href="#define-adversary-war-wizard">War Wizard</a> <em>(Ranged)</em></li>
 	</ul>
-	<h5 class="h6">Beasts and Monsters</h5>
+	<h5 class="h6">Animals and Monsters</h5>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-battle-box">Battle Box</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-electric-eels">Electric Eels</a> <em>(Horde)</em></li>
@@ -11359,7 +11359,7 @@
 		<li><a href="#define-adversary-monarch">Monarch</a> <em>(Social)</em></li>
 		<li>Stag Knight <em>(Standard)</em></li>
 	</ul>
-	<h4 class="h6">Beasts and Monsters</h4>
+	<h4 class="h6">Animals and Monsters</h4>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-adult-flickerfly">Adult Flickerfly</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-dire-bat">Dire Bat</a> <em>(Skulk)</em></li>
@@ -11390,7 +11390,7 @@
 		<li><a href="#define-adversary-vampire">Vampire</a> <em>(Standard)</em></li>
 	</ul>
 	<h4 id="adversaries-by-tier-4">Tier 4 (Levels 8&ndash;10)<a class="og-h-anchor" href="#adversaries-by-tier-4" title="Permalink" aria-hidden="true"></a></h4>
-	<h4 class="h6">Beasts and Monsters</h4>
+	<h4 class="h6">Animals and Monsters</h4>
 	<ul class="list-unstyled og-qr">
 		<li><a href="#define-adversary-kraken">Kraken</a> <em>(Solo)</em></li>
 		<li><a href="#define-adversary-volcanic-dragon-ashen-tyrant">Volcanic Dragon: Ashen Tyrant</a> <em>(Solo)</em></li>
@@ -11447,7 +11447,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Relentless (3)&mdash;Passive:</em></strong> The Burrower can be <a href="#define-spotlight">spotlighted</a> up to three times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Earth Eruption&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to have the Burrower burst out of the ground. All creatures within <a href="#define-range">Very Close</a> range must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> or be knocked over, making them <a href="#define-condition"><em>Vulnerable</em></a> until they next act.</p></li>
-                    <li><p><strong><em>Spit Acid&mdash;Action:</em></strong> Make an attack against all targets in front of the Burrower within <a href="#define-range">Close</a> range. Targets the Burrower succeeds against take <strong>2d6</strong> <a href="#define-damage-type">physical damage</a> and must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use armor to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a> and you gain a <a href="#define-fear">Fear</a>.</p></li>
+                    <li><p><strong><em>Spit Acid&mdash;Action:</em></strong> Make an attack against all targets in front of the Burrower within <a href="#define-range">Close</a> range. Targets the Burrower succeeds against take <strong>2d6</strong> <a href="#define-damage-type">physical damage</a> and must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a> and you gain a <a href="#define-fear">Fear</a>.</p></li>
                     <li><p><strong><em>Acid Bath&mdash;Reaction:</em></strong> When the Burrower takes <a href="#defne-damage-threshold">Severe</a> damage, all creatures within <a href="#define-range">Close</a> range are bathed in their acidic blood, taking <strong>1d10</strong> <a href="#define-damage-type">physical damage</a>. This splash covers the ground within <a href="#define-range">Very Close</a> range with blood, and all creatures other than the Burrower who move through it take <strong>1d6</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
             </div>
@@ -11510,8 +11510,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Assassin is defeated when they take any damage. For every 6 damage a PC deals to the Assassin, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Apprentice Assassins within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 4 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Assassin is defeated when they take any damage. For every 6 damage a PC deals to the Assassin, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Apprentice Assassins within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 4 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -11734,8 +11734,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Shield Wall&mdash;Passive:</em></strong> A creature who tries to move within <a href="#define-range">Very Close</a> range of the Guard must succeed on an <a href="#define-trait-roll">Agility Roll</a>. If additional Bladed Guards are standing in a line alongside the first, and each is within <a href="#define-range">Melee</a> range of another guard in the line, the<a href="#define-difficulty">Difficulty</a> increases by the total number of guards in the line.</p></li>
-                    <li><p><strong><em>Detain&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, mark a <a href="#define-stress">Stress</a> to Restrain the target until they break free with a successful attack, <a href="#define-trait-roll">Finesse Roll</a>, or <a href="#define-trait-roll">Strength Roll</a>.</p></li>
+                    <li><p><strong><em>Shield Wall&mdash;Passive:</em></strong> A creature who tries to move within <a href="#define-range">Very Close</a> range of the Guard must succeed on an <a href="#define-trait-roll">Agility Roll</a>. If additional Bladed Guards are standing in a line alongside the first, and each is within <a href="#define-range">Melee</a> range of another guard in the line, the <a href="#define-difficulty">Difficulty</a> increases by the total number of guards in the line.</p></li>
+                    <li><p><strong><em>Detain&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, mark a <a href="#define-stress">Stress</a> to <a href="#define-condition"><em>Restrain</em></a> the target until they break free with a successful attack, <a href="#define-trait-roll">Finesse Roll</a>, or <a href="#define-trait-roll">Strength Roll</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -11765,8 +11765,8 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> the Zombie and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> the Zombie and they have a token on their stat block, clear the token and they can act.</p></li>
-                    <li><p><strong><em>Rend Asunder&mdash;Action:</em></strong> Make a standard attack with <a href="#define-advantage">advantage</a> against a target the Zombie has <a href="#define-condition"><em>Restrained</em></a>. On a success, the attack deals direct damage.</p></li>
-                    <li><p><strong><em>Rip and Tear&mdash;Reaction:</em></strong> When the Zombies makes a successful standard attack, you can mark a <a href="#define-stress">Stress</a> to temporarily Restrain the target and force them to mark 2 <a href="#define-stress">Stress</a>.</p></li>
+                    <li><p><strong><em>Rend Asunder&mdash;Action:</em></strong> Make a standard attack with <a href="#define-advantage">advantage</a> against a target the Zombie has <a href="#define-condition"><em>Restrained</em></a>. On a success, the attack deals <a href="#define-damage-type">direct damage</a>.</p></li>
+                    <li><p><strong><em>Rip and Tear&mdash;Reaction:</em></strong> When the Zombies makes a successful standard attack, you can mark a <a href="#define-stress">Stress</a> to temporarily <a href="#define-condition"><em>Restrain</em></a> the target and force them to mark 2 <a href="#define-stress">Stress</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -11796,7 +11796,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Ramp Up&mdash;Passive:</em></strong> You must spend a <a href="#define-fear">Fear</a> to <a href="#define-spotlight">spotlight</a> the Ogre. While <a href="#define-spotlight">spotlighted</a>, they can make their standard attack against all targets within range.</p></li>
-                    <li><p><strong><em>Bone Breaker&mdash;Passive:</em></strong> The Ogre's attacks deal direct damage.</p></li>
+                    <li><p><strong><em>Bone Breaker&mdash;Passive:</em></strong> The Ogre's attacks deal <a href="#define-damage-type">direct damage</a>.</p></li>
                     <li><p><strong><em>Hail of Boulders&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to pick up heavy objects and throw them at all targets in front of the Ogre within <a href="#define-range">Far</a> range. Make an attack against these targets. Targets the Ogre succeeds against take <strong>1d10+2</strong> <a href="#define-damage-type">physical damage</a>. If they succeed against more than one target, you gain a <a href="#define-fear">Fear</a>.</p></li>
                     <li><p><strong><em>Rampaging Fury&mdash;Reaction:</em></strong> When the Ogre marks 2 or more <a href="#define-hit-point">HP</a>, they can rampage. Move the Ogre to a point within <a href="#define-range">Close</a> range and deal <strong>2d6+3</strong> <a href="#define-damage-type">direct physical damage</a> to all targets in their path.</p></li>
                 </ul>
@@ -11826,7 +11826,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Levitation&mdash;Passive:</em></strong> The Skull levitates several feet off the ground and can't be <a href="#define-condition"><em>Restrained</em></a>.</p></li>
-                    <li><p><strong><em>Wards&mdash;Passive:</em></strong> The Skull is resistant to <a href="#define-damage-type">magic damage</a>.</p></li>
+                    <li><p><strong><em>Wards&mdash;Passive:</em></strong> The Skull is <a href="#define-resistance">resistant</a> to <a href="#define-damage-type">magic damage</a>.</p></li>
                     <li><p><strong><em>Magic Burst&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make an attack against all targets within <a href="#define-range">Close</a> range. Targets the Skull succeeds against take <strong>2d6+4</strong> <a href="#define-damage-type">magic damage</a>.</p></li>
                     <li><p><strong><em>Siphon Magic&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to make an attack against a PC with a Spellcast trait within <a href="#define-range">Very Close</a> range. On a success, the target marks <strong>1d4</strong> <a href="#define-stress">Stress</a> and the Skull clears that many <a href="#define-stress">Stress</a>. Additionally, on a success, the Skull can immediately be <a href="#define-spotlight">spotlighted</a> again.</p></li>
                 </ul>
@@ -11855,8 +11855,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Conscript is defeated when they take any damage. For every 6 damage a PC deals to the Conscript, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Conscripts within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 6 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Conscript is defeated when they take any damage. For every 6 damage a PC deals to the Conscript, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Conscripts within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 6 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -11976,7 +11976,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Enervating Blast&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to make a standard attack against a target within range. On a success, the target must mark a <a href="#define-stress">Stress</a>.</p></li>
-                    <li><p><strong><em>Shroud of the Fallen&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to wrap an ally within <a href="#define-range">Close</a> range in a shroud of Protection until the Adept marks their last <a href="#define-hit-point">HP</a>. While Protected, the target has resistance to all damage.</p></li>
+                    <li><p><strong><em>Shroud of the Fallen&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to wrap an ally within <a href="#define-range">Close</a> range in a shroud of Protection until the Adept marks their last <a href="#define-hit-point">HP</a>. While Protected, the target has <a href="#define-resistance">resistance</a> to all damage.</p></li>
                     <li><p><strong><em>Shadow Shackles&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> and choose a point within <a href="#define-range">Far</a> range. All targets within <a href="#define-range">Close</a> range of that point are <a href="#define-condition"><em>Restrained</em></a> in smoky chains until they break free with a successful <a href="#define-strength">Strength</a> or <a href="#define-trait-roll">Instinct Roll</a>. A target <a href="#define-condition"><em>Restrained</em></a> by this feature must spend a <a href="#define-hope">Hope</a> to make an <a href="#define-action-roll">action roll</a>.</p></li>
                     <li><p><strong><em>Fear Is Fuel&mdash;Reaction:</em></strong> Twice per scene, when a PC rolls a failure with <a href="#define-fear">Fear</a>, clear a <a href="#define-stress">Stress</a>.</p></li>
                 </ul>
@@ -12033,8 +12033,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Initiate is defeated when they take any damage. For every 6 damage a PC deals to the Initiate, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Cult Initiates within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 5 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Initiate is defeated when they take any damage. For every 6 damage a PC deals to the Initiate, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Cult Initiates within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 5 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -12064,7 +12064,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Ground Slam&mdash;Action:</em></strong> Slam the ground, knocking all targets within <a href="#define-range">Very Close</a> range back to <a href="#define-range">Far</a> range. Each target knocked back by this must mark a <a href="#define-stress">Stress</a>.</p></li>
-                    <li><p><strong><em>Grab and Drag&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Close</a> range. On a success, spend a <a href="#define-fear">Fear</a> to pull them into <a href="#define-range">Melee</a> range, deal <strong>1d6+2</strong> <a href="#define-damage-type">physical damage</a>, and Restrain them until the Defender takes <a href="#defne-damage-threshold">Severe</a> damage.</p></li>
+                    <li><p><strong><em>Grab and Drag&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Close</a> range. On a success, spend a <a href="#define-fear">Fear</a> to pull them into <a href="#define-range">Melee</a> range, deal <strong>1d6+2</strong> <a href="#define-damage-type">physical damage</a>, and <a href="#define-condition"><em>Restrain</em></a> them until the Defender takes <a href="#defne-damage-threshold">Severe</a> damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -12093,9 +12093,9 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Money Talks&mdash;Passive:</em></strong> Attacks against the Demon are made with <a href="#define-advantage">disadvantage</a> unless the attacker spends a handful of gold. This Demon starts with a number of handfuls equal to the number of PCs. When a target marks <a href="#define-hit-point">HP</a> from the Demon's standard attack, they can spend a handful of gold instead of marking <a href="#define-hit-point">HP</a> (1 handful per <a href="#define-hit-point">HP</a>). Add a handful of gold to the Demon for each handful of gold spent by PCs on this feature.</p></li>
-                    <li><p><strong><em>Numbers Must Go Up&mdash;Passive:</em></strong> Add a bonus to the Demon's <a href="#define-attack-roll">attack rolls</a> equal to the number of handfuls of gold they have.</p></li>
-                    <li><p><strong><em>Money is Time&mdash;Action:</em></strong> Spend 3 handfuls of gold (or a <a href="#define-fear">Fear</a>) to <a href="#define-spotlight">spotlight</a> <strong>1d4+1</strong> allies.</p></li>
+                    <li><p><strong><em>Money Talks&mdash;Passive:</em></strong> Attacks against the Demon are made with <a href="#define-advantage">disadvantage</a> unless the attacker spends a handful of <a href="#define-gold">gold</a>. This Demon starts with a number of handfuls equal to the number of PCs. When a target marks <a href="#define-hit-point">HP</a> from the Demon's standard attack, they can spend a handful of <a href="#define-gold">gold</a> instead of marking <a href="#define-hit-point">HP</a> (1 handful per <a href="#define-hit-point">HP</a>). Add a handful of <a href="#define-gold">gold</a> to the Demon for each handful of <a href="#define-gold">gold</a> spent by PCs on this feature.</p></li>
+                    <li><p><strong><em>Numbers Must Go Up&mdash;Passive:</em></strong> Add a bonus to the Demon's <a href="#define-attack-roll">attack rolls</a> equal to the number of handfuls of <a href="#define-gold">gold</a> they have.</p></li>
+                    <li><p><strong><em>Money is Time&mdash;Action:</em></strong> Spend 3 handfuls of <a href="#define-gold">gold</a> (or a <a href="#define-fear">Fear</a>) to <a href="#define-spotlight">spotlight</a> <strong>1d4+1</strong> allies.</p></li>
                 </ul>
             </div>
         </div>
@@ -12189,7 +12189,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Unprotected Mind&mdash;Passive:</em></strong> The Demon's standard attack deals direct damage.</p></li>
+                    <li><p><strong><em>Unprotected Mind&mdash;Passive:</em></strong> The Demon's standard attack deals <a href="#define-damage-type">direct damage</a>.</p></li>
                     <li><p><strong><em>My Turn&mdash;Reaction:</em></strong> When the Demon marks <a href="#define-hit-point">HP</a> from an attack, spend a number of <a href="#define-fear">Fear</a> equal to the <a href="#define-hit-point">HP</a> marked by the Demon to cause the attacker to mark the same number of <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Rivalry&mdash;Reaction:</em></strong> When a creature within <a href="#define-range">Close</a> range takes damage from a different adversary, you can mark a <a href="#define-stress">Stress</a> to add a <strong>d4</strong> to the <a href="#define-damage-roll">damage roll</a>.</p></li>
                     <li><p><strong><em>What's Yours Is Mine&mdash;Reaction:</em></strong> When a PC takes severe damage within <a href="#define-range">Very Close</a> range of the Demon, you can spend a <a href="#define-fear">Fear</a> to cause the target to make a <a href="#define-finesse">Finesse</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, the Demon seizes one item or consumable of their choice from the target's inventory.</p></li>
@@ -12221,7 +12221,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Anger Unrelenting&mdash;Passive:</em></strong> The Demon's attacks deal direct damage.</p></li>
+                    <li><p><strong><em>Anger Unrelenting&mdash;Passive:</em></strong> The Demon's attacks deal <a href="#define-damage-type">direct damage</a>.</p></li>
                     <li><p><strong><em>Battle Lust&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to boil the blood of all PCs within <a href="#define-range">Far</a> range. They use a <strong>d20</strong> as their <a href="#define-action-roll">Fear Die</a> until the end of the scene.</p></li>
                     <li><p><strong><em>Retaliation&mdash;Reaction:</em></strong> When the Demon takes damage from an attack within <a href="#define-range">Close</a> range, you can mark a <a href="#define-stress">Stress</a> to make a standard attack against the attacker.</p></li>
                     <li><p><strong><em>Blood and Souls&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(Loop 6)</strong>: Activate the first time an attack is made within sight of the Demon. It ticks down when a PC takes a violent action. When it triggers, summon <strong>1d4</strong> <a href="#defne-damage-threshold">Minor</a> Demons, who appear at <a href="#define-range">Close</a> range.</p></li>
@@ -12284,7 +12284,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Flying&mdash;Passive:</em></strong> While flying, the Bat gains a +3 bonus to their<a href="#define-difficulty">Difficulty</a>.</p></li>
+                    <li><p><strong><em>Flying&mdash;Passive:</em></strong> While flying, the Bat gains a +3 bonus to their <a href="#define-difficulty">Difficulty</a>.</p></li>
                     <li><p><strong><em>Screech&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to send a high-pitch screech out toward all targets in front of the Bat within <a href="#define-range">Far</a> range. Those targets must mark <strong>1d4</strong> <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>Guardian&mdash;Reaction:</em></strong> When an allied Vampire marks <a href="#define-hit-point">HP</a>, you can mark a <a href="#define-stress">Stress</a> to fly into <a href="#define-range">Melee</a> range of the attacker and make an attack with <a href="#define-advantage">advantage</a> against them. On a success, deal <strong>2d6+2</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
@@ -12402,8 +12402,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (9)&mdash;Passive:</em></strong> The Elemental is defeated when they take any damage. For every 9 damage a PC deals to the Elemental, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Elemental Sparks within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 5 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (9)&mdash;Passive:</em></strong> The Elemental is defeated when they take any damage. For every 9 damage a PC deals to the Elemental, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Elemental Sparks within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 5 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -12460,7 +12460,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Warped Fortitude&mdash;Passive:</em></strong> The Experiment is resistant to <a href="#define-damage-type">physical damage</a>.</p></li>
+                    <li><p><strong><em>Warped Fortitude&mdash;Passive:</em></strong> The Experiment is <a href="#define-resistance">resistant</a> to <a href="#define-damage-type">physical damage</a>.</p></li>
                     <li><p><strong><em>Overwhelm&mdash;Passive:</em></strong> When a target the Experiment attacks has other adversaries within <a href="#define-range">Very Close</a> range, the Experiment deals double damage.</p></li>
                     <li><p><strong><em>Lurching Lunge&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to <a href="#define-spotlight">spotlight</a> the Experiment as an additional GM move instead of spending <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
@@ -12489,9 +12489,9 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (12)&mdash;Passive:</em></strong> The Shock Troop is defeated when they take any damage. For every 12 damage a PC deals to the Shock Troop, defeat an additional Minion within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Minion (12)&mdash;Passive:</em></strong> The Shock Troop is defeated when they take any damage. For every 12 damage a PC deals to the Shock Troop, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
                     <li><p><strong><em>Aura of Doom&mdash;Passive:</em></strong> When a PC marks <a href="#define-hit-point">HP</a> from an attack by the Shock Troop, they lose a <a href="#define-hope">Hope</a>.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Fallen Shock Troops within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 12 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Fallen Shock Troops within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 12 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -12554,8 +12554,8 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Relentless (2)&mdash;Passive:</em></strong> The Realm-Breaker can be <a href="#define-spotlight">spotlighted</a> up to two times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Firespite Plate Armor&mdash;Passive:</em></strong> When the Realm-Breaker takes damage, reduce it by <strong>2d10</strong>.</p></li>
-                    <li><p><strong><em>Tormenting Lash&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make a standard attack against all targets within <a href="#define-range">Very Close</a> range. When a target uses armor to reduce damage from this attack, they must mark 2 <a href="#define-armor">Armor Slot</a>s.</p></li>
-                    <li><p><strong><em>All-Consuming Rage&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(Decreasing 8)</strong>. When the Realm-Breaker is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When it triggers, create a torrent of incarnate rage that rends flesh from bone. All targets within <a href="#define-range">Far</a> range must make a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail take <strong>2d6+10</strong> <a href="#define-damage-type">direct magic damage</a>. Targets who succeed take half damage. For each <a href="#define-hit-point">HP</a> marked from this damage, summon a Fallen Shock Troop within <a href="#define-range">Very Close</a> range of the target who marked that <a href="#define-hit-point">HP</a>. If the countdown ever decreases its maximum value to 0, the Realm-Breaker marks their remaining <a href="#define-hit-point">HP</a> and all targets within <a href="#define-range">Far</a> range must mark all remaining <a href="#define-hit-point">HP</a> and make a death move.</p></li>
+                    <li><p><strong><em>Tormenting Lash&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make a standard attack against all targets within <a href="#define-range">Very Close</a> range. When a target uses armor to reduce damage from this attack, they must mark 2 <a href="#define-armor">Armor Slots</a>.</p></li>
+                    <li><p><strong><em>All-Consuming Rage&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(Decreasing 8)</strong>. When the Realm-Breaker is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When it triggers, create a torrent of incarnate rage that rends flesh from bone. All targets within <a href="#define-range">Far</a> range must make a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail take <strong>2d6+10</strong> <a href="#define-damage-type">direct magic damage</a>. Targets who succeed take half damage. For each <a href="#define-hit-point">HP</a> marked from this damage, summon a <a href="#define-adversary-fallen-shock-troop">Fallen Shock Troop</a> within <a href="#define-range">Very Close</a> range of the target who marked that <a href="#define-hit-point">HP</a>. If the countdown ever decreases its maximum value to 0, the Realm-Breaker marks their remaining <a href="#define-hit-point">HP</a> and all targets within <a href="#define-range">Far</a> range must mark all remaining <a href="#define-hit-point">HP</a> and make a <a href="#define-death">death move</a>.</p></li>
                     <li><p><strong><em>Doombringer&mdash;Reaction:</em></strong> When a target marks <a href="#define-hit-point">HP</a> from an attack by the Realm-Breaker, all PCs within <a href="#define-range">Far</a> range of the target must lose a <a href="#define-hope">Hope</a>.</p></li>
                     <li><p><strong><em>I Have Never Known Defeat (Phase Change)&mdash;Reaction:</em></strong> When the Realm-Breaker marks their last <a href="#define-hit-point">HP</a>, replace them with the Undefeated Champion and immediately <a href="#define-spotlight">spotlight</a> them.</p></li>
                 </ul>
@@ -12589,7 +12589,7 @@
                     <li><p><strong><em>Relentless (3)&mdash;Passive:</em></strong> The Undefeated Champion can be <a href="#define-spotlight">spotlighted</a> up to three times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Faltering Armor&mdash;Passive:</em></strong> When the Undefeated Champion takes damage, reduce it by <strong>1d10</strong>.</p></li>
                     <li><p><strong><em>Shattering Strike&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make a standard attack against all targets within <a href="#define-range">Very Close</a> range. PCs the Champion succeeds against lose a number of <a href="#define-hope">Hope</a> equal to the <a href="#define-hit-point">HP</a> they marked from this attack.</p></li>
-                    <li><p><strong><em>Endless Legions&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to summon a number of Fallen Shock Troops equal to twice the number of PCs. The Shock Troops appear at <a href="#define-range">Far</a> range.</p></li>
+                    <li><p><strong><em>Endless Legions&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to summon a<a href="#define-adversary-fallen-shock-troop">Fallen Shock Troops</a> equal to twice the number of PCs. The Shock Troops appear at <a href="#define-range">Far</a> range.</p></li>
                     <li><p><strong><em>Circle of Defilement&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(1d8)</strong>. When the Undefeated Champion is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When it triggers, activate a magical circle covering an area within <a href="#define-range">Far</a> range of the Champion. A target within that area is <a href="#define-condition"><em>Vulnerable</em></a> until they leave the circle. The circle can be removed by dealing <a href="#defne-damage-threshold">Severe</a> damage to the Undefeated Champion.</p></li>
                     <li><p><strong><em>Doombringer&mdash;Reaction:</em></strong> When the Undefeated Champion makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                     <li><p><strong><em>Doombringer&mdash;Reaction:</em></strong> When a target marks <a href="#define-hit-point">HP</a> from an attack by the Undefeated Champion, all PCs within <a href="#define-range">Far</a> range of the target lose a <a href="#define-hope">Hope</a>.</p></li>
@@ -12623,7 +12623,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Two as One&mdash;Passive:</em></strong> When the Beastmaster is <a href="#define-spotlight">spotlighted</a>, you can also <a href="#define-spotlight">spotlight</a> a Tier 1 animal adversary currently under their control.</p></li>
                     <li><p><strong><em>Pinning Strike&mdash;Action:</em></strong> Make a standard attack against a target. On a success, you can mark a <a href="#define-stress">Stress</a> to pin them to a nearby surface. The pinned target is <a href="#define-condition"><em>Restrained</em></a> until they break free with a successful <a href="#define-finesse">Finesse</a> or <a href="#define-trait-roll">Strength Roll</a>.</p></li>
-                    <li><p><strong><em>Deadly Companion&mdash;Action:</em></strong> Twice per scene, summon a Bear, Dire Wolf, or similar Tier 1 animal adversary under the Beastmaster's control. The adversary appears at <a href="#define-range">Close</a> range and is immediately <a href="#define-spotlight">spotlighted</a>.</p></li>
+                    <li><p><strong><em>Deadly Companion&mdash;Action:</em></strong> Twice per scene, summon a <a href="#define-adversary-bear">Bear</a>, <a href="#define-adversary-dire-wolf">Dire Wolf</a>, or similar Tier 1 animal adversary under the Beastmaster's control. The adversary appears at <a href="#define-range">Close</a> range and is immediately <a href="#define-spotlight">spotlighted</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -12681,7 +12681,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Flight&mdash;Passive:</em></strong> While flying, the Eagle gains a +3 bonus to their<a href="#define-difficulty">Difficulty</a>.</p></li>
+                    <li><p><strong><em>Flight&mdash;Passive:</em></strong> While flying, the Eagle gains a +3 bonus to their <a href="#define-difficulty">Difficulty</a>.</p></li>
                     <li><p><strong><em>Deadly Dive&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to attack a target within <a href="#define-range">Far</a> range. On a success, deal <strong>2d10+2</strong> <a href="#define-damage-type">physical damage</a> and knock the target over, making them <a href="#define-condition"><em>Vulnerable</em></a> until they next act.</p></li>
                     <li><p><strong><em>Take Off&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, deal <strong>2d4+3</strong> <a href="#define-damage-type">physical damage</a> and the target must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> or become temporarily <a href="#define-condition"><em>Restrained</em></a> within the Eagle's massive talons. If the target is <a href="#define-condition"><em>Restrained</em></a>, the Eagle immediately lifts them to the air to Very <a href="#define-range">Far</a> range above the battlefield while holding them.</p></li>
                     <li><p><strong><em>Deadly Drop&mdash;Action:</em></strong> While flying, the Eagle can drop a <a href="#define-condition"><em>Restrained</em></a> target they are holding. When dropped, the target is no longer <a href="#define-condition"><em>Restrained</em></a> but starts falling. If their fall isn't prevented during the PCs' next action, the target takes <strong>2d20</strong> <a href="#define-damage-type">physical damage</a> when they land.</p></li>
@@ -12714,7 +12714,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Horde (1d4+1)&mdash;Passive:</em></strong> When the Mosquitoes have marked half or more of their <a href="#define-hit-point">HP</a>, their standard attack deals <strong>1d4+1</strong> <a href="#define-damage-type">physical damage</a> instead.</p></li>
-                    <li><p><strong><em>Flying&mdash;Passive:</em></strong> While flying, the Mosquitoes have a +2 bonus to their<a href="#define-difficulty">Difficulty</a>.</p></li>
+                    <li><p><strong><em>Flying&mdash;Passive:</em></strong> While flying, the Mosquitoes have a +2 bonus to their <a href="#define-difficulty">Difficulty</a>.</p></li>
                     <li><p><strong><em>Bloodseeker&mdash;Reaction:</em></strong> When the Mosquitoes' attack causes a target to mark <a href="#define-hit-point">HP</a>, you can mark a <a href="#define-stress">Stress</a> to force the target to mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                 </ul>
             </div>
@@ -12744,8 +12744,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (3)&mdash;Passive:</em></strong> The Rat is defeated when they take any damage. For every 3 damage a PC deals to the Rat, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Giant Rats within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 1 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (3)&mdash;Passive:</em></strong> The Rat is defeated when they take any damage. For every 3 damage a PC deals to the Rat, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Giant Rats within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 1 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -12772,8 +12772,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (7)&mdash;Passive:</em></strong> The Recruit is defeated when they take any damage. For every 7 damage a PC deals to the Recruit, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Giant Recruits within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 5 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (7)&mdash;Passive:</em></strong> The Recruit is defeated when they take any damage. For every 7 damage a PC deals to the Recruit, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Giant Recruits within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 5 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -12803,7 +12803,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Double Strike&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make a standard attack against two targets within <a href="#define-range">Melee</a> range.</p></li>
-                    <li><p><strong><em>Venomous Stinger&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, spend a <a href="#define-fear">Fear</a> to deal <strong>1d4+4</strong> <a href="#define-damage-type">physical damage</a> and Poison them until their next rest or they succeed on a <a href="#define-trait-roll">Knowledge Roll</a> (16). While Poisoned, the target must roll a <strong>d6</strong> before they make an <a href="#define-action-roll">action roll</a>. On a result of 4 or lower, they must mark a <a href="#define-stress">Stress</a>.</p></li>
+                    <li><p><strong><em>Venomous Stinger&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, spend a <a href="#define-fear">Fear</a> to deal <strong>1d4+4</strong> <a href="#define-damage-type">physical damage</a> and <em>Poison</em> them until their next rest or they succeed on a <a href="#define-trait-roll">Knowledge Roll</a> (16). While <em>Poisoned</em>, the target must roll a <strong>d6</strong> before they make an <a href="#define-action-roll">action roll</a>. On a result of 4 or lower, they must mark a <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Scorpion makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -12831,7 +12831,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Armor-Shredding Shards&mdash;Passive:</em></strong> On a successful attack within <a href="#define-range">Melee</a> range against the Snake, the attacker must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use armor to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
+                    <li><p><strong><em>Armor-Shredding Shards&mdash;Passive:</em></strong> On a successful attack within <a href="#define-range">Melee</a> range against the Snake, the attacker must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Spinning Serpent&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make an attack against all targets within <a href="#define-range">Very Close</a> range. Targets the Snake succeeds against take <strong>1d6+1</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                     <li><p><strong><em>Spitter&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to introduce a 6 Spitter Die. When the Snake is in the <a href="#define-spotlight">spotlight</a>, roll this die. On a result of 5 or higher, all targets in front of the Snake within <a href="#define-range">Far</a> range must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> or take <strong>1d4</strong> <a href="#define-damage-type">physical damage</a>. The Snake can take the <a href="#define-spotlight">spotlight</a> a second time this GM turn.</p></li>
                 </ul>
@@ -12865,7 +12865,7 @@
                     <li><p><strong><em>Relentless (2)&mdash;Passive:</em></strong> The Gorgon can be <a href="#define-spotlight">spotlighted</a> up to two times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Suneater Arrows&mdash;Passive:</em></strong> When the Gorgon makes a successful standard attack, the target Glows until the end of the scene and can't become <a href="#define-condition"><em>Hidden</em></a>. Attack rolls made against a Glowing target have advantage.</p></li>
                     <li><p><strong><em>Crown of Serpents&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack roll</a> against a target within <a href="#define-range">Melee</a> range using the Gorgon's protective snakes. On a success, mark <a href="#define-stress">Stress</a> to deal <strong>2d10+4</strong> <a href="#define-damage-type">physical damage</a> and the target must mark a <a href="#define-stress">Stress</a>.</p></li>
-                    <li><p><strong><em>Petrifying Gaze&mdash;Reaction:</em></strong> When the Gorgon takes damage from an attack within <a href="#define-range">Close</a> range, you can spend a <a href="#define-fear">Fear</a> to force the attacker to make an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, they begin to turn to stone, marking a <a href="#define-hit-point">HP</a> and starting a Petrification <a href="#define-countdown">Countdown</a> <strong>(4)</strong>. This countdown ticks down when the Gorgon is attacked. When it triggers, the target must make a death move. If the Gorgon is defeated, all petrification countdowns end.</p></li>
+                    <li><p><strong><em>Petrifying Gaze&mdash;Reaction:</em></strong> When the Gorgon takes damage from an attack within <a href="#define-range">Close</a> range, you can spend a <a href="#define-fear">Fear</a> to force the attacker to make an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, they begin to turn to stone, marking a <a href="#define-hit-point">HP</a> and starting a Petrification <a href="#define-countdown">Countdown</a> <strong>(4)</strong>. This countdown ticks down when the Gorgon is attacked. When it triggers, the target must make a <a href="#define-death">death move</a>. If the Gorgon is defeated, all petrification countdowns end.</p></li>
                     <li><p><strong><em>Death Glare&mdash;Reaction:</em></strong> When the Gorgon makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -12894,7 +12894,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> the Elemental and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> the Elemental and they have a token on their stat block, clear the token and they can act.</p></li>
-                    <li><p><strong><em>Crushing Blows&mdash;Passive:</em></strong> When the Elemental makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use armor to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
+                    <li><p><strong><em>Crushing Blows&mdash;Passive:</em></strong> When the Elemental makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Immovable Object&mdash;Passive:</em></strong> An attack that would move the Elemental moves them two fewer ranges (for example, <a href="#define-range">Far</a> becomes <a href="#define-range">Very Close</a>). When the Elemental takes <a href="#define-damage-type">physical damage</a>, reduce it by 7.</p></li>
                     <li><p><strong><em>Rockslide&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to create a rockslide that buries all the land in front of Elemental within <a href="#define-range">Close</a> range with rockfall. All targets in this area must make an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> (19). Targets who fail take <strong>2d12+5</strong> <a href="#define-damage-type">physical damage</a> and become <a href="#define-condition"><em>Vulnerable</em></a> until their next roll with <a href="#define-hope">Hope</a>. Targets who succeed take half damage.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Elemental makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
@@ -12956,7 +12956,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> the Ooze and they don't have a token on their stat block, they can't act. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> the Ooze and they have a token on their stat block, clear the token and they can act.</p></li>
-                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use armor to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
+                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Envelope&mdash;Action:</em></strong> Make a standard attack against a target within <a href="#define-range">Melee</a> range. On a success, the Ooze envelops them and the target must mark 2 <a href="#define-stress">Stress</a>. The target must mark an additional <a href="#define-stress">Stress</a> when they make an <a href="#define-action-roll">action roll</a>. If the Ooze takes <a href="#defne-damage-threshold">Severe</a> damage, the target is freed.</p></li>
                     <li><p><strong><em>Split&mdash;Reaction:</em></strong> When the Ooze has 3 or more <a href="#define-hit-point">HP</a> marked, you can spend a <a href="#define-fear">Fear</a> to split them into two <a href="#define-adversary-tine-green-ooze">Tiny Green Oozes</a> (with no marked <a href="#define-hit-point">HP</a> or <a href="#define-stress">Stress</a>). Immediately <a href="#define-spotlight">spotlight</a> both of them.</p></li>
                 </ul>
@@ -12985,7 +12985,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Punish the Guilty&mdash;Passive:</em></strong> The Archer deals double damage to targets marked Guilty by a High Seraph.</p></li>
+                    <li><p><strong><em>Punish the Guilty&mdash;Passive:</em></strong> The Archer deals double damage to targets marked <em>Guilty</em> by a <a href="#define-adversary-high-seraph">High Seraph</a>.</p></li>
                     <li><p><strong><em>Divine Volley&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make a standard attack against up to three targets.</p></li>
                 </ul>
             </div>
@@ -13013,9 +13013,9 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (13)&mdash;Passive:</em></strong> The Soldier is defeated when they take any damage. For every 13 damage a PC deals to the Soldier, defeat an additional Minion within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Minion (13)&mdash;Passive:</em></strong> The Soldier is defeated when they take any damage. For every 13 damage a PC deals to the Soldier, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
                     <li><p><strong><em>Divine Flight&mdash;Passive:</em></strong> While the Soldier is flying, spend a <a href="#define-fear">Fear</a> to move up to <a href="#define-range">Far</a> range instead of <a href="#define-range">Close</a> range before taking an action.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Hallowed Soldiers within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 10 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Hallowed Soldiers within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 10 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -13075,7 +13075,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Rally Guards&mdash;Action:</em></strong> Spend 2 <a href="#define-fear">Fear</a> to <a href="#define-spotlight">spotlight</a> the Head Guard and up to <strong>2d4</strong> allies within <a href="#define-range">Far</a> range.</p></li>
-                    <li><p><strong><em>On My Signal&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(5)</strong>. When the Head Guard is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. It ticks down when a PC makes an <a href="#define-attack-roll">attack roll</a>. When it triggers, all Archer Guards within <a href="#define-range">Far</a> range make a standard attack with <a href="#define-advantage">advantage</a> against the nearest target within their range. If any attacks succeed on the same target, combine their damage.</p></li>
+                    <li><p><strong><em>On My Signal&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(5)</strong>. When the Head Guard is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. It ticks down when a PC makes an <a href="#define-attack-roll">attack roll</a>. When it triggers, all <a href="#define-adversary-archer-guard">Archer Guards</a> within <a href="#define-range">Far</a> range make a standard attack with <a href="#define-advantage">advantage</a> against the nearest target within their range. If any attacks succeed on the same target, combine their damage.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Head Guard makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -13140,8 +13140,8 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Relentless (2)&mdash;Passive:</em></strong> The Seraph can be <a href="#define-spotlight">spotlighted</a> up to three times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Divine Flight&mdash;Passive:</em></strong> While the Seraph is flying, spend a <a href="#define-fear">Fear</a> to move up to <a href="#define-range">Far</a> range instead of <a href="#define-range">Close</a> range before taking an action.</p></li>
-                    <li><p><strong><em>Judgment&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to make a target Guilty in the eyes of the Seraph's god until the Seraph is defeated. While Guilty, the target doesn't gain <a href="#define-hope">Hope</a> on a result with <a href="#define-hope">Hope</a>. When the Seraph succeeds on a standard attack against a Guilty target, they deal <a href="#defne-damage-threshold">Severe</a> damage instead of their standard damage. The Seraph can only mark one target at a time.</p></li>
-                    <li><p><strong><em>God Rays&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to reflect a sliver of divinity as a searing beam of light that hits up to twenty targets within Very <a href="#define-range">Far</a> range. Targets must make a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a>, with <a href="#define-advantage">disadvantage</a> if they are marked Guilty. Targets who fail take <strong>4d6+12</strong> <a href="#define-damage-type">magic damage</a>. Targets who succeed take half damage.</p></li>
+                    <li><p><strong><em>Judgment&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to make a target <em>Guilty</em> in the eyes of the Seraph's god until the Seraph is defeated. While <em>Guilty</em>, the target doesn't gain <a href="#define-hope">Hope</a> on a result with <a href="#define-hope">Hope</a>. When the Seraph succeeds on a standard attack against a <em>Guilty</em> target, they deal <a href="#defne-damage-threshold">Severe</a> damage instead of their standard damage. The Seraph can only mark one target at a time.</p></li>
+                    <li><p><strong><em>God Rays&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to reflect a sliver of divinity as a searing beam of light that hits up to twenty targets within Very <a href="#define-range">Far</a> range. Targets must make a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a>, with <a href="#define-advantage">disadvantage</a> if they are marked <em>Guilty</em>. Targets who fail take <strong>4d6+12</strong> <a href="#define-damage-type">magic damage</a>. Targets who succeed take half damage.</p></li>
                     <li><p><strong><em>We Are One&mdash;Action:</em></strong> Once per scene, spend a <a href="#define-fear">Fear</a> to <a href="#define-spotlight">spotlight</a> all other adversaries within <a href="#define-range">Far</a> range. Attacks they make while <a href="#define-spotlight">spotlighted</a> in this way deal half damage.</p></li>
                 </ul>
             </div>
@@ -13172,7 +13172,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> the Ooze and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> the Ooze and they have a token on their stat block, clear the token and they can act.</p></li>
-                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use armor to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
+                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Envelop&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Melee</a> range. On a success, the Ooze Envelops them and the target must mark 2 <a href="#define-stress">Stress</a>. While Enveloped, the target must mark an additional <a href="#define-stress">Stress</a> every time they make an <a href="#define-action-roll">action roll</a>. When the Ooze takes <a href="#defne-damage-threshold">Severe</a> damage, all Enveloped targets are freed and the condition is cleared.</p></li>
                     <li><p><strong><em>Split&mdash;Reaction:</em></strong> When the Ooze has 4 or more <a href="#define-hit-point">HP</a> marked, you can spend a <a href="#define-fear">Fear</a> to split them into two Green Oozes (with no marked <a href="#define-hit-point">HP</a> or <a href="#define-stress">Stress</a>). Immediately <a href="#define-spotlight">spotlight</a> both of them.</p></li>
                 </ul>
@@ -13205,7 +13205,7 @@
                     <li><p><strong><em>Relentless (X)&mdash;Passive:</em></strong> The Hydra can be <a href="#define-spotlight">spotlighted</a> X times per GM turn, where X is the Hydra's number of heads. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Regeneration&mdash;Action:</em></strong> If the Hydra has any marked <a href="#define-hit-point">HP</a>, spend a <a href="#define-fear">Fear</a> to clear a <a href="#define-hit-point">HP</a> and grow two heads.</p></li>
                     <li><p><strong><em>Terrifying Chorus&mdash;Action:</em></strong> All PCs within <a href="#define-range">Far</a> range lose 2 <a href="#define-hope">Hope</a>.</p></li>
-                    <li><p><strong><em>Magical Weakness&mdash;Reaction:</em></strong> When the Hydra takes <a href="#define-damage-type">magic damage</a>, they become <em>Dazed</em> until the next roll with <a href="#define-fear">Fear</a>. While <em>Dazed</em>, they can't use their Regeneration action but are immune to <a href="#define-damage-type">magic damage</a>.</p></li>
+                    <li><p><strong><em>Magical Weakness&mdash;Reaction:</em></strong> When the Hydra takes <a href="#define-damage-type">magic damage</a>, they become <em>Dazed</em> until the next roll with <a href="#define-fear">Fear</a>. While <em>Dazed</em>, they can't use their Regeneration action but are <a href="#define-resistance">immune</a> to <a href="#define-damage-type">magic damage</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -13264,7 +13264,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Curse&mdash;Action:</em></strong> Choose a target within <a href="#define-range">Far</a> range and temporarily Curse them. While the target is Cursed, you can mark a <a href="#define-stress">Stress</a> so that target rolls with <a href="#define-hope">Hope</a> to make the roll be with <a href="#define-fear">Fear</a> instead.</p></li>
+                    <li><p><strong><em>Curse&mdash;Action:</em></strong> Choose a target within <a href="#define-range">Far</a> range and temporarily <em>Curse</em> them. While the target is <em>Cursed</em>, you can mark a <a href="#define-stress">Stress</a> so that target rolls with <a href="#define-hope">Hope</a> to make the roll be with <a href="#define-fear">Fear</a> instead.</p></li>
                     <li><p><strong><em>Chaotic Flux&mdash;Action:</em></strong> Make an attack against up to three targets within <a href="#define-range">Very Close</a> range. Mark a <a href="#define-stress">Stress</a> to deal <strong>2d6+3</strong> <a href="#define-damage-type">magic damage</a> to targets the Hexer succeeded against.</p></li>
                 </ul>
             </div>
@@ -13324,8 +13324,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (3)&mdash;Passive:</em></strong> The Lackey is defeated when they take any damage. For every 3 damage a PC deals to the Lackey, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Jagged Knife Lackeys within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 2 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (3)&mdash;Passive:</em></strong> The Lackey is defeated when they take any damage. For every 3 damage a PC deals to the Lackey, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Jagged Knife Lackeys within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 2 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -13338,7 +13338,7 @@
                 <ul class="list-unstyled">
                     <li><strong><em>Tier 1 <a href="#define-adversary-type">Leader</a></em></strong></li>
                     <li><em>A seasoned bandit in quality leathers with a strong voice and cunning eyes.</em><li>
-                    <li><strong>Motives and Tactics:</strong> Bully, command, profi t, reinforce</li>
+                    <li><strong>Motives and Tactics:</strong> Bully, command, profit, reinforce</li>
                 </ul>
                 <div class="og-topbar">
                     <ul class="og-list-inline">
@@ -13475,7 +13475,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Chevalier&mdash;Passive:</em></strong> While the Knight is on a mount, they gain a +2 bonus to their<a href="#define-difficulty">Difficulty</a>. When they take <a href="#defne-damage-threshold">Severe</a> damage, they're knocked from their mount and lose this benefit until they're next <a href="#define-spotlight">spotlighted</a>.</p></li>
+                    <li><p><strong><em>Chevalier&mdash;Passive:</em></strong> While the Knight is on a mount, they gain a +2 bonus to their <a href="#define-difficulty">Difficulty</a>. When they take <a href="#defne-damage-threshold">Severe</a> damage, they're knocked from their mount and lose this benefit until they're next <a href="#define-spotlight">spotlighted</a>.</p></li>
                     <li><p><strong><em>Heavily Armored&mdash;Passive:</em></strong> When the Knight takes <a href="#define-damage-type">physical damage</a>, reduce it by 3.</p></li>
                     <li><p><strong><em>Cavalry Charge&mdash;Action:</em></strong> If the Knight is mounted, move up to <a href="#define-range">Far</a> range and make a standard attack against a target. On a success, deal <strong>2d8+4</strong> <a href="#define-damage-type">physical damage</a> and the target must mark a <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>For the Realm!&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to <a href="#define-spotlight">spotlight</a> <strong>1d4+1</strong> allies. Attacks they make while <a href="#define-spotlight">spotlighted</a> in this way deal half damage.</p></li>
@@ -13570,7 +13570,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Won't See It Coming&mdash;Passive:</em></strong> The Assassin deals direct damage while they're <a href="#define-condition"><em>Hidden</em></a>.</p></li>
+                    <li><p><strong><em>Won't See It Coming&mdash;Passive:</em></strong> The Assassin deals <a href="#define-damage-type">direct damage</a> while they're <a href="#define-condition"><em>Hidden</em></a>.</p></li>
                     <li><p><strong><em>Strike as One&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to <a href="#define-spotlight">spotlight</a> a number of other Assassins equal to the Assassin's unmarked <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>The Subtle Blade&mdash;Reaction:</em></strong> When the Assassin successfully makes a standard attack against a <a href="#define-condition"><em>Vulnerable</em></a> target, you can spend a <a href="#define-fear">Fear</a> to deal <a href="#defne-damage-threshold">Severe</a> damage instead of their standard damage.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Assassin makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
@@ -13660,7 +13660,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Arcane Master&mdash;Passive:</em></strong> The Elemental is resistant to <a href="#define-damage-type">magic damage</a>.</p></li>
+                    <li><p><strong><em>Arcane Master&mdash;Passive:</em></strong> The Elemental is <a href="#define-resistance">resistant</a> to <a href="#define-damage-type">magic damage</a>.</p></li>
                     <li><p><strong><em>Sickening Flux&mdash;Action:</em></strong> Mark a <a href="#define-hit-point">HP</a> to force all targets within <a href="#define-range">Close</a> range to mark a <a href="#define-stress">Stress</a> and become <a href="#define-condition"><em>Vulnerable</em></a> until their next rest or they clear a <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Remake Reality&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to transform the area within <a href="#define-range">Very Close</a> range into a different biome. All targets within this area take <strong>2d6+3</strong> <a href="#define-damage-type">direct magic damage</a>.</p></li>
                     <li><p><strong><em>Magical Reflection&mdash;Reaction:</em></strong> When the Elemental takes damage from an attack within <a href="#define-range">Close</a> range, deal an amount of damage to the attacker equal to half of the damage they dealt.</p></li>
@@ -13753,8 +13753,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (5)&mdash;Passive:</em></strong> The Treant is defeated when they take any damage. For every 5 damage a PC deals to the Treant, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all <a href="#defne-damage-threshold">Minor</a> Treants within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 4 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (5)&mdash;Passive:</em></strong> The Treant is defeated when they take any damage. For every 5 damage a PC deals to the Treant, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all <a href="#defne-damage-threshold">Minor</a> Treants within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 4 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -13815,7 +13815,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Execute Them!&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> per PC in the party to have the group condemned for crimes real or imagined. A PC who succeeds on a <a href="#define-trait-roll">Presence Roll</a> can demand trial by combat or another special form of trial.</p></li>
-                    <li><p><strong><em>Crossguard&mdash;Action:</em></strong> Once per scene, mark a <a href="#define-stress">Stress</a> to summon Tier X Minions, who appear at <a href="#define-range">Close</a> range to enforce the Monarch's will.</p></li>
+                    <li><p><strong><em>Crossguard&mdash;Action:</em></strong> Once per scene, mark a <a href="#define-stress">Stress</a> to summon six Tier 3 <a href="#define-adversary-type">Minions</a>, who appear at <a href="#define-range">Close</a> range to enforce the Monarch's will.</p></li>
                     <li><p><strong><em>Census Bell&mdash;Reaction:</em></strong> Long-Term <a href="#define-countdown">Countdown</a> <strong>(8)</strong>: Spend a <a href="#define-fear">Fear</a> to activate after the Monarch's desire for war is first revealed. When it triggers, the Monarch has a reason to rally the nation to war and the support to act on that reason. You gain <strong>1d4</strong> <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -13846,7 +13846,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Terrifying&mdash;Passive:</em></strong> When the Hunter makes a successful attack, all PCs within <a href="#define-range">Far</a> range lose a <a href="#define-hope">Hope</a> and you gain a <a href="#define-fear">Fear</a>.</p></li>
-                    <li><p><strong><em>Deathlock&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to curse a target within <a href="#define-range">Very Close</a> range with a necrotic Deathlock until the end of the scene. Attacks made by the Hunter against a Deathlocked target deal direct damage. The Hunter can only maintain one Deathlock at a time.</p></li>
+                    <li><p><strong><em>Deathlock&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to curse a target within <a href="#define-range">Very Close</a> range with a necrotic Deathlock until the end of the scene. Attacks made by the Hunter against a Deathlocked target deal <a href="#define-damage-type">direct damage</a>. The Hunter can only maintain one Deathlock at a time.</p></li>
                     <li><p><strong><em>Inevitable Death&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to <a href="#define-spotlight">spotlight</a> <strong>1d4</strong> allies. Attacks they make while <a href="#define-spotlight">spotlighted</a> in this way deal half damage.</p></li>
                     <li><p><strong><em>Rampage&mdash;Reaction:</em></strong> <a href="#define-countdown">Countdown</a> <strong>(Loop 1d6)</strong>. When the Hunter is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When it triggers, move the Hunter in a straight line to a point within <a href="#define-range">Far</a> range and make an attack against all targets in their path. Targets the Hunter succeeds against take <strong>2d8+2</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
@@ -13879,7 +13879,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Just a Tree&mdash;Passive:</em></strong> Before they make their first attack in a fight or after they become <a href="#define-condition"><em>Hidden</em></a>, the Treant is indistinguishable from other trees until they next act or a PC succeeds on an <a href="#define-trait-roll">Instinct Roll</a> to identify them.</p></li>
                     <li><p><strong><em>Seed Barrage&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> and make an attack against up to three targets within <a href="#define-range">Close</a> range, pummeling them with giant acorns. Targets the Treant succeeds against take <strong>2d10+5</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
-                    <li><p><strong><em>Take Root&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to Root the Treant in place. The Treant is <a href="#define-condition"><em>Restrained</em></a> while Rooted, and can end this effect instead of moving while they are <a href="#define-spotlight">spotlighted</a>. While Rooted, the Treant has resistance to <a href="#define-damage-type">physical damage</a>.</p></li>
+                    <li><p><strong><em>Take Root&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to <em>Root</em> the Treant in place. The Treant is <a href="#define-condition"><em>Restrained</em></a> while <em>Rooted</em>, and can end this effect instead of moving while they are <a href="#define-spotlight">spotlighted</a>. While Rooted, the Treant has <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -13911,7 +13911,7 @@
                     <li><p><strong><em>Terrifying&mdash;Passive:</em></strong> When the Oracle makes a successful attack, all PCs within <a href="#define-range">Far</a> range lose a <a href="#define-hope">Hope</a> and you gain a <a href="#define-fear">Fear</a>.</p></li>
                     <li><p><strong><em>Walls Closing In&mdash;Passive:</em></strong> When a creature rolls a failure while within Very <a href="#define-range">Far</a> range of the Oracle, they must mark a <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>Pronounce Fate&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to present a target within <a href="#define-range">Far</a> range with a vision of their personal nightmare. The target must make a <a href="#define-knowledge">Knowledge</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, they lose all <a href="#define-hope">Hope</a> and take <strong>2d10+4</strong> <a href="#define-damage-type">direct magic damage</a>. On a success, they take half damage and lose a <a href="#define-hope">Hope</a>.</p></li>
-                    <li><p><strong><em>Summon Tormentors&mdash;Action:</em></strong> Once per day, spend 2 <a href="#define-fear">Fear</a> to summon <strong>2d4</strong> Tier 2 or below Minions relevant to one of the PC's personal nightmares. They appear at <a href="#define-range">Close</a> range relative to that PC.</p></li>
+                    <li><p><strong><em>Summon Tormentors&mdash;Action:</em></strong> Once per day, spend 2 <a href="#define-fear">Fear</a> to summon <strong>2d4</strong> Tier 2 or below <a href="#define-adversary-type">Minions</a> relevant to one of the PC's personal nightmares. They appear at <a href="#define-range">Close</a> range relative to that PC.</p></li>
                     <li><p><strong><em>Ominous Knowledge&mdash;Reaction:</em></strong> When the Oracle sees a mortal creature, they instantly know one of their personal nightmares.</p></li>
                     <li><p><strong><em>Vengeful Fate&mdash;Reaction:</em></strong> When the Oracle marks <a href="#define-hit-point">HP</a> from an attack within <a href="#define-range">Very Close</a> range, you can mark a <a href="#define-stress">Stress</a> to knock the attacker back to <a href="#define-range">Far</a> range and deal <strong>2d10+4</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
@@ -13942,7 +13942,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Chaotic Form&mdash;Passive:</em></strong> When the Abomination attacks, roll <strong>2d4</strong> and use the result as their attack <a href="#define-modifier">modifier</a>.</p></li>
                     <li><p><strong><em>Disorienting <a href="#define-presence">Presence</a>&mdash;Passive:</em></strong> When a target takes damage from the Abomination, they must make an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, they gain <a href="#define-advantage">disadvantage</a> on their next <a href="#define-action-roll">action roll</a> and you gain a <a href="#define-fear">Fear</a>.</p></li>
-                    <li><p><strong><em>Reality Quake&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to rattle the edges of reality within <a href="#define-range">Far</a> range of the Abomination. All targets within that area must succeed on a <a href="#define-knowledge">Knowledge</a> <a href="#define-reaction-roll">Reaction Roll</a> or become <em>Unstuck</em> from reality until the end of the scene. When an <em>Unstuck</em> target spends <a href="#define-hope">Hope</a> or marks <a href="#define-armor">Armor Slot</a>s, <a href="#define-hit-point">HP</a>, or <a href="#define-stress">Stress</a>, they must double the amount spent or marked.</p></li>
+                    <li><p><strong><em>Reality Quake&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to rattle the edges of reality within <a href="#define-range">Far</a> range of the Abomination. All targets within that area must succeed on a <a href="#define-knowledge">Knowledge</a> <a href="#define-reaction-roll">Reaction Roll</a> or become <em>Unstuck</em> from reality until the end of the scene. When an <em>Unstuck</em> target spends <a href="#define-hope">Hope</a> or marks <a href="#define-armor">Armor Slots</a>, <a href="#define-hit-point">HP</a>, or <a href="#define-stress">Stress</a>, they must double the amount spent or marked.</p></li>
                     <li><p><strong><em>Fungal Form&mdash;Reaction:</em></strong> When the Abomination takes damage, reduce it by <strong>1d20</strong>. If the Abomination marks 1 or fewer <a href="#define-hit-point">Hit Points</a> from a successful attack against them, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -13998,8 +13998,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (13)&mdash;Passive:</em></strong> The Thrall is defeated when they take any damage. For every 13 damage a PC deals to the Thrall, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Outer Realm Thralls within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 11 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (13)&mdash;Passive:</em></strong> The Thrall is defeated when they take any damage. For every 13 damage a PC deals to the Thrall, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Outer Realm Thralls within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 11 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -14242,8 +14242,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (3)&mdash;Passive:</em></strong> The Zombie is defeated when they take any damage. For every 3 damage a PC deals to the Zombie, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Rotted Zombies within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 2 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (3)&mdash;Passive:</em></strong> The Zombie is defeated when they take any damage. For every 3 damage a PC deals to the Zombie, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Rotted Zombies within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 2 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -14333,8 +14333,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (4)&mdash;Passive:</em></strong> The Sellsword is defeated when they take any damage. For every 4 damage a PC deals to the Sellsword, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Sellswords within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 3 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (4)&mdash;Passive:</em></strong> The Sellsword is defeated when they take any damage. For every 4 damage a PC deals to the Sellsword, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Sellswords within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 3 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -14361,7 +14361,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Too Many to Handle&mdash;Passive:</em></strong> When the Zombie is within <a href="#define-range">Melee</a> range of a creature and at least one other Zombie is within <a href="#define-range">Close</a> range, all attacks against that creature have advantage.</p></li>
+                    <li><p><strong><em>Too Many to Handle&mdash;Passive:</em></strong> When the Zombie is within <a href="#define-range">Melee</a> range of a creature and at least one other Zombie is within <a href="#define-range">Close</a> range, all attacks against that creature have <a href="#define-advantage">advantage</a>.</p></li>
                     <li><p><strong><em>Horrifying&mdash;Passive:</em></strong> Targets who mark <a href="#define-hit-point">HP</a> from the Zombie's attacks must also mark a <a href="#define-stress">Stress</a>.</p></li>
                 </ul>
             </div>
@@ -14392,7 +14392,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Terrifying&mdash;Passive:</em></strong> When the Shark makes a successful attack, all PCs within <a href="#define-range">Far</a> range lose a <a href="#define-hope">Hope</a> and you gain a <a href="#define-fear">Fear</a>.</p></li>
-                    <li><p><strong><em>Rending Bite&mdash;Passive:</em></strong> When the Shark makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use armor to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
+                    <li><p><strong><em>Rending Bite&mdash;Passive:</em></strong> When the Shark makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Blood in the Water&mdash;Reaction:</em></strong> When a creature within <a href="#define-range">Close</a> range of the Shark marks <a href="#define-hit-point">HP</a> from another creature's attack, you can mark a <a href="#define-stress">Stress</a> to immediately <a href="#define-spotlight">spotlight</a> the Shark, moving them into <a href="#define-range">Melee</a> range of the target and making a standard attack.</p></li>
                 </ul>
             </div>
@@ -14422,8 +14422,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Captive Audience&mdash;Passive:</em></strong> If the Siren makes a standard attack against a target Entranced by their song, the attack deals <strong>2d10+1</strong> damage instead of their standard damage.</p></li>
-                    <li><p><strong><em>Enchanting Song&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to sing a song that affects all targets within <a href="#define-range">Close</a> range. Targets must succeed on an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> or become <em>Entranced</em> until they mark 2 <a href="#define-stress">Stress</a>. Other Sirens within <a href="#define-range">Close</a> range of the target can mark a <a href="#define-stress">Stress</a> to each add a +1 bonus to the<a href="#define-difficulty">Difficulty</a> of the <a href="#define-reaction-roll">reaction roll</a>. While <em>Entranced</em>, a target can't act and is <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
+                    <li><p><strong><em>Captive Audience&mdash;Passive:</em></strong> If the Siren makes a standard attack against a target <em>entranced</em> by their song, the attack deals <strong>2d10+1</strong> damage instead of their standard damage.</p></li>
+                    <li><p><strong><em>Enchanting Song&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to sing a song that affects all targets within <a href="#define-range">Close</a> range. Targets must succeed on an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> or become <em>Entranced</em> until they mark 2 <a href="#define-stress">Stress</a>. Other Sirens within <a href="#define-range">Close</a> range of the target can mark a <a href="#define-stress">Stress</a> to each add a +1 bonus to the <a href="#define-difficulty">Difficulty</a> of the <a href="#define-reaction-roll">reaction roll</a>. While <em>Entranced</em>, a target can't act and is <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -14478,8 +14478,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (4)&mdash;Passive:</em></strong> The Dredge is defeated when they take any damage. For every 4 damage a PC deals to the Dredge, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Dredges within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 1 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (4)&mdash;Passive:</em></strong> The Dredge is defeated when they take any damage. For every 4 damage a PC deals to the Dredge, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Dredges within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 1 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -14535,7 +14535,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Only Bones&mdash;Passive:</em></strong> The Warrior is resistant to <a href="#define-damage-type">physical damage</a>.</p></li>
+                    <li><p><strong><em>Only Bones&mdash;Passive:</em></strong> The Warrior is <a href="#define-resistance">resistant</a> to <a href="#define-damage-type">physical damage</a>.</p></li>
                     <li><p><strong><em>Reform&mdash;Reaction:</em></strong> When the Warrior is defeated, roll a <strong>d6</strong>. On a result of 6, if there are other adversaries on the battlefield, the Warrior re-forms with no marked <a href="#define-hit-point">HP</a>.</p></li>
                 </ul>
             </div>
@@ -14548,7 +14548,7 @@
                 <ul class="og-list-inline og-ref og-omit"><li>Page 226</li></ul>
                 <ul class="list-unstyled">
                     <li><strong><em>Tier 2 <a href="#define-adversary-type">Ranged</a></em></strong></li>
-                    <li><em>A ghostly fighter with an ethereal bow, unable to move on while their charge is vulnerable.</em><li>
+                    <li><em>A ghostly fighter with an ethereal bow, unable to move on while their charge is <a href="#define-condition"><em>Vulnerable</em></a>.</em><li>
                     <li><strong>Motives and Tactics:</strong> Move through solid objects, stay out of the fray, rehash old battles</li>
                 </ul>
                 <div class="og-topbar">
@@ -14565,7 +14565,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Ghost&mdash;Passive:</em></strong> The Archer has resistance to <a href="#define-damage-type">physical damage</a>. Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range through solid objects.</p></li>
+                    <li><p><strong><em>Ghost&mdash;Passive:</em></strong> The Archer has <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a>. Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range through solid objects.</p></li>
                     <li><p><strong><em>Pick Your Target&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to make an attack against a target within <a href="#define-range">Very Close</a> range of at least two other PCs. On a success, the target takes <strong>2d8+12</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
             </div>
@@ -14595,7 +14595,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Ghost&mdash;Passive:</em></strong> The Captain has resistance to <a href="#define-damage-type">physical damage</a>. Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range through solid objects.</p></li>
+                    <li><p><strong><em>Ghost&mdash;Passive:</em></strong> The Captain has <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a>. Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range through solid objects.</p></li>
                     <li><p><strong><em>Unending Battle&mdash;Action:</em></strong> Spend 2 <a href="#define-fear">Fear</a> to return up to <strong>1d4+1</strong> defeated Spectral allies to the battle at the points where they first appeared (with no marked <a href="#define-hit-point">HP</a> or <a href="#define-stress">Stress</a>).</p></li>
                     <li><p><strong><em>Hold Fast&mdash;Reaction:</em></strong> When the Captain's Spectral allies are forced to make a <a href="#define-reaction-roll">reaction roll</a>, you can mark a <a href="#define-stress">Stress</a> to give those allies a +2 bonus to the roll.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Captain makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
@@ -14627,7 +14627,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Ghost&mdash;Passive:</em></strong> The Guardian has resistance to <a href="#define-damage-type">physical damage</a>. Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range through solid objects.</p></li>
+                    <li><p><strong><em>Ghost&mdash;Passive:</em></strong> The Guardian has <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a>. Mark a <a href="#define-stress">Stress</a> to move up to <a href="#define-range">Close</a> range through solid objects.</p></li>
                     <li><p><strong><em>Grave Blade&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, deal <strong>2d10+6</strong> <a href="#define-damage-type">physical damage</a> and the target must mark a <a href="#define-stress">Stress</a>.</p></li>
                 </ul>
             </div>
@@ -14719,7 +14719,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Stonestrider&mdash;Passive:</em></strong> The Stonewraith can move through stone and earth as easily as air. While within stone or earth, they are <a href="#define-condition"><em>Hidden</em></a> and immune to all damage.</p></li>
+                    <li><p><strong><em>Stonestrider&mdash;Passive:</em></strong> The Stonewraith can move through stone and earth as easily as air. While within stone or earth, they are <a href="#define-condition"><em>Hidden</em></a> and <a href="#define-resistance">immune</a> to all damage.</p></li>
                     <li><p><strong><em>Rocky Ambush&mdash;Action:</em></strong> While <a href="#define-condition"><em>Hidden</em></a>, mark a <a href="#define-stress">Stress</a> to leap into <a href="#define-range">Melee</a> range with a target within <a href="#define-range">Very Close</a> range. The target must succeed on an <a href="#define-agility">Agility</a> or <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> (15) or take <strong>2d8</strong> <a href="#define-damage-type">physical damage</a> and become temporarily <a href="#define-condition"><em>Restrained</em></a>.</p></li>
                     <li><p><strong><em>Avalanche Roar&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to roar while within a cave and cause a cave-in. All targets within <a href="#define-range">Close</a> range must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> (14) or take <strong>2d10</strong> <a href="#define-damage-type">physical damage</a>. The rubble can be cleared with a Progress <a href="#define-countdown">Countdown</a> <strong>(8)</strong>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Stonewraith makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
@@ -14808,9 +14808,9 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (4)&mdash;Passive:</em></strong> The Bramble is defeated when they take any damage. For every 4 damage a PC deals to the Tangle Bramble, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Tangle Brambles within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 2 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
-                    <li><p><strong><em>Drain and Multiply&mdash;Reaction:</em></strong> When an attack from the Bramble causes a target to mark <a href="#define-hit-point">HP</a> and there are three or more Tangle Bramble Minions within <a href="#define-range">Close</a> range, you can combine the Minions into a Tangle Bramble Swarm Horde. The Horde's <a href="#define-hit-point">HP</a> is equal to the number of Minions combined.</p></li>
+                    <li><p><strong><em>Minion (4)&mdash;Passive:</em></strong> The Bramble is defeated when they take any damage. For every 4 damage a PC deals to the Tangle Bramble, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Tangle Brambles within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 2 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Drain and Multiply&mdash;Reaction:</em></strong> When an attack from the Bramble causes a target to mark <a href="#define-hit-point">HP</a> and there are three or more Tangle Bramble <a href="#define-adversary-type">Minions</a> within <a href="#define-range">Close</a> range, you can combine the Minions into a <a href="#define-adversary-tangle-bramble-swarm">Tangle Bramble Swarm</a> <a href="#define-adversary-type">Horde</a>. The Horde's <a href="#define-hit-point">HP</a> is equal to the number of Minions combined.</p></li>
                 </ul>
             </div>
         </div>
@@ -14841,7 +14841,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Horde (1d4+2)&mdash;Passive:</em></strong> When the Swarm has marked half or more of their <a href="#define-hit-point">HP</a>, their standard attack deals <strong>1d4+2</strong> <a href="#define-damage-type">physical damage</a> instead.</p></li>
                     <li><p><strong><em>Crush&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to deal <strong>2d6+8</strong> <a href="#define-damage-type">direct physical damage</a> to a target with 3 or more bramble tokens.</p></li>
-                    <li><p><strong><em>Encumber&mdash;Reaction:</em></strong> When the Swarm succeeds on an attack, give the target a bramble token. If a target has any bramble tokens, they are <a href="#define-condition"><em>Restrained</em></a>. If a target has 3 or more bramble tokens, they are also <a href="#define-condition"><em>Vulnerable</em></a>. All bramble tokens can be removed by succeeding on a <a href="#define-trait-roll">Finesse Roll</a> (12 + the number of bramble tokens) or dealing <a href="#defne-damage-threshold">Major</a> or greater damage to the Swarm. If bramble tokens are removed from a target using a <a href="#define-trait-roll">Finesse Roll</a>, a number of Tangle Bramble Minions spawn within <a href="#define-range">Melee</a> range equal to the number of tokens removed.</p></li>
+                    <li><p><strong><em>Encumber&mdash;Reaction:</em></strong> When the Swarm succeeds on an attack, give the target a bramble token. If a target has any bramble tokens, they are <a href="#define-condition"><em>Restrained</em></a>. If a target has 3 or more bramble tokens, they are also <a href="#define-condition"><em>Vulnerable</em></a>. All bramble tokens can be removed by succeeding on a <a href="#define-trait-roll">Finesse Roll</a> (12 + the number of bramble tokens) or dealing <a href="#defne-damage-threshold">Major</a> or greater damage to the Swarm. If bramble tokens are removed from a target using a <a href="#define-trait-roll">Finesse Roll</a>, a number of <a href="#define-adversary-tangle-bramble">Tangle Bramble</a> <a href="#define-adversary-type">Minions</a> spawn within <a href="#define-range">Melee</a> range equal to the number of tokens removed.</p></li>
                 </ul>
             </div>
         </div>
@@ -14867,7 +14867,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use armor to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
+                    <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -14920,8 +14920,8 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Sapling is defeated when they take any damage. For every 6 damage a PC deals to the Sapling, defeat an additional Minion within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Treant Saplings within <a href="#define-range">Close</a> range of them. Those Minions move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 8 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Minion (6)&mdash;Passive:</em></strong> The Sapling is defeated when they take any damage. For every 6 damage a PC deals to the Sapling, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to choose a target and <a href="#define-spotlight">spotlight</a> all Treant Saplings within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 8 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -14978,7 +14978,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Blocking Shield&mdash;Passive:</em></strong> Creatures within <a href="#define-range">Melee</a> range of the Gaoler have <a href="#define-advantage">disadvantage</a> on <a href="#define-attack-roll">attack rolls</a> against them. Creatures trapped inside the Gaoler are immune to this feature.</p></li>
+                    <li><p><strong><em>Blocking Shield&mdash;Passive:</em></strong> Creatures within <a href="#define-range">Melee</a> range of the Gaoler have <a href="#define-advantage">disadvantage</a> on <a href="#define-attack-roll">attack rolls</a> against them. Creatures trapped inside the Gaoler are <a href="#define-resistance">immune</a> to this feature.</p></li>
                     <li><p><strong><em>Lock Up&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, the target is <a href="#define-condition"><em>Restrained</em></a> within the Gaoler until freed with a successful <a href="#define-trait-roll">Strength Roll</a> (18). While <a href="#define-condition"><em>Restrained</em></a>, the target can only attack the Gaoler.</p></li>
                 </ul>
             </div>
@@ -15138,8 +15138,8 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Relentless (2)&mdash;Passive:</em></strong> Can be <a href="#define-spotlight">spotlighted</a> up to two times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a>.</p></li>
-                    <li><p><strong><em>Flying&mdash;Passive:</em></strong> While flying, gains +3<a href="#define-difficulty">Difficulty</a>.</p></li>
-                    <li><p><strong><em>Obsidian Scales&mdash;Passive:</em></strong> Resistant to <a href="#define-damage-type">physical damage</a>.</p></li>
+                    <li><p><strong><em>Flying&mdash;Passive:</em></strong> While flying, gains +3 <a href="#define-difficulty">Difficulty</a>.</p></li>
+                    <li><p><strong><em>Obsidian Scales&mdash;Passive:</em></strong> <a href="#define-resistance">Resistant</a> to <a href="#define-damage-type">physical damage</a>.</p></li>
                     <li><p><strong><em>Obsidian Tail&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to make attack against all targets within <a href="#define-range">Close</a> range. Success: <strong>4d6+4</strong> <a href="#define-damage-type">physical damage</a>, knocked to <a href="#define-range">Far</a> range and <a href="#define-condition"><em>Vulnerable</em></a> until next roll with <a href="#define-hope">Hope</a>.</p></li>
                     <li><p><strong><em>Dive-Bomb&mdash;Action:</em></strong> If flying, mark a <a href="#define-stress">Stress</a> to choose point within <a href="#define-range">Far</a> range, move there, attack all targets within <a href="#define-range">Very Close</a> range; on success, <strong>2d10+6</strong> physical, mark a <a href="#define-stress">Stress</a>, lose a <a href="#define-hope">Hope</a>.</p></li>
                     <li><p><strong><em>Erupting Rage (Phase Change)&mdash;Reaction:</em></strong> When marks last <a href="#define-hit-point">HP</a>, replace with Molten Scourge and immediately <a href="#define-spotlight">spotlight</a>.</p></li>
@@ -15205,7 +15205,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Voice of the Forest&mdash;Action:</em></strong> Mark a <a href="#define-stress">Stress</a> to <a href="#define-spotlight">spotlight</a> <strong>1d4</strong> allies within range of a target they can attack without moving. On a success, their attacks deal half damage.</p></li>
-                    <li><p><strong><em>Thorny Cage&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to form a cage around a target within <a href="#define-range">Very Close</a> range and Restrain them until they're freed with a successful <a href="#define-trait-roll">Strength Roll</a>. When a creature makes an <a href="#define-action-roll">action roll</a> against the cage, they must mark a <a href="#define-stress">Stress</a>.</p></li>
+                    <li><p><strong><em>Thorny Cage&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> to form a cage around a target within <a href="#define-range">Very Close</a> range and <a href="#define-condition"><em>Restrain</em></a> them until they're freed with a successful <a href="#define-trait-roll">Strength Roll</a>. When a creature makes an <a href="#define-action-roll">action roll</a> against the cage, they must mark a <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Dryad makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -15269,7 +15269,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Horde (2d6+5)&mdash;Passive:</em></strong> When Legion has half or more <a href="#define-hit-point">HP</a> marked, standard attack deals <strong>2d6+5</strong> <a href="#define-damage-type">physical damage</a> instead.</p></li>
-                    <li><p><strong><em>Unyielding&mdash;Passive:</em></strong> Legion has resistance to <a href="#define-damage-type">physical damage</a>.</p></li>
+                    <li><p><strong><em>Unyielding&mdash;Passive:</em></strong> Legion has <a href="#define-resistance">resistance</a> to <a href="#define-damage-type">physical damage</a>.</p></li>
                     <li><p><strong><em>Relentless (2)&mdash;Passive:</em></strong> Legion can be <a href="#define-spotlight">spotlighted</a> up to two times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a>.</p></li>
                     <li><p><strong><em>Overwhelm&mdash;Reaction:</em></strong> When Legion takes <a href="#defne-damage-threshold">Minor</a> damage from attack within Melee, mark a <a href="#define-stress">Stress</a> to make standard attack with <a href="#define-advantage">advantage</a> against the attacker.</p></li>
                 </ul>
@@ -15392,7 +15392,7 @@
 			<td class="text-center og-nowrap">21&ndash;32</td>
 		</tr>
 		<tr>
-			<th class="fw-normal" scope="row"><a href="#define-difficulty">Difficulty</a></th>
+			<th class="fw-normal" scope="row"> <a href="#define-difficulty">Difficulty</a></th>
 			<td class="text-center">11</td>
 			<td class="text-center">14</td>
 			<td class="text-center">17</td>
