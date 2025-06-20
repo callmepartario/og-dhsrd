@@ -660,8 +660,8 @@ ul.og-list-inline li ul {
 	margin-bottom: 1rem;
 }
 ul.og-list-hang li { 
-	text-indent: -1rem;
-	margin-left: 1rem;
+	text-indent: -0.75rem;
+	margin-left: 0.75rem;
 }
 ul.og-list-hang li ol { 
 	padding-left: 0;
