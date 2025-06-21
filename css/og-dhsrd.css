@@ -608,9 +608,6 @@ ul.og-qr-compact li {
 ol.og-list-alpha {
 	list-style-type: upper-alpha;
 }
-.theme-dark ul.og-ref {
-	color: #9cd;
-}
 ul.og-list-disc {
 	text-indent: 0rem;
 	margin-left: 0rem;
@@ -715,7 +712,9 @@ ul.og-ref li {
 }
 .theme-light ul.og-ref {
 	color: #146;
-	background-color: #f7fbff !important;
+}
+.theme-dark ul.og-ref {
+	color: #9cd;
 }
 
 /* tooltips */
