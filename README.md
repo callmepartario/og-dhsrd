@@ -23,14 +23,14 @@ Thanks to Darrington Press for this amazing resource, and thank you for readingâ
 - Edit the text using plain language and digital accessibility principles, but leave mechanics of character options and stat blocks unedited
 - Provide conversions for imperial to metric units
 
-Technical Features
+## Technical Features
 
 - Mobile-friendly format with internal hyperlinks
 - Tooltips for quick cross-referencing of relevant sections
 - Page number references for corresponding sections of the Daggerheart Core Rulebook
 - Index of Optional Rules
 
-Goals
+## Goals
 
 - Expand editor's notes to address common questions and misunderstandings about the rules
 - Keep this content up-to-date with future SRD updates and errata
