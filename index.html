@@ -110,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.91c (2025-06-20)</p>
+<p class="small text-center">version 0.91d (2025-06-20)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -1589,8 +1589,8 @@
 		</ul>
 		<h6>Mastery Features</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Shadow Stepper</em></strong> Gain a permanent +1 bonus to your <a href="#define-evasion">Evasion</a>. You can use your <strong><em>Shadow Stepper</em></strong> feature to move within <a href="#define-range">Very Far</a> range.</p></li>
-			<li><p><strong><em>Vanishing Act</em></strong> Mark a <a href="#define-stress">Stress</a> to become <em>Cloaked</em> at any time. When <em>Cloaked</em> from this feature, you automatically clear the <a href="#define-condition"><em>Restrained</em></a> condition if you have it. You remain <em>Cloaked</em> in this way until you roll with Fear or until your next <a href="#define-downtime">rest</a>.</p></li>
+			<li><p><strong><em>Shadow Stepper:</em></strong> Gain a permanent +1 bonus to your <a href="#define-evasion">Evasion</a>. You can use your <strong><em>Shadow Stepper</em></strong> feature to move within <a href="#define-range">Very Far</a> range.</p></li>
+			<li><p><strong><em>Vanishing Act:</em></strong> Mark a <a href="#define-stress">Stress</a> to become <em>Cloaked</em> at any time. When <em>Cloaked</em> from this feature, you automatically clear the <a href="#define-condition"><em>Restrained</em></a> condition if you have it. You remain <em>Cloaked</em> in this way until you roll with Fear or until your next <a href="#define-downtime">rest</a>.</p></li>
 		</ul>
 	</div>
 	<div class="col-12 col-md-6">
@@ -1935,7 +1935,7 @@
 		</ul>
 		<h6>Mastery Feature</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Camaraderie:</em></strong> Your unwavering bravery is a rallying point for your allies. You can initiate a <a href="#define-tag-team-roll">Tag Team Roll</a> one additional time per session. Additionally, when an ally initiates a Tag Team Roll with you, they only need to spend 2 <a href="#define-hope">Hope</a> to do so.</p></li>
+			<li><p><strong><em>Camaraderie:</em></strong> Your unwavering bravery is a rallying point for your allies. You can initiate a <a href="#define-tag-team-roll">Tag Team Roll</a> one additional time per session. Additionally, when an ally initiates a <a href="#define-tag-team-roll">Tag Team Roll</a> with you, they only need to spend 2 <a href="#define-hope">Hope</a> to do so.</p></li>
 		</ul>
 	</div>
 	<div class="col-12 col-md-6">
@@ -3734,7 +3734,7 @@
             <li class="fw-bold">Level 3 Bone Ability</li>
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
-                <p>When you Help an Ally, they can spend a <a href="#define-hope">Hope</a> to add one of your <a href="#define-experience">Experiences</a> to their roll alongside your <a href="#define-advantage">advantage</a> die. When making a Tag Team Roll, you can roll a <strong>d20</strong> as your <a href="#define-action-roll">Hope Die</a>.</p>
+                <p>When you Help an Ally, they can spend a <a href="#define-hope">Hope</a> to add one of your <a href="#define-experience">Experiences</a> to their roll alongside your <a href="#define-advantage">advantage</a> die. When making a <a href="#define-tag-team-roll">Tag Team Roll</a>, you can roll a <strong>d20</strong> as your <a href="#define-action-roll">Hope Die</a>.</p>
             </li>
         </ul>
     </div></div></div>
@@ -9384,25 +9384,28 @@
 <div id="define-hit-point">
 	<h3 id="hit-points-and-damage-thresholds">Hit Points and Damage Thresholds<a class="og-h-anchor" href="#hit-points-and-damage-thresholds" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-	<p><strong>Hit Points</strong> represent a character's ability to withstand physical injury. When a character takes damage, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>. If a you mark your last Hit Point, make a <a href="#define-death">death move</a>. If an <a href="#define-adversary">adversary</a>'s last <a href="#define-hit-point">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</p>
-	<p>You can clear Hit Points by making <a href="#define-downtime">downtime moves</a> or activating certain features.</p>
-	<p>Your starting Hit Points are determined by your <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>. Your <strong>damage thresholds</strong> are determined by your <a href="#define-armor">armor</a> and <a href="#define-level">level</a>:</p>
+	<p><strong>Hit Points</strong> represent a character's ability to withstand physical injury. When a character takes damage, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>. </p>
+	<h4 class="h6">Damage Threshold</h4>
+	<p>Your damage thresholds are determined by your <a href="#define-armor">armor</a>, and gain a bonus equal to your <a href="#define-level">level</a>:</p>
 	<dl>
-		<dt>Severe Damage</dt>
-		<dd>If the damage meets or beats their <strong>Severe</strong> damage threshold, the target marks 3 Hit Points.</dd>
-		<dt>Major Damage</dt>
-		<dd>If the damage meets or beats their <strong>Major</strong> damage threshold, but is below their <strong>Severe</strong> damage threshold, the target marks 2 Hit Points.</dd>
 		<dt>Minor Damage</dt>
-		<dd>If the damage is below their <strong>Major</strong> damage threshold, the target marks 1 Hit Point.</dd>
+		<dd>If the damage is below the <strong>Major</strong> damage threshold, mark 1 Hit Point.</dd>
+		<dt>Major Damage</dt>
+		<dd>If the damage meets or beats the <strong>Major</strong> damage threshold, mark 2 Hit Points.</dd>
+		<dt>Severe Damage</dt>
+		<dd>If the damage meets or beats the <strong>Severe</strong> damage threshold, mark 3 Hit Points.</dd>
 		<dt>Reducing Damage</dt>
 		<dd>You can reduce damage by marking <a href="#define-armor">Armor Slots</a>. Some features allow you to mark <a href="#define-stress">Stress</a> instead of Hit Points.</dd>
 	</dl>
+	<h4 class="h6">Hit Points</h4>
+	<p>If you mark your last Hit Point, make a <a href="#define-death">death move</a>. You can clear Hit Points by making <a href="#define-downtime">downtime moves</a> or activating certain features. Your starting Hit Points are determined by your <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a>.</p>
+	<p>If an <a href="#define-adversary">adversary</a>'s last <a href="#define-hit-point">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</p>
 </div>
 <div class="og-topbar">
 	<div id="define-optional-rule-massive-damage">
 		<h4 id="optional-rule-massive-damage">Optional Rule: Massive Damage<a class="og-h-anchor" href="#optional-rule-massive-damage" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-		<p>If a character ever takes damage equal to twice their Severe threshold, they mark 4 <a href="#define-hit-point">Hit Points</a> instead of 3.</p>
+		<p>If a character ever takes damage equal to twice their <a href="#define-hit-point">Severe</a> threshold, they mark 4 <a href="#define-hit-point">Hit Points</a> instead of 3.</p>
 	</div>
 </div>
 <hr>
@@ -9665,25 +9668,25 @@
 		<li><strong>Clear All Stress:</strong> Clear all <a href="#define-stress">Stress</a>.</li>
 		<li><strong>Repair All Armor:</strong> Clear all <a href="#define-armor">Armor Slots</a> from your or an ally's armor.</li>
 		<li><strong>Prepare:</strong> Describe how you prepare for the next day's adventure, then gain a <a href="#define-hope">Hope</a>. If you choose to Prepare with one or more members of your party, you each gain 2 Hope.</li>
-		<li><strong>Work on a Project:</strong> With GM approval, a PC may pursue a long-term project, such as deciphering an ancient text or crafting a new <a href="#define-weapon">weapon</a>. The first time they start a new project, assign it a <a href="#define-countdown">countdown</a>. Each time a PC makes the Work on a Project move, they either advance their project's <a href="#define-countdown">Countdown</a> automatically or make an <a href="#define-action-roll">action roll</a> to advance it (GM's choice).</li>
+		<li><strong>Work on a Project:</strong> With GM approval, a PC may pursue a long-term project, such as deciphering an ancient text or crafting a new <a href="#define-weapon">weapon</a>. The first time they start a new project, assign it a <a href="#define-countdown">countdown</a>. Each time a PC makes the Work on a Project move, they either tick down their project's <a href="#define-countdown">Countdown</a> automatically or make an <a href="#define-action-roll">action roll</a> to tick it down (GM's choice).</li>
 	</ul>
 	<p>If <span class="og-omit">a long rest is</span> interrupted, the characters <span class="og-omit">only</span> gain the benefits of a <a href="#define-short-rest">short rest</a>.</p>
 	<p>At the end of a long rest, any features or effects with a limited number of uses per rest or per <a href="#define-long-rest">long rest</a> refresh and any features or effects that last until your next rest or until your next long rest expire.</p>
 	<div class="og-topbar">
 		<h5 class="h6">Long Rest Consequences</h5>
-		<p>The GM gains <a href="#define-fear">Fear</a> equal to <strong>1d4</strong> + the number of PCs, and they <span class="og-omit">can</span> advance a long-term <a href="#define-countdown">countdown</a><span class="og-omit"> of their choice</span>.</p>
+		<p>The GM gains <a href="#define-fear">Fear</a> equal to <strong>1d4</strong> + the number of PCs, and they <span class="og-omit">can</span> tick down a long-term <a href="#define-countdown">countdown</a><span class="og-omit"> of their choice</span>.</p>
 	</div>
 </div>
 <div id="define-downtime-extended">
 	<h4 id="extended-downtime">Extended Downtime<a class="og-h-anchor" href="#extended-downtime" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
-	<p>When you fast-forward the story across an extended period, use montages to illustrate the passage of time. You gain <strong>1d6</strong> <a href="#define-fear">Fear</a> per PC and advance any <a href="#define-countdown">Long-Term Countdowns</a> as appropriate.</p>
+	<p>When you fast-forward the story across an extended period, use montages to illustrate the passage of time. You gain <strong>1d6</strong> <a href="#define-fear">Fear</a> per PC and tick down any <a href="#define-countdown">Long-Term Countdowns</a> as appropriate.</p>
 </div>
 <h4 id="projects-during-downtime">Projects During Downtime<a class="og-h-anchor" href="#projects-during-downtime" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 181</li></ul>
 <p>The <a href="#define-long-rest">Work on a Project</a> downtime move requires more GM input than other downtime moves and is best suited for long-term endeavors the PCs wish to undertake.</p>
 <p>These projects are typically tracked using a <a href="#define-countdown">Progress Countdown</a>. When deciding the starting value of the countdown, consider the complexity of the project, the availability of relevant tools, and the impact of the project on the story.</p>
-<p>Simple projects advance their countdown each time a player uses the <strong>Work on a Project</strong> move, but complex projects require a <a href="#define-action-roll">roll</a>.</p>
+<p>Simple projects tick down their countdown each time a player uses the <strong>Work on a Project</strong> move, but complex projects require a <a href="#define-action-roll">roll</a>.</p>
 <hr>
 <h2 id="gm-guidance">GM Guidance<a class="og-h-anchor" href="#gm-guidance" title="Permalink" aria-hidden="true"></a></h2>
 <h3 id="running-an-adventure">Running an Adventure<a class="og-h-anchor" href="#running-an-adventure" title="Permalink" aria-hidden="true"></a></h3>
@@ -10452,7 +10455,7 @@
 			<h4 id="moving-and-fighting-underwater">Moving and Fighting Underwater<a class="og-h-anchor" href="#moving-and-fighting-underwater" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
 			<p>By default, <a href="#define-attack-roll">attack rolls</a> made while the attacker is underwater have <a href="#define-advantage">disadvantage</a>.</p>
-			<p>For creatures that can't breathe underwater, use a standard <a href="#define-countdown">Countdown</a> <strong>(3)</strong> to track how long they can hold their breath. Advance the <a href="#define-countdown">Countdown</a> whenever the PC takes an <a href="#define-action">action</a>. In addition if they fail a <a href="#define-action-roll">roll</a> or <a href="#define-action-roll">roll with Fear</a> while underwater, you can spend your <a href="#define-gm-move">GM move</a> to advance it an additional time&mdash;or twice, if they rolled a <a href="#define-action-roll">failure with Fear</a>.</p>
+			<p>For creatures that can't breathe underwater, use a standard <a href="#define-countdown">Countdown</a> <strong>(3)</strong> to track how long they can hold their breath. The <a href="#define-countdown">Countdown</a> ticks down whenever the PC takes an <a href="#define-action">action</a>. In addition if they fail a <a href="#define-action-roll">roll</a> or <a href="#define-action-roll">roll with Fear</a> while underwater, the GM can spend a <a href="#define-gm-move">GM move</a> to tick it down an additional time&mdash;or twice on a <a href="#define-action-roll">failure with Fear</a>.</p>
 			<p>Once the <a href="#define-countdown">Countdown</a> ends, the underwater PC must mark a <a href="#define-stress">Stress</a> whenever they take an action.</p>
 		</div>
 		<div id="define-pvp">
@@ -10551,7 +10554,7 @@
 			<li>Princess Mononoke</li>
 			<li>The Legend of Zelda</li>
 			<li>The Dark Crystal</li>
-			<li>Nausicaä of the Valley of the Wind</li>
+			<li>Nausica&auml; of the Valley of the Wind</li>
 		</ul>
 	</div>
 </div>
