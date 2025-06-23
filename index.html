@@ -186,6 +186,7 @@
 				<li><strong>Domain Cards:</strong> The official playset includes physical <a href="#define-domain-card">domain cards</a>, but you can copy card information from this document, and record them alongside your character sheet instead.</li>
 				<li><strong>Polyhedral Dice:</strong> At least two d12s, and at least one d20, d10, d8, d6, and d4 each. At higher <a href="#define-level">levels</a>&mdash;or if you're the GM&mdash;you'll want to have few of each. You can share dice with others if you need to.</li>
 				<li><strong>Notes:</strong> It's a good idea to have a place to take notes about your fellow PCs, the story, and other characters you meet along the way.</li>
+				<li><strong>Tokens and Counters:</strong> Use a few distinct kinds of tokens (or spare dice) to represent <a href="#define-hope">Hope</a>, <a href="#define-fear">Fear</a>, <a href="#define-countdown">Countdowns</a>, or other tokens. For the GM, an abacus can be a handy tool.</li>
 			</ul>
 		</div>
 	</div>
@@ -1939,7 +1940,7 @@
 			<p>Play the Call of the Brave if you want to use the might of your enemies to fuel your own power.</p>
 			<h6>Foundation Features</h6>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Courage:</em></strong> When you fail a roll with Fear, you gain a <a href="#define-hope">Hope</a>.</p></li>
+				<li><p><strong><em>Courage:</em></strong> When you fail a <a href="#define-action-roll">roll with Fear</a>, you gain a <a href="#define-hope">Hope</a>.</p></li>
 				<li><p><strong><em>Battle Ritual:</em></strong> Once per <a href="#define-long-rest">long rest</a>, before you attempt something incredibly dangerous or face off against a foe who clearly outmatches you, describe what ritual you perform or preparations you make. When you do, clear 2 <a href="#define-stress">Stress</a> and gain 2 <a href="#define-hope">Hope</a>.</p></li>
 			</ul>
 		</div>
@@ -5487,7 +5488,7 @@
             <li class="fw-bold">Recall Cost: 1</li>
             <li class="mt-3">
                 <p>Describe the defensive stance you take and spend a <a href="#define-hope">Hope</a>. If an <a href="#define-adversary">adversary</a> moves within <a href="#define-range">Very Close</a> range, they're pulled into <a href="#define-range">Melee</a> range and <a href="#define-condition"><em>Restrained</em></a>.</p>
-                <p>This <a href="#define-condition">condition</a> lasts until you move or fail a roll with <a href="#define-fear">Fear</a>, or the GM spends 2 <a href="#define-fear">Fear</a> on their turn to clear it.</p>
+                <p>This <a href="#define-condition">condition</a> lasts until you move or fail a <a href="#define-action-roll">roll with Fear</a>, or the GM spends 2 <a href="#define-fear">Fear</a> on their turn to clear it.</p>
             </li>
         </ul>
     </div></div></div>
@@ -6128,14 +6129,14 @@
 			</tr>
 			<tr>
 				<th class="fw-normal" scope="row">Hit Point</th>
-				<td>Gain 1 <a href="#define-hit-point">Hit Point</a> slot.</td>
+				<td>Gain a <a href="#define-hit-point">Hit Point</a> slot.</td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
 			</tr>
 			<tr>
 				<th class="fw-normal" scope="row">Stress</th>
-				<td>Gain 1 <a href="#define-stress">Stress</a> slot.</td>
+				<td>Gain a <a href="#define-stress">Stress</a> slot.</td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">2</span><span aria-hidden="true">&#x25A2;&nbsp;&#x25A2;</span></td>
@@ -9137,12 +9138,12 @@
 		<tbody>
 			<tr>
 				<th class="fw-normal og-nowrap" scope="row">Meets or beats</th>
-				<td><strong>Success with Hope:</strong> You gain 1 <a href="#define-hope">Hope</a>. The <a href="#define-spotlight">spotlight</a> remains on the PCs.</td>
-				<td><strong>Success with Fear:</strong> There's a cost or complication along with your success. The GM gains 1 <a href="#define-fear">Fear</a>. The <a href="#define-spotlight">spotlight</a> swings to the GM for a <a href="#define-gm-move">GM move</a>.</td>
+				<td><strong>Success with Hope:</strong> You gain a <a href="#define-hope">Hope</a>.</td>
+				<td><strong>Success with Fear:</strong> There's a cost or complication along with your success. The GM gains 1 <a href="#define-fear">Fear</a>.</td>
 			</tr>
 			<tr>
 				<th class="fw-normal og-nowrap" scope="row">Less than</th>
-				<td><strong>Failure with Hope:</strong> A minor consequence. You gain 1 <a href="#define-hope">Hope</a>. The <a href="#define-spotlight">spotlight</a> swings to the GM for a <a href="#define-gm-move">GM move</a>.</td>
+				<td><strong>Failure with Hope:</strong> A minor consequence. You gain a <a href="#define-hope">Hope</a>. The <a href="#define-spotlight">spotlight</a> swings to the GM for a <a href="#define-gm-move">GM move</a>.</td>
 				<td><strong>Failure with Fear:</strong> A major consequence. The GM gains a <a href="#define-fear">Fear</a>. The <a href="#define-spotlight">spotlight</a> swings to the GM for a <a href="#define-gm-move">GM move</a>.</td>
 			</tr>
 		</tbody>
@@ -9253,36 +9254,39 @@
 		<div id="define-hope">
 			<h4 id="hope">Hope<a class="og-h-anchor" href="#hope" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 90</li></ul>
-			<p>Every PC starts with 2 <strong>Hope</strong> at <a href="#define-character-creation">character creation</a> and gains more throughout play (up to a maximum of 6).</p>
-			<p>Players can spend Hope to:</p>
+			<p>Every PC starts with 2 <strong>Hope</strong> at <a href="#define-character-creation">character creation</a> and gains more from <a href="#define-action-roll">rolls with Hopa</a> and <a href="#define-class">class</a> or <a href="#define-subclass">subclass</a> features (up to a maximum of 6).</p>
+			<h5 class="h6">Spending Hope</h5>
+			<p>PCs spend Hope to:</p>
 			<ul class="og-list-disc">
 				<li><strong>Help an Ally (1 Hope):</strong> You help a PC with an <a href="#define-action-roll">action roll</a>. Describe how you help, roll your own <a href="#define-advantage">advantage</a> die, and apply the result as a <a href="#define-procedure">modifier</a> to their roll. Multiple PCs can help, but only the highest modifier rolled is added to the result. </li>
-				<li><strong>Utilize an Experience (1 Hope):</strong> When you Utilize an <a href="#define-experience">Experience</a> on a relevant roll, add its <a href="#define-procedure">modifier</a> to the result. You can spend additional Hope to utilize additional relevant Experiences.</li>
+				<li><strong>Utilize an Experience (1+ Hope):</strong> When you Utilize an <a href="#define-experience">Experience</a> on a relevant roll, add its <a href="#define-procedure">modifier</a> to the result. You can spend additional Hope to utilize additional relevant Experiences.</li>
 				<li><strong>Tag Team Roll (3 Hope):</strong> Initiate a <a href="#define-tag-team-roll">Tag Team Roll</a>.</li>
 				<li><strong>Class Hope Feature (3 Hope):</strong> Each <a href="#define-class">class</a> provides a Class Hope Feature</li>
-				<li><strong>Other Uses for Hope:</strong> Other uses for Hope are defined by <a href="#define-class">class</a> or <a href="#define-class">subclass</a> features, <a href="#define-domain-card">domain cards</a>, and <a href="#define-equipment">equipment</a>.</li>
+				<li><strong>Other Uses for Hope (1+ Hope):</strong> Other uses for Hope are defined by <a href="#define-class">class</a> or <a href="#define-class">subclass</a> features, <a href="#define-domain-card">domain cards</a>, and <a href="#define-equipment">equipment</a>.</li>
 			</ul>
 			<p>Hope carries over between sessions.</p>
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>When using a <a href="#define-hope">Hope Feature</a>, if you rolled with <a href="#define-action-roll">Hope</a> for that <a href="#define-action">action</a>, the Hope you gain from that roll can be spent on that feature (or toward it, if it requires spending multiple Hope).</p>
+			<p>When using a <a href="#define-hope">Hope Feature</a>, if you rolled with <a href="#define-action-roll">Hope</a> for that <a href="#define-action">action</a>, the Hope you gain from that roll can be spent on that feature.</p>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div id="define-fear">
 			<h4 id="fear">Fear<a class="og-h-anchor" href="#fear" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 91</li><li>Page 154</li></ul>
-			<p>The GM starts the game with 1 <strong>Fear</strong>, and gains a Fear when:</p>
+			<p>The GM starts the game with 1 <strong>Fear</strong>, and GM gains more throughout play (up to a maximum of 12). The GM gains Fear when:</p>
 			<ul class="og-list-disc">
 				<li>A PC <a href="#define-action-roll">rolls with Fear</a></li>
 				<li>The PCs take a <a href="#define-short-rest">short rest</a> or <a href="#define-long-rest">long rest</a></li>
-				<li>Whenever a mechanical trigger causes it</li>
+				<li>Whenever a trigger causes it, for example, a successful attack from a <a href="#define-adversary-bear">Bear</a></li>
 			</ul>
-			<p>The GM gains more Fear throughout play (up to a maximum of 12), and spends it to:</p>
+			<h5 class="h6">Spending Fear</h5>
+			<p>The GM spends Fear to:</p>
 			<ul class="og-list-disc">
-				<li>Make <a href="#define-gm-move">GM moves</a>, including causing <a href="#define-adversary-action">adversaries in combat</a> to take action.</li>
-				<li>Add an <a href="#define-adversary">adversary</a>'s <a href="#define-experience">Experience</a> as a <a href="#define-procedure">modifier</a>.</li>
-				<li>Activate an <a href="#define-adversary">adversary</a> or <a href="#define-environment">environment</a>'s <a href="#define-adversary-feature">Fear Features</a>.</li>
+				<li><strong>Seize Spotlight (1 Fear):</strong> The <a href="#define-spotlight">spotlight</a> swings to where the GM chooses.</li>
+				<li><strong>GM Moves (1+ Fear):</strong> The GM makes one or more <a href="#define-gm-move">GM moves</a>, for example, causing <a href="#define-adversary-action">adversary actions</a>.</li>
+				<li><strong>Utilize an Experience (1+ Fear):</strong> Add an <a href="#define-adversary">adversary</a>'s <a href="#define-experience">Experience</a> as a bonus to an <a href="#define-action-roll">action roll</a> the adversary makes, or as a penalty to a roll a PC makes against the adversary.</li>
+				<li><strong>Fear Features (1+ Fear):</strong> Activate an <a href="#define-adversary">adversary</a> or <a href="#define-environment">environment</a>'s <a href="#define-adversary-feature">Fear Features</a>.</li>
 			</ul>
 			<p>Like <a href="#define-hope">Hope</a>, Fear carries over between sessions.</p>
 		</div>
@@ -10161,7 +10165,7 @@
 			<td class="og-nowrap">No, but&mldr;&nbsp;&nbsp;</td>
 			<td>
 				<ul class="og-list-disc mb-0">
-					<li>You gain 1 <a href="#define-fear">Fear</a>.</li>
+					<li>You gain a <a href="#define-fear">Fear</a>.</li>
 					<li>You describe how the PC fails to get what they want.</li>
 					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a softer <a href="#define-gm-move">GM move</a>.</li>
 				</ul>
@@ -10172,7 +10176,7 @@
 			<td class="og-nowrap">No, and&mldr;&nbsp;&nbsp;</td>
 			<td>
 				<ul class="og-list-disc mb-0">
-					<li>You gain 1 <a href="#define-fear">Fear</a>.</li>
+					<li>You gain a <a href="#define-fear">Fear</a>.</li>
 					<li>Describe how the PC fails to get what they want.</li>
 					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a harder <a href="#define-gm-move">GM move</a></li>
 				</ul>
@@ -10195,15 +10199,18 @@
 <div id="define-gm-move">
 	<h3 id="gm-moves">GM Moves<a class="og-h-anchor" href="#gm-moves" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 89</li><li>Page 149</li><li>Page 150</li></ul>
-	<p>When the <a href="#define-spotlight">spotlight</a> swings to the GM, they make a <strong>GM moves</strong> that changes the story in response to the PC's <a href="#define-action">actions</a>.</p>
-	<p>The GM makes moves when:</p>
-	<ul class="og-list-disc">
-		<li>They gain the <a href="#define-spotlight">spotlight</a> after player fails an <a href="#define-action-roll">action roll</a> or <a href="#define-action-roll">rolls with Fear</a></li>
+	<p>The GM can <strong>GM moves</strong> at any time, which change the story in response to the PC's <a href="#define-action">actions</a>. The GM makes moves when they gain the <a href="#define-spotlight">spotlight</a> after a PC fails an <a href="#define-action-roll">action roll</a>. However, the GM can spend a <a href="#define-fear">Fear</a> to seize the <a href="#define-spotlight">spotlight</a>, even after a successful <a href="#define-action-roll">action roll</a>.</p>
+	<p>The GM might seize the spotlight when:</p>
+	<ul>
+		<li>A player rolls a <a href="#define-action-roll">success with Fear</a></li>
 		<li>A PC's <a href="#define-action">action</a> would create immediate consequences</li>
 		<li>Something provides a golden opportunity in the narrative</li>
-		<li>The players look to you for what happens next</li>
 	</ul>
-	<p>The frequency and severity of your GM moves should reflect the type and tone of the story, and be responsive to the PC's <a href="#define-action">action</a>&mdash;and of their <a href="#define-action-roll">action roll</a>.</p>
+	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p>The GM might also make a move without spending Fear if the spotlight is empty&mdash;for example, when players look to the GM for what happens next.</p>
+	</div>
+	<h4 class="h6">Softer and Harder Moves</h4>
+	<p>The frequency and severity of GM moves should reflect the type and tone of the story, and be responsive to the PC's <a href="#define-action">action</a>&mdash;and the results of their <a href="#define-action-roll">action roll</a>.</p>
 	<dl>
 		<dt>Softer Moves</dt>
 		<dd>Soft moves go easier on the players&mdash;they give the party new information about the scene and offer them an opportunity to react to it. Respond to <a href="#define-action-roll">roll with Hope</a> with a softer move.</dd>
@@ -10211,8 +10218,8 @@
 		<dd>Hard moves are harsher, more impactful, or more direct&mdash;the PCs can't interrupt, alter, or anticipate the outcome. Respond to <a href="#define-action-roll">rolls with Fear</a> with a harder move.</dd>
 	</dl>
 </div>
-<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p><strong>Editor's Notes &mdash;</strong> When the <a href="#define-spotlight">spotlight</a> swings to the GM after a failed <a href="#define-action-roll">action roll</a>, the first GM move doesn't require them to spend <a href="#define-fear">Fear</a>. However, the GM can spend Fear to make additional GM moves, for example, spotlighting additional <a href="#define-adversary">adversaries</a> to take an <a href="#define-adversary-action">adversary action</a>. The GM should avoid using GM moves to nullify the results of the PCs' successfull action rolls.</p>
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p>Avoid using GM moves to negate or "undo" a PC's success Each one should move the story forward.</p>
 </div>
 <div class="og-topbar">
 	<div id="define-gm-move-examples">
