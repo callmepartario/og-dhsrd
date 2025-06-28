@@ -291,7 +291,15 @@ html {
 	border-bottom: 0.25em solid #146;
 }
 
-/* light and dark mode iconography */
+/* images, light and dark mode iconography */
+
+.theme-light .d-dark {
+	display: none;
+}
+.theme-dark .d-light {
+	display: none;
+}
+
 img.og-icon { 
 	height: 1.1em;
 	width: 1.1em;
@@ -309,55 +317,67 @@ img.og-icon {
 	background-position: 100% 1.5rem;
 	background-size: 3.25rem 3.25rem;
 }
-.theme-light .og-domain-arcana {
+.og-tab-arcana,
+.og-tab-blade,
+.og-tab-bone,
+.og-tab-codex,
+.og-tab-grace,
+.og-tab-midnight,
+.og-tab-sage,
+.og-tab-splendor,
+.og-tab-valor {
+	background-position: 99% 50%;
+	background-repeat: no-repeat;
+}
+.theme-light .og-domain-arcana, .og-tab-arcana {
 	background-image: url(../images/domain-arcana-light.svg);
 }
 .theme-dark .og-domain-arcana {
 	background-image: url(../images/domain-arcana-dark.svg);
 }
-.theme-light .og-domain-blade {
+.theme-light .og-domain-blade, .og-tab-blade {
 	background-image: url(../images/domain-blade-light.svg);
 }
 .theme-dark .og-domain-blade {
 	background-image: url(../images/domain-blade-dark.svg);
 }
-.theme-light .og-domain-bone {
+.theme-light .og-domain-bone, .og-tab-bone {
 	background-image: url(../images/domain-bone-light.svg);
 }
 .theme-dark .og-domain-bone {
 	background-image: url(../images/domain-bone-dark.svg);
 }
-.theme-light .og-domain-codex {
+.theme-light .og-domain-codex, .og-tab-codex {
 	background-image: url(../images/domain-codex-light.svg);
 }
 .theme-dark .og-domain-codex {
 	background-image: url(../images/domain-codex-dark.svg);
 }
-.theme-light .og-domain-grace {
+.theme-light .og-domain-grace, .og-tab-grace {
 	background-image: url(../images/domain-grace-light.svg);
 }
 .theme-dark .og-domain-grace {
 	background-image: url(../images/domain-grace-dark.svg);
 }
-.theme-light .og-domain-midnight {
+.theme-light .og-domain-midnight, .og-tab-midnight {
 	background-image: url(../images/domain-midnight-light.svg);
 }
 .theme-dark .og-domain-midnight {
 	background-image: url(../images/domain-midnight-dark.svg);
 }
-.theme-light .og-domain-sage {
+.theme-light .og-domain-sage, .og-tab-sage {
 	background-image: url(../images/domain-sage-light.svg);
 }
 .theme-dark .og-domain-sage {
 	background-image: url(../images/domain-sage-dark.svg);
 }
-.theme-light .og-domain-splendor {
+.theme-light .og-domain-splendor, .og-tab-splendor {
 	background-image: url(../images/domain-splendor-light.svg);
 }
 .theme-dark .og-domain-splendor {
 	background-image: url(../images/domain-splendor-dark.svg);
 }
-.theme-light .og-domain-valor {
+.theme-light .og-domain-valor, .og-tab-valor {
 	background-image: url(../images/domain-valor-light.svg);
 }
 .theme-dark .og-domain-valor {
