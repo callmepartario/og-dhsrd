@@ -292,7 +292,82 @@ html {
 }
 
 /* light and dark mode iconography */
-img.og-icon { height: 1.25em; width: 1.25em; }
+img.og-icon { 
+	height: 1.1em;
+	width: 1.1em;
+	position: relative;
+	margin-right: 0.25rem;
+	top: -0.0625em;
+	display: inline-block;
+	white-space: pre;
+}
+.og-domain {
+	background-position: 100% 2rem;
+	background-size: 6rem 6rem;
+	background-repeat: no-repeat;
+}
+.tooltip-inner .og-domain {
+	background-position: 100% 1.5rem;
+	background-size: 3.25rem 3.25rem;
+}
+.theme-light .og-domain-arcana {
+	background-image: url(../images/domain-arcana-light.svg);
+}
+.theme-dark .og-domain-arcana {
+	background-image: url(../images/domain-arcana-dark.svg);
+}
+.theme-light .og-domain-blade {
+	background-image: url(../images/domain-blade-light.svg);
+}
+.theme-dark .og-domain-blade {
+	background-image: url(../images/domain-blade-dark.svg);
+}
+.theme-light .og-domain-bone {
+	background-image: url(../images/domain-bone-light.svg);
+}
+.theme-dark .og-domain-bone {
+	background-image: url(../images/domain-bone-dark.svg);
+}
+.theme-light .og-domain-codex {
+	background-image: url(../images/domain-codex-light.svg);
+}
+.theme-dark .og-domain-codex {
+	background-image: url(../images/domain-codex-dark.svg);
+}
+.theme-light .og-domain-grace {
+	background-image: url(../images/domain-grace-light.svg);
+}
+.theme-dark .og-domain-grace {
+	background-image: url(../images/domain-grace-dark.svg);
+}
+.theme-light .og-domain-midnight {
+	background-image: url(../images/domain-midnight-light.svg);
+}
+.theme-dark .og-domain-midnight {
+	background-image: url(../images/domain-midnight-dark.svg);
+}
+.theme-light .og-domain-sage {
+	background-image: url(../images/domain-sage-light.svg);
+}
+.theme-dark .og-domain-sage {
+	background-image: url(../images/domain-sage-dark.svg);
+}
+.theme-light .og-domain-splendor {
+	background-image: url(../images/domain-splendor-light.svg);
+}
+.theme-dark .og-domain-splendor {
+	background-image: url(../images/domain-splendor-dark.svg);
+}
+.theme-light .og-domain-valor {
+	background-image: url(../images/domain-valor-light.svg);
+}
+.theme-dark .og-domain-valor {
+	background-image: url(../images/domain-valor-dark.svg);
+}
+
+.og-recall { 
+	text-shadow: 1px 1px 0px #023;
+}
 #modeicon.theme-light { color: #000; }
 #modeicon.theme-dark { color: #fff; }
 
