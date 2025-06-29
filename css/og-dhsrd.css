@@ -890,3 +890,6 @@ body.theme-dark .tooltip-inner {
 	display: block; 
 	font-style: italic;
 }
+.tooltip-inner .og-item {
+	margin-bottom: 0.5rem;
+}
