@@ -630,12 +630,12 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 }
 
 .theme-light .og-ed {
-	color: #222829;
+	color: #146;
 	border-color: #64646d;
 	background-color: #e2ebe6 !important;
 }
 .theme-dark .og-ed {
-	color: #f2fcff;
+	color: #9cd;
 	border-color: #b1babb;
 	background-color: #313536 !important;
 }
@@ -650,7 +650,7 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .alert { 
 	border: 0.25rem solid #146;
 }
-.theme-light .alert, .theme-light .og-topbar { background-image: linear-gradient(180deg, #f2fcff, #ffffff); }
+.theme-light .alert, .theme-light .og-topbar { background-image: linear-gradient(180deg, #f2fcff, #f8fdfe); }
 .theme-dark .alert, .theme-dark .og-topbar { background-image: linear-gradient(180deg, #222829, #111415); }
 
 /* quick-reference */
