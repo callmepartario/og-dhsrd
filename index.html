@@ -110,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.93b (2025-06-29)</p>
+<p class="small text-center">version 0.93c (2025-06-29)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -366,16 +366,109 @@
 	</div>
 </div>
 <hr>
-<h3 id="step-4">Step 4<a class="og-h-anchor" href="#step-4" title="Permalink" aria-hidden="true"></a></h3>
-<ul class="og-list-inline og-ref og-omit"><li>Page 18</li></ul>
-<p class="lead">Record additional PC information.</p>
-<ul class="og-list-disc">
-	<li><strong>Level:</strong> You are <a href="#define-level">Level 1</a>.</li>
-	<li><strong>Evasion:</strong> Your <a href="#define-evasion">Evasion</a> score represents your ability to defend yourself and avoid danger. Your Evasion score is determined by your <a href="#define-class">class</a>, but it might have been modified by your <a href="#define-character-creation">heritage</a>.</li>
-	<li><strong>Hit Points:</strong> <a href="#define-hit-point">Hit Points</a> are an abstract measurement of physical health. Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-character-creation">heritage</a>.</li>
-	<li><strong>Stress:</strong> <a href="#define-stress">Stress</a> reflects your ability to withstand the physical, mental, and emotional strain of dangerous situations. You start with 6 Stress slots, but they might have been modified by your <a href="#define-character-creation">heritage</a>.</li>
-	<li><strong>Hope:</strong> You start with 2 <a href="#define-hope">Hope</a>, which you can spend to activate your <a href="#define-class">class</a> Hope Feature, or any other features allow or require it.</li>
-</ul>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<h3 id="step-4">Step 4<a class="og-h-anchor" href="#step-4" title="Permalink" aria-hidden="true"></a></h3>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 18</li></ul>
+		<p class="lead">Record additional PC information.</p>
+		<ul class="og-list-disc">
+			<li><strong>Level:</strong> You are <a href="#define-level">Level 1</a>.</li>
+			<li><strong>Evasion:</strong> Your <a href="#define-evasion">Evasion</a> score represents your ability to defend yourself and avoid danger. Your Evasion score is determined by your <a href="#define-class">class</a>, but it might have been modified by your <a href="#define-ancestry">ancestry</a>.</li>
+			<li><strong>Hit Points:</strong> <a href="#define-hit-point">Hit Points</a> are an abstract measurement of physical health. Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-ancestry">ancestry</a>.</li>
+			<li><strong>Stress:</strong> <a href="#define-stress">Stress</a> reflects your ability to withstand the physical, mental, and emotional strain of dangerous situations. You start with 6 Stress slots, but they might have been modified by your <a href="#define-ancestry">ancestry</a>.</li>
+			<li><strong>Hope:</strong> You start with 2 <a href="#define-hope">Hope</a>, which you can spend to activate your <a href="#define-class">class</a> Hope Feature, or any other features allow or require it.</li>
+		</ul>
+	</div>
+	<div class="col-12 col-md-6">
+		<h4 class="h6">Starting Hit Points and Evasion</h4>
+		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Starting Hit Points and Evasion</caption>
+			<thead>
+				<tr>
+					<th scope="col">Class</th>
+					<th class="text-end" scope="col">Hit Points</th>
+					<th class="text-center" scope="col">Evasion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-bard">Bard</a></th>
+					<td class="text-end">10</td>
+					<td class="text-center">5</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-druid">Druid</a></th>
+					<td class="text-end">10</td>
+					<td class="text-center">6</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-guardian">Guardian</a></th>
+					<td class="text-end">9</td>
+					<td class="text-center">7</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-ranger">Ranger</a></th>
+					<td class="text-end">12</td>
+					<td class="text-center">6</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-rogue">Rogue</a></th>
+					<td class="text-end">12</td>
+					<td class="text-center">6</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-seraph">Seraph</a></th>
+					<td class="text-end">9</td>
+					<td class="text-center">7</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-sorcerer">Sorcerer</a></th>
+					<td class="text-end">10</td>
+					<td class="text-center">6</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-warrior">Warrior</a></th>
+					<td class="text-end">11</td>
+					<td class="text-center">6</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-wizard">Wizard</a></th>
+					<td class="text-end">11</td>
+					<td class="text-center">5</td>
+				</tr>
+			</tbody>
+		</table></div>
+		<h4 class="h6">Ancestry Modifiers</h4>
+		<p>If you chose one of the following as part of your <a href="#step-2">heritage</a>, modify accordingly:</p>
+		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Ancestry Modifiers</caption>
+			<thead>
+				<tr>
+					<th scope="col">Ancestry</th>
+					<th scope="col">Feature</th>
+					<th scope="col">Modification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-giant">Giant</a></th>
+					<td>Endurance</td>
+					<td>+1 <a href="#define-hit-point">Hit Point</a></td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-human">Human</a></th>
+					<td>High Stamina</td>
+					<td>+1 <a href="#define-stress">Stress</a> slot</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-simah">Simah</a></th>
+					<td>Nimble</td>
+					<td>+1 <a href="#define-evasion">Evasion</a></td>
+				</tr>
+			</tbody>
+		</table></div>
+	</div>
+</div>
 <hr>
 <div class="row">
 	<div class="col-12 col-md-6">
@@ -387,9 +480,6 @@
 			<li>One two-handed <a href="#weapons-primary">primary weapon</a></li>
 			<li>One one-handed <a href="#weapons-primary">primary weapon</a> and one <a href="#weapons-secondary">secondary weapon</a></li>
 		</ul>
-		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>Each weapon lists the <a href="#define-trait">trait</a> <a href="#define-procedure">modifier</a> added to <a href="#define-attack-roll">attack rolls</a> made with the weapon.</p>
-		</div>
 		<p>Next, record your <strong>Proficiency</strong> and <strong>damage</strong> for your chosen weapons:</p>
 		<ul class="og-list-disc">
 			<li><strong>Proficiency:</strong> You start with a <a href="#define-damage-roll">Proficiency</a> of 1.</li>
@@ -400,77 +490,6 @@
 			<li><strong>Armor Score:</strong> Record your <a href="#define-armor">Armor Slots</a>, determined by your armor's <strong>Base Score</strong> (plus any bonuses from other features that modify your Armor Score).</li>
 			<li><strong>Damage Threshold:</strong> Calculate your Major and Severe <a href="#define-hit-point">damage thresholds</a>. Start with the numbers listed in your armor's <strong>Base Thresholds</strong> and add your <a href="#define-level">level</a> (plus any bonuses from other features that modify your <a href="#define-hit-point">damage thresholds</a>) to each.</li>
 		</ul>
-	</div>
-	<div class="col-12 col-md-6">
-		<h3 class="h6">Suggested Weapons and Armor</h3>
-		<p>You can use these suggestions for each <a href="#define-class">class</a>:</p>
-		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-			<caption>Suggested Weapons and Armor</caption>
-			<thead>
-				<tr>
-					<th scope="col">Class</th>
-					<th class="text-center" scope="col">Primary Weapon</th>
-					<th class="text-center" scope="col">Secondary Weapon</th>
-					<th class="text-center" scope="col">Armor</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-bard">Bard</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-physical">Rapier</a></td>
-					<td class="text-center og-nowrap"><a href="#weapons-secondary-tier-1">Small Dagger</a></td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Gambeson Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-druid">Druid</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-magic">Shortstaff</a></td>
-					<td class="text-center og-nowrap"><a href="#weapons-secondary-tier-1">Round Shield</a></td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Leather Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-guardian">Guardian</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-physical">Battleaxe</a></td>
-					<td class="text-center og-nowrap">&mdash;</td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Chainmail Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-ranger">Ranger</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-physical">Shortbow</a></td>
-					<td class="text-center og-nowrap">&mdash;</td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Leather Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-rogue">Rogue</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-physical">Dagger</a></td>
-					<td class="text-center og-nowrap"><a href="#weapons-secondary-tier-1">Small Dagger</a></td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Gambeson Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-seraph">Seraph</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-magic">Hallowed Axe</a></td>
-					<td class="text-center og-nowrap"><a href="#weapons-secondary-tier-1">Round Shield</a></td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Chainmail Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-sorcerer">Sorcerer</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-magic">Dualstaff</a></td>
-					<td class="text-center og-nowrap">&mdash;</td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Gambeson Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-warrior">Warrior</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-physical">Longsword</a></td>
-					<td class="text-center og-nowrap">&mdash;</td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Chainmail Armor</a></td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-wizard">Wizard</a></th>
-					<td class="text-center og-nowrap"><a href="#weapons-primary-tier-1-magic">Greatstaff</a></td>
-					<td class="text-center og-nowrap">&mdash;</td>
-					<td class="text-center og-nowrap"><a href="#armor-tier-1">Leather Armor</a></td>
-				</tr>
-			</tbody>
-		</table></div>
 		<h3 class="h6">Inventory</h3>
 		<p>Add the following items to your <strong>Inventory</strong>:</p>
 		<ul class="og-list-disc">
@@ -482,6 +501,245 @@
 			<li>Basic supplies</li>
 			<li>Additional items the GM approves</li>
 		</ul>
+	</div>
+	<div class="col-12 col-md-6">
+		<h3 class="h6">Suggested Weapons and Armor</h3>
+		<p>You can use these suggestions for each <a href="#define-class">class</a>:</p>
+		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Suggested Weapons and Armor</caption>
+			<thead>
+				<tr>
+					<th scope="col">Class</th>
+					<th scope="col">Equipment</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-bard">Bard</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Rapier</strong>
+								<span class="og-divider"><a href="#define-agility">Agility</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d8 <a href="#define-damage-type">phy</a></span>
+							</li>
+							<li class="d-block">
+								<strong><em>Secondary:</em> Small Dagger</strong>
+								<span class="og-divider"><a href="#define-finesse">Finesse</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d8 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider og-wrap"><em>Paired:</em> +2 to primary weapon damage to targets within <a href="#define-range">Melee</a> range</span>
+							</li>
+							<li>
+								<strong>Gambeson Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 3/11</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 3</span>
+								<span class="og-divider og-wrap"><em>Flexible:</em> +1 to <a href="#define-evasion">Evasion</a></span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-druid">Druid</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Shortstaff</strong>
+								<span class="og-divider"><a href="#define-instinct">Instinct</a></span>
+								<span class="og-divider"><a href="#define-range">Close</a></span>
+								<span class="og-divider">d8+1 <a href="#define-damage-type">mag</a></span>
+							</li>
+							<li class="d-block">
+								<strong><em>Secondary:</em> Round Shield</strong>
+								<span class="og-divider"><a href="#define-strength">Strength</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d4 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider og-wrap"><em>Protective:</em> +1 to <a href="#define-armor">Armor Score</a></span>
+							</li>
+							<li class="d-block">
+								<strong>Leather Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 6/13</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 3</span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-guardian">Guardian</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Battleaxe</strong>
+								<span class="og-divider"><a href="#define-strength">Strength</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d10+3 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider"><a href="#define-weapon">Two-Handed</a></span>
+							</li>
+							<li class="d-block">
+								<strong>Chainmail Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 7/15</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 4</span>
+								<span class="og-divider og-wrap"><em>Heavy:</em> &minus;1 to <a href="#define-evasion">Evasion</a></span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-ranger">Ranger</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Shortbow</strong>
+								<span class="og-divider">Agility</span>
+								<span class="og-divider">Far</span>
+								<span class="og-divider">d6+3 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider"><a href="#define-weapon">Two-Handed</a></span>
+							</li>
+							<li class="d-block">
+								<strong>Leather Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 6/13</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 3</span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-rogue">Rogue</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Dagger</strong>
+								<span class="og-divider"><a href="#define-finesse">Finesse</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d8+1 <a href="#define-damage-type">phy</a></span>
+							</li>
+							<li class="d-block">
+								<strong><em>Secondary:</em> Small Dagger</strong>
+								<span class="og-divider"><a href="#define-finesse">Finesse</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d8 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider og-wrap"><em>Paired:</em> +2 to primary weapon damage to targets within <a href="#define-range">Melee</a> range</span>
+							</li>
+							<li>
+								<strong>Gambeson Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 3/11</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 3</span>
+								<span class="og-divider og-wrap"><em>Flexible:</em> +1 to <a href="#define-evasion">Evasion</a></span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-seraph">Seraph</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Hallowed Axe</strong>
+								<span class="og-divider"><a href="#define-strength">Strength</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d8+1 <a href="#define-damage-type">mag</a></span>
+							</li>
+							<li class="d-block">
+								<strong><em>Secondary:</em> Round Shield</strong>
+								<span class="og-divider"><a href="#define-strength">Strength</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d4 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider og-wrap"><em>Protective:</em> +1 to <a href="#define-armor">Armor Score</a></span>
+							</li>
+							<li class="d-block">
+								<strong>Chainmail Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 7/15</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 4</span>
+								<span class="og-divider og-wrap"><em>Heavy:</em> &minus;1 to <a href="#define-evasion">Evasion</a></span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-sorcerer">Sorcerer</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Dualstaff</strong>
+								<span class="og-divider"><a href="#define-instinct">Instinct</a></span>
+								<span class="og-divider"><a href="#define-range">Far</a></span>
+								<span class="og-divider">d6+3 <a href="#define-damage-type">mag</a></span>
+								<span class="og-divider"><a href="#define-weapon">Two-Handed</a></span>
+							</li>
+							<li>
+								<strong>Gambeson Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 3/11</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 3</span>
+								<span class="og-divider og-wrap"><em>Flexible:</em> +1 to <a href="#define-evasion">Evasion</a></span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-warrior">Warrior</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Longsword</strong>
+								<span class="og-divider"><a href="#define-agility">Agility</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d10+3 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider"><a href="#define-weapon">Two-Handed</a></span>
+							</li>
+							<li class="d-block">
+								<strong>Chainmail Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>:: 7/15</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 4</span>
+								<span class="og-divider og-wrap"><em>Heavy:</em> &minus;1 to <a href="#define-evasion">Evasion</a></span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-wizard">Wizard</a></th>
+					<td>
+						<ul class="og-list-inline">
+							<li class="d-block">
+								<strong><em>Primary:</em> Greatstaff</strong>
+								<span class="og-divider"><a href="#define-knowledge">Knowledge</a></span>
+								<span class="og-divider"><a href="#define-range">Melee</a></span>
+								<span class="og-divider">d10+3 <a href="#define-damage-type">phy</a></span>
+								<span class="og-divider"><a href="#define-weapon">Two-Handed</a></span>
+								<span class="og-divider og-wrap"><em>Powerful:</em> On a successful <a href="#define-attack-roll">attack</a>, roll an additional <a href="#define-damage-roll">damage die</a> and discard the lowest result.</span>
+							</li>
+							<li class="d-block">
+								<strong>Leather Armor</strong>
+								<span class="og-divider"><a href="#define-hit-point">Base Thresholds</a>: 6/13</span>
+								<span class="og-divider"><a href="#define-armor">Base Armor Score</a>: 3</span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table></div>
+		<h4 class="h6">Ancestry Modifiers</h4>
+		<p>If you chose one of the following as part of your <a href="#step-2">heritage</a>, modify accordingly:</p>
+		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Ancestry Modifiers</caption>
+			<thead>
+				<tr>
+					<th scope="col">Ancestry</th>
+					<th scope="col">Feature</th>
+					<th scope="col">Modification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-galapa">Galapa</a></th>
+					<td>Shell</td>
+					<td>Add <a href="#define-damage-roll">Proficiency</a> (+1 at <a href="#define-level">Level 1</a>) to Major and Severe <a href="#define-hit-point">damage thresholds</a></td>
+				</tr>
+			</tbody>
+		</table></div>
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>When calculating your final <a href="#define-hit-point">damage threshold</a>, be sure to add your <a href="#define-level">level</a> (minimum of 1)!</p>
+		</div>
 	</div>
 </div>
 <hr>
@@ -6194,7 +6452,7 @@
     <p><em>Seaborne are often candid, cooperative, exuberant, fierce, resolute, and weathered.</em></p>
     <h4 class="h6">Community Feature</h4>
     <ul class="list-unstyled">
-        <li><p><strong><em>Know the Tide:</em></strong> You can sense the ebb and flow of life. When you roll with Fear, place a token on your community card. You can hold a number of tokens equal to your <a href="#define-level">level</a>. Before you make an action roll, you can spend any number of these tokens to gain a +1 bonus to the roll for each token spent. At the end of each session, clear all unspent tokens.</p></li>
+        <li><p><strong><em>Know the Tide:</em></strong> You can sense the ebb and flow of life. When you <a href="#define-action-roll">roll with Fear</a>, place a token on your community card. You can hold a number of tokens equal to your <a href="#define-level">level</a>. Before you make an <a href="#define-action-roll">action roll</a>, you can spend any number of these tokens to gain a +1 bonus to the roll for each token spent. At the end of each session, clear all unspent tokens.</p></li>
     </ul>
 </div>
 <hr>
@@ -6227,7 +6485,7 @@
     <p><em>Wanderborne are often inscrutable, magnanimous, mirthful, reliable, savvy, and unorthodox.</em></p>
     <h4 class="h6">Community Feature</h4>
     <ul class="list-unstyled">
-        <li><p><strong><em>Nomadic Pack:</em></strong> Add a Nomadic Pack to your inventory. Once per session, you can spend a Hope to reach into this pack and pull out a mundane item that's useful to your situation. Work with the GM to figure out what item you take out.</p></li>
+        <li><p><strong><em>Nomadic Pack:</em></strong> Add a <strong><em>Nomadic Pack</em></strong> to your inventory. Once per session, you can <strong><a href="#define-hope">spend a Hope</a></strong> to reach into this pack and pull out a mundane item that's useful to your situation. Work with the GM to figure out what item you take out.</p></li>
     </ul>
 </div>
 <hr>
