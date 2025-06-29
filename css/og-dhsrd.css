@@ -439,8 +439,6 @@ img.theme-dark { display: block !important; }
 
 .theme-dark img.og-image { filter: invert(1); }
 
-.og-nowrap { white-space: nowrap; }
-
 /* header overrides */
 h1 { 
 	font-size: 3rem;
@@ -724,7 +722,7 @@ ul.og-list-inline {
 ul.og-list-inline li {
 	display: inline-block;
 	padding-right: 0.75rem;
-	white-space: nowrap;
+	white-space: normal;
 }
 ul.og-list-inline li::before {
 	position: relative;
@@ -796,6 +794,13 @@ ul.og-list-hang li ul li {
 	height: 1rem;
 	margin-right: 0.5rem;
 }
+
+.og-nowrap { white-space: nowrap; }
+.og-wrap {
+	display: block;
+	white-space: normal !important; 
+}
+
 
 /* page references */
 ul.og-ref {
