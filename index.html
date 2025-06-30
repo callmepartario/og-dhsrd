@@ -110,7 +110,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.93e (2025-06-30)</p>
+<p class="small text-center">version 0.93g (2025-06-30)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -141,7 +141,7 @@
 				<li>Condense the SRD into fewer, more complete sections</li>
 				<li>Page number references for corresponding sections of the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a>, so readers can easily "get on the same page" to grapple with the text.</li>
 				<li>Provide complete information&mdash;avoid referencing a character sheet or card a reader can't access</li>
-				<li>Organize information for new players and GMs&mdash;specially those who have never played a TTRPG, and own minimal kit</li>
+				<li>Organize information for new players and GMs&mdash;especially those who have never played a TTRPG, and own minimal kit</li>
 				<li>Edit explanations and instructions ("the rules") with <a href="https://plainlangauge.gov">plain language</a> and digital accessibility in mind&mdash;preserve language of character options, domain cards, and stat blocks</li>
 				<li>Provide inline conversions from imperial to metric units</li>
 				<li>Correct suspected misprints and increase consistency in formatting of game terms</li>
@@ -374,8 +374,8 @@
 		<ul class="og-list-disc">
 			<li><strong>Level:</strong> You are <a href="#define-level">Level 1</a>.</li>
 			<li><strong>Evasion:</strong> Your <a href="#define-evasion">Evasion</a> score represents your ability to defend yourself and avoid danger. Your Evasion score is determined by your <a href="#define-class">class</a>, but it might have been modified by your <a href="#define-ancestry">ancestry</a>.</li>
-			<li><strong>Hit Points:</strong> <a href="#define-hit-point">Hit Points</a> are an abstract measurement of physical health. Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-ancestry">ancestry</a>.</li>
-			<li><strong>Stress:</strong> <a href="#define-stress">Stress</a> reflects your ability to withstand the physical, mental, and emotional strain of dangerous situations. You start with 6 Stress slots, but they might have been modified by your <a href="#define-ancestry">ancestry</a>.</li>
+			<li><strong>Hit Points:</strong> <a href="#define-hit-point">Hit Points</a> are an abstract measurement of physical health. Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-class=">subclass</a> or <a href="#define-ancestry">ancestry</a>.</li>
+			<li><strong>Stress:</strong> <a href="#define-stress">Stress</a> reflects your ability to withstand the physical, mental, and emotional strain of dangerous situations. You start with 6 Stress slots, but they might have been modified by your <a href="#define-class=">subclass</a> or <a href="#define-ancestry">ancestry</a>.</li>
 			<li><strong>Hope:</strong> You start with 2 <a href="#define-hope">Hope</a>, which you can spend to activate your <a href="#define-class">class</a> Hope Feature, or any other features allow or require it.</li>
 		</ul>
 	</div>
@@ -439,7 +439,7 @@
 			</tbody>
 		</table></div>
 		<h4 class="h6">Ancestry Modifiers</h4>
-		<p>If you chose one of the following as part of your <a href="#step-2">heritage</a>, modify accordingly:</p>
+		<p>If you gained one of the following features from your <a href="#define-ancestry">ancestry</a>, modify accordingly:</p>
 		<div class="table-responsive og-omit small"><table class="table table-light table-striped table-sm mb-3">
 			<caption>Ancestry Modifiers</caption>
 			<thead>
@@ -464,6 +464,30 @@
 					<th class="fw-normal" scope="row"><a href="#define-simiah">Simiah</a></th>
 					<td>Nimble</td>
 					<td>+1 <a href="#define-evasion">Evasion</a></td>
+				</tr>
+			</tbody>
+		</table></div>
+		<h4 class="h6">Class Modifiers</h4>
+		<p>If you chose one of the following <a href="#define-subclass">subclasses</a>, modify accordingly:</p>
+		<div class="table-responsive og-omit small"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Class Modifiers</caption>
+			<thead>
+				<tr>
+					<th scope="col">Class</th>
+					<th scope="col">Subclass</th>
+					<th scope="col">Modification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-guardian">Guardian</a></th>
+					<td><a href="#define-guardian-vengeance">Vengeance</a></td>
+					<td>+1 <a href="#define-stress">Stress</a> slot</td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-wizard">Wizard</a></th>
+					<td><a href="#define-wizard-school-of-war">School of War</a></td>
+					<td>+1 <a href="#define-hit-point">Hit Point</a></td>
 				</tr>
 			</tbody>
 		</table></div>
@@ -718,8 +742,11 @@
 				</tr>
 			</tbody>
 		</table></div>
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>When calculating your final <a href="#define-hit-point">damage threshold</a>, be sure to add your <a href="#define-level">level</a> (minimum of 1)!</p>
+		</div>
 		<h4 class="h6">Ancestry Modifiers</h4>
-		<p>If you chose one of the following as part of your <a href="#step-2">heritage</a>, modify accordingly:</p>
+		<p>If you gained one of the following features from your <a href="#define-ancestry">ancestry</a>, modify accordingly:</p>
 		<div class="table-responsive og-omit small"><table class="table table-light table-striped table-sm mb-3">
 			<caption>Ancestry Modifiers</caption>
 			<thead>
@@ -733,13 +760,34 @@
 				<tr>
 					<th class="fw-normal" scope="row"><a href="#define-galapa">Galapa</a></th>
 					<td>Shell</td>
-					<td>Add <a href="#define-damage-roll">Proficiency</a> (+1 at <a href="#define-level">Level 1</a>) to Major and Severe <a href="#define-hit-point">damage thresholds</a></td>
+					<td>Add <a href="#define-damage-roll">Proficiency</a> (+1 at <a href="#define-level">Level 1</a>) to <a href="#define-hit-point">damage thresholds</a></td>
 				</tr>
 			</tbody>
 		</table></div>
-		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>When calculating your final <a href="#define-hit-point">damage threshold</a>, be sure to add your <a href="#define-level">level</a> (minimum of 1)!</p>
-		</div>
+		<h4 class="h6">Class Modifiers</h4>
+		<p>If you chose one of the following <a href="#define-subclass">subclasses</a>, modify accordingly:</p>
+		<div class="table-responsive og-omit small"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Class Modifiers</caption>
+			<thead>
+				<tr>
+					<th scope="col">Class</th>
+					<th scope="col">Subclass</th>
+					<th scope="col">Modification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-guardian">Guardian</a></th>
+					<td><a href="#define-guardian-stalwart">Stalwart</a></td>
+					<td>+1 to <a href="#define-hit-point">damage thresholds</a></td>
+				</tr>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-seraph">Seraph</a></th>
+					<td><a href="#define-seraph-divine-wielder">Divine Wielder</a></td>
+					<td>You can make weapon attacks within <a href="#define-range">Close</a> range&mdash;even if your weapon has a <a href="#define-range">Melee</a> or <a href="#define-range">Very Close</a> range; the actual weapon properties are unchanged</td>
+				</tr>
+			</tbody>
+		</table></div>
 	</div>
 </div>
 <hr>
@@ -793,7 +841,7 @@
 			<th class="fw-normal" scope="row"><a href="#define-ranger">Ranger</a></th>
 			<td>
 				<ul class="og-list-disc mb-0">
-					<li>A terrible creature hurt your community, and you've vowed to hunt them down. What are they, and what unique trail or sign do they leav e behind?</li>
+					<li>A terrible creature hurt your community, and you've vowed to hunt them down. What are they, and what unique trail or sign do they leave behind?</li>
 					<li>Your first kill almost killed you, too. What was it, and what part of you was never the same after that event?</li>
 					<li>You've traveled many dangerous lands, but what is the one place you refuse to go?</li>
 				</ul>
@@ -962,15 +1010,36 @@
 				</tr>
 			</tbody>
 		</table></div>
+		<h4 class="h6">Class Modifiers</h4>
+		<p>If you chose one of the following <a href="#define-subclass">subclasses</a>, modify accordingly:</p>
+		<div class="table-responsive og-omit small"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Class Modifiers</caption>
+			<thead>
+				<tr>
+					<th scope="col">Class</th>
+					<th scope="col">Subclass</th>
+					<th scope="col">Modification</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="fw-normal" scope="row"><a href="#define-wizard">Wizard</a></th>
+					<td><a href="#define-wizard-school-of-knowledge">School of Knowledge</a></td>
+					<td>+1 <a href="#define-domain-card">domain card</a></td>
+				</tr>
+			</tbody>
+		</table></div>
 	</div>
 	<div class="col-12 col-sm-6 og-omit">
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>Review each of your chosen <a href="#define-domain-card">domain cards</a> to determine if you gained permanent bonuses that modify your stats&mdash;for example, <a href="#define-domain-card-untouchable">Untouchable</a> or <a href="#define-domain-card-bare-bones">Bare Bones</a>.</p>
+		</div>
 		<div id="define-domain-wheel">
 			<img class="img-fluid d-light" src="images/class-domain-wheel-light.svg" alt="Classes and Domains" aria-hidden="true">
 			<img class="img-fluid d-dark" src="images/class-domain-wheel-dark.svg" alt="Classes and Domains" aria-hidden="true">
 		</div>
 	</div>
 </div>
-
 <hr>
 <h3 id="step-9">Step 9<a class="og-h-anchor" href="#step-9" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 21</li><li>Page 29</li><li>Page 31</li><li>Page 37</li><li>Page 39</li><li>Page 43</li><li>Page 45</li><li>Page 47</li><li>Page 49</li><li>Page 51</li></ul>
@@ -2177,7 +2246,7 @@
 <div id="define-beastbound-companion-advancement">
 	<h5 id="ranger-companion-levels">Companion Levels<a class="og-h-anchor" href="#ranger-companion-levels" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 40</li></ul>
-	<p>When your character gains a <a href="#define-level">levels</a>, choose one available option for your <a href="#define-beastbound-companion">companion</a> from the following list. Options with multiple slots can be chosen more than once. When you choose an advancement, mark one of its slots.</p>
+	<p>When you gain a <a href="#define-level">level</a>, choose one available option for your <a href="#define-beastbound-companion">companion</a> from the following list. Options with multiple slots can be chosen more than once. When you choose an advancement, mark one of its slots.</p>
 	<p>Additionally, whenever you gain a new <a href="#define-experience">Experience</a> by reaching a new <a href="#define-tier">tier</a>, your companion also gains a new <a href="#define-experience">Experience</a> at +2.</p>
 	<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
 		<caption>Ranger Companion Advancements</caption>
@@ -2717,7 +2786,7 @@
 				<dt>Type</dt>
 				<dd>There are three types of domain cards: <strong>abilities</strong>, <strong>spells</strong>, and <strong>grimoires</strong>. <strong>Abilities</strong> are non-magical. <strong>Spells</strong> are magical. <strong>Grimoires</strong> (unique to the <a href="#define-codex">Codex</a> domain) grant access to a several less potent spells.</dd>
 				<dt>Usage Limits</dt>
-				<dd>Some domain cards restricts how often it can be used. If a card grants you number of uses equal to a trait with a modifier of +0 or less, you can't use it.</dd>
+				<dd>Some domain cards restricts how often it can be used. If a card has number of uses equal to a <a href="#define-trait">trait</a> with a <a href="#define-modifier">modifier</a> of +0 or less, you can't use it.</dd>
 			</dl>
 		</div>
 	</div>
@@ -3995,7 +4064,7 @@
             <li class="fw-bold">Level 1 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 1<span class="og-recall" aria-hidden="true">&#9889;</span></li>
             <li class="mt-3">
-                <p>When you roll your damage dice, you can reroll any 1s or 2s.</p>
+                <p>When you roll your <a href="#define-damage-roll">damage dice</a>, you can reroll any 1s or 2s.</p>
             </li>
         </ul>
     </div></div></div>
@@ -4006,7 +4075,7 @@
             <li class="fw-bold">Level 1 Blade Ability</li>
             <li class="fw-bold">Recall Cost: 0<span class="og-recall" aria-hidden="true">&#9889;</span></li>
             <li class="mt-3">
-                <p>When you make a successful attack against a target within <a href="#define-range">Very Close</a> range, you can <strong><a href="#define-hope">spend a Hope</a></strong> to use the attack against all other targets within <a href="#define-range">Very Close</a> range.<!--All additional adversaries you succeed against with this ability take half damage.--></p>
+                <p>When you make a successful attack against a target within <a href="#define-range">Very Close</a> range, you can <strong><a href="#define-hope">spend a Hope</a></strong> to use the attack against all other targets within <a href="#define-range">Very Close</a> range.</p>
             </li>
         </ul>
     </div></div></div>
@@ -6853,7 +6922,7 @@
 <p>Increase all <a href="#define-hit-point">damage thresholds</a> by 1.</p>
 <h4 id="level-up-step-4">Step 4: Domain Cards<a class="og-h-anchor" href="#level-up-step-4" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
-<p>Acquire a new <a href="#define-domain-card">domain card</a> at your level or lower from one of the <a href="#define-domain">domains</a> for your <a href="#define-class">class</a> and add it to your <a href="#define-loadout">loadout or vault</a>. If your loadout is already full, you can immediately exchange your a card into your loadout to make room. Otherwise, the new card enters your <a href="#define-loadout">vault</a>.</p>
+<p>Acquire a new <a href="#define-domain-card">domain card</a> at your level or lower from one of the <a href="#define-domain">domains</a> for your <a href="#define-class">class</a> and add it to your <a href="#define-loadout">loadout or vault</a>. If your loadout is already full, you can immediately exchange a card into your loadout to make room. Otherwise, the new card enters your <a href="#define-loadout">vault</a>.</p>
 <p>You can also exchange one domain card you've previously acquired for a different domain card of the same level or lower.</p>
 <hr>
 <div id="define-equipment">
@@ -7932,7 +8001,7 @@
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Gilded Bow</th>
-            <td class="text-center og-nowrap">Finese</td>
+            <td class="text-center og-nowrap">Finesse</td>
             <td class="text-center og-nowrap">Far</td>
             <td class="text-center og-nowrap">d6+7 mag</td>
             <td class="text-center og-nowrap">Two-Handed</td>
@@ -9969,7 +10038,7 @@
 	<h5 class="h6">Critical Success</h5>
 	<p>If your Duality Dice results are equal, the result is  <strong>Critical Success (Crit)</strong>, a special kind of <strong>Success with Hope</strong>. In addition to gaining 1 <a href="#define-hope">Hope</a>, the outcome exceeds your expectations, and you clear 1 <a href="#define-stress">Stress</a>. If the roll is an <a href="#define-attack-roll">attack roll</a>, it deals <a href="#define-damage-roll">critical damage</a>.</p>
 	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p>Every time you roll your Duality Dice, the scene changes&mdash;there are no rolls where "nothing happens". After resolving the action roll, work together to weave the outcome into the narrative. For more informaton, see <a href="#resolving-actions">Resolving Actions</a>.</p>
+		<p>Every time you roll your Duality Dice, the scene changes&mdash;there are no rolls where "nothing happens". After resolving the action roll, work together to weave the outcome into the narrative. For more information, see <a href="#resolving-actions">Resolving Actions</a>.</p>
 	</div>
 	<h5 class="h6">The GM's Die</h5>
 	<p>When an <a href="#define-adversary">adversary</a> opposes the PCs, the GM rolls the <strong>GM's Die</strong>&mdash;a <strong>d20</strong>&mdash;instead of <a href="#define-action-roll">Duality Dice</a>, applying appropriate <a href="#define-procedure">modifiers</a> to the result.</p>
@@ -10355,7 +10424,7 @@
 		<dt>Vulnerable</dt>
 		<dd>Rolls against <em>Vulnerable</em> characters have <a href="#define-advantage">advantage</a>.</dd>
 		<dt>Temporary Conditions</dt>
-		<dd>PCs can usually clear a temporary condition with a successful <a href="#define-trait-roll">trait roll</a>. An <a href="#define-adversary">adversary</a> clears them with a <a href="#define-adversary-action">adversary action</a>.</dd>
+		<dd>PCs can usually clear a temporary condition with a successful <a href="#define-trait-roll">trait roll</a>. An <a href="#define-adversary">adversary</a> clears them with an <a href="#define-adversary-action">adversary action</a>.</dd>
 		<dt>Special Conditions</dt>
 		<dd>Special conditions be cleared only after specific requirements are met, for example, completing a certain <a href="#define-action">action</a> or using a particular item.</dd>
 	</dl>
@@ -10969,7 +11038,7 @@
 <ul class="og-list-inline og-ref og-omit"><li>Page 148</li><li>Page 149</li><li>Page 150</li></ul>
 <p>When a PC makes <a href="#define-action">move</a>:</p>
 <ul class="og-list-disc">
-	<li><strong>No Roll:</strong> The GM does't need to call for <a href="#define-action-roll">action roll</a> in response to everything the PCs do. Instead, their <a href="#define-experience">Experiences</a>, the pressure they're under, and interesting outcomes for the <a href="#define-action">action</a>. It might be best if the PC succeeds automatically, or you can provide them an opportunity to forgo an <a href="#define-action">action roll</a> in exchange for an interesting, logical, and story-based outcome, cost, or complication.</li>
+	<li><strong>No Roll:</strong> The GM doesn't need to call for <a href="#define-action-roll">action roll</a> in response to everything the PCs do. Instead, their <a href="#define-experience">Experiences</a>, the pressure they're under, and interesting outcomes for the <a href="#define-action">action</a>. It might be best if the PC succeeds automatically, or you can provide them an opportunity to forgo an <a href="#define-action">action roll</a> in exchange for an interesting, logical, and story-based outcome, cost, or complication.</li>
 	<li><strong>Action Roll:</strong> During the <a href="#define-procedure">action roll procedure</a>, the GM should communicate the stakes of the <A href="#define-action-roll">action roll</a>&mdash;including any unavoidable consequences&mdash;before <a href="#define-action-roll">Duality Dice</a> are rolled.</li>
 </ul>
 <p>If an outcome is not obvious, the GM should try one of the following:</p>
@@ -11203,7 +11272,7 @@
 			<li>Confronting the PCs with internal and external conflicts</li>
 			<li>Raising the stakes by spending <a href="#define-fear">Fear</a></li>
 			<li>Layering <a href="#define-random-objectives">goals other than attrition</a> into <a href="#define-combat">combat</a></li>
-			<li>Using a variety of teaching tools, for example visual represeantations of things</li>
+			<li>Using a variety of teaching tools, for example visual representations of things</li>
 		</ul>
 	</div>
 	<div class="col-12 col-md-6">
@@ -11715,7 +11784,7 @@
 	<h3 id="npcs">NPCs<a class="og-h-anchor" href="#npcs" title="Permalink" aria-hidden="true"></a></h3>
 	<p class="lead">Non-Player Characters</p>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 166</li></ul>
-	<p>When roleplaying NPCs, GMs should strive to to bring the world to life in accordance with the <a href="#gm-principles">GM principles</a>. Differentiate each NPC with unique manners of speech, abilities, desires, and appetites.</p>
+	<p>When roleplaying NPCs, GMs should strive to bring the world to life in accordance with the <a href="#gm-principles">GM principles</a>. Differentiate each NPC with unique manners of speech, abilities, desires, and appetites.</p>
 	<p>Mechanically, the only essential elements of an NPC are their <strong>name</strong>, <strong>description</strong>, and <strong>motive</strong>, but If you think the PCs might make a <a href="#define-action">move</a> against them, give them a <a href="#define-difficulty">Difficulty</a>. An NPC can quickly become an <a href="#define-adversary">adversaries</a> by modifying an appropriate <a href="#adversary-stat-blocks">stat block</a>.</p>
 	<p>If an NPC is an ally in combat, they don't need a stat block&mdash;just put the <a href="#define-spotlight">spotlight</a> on what they do and describe how their involvement alters the fiction. If a PC capitalizes on their help during the scene, give the PC <a href="#define-advantage">advantage</a>. NPCs that don't have <a href="#define-hit-point">Hit Points</a> or <a href="#define-stress">Stress</a> can still be injured or killed if the fiction demands it.</p>
 	<p>If an important NPC must mechanically interact with the system, give them one or more features with specific triggers and effects.</p>
@@ -11847,7 +11916,7 @@
 			</ul>
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>Adversary types vary how in how they relate to the <a href="#define-spotlight">spotlight</a> as defined in their <a href="#define-adversary-feature">adversary features</a>. For example, most <strong>minions</strong> like the <a href="#define-adversary-jagged-knife-lackey">Jagged Knife Lackey</a> attack as a group, and take damage as a group based on their <a href="#define-range">range</a> from eachother.  Others&mdash;for example, the <a href="#define-adversary-cave-ogre">Cave Ogre</a>&mdash;make multiple attacks, or act in response to damage.</p>
+			<p>Adversary types vary how in how they relate to the <a href="#define-spotlight">spotlight</a> as defined in their <a href="#define-adversary-feature">adversary features</a>. For example, most <strong>minions</strong> like the <a href="#define-adversary-jagged-knife-lackey">Jagged Knife Lackey</a> attack as a group, and take damage as a group based on their <a href="#define-range">range</a> apart from one another.  Others&mdash;for example, the <a href="#define-adversary-cave-ogre">Cave Ogre</a>&mdash;make multiple attacks, or act in response to damage.</p>
 		</div>
 	</div>
 </div>
@@ -12532,7 +12601,7 @@
                             <li><strong><em>Trample:</em></strong> The Box rockets around erratically. Make an attack against all PCs within <a href="#define-range">Close</a> range. Targets the Box succeeds against take <strong>1d6+5</strong> <a href="#define-damage-type">physical damage</a> and are <a href="#define-condition"><em>Vulnerable</em></a> until their next roll with <a href="#define-hope">Hope</a>.</li>
                             <li><strong><em>Shocking Gas:</em></strong> The Box sprays out a silver gas sparking with lightning. All targets within <a href="#define-range">Close</a> range must succeed on a <a href="#define-finesse">Finesse</a> <a href="#define-reaction-roll">Reaction Roll</a> or mark 3 <a href="#define-stress">Stress</a>.</li>
                             <li><strong><em>Stunning Clap:</em></strong> The Box leaps and their sides clap, creating a concussive boom. All targets within <a href="#define-range">Very Close</a> range must succeed on a <a href="#define-strength">Strength</a> <a href="#define-reaction-roll">Reaction Roll</a> or become <a href="#define-condition"><em>Vulnerable</em></a> until the cube is defeated.</li>
-                            <li><strong><em>Psonic Whine:</em></strong> The Box releases a cluster of mechanical bees whose buzz rattles mortal minds. All targets within <a href="#define-range">Close</a> range must succeed on a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a> or take <strong>2d4+9</strong> <a href="#define-damage-type">direct magic damage</a>.</li>
+                            <li><strong><em>Psionic Whine:</em></strong> The Box releases a cluster of mechanical bees whose buzz rattles mortal minds. All targets within <a href="#define-range">Close</a> range must succeed on a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a> or take <strong>2d4+9</strong> <a href="#define-damage-type">direct magic damage</a>.</li>
                         </ol>
                     </li>
                     <li><p><strong><em>Overcharge&mdash;Reaction:</em></strong> Before rolling damage for the Box's attack, you can <strong><a href="#define-stress">mark a Stress</a></strong> to add a <strong>d6</strong> to the <a href="#define-damage-roll">damage roll</a>. Additionally, you gain a <a href="#define-fear">Fear</a>.</p></li>
@@ -12597,7 +12666,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Shield Wall&mdash;Passive:</em></strong> A creature who tries to move within <a href="#define-range">Very Close</a> range of the Guard must succeed on an <a href="#define-trait-roll">Agility Roll</a>. If additional Bladed Guards are standing in a line alongside the first, and each is within <a href="#define-range">Melee</a> range of another guard in the line, the <a href="#define-difficulty">Difficulty</a> increases by the total number of guards in the line.</p></li>
-                    <li><p><strong><em>Detain&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to to <a href="#define-condition"><em>Restrain</em></a> the target until they break free with a successful attack, <a href="#define-trait-roll">Finesse Roll</a>, or <a href="#define-trait-roll">Strength Roll</a>.</p></li>
+                    <li><p><strong><em>Detain&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to <a href="#define-condition"><em>Restrain</em></a> the target until they break free with a successful attack, <a href="#define-trait-roll">Finesse Roll</a>, or <a href="#define-trait-roll">Strength Roll</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -13451,7 +13520,7 @@
                     <li><p><strong><em>Relentless (3)&mdash;Passive:</em></strong> The Undefeated Champion can be <a href="#define-spotlight">spotlighted</a> up to three times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Faltering Armor&mdash;Passive:</em></strong> When the Undefeated Champion takes damage, reduce it by <strong>1d10</strong>.</p></li>
                     <li><p><strong><em>Shattering Strike&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to make a standard attack against all targets within <a href="#define-range">Very Close</a> range. PCs the Champion succeeds against lose a number of <a href="#define-hope">Hope</a> equal to the <a href="#define-hit-point">HP</a> they marked from this attack.</p></li>
-                    <li><p><strong><em>Endless Legions&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to summon a<a href="#define-adversary-fallen-shock-troop">Fallen Shock Troops</a> equal to twice the number of PCs. The Shock Troops appear at <a href="#define-range">Far</a> range.</p></li>
+                    <li><p><strong><em>Endless Legions&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to summon a number of <a href="#define-adversary-fallen-shock-troop">Fallen Shock Troops</a> equal to twice the number of PCs. The Shock Troops appear at <a href="#define-range">Far</a> range.</p></li>
                     <li><p><strong><em>Circle of Defilement&mdash;Reaction:</em></strong> <em><a href="#define-countdown">Countdown (1d8)</a></em>. When the Undefeated Champion is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When it triggers, activate a magical circle covering an area within <a href="#define-range">Far</a> range of the Champion. A target within that area is <a href="#define-condition"><em>Vulnerable</em></a> until they leave the circle. The circle can be removed by dealing <a href="#define-hit-point">Severe</a> damage to the Undefeated Champion.</p></li>
                     <li><p><strong><em>Doombringer&mdash;Reaction:</em></strong> When the Undefeated Champion makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                     <li><p><strong><em>Doombringer&mdash;Reaction:</em></strong> When a target marks <a href="#define-hit-point">HP</a> from an attack by the Undefeated Champion, all PCs within <a href="#define-range">Far</a> range of the target lose a <a href="#define-hope">Hope</a>.</p></li>
@@ -14243,7 +14312,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Tactician&mdash;Action:</em></strong> When you spotlight the Lieutenant, <strong><a href="#define-stress">mark a Stress</a></strong> to to also <a href="#define-spotlight">spotlight</a> two allies within <a href="#define-range">Close</a> range.<p></li>
+                    <li><p><strong><em>Tactician&mdash;Action:</em></strong> When you spotlight the Lieutenant, <strong><a href="#define-stress">mark a Stress</a></strong> to also <a href="#define-spotlight">spotlight</a> two allies within <a href="#define-range">Close</a> range.<p></li>
 					<li><p><strong><em>More Where That Came From&mdash;Action:</em></strong> Summon three <a href="#define-adversary-jagged-knife-lackey">Jagged Knife Lackeys</a>, who appear at <a href="#define-range">Far</a> range.</p></li>
 					<li><p><strong><em>Coup de Grace&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to make an attack against a <a href="#define-condition"><em>Vulnerable</em></a> target within <a href="#define-range">Close</a> range. On a success, deal <strong>2d6+12</strong> <a href="#define-damage-type">physical damage</a> and the target must mark a <a href="#define-stress">Stress</a>.</p></li>
 					<li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Lieutenant makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
@@ -14398,7 +14467,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Relentless (3)&mdash;Passive:</em></strong> The Kraken can be <a href="#define-spotlight">spotlighted</a> up to three times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Many Tentacles&mdash;Passive:</em></strong> While the Kraken has 7 or fewer marked <a href="#define-hit-point">HP</a>, they can make their standard attack against two targets within range.</p></li>
-                    <li><p><strong><em>Grapple and Drown&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack roll</a> against a target within <a href="#define-range">Close</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to to grab them with a tentacle and drag them beneath the water. The target is <a href="#define-condition"><em>Restrained</em></a> and <a href="#define-condition"><em>Vulnerable</em></a> until they break free with a successful <a href="#define-trait-roll">Strength Roll</a> or the Kraken takes <a href="#define-hit-point">Major</a> or greater damage. While <a href="#define-condition"><em>Restrained</em></a> and <a href="#define-condition"><em>Vulnerable</em></a> in this way, a target must mark a <a href="#define-stress">Stress</a> when they make an <a href="#define-action-roll">action roll</a>.</p></li>
+                    <li><p><strong><em>Grapple and Drown&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack roll</a> against a target within <a href="#define-range">Close</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to grab them with a tentacle and drag them beneath the water. The target is <a href="#define-condition"><em>Restrained</em></a> and <a href="#define-condition"><em>Vulnerable</em></a> until they break free with a successful <a href="#define-trait-roll">Strength Roll</a> or the Kraken takes <a href="#define-hit-point">Major</a> or greater damage. While <a href="#define-condition"><em>Restrained</em></a> and <a href="#define-condition"><em>Vulnerable</em></a> in this way, a target must mark a <a href="#define-stress">Stress</a> when they make an <a href="#define-action-roll">action roll</a>.</p></li>
                     <li><p><strong><em>Boiling Blast&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to spew a line of boiling water at any number of targets in a line up to <a href="#define-range">Far</a> range. All targets must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> or take <strong>4d6+9</strong> <a href="#define-damage-type">physical damage</a>. If a target marks an <a href="#define-armor">Armor Slot</a> to reduce the damage, they must also mark a <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Kraken makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
@@ -14522,7 +14591,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Everyone Has a Price&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to offer a target a dangerous bargain for something they want or need. If used on a PC, they must make a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a> (17). On a failure, they must mark 2 <a href="#define-stress">Stress</a> or take the deal.</p></li>
-                    <li><p><strong><em>The Best Muscle Money Can Buy&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to to summon <strong>1d4+1</strong> Tier 1 <a href="#define-adversary">adversaries</a>, who appear at <a href="#define-range">Far</a> range, to enforce the Baron's will.</p></li>
+                    <li><p><strong><em>The Best Muscle Money Can Buy&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to summon <strong>1d4+1</strong> Tier 1 <a href="#define-adversary">adversaries</a>, who appear at <a href="#define-range">Far</a> range, to enforce the Baron's will.</p></li>
                 </ul>
             </div>
         </div>
@@ -14643,7 +14712,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Minion (5)&mdash;Passive:</em></strong> The Treant is defeated when they take any damage. For every 5 damage a PC deals to the Treant, defeat an additional <a href="#define-adversary-type">Minion</a> within range the attack would succeed against.</p></li>
-                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to choose a target and <a href="#define-spotlight">spotlight</a> all <a href="#define-hit-point">Minor</a> Treants within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 4 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+                    <li><p><strong><em>Group Attack&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to choose a target and <a href="#define-spotlight">spotlight</a> all Minor Treants within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal 4 <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
                 </ul>
             </div>
         </div>
@@ -14704,7 +14773,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Execute Them!&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> per PC in the party to have the group condemned for crimes real or imagined. A PC who succeeds on a <a href="#define-trait-roll">Presence Roll</a> can demand trial by combat or another special form of trial.</p></li>
-                    <li><p><strong><em>Crossguard&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to to summon six Tier 3 <a href="#define-adversary-type">Minions</a>, who appear at <a href="#define-range">Close</a> range to enforce the Monarch's will.</p></li>
+                    <li><p><strong><em>Crossguard&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to summon six Tier 3 <a href="#define-adversary-type">Minions</a>, who appear at <a href="#define-range">Close</a> range to enforce the Monarch's will.</p></li>
                     <li><p><strong><em>Casus Bell&mdash;Reaction:</em></strong> <em><a href="#define-countdown">Long-Term Countdown (8)</a></em>. <strong><a href="#define-fear">Spend a Fear</a></strong> to activate after the Monarch's desire for war is first revealed. When it triggers, the Monarch has a reason to rally the nation to war and the support to act on that reason. You gain <strong>1d4</strong> <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -14735,7 +14804,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Terrifying&mdash;Passive:</em></strong> When the Hunter makes a successful attack, all PCs within <a href="#define-range">Far</a> range lose a <a href="#define-hope">Hope</a> and you gain a <a href="#define-fear">Fear</a>.</p></li>
-                    <li><p><strong><em>Deathlock&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to curse a target within <a href="#define-range">Very Close</a> range with a necrotic Deathlock until the end of the scene. Attacks made by the Hunter against a Deathlocked target deal <a href="#define-damage-type">direct damage</a>. The Hunter can only maintain one Deathlock at a time.</p></li>
+                    <li><p><strong><em>Deathlock&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to curse a target within <a href="#define-range">Very Close</a> range with a necrotic <em>Deathlock</e> until the end of the scene. Attacks made by the Hunter against a <em>Deathlocked</em> target deal <a href="#define-damage-type">direct damage</a>. The Hunter can only maintain one <em>Deathlock</em> at a time.</p></li>
                     <li><p><strong><em>Inevitable Death&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to <a href="#define-spotlight">spotlight</a> <strong>1d4</strong> allies. Attacks they make while <a href="#define-spotlight">spotlighted</a> in this way deal half damage.</p></li>
                     <li><p><strong><em>Rampage&mdash;Reaction:</em></strong> <em><a href="#define-countdown">Countdown (Loop 1d6)</a></em>. When the Hunter is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When it triggers, move the Hunter in a straight line to a point within <a href="#define-range">Far</a> range and make an attack against all targets in their path. Targets the Hunter succeeds against take <strong>2d8+2</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
@@ -14980,7 +15049,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>My Land, My Rules&mdash;Passive:</em></strong> All social actions made against the Noble on their land have <a href="#define-advantage">disadvantage</a>.</p></li>
-                    <li><p><strong><em>Guards, Seize Them!&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to to summon <strong>1d4</strong> <a href="#define-adversary-bladed-guard">Bladed Guards</a>, who appear at <a href="#define-range">Far</a> range to enforce the Noble's will.</p></li>
+                    <li><p><strong><em>Guards, Seize Them!&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to summon <strong>1d4</strong> <a href="#define-adversary-bladed-guard">Bladed Guards</a>, who appear at <a href="#define-range">Far</a> range to enforce the Noble's will.</p></li>
                     <li><p><strong><em>Exile&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> and target a PC. The Noble proclaims that the target and their allies are exiled from the noble's territory. While exiled, the target and their allies have <a href="#define-advantage">disadvantage</a> during social situations within the Noble's domain.</p></li>
                 </ul>
             </div>
@@ -15011,7 +15080,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Swashbuckler&mdash;Passive:</em></strong> When the Captain marks 2 or fewer <a href="#define-hit-point">HP</a> from an attack within <a href="#define-range">Melee</a> range, the attacker must mark a <a href="#define-stress">Stress</a>.</p></li>
-                    <li><p><strong><em>Reinforcements&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to to summon a Pirate Raiders Horde, which appears at <a href="#define-range">Far</a> range.</p></li>
+                    <li><p><strong><em>Reinforcements&mdash;Action:</em></strong> Once per scene, <strong><a href="#define-stress">mark a Stress</a></strong> to summon a Pirate Raiders Horde, which appears at <a href="#define-range">Far</a> range.</p></li>
                     <li><p><strong><em>No Quarter&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to choose a target who has three or more Pirates within <a href="#define-range">Melee</a> range of them. The Captain leads the Pirates in hurling threats and promises of a watery grave. The target must make a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, the target marks <strong>1d4+1</strong> <a href="#define-stress">Stress</a>. On a success, they must mark a <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Captain makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
@@ -15073,7 +15142,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Swashbuckler&mdash;Passive:</em></strong> When the Tough marks 2 or fewer <a href="#define-hit-point">HP</a> from an attack within <a href="#define-range">Melee</a> range, the attacker must mark a <a href="#define-stress">Stress</a>.</p></li>
-                    <li><p><strong><em>Clear the Decks&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to to move into <a href="#define-range">Melee</a> range of the target, dealing <strong>3d4</strong> <a href="#define-damage-type">physical damage</a> and knocking the target back to <a href="#define-range">Close</a> range.</p></li>
+                    <li><p><strong><em>Clear the Decks&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to move into <a href="#define-range">Melee</a> range of the target, dealing <strong>3d4</strong> <a href="#define-damage-type">physical damage</a> and knocking the target back to <a href="#define-range">Close</a> range.</p></li>
                 </ul>
             </div>
         </div>
@@ -15220,7 +15289,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Seize Your Moment&mdash;Action:</em></strong> Spend 2 <a href="#define-fear">Fear</a> to <a href="#define-spotlight">spotlight</a> <strong>1d4</strong> allies. Attacks they make while <a href="#define-spotlight">spotlighted</a> in this way deal half damage.</p></li>
-                    <li><p><strong><em>Our Master's Will&mdash;Reaction:</em></strong> When you <a href="#define-spotlight">spotlight</a> an ally within <a href="#define-range">Far</a> range, <strong><a href="#define-stress">mark a Stress</a></strong> to to gain a <a href="#define-fear">Fear</a>.</p></li>
+                    <li><p><strong><em>Our Master's Will&mdash;Reaction:</em></strong> When you <a href="#define-spotlight">spotlight</a> an ally within <a href="#define-range">Far</a> range, <strong><a href="#define-stress">mark a Stress</a></strong> to gain a <a href="#define-fear">Fear</a>.</p></li>
                     <li><p><strong><em>Summoning Ritual&mdash;Reaction:</em></strong> <em><a href="#define-countdown">Countdown (6)</a></em>. When the Secret-Keeper is in the <a href="#define-spotlight">spotlight</a> for the first time, activate the countdown. When they mark <a href="#define-hit-point">HP</a>, tick down this countdown by the number of <a href="#define-hit-point">HP</a> marked. When it triggers, summon a <a href="#define-hit-point">Minor</a> Demon who appears at <a href="#define-range">Close</a> range.</p></li>
                     <li><p><strong><em>Fallen Hounds&mdash;Reaction:</em></strong> Once per scene, when the Secret-Keeper marks 2 or more <a href="#define-hit-point">HP</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to summon a <a href="#define-adversary-demonic-hound-pack">Demonic Hound Pack</a>, which appears at <a href="#define-range">Close</a> range and is immediately <a href="#define-spotlight">spotlighted</a>.</p></li>
                 </ul>
@@ -15367,7 +15436,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Opportunist&mdash;Passive:</em></strong> When two or more adversaries are within <a href="#define-range">Very Close</a> range of a creature, all damage they each deal to that creature is doubled.</p></li>
-                    <li><p><strong><em>Deadly Shot&mdash;Action:</em></strong> Make an attack against a <a href="#define-condition"><em>Vulnerable</em></a> target within <a href="#define-range">Far</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to to deal <strong>3d4+8</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
+                    <li><p><strong><em>Deadly Shot&mdash;Action:</em></strong> Make an attack against a <a href="#define-condition"><em>Vulnerable</em></a> target within <a href="#define-range">Far</a> range. On a success, <strong><a href="#define-stress">mark a Stress</a></strong> to deal <strong>3d4+8</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -15667,7 +15736,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Stonestrider&mdash;Passive:</em></strong> The Stonewraith can move through stone and earth as easily as air. While within stone or earth, they are <a href="#define-condition"><em>Hidden</em></a> and <a href="#define-damage-type">immune</a> to all damage.</p></li>
-                    <li><p><strong><em>Rocky Ambush&mdash;Action:</em></strong> While <a href="#define-condition"><em>Hidden</em></a>, <strong><a href="#define-stress">mark a Stress</a></strong> to to leap into <a href="#define-range">Melee</a> range with a target within <a href="#define-range">Very Close</a> range. The target must succeed on an <a href="#define-agility">Agility</a> or <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> (15) or take <strong>2d8</strong> <a href="#define-damage-type">physical damage</a> and become temporarily <a href="#define-condition"><em>Restrained</em></a>.</p></li>
+                    <li><p><strong><em>Rocky Ambush&mdash;Action:</em></strong> While <a href="#define-condition"><em>Hidden</em></a>, <strong><a href="#define-stress">mark a Stress</a></strong> to leap into <a href="#define-range">Melee</a> range with a target within <a href="#define-range">Very Close</a> range. The target must succeed on an <a href="#define-agility">Agility</a> or <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> (15) or take <strong>2d8</strong> <a href="#define-damage-type">physical damage</a> and become temporarily <a href="#define-condition"><em>Restrained</em></a>.</p></li>
                     <li><p><strong><em>Avalanche Roar&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to roar while within a cave and cause a cave-in. All targets within <a href="#define-range">Close</a> range must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> (14) or take <strong>2d10</strong> <a href="#define-damage-type">physical damage</a>. The rubble can be cleared with a <a href="#define-countdown">Progress Countdown (8)</a>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Stonewraith makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
@@ -15963,11 +16032,11 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Relentless (2)&mdash;Passive:</em></strong> The Obsidian Predator an be <a href="#define-spotlight">spotlighted</a> up to two times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a>.</p></li>
+                    <li><p><strong><em>Relentless (2)&mdash;Passive:</em></strong> The Obsidian Predator can be <a href="#define-spotlight">spotlighted</a> up to two times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a>.</p></li>
                     <li><p><strong><em>Flying&mdash;Passive:</em></strong> While flying, the Obsidian Predator gains +3 <a href="#define-difficulty">Difficulty</a>.</p></li>
                     <li><p><strong><em>Obsidian Scales&mdash;Passive:</em></strong> The Obsidian Predator is <a href="#define-damage-type">resistant</a> to <a href="#define-damage-type">physical damage</a>.</p></li>
                     <li><p><strong><em>Avalanche Tail&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to make attack against all targets within <a href="#define-range">Close</a> range. Success: <strong>4d6+4</strong> <a href="#define-damage-type">physical damage</a>, knocked to <a href="#define-range">Far</a> range and <a href="#define-condition"><em>Vulnerable</em></a> until next roll with <a href="#define-hope">Hope</a>.</p></li>
-                    <li><p><strong><em>Dive-Bomb&mdash;Action:</em></strong> If the Obsidian Predator is flying, <strong><a href="#define-stress">mark a Stress</a></strong> to to choose point within <a href="#define-range">Far</a> range. Move to that point and make an attack against all targets within <a href="#define-range">Very Close</a> range. Targets the Obsidian Predator succeeds against take <strong>2d10+6</strong> physical, mark a <a href="#define-stress">Stress</a> and lose a <a href="#define-hope">Hope</a>.</p></li>
+                    <li><p><strong><em>Dive-Bomb&mdash;Action:</em></strong> If the Obsidian Predator is flying, <strong><a href="#define-stress">mark a Stress</a></strong> to choose point within <a href="#define-range">Far</a> range. Move to that point and make an attack against all targets within <a href="#define-range">Very Close</a> range. Targets the Obsidian Predator succeeds against take <strong>2d10+6</strong> physical, mark a <a href="#define-stress">Stress</a> and lose a <a href="#define-hope">Hope</a>.</p></li>
                     <li><p><strong><em>Erupting Rage (Phase Change)&mdash;Reaction:</em></strong> When the Obsidian Predator marks their last <a href="#define-hit-point">HP</a>, replace them with the <a href="#define-adversary-volcanic-dragon-molten-scourge">Molten Scourge</a> and immediately <a href="#define-spotlight">spotlight</a> them.</p></li>
                 </ul>
             </div>
@@ -16417,7 +16486,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Relative Strength&mdash;Passive:</em></strong> The<a href="#define-difficulty">Difficulty</a> of this environment equals that of the adversary with the highest<a href="#define-difficulty">Difficulty</a>.</p></li>
+                    <li><p><strong><em>Relative Strength&mdash;Passive:</em></strong> The <a href="#define-difficulty">Difficulty</a> of this environment equals that of the adversary with the highest <a href="#define-difficulty">Difficulty</a>.</p></li>
                     <li><p><strong><em>Surprise!&mdash;Action:</em></strong> The ambushers reveal themselves to the party, you gain 2 <a href="#define-fear">Fear</a>, and the <a href="#define-spotlight">spotlight</a> immediately shifts to one of the ambushing adversaries.</p></li>
                 </ul>
             </div>
@@ -16442,7 +16511,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Relative Strength&mdash;Passive:</em></strong> The<a href="#define-difficulty">Difficulty</a> of this environment equals that of the adversary with the highest<a href="#define-difficulty">Difficulty</a>.</p></li>
+                    <li><p><strong><em>Relative Strength&mdash;Passive:</em></strong> The <a href="#define-difficulty">Difficulty</a> of this environment equals that of the adversary with the highest <a href="#define-difficulty">Difficulty</a>.</p></li>
                     <li><p><strong><em>Where Did They Come From?&mdash;Reaction:</em></strong> When a PC starts the ambush on unsuspecting adversaries, you lose 2 <a href="#define-fear">Fear</a> and the first <a href="#define-attack-roll">attack roll</a> a PC makes has <a href="#define-advantage">advantage</a>.</p></li>
                 </ul>
             </div>
@@ -16455,7 +16524,7 @@
                 <ul class="og-list-inline og-ref og-omit"><li>Page 248</li></ul>
                 <ul class="list-unstyled">
                     <li><strong><em>Tier 3 <a href="#define-environment-type">Exploration</a></em></strong></li>
-                    <li><em>Thick indigo ash fills the air around a towering moss-covered tree that burns eternally with fl ames a sickly shade of blue.</em></li>
+                    <li><em>Thick indigo ash fills the air around a towering moss-covered tree that burns eternally with flames a sickly shade of blue.</em></li>
                     <li><strong>Impulses:</strong> Beat out an uncanny rhythm for all to follow, corrupt the woods</li>
                 </ul>
                 <div class="og-topbar">
@@ -16535,7 +16604,7 @@
     <div class="col-12 col-md-6">
         <div class="og-statblock">
             <div id="define-environment-castle-siege">
-                <h5 id="environment-castle-siege">Castle Seige<a class="og-h-anchor" href="#environment-castle-siege" title="Permalink" aria-hidden="true"></a></h5>
+                <h5 id="environment-castle-siege">Castle Siege<a class="og-h-anchor" href="#environment-castle-siege" title="Permalink" aria-hidden="true"></a></h5>
                 <ul class="og-list-inline og-ref og-omit"><li>Page 249</li></ul>
                 <ul class="list-unstyled">
                     <li><strong><em>Tier 3 <a href="#define-environment-type">Event</a></em></strong></li>
@@ -16731,7 +16800,7 @@
                 </ul>
                 <p class="og-statblock-q og-omit"><em>Which High Fallen do these troops serve? Which god's flesh do they wish to feast upon?</em></p>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Godslayer&mdash;Action:</em></strong> If the Divine Siege <a href="#define-countdown">Countdown</a> (see "Beginning of the End") has triggered, you can <strong><a href="#define-fear">spend 3 Fear</a></strong> to describe the Usurper slaying one of the gods of the Hallows Above, feasting upon their power and growing stronger. The Usurper clears 2 <a href="#define-hit-point">HP</a>. Increase their<a href="#define-difficulty">Difficulty</a>, damage, attack <a href="#define-procedure">modifier</a>, or give them a new feature from the slain god.</p></li>
+                    <li><p><strong><em>Godslayer&mdash;Action:</em></strong> If the Divine Siege <a href="#define-countdown">Countdown</a> (see "Beginning of the End") has triggered, you can <strong><a href="#define-fear">spend 3 Fear</a></strong> to describe the Usurper slaying one of the gods of the Hallows Above, feasting upon their power and growing stronger. The Usurper clears 2 <a href="#define-hit-point">HP</a>. Increase their <a href="#define-difficulty">Difficulty</a>, damage, attack <a href="#define-procedure">modifier</a>, or give them a new feature from the slain god.</p></li>
                 </ul>
                 <p class="og-statblock-q og-omit"><em>Which god meets their end? What are their last words? How does the Usurper's new stolen power manifest?</em></p>
                 <ul class="list-unstyled og-list-hang">
