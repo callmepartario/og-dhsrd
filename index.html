@@ -67,7 +67,8 @@
 						<li><a class="dropdown-item og-nav" href="#hit-points-and-damage-thresholds">Hit Points and Damage Thresholds</a></li>
 						<li><a class="dropdown-item og-nav" href="#stress">Stress</a></li>
 						<li><a class="dropdown-item og-nav" href="#death">Death</a></li>
-						<li><a class="dropdown-item og-nav" href="#attacks-and-damage">Attacks and Damage</a></li>
+						<li><a class="dropdown-item og-nav" href="#attack-rolls">Attack Rolls</a></li>
+						<li><a class="dropdown-item og-nav" href="#damage-rolls">Damage Rolls</a></li>
 						<li><a class="dropdown-item og-nav" href="#conditions">Conditions</a></li>
 						<li><a class="dropdown-item og-nav" href="#maps-range-and-movement">Maps, Range, and Movement</a></li>
 						<li><a class="dropdown-item og-nav" href="#downtime">Downtime</a></li>
@@ -110,7 +111,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.93g (2025-06-30)</p>
+<p class="small text-center">version 0.94a (2025-07-03)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -122,7 +123,7 @@
 		<h2 id="introduction">Introduction<a class="og-h-anchor" href="#introduction" title="Permalink" aria-hidden="true"></a></h2>
 		<p class="lead">Welcome Reader&mdash;</p>
 		<p><strong>Old Gus' Daggerheart System Reference Document (OG-DHSRD)</strong> is a hypertext version of the <a href="https://www.daggerheart.com/srd/">Daggerheart System Reference Document 1.0</a> (revised June 26, 2025), &copy; Critical Role, LLC, under the terms of the <a href="http://www.darringtonpress.com/license">Darrington Press Community Gaming (DPCGL) License</a>.</p>
-		<p>This document has been edited. You can use this edition to quickly look up <a href="#define-daggerheart">Daggerheart</a> rules online, share them with others, or copy text into a character sheet that works for you. There are no previous modifications by others.</p>
+		<p><strong>This document has been edited.</strong> You can use this edition to quickly look up <a href="#define-daggerheart">Daggerheart</a> rules online, share them with others, or copy text into a character sheet that works for you. There are no previous modifications by others. Don't mistake them for the official rules, though&mdash;use the provided page numbers to synthesize your own understang of the material using the primary text.</p>
 		<p>The OG-DHSRD is not a replacement for the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a>, which contains setting information, additional examples of various gameplay elements, and tons of great advice for playing Daggerheart&mdash;not to mention gorgeous artwork and the seductive odor of book glue.</p>
 		<p>Thanks to Darrington Press for this amazing resource, and thank you for reading&mdash;and may this record bring you and yours many happy adventures!</p>
 		<p class="lead">&mdash;Old Gus</p>
@@ -1274,7 +1275,7 @@
 	</div>
 	<h4 class="h6">Bard's Hope Feature</h4>
 	<ul class="list-unstyled">
-		<li><strong><em>Make a Scene:</em></strong> <strong><a href="#define-hope">Spend 3 Hope</a></strong> to temporarily <em>Distract</em> a target within <a href="#define-range">Close</a> range, giving them a &minus;2 penalty to their <a href="#define-difficulty">Difficulty</a>.</li>
+		<li><strong><em>Make a Scene:</em></strong> <strong><a href="#define-hope">Spend 3 Hope</a></strong> to <a href="#define-temporary">temporarily</a> <em>Distract</em> a target within <a href="#define-range">Close</a> range, giving them a &minus;2 penalty to their <a href="#define-difficulty">Difficulty</a>.</li>
 	</ul>
 	<h4 class="h6">Class Feature</h4>
 	<ul class="list-unstyled">
@@ -1299,7 +1300,7 @@
 				<li><p><strong><em>Gifted Performer:</em></strong> You can play three different types of songs, once each per <a href="#define-long-rest">long rest</a>; describe how you perform for others to gain the listed benefit:</p>
 					<ul class="og-list-disc">
 						<li><strong><em>Relaxing Song:</em></strong> You and all allies within <a href="#define-range">Close</a> range clear a <a href="#define-hit-point">Hit Point</a>.</li>
-						<li><strong><em>Epic Song:</em></strong> Make a target within <a href="#define-range">Close</a> range temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</li>
+						<li><strong><em>Epic Song:</em></strong> Make a target within <a href="#define-range">Close</a> range <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</li>
 						<li><strong><em>Heartbreaking Song:</em></strong> You and all allies within <a href="#define-range">Close</a> range gain a <a href="#define-hope">Hope</a>.</li>
 					</ul>
 				</li>
@@ -1410,7 +1411,7 @@
 				<ul class="og-list-disc">
 					<li><strong><em>Fire:</em></strong> You gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a> for attacks and spells that deal damage.</li>
 					<li><strong><em>Earth:</em></strong> When you would mark <a href="#define-hit-point">Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li>
-					<li><strong><em>Water:</em></strong> When an attack against you succeeds, you can <strong><a href="#define-stress">mark a Stress</a></strong> to make the attacker temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</li>
+					<li><strong><em>Water:</em></strong> When an attack against you succeeds, you can <strong><a href="#define-stress">mark a Stress</a></strong> to make the attacker <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</li>
 					<li><strong><em>Air:</em></strong> You gain a +1 bonus to your <a href="#define-evasion">Evasion</a> and can fly.</li>
 				</ul>
 			</li>
@@ -1616,7 +1617,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Hobbling Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can <strong><a href="#define-stress">mark a Stress</a></strong> to make the target temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Hobbling Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can <strong><a href="#define-stress">mark a Stress</a></strong> to make the target <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 				<li><p><strong><em>Pack Hunting:</em></strong> When you succeed on an attack against the same target as an ally who acts immediately before you, add a <strong>d8</strong> to your <a href="#define-damage-roll">damage roll</a>.</p></li>
 			</ul>
 		</div></div>
@@ -1637,8 +1638,8 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Venomous Bite:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, the target becomes temporarily <em>Poisoned</em>. A <em>Poisoned</em> creature takes <strong>1d10</strong> <a href="#define-damage-type">direct physical damage</a> each time they act.</p></li>
-				<li><p><strong><em>Webslinger:</em></strong> You can create a strong web material useful for both adventuring and battle. The web is resilient enough to support one creature. You can temporarily <a href="#define-condition"><em>Restrain</em></a> a target within <a href="#define-range">Close</a> range by succeeding on a <a href="#define-trait-roll">Finesse Roll</a> against them.</p></li>
+				<li><p><strong><em>Venomous Bite:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, the target becomes <a href="#define-temporary">temporarily</a> <em>Poisoned</em>. A <em>Poisoned</em> creature takes <strong>1d10</strong> <a href="#define-damage-type">direct physical damage</a> each time they act.</p></li>
+				<li><p><strong><em>Webslinger:</em></strong> You can create a strong web material useful for both adventuring and battle. The web is resilient enough to support one creature. You can <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Restrain</em></a> a target within <a href="#define-range">Close</a> range by succeeding on a <a href="#define-trait-roll">Finesse Roll</a> against them.</p></li>
 			</ul>
 		</div></div>
 	</div>
@@ -1684,7 +1685,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to two willing allies with you when you move.</p></li>
-				<li><p><strong><em>Trample:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to move up to <a href="#define-range">Close</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+1</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-damage-roll">Proficiency</a> and are temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Trample:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to move up to <a href="#define-range">Close</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+1</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-damage-roll">Proficiency</a> and are <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 			</ul>
 		</div></div>
 	</div>
@@ -1749,7 +1750,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Venomous Strike:</em></strong> Make an attack against any number of targets within <a href="#define-range">Very Close</a> range. On a success, a target is temporarily <em>Poisoned</em>. A <em>Poisoned</em> creature takes <strong>1d10</strong> <a href="#define-damage-type">direct physical damage</a> each time they act.</p></li>
+				<li><p><strong><em>Venomous Strike:</em></strong> Make an attack against any number of targets within <a href="#define-range">Very Close</a> range. On a success, a target is <a href="#define-temporary">temporarily</a> <em>Poisoned</em>. A <em>Poisoned</em> creature takes <strong>1d10</strong> <a href="#define-damage-type">direct physical damage</a> each time they act.</p></li>
 				<li><p><strong><em>Warning Hiss:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to force any number of targets within <a href="#define-range">Melee</a> range to move back to <a href="#define-range">Very Close</a> range.</p></li>
 			</ul>
 		</div></div>
@@ -1817,7 +1818,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to two willing allies with you when you move.</p></li>
-				<li><p><strong><em>Vicious Maul:</em></strong> When you succeed on an attack against a target, you can <strong><a href="#define-hope">spend a Hope</a></strong> to make them temporarily <a href="#define-condition"><em>Vulnerable</em></a> and gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a> for this attack.</p></li>
+				<li><p><strong><em>Vicious Maul:</em></strong> When you succeed on an attack against a target, you can <strong><a href="#define-hope">spend a Hope</a></strong> to make them <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a> and gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a> for this attack.</p></li>
 			</ul>
 		</div></div>
 	</div>
@@ -1895,7 +1896,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Physical Defense:</em></strong> You gain a +3 bonus to your <a href="#define-hit-point">damage thresholds</a>.</p></li>
-				<li><p><strong><em>Snapping Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can <strong><a href="#define-hope">spend a Hope</a></strong> to clamp that opponent in your jaws, making them temporarily <a href="#define-condition"><em>Restrained</em></a> and <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Snapping Strike:</em></strong> When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can <strong><a href="#define-hope">spend a Hope</a></strong> to clamp that opponent in your jaws, making them <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Restrained</em></a> and <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 			</ul>
 		</div></div>
 	</div>
@@ -1919,7 +1920,7 @@
 				</div>
 			</div>
 			<ul class="list-unstyled">
-				<li><p><strong><em>Ocean Master:</em></strong> You can breathe and move naturally underwater. When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can temporarily <a href="#define-condition"><em>Restrain</em></a> them.</p></li>
+				<li><p><strong><em>Ocean Master:</em></strong> You can breathe and move naturally underwater. When you succeed on an attack against a target within <a href="#define-range">Melee</a> range, you can <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Restrain</em></a> them.</p></li>
 				<li><p><strong><em>Unyielding:</em></strong> When you would mark an <a href="#define-armor">Armor Slot</a>, roll a <strong>d6</strong>. On a result of 5 or higher, reduce the severity by one threshold without marking an Armor Slot.</p></li>
 			</ul>
 		</div></div>
@@ -1941,7 +1942,7 @@
 			</div>
 			<ul class="list-unstyled">
 				<li><p><strong><em>Carrier:</em></strong> You can carry up to four willing allies with you when you move.</p></li>
-				<li><p><strong><em>Demolish:</em></strong> <strong><a href="#define-hope">Spend a Hope</a></strong> to move up to <a href="#define-range">Far</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-damage-roll">Proficiency</a> and are temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
+				<li><p><strong><em>Demolish:</em></strong> <strong><a href="#define-hope">Spend a Hope</a></strong> to move up to <a href="#define-range">Far</a> range in a straight line and make an attack against all targets within <a href="#define-range">Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href="#define-damage-type">physical damage</a> using your <a href="#define-damage-roll">Proficiency</a> and are <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 				<li><p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href="#define-hit-point">damage thresholds</a>.</p></li>
 			</ul>
 		</div></div>
@@ -2126,7 +2127,7 @@
 	</ul>
 	<h4 class="h6">Class Feature</h4>
 	<ul class="list-unstyled">
-		<li><p><strong><em>Ranger's Focus:</em></strong> <strong><a href="#define-hope">Spend a Hope</a></strong> and make an attack against a target. On a success, deal your attack's normal damage and temporarily make the attack's target your <em>Focus</em>. Until this feature ends or you make a different creature your <em>Focus</em>, you gain the following benefits against your <em>Focus</em>:</p>
+		<li><p><strong><em>Ranger's Focus:</em></strong> <strong><a href="#define-hope">Spend a Hope</a></strong> and make an attack against a target. On a success, deal your attack's normal damage and <a href="#define-temporary">temporarily</a> make the attack's target your <em>Focus</em>. Until this feature ends or you make a different creature your <em>Focus</em>, you gain the following benefits against your <em>Focus</em>:</p>
 			<ul class="og-list-disc">
 				<li>You know precisely what direction they are in.</li>
 				<li>When you deal damage to them, they must mark a <a href="#define-stress">Stress</a>.</li>
@@ -2354,7 +2355,7 @@
 		</div>
 		<h6>Specialization Features</h6>
 		<ul class="list-unstyled">
-			<li><p><strong><em>Dark Cloud:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. On a success, create a temporary dark cloud that covers any area within <a href="#define-range">Close</a> range. Anyone in this cloud can't see outside of it, and anyone outside of it can't see in. You're considered <em>Cloaked</em> from any <a href="#define-adversary">adversary</a> for whom the cloud blocks line of sight.</p></li>
+			<li><p><strong><em>Dark Cloud:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. On a success, create a <a href="#define-temporary">temporary</a> dark cloud that covers any area within <a href="#define-range">Close</a> range. Anyone in this cloud can't see outside of it, and anyone outside of it can't see in. You're considered <em>Cloaked</em> from any <a href="#define-adversary">adversary</a> for whom the cloud blocks line of sight.</p></li>
 			<li><p><strong><em>Adrenaline:</em></strong> While you're <a href="#define-condition">Vulnerable</a>, add your level to your <a href="#define-damage-roll">damage rolls</a>.</p></li>
 		</ul>
 		<h6>Mastery Features</h6>
@@ -2773,7 +2774,7 @@
 		<div id="define-domain-card">
 			<h3 id="domain-cards">Domain Cards<a class="og-h-anchor" href="#domain-cards" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 26</li></ul>
-			<p>You start with two Level 1 <strong>domain cards</strong> at <a href="#define-character-creation">character creation</a>, and gain one domain card each time you gain a <a href="#define-level">level</a>. Domain cards provide unique <a href="#define-action">moves</a>, passive bonuses, <a href="#define-downtime">downtime moves</a> , or temporary benefits to your PC.</p>
+			<p>You start with two Level 1 <strong>domain cards</strong> at <a href="#define-character-creation">character creation</a>, and gain one domain card each time you gain a <a href="#define-level">level</a>. Domain cards provide unique <a href="#define-action">moves</a>, passive bonuses, <a href="#define-downtime">downtime moves</a> , or <a href="#define-temporary">temporary</a> benefits to your PC.</p>
 			<h4 class="h6">Domain Card Anatomy</h4>
 			<p>In addition to describing its effects or special rules for using the card, each includes:</p>
 			<dl>
@@ -2784,7 +2785,7 @@
 				<dt>Recall Cost: X<span class="og-recall" aria-hidden="true">&#9889;</span></dt>
 				<dd>The amount of <a href="#define-stress">Stress</a> you must mark to swap this card from your <a href="#define-loadout">vault</a> with one from your <a href="#define-loadout">loadout</a>. During <a href="#define-downtime">downtime</a>, you can swap domain cards  without paying Recall Costs.</dd>
 				<dt>Type</dt>
-				<dd>There are three types of domain cards: <strong>abilities</strong>, <strong>spells</strong>, and <strong>grimoires</strong>. <strong>Abilities</strong> are non-magical. <strong>Spells</strong> are magical. <strong>Grimoires</strong> (unique to the <a href="#define-codex">Codex</a> domain) grant access to a several less potent spells.</dd>
+				<dd>There are three types of domain cards: <strong>abilities</strong>, <strong>spells</strong>, and <strong>grimoires</strong>. <strong>Abilities</strong> are non-magical. <strong>Spells</strong> are magical. <strong>Grimoires</strong> from the <a href="#define-codex">Codex</a> domain grant you several less potent spells. Some effects are <a href="#define-temporary">temporary</a>.</dd>
 				<dt>Usage Limits</dt>
 				<dd>Some domain cards restricts how often it can be used. If a card has number of uses equal to a <a href="#define-trait">trait</a> with a <a href="#define-modifier">modifier</a> of +0 or less, you can't use it.</dd>
 			</dl>
@@ -4604,7 +4605,7 @@
                 <p><strong><em>Magic Hand:</em></strong> You conjure a magical hand with the same size and strength as your own within <a href="#define-range">Far</a> range.</p>
             </li>
             <li>
-                <p><strong><em>Mysterious Mist:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (13)</a></strong> to cast a temporary thick fog that gathers in a stationary area within <a href="#define-range">Very Close</a> range. The fog heavily obscures this area and everything in it.</p>
+                <p><strong><em>Mysterious Mist:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (13)</a></strong> to cast a <a href="#define-temporary">temporary</a> thick fog that gathers in a stationary area within <a href="#define-range">Very Close</a> range. The fog heavily obscures this area and everything in it.</p>
             </li>
         </ul>
     </div></div></div>
@@ -4621,7 +4622,7 @@
                 <p><strong><em>Parallela:</em></strong> <strong><a href="#define-hope">Spend 2 Hope</a></strong> to cast this spell on yourself or an ally within <a href="#define-range">Close</a> range. The next time the target makes an attack, they can hit an additional target within <a href="#define-range">range</a> that their <a href="#define-attack-roll">attack roll</a> would succeed against. You can only hold this spell on one creature at a time.</p>
             </li>
             <li>
-                <p><strong><em>Illusion:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (14)</a></strong>. On a success, create a temporary visual illusion no larger than you within <a href="#define-range">Close</a> range that lasts for as long as you look at it. It holds up to scrutiny until an observer is within <a href="#define-range">Melee</a> range.</p>
+                <p><strong><em>Illusion:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (14)</a></strong>. On a success, create a <a href="#define-temporary">temporary</a> visual illusion no larger than you within <a href="#define-range">Close</a> range that lasts for as long as you look at it. It holds up to scrutiny until an observer is within <a href="#define-range">Melee</a> range.</p>
             </li>
         </ul>
     </div></div></div>
@@ -4655,7 +4656,7 @@
                 <p><strong><em>Recant:</em></strong> <strong><a href="#define-hope">Spend a Hope</a></strong> to force a target within <a href="#define-range">Melee</a> range to make a <a href="#define-reaction-roll">Reaction Roll</a> <strong>(15)</strong>. On a failure, they forget the last minute of your conversation.</p>
             </li>
             <li>
-                <p><strong><em>Rune Circle:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to create a temporary magical circle on the ground where you stand. All adversaries within <a href="#define-range">Melee</a> range, or who enter <a href="#define-range">Melee</a> range, take <strong>2d12+4</strong> <a href="#define-damage-type">magic damage</a> and are knocked back to <a href="#define-range">Very Close</a> range.</p>
+                <p><strong><em>Rune Circle:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to create a <a href="#define-temporary">temporary</a> magical circle on the ground where you stand. All adversaries within <a href="#define-range">Melee</a> range, or who enter <a href="#define-range">Melee</a> range, take <strong>2d12+4</strong> <a href="#define-damage-type">magic damage</a> and are knocked back to <a href="#define-range">Very Close</a> range.</p>
             </li>
         </ul>
     </div></div></div>
@@ -4700,7 +4701,7 @@
                 <p><strong><em>Time Lock:</em></strong> Target an object within <a href="#define-range">Far</a> range. That object stops in time and space exactly where it is until your next <a href="#define-downtime">rest</a>. If a creature tries to move it, make a <strong><a href="#define-spellcast-roll">Spellcast Roll</a></strong> against them to maintain this spell.</p>
             </li>
             <li>
-                <p><strong><em>Wall of Flame:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. On a success, create a temporary wall of magical flame between two points within <a href="#define-range">Far</a> range. All creatures in its path must choose a side to be on, and anything that subsequently passes through the wall takes <strong>4d10+3</strong> <a href="#define-damage-type">magic damage</a>.</p>
+                <p><strong><em>Wall of Flame:</em></strong> Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. On a success, create a <a href="#define-temporary">temporary</a> wall of magical flame between two points within <a href="#define-range">Far</a> range. All creatures in its path must choose a side to be on, and anything that subsequently passes through the wall takes <strong>4d10+3</strong> <a href="#define-damage-type">magic damage</a>.</p>
             </li>
         </ul>
     </div></div></div>
@@ -4711,7 +4712,7 @@
             <li class="fw-bold">Level 5 Codex Spell</li>
             <li class="fw-bold">Recall Cost: 2<span class="og-recall" aria-hidden="true">&#9889;</span></li>
             <li class="mt-3">
-                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. Once per <a href="#define-downtime">rest</a> on a success, <strong><a href="#define-hope">spend a Hope</a></strong> to create a temporary magical wall between two points within <a href="#define-range">Far</a> range. It can be up to 50 feet (15 m) high and form at any angle. Creatures or objects in its path are shunted to a side of your choice. The wall stays up until your next <a href="#define-downtime">rest</a> or you cast Manifest Wall again.</p>
+                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. Once per <a href="#define-downtime">rest</a> on a success, <strong><a href="#define-hope">spend a Hope</a></strong> to create a <a href="#define-temporary">temporary</a> magical wall between two points within <a href="#define-range">Far</a> range. It can be up to 50 feet (15 m) high and form at any angle. Creatures or objects in its path are shunted to a side of your choice. The wall stays up until your next <a href="#define-downtime">rest</a> or you cast Manifest Wall again.</p>
             </li>
         </ul>
     </div></div></div>
@@ -5194,7 +5195,7 @@
             <li class="fw-bold">Level 3 Midnight Spell</li>
             <li class="fw-bold">Recall Cost: 1<span class="og-recall" aria-hidden="true">&#9889;</span></li>
             <li class="mt-3">
-                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (13)</a></strong>. On a success, you can create a temporary curtain of darkness between two points within <a href="#define-range">Far</a> range. Only you can see through this darkness. You're considered <a href="#define-condition"><em>Hidden</em></a> to adversaries on the other side of the veil, and you have <a href="#define-advantage">advantage</a> on attacks you make through the darkness. The veil remains until you cast another spell.</p>
+                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (13)</a></strong>. On a success, you can create a <a href="#define-temporary">temporary</a> curtain of darkness between two points within <a href="#define-range">Far</a> range. Only you can see through this darkness. You're considered <a href="#define-condition"><em>Hidden</em></a> to adversaries on the other side of the veil, and you have <a href="#define-advantage">advantage</a> on attacks you make through the darkness. The veil remains until you cast another spell.</p>
             </li>
         </ul>
     </div></div></div>
@@ -5597,7 +5598,7 @@
             <li class="fw-bold">Level 8 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 1<span class="og-recall" aria-hidden="true">&#9889;</span></li>
             <li class="mt-3">
-                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. Once per <a href="#define-downtime">rest</a> on a success, create a temporary barrier of protective energy around you at <a href="#define-range">Very Close</a> range. You and all allies within the barrier when this spell is cast clear <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a>. While the barrier is up, you and all allies within have <a href="#define-damage-type">resistance</a> to <a href="#define-damage-type">physical damage</a> from outside the barrier.</p>
+                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll (15)</a></strong>. Once per <a href="#define-downtime">rest</a> on a success, create a <a href="#define-temporary">temporary</a> barrier of protective energy around you at <a href="#define-range">Very Close</a> range. You and all allies within the barrier when this spell is cast clear <strong>1d4</strong> <a href="#define-hit-point">Hit Points</a>. While the barrier is up, you and all allies within have <a href="#define-damage-type">resistance</a> to <a href="#define-damage-type">physical damage</a> from outside the barrier.</p>
                 <p>When you move, the barrier follows you.</p>
             </li>
         </ul>
@@ -5653,7 +5654,7 @@
             <li class="mt-3">
                 <p>Choose one of the following tempests and make a <strong><a href="#define-spellcast-roll">Spellcast Roll</a></strong> against all targets within <a href="#define-range">Far</a> range. Targets you succeed against experience its effects until the GM spends a <a href="#define-fear">Fear</a> on their turn to end this spell.</p>
                 <ul class="og-list-disc">
-                    <li><strong><em>Blizzard:</em></strong> Deal <strong>2d20+8</strong> <a href="#define-damage-type">magic damage</a> and targets are temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</li>
+                    <li><strong><em>Blizzard:</em></strong> Deal <strong>2d20+8</strong> <a href="#define-damage-type">magic damage</a> and targets are <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</li>
                     <li><strong><em>Hurricane:</em></strong> Deal <strong>3d10+10</strong> <a href="#define-damage-type">magic damage</a> and choose a direction the wind is blowing. Targets can't move against the wind.</li>
                     <li><strong><em>Sandstorm:</em></strong> Deal <strong>5d6+9</strong> <a href="#define-damage-type">magic damage</a>. Attacks made from beyond <a href="#define-range">Melee</a> range have <a href="#define-advantage">disadvantage</a>.</li>
                 </ul>
@@ -5786,7 +5787,7 @@
             <li class="fw-bold">Level 5 Splendor Spell</li>
             <li class="fw-bold">Recall Cost: 2<span class="og-recall" aria-hidden="true">&#9889;</span></li>
             <li class="mt-3">
-                <p>Once per <a href="#define-downtime">rest</a>, <strong><a href="#define-hope">spend 3 Hope</a></strong> to charge your powerful smite. When you next successfully attack with a <a href="#define-weapon">weapon</a>, double the result of your <a href="#define-damage-roll">damage roll</a>. This attack deals <a href="#define-damage-type">magic damage</a> regardless of the weapon's damage type.</p>
+                <p>Once per <a href="#define-downtime">rest</a>, <strong><a href="#define-hope">spend 3 Hope</a></strong> to charge your powerful smite. When you next successfully attack with a <a href="#define-weapon">weapon</a>, double the result of your <a href="#define-damage-roll">damage roll</a>. This attack deals <a href="#define-damage-type">magic damage</a> regardless of the weapon's <a href="#define-damage-type">damage type</a>.</p>
             </li>
         </ul>
     </div></div></div>
@@ -6387,7 +6388,7 @@
 	<h4 class="h6">Ancestry Features</h4>
 	<ul class="list-unstyled">
 		<li><p><strong><em>Feline Instincts:</em></strong> When you make an <a href="#define-trait-roll">Agility Roll</a>, you can <strong><a href="#define-hope">spend 2 Hope</a></strong> to reroll your <a href="#define-action-roll">Hope Die</a>.</p></li>
-		<li><p><strong><em>Retracting Claws:</em></strong> Make an <strong><a href="#define-trait-roll">Agility Roll</a></strong> to scratch a target within <a href="#define-range">Melee</a> range. On a success, they become temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
+		<li><p><strong><em>Retracting Claws:</em></strong> Make an <strong><a href="#define-trait-roll">Agility Roll</a></strong> to scratch a target within <a href="#define-range">Melee</a> range. On a success, they become <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</p></li>
 	</ul>
 </div>
 <hr>
@@ -9001,7 +9002,7 @@
 	<h4 class="h6">Armor Anatomy</h4>
 	<dl>
 		<dt>Armor Score and Armor Slots</dt>
-		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href="#define-procedure">modifiers</a> (to a maximum of 12). When you would mark a <a href="#define-hit-point">Hit Point</a>, you can mark an <strong>Armor Slot</strong> instead. If your Armor Score gains a temporary bonus, your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>
+		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href="#define-procedure">modifiers</a> (to a maximum of 12). When you would mark a <a href="#define-hit-point">Hit Point</a>, you can mark an <strong>Armor Slot</strong> instead. If your Armor Score gains a <a href="#define-temporary">temporary</a> bonus, your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>
 		<dt>Base Thresholds</dt>
 		<dd>An armor's base thresholds determines your Major and Severe <a href="#define-hit-point">damage thresholds</a>, and gains a bonus equal to your <a href="#define-level">level</a>.</dd>
 		<dt>Feature</dt>
@@ -9426,7 +9427,7 @@
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">31</th>
-					<td><div class="og-item" id="define-loot-bag-of-ficklesand"><strong><em>Bag of Ficklesand:</em></strong> You can convince this small bag of sand to be much heavier or lighter with a successful <strong><a href="#define-trait-roll">Presence Roll (10)</a></strong>. Additionally, on a successful <strong><a href="#define-trait-roll">Finesse Roll (10)</a></strong>, you can blow a bit of sand into a target's face to make them temporarily <a href="#define-condition"><em>Vulnerable</em></a>.</div></td>
+					<td><div class="og-item" id="define-loot-bag-of-ficklesand"><strong><em>Bag of Ficklesand:</em></strong> You can convince this small bag of sand to be much heavier or lighter with a successful <strong><a href="#define-trait-roll">Presence Roll (10)</a></strong>. Additionally, on a successful <strong><a href="#define-trait-roll">Finesse Roll (10)</a></strong>, you can blow a bit of sand into a target's face to make them <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>.</div></td>
 				</tr>
 				<tr>
 					<th class="text-center fw-normal">32</th>
@@ -10094,7 +10095,7 @@
 			<p>For example, if you are a <a href="#define-bard-troubadour">troubadour</a> <a href="#define-bard">bard</a> and must make a <strong>Spellcast Roll (15)</strong>, that means you add your <a href="#define-presence">Presence</a> <a href="#define-procedure">modifier</a>, and the roll has a <a href="#define-difficulty">Difficulty</a> of 15. If no Difficulty is specified, the GM decides it.</p>
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>A Spellcast Roll that can damage a target is also an <a href="#define-attack-roll">attack roll</a>. You can maintain the effects of more than one spell at the same time. Each spell's <a href="#define-domain-card">domain card</a> tells you when the effect ends. If a spell doesn't specify when it ends, it ends when you choose or at a natural moment of the story.</p>
+			<p>A Spellcast Roll that can damage a target is also an <a href="#define-attack-roll">attack roll</a>.</p>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -10266,29 +10267,35 @@
 	</div>
 </div>
 <hr>
+<h3 id="additional-rules">Additional Rules<a class="og-h-anchor" href="#additional-rules" title="Permalink" aria-hidden="true"></a></h3>
+<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
+<p>The following rules apply to many aspects of the game.</p>
 <div class="row">
 	<div class="col-12 col-md-6">
-		<h3 id="additional-rules">Additional Rules<a class="og-h-anchor" href="#additional-rules" title="Permalink" aria-hidden="true"></a></h3>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
-		<p>The following rules apply to many aspects of the game.</p>
 		<h4 class="h6">Rounding Up</h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
 		<p>Round up to the nearest whole number unless otherwise specified. When in doubt, resolve any ambiguity in favor of the PCs.</p>
-		<h4 class="h6">Rerolling Dice</h4>
-		<p>When a feature allows you to reroll a die, you always take the new result unless the feature specifically says otherwise.</p>
-		<h4 class="h6">Incoming Damage</h4>
-		<p>Incoming damage means the total damage from a single attack or source, before <a href="#define-armor">Armor Slots</a> are marked.</p>
-		<h4 class="h6">Simultaneous Effects</h4>
-		<p>If the resolution order of multiple effects is unclear, the person in control of the effects (player or GM) decides what order to resolve them in.</p>
-	</div>
-	<div class="col-12 col-md-6">
-		<h4 class="h6" >Stacking Effects</h4>
-		<p>Unless stated otherwise, all effects except <a href="#define-condition">conditions</a> and <a href="#define-advantage">advantage and disadvantage</a> can stack.</p>
-		<h4 class="h6">Ongoing Spell Effects</h4>
-		<p>If an effect doesn't have a listed mechanical expiration, it only ends when decided by the controlling player, the GM, or the demands of the fiction.</p>
 		<h4 class="h6">Spending Resources</h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
 		<p>Unless an effect states otherwise, you can't spend <a href="#define-hope">Hope</a> or mark <a href="#define-stress">Stress</a> multiple times on the same feature to increase or repeat its effects on the same roll.</p>
 		<h4 class="h6">Using Features After a Roll</h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
 		<p>If a feature allows you to affect a roll after the result has been totaled, you can use it after the GM declares whether the roll succeeds or fails, but not after the consequences unfold or another roll is made.</p>
+	</div>
+	<div class="col-12 col-md-6">
+		<h4 class="h6">Rerolling Dice</h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
+		<p>When a feature allows you to reroll a die, you always take the new result unless the feature specifically says otherwise.</p>
+		<div id="define-temporary">
+			<h4 class="h6">Resolving Effects</h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 107</li></ul>
+			<dl>
+				<dt>Multiple Effects</dt>
+				<dd>You can maintain the effects from more than one <a href="#define-class">class</a> feature or <a href="#define-domain-card">domain card</a> at a time. If the resolution order of multiple effects is unclear, whoever is in control of the effects (player or GM) decides what order to resolve them in. Unless stated otherwise, all effects except <a href="#define-condition">conditions</a> and <a href="#define-advantage">advantage and disadvantage</a> can stack.</dd>
+				<dt>Temporary Effects</dt>
+				<dd>If an effect doesn't define expiration conditions, it ends when decided by you or the fiction demandss it. The GM can end a temporary effect early by spending a <a href="#define-fear">Fear</a>.</dd>
+			</dl>
+		</div>
 	</div>
 </div>
 <hr>
@@ -10349,39 +10356,38 @@
 	<p>When a PC marks their last <a href="#define-hit-point">Hit Point</a>, they must make a <strong>death move</strong> by choosing one of the following options:</p>
 	<ul class="og-list-disc">
 		<li><strong>Blaze of Glory:</strong> Your character embraces death and goes out in a blaze of glory. Take one final <a href="#define-action">action</a>. It automatically <a href="#define-action-roll">critically succeeds</a> (with GM approval), and then you cross through the veil of death.</li>
-		<li><strong>Avoid Death:</strong> Your character avoids death and faces the consequences. They temporarily drop unconscious, and then you work with the GM to describe how the situation worsens. While unconscious, your character can't move or act, and they can't be targeted by an attack. They return to consciousness when an ally clears 1 or more of their marked <a href="#define-hit-point">Hit Points</a> or when the party finishes a <a href="#define-long-rest">long rest</a>. After your character falls unconscious, roll your <a href="#define-action-roll">Hope Die</a>. If its value is equal to or less than your character's <a href="#define-level">level</a>, they gain a <strong>scar</strong>: permanently cross out a <a href="#define-hope">Hope</a> slot and work with the GM to determine its lasting narrative impact and how, if possible, it can be restored. If you ever cross out your last <a href="#define-hope">Hope</a> slot, your character's journey ends.</li>
+		<li><strong>Avoid Death:</strong> Your character avoids death and faces the consequences. They <a href="#define-temporary">temporarily</a> drop unconscious, and then you work with the GM to describe how the situation worsens. While unconscious, your character can't move or act, and they can't be targeted by an attack. They return to consciousness when an ally clears 1 or more of their marked <a href="#define-hit-point">Hit Points</a> or when the party finishes a <a href="#define-long-rest">long rest</a>. After your character falls unconscious, roll your <a href="#define-action-roll">Hope Die</a>. If its value is equal to or less than your character's <a href="#define-level">level</a>, they gain a <strong>scar</strong>: permanently cross out a <a href="#define-hope">Hope</a> slot and work with the GM to determine its lasting narrative impact and how, if possible, it can be restored. If you ever cross out your last <a href="#define-hope">Hope</a> slot, your character's journey ends.</li>
 		<li><strong>Risk It All:</strong> Roll your <a href="#define-action-roll">Duality Dice</a>. If the <a href="#define-action-roll">Hope Die</a> is higher, your character stays on their feet and clears a number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-stress">Stress</a> equal to the value of the Hope Die (you can divide the Hope Die value between Hit Points and Stress however you'd prefer). If the <a href="#define-action-roll">Fear Die</a> is higher, your character crosses through the veil of death. If the <a href="#define-action-roll">Duality Dice</a> show matching results, your character stays up and clears all Hit Points and Stress.</li>
 	</ul>
 	<p>If your character dies, work with the GM before the next session to create a new character at the current level of the rest of the party.</p>
 </div>
 <hr>
-<h3 id="attacks-and-damage">Attacks and Damage<a class="og-h-anchor" href="#attacks-and-damage" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 <div id="define-attack-roll">
-	<h4 id="attack-rolls">Attack Rolls<a class="og-h-anchor" href="#attack-rolls" title="Permalink" aria-hidden="true"></a></h4>
+	<h3 id="attack-rolls">Attack Rolls<a class="og-h-anchor" href="#attack-rolls" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 104</li><li>Page 148</li><li>Page 160</li></ul>
 	<p>An <strong>attack roll</strong> is an <a href="#define-action-roll">action roll</a> intended to inflict harm.</p>
-	<p>When you attack an <a href="#define-adversary">adversary</a>, the <a href="#define-trait">trait</a> <a href="#define-procedure">modifier</a> is determined by your <a href="#define-weapon">weapon</a> or <a href="#define-subclass">Spellcast trait</a>. Unarmed attacks use either <a href="#define-strength">Strength</a> or <a href="#define-finesse">Finesse</a> (GM's choice). An attack roll's <a href="#define-difficulty">Difficulty</a>, is usually equal to the Difficulty score of its target.</p>
+	<p>The <a href="#define-trait">trait</a> an attack roll uses is determined by your <a href="#define-weapon">weapon</a> or <a href="#define-subclass">Spellcast trait</a>. Unarmed attacks use either <a href="#define-strength">Strength</a> or <a href="#define-finesse">Finesse</a> unless the GM allows otherwise. An attack roll's <a href="#define-difficulty">Difficulty</a> is usually equal to the Difficulty score of the <a href="#define-adversary">adversary</a>.</p>
 	<p>When an <a href="#define-adversary">adversary</a> attacks you, the GM rolls the <a href="#define-action-roll">GM's die</a>, and adds the adversary's attack bonus. If the result meets or beats your <a href="#define-evasion">Evasion</a>, the attack succeeds, and the GM rolls appropriate <a href="#define-damage-roll">damage dice</a>, and applies the <a href="#define-damage-type">damage type</a> to the target. If the GM's die results in a  <strong>natural 20</strong>, the attack succeeds automatically and deals <a href="#define-damage-roll">critical damage</a>.<p>
 	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 		<p>For more on <a href="#define-adversary">adversaries</a> in combat, see <a href="#define-adversary-action">Adversary Actions</a>.</p>
 	</div>
 	<dl>
 		<dt>Multi-Target Attack Rolls</dt>
-		<dd>Make one attack roll and compare it to each target's <a href="#define-difficulty">Difficulty</a> or <a href="#define-evasion">Evasion</a>. Make on a <a href="#define-damage-roll">damage roll</a> and apply the results to each target the attack succeeds against.</dd>
-		<dt>Area of Effect</dt>
-		<dd>Unless stated otherwise, all the targets of a group effect must be within <a href="#define-range">Very Close</a> range of a single origin point within your effect's range.</dd>
+		<dd>Make one attack roll and compare it to each target's <a href="#define-difficulty">Difficulty</a> or <a href="#define-evasion">Evasion</a>. Make one <a href="#define-damage-roll">damage roll</a> and apply the results to each target the attack succeeds against.</dd>
 		<dt>Line of Sight and Cover</dt>
-		<dd>Unless stated otherwise, a ranged attacker must have line of sight to their intended target to make an <a href="#define-attack-roll">attack roll</a>. If a partial obstruction lies between the attacker and target, the target has cover. Attacks made through cover are rolled with <a href="#define-advantage">disadvantage</a>. If the obstruction is total, there is no line of sight.</dd>
+		<dd>Unless stated otherwise, a ranged attacker must have line of sight to the target. If there is a partial obstruction, the target has cover, and the attack roll has <a href="#define-advantage">disadvantage</a>. If the obstruction is total, there is no line of sight.</dd>
+		<dt>Area of Effect</dt>
+		<dd>Unless stated otherwise, all the targets of a group effect must be within <a href="#define-range">Very Close</a> range of a single origin point within the effect's <a href="#define-range">range</a>.</dd>
 	</dl>
 </div>
+<hr>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<div id="define-damage-roll">
-			<h4 id="damage-rolls">Damage Rolls<a class="og-h-anchor" href="#damage-rolls" title="Permalink" aria-hidden="true"></a></h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 98</li><li>Page 110</li><li>Page 113</li></ul>
+			<h3 id="damage-rolls">Damage Rolls<a class="og-h-anchor" href="#damage-rolls" title="Permalink" aria-hidden="true"></a></h3>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 98</li><li>Page 107</li><li>Page 110</li><li>Page 113</li></ul>
 			<p>On a successful <a href="#define-attack-roll">attack</a>, roll damage. Damage is calculated from the damage roll listed in the attack's description with the format <strong>xdy+[modifier]</strong>. Damage dice are arranged into <strong>steps</strong> by an increasing number of faces on the die: <strong>d4</strong>, <strong>d6</strong>, <strong>d8</strong>, <strong>d10</strong>, <strong>d12</strong>, and <strong>d20</strong>. For example, for a <a href="#define-domain-card">domain card</a> spell or <a href="#define-weapon">weapon</a> that inflicts <strong>1d8+2</strong> damage, you roll an eight-sided and add 2 to the result; the damage dealt is equal to the total.</p>
-			<p>Damage dealt simultaneously from multiple sources is totaled before comparing it to a target's <a href="#define-hit-point">damage thresholds</a>. <span class="og-omit">For example, if a PC with <a href="#define-orc">orc</a> ancestry makes a successful <a href="#define-attack-roll">attack roll</a> against a target in <a href="#define-range">Melee</a> range and decides to <strong><a href="#define-hope">spend a Hope</a></strong> to use their <strong><em>Tusks</em></strong> feature (which gives them an extra <strong>1d6</strong> damage on a damage roll), they would roll their normal <a href="#define-weapon">weapon</a> damage and add a <strong>d6</strong> to the result, then deal that total damage to the <a href="#define-adversary">adversary</a>.</span></p>
 			<dl>
 				<dt>Proficiency</dt>
 				<dd>For <a href="#define-weapon">weapons</a>, the number of damage dice you roll is equal to your <a href="#define-damage-roll">Proficiency</a>. For example, a PC with a Proficiency score of 2 wielding a weapon that deals <strong>d8+1</strong> rolls <strong>2d8+1</strong> damage for a successful attack. Successful unarmed attacks inflict <strong>[Proficiency]d4</strong> damage. Some <a href="#define-subclass">subclass</a> features and <a href="#define-domain-card">domain cards</a> are enhanced by your Proficiency in other ways. Your Proficiency starts at 1. You can purchase an <a href="#define-advancement">advancement</a> to increase your Proficiency when you <a href="#define-level">level up</a>.</dd>
@@ -10394,8 +10400,9 @@
 	</div>
 	<div class="col-12 col-md-6">
 		<div id="define-damage-type">
-			<h5 id="damage-types">Damage Types<a class="og-h-anchor" href="#damage-types" title="Permalink" aria-hidden="true"></a></h5>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 99</li></ul>
+			<h4 id="damage-types">Damage Types<a class="og-h-anchor" href="#damage-types" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 98</li><li>Page 99</li></ul>
+			<p>Incoming damage is the total damage from a single attack or source, before <a href="#define-armor">Armor Slots</a> are marked.</p>
 			<dl>
 				<dt>Physical damage (phy)</dt>
 				<dd>Unarmed attacks and mundane <a href="#define-weapon">weapons</a> deal physical damage.</dd>
@@ -10404,9 +10411,11 @@
 				<dt>Direct damage</dt>
 				<dd>Direct damage can be magic or physical. Either way, it can't be reduced by marking <a href="#define-armor">Armor Slots</a>.</dd>
 				<dt>Resistance</dt>
-				<dd>A target with resistance to a damage type reduces incoming damage of that type by half before comparing it to their <a href="#define-hit-point">damage thresholds</a>. If the target has additional ways of reducing incoming damage&mdash;for exampls, marking <a href="#define-armor">Armor Slots</a>&mdash;apply the resistance effect first. Multiple resistances to the same damage type don't stack.  If an attack deals both physical and magic damage, the target must be resistant to both.</dd>
+				<dd>A target with resistance to a damage type reduces incoming damage of that type by half before comparing it to their <a href="#define-hit-point">damage thresholds</a>. If the target has other ways of reducing incoming damage&mdash;for example, marking <a href="#define-armor">Armor Slots</a>&mdash;apply the resistance effect first. Multiple resistances to the same damage type don't stack.  If an attack deals both physical and magic damage, the target must be resistant to both.</dd>
 				<dt>Immunity</dt>
 				<dd>A target with immunity to a damage type ignores it. If an attack deals both physical and magic damage, the target must be immune to both.</dd>
+				<dt>Multiple Sources of Damage</dt>
+				<p>Total simultaneous damage before comparing it to a target's <a href="#define-hit-point">damage thresholds</a>. <span class="og-omit">For example, if you are an <a href="#define-orc">orc</a> who successfully <a href="#define-attack-roll">attacks</a> a target within <a href="#define-range">Melee</a> range and <strong><a href="#define-hope">spends a Hope</a></strong> to use your <strong><em>Tusks</em></strong> feature, you roll your <a href="#define-weapon">weapon</a> damage and add <strong>1d6</strong> to the result.</span></p>
 			</dl>
 		</div>
 	</div>
@@ -10424,7 +10433,7 @@
 		<dt>Vulnerable</dt>
 		<dd>Rolls against <em>Vulnerable</em> characters have <a href="#define-advantage">advantage</a>.</dd>
 		<dt>Temporary Conditions</dt>
-		<dd>PCs can usually clear a temporary condition with a successful <a href="#define-trait-roll">trait roll</a>. An <a href="#define-adversary">adversary</a> clears them with an <a href="#define-adversary-action">adversary action</a>.</dd>
+		<dd>PCs can usually clear a <a href="#define-temporary">temporary</a> condition with a successful <a href="#define-trait-roll">trait roll</a>. An <a href="#define-adversary">adversary</a> clears them with an <a href="#define-adversary-action">adversary action</a>.</dd>
 		<dt>Special Conditions</dt>
 		<dd>Special conditions be cleared only after specific requirements are met, for example, completing a certain <a href="#define-action">action</a> or using a particular item.</dd>
 	</dl>
@@ -11136,10 +11145,9 @@
 <div id="define-gm-move">
 	<h3 id="gm-moves">GM Moves<a class="og-h-anchor" href="#gm-moves" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 89</li><li>Page 149</li><li>Page 150</li></ul>
-	<p>The GM can <strong>GM moves</strong> at any time, which change the story in response to the PC's <a href="#define-action">actions</a>. The GM makes moves when they gain the <a href="#define-spotlight">spotlight</a> after a PC fails an <a href="#define-action-roll">action roll</a>. However, the GM can <strong><a href="#define-fear">spend a Fear</a></strong> to seize the <a href="#define-spotlight">spotlight</a>, even after a successful <a href="#define-action-roll">action roll</a>.</p>
+	<p>The GM can <strong>GM moves</strong> at any time, which change the story in response to the PC's <a href="#define-action">actions</a>. The GM makes moves when they gain the <a href="#define-spotlight">spotlight</a> after a PC fails an <a href="#define-action-roll">action roll</a> or <a href="#define-action-roll">rolls with Fear</a>. However, the GM can <strong><a href="#define-fear">spend a Fear</a></strong> to seize the <a href="#define-spotlight">spotlight</a>, even after a successful <a href="#define-action-roll">action roll</a>.</p>
 	<p>The GM might seize the spotlight when:</p>
 	<ul>
-		<li>A player rolls a <a href="#define-action-roll">success with Fear</a></li>
 		<li>A PC's <a href="#define-action">action</a> would create immediate consequences</li>
 		<li>Something provides a golden opportunity in the narrative</li>
 	</ul>
@@ -11182,6 +11190,9 @@
 			<li>Ask a question, build on the answer</li>
 		</ul>
 	</div>
+	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p><strong>Editor's Notes &mdash;</strong> Clearing a <a href="#define-condition">condition</a> on a single adversary is a GM move, but ending a <a href="#define-temporary">temporary</a> effect created by a PC's <a href="#define-class">class</a> feature or <a href="#define-domain-card">domain card</a> requires the GM to spend a <a href="#define-fear">Fear</a>.</p>
+	</div>	
 </div>
 <hr>
 <h3 id="spending-fear">Spending Fear<a class="og-h-anchor" href="#spending-fear" title="Permalink" aria-hidden="true"></a></h3>
@@ -11799,7 +11810,7 @@
 				<ul class="list-unstyled">
 					<li><p><strong><em>Choice:</em></strong> When the battle begins, choose a favored PC.</p></li>
 					<li><p><strong><em>Trigger:</em></strong> The first time during a battle the favored PC is within <a href="#define-range">Close</a> range and hit with an attack.</p></li>
-					<li><p><strong><em>Effect:</em></strong> Make an <a href="#define-attack-roll">attack roll</a> with a +6 <a href="#define-procedure">modifier</a> against the <a href="#define-adversary">adversary</a>. On a success, the target is temporarily <a href="#define-condition"><em>Restrained</em></a> by tendrils of powerful magic.</p></li>
+					<li><p><strong><em>Effect:</em></strong> Make an <a href="#define-attack-roll">attack roll</a> with a +6 <a href="#define-procedure">modifier</a> against the <a href="#define-adversary">adversary</a>. On a success, the target is <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Restrained</em></a> by tendrils of powerful magic.</p></li>
 				</ul>
 			</div>
 		</div>
@@ -12697,7 +12708,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> the Zombie and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> the Zombie and they have a token on their stat block, clear the token and they can act.</p></li>
                     <li><p><strong><em>Rend Asunder&mdash;Action:</em></strong> Make a standard attack with <a href="#define-advantage">advantage</a> against a target the Zombie has <a href="#define-condition"><em>Restrained</em></a>. On a success, the attack deals <a href="#define-damage-type">direct damage</a>.</p></li>
-                    <li><p><strong><em>Rip and Tear&mdash;Reaction:</em></strong> When the Zombies makes a successful standard attack, you can <strong><a href="#define-stress">mark a Stress</a></strong> to temporarily <a href="#define-condition"><em>Restrain</em></a> the target and force them to mark 2 <a href="#define-stress">Stress</a>.</p></li>
+                    <li><p><strong><em>Rip and Tear&mdash;Reaction:</em></strong> When the Zombies makes a successful standard attack, you can <strong><a href="#define-stress">mark a Stress</a></strong> to <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Restrain</em></a> the target and force them to mark 2 <a href="#define-stress">Stress</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -12937,7 +12948,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Shadow's Embrace&mdash;Passive:</em></strong> The Fang can climb and walk on vertical surfaces. <strong><a href="#define-stress">Mark a Stress</a></strong> to move from one shadow to another within <a href="#define-range">Far</a> range.</p></li>
-                    <li><p><strong><em>Pick Off the Straggler&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to cause a target within <a href="#define-range">Melee</a> range to make an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, the target must mark 2 <a href="#define-stress">Stress</a> and is teleported with the Fang to a shadow within <a href="#define-range">Far</a> range, making them temporarily <a href="#define-condition"><em>Vulnerable</em></a>. On a success, the target must mark a <a href="#define-stress">Stress</a>.</p></li>
+                    <li><p><strong><em>Pick Off the Straggler&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to cause a target within <a href="#define-range">Melee</a> range to make an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, the target must mark 2 <a href="#define-stress">Stress</a> and is teleported with the Fang to a shadow within <a href="#define-range">Far</a> range, making them <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Vulnerable</em></a>. On a success, the target must mark a <a href="#define-stress">Stress</a>.</p></li>
                 </ul>
             </div>
         </div>
@@ -13614,7 +13625,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Flight&mdash;Passive:</em></strong> While flying, the Eagle gains a +3 bonus to their <a href="#define-difficulty">Difficulty</a>.</p></li>
                     <li><p><strong><em>Deadly Dive&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to attack a target within <a href="#define-range">Far</a> range. On a success, deal <strong>2d10+2</strong> <a href="#define-damage-type">physical damage</a> and knock the target over, making them <a href="#define-condition"><em>Vulnerable</em></a> until they next act.</p></li>
-                    <li><p><strong><em>Take Off&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, deal <strong>2d4+3</strong> <a href="#define-damage-type">physical damage</a> and the target must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> or become temporarily <a href="#define-condition"><em>Restrained</em></a> within the Eagle's massive talons. If the target is <a href="#define-condition"><em>Restrained</em></a>, the Eagle immediately lifts them to the air to Very <a href="#define-range">Far</a> range above the battlefield while holding them.</p></li>
+                    <li><p><strong><em>Take Off&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Very Close</a> range. On a success, deal <strong>2d4+3</strong> <a href="#define-damage-type">physical damage</a> and the target must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> or become <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Restrained</em></a> within the Eagle's massive talons. If the target is <a href="#define-condition"><em>Restrained</em></a>, the Eagle immediately lifts them to the air to Very <a href="#define-range">Far</a> range above the battlefield while holding them.</p></li>
                     <li><p><strong><em>Deadly Drop&mdash;Action:</em></strong> While flying, the Eagle can drop a <a href="#define-condition"><em>Restrained</em></a> target they are holding. When dropped, the target is no longer <a href="#define-condition"><em>Restrained</em></a> but starts falling. If their fall isn't prevented during the PCs' next action, the target takes <strong>2d20</strong> <a href="#define-damage-type">physical damage</a> when they land.</p></li>
                 </ul>
             </div>
@@ -14222,7 +14233,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Curse&mdash;Action:</em></strong> Choose a target within <a href="#define-range">Far</a> range and temporarily <em>Curse</em> them. While the target is <em>Cursed</em>, you can <strong><a href="#define-stress">mark a Stress</a></strong> so that target rolls with <a href="#define-hope">Hope</a> to make the roll be with <a href="#define-fear">Fear</a> instead.</p></li>
+                    <li><p><strong><em>Curse&mdash;Action:</em></strong> Choose a target within <a href="#define-range">Far</a> range and <a href="#define-temporary">temporarily</a> <em>Curse</em> them. While the target is <em>Cursed</em>, you can <strong><a href="#define-stress">mark a Stress</a></strong> so that target rolls with <a href="#define-hope">Hope</a> to make the roll be with <a href="#define-fear">Fear</a> instead.</p></li>
                     <li><p><strong><em>Chaotic Flux&mdash;Action:</em></strong> Make an attack against up to three targets within <a href="#define-range">Very Close</a> range. <strong><a href="#define-stress">Mark a Stress</a></strong> to deal <strong>2d6+3</strong> <a href="#define-damage-type">magic damage</a> to targets the Hexer succeeded against.</p></li>
                 </ul>
             </div>
@@ -15736,7 +15747,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Stonestrider&mdash;Passive:</em></strong> The Stonewraith can move through stone and earth as easily as air. While within stone or earth, they are <a href="#define-condition"><em>Hidden</em></a> and <a href="#define-damage-type">immune</a> to all damage.</p></li>
-                    <li><p><strong><em>Rocky Ambush&mdash;Action:</em></strong> While <a href="#define-condition"><em>Hidden</em></a>, <strong><a href="#define-stress">mark a Stress</a></strong> to leap into <a href="#define-range">Melee</a> range with a target within <a href="#define-range">Very Close</a> range. The target must succeed on an <a href="#define-agility">Agility</a> or <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> (15) or take <strong>2d8</strong> <a href="#define-damage-type">physical damage</a> and become temporarily <a href="#define-condition"><em>Restrained</em></a>.</p></li>
+                    <li><p><strong><em>Rocky Ambush&mdash;Action:</em></strong> While <a href="#define-condition"><em>Hidden</em></a>, <strong><a href="#define-stress">mark a Stress</a></strong> to leap into <a href="#define-range">Melee</a> range with a target within <a href="#define-range">Very Close</a> range. The target must succeed on an <a href="#define-agility">Agility</a> or <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> (15) or take <strong>2d8</strong> <a href="#define-damage-type">physical damage</a> and become <a href="#define-temporary">temporarily</a> <a href="#define-condition"><em>Restrained</em></a>.</p></li>
                     <li><p><strong><em>Avalanche Roar&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to roar while within a cave and cause a cave-in. All targets within <a href="#define-range">Close</a> range must succeed on an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a> (14) or take <strong>2d10</strong> <a href="#define-damage-type">physical damage</a>. The rubble can be cleared with a <a href="#define-countdown">Progress Countdown (8)</a>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Stonewraith makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
@@ -16666,7 +16677,7 @@
                 </ul>
                 <p class="og-statblock-q og-omit"><em>What does it feel like to move in a space so alien to the Mortal Realm? What landmark or point do you fixate on to maintain your balance? What bizarre landmarks do you traverse on your journey?</em></p>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>Everything You Are This Place Will Take from You&mdash;Action:</em></strong> <em><a href="#define-countdown">Countdown (Loop 14)</a></em>. Activate the countdown. When it triggers, all PCs must succeed on a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a> or their highest trait is temporarily reduced by <strong>1d4</strong> unless they mark a number of <a href="#define-stress">Stress</a> equal to its value. Any lost trait points are regained if the PC <a href="#define-action-roll">critically succeeds</a> or escapes the Chaos Realm.</p></li>
+                    <li><p><strong><em>Everything You Are This Place Will Take from You&mdash;Action:</em></strong> <em><a href="#define-countdown">Countdown (Loop 14)</a></em>. Activate the countdown. When it triggers, all PCs must succeed on a <a href="#define-presence">Presence</a> <a href="#define-reaction-roll">Reaction Roll</a> or their highest trait is <a href="#define-temporary">temporarily</a> reduced by <strong>1d4</strong> unless they mark a number of <a href="#define-stress">Stress</a> equal to its value. Any lost trait points are regained if the PC <a href="#define-action-roll">critically succeeds</a> or escapes the Chaos Realm.</p></li>
                 </ul>
                 <p class="og-statblock-q og-omit"><em>How does this place try to steal from you that which makes you legendary? What does it feel like to have this power taken from you?</em></p>
                 <ul class="list-unstyled og-list-hang">
