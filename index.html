@@ -111,7 +111,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.94f (2025-07-03)</p>
+<p class="small text-center">version 0.94g (2025-07-03)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -5447,7 +5447,7 @@
             <li class="fw-bold">Level 3 Sage Spell</li>
             <li class="fw-bold">Recall Cost: 1<span class="og-recall" aria-hidden="true">&#9889;</span></li>
             <li class="mt-3">
-                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll</a></strong> against a target within <a href="#define-range">Far</a> range. On a success, deal <strong>d6+4</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-damage-roll">Proficiency</a>. Additionally, <strong><a href="#define-stress">mark 2 or more Stress</a></strong> to make them permanently <em>Corroded</em>. While a target is <em>Corroded</em>, they gain a &minus;1 penalty to their <a href="#define-difficulty">Difficulty</a> for every 2 <a href="#define-stress">Stress</a> you spent. This <a href="#define-condition">condition</a> can stack.</p>
+                <p>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll</a></strong> against a target within <a href="#define-range">Far</a> range. On a success, deal <strong>d6+4</strong> <a href="#define-damage-type">magic damage</a> using your <a href="#define-damage-roll">Proficiency</a>. Additionally, <strong><a href="#define-stress">mark 2 or more Stress</a></strong> to make them permanently <em>Corroded</em>. While a target is <em>Corroded</em>, they gain a &minus;1 penalty to their <a href="#define-difficulty">Difficulty</a> for every 2 <a href="#define-stress">Stress</a> you spent. This <a href="#define-condition">condition</a> can <a href="#define-temporary">stack</a>.</p>
             </li>
         </ul>
     </div></div></div>
@@ -10172,7 +10172,7 @@
 		<dt>Disadvantage</dt>
 		<dd>An additional difficulty, hardship, or challenge you face when attempting an <a href="#define-action">action</a>. When you roll with disadvantage, you roll a <strong>d6</strong> disadvantage die with your dice pool and subtract its result from your total. When an <a href="#define-adversary">adversary</a> rolls with disadvantage, the GM rolls a second <a href="#define-action-roll">GM's die</a> and uses the lower result.</dd>
 		<dt>Multiple Sources of Advantage and Disadvantage</dt>
-		<dd>Advantage and disadvantage dice don't stack&mdash;for example, if you have two sources of disadvantage, you roll one disadvantage die. Each source of advantage and disadvantage cancels the other out&mdash;for example, if you have two sources of advantage and one source of disadvantage, you roll one advantage die. If an advantage die belongs to another PC, is applied as a bonus to your roll&mdash;for example, when they use the <a href="#define-hope">Help an Ally</a> move to aid you.</dd>
+		<dd>Advantage and disadvantage dice don't <a href="#define-temporary">stack</a>&mdash;for example, if you have two sources of disadvantage, you roll one disadvantage die. Each source of advantage and disadvantage cancels the other out&mdash;for example, if you have two sources of advantage and one source of disadvantage, you roll one advantage die. If an advantage die belongs to another PC, is applied as a bonus to your roll&mdash;for example, when they use the <a href="#define-hope">Help an Ally</a> move to aid you.</dd>
 	</dl>
 </div>
 <hr>
@@ -10205,7 +10205,7 @@
 	<div class="col-12 col-md-6">
 		<div id="define-fear">
 			<h4 id="fear">Fear<a class="og-h-anchor" href="#fear" title="Permalink" aria-hidden="true"></a></h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 91</li><li>Page 154</li></ul>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 91</li><li>Page 153</li><li>Page 154</li></ul>
 			<p>The GM starts the game with 1 <strong>Fear</strong>, and GM gains more throughout play (up to a maximum of 12). The GM gains Fear when:</p>
 			<ul class="og-list-disc">
 				<li>A PC <a href="#define-action-roll">rolls with Fear</a></li>
@@ -10216,6 +10216,7 @@
 			<p>The GM spends Fear to:</p>
 			<ul class="og-list-disc">
 				<li><strong>Seize Spotlight (1 Fear):</strong> The <a href="#define-spotlight">spotlight</a> swings to where the GM chooses.</li>
+				<li><strong>End a Temporary Effect (1 Fear):</strong> End a <a href="#define-temporary">temporary</a> class feature, spell, or other effect.</li>
 				<li><strong>GM Moves (1+ Fear):</strong> The GM makes one or more <a href="#define-gm-move">GM moves</a>, for example, causing <a href="#define-adversary-action">adversary actions</a>.</li>
 				<li><strong>Utilize an Experience (1+ Fear):</strong> Add an <a href="#define-adversary">adversary</a>'s <a href="#define-experience">Experience</a> as a bonus to an <a href="#define-action-roll">action roll</a> the adversary makes, or as a penalty to a roll a PC makes against the adversary.</li>
 				<li><strong>Fear Features (1+ Fear):</strong> Activate an <a href="#define-adversary">adversary</a> or <a href="#define-environment">environment</a>'s <a href="#define-adversary-feature">Fear Features</a>.</li>
@@ -10412,11 +10413,11 @@
 				<dt>Direct damage</dt>
 				<dd>Direct damage can be magic or physical. Either way, it can't be reduced by marking <a href="#define-armor">Armor Slots</a>.</dd>
 				<dt>Resistance</dt>
-				<dd>Resistance reduces incoming damage of a type by half. If a target has other ways of reducing incoming damage&mdash;for example, marking <a href="#define-armor">Armor Slots</a>&mdash;apply resistance first. Multiple resistances to a damage type don't stack. If an attack deals physical and magic damage, the target must be resistant to both.</dd>
+				<dd>Resistance reduces incoming damage of a type by half. If a target has other ways of reducing incoming damage&mdash;for example, marking <a href="#define-armor">Armor Slots</a>&mdash;apply resistance first. Multiple resistances to a damage type don't <a href="#define-temporary">stack</a>. If an attack deals physical and magic damage, the target must be resistant to both.</dd>
 				<dt>Immunity</dt>
 				<dd>A target with immunity to a damage type ignores it. If an attack deals both physical and magic damage, the target must be immune to both.</dd>
 				<dt>Multiple Sources of Damage</dt>
-				<dd>Total simultaneous damage before comparing it to a target's <a href="#define-hit-point">damage thresholds</a>. <span class="og-omit">For example, if you are an <a href="#define-orc">orc</a> who successfully <a href="#define-attack-roll">attacks</a> a target within <a href="#define-range">Melee</a> range and <strong><a href="#define-hope">spends a Hope</a></strong> to use your <strong><em>Tusks</em></strong> feature, you roll your <a href="#define-weapon">weapon</a> damage and add <strong>1d6</strong> to the result.</span></dd>
+				<dd>Total simultaneous damage before comparing it to a target's <a href="#define-hit-point">damage thresholds</a>. <span class="og-omit">For example, if you are an <a href="#define-orc">orc</a> who successfully <a href="#define-attack-roll">attacks</a> a target within <a href="#define-range">Melee</a> range and <strong><a href="#define-hope">spend a Hope</a></strong> to use your <strong><em>Tusks</em></strong> feature, you roll your <a href="#define-weapon">weapon</a> damage and add <strong>1d6</strong> to the result.</span></dd>
 			</dl>
 		</div>
 	</div>
@@ -10433,7 +10434,7 @@
 		<dd><em>Restrained</em> characters can't move, but can still take <a href="#define-action">actions</a> from their current position.</dd>
 		<dt>Vulnerable</dt>
 		<dd>Rolls against <em>Vulnerable</em> characters have <a href="#define-advantage">advantage</a>.</dd>
-		<dt>Temporary Conditions</dt>
+		<dt>Clearing Conditions</dt>
 		<dd>PCs can usually clear a <a href="#define-temporary">temporary</a> condition with a successful <a href="#define-trait-roll">trait roll</a>. An <a href="#define-adversary">adversary</a> clears them with an <a href="#define-adversary-action">adversary action</a>.</dd>
 		<dt>Special Conditions</dt>
 		<dd>Special conditions be cleared only after specific requirements are met, for example, completing a certain <a href="#define-action">action</a> or using a particular item.</dd>
