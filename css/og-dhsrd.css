@@ -478,16 +478,18 @@ h5 {
 	font-weight: 600;
 }
 h6, .h6 { 
-	font-size: 1.15rem;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-.lead {
+	display: block;
 	font-family: 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
 	font-size: 1.1rem; 
 	font-weight: 700;
 	text-transform: uppercase;
 }
+
+h6::before, .h6::before {
+	content: '\258C';
+	padding-right: 0.15rem;
+}
+
 .og-statblock-q {
 	margin-left: 0.75rem;
 }
@@ -524,6 +526,9 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .og-tab a.og-h-anchor {
 	margin-left: -1.75rem !important;
 }
+
+.og-tab::before { display: none; }
+
 /* anchor link iconography - color */
 .theme-light h2 a.og-h-anchor,
 .theme-light h3 a.og-h-anchor,
@@ -561,7 +566,7 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .theme-light h4, 
 .theme-light h5, 
 .theme-light h6, 
-.theme-light .lead,
+.theme-light .h6,
 .theme-light .og-quote,
 .theme-light .og-sidebar,
 .theme-light .og-detail-item,
@@ -576,7 +581,7 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .theme-dark h4, 
 .theme-dark h5, 
 .theme-dark h6, 
-.theme-dark .lead,
+.theme-dark .h6,
 .theme-dark .og-quote,
 .theme-dark .og-sidebar,
 .theme-dark .og-detail-item,
@@ -726,17 +731,13 @@ ul.og-list-inline li {
 }
 ul.og-list-inline li::before {
 	position: relative;
-	top: 0.15rem;
-	border-radius: 0.15rem;
-	content: '';
+	top: -0.15rem;
+	content: '\258E';
 	display: inline-block;
-	background-color: #146;
-	width: 0.25rem;
-	height: 1rem;
-	margin-right: 0.5rem;
+	margin-right: 0.15rem;
 }
-.theme-light ul.og-list-inline li::before { background-color: #9cd; }
-.theme-dark ul.og-list-inline li::before { background-color: #146; }
+.theme-light ul.og-list-inline li::before { color: #9cd; }
+.theme-dark ul.og-list-inline li::before { color: #146; }
 ul.og-list-inline li.d-block {
 	display: block;
 	white-space: normal;
@@ -781,18 +782,15 @@ ul.og-list-hang li ul li {
 .og-divider { 
 	display: inline-block; 
 	white-space: nowrap;
-	padding-left: 0.5rem;
+	padding-left: 0.25rem;
 }
 .og-divider::before {
 	position: relative;
-	top: 0.15rem;
-	border-radius: 0.15rem;
-	content: '';
+	top: -0.15rem;
+	content: '\258F';
 	display: inline-block;
-	background-color: #64646d;
-	width: 1px;
-	height: 1rem;
-	margin-right: 0.5rem;
+	color: #64646d;
+	margin-right: 0.15rem;
 }
 
 .og-nowrap { white-space: nowrap; }
