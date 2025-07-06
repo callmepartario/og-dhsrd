@@ -798,7 +798,12 @@ ul.og-list-hang li ul li {
 	display: block;
 	white-space: normal !important; 
 }
-
+.og-fig-lg {
+	max-width: 33rem;
+}
+.og-fig-md {
+	max-width: 22rem;
+}
 
 /* page references */
 ul.og-ref {
