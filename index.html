@@ -111,7 +111,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.94s (2025-07-07)</p>
+<p class="small text-center">version 0.94t (2025-07-07)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -175,7 +175,7 @@
 				<li>You roleplay your PC's reaction to the scenario, declaring their <a href="#define-action">action</a> and dialogue.</li>
 				<li>If your action depends on fate or fortune, the GM calls for an <a href="#define-action-roll">action roll</a>. To make an action roll, you roll your <a href="#define-action-roll">Duality Dice</a>&mdash;two distinct twelve-sided dice (<strong>d12s</strong>)&mdash;representing <a href="#define-hope">Hope</a> and <a href="#define-fear">Fear</a>. The dice are rolled, summed, and relevant bonuses called <a href="#define-procedure">modifiers</a> are added to the result.</li>
 				<li>The total is compared to a <a href="#define-difficulty">Difficulty</a> set by the GM. If the total meets or beats the Difficulty, you succeed. If it's lower, you fail.</li>
-				<li>The situation also changes based on which Duality Die rolls higher, giving the player helpful <a href="#define-hope">Hope</a>, or giving <a href="#define-fear">Fear</a> to the GM.</li>
+				<li>The situation also changes based on which Duality Die rolls higher, giving the player helpful <a href="#define-hope">Hope</a>, or giving adversary <a href="#define-fear">Fear</a> to the GM.</li>
 			</ul>
 			<div class="text-center og-omit">
 				<img class="og-fig-md" src="images/duality-dice.svg" alt="Duality Dice: The Hope die result is 12. The Fear die result is 1." aria-hidden="true">
@@ -2792,21 +2792,21 @@
 			<p>In addition to describing its effects or special rules for using the card, each includes:</p>
 			<dl>
 				<dt>Level</dt>
-				<dd>You can't choose a domain card with a <a href="#define-level">level</a> greater than yours.</dd>
+				<dd>You can't choose a domain card with a <a href="#define-level">level</a> greater than yours&mdash;or half your level if you gained access to the card's <a href="#define-domain">domain</a> deck by <a href="#define-multiclass">multiclassing</a>.</dd>
 				<dt>Domain</dt>
 				<dd>You can only choose cards from your <a href="#define-class">class</a> <a href="#define-domain">domains</a>.</dd>
 				<dt>Recall Cost: X<span class="og-recall" aria-hidden="true">&#9889;</span></dt>
-				<dd>When you have the <a href="#define-spotlight">spotlight</a>, you can mark <a href="#define-stress">Stress</a> equal to a  <a href="#define-loadout">vaulted</a> domain card's Recall Cost to swap it with a domain card in your <a href="#define-loadout">loadout</a>.</dd>
+				<dd>When you have the <a href="#define-spotlight">spotlight</a>, you can mark <a href="#define-stress">Stress</a> equal to a <a href="#define-loadout">vaulted</a> domain card's Recall Cost to exchange it for one in your <a href="#define-loadout">loadout</a>.</dd>
 				<dt>Type</dt>
-				<dd>There are three types of domain cards: <strong>abilities</strong>, <strong>spells</strong>, and <strong>grimoires</strong>. <strong>Abilities</strong> are non-magical. <strong>Spells</strong> are magical. <strong>Grimoires</strong> from the <a href="#define-codex">Codex</a> domain grant you several less potent spells. Some effects are <a href="#define-temporary">temporary</a>.</dd>
+				<dd>There are three types of domain cards: <strong>Abilities</strong> are non-magical. <strong>Spells</strong> are magical. <strong>Grimoires</strong> from the <a href="#define-codex">Codex</a> domain grant you multiple, less potent spells.</dd>
 				<dt>Usage Limits</dt>
-				<dd>Some domain cards restricts how often it can be used. If a card has number of uses equal to a <a href="#define-trait">trait</a> with a <a href="#define-procedure">modifier</a> of +0 or less, you can't use it.</dd>
+				<dd>Some domain cards can only be used a certain number of times before a <a href="#define-short-rest">short rest</a> or <a href="#define-long-rest">long rest</a>. If a card has number of uses equal to a <a href="#define-trait">trait</a> with a <a href="#define-procedure">modifier</a> of +0 or less, you can't use it.</dd>
 			</dl>
 			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-				<p>If you have cards with a Usage Limits in your loadout, be sure to track that information.</p>
+				<p>When you place cards with a Usage Limit in your <a href="#define-loaout">loadout</a>, be sure to track that information.</p>
 			</div>
 			<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-				<p><strong>Editor's Notes &mdash;</strong> The <a href="#define-spotlight">spotlight</a> requirement for paying a <a href="#define-domain-card">domain card</a>'s Recall Cost is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
+				<p><strong>Editor's Notes &mdash;</strong> The <a href="#define-spotlight">spotlight</a> requirement for paying Recall Costs is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
 				<p><em>See: <a href="https://www.reddit.com/r/daggerheart/comments/1lg8lok/comment/myujcar/">r/daggerheart: Can you recall domain cards to your loadout during GM's spotlight?</a></em></p>
 			</div>
 		</div>
@@ -2815,8 +2815,14 @@
 		<div id="define-loadout">
 			<h4 id="loadout-and-vault">Loadout and Vault<a class="og-h-anchor" href="#loadout-and-vault" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 101</li></ul>
-			<p>Your <strong>loadout</strong> is the set of <a href="#define-domain-card">domain cards</a> you can use during play. You can have up to 5 domain cards in your loadout. Once you acquire 6 domain cards, choose 5 to keep in your loadout. The rest are placed in your <strong>vault</strong>. Unless stated otherwise, vaulted cards don't provide you any benefits.</p>
-			<p>At the start of each <a href="#define-downtime">rest</a>, you can exchange cards between your loadout and your vault wiithout paying their Recall Cost.</p>
+			<dl>
+				<dt>Loadout</dt>
+				<dd>Your loadout is the set of <a href="#define-domain-card">domain cards</a> you can use during play. You can have up to 5 domain cards in your loadout.</dd>
+				<dt>Vault</dt>
+				<dd>Domain cards that aren't in our loadout are placed in your vault. Unless stated otherwise, vaulted cards don't provide you any benefits.</dd>
+				<dt>Exchanging Cards</dt>
+				<dd>At the start of <a href="#define-downtime">downtime</a>, you can exchange cards between your loadout and vault wiithout paying Recall Costs.</dd>
+			</dl>
 		</div>
 		<div class="text-center">
 			<img class="og-fig-lg d-light" src="images/class-domain-wheel-light.svg" alt="Classes and Domains" aria-hidden="true">
@@ -7088,17 +7094,10 @@
 <hr>
 <div id="define-weapon">
 	<h3 id="weapons">Weapons<a class="og-h-anchor" href="#weapons" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 112</li><li>Page 113</li></ul>
-	<h4 class="h6">Equipping Weapons</h4>
-	<ul class="og-list-disc">
-		<li><strong>Active Weapons:</strong> You can equip one active <strong>primary</strong> weapon and one <strong>secondary</strong> weapon. You can't attack with unequipped weapons.</li>
-		<li><strong>Tier Limits:</strong> You can't equip weapons or armor with a higher <a href="#define-tier">tier</a> than you.</li>
-		<li><strong>Inventory Weapons:</strong> You can carry up to two additional weapons in your inventory.</li>
-		<li><strong>Swapping Weapons:</strong> You can swap an Inventory Weapon with an Active Weapon during a <a href="#define-downtime">downtime</a> or a moment of calm. In danger, you must mark a <a href="#define-stress">Stress</a> to do so.</li>
-		<li><strong>Throwing Weapons:</strong> You can make an <a href="#define-finesse">Finesse</a> <a href="#define-attack-roll">attack roll</a> to throw a weapon within <a href="#define-range">Very Close</a> range, dealing the weapon's usual <a href="#define-damage-roll">damage</a> on a success. Once thrown, the weapon isn't equipped.</li>
-	</ul>
-	<h4 class="h6">Weapon Anatomy</h4>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 112</li><li>Page 113</li></ul>
 	<dl>
+		<dt>Equipping Weapons</dt>
+		<dd>You can equip up to two <strong>active weapons</strong>&mdash;one <strong>primary weapon</strong>, and one <strong>secondary weapon</strong>. You can't attack with weapons that aren't active, and you can't equip weapons with a higher <a href="#define-tier">tier</a> than yours. You can carry two <strong>inventory weapons</strong>. You can swap an inventory weapon with an active weapon during <a href="#define-downtime">downtime</a> or a moment of calm. In danger, you must mark a <a href="#define-stress">Stress</a> to swap weapons. </li>
 		<dt>Trait</dt>
 		<dd>The <a href="#define-trait">trait</a> used for <a href="#define-attack-roll">attack rolls</a> with the weapon.</dd>
 		<dt>Range</dt>
@@ -7108,9 +7107,13 @@
 		<dt>Damage Type</dt>
 		<dd>Weapons that deal <a href="#define-damage-type">magic damage</a> require a <a href="#define-subclass">Spellcast trait</a> to wield.</dd>
 		<dt>Burden</dt>
-		<dd>The number of hands it occupies when equipped. You have two hands.</dd>
+		<dd>The number of hands it occupies when active. You have two hands.</dd>
 		<dt>Feature</dt>
-		<dd>Some weapons have special properties or features when equipped.</dd>
+		<dd>Some weapons have special properties or features when active.</dd>
+		<dt>Throwing Weapons</dt>
+		<dd>You can make an <a href="#define-finesse">Finesse</a> <a href="#define-attack-roll">attack roll</a> to throw an active weapon within <a href="#define-range">Very Close</a> range, dealing its <a href="#define-damage-roll">damage</a> on a success. Once thrown, the weapon isn't active.</dd>
+		<dt>Unarmed Attacks</dt>
+		<dd>Use either <a href="#define-strength">Strength</a> or <a href="#define-finesse">Finesse</a> for the <a href="#define-attack-roll">attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href="#define-damage-roll">damage</a>.</dd>
 	</dl>
 </div>
 <hr>
@@ -9078,22 +9081,17 @@
 <div id="define-armor">
 	<h3 id="armor">Armor<a class="og-h-anchor" href="#armor" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 112</li><li>Page 114</li><li>Page 126</li></ul>
-	<h4 class="h6">Unarmored</h4>
-	<p>While <strong>unarmored</strong>, your base Armor Score is 0, your Major <a href="#define-hit-point">threshold</a> is equal to your <a href="#define-level">level</a>, and your Severe <a href="#define-hit-point">threshold</a> is equal to twice your <a href="#define-level">level</a>.</p>
-	<h4 class="h6">Equipping Armor</h4>
-	<ul class="og-list-disc">
-		<li><strong>Equipping:</strong> You can't equip armor while in danger or under pressure, and you can't equip armor with a higher <a href="#define-tier">tier</a> than you.</li>
-		<li><strong>Active Armor:</strong> You can equip one Active Armor.</li>
-		<li><strong>Exchanging Armor:</strong> Each armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</li>
-	</ul>
-	<h4 class="h6">Armor Anatomy</h4>
 	<dl>
+		<dt>Equipping Armor</dt>
+		<dd>You can't equip armor while in danger or under pressure, and you can't equip armor of a higher <a href="#define-tier">tier</a> than yours. You can equip only one set of armor.  Each set of armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</dd>
 		<dt>Armor Score and Armor Slots</dt>
 		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href="#define-procedure">modifiers</a> (to a maximum of 12). When you would mark a <a href="#define-hit-point">Hit Point</a>, you can mark an <strong>Armor Slot</strong> instead. If your Armor Score gains a <a href="#define-temporary">temporary</a> bonus, your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>
 		<dt>Base Thresholds</dt>
-		<dd>An armor's base thresholds determines your Major and Severe <a href="#define-hit-point">damage thresholds</a>, and gains a bonus equal to your <a href="#define-level">level</a>.</dd>
+		<dd>When equippeed, a set of armor's base thresholds determine your Major and Severe <a href="#define-hit-point">damage thresholds</a>. Add your <a href="#define-level">level</a> to each.</dd>
 		<dt>Feature</dt>
 		<dd>Some armors grant a feature when equipped.</dd>
+		<dt>Unarmored</dt>
+		<dd>While unarmored, your base Armor Score is 0, your Major <a href="#define-hit-point">threshold</a> is equal to your <a href="#define-level">level</a>, and your Severe <a href="#define-hit-point">threshold</a> is equal to twice your <a href="#define-level">level</a>.</dd>
 	</dl>
 </div>
 <h4 id="armor-tables">Armor Tables<a class="og-h-anchor" href="#armor-tables" title="Permalink" aria-hidden="true"></a></h4>
@@ -10150,7 +10148,7 @@
 					<tr>
 						<th class="fw-normal" scope="row">Meets or beats</th>
 						<td><strong>Success with Hope:</strong> You gain a <a href="#define-hope">Hope</a>.</td>
-						<td><strong>Success with Fear:</strong> There's a cost or complication along with your success. The GM gains 1 <a href="#define-fear">Fear</a> and the <a href="#define-spotlight">spotlight</a>.</td>
+						<td><strong>Success with Fear:</strong> There's a cost or complication along with your success. The GM gains a <a href="#define-fear">Fear</a> and the <a href="#define-spotlight">spotlight</a>.</td>
 					</tr>
 					<tr>
 						<th class="fw-normal" scope="row">Less than</th>
@@ -10502,7 +10500,7 @@
 	<h3 id="attack-rolls">Attack Rolls<a class="og-h-anchor" href="#attack-rolls" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 104</li><li>Page 148</li><li>Page 160</li></ul>
 	<p>An <strong>attack roll</strong> is an <a href="#define-action-roll">action roll</a> intended to inflict harm.</p>
-	<p>The <a href="#define-trait">trait</a> an attack roll uses is determined by your <a href="#define-weapon">weapon</a> or <a href="#define-subclass">Spellcast trait</a>. Unarmed attacks use either <a href="#define-strength">Strength</a> or <a href="#define-finesse">Finesse</a> unless the GM allows otherwise. An attack roll's <a href="#define-difficulty">Difficulty</a> is usually equal to the Difficulty score of the <a href="#define-adversary">adversary</a>.</p>
+	<p>The <a href="#define-trait">trait</a> an attack roll uses is determined by your <a href="#define-weapon">weapon</a> or <a href="#define-subclass">Spellcast trait</a>. An attack roll's <a href="#define-difficulty">Difficulty</a> is usually equal to the Difficulty score of the <a href="#define-adversary">adversary</a>.</p>
 	<p>When an <a href="#define-adversary">adversary</a> attacks you, the GM rolls the <a href="#define-action-roll">GM's die</a>, and adds the adversary's attack bonus. If the result meets or beats your <a href="#define-evasion">Evasion</a>, the attack succeeds, and the GM rolls appropriate <a href="#define-damage-roll">damage dice</a>, and applies the <a href="#define-damage-type">damage type</a> to the target. If the GM's die results in a  <strong>natural 20</strong>, the attack succeeds automatically and deals <a href="#define-damage-roll">critical damage</a>.<p>
 	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 		<p>For more on <a href="#define-adversary">adversaries</a> in combat, see <a href="#define-adversary-action">Adversary Actions</a>.</p>
@@ -10525,7 +10523,7 @@
 			<p>On a successful <a href="#define-attack-roll">attack</a>, roll damage. Damage is calculated from the damage roll listed in the attack's description with the format <strong>xdy+[modifier]</strong>. Damage dice are arranged into <strong>steps</strong> by an increasing number of faces on the die: <strong>d4</strong>, <strong>d6</strong>, <strong>d8</strong>, <strong>d10</strong>, <strong>d12</strong>, and <strong>d20</strong>. For example, for a <a href="#define-domain-card">domain card</a> spell or <a href="#define-weapon">weapon</a> that inflicts <strong>1d8+2</strong> damage, you roll an eight-sided and add 2 to the result; the damage dealt is equal to the total.</p>
 			<dl>
 				<dt>Proficiency</dt>
-				<dd>For <a href="#define-weapon">weapons</a>, the number of damage dice you roll is equal to your <a href="#define-damage-roll">Proficiency</a>. For example, a PC with a Proficiency score of 2 wielding a weapon that deals <strong>d8+1</strong> rolls <strong>2d8+1</strong> damage for a successful attack. Successful unarmed attacks inflict <strong>[Proficiency]d4</strong> damage. Some <a href="#define-subclass">subclass</a> features and <a href="#define-domain-card">domain cards</a> are enhanced by your Proficiency in other ways. Your Proficiency starts at 1. You can purchase an <a href="#define-advancement">advancement</a> to increase your Proficiency when you <a href="#define-level">level up</a>.</dd>
+				<dd>For <a href="#define-weapon">weapons</a>, the number of damage dice you roll is equal to your <a href="#define-damage-roll">Proficiency</a>. For example, a PC with a Proficiency score of 2 wielding a weapon that deals <strong>d8+1</strong> rolls <strong>2d8+1</strong> damage for a successful attack. Some <a href="#define-subclass">subclass</a> features and <a href="#define-domain-card">domain cards</a> are enhanced by your Proficiency in other ways. Your Proficiency starts at 1. You can purchase an <a href="#define-advancement">advancement</a> to increase your Proficiency when you <a href="#define-level">level up</a>.</dd>
 				<dt>Spellcast Trait</dt>
 				<dd>If you deal damage using your <a href="#define-subclass">Spellcast trait</a>, roll a number of dice equal to your Spellcast trait's <a href="#define-procedure">modifier</a>. If your <a href="#define-subclass">Spellcast trait</a> is +0 or lower, you don't roll anything.</dd>
 				<dt>Critical Damage</dt>
