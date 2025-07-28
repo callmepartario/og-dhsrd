@@ -412,22 +412,30 @@ strong { font-weight: bold; }
 
 /* override link and body coloration */
 
-a { text-decoration: none !important;}
-a:hover { text-decoration: underline !important;}
+#og-content a { text-decoration: none !important;}
+#og-content a:hover { text-decoration: underline !important;}
 
 #og-content.theme-light a, .theme-light .tooltip-inner a { color: #cf4a0c; }
 #og-content.theme-light a:hover { color: #f26522; }
 #og-content.theme-dark a { color: #facc8e; }
 #og-content.theme-dark a:hover { color: #fca832; }
 button.theme-light, a.btn.theme-light { 
+	color: #cf4a0c !important;
 	background-color: #f7fffb; 
 	border-color: #aab3ae !important; 
 	box-shadow: 2px 2px 0px 0px #aab3ae; 
 }
+button.theme-light:hover, a.btn.theme-light:hover { 
+	color: #f26522 !important;
+}
 button.theme-dark, a.btn.theme-dark { 
+	color: #facc8e !important;
 	background-color: #1c1f21; 
 	border-color: #4d5359 !important; 
 	box-shadow: 2px 2px 0px 0px #4d5359; 
+}
+button.theme-dark:hover, a.btn.theme-dark:hover { 
+	color: #fca832 !important;
 }
 
 /* main content window */
