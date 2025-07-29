@@ -111,7 +111,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.97f (2025-07-28)</p>
+<p class="small text-center">version 0.97g (2025-07-29)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -253,7 +253,7 @@
 		<div id="define-trait-array">
 			<h3 id="step-3"><span class="h6">Step 3:</span> Assign Traits<a class="og-h-anchor" href="#step-3" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 17</li></ul>
-			<p><strong>Traits</strong> represent your physical, mental, and social aptitudes. Each <a href="#define-trait">trait</a> has a <a href="#define-procedure">modifier</a> that is added to relevant <a href="#define-action-roll">action rolls</a>. There are six traits:</p>
+			<p><a href="#define-trait">Traits</a> represent your physical, mental, and social aptitudes. Each has a <a href="#define-procedure">modifier</a> that is added to relevant <a href="#define-action-roll">action rolls</a>. There are six traits:</p>
 			<ul class="og-list-inline mb-3">
 				<li><a href="#define-agility">Agility</a></li>
 				<li><a href="#define-strength">Strength</a></li>
@@ -275,6 +275,9 @@
 					</ul>
 				</dd>
 			</dl>
+			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+				<p>If your <a href="#define-subclass">subclass</a> assigned you a Spellcast trait, it's a good idea to assign it a modifier greater than 0.</p>
+			</div>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -2829,7 +2832,7 @@
 				<dt>Vault</dt>
 				<dd>Domain cards that aren't in our loadout are placed in your vault. Unless stated otherwise, vaulted cards don't provide you any benefits.</dd>
 				<dt>Exchanging Cards</dt>
-				<dd>At the start of <a href="#define-downtime">downtime</a>, you can exchange cards between your loadout and vault wiithout paying Recall Costs.</dd>
+				<dd>At the start of <a href="#define-downtime">downtime</a>, you can exchange cards between your loadout and vault wiithout paying <a href="#define-domain-card">Recall Costs</a>.</dd>
 			</dl>
 		</div>
 		<div class="text-center">
@@ -2838,8 +2841,8 @@
 		</div>
 	</div>
 	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p><strong>Editor's Notes &mdash;</strong> The <a href="#define-spotlight">spotlight</a> requirement for paying Recall Costs is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
-		<p><a href="#define-daggerheart">Daggerheart</a> is a fiction-first, <a href="#define-ruling">rulings over rules</a> game. Each player and the GM should act in good faith and focus on the story rather than squeezing every last possible advantage out of mechanical minutae. For example, there are probably other common sense limitations on exchanging domain card exchanges in good faith&mdash;for example, if you wait for a <a href="#define-success-with-hope">success with Hope</a> on an <a href="#define-attack-roll">attack roll</a>, exchange <a href="#define-domain-card-bare-bones">Bare Bones</a> for <a href="#define-domain-card-forceful-push">Forceful Push</a> to inflict additional <a href="#define-damage-roll">damage</a>, and then exchange the two cards again&mdash;after all, both cards have a Recall Cost of 0, right?</p>
+		<p><strong>Editor's Notes &mdash;</strong> The <a href="#define-spotlight">spotlight</a> requirement for paying <a href="#define-domain-card">Recall Costs</a> is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
+		<p><a href="#define-daggerheart">Daggerheart</a> is a fiction-first, <a href="#define-ruling">rulings over rules</a> game. Each player and the GM should act in good faith and focus on the story rather than squeezing every last possible advantage out of mechanical minutae. For example, there are probably other common sense limitations on exchanging domain card exchanges in good faith&mdash;for example, if you wait for a <a href="#define-success-with-hope">success with Hope</a> on an <a href="#define-attack-roll">attack roll</a>, exchange <a href="#define-domain-card-bare-bones">Bare Bones</a> for <a href="#define-domain-card-forceful-push">Forceful Push</a> to inflict additional <a href="#define-damage-roll">damage</a>, and then exchange the two cards again&mdash;after all, both cards have a <a href="#define-domain-card">Recall Cost</a> of 0, right?</p>
 		<p>Sure, the GM <em>could</em> spend a <a href="#define-fear">Fear</a> to seize the <a href="#define-spotlight">spotlight</a> and prevent the exchange, but these kinds of punitive measures are against the spirit of the game. Using <a href="#define-golden-rule">the golden rule</a>, the players and GM might agree on one of the following arrangements:</p>
 		<ul class="og-list-disc">
 			<li><strong>Combat Lock:</strong> Domain cards can't be swapped under pressure, including <a href="#define-combat">combat</a>.</li>
@@ -6642,6 +6645,8 @@
 		<dd>Your traits start with an <a href="#define-trait-array">array</a> of <a href="#define-procedure">modifiers</a> assigned during <a href="#define-character-creation">character creation</a>.</dd>
 		<dt>Traits and Action Rolls</dt>
 		<dd>When you make an <a href="#define-action-roll">action roll</a>, the relevant trait's <a href="#define-procedure">modifier</a> is added to the roll's total.</dd>
+		<dt>Negative Modifiers</dt>
+		<dd>Unless otherwise stated, if a mechanic other than a roll uses a trait modifier and yours is negative, treat it as if it were 0. For example, if you are a <a href="#define-druid">Druid</a> and choose the <a href="#define-druid-warden-of-renewal">Warden of Renewal</a>, your <strong><em>Clarity of Nature</em></strong> feature requires an <a href="#define-instinct">Instinct</a> modifier of +1 or higher to have any effect. A few mechanics set a minumum&mdash;for example, the <a href="#define-domain-card-flight">Flight</a> spell grants 1 counter even if your <a href="#define-agility">Agility</a> modifier is &minus;1.</dd> 
 		<dt>Increasing Trait Modifiers</dt>
 		<dd>When you gain a <a href="#define-level">level</a>, you can increase purchase an <a href="#define-advancement">advancement</a> to increase the modifiers of two traits. You can increase a trait's modifier only once each <a href="#define-tier">tier</a>.</dd>
 	</dl>
