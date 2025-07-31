@@ -1,4 +1,4 @@
-0.97<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Old Gus' Daggerheart System Reference Document (OG-DHSRD)</title>
@@ -112,7 +112,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.98a (2025-07-31)</p>
+<p class="small text-center">version 0.98b (2025-07-31)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -12521,7 +12521,7 @@
 	</div>
 </div>
 <h4 id="adversary-stat-block-benchmarks">Adversary Stat Block Benchmarks<a class="og-h-anchor" href="#adversary-stat-block-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 208</li><li>Editorial Addition</li></ul>
+<ul class="og-list-inline og-ref og-omit"><li>Page 208</li></ul>
 <div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
 	<caption>Adversary Stat Block Benchmarks</caption>
 	<thead>
@@ -12566,178 +12566,268 @@
 			<th class="fw-normal"><a href="#define-damage-roll">Damage</a></th>
 			<td class="text-center">
 				<span class="og-nowrap">1d6+2</span> to <span class="og-nowrap">1d12+4</span>
-				<span class="d-block og-nowrap">(6&ndash;11 damage)</span>
+				<span class="d-block og-nowrap small"><em>(6&ndash;11 damage)</em></span>
 			</td>
 			<td class="text-center">
 				<span class="og-nowrap">2d6+3</span> to <span class="og-nowrap">2d12+4</span>
-				<span class="d-block og-nowrap">(10&ndash;17 damage)</span>
+				<span class="d-block og-nowrap small"><em>(10&ndash;17 damage)</em></span>
 			</td>
 			<td class="text-center">
 				<span class="og-nowrap">3d8+3</span> to <span class="og-nowrap">3d12+5</span>
-				<span class="d-block og-nowrap">(17&ndash;25 damage)</span>
+				<span class="d-block og-nowrap small"><em>(17&ndash;25 damage)</em></span>
 			</td>
 			<td class="text-center">
 				<span class="og-nowrap">4d8+10</span> to <span class="og-nowrap">4d12+15</span>
-				<span class="d-block og-nowrap">(28&ndash;41 damage)</span>
+				<span class="d-block og-nowrap small"><em>(28&ndash;41 damage)</em></span>
 			</td>
 		</tr>
 	</tbody>
 </table></div>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<h5 class="h6">Attacks Modifiers, Damage Rolls, and Features</h5>
-		<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-		<p>Average <a href="#define-adversary">adversary</a> damage output is determined and balanced by two factors: their <a href="#define-attack-roll">attack modifier</a>, and damage roll.</p>
-		<dl>
-			<dt>Attack Modifier</dt>
-			<dd>Increase or decrease an adversary's attack modifier by &plusmn;4 to make an <a href="#define-attack-roll">attack roll</a> more or less likely to succeed.</dd>
-			<dt>Damage Roll</a>
-			<dd>Increasing the number of damage dice in a <a href="#define-damage-roll">damage roll</a> increases average damage, but also increases volatility&mdash;especially at higher damage die sizes. Increasing the damage modifier makes a damage roll more consistent.</dd>
-		</dl>
-		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-			<caption>Adversary Damage by Type</caption>
-			<thead>
-				<tr>
-					<th scope="col">Type</th>
-					<th class="og-nowrap text-center" scope="col">Damage Die</th>
-					<th scope="col">Modifications</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Bruiser</a></th>
-					<td class="text-center">d10&ndash;d12</td>
-					<td>Assign a lower attack modifier, higher damage, and the <a href="#define-adversary-feature-reaction">Momentum</a> feature.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Horde</a></th>
-					<td class="text-center"><span class="og-nowrap">d8&ndash;d10</span></td>
-					<td>Assign the <a href="#define-adversary-feature-passive">Horde</a> feature, and at half <a href="#define-hit-point">Hit Points</a>, reduce damage to d4&ndash;d6</span>. Don't assign too many <a href="#define-adversary-feature">adversary features</a>.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Leader</a></th>
-					<td class="text-center">d8&ndash;d10</td>
-					<td>Assign damage based on concept&mdash;some are capable on their own, others rely on commanding others. Assign a higher number of <a href="#define-adversary-feature">adversary features</a>, including <a href="#define-adversary-feature-reaction">Momentum</a>.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Minion</a></th>
-					<td class="text-center">&mdash;</td>
-					<td>Assign the <a href="#define-adversary-feature-passive">Minion</a> feature, <a href="#define-damage-thresholds">damage thresholds</a> as "None", 1 <a href="#define-hit-point">Hit Point</a>, 1&ndash;2 <a href="#define-stress">Stress</a>, , and use flat damage instead of a <a href="#define-damage-roll">damage roll</a>. Don't assign too many features.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Ranged</a></th>
-					<td class="text-center">d8&ndash;d10</td>
-					<td>Assign slightly higher damage, and lower <a href="#define-hit-point">Hit Points</a> or <a href="#define-hit-point">damage threshold</a>.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Skulk</a></th>
-					<td class="text-center">d6&ndash;d8</td>
-					<td>&mdash;</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Social</a></th>
-					<td class="text-center">d4&ndash;d6</td>
-					<td>Assign slightly lower damage, and add a higher number of <a href="#define-adversary-feature">adversary features</a> useful outside of combat.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Solo</a></th>
-					<td class="text-center">d10&ndash;d12</td>
-					<td>Assign higher damage and a higher number of <a href="#define-adversary-feature">adversary features</a>, including <a href="#define-adversary-feature-passive">Relentless</a> and <a href="#define-adversary-feature-reaction">Momentum</a>. Supplement the encounter with <a href="#define-adversary-type">Minion</a> and <a href="#define-adversary-type">Standard</a> adversaries.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Standard</a></th>
-					<td class="text-center">d6&ndash;d8</td>
-					<td>&mdash;</td>
-				</tr>
-				<tr>
-					<th class="fw-normal" scope="row"><a href="#define-adversary-type">Support</a></th>
-					<td class="text-center">d4&ndash;d6</td>
-					<td>Assign lower damage.</td>
-				</tr>
-			</tbody>
-		</table></div>
-	</div>
-	<div class="col-12 col-md-6">
-		<h5 class="h6">PC Damage Thresholds and Base Armor Scores</h5>
-		<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-		<p><a href="#define-damage-roll">Damage rolls</a> are compared to a PC's <a href="#define-hit-point">damage thresholds</a>. Use the following table to help determine the average number of <a href="#define-hit-point">Hit Points</a> and <a href="#define-armor">Armor Slots</a> a successful attack costs the party.</p>
-		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-			<caption>Damage Thresholds by Tier</caption>
-			<thead>
-				<tr>
-					<th class="text-center og-nowrap" scope="col">Tier</th>
-					<th class="text-center" scope="col">Damage Threshold</th>
-					<th class="text-center" scope="col">Armor Base Score</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th class="fw-normal text-center og-nowrap" scope="row">Tier 1</th>
-					<td class="text-center og-nowrap">5/11 to 8/17</td>
-					<td class="text-center og-nowrap">3&ndash;4</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center og-nowrap" scope="row">Tier 2</th>
-					<td class="text-center og-nowrap">7/16 to 13/28</td>
-					<td class="text-center og-nowrap">4&ndash;5</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center og-nowrap" scope="row">Tier 3</th>
-					<td class="text-center og-nowrap">9/23 to 17/43</td>
-					<td class="text-center og-nowrap">5&ndash;6</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center og-nowrap" scope="row">Tier 4</th>
-					<td class="text-center og-nowrap">11/32 to 18/48</td>
-					<td class="text-center og-nowrap">6&ndash;8</td>
-				</tr>
-			</tbody>
-		</table></div>
-		<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p><strong>Editor's Notes &mdash;</strong> Online tools like <a href="https://anydice.com">anydice.com</a> provide damage ranges and averages for adversary <a href="#define-damage-roll">damage rolls</a> you can compare against the PCs' <a href="#define-hit-point">damage thresholds</a>.</p>
-		</div>
-		<h5 class="h6">Hit Points</h5>
-		<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-		<p><a href="#defne-hit-point">Hit Points</a> determine the number of successful <a href="#define-attack-roll">attack rolls</a> the party needs to make to defeat an <a href="#define-adversary">adversary</a>.</p>
-		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-			<caption>Adversary Hit Points</caption>
-			<thead>
-				<tr>
-					<th class="text-center og-nowrap" scope="col">Hit Points</th>
-					<th scope="col">Guidelines</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th class="fw-normal text-center">1</th>
-					<td>Defeated by any successful <a href="#define-attack">attack roll</a>&mdash;perfect for a <a href="#define-adversary-type">Minion</a>. Don't assign <a href="#define-damage-threshold">damage thresholds</a>.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center">2</th>
-					<td>Defeated by 1&ndash;2 successful <a href="#define-attack">attack rolls</a>. Assign only a Major <a href="#define-damage-threshold">damage threshold</a>.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center">3</th>
-					<td>Might be defeated with one <a href="#define-attack">attack roll</a> with a high <a href="#define-damage-roll">damage roll</a>, or might take a while to defeat&mdash;assign <a href="#define-difficulty">Difficulty</a> and <a href="#define-damage-threshold">damage thresholds</a> carefully.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center">4&ndash;6</th>
-					<td>These enemies will be last a while. Assign this range to a <a href="#define-adversary-type">Standard</a> adversary.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center">7&ndash;9</th>
-					<td>Tougher than usual, but be careful&mdash;too many adversaries with too much health might cause an encounter to last too long.</td>
-				</tr>
-				<tr>
-					<th class="fw-normal text-center">10+</th>
-					<td>An extremely tough enemy&mdash;avoid using more than one of these in an encounter, but supplement them weaker underlings.</td>
-				</tr>
-			</tbody>
-		</table></div>
-		<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p><strong>Editor's Notes &mdash;</strong> Additional guidance for creating adversary stat blocks is provided in the <a href="https://www.daggerheart.com/downloads/">Daggerheart Homebrew Kit</a>.</p>
-		</div>
-	</div>
+<h5 id="adversary-stat-block-benchmarks-hit-points">Assigning Adversary HP<a class="og-h-anchor" href="#adversary-stat-block-benchmarks-hit-points" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p><a href="#define-hit-point">Hit Points</a> determine the number of successful <a href="#define-attack-roll">attack rolls</a> the party needs to make to defeat an <a href="#define-adversary">adversary</a>.</p>
+<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Adversary Hit Points</caption>
+	<thead>
+		<tr>
+			<th class="text-center og-nowrap" scope="col">Hit Points</th>
+			<th scope="col">Guidelines</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal text-center">1</th>
+			<td>Defeated by any successful <a href="#define-attack-roll">attack roll</a>&mdash;perfect for a <a href="#define-adversary-type">Minion</a>. Don't assign <a href="#define-hit-point">damage thresholds</a>.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center">2</th>
+			<td>Defeated by 1&ndash;2 successful <a href="#define-attack-roll">attack rolls</a>. Assign only a Major <a href="#define-hit-point">damage threshold</a>.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center">3</th>
+			<td>Might be defeated with one <a href="#define-attack-roll">attack roll</a> with a high <a href="#define-damage-roll">damage roll</a>, or might take a while to defeat&mdash;assign <a href="#define-difficulty">Difficulty</a> and <a href="#define-damage-threshold">damage thresholds</a> carefully.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center">4&ndash;6</th>
+			<td>These enemies will be last a while. Assign this range to a <a href="#define-adversary-type">Standard</a> adversary.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center">7&ndash;9</th>
+			<td>Tougher than usual, but be careful&mdash;too many adversaries with too much health might cause an encounter to last too long.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center">10+</th>
+			<td>An extremely tough enemy&mdash;avoid using more than one of these in an encounter, but supplement them weaker underlings.</td>
+		</tr>
+	</tbody>
+</table></div>
+<h5 id="adversary-stat-block-benchmarks-pc-damage">PC Damage Scaling<a class="og-h-anchor" href="#adversary-stat-block-benchmarks-pc-damage" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p>The following table shows <a href="#define-weapon">weapon</a> <a href="#define-damage-rolls">damage roll</a> averages. Average incoming damage is determined <a href="#define-attack-roll">attack roll</a> <a href="#define-procedure">modifier</a> and how many times the PC purchases an <a href="#define-advancement">advancement</a> to increase their <a href="#define-damage-roll">Proficiency</a>. The total number of <a href="#define-hit-point">Hit Points</a> an <a href="#define-adversary">adversary</a> marks depends on their <a href="#define-hit-point">damage thresholds</a>, and <a href="#define-damage-type">resistance</a>.</p>
+<dl>
+	<dt>Short-Range</dt>
+	<dd>Melee, Very Close, or Close <a href="#define-range">Range</a>.</dd>
+	<dt>Long-Range</dt>
+	<dd>Far or Very Far <a href="#define-range">Range</a>.</dd>
+</dl>
+<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Damage Scaling</caption>
+	<thead>
+		<tr>
+			<th class="text-center og-nowrap" scope="col">Tier</th>
+			<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
+			<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
+			<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
+			<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal og-nowrap text-center">Tier 1</th>
+			<td class="text-center"><span class="og-nowrap">1d8+1</span> <span class="d-block og-nowrap small"><em>(6 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">1d10+3</span> <span class="d-block og-nowrap small"><em>(9 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">1d6+1</span> <span class="d-block og-nowrap small"><em>(5 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">1d6+3</span> <span class="d-block og-nowrap small"><em>(7 damage)</em></span></td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap text-center">Tier 2</th>
+			<td class="text-center"><span class="og-nowrap">2d8+3</span> <span class="d-block og-nowrap small"><em>(12 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">2d10+6</span> <span class="d-block og-nowrap small"><em>(17 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">2d6+3</span> <span class="d-block og-nowrap small"><em>(10 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">2d6+6</span> <span class="d-block og-nowrap small"><em>(13 damage)</em></span></td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap text-center">Tier 3</th>
+			<td class="text-center"><span class="og-nowrap">3d8+6 to 4d8+6</span> <span class="d-block og-nowrap small"><em>(20&ndash;24 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">3d10+9 to 4d10+9</span> <span class="d-block og-nowrap small"><em>(26&ndash;31 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">3d6+6 to 4d6+6</span> <span class="d-block og-nowrap small"><em>(17&ndash;20 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">3d6+9 to 4d6+9</span> <span class="d-block og-nowrap small"><em>(20&ndash;23 damage)</em></span></td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap text-center">Tier 4</th>
+			<td class="text-center"><span class="og-nowrap">4d8+9 to 6d8+9</span> <span class="d-block og-nowrap small"><em>(27&ndash;36 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">4d10+12 to 6d10+12</span> <span class="d-block og-nowrap small"><em>(34&ndash;45 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">4d6+9 to 6d6+9</span> <span class="d-block og-nowrap small"><em>(23&ndash;30 damage)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">4d6+12 to 6d6+12</span> <span class="d-block og-nowrap small"><em>(26&ndash;33 damage)</em></span></td>
+		</tr>
+	</tbody>
+</table></div>
+<h5 id="adversary-stat-block-benchmarks-type">Type Modifications<a class="og-h-anchor" href="#adversary-stat-block-benchmarks-type" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p>Average <a href="#define-adversary">adversary</a> damage output is determined and balanced by two factors: their <a href="#define-attack-roll">attack modifier</a>, and damage roll.</p>
+<dl>
+	<dt>Attack Modifier</dt>
+	<dd>Increase or decrease an adversary's attack modifier by &plusmn;4 to make an <a href="#define-attack-roll">attack roll</a> more or less likely to succeed.</dd>
+	<dt>Damage Roll</dt>
+	<dd>Increasing the number of damage dice in a <a href="#define-damage-roll">damage roll</a> increases average damage, but also increases volatility&mdash;especially at higher damage die sizes. Increasing the damage modifier makes a damage roll more consistent.</dd>
+</dl>
+<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Type Modifications</caption>
+	<thead>
+		<tr>
+			<th scope="col">Type</th>
+			<th class="og-nowrap text-center" scope="col">Damage Die</th>
+			<th scope="col">Modifications</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Bruiser</a></th>
+			<td class="text-center">d10&ndash;d12</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Decrease <a href="#define-attack">attack roll</a> modifier.</li>
+					<li>Increase <a href="#define-damage-roll">damage roll</a>.</li>
+					<li>Add the <a href="#define-adversary-feature-reaction">Momentum</a> feature.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Horde</a></th>
+			<td class="text-center"><span class="og-nowrap">d8&ndash;d10</span></td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Add the <a href="#define-adversary-feature-passive">Horde</a> feature, and at half <a href="#define-hit-point">Hit Points</a>, reduce the <a href="#define-damage-roll">damage roll</a> to d4&ndash;d6. Don't assign too many <a href="#define-adversary-feature">adversary features</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Leader</a></th>
+			<td class="text-center">d8&ndash;d10</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Assign <a href="#define-damage-roll">damage roll</a> based on concept&mdash;some <a href="#define-adversary-type">Leaders</a are capable on their own, and others rely on the ability to <a href="#define-spotlight">spotlight</a> other <a href="#define-adversary">adversaries</a>.</li>
+					<li>Add the <a href="#define-adversary-feature-reaction">Momentum</a> feature, and higher number of <a href="#define-adversary-feature">adversary features</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Minion</a></th>
+			<td class="text-center">&mdash;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Assign <a href="#define-hit-point">Thresholds</a> as "None".</li>
+					<li>Assign 1 <a href="#define-hit-point">Hit Points</a>.</li>
+					<li>Assign 1&ndash;2 <a href="#define-stress">Stress</a>.</li>
+					<li>Use flat damage instead of a <a href="#define-damage-roll">damage roll</a>.</li>
+					<li>Add the <a href="#define-adversary-feature-passive">Minion</a> feature, and don't assign too <a href="#define-adversary-feature">adversary features</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Ranged</a></th>
+			<td class="text-center">d8&ndash;d10</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Slightly increase <a href="#define-damage-roll">damage roll</a>.</li>
+					<li>Lower <a href="#define-hit-point">Hit Points</a> or <a href="#define-hit-point">damage thresholds</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Skulk</a></th>
+			<td class="text-center">d6&ndash;d8</td>
+			<td>&mdash;</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Social</a></th>
+			<td class="text-center">d4&ndash;d6</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Slightly decrease <a href="#define-damage-roll">damage roll</a>.</li>
+					<li>Add a higher number of <a href="#define-adversary-feature">adversary features</a> useful outside of combat.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Solo</a></th>
+			<td class="text-center">d10&ndash;d12</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Increase <a href="#define-damage-roll">damage roll</a>.</li>
+					<li>Add the <a href="#define-adversary-feature-passive">Relentless</a> and <a href="#define-adversary-feature-reaction">Momentum</a> features, and a higher number of other <a href="#define-adversary-feature">adversary features</a>.</li>
+					<li>Supplement the encounter with <a href="#define-adversary-type">Minion</a> and <a href="#define-adversary-type">Standard</a> adversaries.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Standard</a></th>
+			<td class="text-center">d6&ndash;d8</td>
+			<td>&mdash;</td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Support</a></th>
+			<td class="text-center">d4&ndash;d6</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Decrease  <a href="#define-damage-roll">damage roll</a>.</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table></div>
+<h5 id="adversary-stat-block-benchmarks-pc-defense">PC Defenses<a class="og-h-anchor" href="#adversary-stat-block-benchmarks-pc-defense" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p><a href="#define-damage-roll">Damage rolls</a> are compared to a PC's <a href="#define-hit-point">damage thresholds</a>. Use the following table to help determine the average number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-armor">Armor Slots</a> a successful attack causes the PCs to mark.</p>
+<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+	<caption>PC Defenses</caption>
+	<thead>
+		<tr>
+			<th class="text-center og-nowrap" scope="col">Tier</th>
+			<th class="text-center" scope="col">Major Threshold</th>
+			<th class="text-center" scope="col">Severe Threshold</th>
+			<th class="text-center" scope="col">Armor Base Score</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal text-center og-nowrap" scope="row">Tier 1</th>
+			<td class="text-center og-nowrap">5&ndash;8</td>
+			<td class="text-center og-nowrap">11&ndash;17</td>
+			<td class="text-center og-nowrap">3&ndash;4</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center og-nowrap" scope="row">Tier 2</th>
+			<td class="text-center og-nowrap">7&ndash;16</td>
+			<td class="text-center og-nowrap">13&ndash;28</td>
+			<td class="text-center og-nowrap">4&ndash;5</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center og-nowrap" scope="row">Tier 3</th>
+			<td class="text-center og-nowrap">9&ndash;17</td>
+			<td class="text-center og-nowrap">23&ndash;43</td>
+			<td class="text-center og-nowrap">5&ndash;6</td>
+		</tr>
+		<tr>
+			<th class="fw-normal text-center og-nowrap" scope="row">Tier 4</th>
+			<td class="text-center og-nowrap">11&ndash;18</td>
+			<td class="text-center og-nowrap">32&ndash;48</td>
+			<td class="text-center og-nowrap">6&ndash;8</td>
+		</tr>
+	</tbody>
+</table></div>
+<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p><strong>Editor's Notes &mdash;</strong> 	Additional guidance for creating adversary stat blocks is provided in the <a href="https://www.daggerheart.com/downloads/">Daggerheart Homebrew Kit</a>. Tools like <a href="https://anydice.com">anydice.com</a> provide damage ranges and averages for adversary <a href="#define-damage-roll">damage rolls</a> you can compare against the PCs' <a href="#define-hit-point">damage thresholds</a>.</p>
 </div>
 <hr>
 <h3 id="adversary-stat-blocks">Adversary Stat Blocks<a class="og-h-anchor" href="#adversary-stat-blocks" title="Permalink" aria-hidden="true"></a></h3>
