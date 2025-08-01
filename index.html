@@ -114,7 +114,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.98h (2025-08-01)</p>
+<p class="small text-center">version 0.98i (2025-08-01)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -10928,12 +10928,45 @@
 	<p>It's up to the GM to determine the Difficulty of other <a href="#define-action-roll">action rolls</a> required by the narrative.</p>
 	<p>Additionally, the GM can <a href="#define-procedure">modify</a> by spending additional <a href="#define-fear">Fear</a>, or give a roll <a href="#define-advantage">advantage and disadvantage</a> based on circumstantial changes to Difficulty.</p>
 </div>
-<h4 id="success-benchmarks">Success Benchmarks<a class="og-h-anchor" href="#success-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
+<h4 id="duality-dice-benchmarks">Duality Dice Benchmarks<a class="og-h-anchor" href="#duality-dice-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<p>The following tables display the approximate percentage of successful <a href="#define-action-roll">action rolls</a>, including rolls made with a +d6 <a href="#define-advantage">advantage</a> die or &minus;d6 <a href="#define-advantage">disadvantage</a> die. Rolling a <a href="#define-action-roll">critical success</a> is accounted for&mdash;the chances of success are always at least 8.3%. To account for a modifier, subtract it from the Difficulty to determine the chance of success. For example, if the Difficulty is 13 and the modifier is +3, the chances of success are equal to the listed percentages for Difficulty 10.</p>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p>Other changes in size to <a href="#define-action-roll">Duality Dice</a>, the <a href="#define-advantage">advantage</a> die, or other bonus dice are not included here, but also create a profound effect on success rates.</p>
-</div>
+<p>The following tables display the approximate percentage of various <a href="#define-action-roll">action roll</a> results, including rolls made with a +d6 <a href="#define-advantage">advantage</a> die or &minus;d6 <a href="#define-advantage">disadvantage</a> die. Rolling a <a href="#define-action-roll">critical success</a> is accounted for. To account for a modifier, subtract it from the Difficulty to determine the chance of success. For example, if the Difficulty is 13 and the modifier is +3, the chances of success are equal to the listed percentages for Difficulty 10.</p>
+<h5 class="h6">Hope and Fear</h5>
+<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3 small">
+	<caption>Hope and Fear Benchmarks</caption>
+	<thead>
+		<tr>
+			<th class="text-center w-20" scope="col">Duality Dice</th>
+			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-primary">&#x25AE;</span> Fear</th>
+			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-warning">&#x25AE;</span> Hope</th>
+			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-info">&#x25AE;</span> Crit</th>
+			<th class="og-noewrap w-50" scope="col" aria-hidden="true"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-center fw-normal">d20 Hope <span class="og-nowrap">+ d12 Fear</span></th>
+			<td class="text-center">28%</td>
+			<td class="text-center">67%</td>
+			<td class="text-center">5%</td>
+			<td aria-hidden="true"><span class="d-inline-block bg-primary" style="width: 27.5%">&nbsp;</span><span class="d-inline-block bg-warning" style="width: 67.5%">&nbsp;</span><span class="d-inline-block bg-info" style="width: 5%">&nbsp;</span></td>
+		</tr>
+		<tr>
+			<th class="text-center fw-normal">d12 Hope <span class="og-nowrap">+ d12 Fear</span></th>
+			<td class="text-center">46%</td>
+			<td class="text-center">46%</td>
+			<td class="text-center">8%</td>
+			<td aria-hidden="true"><span class="d-inline-block bg-primary" style="width: 45.8%">&nbsp;</span><span class="d-inline-block bg-warning" style="width: 45.8%">&nbsp;</span><span class="d-inline-block bg-info" style="width: 8.4%">&nbsp;</span></td>
+		</tr>
+		<tr>
+			<th class="text-center fw-normal">d12 Hope <span class="og-nowrap">+ d20 Fear</span></th>
+			<td class="text-center">67%</td>
+			<td class="text-center">28%</td>
+			<td class="text-center">5%</td>
+			<td aria-hidden="true"><span class="d-inline-block bg-primary" style="width: 67.5%">&nbsp;</span><span class="d-inline-block bg-warning" style="width: 27.5%">&nbsp;</span><span class="d-inline-block bg-info" style="width: 5%">&nbsp;</span></td>
+		</tr>
+	</tbody>
+</table></div>
 <div class="row">
 	<div class="col-12 col-md-6">
 		<h5 class="h6">2d12 Duality Dice</h5>
@@ -11334,44 +11367,9 @@
 		</table></div>
 	</div>
 </div>
-<h4 id="difficulty-hope-and-fear">Hope and Fear Benchmarks<a class="og-h-anchor" href="#difficulty-hope-and-fear" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 157</li></ul>
-<p>The following table displays the percentage chance of <a href="#define-action-roll">action roll</a> outcomes&mdash;with Hope, with Fear, and Critical Successes.</p>
-<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3 small">
-	<caption>Hope and Fear Benchmarks</caption>
-	<thead>
-		<tr>
-			<th class="text-center w-20" scope="col">Duality Dice</th>
-			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-primary">&#x25AE;</span> Fear</th>
-			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-warning">&#x25AE;</span> Hope</th>
-			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-info">&#x25AE;</span> Crit</th>
-			<th class="og-noewrap w-50" scope="col" aria-hidden="true"></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th class="text-center fw-normal">d20 Hope <span class="og-nowrap">+ d12 Fear</span></th>
-			<td class="text-center">28%</td>
-			<td class="text-center">67%</td>
-			<td class="text-center">5%</td>
-			<td aria-hidden="true"><span class="d-inline-block bg-primary" style="width: 27.5%">&nbsp;</span><span class="d-inline-block bg-warning" style="width: 67.5%">&nbsp;</span><span class="d-inline-block bg-info" style="width: 5%">&nbsp;</span></td>
-		</tr>
-		<tr>
-			<th class="text-center fw-normal">d12 Hope <span class="og-nowrap">+ d12 Fear</span></th>
-			<td class="text-center">46%</td>
-			<td class="text-center">46%</td>
-			<td class="text-center">8%</td>
-			<td aria-hidden="true"><span class="d-inline-block bg-primary" style="width: 45.8%">&nbsp;</span><span class="d-inline-block bg-warning" style="width: 45.8%">&nbsp;</span><span class="d-inline-block bg-info" style="width: 8.4%">&nbsp;</span></td>
-		</tr>
-		<tr>
-			<th class="text-center fw-normal">d12 Hope <span class="og-nowrap">+ d20 Fear</span></th>
-			<td class="text-center">67%</td>
-			<td class="text-center">28%</td>
-			<td class="text-center">5%</td>
-			<td aria-hidden="true"><span class="d-inline-block bg-primary" style="width: 67.5%">&nbsp;</span><span class="d-inline-block bg-warning" style="width: 27.5%">&nbsp;</span><span class="d-inline-block bg-info" style="width: 5%">&nbsp;</span></td>
-		</tr>
-	</tbody>
-</table></div>
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p>Other changes in size to <a href="#define-action-roll">Duality Dice</a>, the <a href="#define-advantage">advantage</a> die, or other bonus dice hve a profound effect on success rates. For similar information on <a href="#define-adversary">adversaries</a>, see <a href="#adversary-benchmark-success">Adversary Success Benchmarks</a>.</p>
+</div>
 <h4 id="difficulty-benchmarks">Difficulty Benchmarks<a class="og-h-anchor" href="#difficulty-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 158</li></ul>
 <p>Refer to the following benchmark tables for more guidance:</p>
@@ -12661,7 +12659,19 @@
 </div>
 <h4 id="adversary-benchmarks">Adversary Benchmarks<a class="og-h-anchor" href="#adversary-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Page 208</li><li>Editorial Addition</li></ul>
-<p>The following table shows ranges and averages for <a href="#define-adversary">adversary</a> statistics (excluding <a href="#define-adversary-type">Minions</a>).</p>
+<p>The following table shows ranges and averages for <a href="#define-adversary">adversary</a> statistics.</p>
+<dl>
+	<dt>Difficulty</dt>
+	<dd><a href="#define-difficulty">Difficulty</a> determines the chance a PC's <a href="#define-attack-roll">attack roll</a> succeeds. It also determines a PC's chance to succeed against <a href="#define-reaction-roll">reaction rolls</a> prompted by <a href="#define-adversary-feature">adversary features</a> (unless the feature specifies otherwise). For related information, see <a href="#duality-dice-benchmarks">Duality Dice Benchmarks</a>.</dd>
+	<dt>Damage Thresholds</dt>
+	<dd>Major and Severe <a href="#define-hit-point">damage thresholds</a> determine how many <a href="#define-hit-point">Hit Points</a> an adversary marks in response to a PC's <a href="#define-damage-roll">damage roll</a>. For related information, see <a href="#pc-benchmark-damage">PC Damage Benchmarks</a>.</dd>
+	<dt>Stress</dt>
+	<dd><a href="#define-stress">Stress</a> can be used to fuel <a href="#define-adversary-feature">adversary features</a>, and delays the onset of the <a href="#define-condition"><em>Vulnerable</em></a> condition.</dd>
+	<dt>Attack Modifier</dt>
+	<dd>Increase or decrease an adversary's attack modifier by up to &plusmn;4 to make an <a href="#define-attack-roll">attack roll</a> more or less likely to succeed. For related information, see <a href="#pc-benchmark-defense">PC Defense Benchmarks</a>.</dd>
+	<dt>Damage</dt>
+	<dd>Increasing the <a href="#define-damage-roll">damage dice</a> increases average damage, but also increases randomness&mdash;especially at higher damage die sizes. Increasing the damage modifier increases a damage roll in a consistent way. Be sure to take the <a href="#define-attack-roll">attack roll</a> modifier into account.</dd>
+</dl>
 <div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
 	<caption>Adversary Benchmarks</caption>
 	<thead>
@@ -12676,38 +12686,38 @@
 	<tbody>
 		<tr>
 			<th class="fw-normal"> <a href="#define-difficulty">Difficulty</a></th>
-			<td class="text-center"><span class="og-nowrap">8 to 14</span> <span class="d-block og-nowrap small"><em>(11 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">13 to 16</span> <span class="d-block og-nowrap small"><em>(14 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">14 to 19</span> <span class="d-block og-nowrap small"><em>(17 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">17 to 21</span> <span class="d-block og-nowrap small"><em>(20 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">8&ndash;14</span> <span class="d-block og-nowrap small"><em>(11 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">13&ndash;16</span> <span class="d-block og-nowrap small"><em>(14 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">14&ndash;19</span> <span class="d-block og-nowrap small"><em>(17 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">17&ndash;21</span> <span class="d-block og-nowrap small"><em>(20 average)</em></span></td>
 		</tr>
 		<tr>
 			<th class="fw-normal"><a href="#define-hit-point">Major Damage Threshold</a></th>
-			<td class="text-center"><span class="og-nowrap">4 to 8</span> <span class="d-block og-nowrap small"><em>(7 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">7 to 13</span> <span class="d-block og-nowrap small"><em>(10 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">15 to 22</span> <span class="d-block og-nowrap small"><em>(20 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">25 to 36</span> <span class="d-block og-nowrap small"><em>(25 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">4&ndash;8</span> <span class="d-block og-nowrap small"><em>(7 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">7&ndash;13</span> <span class="d-block og-nowrap small"><em>(10 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">15&ndash;22</span> <span class="d-block og-nowrap small"><em>(20 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">25&ndash;36</span> <span class="d-block og-nowrap small"><em>(25 average)</em></span></td>
 		</tr>
 		<tr>
 			<th class="fw-normal"><a href="#define-hit-point">Severe Damage Threshold</a></th>
-			<td class="text-center"><span class="og-nowrap">7 to 13</span> <span class="d-block og-nowrap small"><em>(12 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">12 to 28</span> <span class="d-block og-nowrap small"><em>(20 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">30 to 42</span> <span class="d-block og-nowrap small"><em>(32 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">42 to 71</span> <span class="d-block og-nowrap small"><em>(45 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">7&ndash;13</span> <span class="d-block og-nowrap small"><em>(12 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">12&ndash;28</span> <span class="d-block og-nowrap small"><em>(20 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">30&ndash;42</span> <span class="d-block og-nowrap small"><em>(32 average)</em></span></td>
+			<td class="text-center"><span class="og-nowrap">42&ndash;71</span> <span class="d-block og-nowrap small"><em>(45 average)</em></span></td>
 		</tr>
 		<tr>
 			<th class="fw-normal"><a href="#define-stress">Stress</a></th>
-			<td class="text-center og-nowrap">2 to 4</td>
-			<td class="text-center og-nowrap">2 to 6</td>
-			<td class="text-center og-nowrap">2 to 8</td>
-			<td class="text-center og-nowrap">2 to 10</td>
+			<td class="text-center og-nowrap"><span class="og-nowrap">1&ndash;4</span> <span class="d-block og-nowrap small"><em>(3 average)</em></td>
+			<td class="text-center og-nowrap"><span class="og-nowrap">1&ndash;6</span> <span class="d-block og-nowrap small"><em>(4 average)</em></td>
+			<td class="text-center og-nowrap"><span class="og-nowrap">1&ndash;8</span> <span class="d-block og-nowrap small"><em>(5 average)</em></td>
+			<td class="text-center og-nowrap"><span class="og-nowrap">1&ndash;10</span> <span class="d-block og-nowrap small"><em>(6 average)</em></td>
 		</tr>
 		<tr>
 			<th class="fw-normal"><a href="#define-attack-roll">Attack Modifier</a></th>
-			<td class="text-center og-nowrap"><span class="og-nowrap">&minus;4 to +4</span> <span class="d-block og-nowrap small"><em>(+1 average)</em></span></td>
-			<td class="text-center og-nowrap"><span class="og-nowrap">&minus;3 to +5</span> <span class="d-block og-nowrap small"><em>(+2 average)</em></span></td>
-			<td class="text-center og-nowrap"><span class="og-nowrap">0 to +7</span> <span class="d-block og-nowrap small"><em>(+3 average)</em></span></td>
-			<td class="text-center og-nowrap"><span class="og-nowrap">+2 to +8</span> <span class="d-block og-nowrap small"><em>(+4 average)</em></span></td>
+			<td class="text-center og-nowrap">+1</td>
+			<td class="text-center og-nowrap">+2</td>
+			<td class="text-center og-nowrap">+3</td>
+			<td class="text-center og-nowrap">+4</td>
 		</tr>
 		<tr>
 			<th class="fw-normal"><a href="#define-damage-roll">Damage</a></th>
@@ -12732,7 +12742,7 @@
 </table></div>
 <h5 id="adversary-benchmark-success">Adversary Success Benchmarks<a class="og-h-anchor" href="#adversary-benchmark-success" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<p>The following table shows the success rate of <a href="#define-adversary">adversary</a> <a href="#define-action-roll">action rolls</a>&mdash;usually <a href="#define-attack-roll">attack rolls</a> made against a PC's <a href="#define-evasion">Evasion</a>. The table includes rolls made with <a href="#define-advantage">advantage</a> and <a href="#define-advantage">disadvantage</a>. To account for a <a href="#define-procedure">modifier</a>, subtract it from the Evasion to determine the chance of success. For example, if the PC's Evasion is 13 and the modifier is +3, the chances of success are equal to the listed percentages for Evasion 10.</p>
+<p>The following table shows the success rate of <a href="#define-adversary">adversary</a> <a href="#define-action-roll">action rolls</a>&mdash;usually <a href="#define-attack-roll">attack rolls</a> against a PC's <a href="#define-evasion">Evasion</a>. The table includes rolls made with <a href="#define-advantage">advantage</a> and <a href="#define-advantage">disadvantage</a>. To account for a <a href="#define-procedure">modifier</a>, subtract it from the Evasion to determine the chance of success. For example, if the PC's Evasion is 13 and the modifier is +3, the chances of success are equal to the listed percentages for Evasion 10.</p>
 <div class="table-responsive"><table class="table table-light table-striped table-sm mb-3 small">
 	<caption>Adversary Success Benchmarks</caption>
 	<thead>
@@ -12887,10 +12897,12 @@
 		</tr>
 	</tbody>
 </table></div>
-
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p>For similar information on PCs, see <a href="#duality-dice-benchmarks">Duality Dice Benchmarks</a>.</p>
+</div>
 <h5 id="adversary-benchmarks-hit-points">Adversary Hit Points<a class="og-h-anchor" href="#adversary-benchmarks-hit-points" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<p><a href="#define-hit-point">Hit Points</a> determine the number of successful <a href="#define-attack-roll">attack rolls</a> the PCs must make to defeat an <a href="#define-adversary">adversary</a>.</p>
+<p><a href="#define-hit-point">Hit Points</a> determine the number of successful <a href="#define-attack-roll">attack rolls</a> the PCs must make to defeat an <a href="#define-adversary">adversary</a>. Adversaries with <a href="#define-hit-points">damage thresholds</a> will mark Hit Points more frequently.</p>
 <div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
 	<caption>Adversary Hit Points</caption>
 	<thead>
@@ -12928,15 +12940,8 @@
 </table></div>
 <h5 id="adversary-benchmarks-type">Adversary Type Modifications<a class="og-h-anchor" href="#adversary-benchmarks-type" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<p>Average <a href="#define-adversary">adversary</a> damage output is determined and balanced by two factors: their <a href="#define-attack-roll">attack modifier</a>, and damage roll.</p>
-<dl>
-	<dt>Attack Modifier</dt>
-	<dd>Increase or decrease an adversary's attack modifier to make <a href="#define-attack-roll">attack rolls</a> more or less likely to succeed.</dd>
-	<dt>Damage Roll</dt>
-	<dd>Increasing the number of damage dice in a <a href="#define-damage-roll">damage roll</a> increases average damage, but also increases volatility&mdash;especially at higher damage die sizes. Increasing the damage modifier makes a damage roll more consistent.</dd>
-</dl>
 <div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Type Modifications</caption>
+	<caption>Adversary Type Modifications</caption>
 	<thead>
 		<tr>
 			<th scope="col">Type</th>
@@ -17274,7 +17279,7 @@
 		<p><strong>Editor's Notes &mdash;</strong> Battle point system doesn't account for additional complications introduced by the <a href="#define-environment">environment</a>.</p>
 	</div>
 </div>
-<h4 id="adversary-benchmarks-pc-defense">PC Defense Scaling<a class="og-h-anchor" href="#adversary-benchmarks-pc-defense" title="Permalink" aria-hidden="true"></a></h4>
+<h4 id="pc-benchmark-defense">PC Defense Benchmarks<a class="og-h-anchor" href="#pc-benchmark-defense" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 <p><a href="#define-damage-roll">Damage rolls</a> are compared to a PC's <a href="#define-hit-point">damage thresholds</a>. Use the following table to help determine the average number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-armor">Armor Slots</a> a successful attack causes the PCs to mark.</p>
 <div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
@@ -17314,7 +17319,7 @@
 		</tr>
 	</tbody>
 </table></div>
-<h4 id="adversary-benchmarks-pc-damage">PC Damage Scaling<a class="og-h-anchor" href="#adversary-benchmarks-pc-damage" title="Permalink" aria-hidden="true"></a></h4>
+<h4 id="pc-benchmark-damage">PC Damage Benchmarks<a class="og-h-anchor" href="#pc-benchmark-damage" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 <p>The following table shows <a href="#define-damage-roll">damage roll</a> averages with <a href="#define-weapon">weapon</a>. At Tiers 3&ndash;4, average incoming damage is determined <a href="#define-attack-roll">attack roll</a> <a href="#define-procedure">modifier</a> and how many times the PC purchases an <a href="#define-advancement">advancement</a> to increase <a href="#define-damage-roll">Proficiency</a>. The total number of <a href="#define-hit-point">Hit Points</a> an <a href="#define-adversary">adversary</a> marks depends on <a href="#define-hit-point">damage thresholds</a>, and <a href="#define-damage-type">resistance</a>.</p>
 <dl>
@@ -17365,6 +17370,9 @@
 		</tr>
 	</tbody>
 </table></div>
+<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p>For similar information on adversaries, see <a href="#adversary-benchmarks">Adversary Benchmarks</a>.</p>
+</div>
 <hr>
 <div class="row">
 	<div class="col-12 col-md-6">
