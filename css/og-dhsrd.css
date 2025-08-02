@@ -217,13 +217,117 @@
 	font-weight: 900;
 	font-style: italic;
 }
+
 /* title font */
 @font-face {
-	font-family: 'Yeseva One';
-    src:url('../fonts/YesevaOne-Regular.ttf') format(truetype);
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-Thin.ttf') format(truetype);
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-ThinItalic.ttf') format(truetype);
+	font-weight: 100;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-ExtraLight.ttf') format(truetype);
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-ExtraLightItalic.ttf') format(truetype);
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-Light.ttf') format(truetype);
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-LightItalic.ttf') format(truetype);
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-Regular.ttf') format(truetype);
 	font-weight: 400;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-RegularItalic.ttf') format(truetype);
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-Medium.ttf') format(truetype);
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-MediumItalic.ttf') format(truetype);
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-SemiBold.ttf') format(truetype);
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-SemiBoldItalic.ttf') format(truetype);
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-Bold.ttf') format(truetype);
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-BoldItalic.ttf') format(truetype);
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-ExtraBold.ttf') format(truetype);
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-ExtraBoldItalic.ttf') format(truetype);
+	font-weight: 800;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-Black.ttf') format(truetype);
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fira Sans';
+    src:url('../fonts/FiraSans-BlackItalic.ttf') format(truetype);
+	font-weight: 900;
+	font-style: italic;
+}
+
 /* title font */
 @font-face {
 	font-family: 'PT Sans Narrow';
@@ -401,8 +505,9 @@ h1 .og-subtitle {
 }
 h1 .og-title {
 	display: block;
-	font-family: 'Yeseva One', Arial, Helvetica, sans-serif;
-	letter-spacing: -0.3rem;
+	font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	letter-spacing: 0rem;
 }
 h2, h3, h4, h5, h6 {
 	font-family: 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
