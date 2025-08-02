@@ -50,6 +50,7 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-core-mechanics" role="button" data-bs-toggle="dropdown" aria-expanded="false">Core Mechanics</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-core-mechanics">
+						<li><a class="dropdown-item og-nav" href="#key-terms">Key Terms</a></li>
 						<li><a class="dropdown-item og-nav" href="#flow-of-the-game">Flow of the Game</a></li>
 						<li><a class="dropdown-item og-nav" href="#foundational-rules">Foundational Rules</a></li>
 						<li><a class="dropdown-item og-nav" href="#additional-rules">Additional Rules</a></li>
@@ -114,7 +115,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.99a (2025-08-02)</p>
+<p class="small text-center">version 0.99b (2025-08-02)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -179,7 +180,7 @@
 			<p><strong>Daggerheart</strong> is a tabletop roleplaying game for one <strong>Game Master (GM)</strong> and 2&ndash;5 players, each in control of one <strong>Player Character (PC)</strong>. The game can be played in a single session (a "one-shot"), or a multiple sessions (a "campaign"). A game session usually takes 2&ndash;4 hours.</p>
 			<h4 class="h6">How to Play Daggerheart</h4>
 			<ul class="og-list-disc">
-				<li>The GM describes the situations, narrates events, and controls any <a href="#define-adversary">adversaries</a> or obstacles that the PCs encounter in the scenario.</li>
+				<li>The GM describes the situation, narrates events, and controls <a href="#define-npc">NPCs</a>, <a href="#define-adversary">adversaries</a>, and obstacles the PCs encounter.</li>
 				<li>You roleplay your PC's reaction to the scenario, declaring their <a href="#define-action">action</a> and dialogue.</li>
 				<li>If your action depends on fate or fortune, the GM calls for an <a href="#define-action-roll">action roll</a>. To make an action roll, you roll your <a href="#define-action-roll">Duality Dice</a>&mdash;two distinct twelve-sided dice (<strong>d12s</strong>)&mdash;representing <a href="#define-hope">Hope</a> and <a href="#define-fear">Fear</a>. The dice are rolled, summed, and relevant bonuses called <a href="#define-procedure">modifiers</a> are added to the result.</li>
 				<li>The total is compared to a <a href="#define-difficulty">Difficulty</a> set by the GM. If the total meets or beats the Difficulty, you succeed. If it's lower, you fail.</li>
@@ -10038,6 +10039,47 @@
 </div>
 <hr>
 <h2 id="core-mechanics">Core Mechanics<a class="og-h-anchor" href="#core-mechanics" title="Permalink" aria-hidden="true"></a></h2>
+<h3 id="key-terms">Key Terms<a class="og-h-anchor" href="#key-terms" title="Permalink" aria-hidden="true"></a></h3>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<dl>
+			<dt class="h6">Action</dt>
+			<dd>An <a href="#define-action">action</a> is when you take the <a href="#define-spotlight">spotlight</a> and do something requiring an <a href="#define-action-roll">action roll</a>. Unless you're using a feature that calls for an action roll in its description, you only roll when the GM calls for it.</dd>
+			<dt class="h6">Creature</dt>
+			<dd>Living beings, including you, your fellow PCs, <a href="#define-adversary">adversaries</a> and <a href="#define-npc">NPCs</a>.</dd>
+			<dt class="h6">Difficulty</dt>
+			<dd>When you make an <a href="#define-action-roll">action roll</a>, it succeeds if the results meats or beats the <a href="#define-difficulty">Difficulty</a>. Some features determine the Difficulty for you, for example, casting the <a href="#define-domain-card-invisibility">Invisibility</a> spell requires a successful <a href="#define-spellcast-roll">Spellcast Roll</a> with a Difficulty of 10. The GM determines the Difficulty of other <a href="#define-action-roll">action rolls</a> required by the narrative, and can <a href="#define-procedure">modify</a> it by spending <a href="#define-fear">Fear</a>, or give the roll <a href="#define-advantage">advantage and disadvantage</a> based on circumstance.</dd>
+			<dt class="h6">Evasion</dt>
+			<dd>When an <a href="#define-adversary">adversary</a> makes an <a href="#define-attack-roll">attack roll</a> against you, your <a href="#define-evasion">Evasion</a> determines how difficult it is for the attacker to succeed.</dd>
+			<dt class="h6">GM (Game Master)</dt>
+			<dd>The GM describes the situation, narrates events, and controls <a href="#define-npc">NPCs</a>, <a href="#define-adversary">adversaries</a>, and obstacles the PCs encounter.</dd>
+			<dt class="h6">GM Turn</dt>
+			<dd>While the GM has the <a href="#define-spotlight">spotlight</a>, you can't use features that require spending resources, or make rolls unless specified&mdash;for example, features that allow <a href="#define-reaction-roll">reaction roll</a> to interrupt an  <a href="#define-attack-roll">attack roll</a> or <a href="#define-damage-roll">damage rolls</a> made by an <a href="#define-adversary">adversary</a>.</dd>
+			<dt class="h6">Move</dt>
+			<dd>A <a href="#define-action">move</a> is when you do taking some kind of <a href="#define-action">action</a> to forward the narrative. <a href="#define-gm-move">GM moves</a> respond to your actions and introduce challenges for you to react to. Whether it's your move or the GM's, making a move doesn't always trigger a roll.</dd>
+		</dl>
+	</div>
+	<div class="col-12 col-md-6">
+		<dl>
+			<dt class="h6">NPC (Non-Player Character)</dt>
+			<dd><a href="#define-npc">NPCs</a> are typically friendly or neutral toward the PCs. If turned hostile, an NPCs can become an <a href="#define-adversary">adversary</a>.</dd>
+			<dt class="h6">PC (Player Character)</dt>
+			<dd>The role you play in the story. The GM might assign you a pre-generated character. Otherwise, use the <a href="#define-character-creation">Character Creation</a> process before the game.</dd>
+			<dt class="h6">Proficiency</dt>
+			<dd><a href="#define-damage-roll">Proficiency</a> determines how many <a href="#define-damage-roll">damage dice</a> you rolls after a successful <a href="#define-attack-roll">attack roll</a> using a <a href="#define-weapon">weapon</a>, and is also used by some <a href="#define-domain-card">domain cards</a>.</dd>
+			<dt class="h6">Reaction</dt>
+			<dd><a href="#define-adversary-feature">Reactions</a> are <a href="#define-adversary-feature">adversary features</a>. When a reaction's requirements are triggered, the GM can cause the <a href="#define-adversary">adversary</a> to use the reaction without seizing the <a href="#define-spotlight">spotlight</a>. You might also gain features with triggers that allow you to immediately take certain <a href="#define-action">actions</a>, even if you don't have the <a href="#define-spotlight">spotlight</a>.</dd>
+			<dt class="h6">Reaction Roll</dt>
+			<dd><a href="#define-reaction-roll">Reaction rolls</a> determine how well a target reacts to an effect. Unlike <a href="#define-action-roll">action rolls</a>, reaction rolls don't generate <a href="#define-hope">Hope</a> or <a href="#define-fear">Fear</a>. When force an <a href="#define-adversary">adversary</a> to make a reaction roll, pay attention to how the contest is determined.</dd>
+			<dt class="h6">Spotlight</dt>
+			<dd>The <a href="#define-spotlight">spotlight</a> swings to the focus of the narrative in the scene. You and GM pass the spotlight back and forth as you interact with the world, but the GM can spend a <a href="#define-fear">Fear</a> to seize the spotlight at any time.</dd>
+			<dt class="h6">Target<dt>
+			<dd>A target is anything a feature affects. Most of the time, you can choose the target, including who (a creature) or what (an object) is affected. Some features only target creatures.</dd>
+		</dl>
+	</div>
+</div>
+<hr>
 <div id="define-flow-of-the-game">
 	<h3 id="flow-of-the-game">Flow of the Game<a class="og-h-anchor" href="#flow-of-the-game" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 87</li></ul>
@@ -10160,7 +10202,7 @@
 				<li>Toward someone who hasn't had the spotlight in a while</li>
 				<li>Toward where a triggered mechanic determines where the spotlight swings next&mdash;for example, when a PC fails an <a href="#define-action-roll">action roll</a>, the spotlight swings to the GM for a <a href="#define-gm-move">GM move</a></li>
 			</ul>
-			<p>The GM can also <strong><a href="#define-fear">spend a Fear</a></strong> to seize the spotlight. While the GM has the spotlight, you can't use features that require spending resources, or make rolls unless specified&mdash;for example, features that allow <a href="#define-reaction-roll">reaction roll</a> to interrupt an  <a href="#define-attack-roll">attack roll</a> or <a href="#define-damage-roll">damage rolls</a> made by an <a href="#define-adversary">adversary</a>.</p>
+			<p>While the GM has the <a href="#define-spotlight">spotlight</a>, you can't use features that require spending resources, or make rolls unless specified&mdash;for example, features that allow <a href="#define-reaction-roll">reaction roll</a> to interrupt an  <a href="#define-attack-roll">attack roll</a> or <a href="#define-damage-roll">damage rolls</a> made by an <a href="#define-adversary">adversary</a>.</p>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -10940,12 +10982,11 @@
 	<ul class="og-list-inline og-ref og-omit"><li>Page 157</li></ul>
 	<p>When a player makes an <a href="#define-action-roll">action roll</a>, it's compared to a <strong>Difficulty</strong>. Many times, the game assigns a Difficulty, for example:</p>
 	<ul class="og-list-disc">
-		<li>Successfully casting the <a href="#define-domain-card-invisibility">Invisibility</a> spell requires a <a href="#define-spellcast-roll">Spellcast Roll</a> with a Difficulty of 10.</li>
+		<li>Casting the <a href="#define-domain-card-invisibility">Invisibility</a> spell requires a successful <a href="#define-spellcast-roll">Spellcast Roll</a> with a Difficulty of 10.</li>
 		<li>Successfully using the <a href="#define-fungril">fungril</a>'s <strong><em>Fungril Network</em></strong> ancestry feature requires an <a href="#define-trait-roll">Instinct Roll</a> with a Difficulty of 12.</li>
 		<li>The Difficulty of an <a href="#define-attack-roll">attack roll</a> made against an <a href="#define-adversary">adversary</a> is defined on their stat block.</li>
 	</ul>
-	<p>It's up to the GM to determine the Difficulty of other <a href="#define-action-roll">action rolls</a> required by the narrative.</p>
-	<p>Additionally, the GM can <a href="#define-procedure">modify</a> by spending additional <a href="#define-fear">Fear</a>, or give a roll <a href="#define-advantage">advantage and disadvantage</a> based on circumstantial changes to Difficulty.</p>
+	<p>The GM determines the Difficulty of other <a href="#define-action-roll">action rolls</a> required by the narrative, and can <a href="#define-procedure">modify</a> it by spending <a href="#define-fear">Fear</a>, or give the roll <a href="#define-advantage">advantage and disadvantage</a> based on circumstance.</p>
 </div>
 <h4 id="duality-dice-benchmarks">Duality Dice Benchmarks<a class="og-h-anchor" href="#duality-dice-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
@@ -18046,7 +18087,7 @@
                 </div>
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
-                    <li><p><strong><em>What's the Talk of the Town?&mdash;Passive:</em></strong> A PC can ask the bartender, staff, or patrons about local events, rumors, and potential work with a <a href="#define-trait-roll">Presence Roll</a>. On a success, they can pick two of the below details to learn—or three if they critically succeed. On a failure, they can pick one and mark a <a href="#define-stress">Stress</a> as the local carries on about something irrelevant.</p>
+                    <li><p><strong><em>What's the Talk of the Town?&mdash;Passive:</em></strong> A PC can ask the bartender, staff, or patrons about local events, rumors, and potential work with a <a href="#define-trait-roll">Presence Roll</a>. On a success, they can pick two of the below details to learn&mdash;or three if they critically succeed. On a failure, they can pick one and mark a <a href="#define-stress">Stress</a> as the local carries on about something irrelevant.</p>
                         <ul class="og-list-disc">
                             <li>A fascinating rumor with a connection to a PC's background</li>
                             <li>A promising job for the party involving a nearby threat or situation</li>
@@ -18230,7 +18271,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>War Magic&mdash;Action:</em></strong> Spend a <a href="#define-fear">Fear</a> as a mage from one side uses large-scale destructive magic. Pick a point on the battlefield within <a href="#define-range">Very Far</a> range of the mage. All targets within <a href="#define-range">Close</a> range of that point must make an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail take <strong>3d12+8</strong> <a href="#define-damage-type">physical damage</a> and must mark a <a href="#define-stress">Stress</a>.</p></li>
                 </ul>
-                <p class="og-statblock-q og-omit"><em>What form does the attack take—fireball, raining acid, a storm of blades? What tactical objective is this attack meant to accomplish, and what comes next?</em></p>
+                <p class="og-statblock-q og-omit"><em>What form does the attack take&mdash;fireball, raining acid, a storm of blades? What tactical objective is this attack meant to accomplish, and what comes next?</em></p>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Reinforcements&mdash;Action:</em></strong> Summon a <a href="#define-adversary-knight-of-the-realm">Knight of the Realm, a number of Tier</a> 3 <a href="#define-adversary-type">Minions</a> equal to the number of PCs, and two adversaries of your choice within <a href="#define-range">Far</a> range of a chosen PC as reinforcements. The <a href="#define-adversary-knight-of-the-realm">Knight of the Realm immediately takes t</a>he <a href="#define-spotlight">spotlight</a>.</p></li>
                 </ul>
