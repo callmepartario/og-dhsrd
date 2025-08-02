@@ -384,6 +384,13 @@ img.og-icon {
 	background-image: url(../images/domain-valor-dark.svg);
 }
 
+.text-fear { color: #70f; }
+.bg-fear { background-color: #70f; }
+
+.text-hope { color: #f70; }
+.bg-hope { background-color: #f70; }
+
+
 .og-recall { 
 	text-shadow: 1px 1px 0px #023;
 }
