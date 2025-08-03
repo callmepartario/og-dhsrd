@@ -7163,7 +7163,7 @@
 		<dt>Throwing Weapons</dt>
 		<dd>You can make an <a href="#define-finesse">Finesse</a> <a href="#define-attack-roll">attack roll</a> to throw an active weapon within <a href="#define-range">Very Close</a> range, dealing its <a href="#define-damage-roll">damage</a> on a success. Once thrown, the weapon isn't active.</dd>
 		<dt>Unarmed Attacks</dt>
-		<dd>Use either <a href="#define-strength">Strength</a> or <a href="#define-finesse">Finesse</a> for the <a href="#define-attack-roll">attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href="#define-damage-roll">damage</a>.</dd>
+		<dd>Use either <a href="#define-strength">Strength</a> or <a href="#define-finesse">Finesse</a> for the <a href="#define-attack-roll">attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href="#define-damage-type">physical damage</a>.</dd>
 	</dl>
 </div>
 <hr>
@@ -10042,11 +10042,11 @@
 <div class="alert ps-4 pb-0 og-omit">
 	<h3 id="key-terms">Key Terms<a class="og-h-anchor" href="#key-terms" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="list-unstyled og-qr">
-		<li><a href="#define-adversary">adversary</a></li>
 		<li><a href="#define-action">action</a></li>
-		<li><a href="#define-advantage">advantage</a></li>
 		<li><a href="#define-action-roll">action roll</a></li>
 		<li><a href="#define-advancement">advancement</a></li>
+		<li><a href="#define-advantage">advantage</a></li>
+		<li><a href="#define-adversary">adversary</a></li>
 		<li><a href="#define-ancestry">ancestry</a></li>
 		<li><a href="#define-attack-roll">area of effect</a></li>
 		<li><a href="#define-armor">armor</a></li>
@@ -10055,9 +10055,10 @@
 		<li><a href="#define-attack-roll">attack</a></li>
 		<li><a href="#define-attack-roll">attack roll</a></li>
 		<li><a href="#define-death">Avoid Death</a></li>
+		<li><a href="#define-armor">Base Score</a></li>
 		<li><a href="#define-armor">base threshold</a></li>
 		<li><a href="#define-death">Blaze of Glory</a></li>
-		<li><a href="#define-burden">burden</a></li>
+		<li><a href="#define-weapon">burden</a></li>
 		<li><a href="#define-class">class</a></li>
 		<li><a href="#define-community">community</a></li>
 		<li><a href="#define-condition">condition</a></li>
@@ -10067,32 +10068,34 @@
 		<li><a href="#define-damage-roll">critical damage</a></li>
 		<li><a href="#define-hit-point">damage threshold</a></li>
 		<li><a href="#define-damage-roll">damage</a></li>
+		<li><a href="#define-damage-roll">damage dice</a></li>
 		<li><a href="#define-damage-roll">damage roll</a></li>
 		<li><a href="#define-damage-roll">damage type</a></li>
 		<li><a href="#define-death">death move</a></li>
 		<li><a href="#define-damage-roll">direct damage</a></li>
-		<li><a href="#define-disadvantage">disadvantage</a></li>
+		<li><a href="#define-advantage">disadvantage</a></li>
 		<li><a href="#define-domain">domain</a></li>
 		<li><a href="#define-domain-card">domain card</a></li>
 		<li><a href="#define-downtime">downtime</a></li>
 		<li><a href="#define-action-roll">Duality Dice</a></li>
+		<li><a href="#define-environment">environment</a></li>
 		<li><a href="#define-evasion">Evasion</a></li>
 		<li><a href="#define-experience">Experience</a></li>
 		<li><a href="#define-fear">Fear</a></li>
 		<li><a href="#define-action-roll">Fear die</a></li>
 		<li><a href="#define-subclass">Foundation Feature</a></li>
-		<li><a href="#define-hope">Help an Ally</a></li>
-		<li><a href="#define-condition"><em>Hidden</em></a></li>
-		<li><a href="#define-action-roll">Hope die</a></li>
-		<li><a href="#damage-type">immunity</a></li>
-		<li><a href="#define-damage-roll">incoming damage</a></li>
 		<li><a href="#define-daggerheart">Game Master (GM)</a></li>
 		<li><a href="#define-action-roll">GM's die</a></li>
-		<li><a href="#define-gm-move">GM Move</a></li>
-		<li><a href="#define-spotlight">GM Turn</a></li>
+		<li><a href="#define-gm-move">GM move</a></li>
+		<li><a href="#define-spotlight">GM turn</a></li>
 		<li><a href="#define-group-action-roll">Group Action Roll</a></li>
+		<li><a href="#define-hope">Help an Ally</a></li>
+		<li><a href="#define-condition"><em>Hidden</em></a></li>
 		<li><a href="#define-hit-point">Hit Point</a></li>
 		<li><a href="#define-hope">Hope</a></li>
+		<li><a href="#define-action-roll">Hope die</a></li>
+		<li><a href="#define-damage-type">immunity</a></li>
+		<li><a href="#define-damage-roll">incoming damage</a></li>
 		<li><a href="#define-level">level</a></li>
 		<li><a href="#define-attack-roll">line of sight</a></li>
 		<li><a href="#define-loadout">loadout</a></li>
@@ -10102,7 +10105,7 @@
 		<li><a href="#define-hit-point">Major damage</a></li>
 		<li><a href="#define-hit-point">Minor damage</a></li>
 		<li><a href="#define-procedure">modifier</a></li>
-		<li><a href="#define-move">move</a></li>
+		<li><a href="#define-action">move</a></li>
 		<li><a href="#define-range">movement</a></li>
 		<li><a href="#define-npc">Non-Player Character (NPC)</a></li>
 		<li><a href="#define-damage-roll">physical damage (phy)</a></li>
@@ -10113,7 +10116,8 @@
 		<li><a href="#define-reaction-roll">reaction roll</a></li>
 		<li><a href="#define-domain-card">Recall Cost</a></li>
 		<li><a href="#define-reroll">reroll</a></li>
-		<li><a href="#damage-type">resistance</a></li>
+		<li><a href="#define-damage-type">resistance</a></li>
+		<li><a href="#define-downtime">rest</a></li>
 		<li><a href="#define-condition"><em>Restrained</em></a></li>
 		<li><a href="#define-death">Risk It All</a></li>
 		<li><a href="#define-rounding">rounding</a></li>
@@ -10123,16 +10127,18 @@
 		<li><a href="#define-spellcast-roll">Spellcast Roll</a></li>
 		<li><a href="#define-subclass">Spellcast trait</a></li>
 		<li><a href="#define-spotlight">spotlight</a></li>
-		<li><a href="define-temporary">stacking</a></li>
+		<li><a href="#define-temporary">stacking</a></li>
 		<li><a href="#define-Stress">Stress</a></li>
 		<li><a href="#define-subclass">subclass</a></li>
 		<li><a href="#define-tag-team-roll">Tag Team Roll</a></li>
 		<li><a href="define-target">target</a></li>
-		<li><a href="define-temporary">temporary</a></li>
+		<li><a href="#define-temporary">temporary</a></li>
+		<li><a href="#define-weapon">throwing weapons</a></li>
+		<li><a href="#define-tier">tier</a></li>
 		<li><a href="#define-trait">trait</a></li>
 		<li><a href="#define-trait-roll">trait roll</a></li>
+		<li><a href="#define-weapon">unarmed attack</a></li>
 		<li><a href="#define-hope">Utilize an Experience</a></li>
-		<li><a href="#define-tier">tier</a></li>
 		<li><a href="#define-loadout">vault</a></li>
 		<li><a href="#define-condition"><em>Vulnerable</em></a></li>
 		<li><a href="#define-weapon">weapon</a></li>
@@ -10353,6 +10359,9 @@
 			</div>
 			<h5 class="h6">Step 5: Resolve the Outcome</h5>
 			<p>Every time you roll your Duality Dice, the scene changes&mdash;there are no rolls where "nothing happens". You and the GM work together<span class="og-omit">&mdash;along with everyone else&mdash;</span>to <a href="#define-resolving">resolve the action</a>.</p>
+			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+				<p>For more information on resolving situations, see <a href="#key-terms">Key Terms</a>, <a href="#additional-rules">Additional Rules</a>, <a href="#resolving-actions">Resolving Actions</a>, and <a href="#optional-rules">Optional Rules</a>.</p>
+			</div>
 		</div>
 	</div>
 </div>
