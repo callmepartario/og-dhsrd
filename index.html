@@ -115,7 +115,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.99b (2025-08-02)</p>
+<p class="small text-center">version 0.99c (2025-08-02)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -10039,45 +10039,104 @@
 </div>
 <hr>
 <h2 id="core-mechanics">Core Mechanics<a class="og-h-anchor" href="#core-mechanics" title="Permalink" aria-hidden="true"></a></h2>
-<h3 id="key-terms">Key Terms<a class="og-h-anchor" href="#key-terms" title="Permalink" aria-hidden="true"></a></h3>
-<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<dl>
-			<dt class="h6">Action</dt>
-			<dd>An <a href="#define-action">action</a> is when you take the <a href="#define-spotlight">spotlight</a> and do something requiring an <a href="#define-action-roll">action roll</a>. Unless you're using a feature that calls for an action roll in its description, you only roll when the GM calls for it.</dd>
-			<dt class="h6">Creature</dt>
-			<dd>Living beings, including you, your fellow PCs, <a href="#define-adversary">adversaries</a> and <a href="#define-npc">NPCs</a>.</dd>
-			<dt class="h6">Difficulty</dt>
-			<dd>When you make an <a href="#define-action-roll">action roll</a>, it succeeds if the results meats or beats the <a href="#define-difficulty">Difficulty</a>. Some features determine the Difficulty for you, for example, casting the <a href="#define-domain-card-invisibility">Invisibility</a> spell requires a successful <a href="#define-spellcast-roll">Spellcast Roll</a> with a Difficulty of 10. The GM determines the Difficulty of other <a href="#define-action-roll">action rolls</a> required by the narrative, and can <a href="#define-procedure">modify</a> it by spending <a href="#define-fear">Fear</a>, or give the roll <a href="#define-advantage">advantage and disadvantage</a> based on circumstance.</dd>
-			<dt class="h6">Evasion</dt>
-			<dd>When an <a href="#define-adversary">adversary</a> makes an <a href="#define-attack-roll">attack roll</a> against you, your <a href="#define-evasion">Evasion</a> determines how difficult it is for the attacker to succeed.</dd>
-			<dt class="h6">GM (Game Master)</dt>
-			<dd>The GM describes the situation, narrates events, and controls <a href="#define-npc">NPCs</a>, <a href="#define-adversary">adversaries</a>, and obstacles the PCs encounter.</dd>
-			<dt class="h6">GM Turn</dt>
-			<dd>While the GM has the <a href="#define-spotlight">spotlight</a>, you can't use features that require spending resources, or make rolls unless specified&mdash;for example, features that allow <a href="#define-reaction-roll">reaction roll</a> to interrupt an  <a href="#define-attack-roll">attack roll</a> or <a href="#define-damage-roll">damage rolls</a> made by an <a href="#define-adversary">adversary</a>.</dd>
-			<dt class="h6">Move</dt>
-			<dd>A <a href="#define-action">move</a> is when you do taking some kind of <a href="#define-action">action</a> to forward the narrative. <a href="#define-gm-move">GM moves</a> respond to your actions and introduce challenges for you to react to. Whether it's your move or the GM's, making a move doesn't always trigger a roll.</dd>
-		</dl>
-	</div>
-	<div class="col-12 col-md-6">
-		<dl>
-			<dt class="h6">NPC (Non-Player Character)</dt>
-			<dd><a href="#define-npc">NPCs</a> are typically friendly or neutral toward the PCs. If turned hostile, an NPCs can become an <a href="#define-adversary">adversary</a>.</dd>
-			<dt class="h6">PC (Player Character)</dt>
-			<dd>The role you play in the story. The GM might assign you a pre-generated character. Otherwise, use the <a href="#define-character-creation">Character Creation</a> process before the game.</dd>
-			<dt class="h6">Proficiency</dt>
-			<dd><a href="#define-damage-roll">Proficiency</a> determines how many <a href="#define-damage-roll">damage dice</a> you rolls after a successful <a href="#define-attack-roll">attack roll</a> using a <a href="#define-weapon">weapon</a>, and is also used by some <a href="#define-domain-card">domain cards</a>.</dd>
-			<dt class="h6">Reaction</dt>
-			<dd><a href="#define-adversary-feature">Reactions</a> are <a href="#define-adversary-feature">adversary features</a>. When a reaction's requirements are triggered, the GM can cause the <a href="#define-adversary">adversary</a> to use the reaction without seizing the <a href="#define-spotlight">spotlight</a>. You might also gain features with triggers that allow you to immediately take certain <a href="#define-action">actions</a>, even if you don't have the <a href="#define-spotlight">spotlight</a>.</dd>
-			<dt class="h6">Reaction Roll</dt>
-			<dd><a href="#define-reaction-roll">Reaction rolls</a> determine how well a target reacts to an effect. Unlike <a href="#define-action-roll">action rolls</a>, reaction rolls don't generate <a href="#define-hope">Hope</a> or <a href="#define-fear">Fear</a>. When force an <a href="#define-adversary">adversary</a> to make a reaction roll, pay attention to how the contest is determined.</dd>
-			<dt class="h6">Spotlight</dt>
-			<dd>The <a href="#define-spotlight">spotlight</a> swings to the focus of the narrative in the scene. You and GM pass the spotlight back and forth as you interact with the world, but the GM can spend a <a href="#define-fear">Fear</a> to seize the spotlight at any time.</dd>
-			<dt class="h6">Target<dt>
-			<dd>A target is anything a feature affects. Most of the time, you can choose the target, including who (a creature) or what (an object) is affected. Some features only target creatures.</dd>
-		</dl>
-	</div>
+<div class="alert ps-4 pb-0 og-omit">
+	<h3 id="key-terms">Key Terms<a class="og-h-anchor" href="#key-terms" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="list-unstyled og-qr">
+		<li><a href="#define-adversary">adversary</a></li>
+		<li><a href="#define-action">action</a></li>
+		<li><a href="#define-advantage">advantage</a></li>
+		<li><a href="#define-action-roll">action roll</a></li>
+		<li><a href="#define-advancement">advancement</a></li>
+		<li><a href="#define-ancestry">ancestry</a></li>
+		<li><a href="#define-attack-roll">area of effect</a></li>
+		<li><a href="#define-armor">armor</a></li>
+		<li><a href="#define-armor">Armor Slot</a></li>
+		<li><a href="#define-armor">Armor Score</a></li>
+		<li><a href="#define-attack-roll">attack</a></li>
+		<li><a href="#define-attack-roll">attack roll</a></li>
+		<li><a href="#define-death">Avoid Death</a></li>
+		<li><a href="#define-armor">base threshold</a></li>
+		<li><a href="#define-death">Blaze of Glory</a></li>
+		<li><a href="#define-burden">burden</a></li>
+		<li><a href="#define-class">class</a></li>
+		<li><a href="#define-community">community</a></li>
+		<li><a href="#define-condition">condition</a></li>
+		<li><a href="#define-countdown">Countdown</a></li>
+		<li><a href="#define-attack-roll">cover</a></li>
+		<li><a href="#define-action-roll">critical success (crit)</a></li>
+		<li><a href="#define-damage-roll">critical damage</a></li>
+		<li><a href="#define-hit-point">damage threshold</a></li>
+		<li><a href="#define-damage-roll">damage</a></li>
+		<li><a href="#define-damage-roll">damage roll</a></li>
+		<li><a href="#define-damage-roll">damage type</a></li>
+		<li><a href="#define-death">death move</a></li>
+		<li><a href="#define-damage-roll">direct damage</a></li>
+		<li><a href="#define-disadvantage">disadvantage</a></li>
+		<li><a href="#define-domain">domain</a></li>
+		<li><a href="#define-domain-card">domain card</a></li>
+		<li><a href="#define-downtime">downtime</a></li>
+		<li><a href="#define-action-roll">Duality Dice</a></li>
+		<li><a href="#define-evasion">Evasion</a></li>
+		<li><a href="#define-experience">Experience</a></li>
+		<li><a href="#define-fear">Fear</a></li>
+		<li><a href="#define-action-roll">Fear die</a></li>
+		<li><a href="#define-subclass">Foundation Feature</a></li>
+		<li><a href="#define-hope">Help an Ally</a></li>
+		<li><a href="#define-condition"><em>Hidden</em></a></li>
+		<li><a href="#define-action-roll">Hope die</a></li>
+		<li><a href="#damage-type">immunity</a></li>
+		<li><a href="#define-damage-roll">incoming damage</a></li>
+		<li><a href="#define-daggerheart">Game Master (GM)</a></li>
+		<li><a href="#define-action-roll">GM's die</a></li>
+		<li><a href="#define-gm-move">GM Move</a></li>
+		<li><a href="#define-spotlight">GM Turn</a></li>
+		<li><a href="#define-group-action-roll">Group Action Roll</a></li>
+		<li><a href="#define-hit-point">Hit Point</a></li>
+		<li><a href="#define-hope">Hope</a></li>
+		<li><a href="#define-level">level</a></li>
+		<li><a href="#define-attack-roll">line of sight</a></li>
+		<li><a href="#define-loadout">loadout</a></li>
+		<li><a href="#define-long-rest">long rest</a></li>
+		<li><a href="#define-damage-roll">magic damage (mag)</a></li>
+		<li><a href="#define-subclass">Mastery Feature</a></li>
+		<li><a href="#define-hit-point">Major damage</a></li>
+		<li><a href="#define-hit-point">Minor damage</a></li>
+		<li><a href="#define-procedure">modifier</a></li>
+		<li><a href="#define-move">move</a></li>
+		<li><a href="#define-range">movement</a></li>
+		<li><a href="#define-npc">Non-Player Character (NPC)</a></li>
+		<li><a href="#define-damage-roll">physical damage (phy)</a></li>
+		<li><a href="#define-daggerheart">Player Character (PC)</a></li>
+		<li><a href="#define-damage-roll">Proficiency</a></li>
+		<li><a href="#define-range">range</a></li>
+		<li><a href="#define-adversary-feature">Reaction</a></li>
+		<li><a href="#define-reaction-roll">reaction roll</a></li>
+		<li><a href="#define-domain-card">Recall Cost</a></li>
+		<li><a href="#define-reroll">reroll</a></li>
+		<li><a href="#damage-type">resistance</a></li>
+		<li><a href="#define-condition"><em>Restrained</em></a></li>
+		<li><a href="#define-death">Risk It All</a></li>
+		<li><a href="#define-rounding">rounding</a></li>
+		<li><a href="#define-hit-point">Severe damage</a></li>
+		<li><a href="#define-short-rest">short rest</a></li>
+		<li><a href="#define-subclass">Specialization Feature</a></li>
+		<li><a href="#define-spellcast-roll">Spellcast Roll</a></li>
+		<li><a href="#define-subclass">Spellcast trait</a></li>
+		<li><a href="#define-spotlight">spotlight</a></li>
+		<li><a href="define-temporary">stacking</a></li>
+		<li><a href="#define-Stress">Stress</a></li>
+		<li><a href="#define-subclass">subclass</a></li>
+		<li><a href="#define-tag-team-roll">Tag Team Roll</a></li>
+		<li><a href="define-target">target</a></li>
+		<li><a href="define-temporary">temporary</a></li>
+		<li><a href="#define-trait">trait</a></li>
+		<li><a href="#define-trait-roll">trait roll</a></li>
+		<li><a href="#define-hope">Utilize an Experience</a></li>
+		<li><a href="#define-tier">tier</a></li>
+		<li><a href="#define-loadout">vault</a></li>
+		<li><a href="#define-condition"><em>Vulnerable</em></a></li>
+		<li><a href="#define-weapon">weapon</a></li>
+	</ul>
 </div>
 <hr>
 <div id="define-flow-of-the-game">
@@ -10159,26 +10218,30 @@
 <p>The following rules apply to many aspects of the game.</p>
 <div class="row">
 	<div class="col-12 col-md-6">
-		<h4 class="h6">Rounding Up</h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
-		<p>Unless stated otherwise, round up to the nearest whole number. When in doubt, resolve any ambiguity in favor of the PCs.</p>
+		<div id="define-rounding">
+			<h4 class="h6">Rounding Up</h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
+			<p>Unless stated otherwise, round up to the nearest whole number. When in doubt, resolve any ambiguity in favor of the PCs.</p>
+		</div>
 		<h4 class="h6">Spending Resources</h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
 		<p>Unless stated otherwise, you can't spend <a href="#define-hope">Hope</a> or mark <a href="#define-stress">Stress</a> multiple times on the same feature to increase or repeat its effects on the same roll.</p>
 		<h4 class="h6">Using Features After a Roll</h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 94</li><li>Page 96</li><li>Page 107</li></ul>
-		<p>Unless stated otherwise, features that provide bonuses or benefits must be added before you make the related <a href="#define-action-roll">action roll</a>, <a href="#define-reaction-roll">reaction roll</a>, or <a href="#define-damage-roll">damage roll</a>. If a feature allows you to affect the outcome of a roll, you must use it before the consequences unfold or another roll is made. </p>
-	</div>
-	<div class="col-12 col-md-6">
+		<p>Unless stated otherwise, features that provide bonuses or benefits must be added before you make the related <a href="#define-action-roll">action roll</a>, <a href="#define-reaction-roll">reaction roll</a>, or <a href="#define-damage-roll">damage roll</a>. If a feature allows you to affect the outcome of a roll, you must use it before the consequences unfold or another roll is made.</p>
 		<div id="define-reroll">
 			<h4 class="h6">Rerolling Dice</h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 107</li></ul>
 			<p>When a feature allows you to reroll a die, you always take the new result unless the feature specifically says otherwise.</p>
 		</div>
+	</div>
+	<div class="col-12 col-md-6">
 		<div id="define-temporary">
-			<h4 class="h6">Resolving Effects</h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 102</li><li>Page 107</li><li>Page 153</li></ul>
+			<h4 class="h6">Resolution</h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 102</li><li>Page 107</li><li>Page 153</li><li>Editorial Addition</li></ul>
 			<dl>
+				<dt>Targeting<dt>
+				<dd>A target is anything a feature affects. Most of the time, you can choose the target, including who (a creature) or what (an object) is affected. Some features only target creatures. Creatures are living beings&mdash;you, your fellow PCs, and <a href="#define-adversary">adversaries</a> and <a href="#define-npc">NPCs</a> you encounter.</dd>
 				<dt>Multiple Effects</dt>
 				<dd>You can maintain the effects from more than one <a href="#define-class">class</a> feature or <a href="#define-domain-card">domain card</a> at a time. If the resolution order of multiple effects is unclear, whoever is in control of the effects (player or GM) decides what order to resolve them in. The effects must be able to resolve in the order presented&mdash;for example, if resolving the first effect change redcues damage you've taken from Major to Minor, and the second effect requires you to take Major damage, the two effects can't be resolved&mdash;at least not in that order. The GM arbitrates any uncertainty.</dd>
 				<dt>Stacking Effects</dt>
@@ -10200,8 +10263,9 @@
 			<ul>
 				<li>Toward whoever or whatever the fiction would naturally turn it toward</li>
 				<li>Toward someone who hasn't had the spotlight in a while</li>
-				<li>Toward where a triggered mechanic determines where the spotlight swings next&mdash;for example, when a PC fails an <a href="#define-action-roll">action roll</a>, the spotlight swings to the GM for a <a href="#define-gm-move">GM move</a></li>
+				<li>Toward where a triggered mechanic determines where the spotlight swings next&mdash;for example, when you fail an <a href="#define-action-roll">action roll</a>, the spotlight swings to the GM for a GM Turn.</li>
 			</ul>
+			<h4 class="h6">GM Turns</h4>
 			<p>While the GM has the <a href="#define-spotlight">spotlight</a>, you can't use features that require spending resources, or make rolls unless specified&mdash;for example, features that allow <a href="#define-reaction-roll">reaction roll</a> to interrupt an  <a href="#define-attack-roll">attack roll</a> or <a href="#define-damage-roll">damage rolls</a> made by an <a href="#define-adversary">adversary</a>.</p>
 		</div>
 	</div>
@@ -10263,7 +10327,8 @@
 			<h5 class="h6">The GM's Die</h5>
 			<p>When an <a href="#define-adversary">adversary</a> opposes the PCs, the GM rolls the <strong>GM's Die</strong>&mdash;a <strong>d20</strong>&mdash;instead of <a href="#define-action-roll">Duality Dice</a>, applying appropriate <a href="#define-procedure">modifiers</a> to the result.</p>
 			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-				<p>Adversaries don't usually make action rolls other than <a href="#define-attack-roll">attack rolls</a>, but if GM decides an adversary's action has a chance of failure, they assign PCs a <a href="#define-reaction-roll">reaction roll</a> instead. In rare instances&mdash;for example, when performing dramatic or difficult tasks the PCs can't influence&mdash;the GM might assign an adversary an action roll.</p>
+				<p>Gaining <a href="define-advantage">advantage or disadvantage</a> or changes in the size of your Hope or Fear die have a profound effect on the outcomes&mdash;for example, through the <a href="#define-highborne">Highborne</a> or <a href="#define-orderborne">Orderborne</a> community features. For detailed information, see <a href="#duality-dice-benchmark">Duality Dice Benchmarks</a>.</p>
+				<p>Adversaries don't usually make action rolls other than <a href="#define-attack-roll">attack rolls</a>, but if GM decides an adversary's action has a chance of failure, they assign PCs a <a href="#define-reaction-roll">reaction roll</a> instead. In rare instances&mdash;for example, when performing dramatic or difficult tasks the PCs can't influence&mdash;the GM might assign an adversary an action roll. For detailed information, see <a href="#adversary-benchmark-success">Adversary Success Benchmarks</a>.</p>
 			</div>
 		</div>
 	</div>
@@ -10988,7 +11053,7 @@
 	</ul>
 	<p>The GM determines the Difficulty of other <a href="#define-action-roll">action rolls</a> required by the narrative, and can <a href="#define-procedure">modify</a> it by spending <a href="#define-fear">Fear</a>, or give the roll <a href="#define-advantage">advantage and disadvantage</a> based on circumstance.</p>
 </div>
-<h4 id="duality-dice-benchmarks">Duality Dice Benchmarks<a class="og-h-anchor" href="#duality-dice-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
+<h4 id="duality-dice-benchmark">Duality Dice Benchmarks<a class="og-h-anchor" href="#duality-dice-benchmark" title="Permalink" aria-hidden="true"></a></h4>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 <div class="row">
 	<div class="col-12 col-md-6">
@@ -12731,7 +12796,7 @@
 <p>The following table shows ranges and averages for <a href="#define-adversary">adversary</a> statistics.</p>
 <dl>
 	<dt>Difficulty</dt>
-	<dd><a href="#define-difficulty">Difficulty</a> determines the chance a PC's <a href="#define-attack-roll">attack roll</a> succeeds. It also determines a PC's chance to succeed against <a href="#define-reaction-roll">reaction rolls</a> prompted by <a href="#define-adversary-feature">adversary features</a> (unless the feature specifies otherwise). For related information, see <a href="#duality-dice-benchmarks">Duality Dice Benchmarks</a>.</dd>
+	<dd><a href="#define-difficulty">Difficulty</a> determines the chance a PC's <a href="#define-attack-roll">attack roll</a> succeeds. It also determines a PC's chance to succeed against <a href="#define-reaction-roll">reaction rolls</a> prompted by <a href="#define-adversary-feature">adversary features</a> (unless the feature specifies otherwise). For related information, see <a href="#duality-dice-benchmark">Duality Dice Benchmarks</a>.</dd>
 	<dt>Damage Thresholds</dt>
 	<dd>Major and Severe <a href="#define-hit-point">damage thresholds</a> determine how many <a href="#define-hit-point">Hit Points</a> an adversary marks in response to a PC's <a href="#define-damage-roll">damage roll</a>. For related information, see <a href="#pc-benchmark-damage">PC Damage Benchmarks</a>.</dd>
 	<dt>Stress</dt>
@@ -12811,12 +12876,12 @@
 </table></div>
 <h5 id="adversary-benchmark-success">Adversary Success Benchmarks<a class="og-h-anchor" href="#adversary-benchmark-success" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<p>The following table shows the success rate of <a href="#define-adversary">adversary</a> <a href="#define-action-roll">action rolls</a>&mdash;usually <a href="#define-attack-roll">attack rolls</a> against a PC's <a href="#define-evasion">Evasion</a>. The table includes rolls made with <a href="#define-advantage">advantage</a> and <a href="#define-advantage">disadvantage</a>. To account for a <a href="#define-procedure">modifier</a>, subtract it from the Evasion to determine the chance of success. For example, if the PC's Evasion is 13 and the modifier is +3, the chances of success are equal to the listed percentages for Evasion 10.</p>
+<p>The following table shows the success rate of <a href="#define-adversary">adversary</a> rolls made with the <a href="#define-action-roll">GM's die</a>. Most of the time, these only include <a href="#define-attack-roll">attack rolls</a> against a PC's <a href="#define-evasion">Evasion</a>, or <a href="#define-reaction-roll">reaction rolls</a>. The table includes rolls made with <a href="#define-advantage">advantage</a> and <a href="#define-advantage">disadvantage</a>. To account for a <a href="#define-procedure">modifier</a>, subtract it from the Evasion to determine the chance of success. For example, if the PC's Evasion is 13 and the modifier is +3, the chances of success are equal to the listed percentages for Evasion 10.</p>
 <div class="table-responsive"><table class="table table-light table-striped table-sm mb-3 small">
 	<caption>Adversary Success Benchmarks</caption>
 	<thead>
 		<tr>
-			<th class="text-center w-10" scope="col">Evasion</th>
+			<th class="text-center w-10" scope="col">Difficulty</th>
 			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-danger">&#x25AE;</span> Disadvantage</th>
 			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-warning">&#x25AE;</span> d20</th>
 			<th class="text-center w-10 og-nowrap" scope="col"><span class="text-success">&#x25AE;</span> Advantage</th>
@@ -12967,7 +13032,7 @@
 	</tbody>
 </table></div>
 <div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p>For similar information on PCs, see <a href="#duality-dice-benchmarks">Duality Dice Benchmarks</a>.</p>
+	<p>For similar information on PCs, see <a href="#duality-dice-benchmark">Duality Dice Benchmarks</a>.</p>
 </div>
 <h5 id="adversary-benchmarks-hit-points">Adversary Hit Points<a class="og-h-anchor" href="#adversary-benchmarks-hit-points" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
