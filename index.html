@@ -67,11 +67,11 @@
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-combat" role="button" data-bs-toggle="dropdown" aria-expanded="false">Combat</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-combat">
 						<li><a class="dropdown-item og-nav" href="#evasion">Evasion</a></li>
-						<li><a class="dropdown-item og-nav" href="#hit-points-and-damage-thresholds">Hit Points and Damage Thresholds</a></li>
-						<li><a class="dropdown-item og-nav" href="#stress">Stress</a></li>
-						<li><a class="dropdown-item og-nav" href="#death">Death</a></li>
 						<li><a class="dropdown-item og-nav" href="#attack-rolls">Attack Rolls</a></li>
 						<li><a class="dropdown-item og-nav" href="#damage-rolls">Damage Rolls</a></li>
+						<li><a class="dropdown-item og-nav" href="#hit-points-and-damage-thresholds">Damage Thresholds and Hit Points</a></li>
+						<li><a class="dropdown-item og-nav" href="#stress">Stress</a></li>
+						<li><a class="dropdown-item og-nav" href="#death">Death</a></li>
 						<li><a class="dropdown-item og-nav" href="#conditions">Conditions</a></li>
 						<li><a class="dropdown-item og-nav" href="#maps-range-and-movement">Maps, Range, and Movement</a></li>
 						<li><a class="dropdown-item og-nav" href="#downtime">Downtime</a></li>
@@ -115,7 +115,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.99n (2025-08-05)</p>
+<p class="small text-center">version 0.99p (2025-08-05)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -11238,79 +11238,9 @@
 	<h3 id="evasion">Evasion<a class="og-h-anchor" href="#evasion" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
 	<p>Evasion represents your ability to avoid attacks and other unwanted effects. <a href="#define-attack-roll">Attack rolls</a> against you have a <a href="#define-difficulty">Difficulty</a> equal to your Evasion.</p>
-	<p>Your starting Evasion is determined by your <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase your Evasion when you <a href="#define-level">level up</a>.</p>
+	<p>Your starting Evasion is determined by your <a href="#define-class">class</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase your Evasion when you gain a <a href="#define-level">level</a>.</p>
 </div>
 <hr>
-<div id="define-hit-point">
-	<h3 id="hit-points-and-damage-thresholds">Hit Points and Damage Thresholds<a class="og-h-anchor" href="#hit-points-and-damage-thresholds" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-	<p><strong>Hit Points</strong> represent capacity to withstand physical injury. When a character takes <a href="#define-damage-roll">damage</a>, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>. </p>
-	<p>Your damage thresholds are determined by your <a href="#define-armor">armor</a>, and gain a bonus equal to your <a href="#define-level">level</a>. Your starting Hit Points are determined by your <a href="#define-class">class</a>.</p>
-	<dl>
-		<dt>Minor Damage</dt>
-		<dd>If the damage is below the <strong>Major</strong> damage threshold, mark 1 Hit Point.</dd>
-		<dt>Major Damage</dt>
-		<dd>If the damage meets or beats the <strong>Major</strong> damage threshold, mark 2 Hit Points.</dd>
-		<dt>Severe Damage</dt>
-		<dd>If the damage meets or beats the <strong>Severe</strong> damage threshold, mark 3 Hit Points.</dd>
-		<dt>Reducing Damage</dt>
-		<dd>You can reduce damage by marking <a href="#define-armor">Armor Slots</a>. Some features allow you to mark <a href="#define-stress">Stress</a> instead of Hit Points.</dd>
-		<dt>Marking Hit Points</dt>
-		<dd>If you mark your last Hit Point, make a <a href="#define-death">death move</a>. If an <a href="#define-adversary">adversary</a>'s last <a href="#define-hit-point">Hit Point</a> is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</dd>
-		<dt>Clearing Hit Points</dt>
-		<dd>You can clear Hit Points during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
-		<dt>Increasing Hit Points</dt>
-		<dd>You can purchase an <a href="#define-advancement">advancement</a> to increase them when you gain a <a href="#define-level">level</a> (up to a maximum of 12).</dd>
-	</dl>
-	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p><strong>Editor's Notes &mdash;</strong> The maximum for Hit Points is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
-		<p><em>See: <a href="https://www.reddit.com/r/daggerheart/comments/1lw8uuo/comment/n2flrxf/">r/daggerheart: Today is TADPOLE THURSDAY - Ask your newbie questions here!</a></em></p>
-	</div>
-</div>
-<div class="og-topbar">
-	<div id="define-optional-rule-massive-damage">
-		<h4 id="optional-rule-massive-damage">Optional Rule: Massive Damage<a class="og-h-anchor" href="#optional-rule-massive-damage" title="Permalink" aria-hidden="true"></a></h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
-		<p>If a character ever takes damage equal to twice their <a href="#define-hit-point">Severe</a> threshold, they mark 4 <a href="#define-hit-point">Hit Points</a> instead of 3.</p>
-	</div>
-</div>
-<hr>
-<div id="define-stress">
-	<h3 id="stress">Stress<a class="og-h-anchor" href="#stress" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 92</li></ul>
-	<p><strong>Stress</strong> represents physical, mental, and emotional strain. You start with 6 Stress slots.</p>
-	<dl>
-		<dt>Marking Stress</dt>
-		<dd>Activating a features might require you to <strong>mark a Stress</strong>. Additionally, the GM can require you to mark Stress as a <a href="#define-gm-move">GM move</a>, or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>. When a character marks their last Stress, they become <a href="#define-condition"><em>Vulnerable</em></a> until they clear at least 1 Stress. If all of a character's Stress slots are marked, they can't use features that requires them to mark Stress, and if something else requires them mark Stress, they mark a <a href="#define-hit-point">Hit Point</a> instead.</dd>
-		<dt>Clearing Stress</dt>
-		<dd>Stress is cleared during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
-		<dt>Increasing Stress Slots</dt>
-		<dd>You can purchase an <a href="#define-advancement">advancement</a> to increase your Stress slots when you gain a <a href="#define-level">level</a> (up to a maximum of 12).</dd>
-	</dl>
-	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p><strong>Editor's Notes &mdash;</strong> The maximum for Stress is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
-		<p><em>See: <a href="https://www.reddit.com/r/daggerheart/comments/1lw8uuo/comment/n2flrxf/">r/daggerheart: Today is TADPOLE THURSDAY - Ask your newbie questions here!</a></em></p>
-	</div>
-</div>
-<hr>
-<div id="define-death">
-	<h3 id="death">Death<a class="og-h-anchor" href="#death" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 7</li><li>Page 106</li><li>Page 182</li></ul>
-	<p>If you mark your last <a href="#define-hit-point">Hit Point</a>, choose one of the following <strong>death moves</strong>:</p>
-	<dl>
-		<dt>Blaze of Glory</dt>
-		<dd>You embrace death and go out in a blaze of glory. Take one final <a href="#define-action">action</a>. With the GM's approval, your action <a href="#define-action-roll">critically succeeds</a>. After the action is resolved, you cross through the veil of death.</dd>
-		<dt>Avoid Death</dt>
-		<dd>You avoid death&mdash;but there are consequences. The situation in the scene worsens. Work with the GM to describe how, and roll your <a href="#define-action-roll">Hope Die</a>. If the result is equal to or less than your <a href="#define-level">level</a>, you gain a <strong>scar</strong>. Either way, you <a href="#define-temporary">temporarily</a> fall <em>Unconscious</em>. While you remain <em>Unconscious</em>, you can't move, act, or be targeted by an attack. You regain consciousness if an ally clears 1 or more of your marked <a href="#define-hit-point">Hit Points</a>, or when the party finishes a <a href="#define-long-rest">long rest</a>. Each time you gain a scar, you lose a <a href="#define-hope">Hope</a> slot, work with the GM to determine its lasting narrative impact, and discuss if and how it can be removed. If avoiding death causes you to lose your last <a href="#define-hope">Hope</a> slot, your journey ends&mdash;retire your PC to a life apart from the PCs' adventures. </dd>
-		<dt>Risk It All</dt>
-		<dd>Roll your <a href="#define-action-roll">Duality Dice</a>. If the <a href="#define-action-roll">Hope Die</a> is higher, your character stays on their feet, and you can distribute the value of the <a href="#define-action-roll">Hope Die</a> to clear a number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-stress">Stress</a> as you choose. If the <a href="#define-action-roll">Fear Die</a> is higher, your character crosses through the veil of death. If the <a href="#define-action-roll">Duality Dice</a> show matching results, you clear all <a href="#define-hit-point">Hit Points</a> and <a href="#define-stress">Stress</a>.</dd>
-	</dl>
-	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p>If you do something that would result in immediate death&mdash;for example, diving into an active volcano&mdash;you might not get to make a death move. The GM should make these kinds of consequences clear before the <a href="#define-action">action</a>.</p>
-	</div>
-</div>
-<hr>
-<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 <div id="define-attack-roll">
 	<h3 id="attack-rolls">Attack Rolls<a class="og-h-anchor" href="#attack-rolls" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 104</li><li>Page 148</li><li>Page 160</li></ul>
@@ -11333,15 +11263,25 @@
 		<div id="define-damage-roll">
 			<h3 id="damage-rolls">Damage Rolls<a class="og-h-anchor" href="#damage-rolls" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 96</li><li>Page 98</li><li>Page 110</li><li>Page 113</li></ul>
+			<p>After a successful <a href="#define-attack-roll">attack roll</a>, you make a <strong>damage roll</strong>.</p>
 			<dl>
-				<dt>Damage Dice</dt>
-				<dd>On a successful <a href="#define-attack-roll">attack</a>, roll damage. Damage dice are arranged into <strong>steps</strong> by an increasing number of faces on the die: <strong>d4</strong>, <strong>d6</strong>, <strong>d8</strong>, <strong>d10</strong>, <strong>d12</strong>, and <strong>d20</strong>. For example, for a <a href="#define-domain-card">domain card</a> spell or <a href="#define-weapon">weapon</a> that inflicts <strong>1d8+2</strong> damage, you roll a <strong>d8</strong> (eight-sided die) and add 2 to the result. The damage dealt is equal to the total.</dd>
 				<dt>Proficiency</dt>
-				<dd>For <a href="#define-weapon">weapons</a>, the number of damage dice you roll is equal to your <a href="#define-damage-roll">Proficiency</a>. For example, a PC with a Proficiency score of 2 wielding a weapon that deals <strong>d8+1</strong> rolls <strong>2d8+1</strong> damage for a successful attack. Some <a href="#define-subclass">subclass</a> features and <a href="#define-domain-card">domain cards</a> are enhanced by your Proficiency in other ways. Your Proficiency starts at 1 and increases each time you reach a new <a href="#define-tier">tier</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase your Proficiency when you <a href="#define-level">level up</a>.</dd>
+				<dd>Your Proficiency determines the number of damage dice you roll. For example, If your a Proficiency is and 2 you are wielding a <a href="#define-weapon">weapons</a>, you roll two damage dice. Your Proficiency starts at 1 and increases each time you reach a new <a href="#define-tier">tier</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase your Proficiency when you gain a <a href="#define-level">level</a>.</dd>
+			</dl>
+			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+				<p>Some <a href="#define-subclass">subclass</a> features and <a href="#define-domain-card">domain cards</a> are enhanced by your Proficiency in other ways.</p>
+			</div>
+			<dl>
 				<dt>Spellcast Trait</dt>
-				<dd>If you deal damage using your <a href="#define-subclass">Spellcast trait</a>, roll a number of dice equal to your Spellcast trait's <a href="#define-procedure">modifier</a>. If your <a href="#define-subclass">Spellcast trait</a> is +0 or lower, you don't roll anything.</dd>
+				<dd>If a feature states you deal damage using your <a href="#define-subclass">Spellcast trait</a>, you roll a number of dice equal to it instead. If your <a href="#define-subclass">Spellcast trait</a> is +0 or lower, you don't roll any dice. You can purchase an <a href="#define-advancement">advancement</a> to increase <a href="#trait">traits</a> when you gain a <a href="#define-level">level</a>.</dd>
+				<dt>Damage Dice</dt>
+				<dd>Damage dice are arranged into <strong>steps</strong> by an increasing number of faces on the die: <strong>d4</strong>, <strong>d6</strong>, <strong>d8</strong>, <strong>d10</strong>, <strong>d12</strong>, and <strong>d20</strong>.</dd>
+				<dt>Modifiers and Results</dt>
+				<dd>After the damage roll is made, add any modifiers to determine the result. For example, if your Proficiency is 1, and you attack with a cutlass that deals <strong>d8+2</strong> damage, you roll <strong>1d8</strong> and add 2 to determine the result.</dd>
 				<dt>Critical Damage</dt>
-				<dd>When you roll a <a href="#define-action-roll">critical success</a> on an <a href="#define-attack-roll">attack roll</a>, add the maximum possible result of the damage dice to the damage roll. For example, if an attack deals <strong>2d8+1</strong> damage, its critical damage is <strong>2d8+1+16</strong>.</dd>
+				<dd>When you roll a <a href="#define-action-roll">critical success</a> on an <a href="#define-attack-roll">attack roll</a>, add the maximum possible result of the damage dice to the result. For example, if an attack deals <strong>2d8+1</strong> damage, its critical damage is <strong>2d8+1+16</strong>.</dd>
+				<dt>Incoming Damage</dt>
+				<dd>Incoming damage is the total damage from a single attack or source that is compared to the target's <a href="#define-hit-point">damage thresholds</a> to determine the number of <a href="#define-hit-point">Hit Points</a> marked. Some features allow you to reduce incoming damage&mdash;for example the <a href="#define-domain-card-rune-ward">Rune Ward</a> domain card allows you to reduce incoming damage by <strong>1d8</strong>.</dd>
 			</dl>
 		</div>
 	</div>
@@ -11349,7 +11289,6 @@
 		<div id="define-damage-type">
 			<h4 id="damage-types">Damage Types<a class="og-h-anchor" href="#damage-types" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 98</li><li>Page 99</li><li>Page 107</li></ul>
-			<p>Incoming damage is the total damage from a single attack or source, before <a href="#define-armor">Armor Slots</a> are marked.</p>
 			<dl>
 				<dt>Physical damage (phy)</dt>
 				<dd>Unarmed attacks and mundane <a href="#define-weapon">weapons</a> deal physical damage.</dd>
@@ -11357,8 +11296,6 @@
 				<dd>Spells and magic <a href="#define-weapon">weapons</a> deal magic damage.</dd>
 				<dt>Direct damage</dt>
 				<dd>Direct damage can be magic or physical. Either way, it can't be reduced by marking <a href="#define-armor">Armor Slots</a>.</dd>
-				<dt>Incoming Damage</dt>
-				<dd>Incoming damage is the amount a successful attack deals. For example, the <a href="#define-domain-card-rune-ward">Rune Ward</a> domain card allows you to reduce incoming damage by <strong>1d8</strong>, potentially lowering it below your Major or Minor <a href="#define-hit-point">damage threshold</a>.</dd>
 				<dt>Resistance</dt>
 				<dd>Resistance reduces incoming damage of a type by half, and is applied before other ways of reducing incoming damage&mdash;for example, marking <a href="#define-armor">Armor Slots</a>. Resistance doesn't <a href="#define-temporary">stack</a>. If an attack deals physical and magic damage, the target must be resistant to both.</dd>
 				<dt>Immunity</dt>
@@ -11367,6 +11304,74 @@
 				<dd>Total simultaneous damage before comparing it to a target's <a href="#define-hit-point">damage thresholds</a>. <span class="og-omit">For example, if you are an <a href="#define-orc">orc</a> who successfully <a href="#define-attack-roll">attacks</a> a target within <a href="#define-range">Melee</a> range and <strong><a href="#define-hope">spend a Hope</a></strong> to use your <strong><em>Tusks</em></strong> feature, you roll your <a href="#define-weapon">weapon</a> damage and add <strong>1d6</strong> to the result.</span></dd>
 			</dl>
 		</div>
+	</div>
+</div>
+<hr>
+<div id="define-hit-point">
+	<h3 id="damage-thresholds-and-hit-points">Damage Thresholds and Hit Points<a class="og-h-anchor" href="#damage-thresholds-and-hit-points" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
+	<p><strong>Hit Points</strong> represent capacity to withstand physical injury. When a character takes <a href="#define-damage-roll">damage</a>, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>. Your damage thresholds are determined by your <a href="#define-armor">armor</a>, and gain a bonus equal to your <a href="#define-level">level</a>.</p>
+	<dl>
+		<dt>Minor Damage</dt>
+		<dd>If the damage is below the <strong>Major</strong> damage threshold, mark 1 Hit Point.</dd>
+		<dt>Major Damage</dt>
+		<dd>If the damage meets or beats the <strong>Major</strong> damage threshold, mark 2 Hit Points.</dd>
+		<dt>Severe Damage</dt>
+		<dd>If the damage meets or beats the <strong>Severe</strong> damage threshold, mark 3 Hit Points.</dd>
+		<dt>Marking Hit Points</dt>
+		<dd>When you would mark a Hit Point, you can mark an <a href="#define-armor">Armor Slot</a> instead. Some features allow you to mark <a href="#define-stress">Stress</a> instead of Hit Points.</dd>
+		<dt>Death and Defeat</dt>
+		<dd>If you mark your last Hit Point, make a <a href="#define-death">death move</a>. If an <a href="#define-adversary">adversary</a>'s last Hit Point is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</dd>
+		<dt>Clearing Hit Points</dt>
+		<dd>You can clear marked Hit Points during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
+		<dt>Increasing Hit Points</dt>
+		<dd> Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Hit Points (up to a maximum of 12).</dd>
+	</dl>
+	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p><strong>Editor's Notes &mdash;</strong> The maximum for Hit Points is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
+		<p><em>See: <a href="https://www.reddit.com/r/daggerheart/comments/1lw8uuo/comment/n2flrxf/">r/daggerheart: Today is TADPOLE THURSDAY - Ask your newbie questions here!</a></em></p>
+	</div>
+</div>
+<div class="og-topbar">
+	<div id="define-optional-rule-massive-damage">
+		<h4 id="optional-rule-massive-damage">Optional Rule: Massive Damage<a class="og-h-anchor" href="#optional-rule-massive-damage" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 91</li></ul>
+		<p>If a character ever takes damage equal to twice their <a href="#define-hit-point">Severe</a> threshold, they mark 4 <a href="#define-hit-point">Hit Points</a> instead of 3.</p>
+	</div>
+</div>
+<hr>
+<div id="define-stress">
+	<h3 id="stress">Stress<a class="og-h-anchor" href="#stress" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 92</li></ul>
+	<p><strong>Stress</strong> represents physical, mental, and emotional strain.</p>
+	<dl>
+		<dt>Marking Stress</dt>
+		<dd>Activating a features might require you to <strong>mark a Stress</strong>. Additionally, the GM can require you to mark Stress as a <a href="#define-gm-move">GM move</a>, or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>. When a character marks their last Stress, they become <a href="#define-condition"><em>Vulnerable</em></a> until they clear at least 1 Stress. If all of a character's Stress slots are marked, they can't use features that requires them to mark Stress, and if something else requires them mark Stress, they mark a <a href="#define-hit-point">Hit Point</a> instead.</dd>
+		<dt>Clearing Stress</dt>
+		<dd>Stress is cleared during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
+		<dt>Increasing Stress Slots</dt>
+		<dd>You start with 6 Stress slots, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Stress slots (up to a maximum of 12).</dd>
+	</dl>
+	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p><strong>Editor's Notes &mdash;</strong> The maximum for Stress is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
+		<p><em>See: <a href="https://www.reddit.com/r/daggerheart/comments/1lw8uuo/comment/n2flrxf/">r/daggerheart: Today is TADPOLE THURSDAY - Ask your newbie questions here!</a></em></p>
+	</div>
+</div>
+<hr>
+<div id="define-death">
+	<h3 id="death">Death<a class="og-h-anchor" href="#death" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 7</li><li>Page 106</li><li>Page 182</li></ul>
+	<p>If you mark your last <a href="#define-hit-point">Hit Point</a>, choose one of the following <strong>death moves</strong>:</p>
+	<dl>
+		<dt>Blaze of Glory</dt>
+		<dd>You embrace death and go out in a blaze of glory. Take one final <a href="#define-action">action</a>. With the GM's approval, your action <a href="#define-action-roll">critically succeeds</a>. After the action is resolved, you cross through the veil of death.</dd>
+		<dt>Avoid Death</dt>
+		<dd>You avoid death&mdash;but there are consequences. The situation in the scene worsens. Work with the GM to describe how, and roll your <a href="#define-action-roll">Hope Die</a>. If the result is equal to or less than your <a href="#define-level">level</a>, you gain a <strong>scar</strong>. Either way, you <a href="#define-temporary">temporarily</a> fall <em>Unconscious</em>. While you remain <em>Unconscious</em>, you can't move, act, or be targeted by an attack. You regain consciousness if an ally clears 1 or more of your marked <a href="#define-hit-point">Hit Points</a>, or when the party finishes a <a href="#define-long-rest">long rest</a>. Each time you gain a scar, you lose a <a href="#define-hope">Hope</a> slot, work with the GM to determine its lasting narrative impact, and discuss if and how it can be removed. If avoiding death causes you to lose your last <a href="#define-hope">Hope</a> slot, your journey ends&mdash;retire your PC to a life apart from the PCs' adventures. </dd>
+		<dt>Risk It All</dt>
+		<dd>Roll your <a href="#define-action-roll">Duality Dice</a>. If the <a href="#define-action-roll">Hope Die</a> is higher, your character stays on their feet, and you can distribute the value of the <a href="#define-action-roll">Hope Die</a> to clear a number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-stress">Stress</a> as you choose. If the <a href="#define-action-roll">Fear Die</a> is higher, your character crosses through the veil of death. If the <a href="#define-action-roll">Duality Dice</a> show matching results, you clear all <a href="#define-hit-point">Hit Points</a> and <a href="#define-stress">Stress</a>.</dd>
+	</dl>
+	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p>If you do something that would result in immediate death&mdash;for example, diving into an active volcano&mdash;you might not get to make a death move. The GM should make these kinds of consequences clear before the <a href="#define-action">action</a>.</p>
 	</div>
 </div>
 <hr>
