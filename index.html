@@ -82,6 +82,7 @@
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-gms">
 						<li><a class="dropdown-item og-nav" href="#gm-guidance">Running an Adventure</a></li>
 						<li><a class="dropdown-item og-nav" href="#resolving-actions">Resolving Actions</a></li>
+						<li><a class="dropdown-item og-nav" href="#difficulty-benchmarks">Difficulty Benchmarks</a></li>
 						<li><a class="dropdown-item og-nav" href="#fear">Fear</a></li>
 						<li><a class="dropdown-item og-nav" href="#gm-moves">GM Moves</a></li>
 						<li><a class="dropdown-item og-nav" href="#pacing">Pacing</a></li>
@@ -115,7 +116,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.99q (2025-08-06)</p>
+<p class="small text-center">version 0.99r (2025-08-06)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -11806,6 +11807,110 @@
 	<dd>Spend <a href="#define-fear">Fear</a> when you have the opportunity. The players will always generate more.</dd>
 </dl>
 <hr>
+<div id="define-resolving">
+	<h3 id="resolving-actions">Resolving Actions<a class="og-h-anchor" href="#resolving-actions" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 148</li><li>Page 149</li><li>Page 150</li></ul>
+	<p>When a PC makes <a href="#define-action">move</a>:</p>
+	<dl>
+		<dt>No Roll</dt>
+		<dd>The GM doesn't need to call for <a href="#define-action-roll">action roll</a> in response to everything the PCs do. Instead, their relevant <a href="#define-experience">Experiences</a> or background, the pressure they're under, or lack of interesting outcomes might mean it's better if the PC succeeds automatically. The GM might also provide the opportunity to forgo an <a href="#define-action">action roll</a> in exchange for an interesting, logical, and story-based outcome, cost, or complication.</dd>
+		<dt>Action Roll</dt>
+		<dd>During the <a href="#define-procedure">action roll procedure</a>, the GM should communicate the stakes of the <A href="#define-action-roll">action roll</a>&mdash;including any unavoidable consequences&mdash;before <a href="#define-action-roll">Duality Dice</a> are rolled.</dd>
+	</dl>
+	<p>If an outcome is not obvious, the GM should try one of the following:</p>
+	<ul class="og-list-disc">
+		<li>Ask the player what happens</li>
+		<li>Have the PC mark a <a href="#define-stress">Stress</a></li>
+		<li>Tell the players "everything is fine&mldr;for now."</li>
+		<li>Consult the list of <a href="#define-gm-move-examples">Example GM Moves</a></li>
+	</ul>
+</div>
+<h4 class="h6">Action Roll Resolution</h4>
+<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Action Roll Resolution</caption>
+	<thead>
+		<tr>
+			<th scope="col">Action Roll</th>
+			<th scope="col">Phrase</th>
+			<th scope="col">Resolution</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal og-nowrap">Success with Hope</th>
+			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
+					<li>The player describes their success.</li>
+					<li>You describe how the world reacts to it.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Success with Fear</th>
+			<td class="og-nowrap">Yes, but&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
+					<li>Work with the player to describe their success, adding a cost or complication.</li>
+					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a harder <a href="#define-gm-move">GM move</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Failure with Hope</th>
+			<td class="og-nowrap">No, but&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>You gain a <a href="#define-fear">Fear</a>.</li>
+					<li>You describe how the PC fails to get what they want, with minor consequences.</li>
+					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a softer <a href="#define-gm-move">GM move</a>.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Failure with Fear</th>
+			<td class="og-nowrap">No, and&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>You gain a <a href="#define-fear">Fear</a>.</li>
+					<li>Describe how the PC fails to get what they want, with major consequences.</li>
+					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a harder <a href="#define-gm-move">GM move</a></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="fw-normal og-nowrap">Critical Success</th>
+			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>The PC gains 1 <a href="#define-hope">Hope</a> and clears 1 <a href="#stress">Stress</a>.</li>
+					<li>Let the player describe their success.</li>
+					<li>Provide the PC an additional opportunity, <a href="#define-advantage">advantage</a>, or reward.</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table></div>
+<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+	<p><strong>Editor's Notes &mdash;</strong> Sometimes, the game uses the phrases "play passes", "play moves", and  "play shifts" without mentioning the <a href="#define-spotlight">spotlight</a> swinging&mdash;especially when it comes to <a href="#define-action-roll">success with Fear</a>. What does this mean for resolving action rolls and making <a href="#define-gm-move">GM moves</a>?</p>
+	<ul class="og-list-disc">
+		<li>In the examples of play in the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a> (page 136) these phrases seem equivalent to "the spotlight swings". In the <a href="https://www.daggerheart.com/srd/">Daggerheart System Reference Document 1.0</a> (pages 36 and 64), the <a href="#define-spotlight">spotlight</a> swinging is explicitly mentioned on failures with Hope and Fear, but isn't mentioned in the accompanying outcome for a success with Fear.</li>
+		<li>If "an <a href="#define-adversary">adversary</a> attacks" is the always the response to successes with Fear, failures with Hope, and failures with Fear, it could undermine the players' sense of meaningful differences between <a href="#define-action-roll">action roll</a> outcomes.</li>
+		<li>Many <a href="#define-gm-move-examples">Example GM Moves</a> don't require moving the <a href="#define-spotlight">spotlight</a>&mdash;for example, marking <a href="#define-stress">Stress</a>.</li>
+		<li>There will be times when it's better to wait on making GM moves&mdash;especially those that would require spending <a href="#define-fear">Fear</a>. The GM might decide to let Fear accumulate, and delay consequences for a better moment in the narrative.</li>
+		<li>There will also be times when the GM will make GM moves so "soft" they aren't really <a href="#define-fear">Fear</a>-based at all. Not only should these GM moves never cost Fear to make, some might even reward a PC with <a href="#define-hope">Hope</a>.</li>
+	</ul>
+	<p>Ultimately, the GM must earn the trust and respect of the players by making <a href="#define-gm-moves">GM moves</a> that:</p>
+	<ul class="og-list-disc">
+		<li>Are interesting, logical, and story-based</li>
+		<li>Respond appropriately to the outcomes of <a href="#define-action-roll">action rolls</a></li>
+		<li>Spend <a href="#define-fear">Fear</a> proportional to impact on the narrative</li>
+	</ul>
+</div>
+<hr>
+
 <h3 id="difficulty-benchmarks">Difficulty Benchmarks<a class="og-h-anchor" href="#difficulty-benchmarks" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 158</li></ul>
 <p>Refer to the following benchmark tables for more guidance:</p>
@@ -12136,109 +12241,6 @@
 			</tr>
 		</tbody>
 	</table></div>
-</div>
-<hr>
-<div id="define-resolving">
-	<h3 id="resolving-actions">Resolving Actions<a class="og-h-anchor" href="#resolving-actions" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 148</li><li>Page 149</li><li>Page 150</li></ul>
-	<p>When a PC makes <a href="#define-action">move</a>:</p>
-	<dl>
-		<dt>No Roll</dt>
-		<dd>The GM doesn't need to call for <a href="#define-action-roll">action roll</a> in response to everything the PCs do. Instead, their relevant <a href="#define-experience">Experiences</a> or background, the pressure they're under, or lack of interesting outcomes might mean it's better if the PC succeeds automatically. The GM might also provide the opportunity to forgo an <a href="#define-action">action roll</a> in exchange for an interesting, logical, and story-based outcome, cost, or complication.</dd>
-		<dt>Action Roll</dt>
-		<dd>During the <a href="#define-procedure">action roll procedure</a>, the GM should communicate the stakes of the <A href="#define-action-roll">action roll</a>&mdash;including any unavoidable consequences&mdash;before <a href="#define-action-roll">Duality Dice</a> are rolled.</dd>
-	</dl>
-	<p>If an outcome is not obvious, the GM should try one of the following:</p>
-	<ul class="og-list-disc">
-		<li>Ask the player what happens</li>
-		<li>Have the PC mark a <a href="#define-stress">Stress</a></li>
-		<li>Tell the players "everything is fine&mldr;for now."</li>
-		<li>Consult the list of <a href="#define-gm-move-examples">Example GM Moves</a></li>
-	</ul>
-</div>
-<h4 class="h6">Action Roll Resolution</h4>
-<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Action Roll Resolution</caption>
-	<thead>
-		<tr>
-			<th scope="col">Action Roll</th>
-			<th scope="col">Phrase</th>
-			<th scope="col">Resolution</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th class="fw-normal og-nowrap">Success with Hope</th>
-			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
-					<li>The player describes their success.</li>
-					<li>You describe how the world reacts to it.</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Success with Fear</th>
-			<td class="og-nowrap">Yes, but&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
-					<li>Work with the player to describe their success, adding a cost or complication.</li>
-					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a harder <a href="#define-gm-move">GM move</a>.</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Failure with Hope</th>
-			<td class="og-nowrap">No, but&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>You gain a <a href="#define-fear">Fear</a>.</li>
-					<li>You describe how the PC fails to get what they want, with minor consequences.</li>
-					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a softer <a href="#define-gm-move">GM move</a>.</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Failure with Fear</th>
-			<td class="og-nowrap">No, and&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>You gain a <a href="#define-fear">Fear</a>.</li>
-					<li>Describe how the PC fails to get what they want, with major consequences.</li>
-					<li>The <a href="#define-spotlight">spotlight</a> swings to you, and you make a harder <a href="#define-gm-move">GM move</a></li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Critical Success</th>
-			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The PC gains 1 <a href="#define-hope">Hope</a> and clears 1 <a href="#stress">Stress</a>.</li>
-					<li>Let the player describe their success.</li>
-					<li>Provide the PC an additional opportunity, <a href="#define-advantage">advantage</a>, or reward.</li>
-				</ul>
-			</td>
-		</tr>
-	</tbody>
-</table></div>
-<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p><strong>Editor's Notes &mdash;</strong> Sometimes, the game uses the phrases "play passes", "play moves", and  "play shifts" without mentioning the <a href="#define-spotlight">spotlight</a> swinging&mdash;especially when it comes to <a href="#define-action-roll">success with Fear</a>. What does this mean for resolving action rolls and making <a href="#define-gm-move">GM moves</a>?</p>
-	<ul class="og-list-disc">
-		<li>In the examples of play in the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a> (page 136) these phrases seem equivalent to "the spotlight swings". In the <a href="https://www.daggerheart.com/srd/">Daggerheart System Reference Document 1.0</a> (pages 36 and 64), the <a href="#define-spotlight">spotlight</a> swinging is explicitly mentioned on failures with Hope and Fear, but isn't mentioned in the accompanying outcome for a success with Fear.</li>
-		<li>If "an <a href="#define-adversary">adversary</a> attacks" is the always the response to successes with Fear, failures with Hope, and failures with Fear, it could undermine the players' sense of meaningful differences between <a href="#define-action-roll">action roll</a> outcomes.</li>
-		<li>Many <a href="#define-gm-move-examples">Example GM Moves</a> don't require moving the <a href="#define-spotlight">spotlight</a>&mdash;for example, marking <a href="#define-stress">Stress</a>.</li>
-		<li>There will be times when it's better to wait on making GM moves&mdash;especially those that would require spending <a href="#define-fear">Fear</a>. The GM might decide to let Fear accumulate, and delay consequences for a better moment in the narrative.</li>
-		<li>There will also be times when the GM will make GM moves so "soft" they aren't really <a href="#define-fear">Fear</a>-based at all. Not only should these GM moves never cost Fear to make, some might even reward a PC with <a href="#define-hope">Hope</a>.</li>
-	</ul>
-	<p>Ultimately, the GM must earn the trust and respect of the players by making <a href="#define-gm-moves">GM moves</a> that:</p>
-	<ul class="og-list-disc">
-		<li>Are interesting, logical, and story-based</li>
-		<li>Respond appropriately to the outcomes of <a href="#define-action-roll">action rolls</a></li>
-		<li>Spend <a href="#define-fear">Fear</a> proportional to impact on the narrative</li>
-	</ul>
 </div>
 <hr>
 <div class="row">
