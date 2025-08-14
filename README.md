@@ -16,6 +16,10 @@ Thanks to Darrington Press for this amazing resource, and thank you for readingâ
 - [@oldgus@dice.camp](https://dice.camp/@oldgus)
 - [Ko-fi](https://ko-fi.com/oldgus)
 
+## Translations
+
+- [Traditional Chinese](https://sassttrpgtools.github.io/og-dhsrd/) by [sassttrpgtools](https://github.com/sassttrpgtools)
+
 ## More from Old Gus
 
 - [Old Gus' Cypher System Reference Document (OG-CSRD)](https://callmepartario.github.io/og-csrd/)
