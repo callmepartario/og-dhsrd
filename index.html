@@ -116,7 +116,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 0.99z (2025-08-17)</p>
+<p class="small text-center">version 1.00a (2025-08-24)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -13267,7 +13267,7 @@
 			<ul class="list-unstyled">
 				<li><p><strong><em>Haymaker&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X direct physical damage.</p></li>
 				<li><p><strong><em>Shredding Strike&mdash;Action:</em></strong> Make an <a href="#define-attack-roll">attack</a> against a target within <a href="#define-range">Very Close</a> range. On a success, deal X physical damage and the target must mark an <a href="#define-armor">Armor Slot</a> without gaining its benefit (they can still use <a href="#define-armor">armor</a> to reduce the damage).</p></li>
-				<li><p><strong><em>More Where That Came From&mdash;Action:</em></strong> Summon three <strong>Jagged Knife Lackeys</strong>, who appear at <a href="#define-range">Far</a> range.</p></li>
+				<li><p><strong><em>More Where That Came From&mdash;Action:</em></strong> Summon three <a href="#define-adversary-jagged-knife-lackey">Jagged Knife Lackeys</a>, who appear at <a href="#define-range">Far</a> range.</p></li>
 			</ul>
 			<div id="define-adversary-feature-reaction">
 				<h5 class="h6">Example Adversary Reactions</h5>
@@ -13427,6 +13427,11 @@
 					<li>Decrease <a href="#define-attack">attack roll</a> modifier.</li>
 					<li>Increase <a href="#define-damage-roll">damage roll</a>.</li>
 					<li>Add the <a href="#define-adversary-feature-reaction">Momentum</a> feature.</li>
+					<li>Consider adding the <em>Ramp Up</em> feature:
+						<ul class="list-unstyled og-list-hang mt-2">
+							<li><p><strong><em>Ramp Up&mdash;Passive:</em></strong> You must <a href="#define-fear"><strong>spend a Fear</strong></a> to <a href="#define-spotlight">spotlight</a> the Minotaur. While <a href="#define-spotlight">spotlighted</a>, they can make their standard attack against all targets within range.</p></li>
+						</ul>
+					</li>
 				</ul>
 			</td>
 		</tr>
@@ -13458,7 +13463,13 @@
 					<li>Assign 1 <a href="#define-hit-point">Hit Point</a>.</li>
 					<li>Assign 1&ndash;2 <a href="#define-stress">Stress</a>.</li>
 					<li>Use flat damage instead of a <a href="#define-damage-roll">damage roll</a>.</li>
-					<li>Add the <a href="#define-adversary-feature-passive">Minion</a> feature, and don't assign too <a href="#define-adversary-feature">adversary features</a>.</li>
+					<li>Add the <a href="#define-adversary-feature-passive">Minion</a> feature.</li>
+					<li>Add the <em>Group Attack</em> feature, where X is the damage dealt by the basic attack:
+						<ul class="list-unstyled og-list-hang mt-2">
+							<li><p><strong><em>Group Attack&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to choose a target and <a href="#define-spotlight">spotlight</a> all [adversary name]s within <a href="#define-range">Close</a> range of them. Those <a href="#define-adversary-type">Minions</a> move into <a href="#define-range">Melee</a> range of the target and make one shared <a href="#define-attack-roll">attack roll</a>. On a success, they deal X <a href="#define-damage-type">physical damage</a> each. Combine this damage.</p></li>
+						</ul>
+					</li>
+					<li>Don't assign too many other <a href="#define-adversary-feature">adversary features</a>.</li>
 				</ul>
 			</td>
 		</tr>
@@ -13475,7 +13486,11 @@
 		<tr>
 			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Skulk</a></th>
 			<td class="text-center">d6&ndash;d8</td>
-			<td>&mdash;</td>
+			<td>
+				<ul class="og-list-disc mb-0">
+					<li>Consider adding the <a href="#define-adversary-feature-reaction">Momentum</a> feature.</li>
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<th class="fw-normal" scope="row"><a href="#define-adversary-type">Social</a></th>
@@ -13508,13 +13523,12 @@
 			<td class="text-center">d4&ndash;d6</td>
 			<td>
 				<ul class="og-list-disc mb-0">
-					<li>Decrease  <a href="#define-damage-roll">damage roll</a>.</li>
+					<li>Decrease <a href="#define-damage-roll">damage roll</a>.</li>
 				</ul>
 			</td>
 		</tr>
 	</tbody>
 </table></div>
-
 <h5 id="adversary-benchmarks-conditions">Adversaries Applying Conditions<a class="og-h-anchor" href="#adversary-benchmarks-conditions" title="Permalink" aria-hidden="true"></a></h5>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 <p>Several <a href="#define-adversary">adversaries</a> apply <a href="#define-condition">conditions</a>.</p>
@@ -13522,76 +13536,756 @@
 	<caption>Adversaries Applying Conditions</caption>
 	<thead>
 		<tr>
-			<th class="text-center" scope="col">Tier</th>
-			<th scope="col">Adversary</th>
-			<th scope="col">Type</th>
-			<th scope="col">Condition</th>
+			<th class="w-35" scope="col">Adversary</th>
+			<th class="w-15 text-center og-nowrap" scope="col">Tier</th>
+			<th class="w-15" scope="col">Type</th>
+			<th class="w-20" scope="col">Feature</th>
+			<th class="w-15" scope="col">Condition</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 1</th>
-			<td><a href="#define-adversary-giant-scorpion">Giant Scorpion</a></td>
-			<td><a href="#define-adversary-type">Bruiser</a></td>
-			<td><em>Poisoned</em></td>
-		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 1</th>
-			<td><a href="#define-adversary-jagged-knife-hexer">Jagged Knife Hexer</a></td>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-cult-adept">Cult Adept</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
 			<td><a href="#define-adversary-type">Support</a></td>
-			<td><em>Cursed</em></td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 2</th>
-			<td><a href="#define-adversary-cult-adept">Cult Adept</a></td>
-			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Shroud of the Fallen</em></td>
 			<td><em>Protected</em></td>
 		</tr>
 		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 2</th>
-			<td><a href="#define-adversary-siren">Siren</a></td>
-			<td><a href="#define-adversary-type">Skulk</a></td>
-			<td><em>Entranced</em></td>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-giant-scorpion">Giant Scorpion</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Venomous Stinger</em></td>
+			<td><em>Poisoned</em></td>
 		</tr>
 		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 3</th>
-			<td><a href="#define-adversary-huge-green-ooze">Huge Green Ooze</a></td>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-jagged-knife-hexer">Jagged Knife Hexer</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Curse</em></td>
+			<td><em>Cursed</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-high-seraph">High Seraph</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Punish the Guilty</em></td>
+			<td><em>Guilty</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-huge-green-ooze">Huge Green Ooze</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
 			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Envelop</em></td>
 			<td><em>Enveloped</em></td>
 		</tr>
 		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 3</th>
-			<td><a href="#define-adversary-hydra">Hydra</a></td>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-hydra">Hydra</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
 			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Magical Weakness</em></td>
 			<td><em>Dazed</em></td>
 		</tr>
 		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 3</th>
-			<td><a href="#define-adversary-oak-treant">Oak Treant</a></td>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-oak-treant">Oak Treant</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
 			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Take Root</em></td>
 			<td><em>Rooted</em></td>
 		</tr>
 		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 3</th>
-			<td><a href="#define-adversary-vault-guardian-turret">Vault Guardian Turret</a></td>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-siren">Siren</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Captive Audience</em></td>
+			<td><em>Entranced</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-vault-guardian-turret">Vault Guardian Turret</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
 			<td><a href="#define-adversary-type">Ranged</a></td>
+			<td><em>Mark Target</em></td>
 			<td><em>Marked</em></td>
 		</tr>
 		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 3</th>
-			<td><a href="#define-adversary-young-ice-dragon">Young Ice Dragon</a></td>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-young-ice-dragon">Young Ice Dragon</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
 			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Frozen Scales</em></td>
 			<td><em>Chilled</em></td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center" scope="row">Tier 4</th>
-			<td><a href="#define-adversary-high-seraph">High Seraph</a></td>
-			<td><a href="#define-adversary-type">Leader</a></td>
-			<td><em>Guilty</em></td>
 		</tr>
 	</tbody>
 </table></div>
+<h5 id="adversary-hope-loss">Adversaries Causing PCs to Lose Hope<a class="og-h-anchor" href="#adversary-hope-loss" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p><a href="#define-adversary">Adversaries</a> can cause PCs to lose <a href="#define-hope">Hope</a>. The <em>Terrifying</em> feature also generates <a href="#define-fear">Fear</a>.</p>
+<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Adversaries Causing PCs to Lose Hope</caption>
+	<thead>
+		<tr>
+			<th class="w-35" scope="col">Adversary</th>
+			<th class="w-15 text-center og-nowrap" scope="col">Tier</th>
+			<th class="w-15" scope="col">Type</th>
+			<th class="w-35" scope="col">Feature</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-despair">Demon of Despair</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Your Friends Will Fail You</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-hubris">Demon of Hubris</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demonic-hound-pack">Demonic Hound Pack</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Horde</a></td>
+			<td><em>Dreadhowl</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-fallen-shock-troop">Fallen Shock Troop</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Minion</a></td>
+			<td><em>Aura of Doom</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-fallen-sorcerer">Fallen Sorcerer</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Shackles of Guilt</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-fallen-warlord-realm-breaker">Fallen Warlord: Realm Breaker</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Doombringer</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-fallen-warlord-undefeated-champion">Fallen Warlord: Undefeated Champion</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Doombringer</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-juvenile-flickerfly">Juvenile Fickerfly</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Hallucinatory Breath</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-head-vampire">Head Vampire</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-minor-demon">Minor Demon</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>All Must Fall</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-mortal-hunter">Mortal Hunter</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-oracle-of-doom">Oracle of Doom</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Terrifying, Pronounce Fate</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-outer-realms-corruptor">Outer Realms Corruptor</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Will-Shattering Touch</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-patchwork-zombie-hulk">Patchwork Zombie Hulk</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Tormented Screams</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-shark">Shark</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-skeleton-knight">Skeleton Knight</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-volcanic-dragon-obsidian-predator">Volcanic Dragon: Obsidian Predator</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Dive-Bomb</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-volcanic-dragon-ashen-tyrant">Volcanic Dragon: Ashen Tyrant</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Ashes to Ashes</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-young-ice-dragon">Young Ice Dragon</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>No Hope</em></td>
+		</tr>
+	</tbody>
+</table></div>
+<h5 id="adversary-generating-fear">Adversaries Generating Fear<a class="og-h-anchor" href="#adversary-generating-fear" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p>The most common method of adversary-based <a href="#define-fear">Fear</a> generation is the <a href="#define-adversary-feature-reaction">Momentum</a> passive feature&mdash;in fact, it's so common that its results are omitted from the following table. These features are most common among <a href="#define-adversary-type">Solos</a> and <a href="#define-adversary-type">Bruisers</a>, but are also useful for <a href="#define-adversary-type">Leaders</a> and <a href="#define-adversary-type">Skulks</a>.</p>
+<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Adversaries Generating Fear</caption>
+	<thead>
+		<tr>
+			<th class="w-35" scope="col">Adversary</th>
+			<th class="w-15 text-center og-nowrap" scope="col">Tier</th>
+			<th class="w-15" scope="col">Type</th>
+			<th class="w-35" scope="col">Feature</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-acid-burrower">Acid Burrower</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Spit Acid</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-arch-necromancer">Arch-Necromancer</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Beam of Decay</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-adult-flickerfly">Adult Flickerfly</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Mind Dance</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-battle-box">Battle Box</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Overcharge</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-cave-ogre">Cave Ogre</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Hail of Boulders</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-hubris">Demon of Hubris</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-dire-wolf">Dire Wolf</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Pack Tactics</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-electric-eels">Electric Eels</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Horde</a></td>
+			<td><em>Paralyzing Shock</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-fallen-warlord-undefeated-champion">Fallen Warlord: Undefeated Champion</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Doombringer</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-gorgon">Gorgon</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Death Glare</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-head-vampire">Head Vampire</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-juvenile-flickerfly">Juvenile Flickerfly</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Mind Dance</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-mortal-hunter">Mortal Hunter</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-oracle-of-doom">Oracle of Doom</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-outer-realms-abomination">Outer Realms Abomination</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Disorienting Presence, Fungal Form</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-patchwork-zombie-hulk">Patchwork Zombie Hulk</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Tormented Screams</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-secret-keeper">Secret-Keeper</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Our Master's Will</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-shark">Shark</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-skeleton-knight">Skeleton Knight</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Terrifying</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-spellblade">Spellblade</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Suppressing Blast</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-volcanic-dragon-molten-scourge">Volcanic Dragon: Molten Scourge</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Cracked Scales</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-volcanic-dragon-ashen-tyrant">Volcanic Dragon: Ashen Tyrant</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Ashes to Ashes</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-young-ice-dragon">Young Ice Dragon</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Avalanche</em></td>
+		</tr>
+	</tbody>
+</table>
+<h5 id="adversary-fear-features">Adversary Fear Features<a class="og-h-anchor" href="#adversary-fear-features" title="Permalink" aria-hidden="true"></a></h5>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p><a href="#define-adversary-type">Minions</a> with the <em>Group Attack</em> feature described under <a href="#adversary-benchmarks-type">Adversary Type Modifications</a> are omitted from this list.</p>
+<p><a href="#define-adversary-type">Leader</a> <a href="define-adversary-feature-passive">Group Attack</a>
+<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Adversary Fear Features</caption>
+	<thead>
+		<tr>
+			<th class="w-35" scope="col">Adversary</th>
+			<th class="w-15 text-center og-nowrap" scope="col">Tier</th>
+			<th class="w-15" scope="col">Type</th>
+			<th class="w-35" scope="col">Feature</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-arch-necromancer">Arch-Necromancer</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Dance of Death, Open the Gates of Death, Not Today, My Dears</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-archer-squadron">Archer Squadron</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Horde</a></td>
+			<td><em>Focused Volley</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-cave-ogre">Cave Ogre</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Ramp Up</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-chaos-skull">Chaos Skull</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Ranged</a></td>
+			<td><em>Siphon Magic</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-cult-adept">Cult Adept</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Enervating Blast, Shadow Shackles</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-deeproot-defender">Deeproot Defender</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Grab and Drag</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-avarice">Demon of Avarice</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Money is Time</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-despair">Demon of Despair</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Your Struggle is Pointless</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-hubris">Demon of Hubris</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>The Root of Villainy</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-jealousy">Demon of Jealousy</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Ranged</a></td>
+			<td><em>My Turn, What's Yours is Mine</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-demon-of-wrath">Demon of Wrath</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Battle Lust</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-dryad">Dryad</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Grow Saplings, We Are All One</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-fallen-sorcerer">Fallen Sorcerer</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Conflagration</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-fallen-warlord-undefeated-champion">Fallen Warlord: Undefeated Champion</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Endless Legions</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-giant-scorpion">Giant Scorpion</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Venemous Stinger</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-glass-snake">Glass Snake</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Standard</a></td>
+			<td><em>Spitter</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-gorgon">Gorgon</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Petrifying Gaze</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-greater-water-elemental">Greater Water Elemental</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Support</a></td>
+			<td><em>Drowning Embrace</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-green-ooze">Green Ooze</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Split</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-hallowed-soldier">Hallowed Soldier</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Minion</a></td>
+			<td><em>Divine Flight</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-head-guard">Head Guard</a></th>
+			<td class="text-center og-nowrap">Tier1 </td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Rally Guards</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-head-vampire">Head Vampire</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>The Hunt is On</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-high-seraph">High Seraph</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Divine Flight, We Are One</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-huge-green-ooze">Huge Green Ooze</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Split</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-hydra">Hydra</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Regeneration</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-jagged-knife-lieutenant">Jagged Knife Lieutenant</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Coup de Grace</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-kraken">Kraken</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Boiling Blast</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-master-assassin">Master Assassin</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>The Subtle Blade</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-merchant-baron">Merchant Baron</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Social</a></td>
+			<td><em>Everyone Has a Price</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-minor-chaos-elemental">Minor Chaos Elemental</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Remake Reality</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-minor-demon">Minor Demon</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Hellfire</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-minor-fire-elemental">Minor Fire Elemental</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Explosion</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-minotaur-wrecker">Minotaur Wrecker</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Ramp Up</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-monarch">Monarch</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Social</a></td>
+			<td><em>Execute Them!, Casus Bell</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-mortal-hunter">Mortal Hunter</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Deathlock</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-oracle-of-doom">Oracle of Doom</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Pronounce Fate, Summon Tormentors</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-outer-realms-abomination">Outer Realms Abomination</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Reality Quake</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-perfected-zombie">Perfected Zombie</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Skilled Opportunist</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-petty-noble">Petty Noble</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Social</a></td>
+			<td><em>Exile</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-pirate-captain">Pirate Captain</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>No Quarter</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-red-ooze">Red Ooze</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Split</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-royal-advisor">Royal Advisor</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Social</a></td>
+			<td><em>Scapegoat</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-secret-keeper">Secret-Keeper</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Seize Your Moment</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-siren">Siren</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Enchanting Song</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-spectral-archer">Spectral Archer</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Ranged</a></td>
+			<td><em>Pick Your Target</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-spectral-captain">Spectral Captain</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Unending Battle</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-spectral-guardian">Spectral Guardian</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Standard</a></td>
+			<td><em>Grave Blade</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-spellblade">Spellblade</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Move as Unit</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-spy">Spy</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Social</a></td>
+			<td><em>Gathering Secrets</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-stag-knight">Stag Knight</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Standard</a></td>
+			<td><em>Blade of the Forest</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-stonewraith">Stonewraith</a></th>
+			<td class="text-center og-nowrap">Tier 2</td>
+			<td><a href="#define-adversary-type">Skulk</a></td>
+			<td><em>Avalanche Roar</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-sylvan-soldier">Sylvan Soldier</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Standard</a></td>
+			<td><em>Forest Control</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-vampire">Vampire</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Standard</a></td>
+			<td><em>Mistform</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-vault-guardian-sentinel">Vault Guardian Sentinel</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Mana Bolt</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-vault-guardian-turret">Vault Guardian Turret</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Ranged</a></td>
+			<td><em>Mark Target</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-volcanic-dragon-molten-scourge">Volcanic Dragon: Molten Scourge</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Eruption</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-volcanic-dragon-ashen-tyrant">Volcanic Dragon: Ashen Tyrant</a></th>
+			<td class="text-center og-nowrap">Tier 4</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Ashen Cloud, Apocalyptic Thrashing</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-war-wizard">War Wizard</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Ranged</a></td>
+			<td><em>Eruption, Arcane Artillery</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-weaponmaster">Weaponmaster</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Bruiser</a></td>
+			<td><em>Adrenaline Burst</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-young-dryad">Young Dryad</a></th>
+			<td class="text-center og-nowrap">Tier 1</td>
+			<td><a href="#define-adversary-type">Leader</a></td>
+			<td><em>Thorny Cage</em></td>
+		</tr>
+		<tr>
+			<th class="fw-normal" scope="row"><a href="#define-adversary-young-ice-dragon">Young Ice Dragon</a></th>
+			<td class="text-center og-nowrap">Tier 3</td>
+			<td><a href="#define-adversary-type">Solo</a></td>
+			<td><em>Blizzard Breath, Avalanche</em></td>
+		</tr>
+	</tbody>
+</table>
+
 <div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p><strong>Editor's Notes &mdash;</strong> 	Additional guidance for creating adversary stat blocks is provided in the <a href="https://www.daggerheart.com/downloads/">Daggerheart Homebrew Kit</a>. Tools like <a href="https://anydice.com">anydice.com</a> provide damage ranges and averages for adversary <a href="#define-damage-roll">damage rolls</a> you can compare against the PCs' <a href="#define-hit-point">damage thresholds</a> an <a href="#define-condtion">conditions</a> they can apply.</p>
+	<p><strong>Editor's Notes &mdash;</strong> Additional guidance for creating adversary stat blocks is provided in the <a href="https://www.daggerheart.com/downloads/">Daggerheart Homebrew Kit</a>. Tools like <a href="https://anydice.com">anydice.com</a> provide damage ranges and averages for adversary <a href="#define-damage-roll">damage rolls</a> you can compare against the PCs' <a href="#define-hit-point">damage thresholds</a> an <a href="#define-condtion">conditions</a> they can apply.</p>
 </div>
 <hr>
 <h3 id="adversary-stat-blocks">Adversary Stat Blocks<a class="og-h-anchor" href="#adversary-stat-blocks" title="Permalink" aria-hidden="true"></a></h3>
@@ -14537,7 +15231,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Unprotected Mind&mdash;Passive:</em></strong> The Demon's standard attack deals <a href="#define-damage-type">direct damage</a>.</p></li>
-                    <li><p><strong><em>My Turn&mdash;Reaction:</em></strong> When the Demon marks <a href="#define-hit-point">HP</a> from an attack, <strong><a href="#define-fear">spend a number of equal to the HP marked by the Demon</a></strong> to cause the attacker to mark the same number of <a href="#define-hit-point">HP</a>.</p></li>
+                    <li><p><strong><em>My Turn&mdash;Reaction:</em></strong> When the Demon marks <a href="#define-hit-point">HP</a> from an attack, <strong><a href="#define-fear">spend a number of Fear equal to the HP marked by the Demon</a></strong> to cause the attacker to mark the same number of <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Rivalry&mdash;Reaction:</em></strong> When a creature within <a href="#define-range">Close</a> range takes damage from a different adversary, you can <strong><a href="#define-stress">mark a Stress</a></strong> to add a <strong>d4</strong> to the <a href="#define-damage-roll">damage roll</a>.</p></li>
                     <li><p><strong><em>What's Yours Is Mine&mdash;Reaction:</em></strong> When a PC takes severe damage within <a href="#define-range">Very Close</a> range of the Demon, you can <strong><a href="#define-fear">spend a Fear</a></strong> to cause the target to make a <a href="#define-finesse">Finesse</a> <a href="#define-reaction-roll">Reaction Roll</a>. On a failure, the Demon seizes one item or consumable of their choice from the target's inventory.</p></li>
                 </ul>
@@ -15551,7 +16245,7 @@
                     <li><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> the Ooze and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> the Ooze and they have a token on their stat block, clear the token and they can act.</p></li>
                     <li><p><strong><em>Acidic Form&mdash;Passive:</em></strong> When the Ooze makes a successful attack, the target must mark an <a href="#define-armor">Armor Slot</a> without receiving its benefits (they can still use <a href="#define-armor">armor</a> to reduce the damage). If they can't mark an <a href="#define-armor">Armor Slot</a>, they must mark an additional <a href="#define-hit-point">HP</a>.</p></li>
                     <li><p><strong><em>Envelop&mdash;Action:</em></strong> Make an attack against a target within <a href="#define-range">Melee</a> range. On a success, the Ooze <em>Envelops</em> them and the target must mark 2 <a href="#define-stress">Stress</a>. While <em>Enveloped</em>, the target must mark an additional <a href="#define-stress">Stress</a> every time they make an <a href="#define-action-roll">action roll</a>. When the Ooze takes <a href="#define-hit-point">Severe</a> damage, all <em>Enveloped</em> targets are freed and the condition is cleared.</p></li>
-                    <li><p><strong><em>Split&mdash;Reaction:</em></strong> When the Ooze has 4 or more <a href="#define-hit-point">HP</a> marked, you can <strong><a href="#define-fear">spend a Fear</a></strong> to split them into two Green Oozes (with no marked <a href="#define-hit-point">HP</a> or <a href="#define-stress">Stress</a>). Immediately <a href="#define-spotlight">spotlight</a> both of them.</p></li>
+                    <li><p><strong><em>Split&mdash;Reaction:</em></strong> When the Ooze has 4 or more <a href="#define-hit-point">HP</a> marked, you can <strong><a href="#define-fear">spend a Fear</a></strong> to split them into two <a href="#define-adversary-green-ooze">Green Oozes</a> (with no marked <a href="#define-hit-point">HP</a> or <a href="#define-stress">Stress</a>). Immediately <a href="#define-spotlight">spotlight</a> both of them.</p></li>
                 </ul>
             </div>
         </div>
@@ -16436,7 +17130,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Terrifying&mdash;Passive:</em></strong> On successful attack, all PCs in <a href="#define-range">Far</a> range lose <a href="#define-hope">Hope</a> and you gain <a href="#define-fear">Fear</a>.</p></li>
-                    <li><p><strong><em>Fearsome <a href="#define-presence">Presence</a>&mdash;Passive:</em></strong> PCs can't spend <a href="#define-hope">Hope</a> to use features against the Zombie.</p></li>
+                    <li><p><strong><em>Fearsome Presence&mdash;Passive:</em></strong> PCs can't spend <a href="#define-hope">Hope</a> to use features against the Zombie.</p></li>
                     <li><p><strong><em>Perfect Strike&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to attack all targets within <a href="#define-range">Very Close</a> range; on success, targets are <a href="#define-condition"><em>Vulnerable</em></a> until next rest.</p></li>
                     <li><p><strong><em>Skilled Opportunist&mdash;Reaction:</em></strong> When another adversary deals damage to target within <a href="#define-range">Very Close</a> range of Zombie, <strong><a href="#define-fear">spend a Fear</a></strong> to add Zombie's standard attack damage to the <a href="#define-damage-roll">damage roll</a>.</p></li>
                 </ul>
@@ -17588,7 +18282,7 @@
                 <h6>Features</h6>
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Goading Strike&mdash;Action:</em></strong> Make a standard attack against a target. On a success, mark a <a href="#define-stress">Stress</a> to Taunt the target until their next successful <a href="#define-attack-roll">attack</a>. The next time the Taunted target attacks, they have <a href="#define-advantage">disadvantage</a> against targets other than the Weaponmaster.</p></li>
-                    <li><p><strong><em>Adrenaline Burst&mdash;Action:</em></strong> Once per scene, spend a Fear to clear 2 <a href="#define-hit-point">HP</a> and 2 <a href="#define-stress">Stress</a>.</p></li>
+                    <li><p><strong><em>Adrenaline Burst&mdash;Action:</em></strong> Once per scene, <a href="#define-fear"><strong>spend a Fear</strong></a> to clear 2 <a href="#define-hit-point">HP</a> and 2 <a href="#define-stress">Stress</a>.</p></li>
                     <li><p><strong><em>Momentum&mdash;Reaction:</em></strong> When the Weaponmaster makes a successful attack against a PC, you gain a <a href="#define-fear">Fear</a>.</p></li>
                 </ul>
             </div>
@@ -17651,7 +18345,7 @@
                 <ul class="list-unstyled og-list-hang">
                     <li><p><strong><em>Relentless (3)&mdash;Passive:</em></strong> The Dragon can be <a href="#define-spotlight">spotlighted</a> up to three times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to <a href="#define-spotlight">spotlight</a> them.</p></li>
                     <li><p><strong><em>Rend and Crush&mdash;Passive:</em></strong> If a target damaged by the Dragon doesn't mark an <a href="#define-armor">Armor Slot</a> to reduce the damage, they must mark a <a href="#define-stress">Stress</a>.</p></li>
-                    <li><p><strong><em>No <a href="#define-hope">Hope</a>&mdash;Passive:</em></strong> When a PC rolls with <a href="#define-fear">Fear</a> while within <a href="#define-range">Far</a> range of the Dragon, they lose a <a href="#define-hope">Hope</a>.</p></li>
+                    <li><p><strong><em>No Hope&mdash;Passive:</em></strong> When a PC rolls with <a href="#define-fear">Fear</a> while within <a href="#define-range">Far</a> range of the Dragon, they lose a <a href="#define-hope">Hope</a>.</p></li>
                     <li><p><strong><em>Blizzard Breath&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend 2 Fear</a></strong> to release an icy whirlwind in an area within <a href="#define-range">Close</a> range. All targets in this area must make an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail take <strong>4d6+5</strong> <a href="#define-damage-type">magic damage</a> and are <a href="#define-condition"><em>Restrained</em></a> by ice until they break free with a successful <a href="#define-trait-roll">Strength Roll</a>. Targets who succeed must mark 2 <a href="#define-stress">Stress</a> or take half damage.</p></li>
                     <li><p><strong><em>Avalanche&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to have the Dragon unleash a huge downfall of snow and ice, covering all other creatures within <a href="#define-range">Far</a> range. All targets within this area must succeed on an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a> or be buried in snow and rocks, becoming <a href="#define-condition"><em>Vulnerable</em></a> until they dig themselves out from the debris. For each PC that fails the <a href="#define-reaction-roll">reaction roll</a>, you gain a <a href="#define-fear">Fear</a>.</p></li>
                     <li><p><strong><em>Frozen Scales&mdash;Reaction:</em></strong> When a creature makes a successful attack against the Dragon from within <a href="#define-range">Very Close</a> range, they must mark a <a href="#define-stress">Stress</a> and become <em>Chilled</em> until their next rest or they clear a <a href="#define-stress">Stress</a>. While they are <em>Chilled</em>, they have <a href="#define-advantage">disadvantage</a> on <a href="#define-attack-roll">attack rolls</a>.</p></li>
