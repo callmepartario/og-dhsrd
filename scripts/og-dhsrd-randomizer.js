@@ -6,6 +6,7 @@ let data = await fetchData.json();
 
 randomAncestryFeature1();
 randomAncestryFeature2();
+refreshTooltips();
 
 // Randomize
 
@@ -23,13 +24,26 @@ function randomAncestryFeature2() {
 
 document.getElementById("new-random-ancestry-feature-1").addEventListener("click", function (event) {
   randomAncestryFeature1();
+  refreshTooltips();
 });
 
 document.getElementById("new-random-ancestry-feature-2").addEventListener("click", function (event) {
   randomAncestryFeature2();
+  refreshTooltips();
 });
 
 document.getElementById("new-random-ancestry-mix").addEventListener("click", function (event) {
   randomAncestryFeature1();
   randomAncestryFeature2();
+  refreshTooltips();
 });
+
+function refreshTooltips() {
+    $("a[href^=\\#define-]")
+        .tooltip({
+            html: true,
+            title: function () {
+                return $(this.href.substring(this.href.lastIndexOf("#"))).clone().wrap('<div></div>').parent()
+            }
+        })
+}
