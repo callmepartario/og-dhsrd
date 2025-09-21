@@ -116,7 +116,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.02d (2025-09-19)</p>
+<p class="small text-center">version 1.02e (2025-09-21)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -7259,7 +7259,7 @@
 		<dd>Use either <a href="#define-strength">Strength</a> or <a href="#define-finesse">Finesse</a> for the <a href="#define-attack-roll">attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href="#define-damage-type">physical damage</a>.</dd>
 	</dl>
 	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p><strong>Editor's Notes &mdash;</strong> Dual wielding is handled by choosing <a href="#weapons-secondary-tier-1">secondary weapons</a> with the <strong><em>Paired</em></strong> primary weapon's <a href="#define-damage-roll">damage rolls</a>. It can be a good idea to rename, reskin, or flavor your weapon choices to something more in-theme for your character concept.</p>
+		<p><strong>Editor's Notes &mdash;</strong> Dual wielding is handled by choosing <a href="#weapons-secondary-tier-1">secondary weapons</a> with the <strong><em>Paired</em></strong> feature, which boost your primary weapon's <a href="#define-damage-roll">damage rolls</a>. It can be a good idea to rename, reskin, or flavor your weapon choices to something more in-theme for your character concept.</p>
 	</div>
 </div>
 <hr>
@@ -10561,17 +10561,17 @@
 			<h4 id="trait-rolls">Trait Rolls<a class="og-h-anchor" href="#trait-rolls" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 			<p><strong>Trait rolls</strong> define the <a href="#define-trait">trait</a> <a href="#define-procedure">modifier</a> that applies to an <a href="#define-action-roll">action roll</a>.</p>
-			<p>For example, <strong>Agility Roll (12)</strong> means the action roll adds your <a href="#define-agility">Agility</a> <a href="#define-procedure">modifier</a>, and has a <a href="#define-difficulty">Difficulty</a> of 12. If no Difficulty is specified, the GM assigns one.</p>
+			<p>For example, <strong>Agility Roll (12)</strong> means the action roll adds your <a href="#define-agility">Agility</a>, and has a <a href="#define-difficulty">Difficulty</a> of 12. If no <a href="#define-trait">trait</a> or <a href="#define-difficulty">Difficulty</a> is specified, the GM assigns them.</p>
 			<p>Features and effects that affect trait rolls also affect any action roll that uses that trait, including <a href="#define-attack-roll">attack rolls</a> and <a href="#define-spellcast-roll">Spellcast Rolls</a>.</p>
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>For example, a <a href="#define-katari">katari</a> with the <strong><em>Feline Instincts</em></strong> feature allows them to <a href="#define-reroll">reroll</a> an Agility Roll. This feature applies to any <a href="#define-action-roll">action roll</a> where <a href="#define-agility">Agility</a> is the assigned <a href="#define-trait">trait</a>, including sprinting across a stretch of dangerous terrain, or making an <a href="#define-attack-roll">attack roll</a> made with a <a href="#define-weapon">weapon</a> that uses Agility.</p>
+			<p>For example, a <a href="#define-katari">katari</a> with the <strong><em>Feline Instincts</em></strong> feature allows them to <a href="#define-reroll">reroll</a> thier Hope die on an Agility Roll. This feature applies to any <a href="#define-action-roll">action roll</a> where <a href="#define-agility">Agility</a> is the assigned <a href="#define-trait">trait</a>&mdash;for example, moving a <a href="#define-range">Far or Very Far</a> distance under pressure, or making an <a href="#define-attack-roll">attack roll</a> made with a <a href="#define-weapon">weapon</a> that uses <a href="#define-agility">Agility</a>.</p>
 		</div>
 		<div id="define-spellcast-roll">
 			<h4 id="spellcast-rolls">Spellcast Rolls<a class="og-h-anchor" href="#spellcast-rolls" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 96</li></ul>
 			<p><strong>Spellcast Rolls</strong> are <a href="#define-trait-roll">trait rolls</a> that require you to use your <strong>Spellcast trait</strong>. If you have a Spellcast trait, it is determined by your <a href="#define-subclass">subclass</a>. A successful Spellcast Roll activates the effect described by the feature.</p>
-			<p>For example, if you are a <a href="#define-bard-troubadour">troubadour</a> <a href="#define-bard">bard</a> and must make a <strong>Spellcast Roll (15)</strong>, that means you add your <a href="#define-presence">Presence</a> <a href="#define-procedure">modifier</a> to the <a href="#define-action-roll">action roll</a>, which has a <a href="#define-difficulty">Difficulty</a> of 15. If no Difficulty is specified, the GM decides it.</p>
+			<p>For example, if you are a <a href="#define-bard-troubadour">troubadour</a> <a href="#define-bard">bard</a> and must make a <strong>Spellcast Roll (15)</strong>, that means you add your <a href="#define-presence">Presence</a> to the <a href="#define-action-roll">action roll</a>, which has a <a href="#define-difficulty">Difficulty</a> of 15. If no Difficulty is specified, the GM decides it.</p>
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 			<p>A Spellcast Roll that can damage a target is also an <a href="#define-attack-roll">attack roll</a>.</p>
@@ -10581,12 +10581,9 @@
 			<ul class="og-list-inline og-ref og-omit"><li>Page 99</li><li>Page 148</li><li>Page 161</li></ul>
 			<p>A <strong>reaction roll</strong> is made in response to an attack or a hazard, representing a character's attempt to avoid or withstand an imminent effect.</p>
 			<p>Reaction rolls don't generate <a href="#define-hope">Hope</a> or <a href="#define-fear">Fear</a>, don't trigger additional <a href="#define-gm-move">GM moves</a>, and other characters can't aid you with <a href="#define-hope">Help an Ally</a>.</p>
-			<p>If you <a href="#define-action-roll">critically succeed</a> on a <a href="#define-reaction-roll">reaction roll</a>, you don't clear a <a href="#define-stress">Stress</a> or gain a <a href="#define-hope">Hope</a>, but you do ignore any effects that would have impacted you on a success, such as marking <a href="#define-hit-point">Hit Points</a> or marking Stress.</p>
-			<p>For example, if you must make a <strong>Reaction Roll (14)</strong>, that means the roll has a <a href="#define-difficulty">Difficulty</a> of 14. If no Difficulty is specified, the GM decides it. Just like the usual <a href="#define-procedure">procedure</a>, the GM assigns which <a href="#define-trait">trait</a> <a href="#define-procedure">modifier</a> applies to the roll.</p>
-			<p>When the GM rolls a <strong>natural 20</strong> <a href="#define-action-roll">GM's die</a> for an <a href="#define-adversary">adversary</a>'s reaction roll, the adversary automatically succeeds.</p>
-		</div>
-		<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p><strong>Editor's Notes &mdash;</strong> The <a href="https://www.daggerheart.com/srd">Daggerheart SRD</a> is more explicit than the <a href="https://www.daggerheart.com/buy/">Daggerheart Core Rulebook</a> and confirms that "a critical success on an adversary's reaction roll automatically succeeds, but confers no additional benefit."</p>
+			<p>For example, if you must make an <strong>Agility Reaction Roll (14)</strong>, that means you add your <a href="#define-agility">Agility</a> to the roll, which has a <a href="#define-difficulty">Difficulty</a> of 14. If the <a href="#define-trait">trait</a> or <a href="#define-difficulty">Difficulty</a> is specified, the GM decides them.</p>
+			<p>When the GM rolls a <strong>natural 20</strong> on the <a href="#define-action-roll">GM's die</a> for an <a href="#define-adversary">adversary</a>'s reaction roll, the adversary automatically succeeds.</p>
+			<p>If you <a href="#define-action-roll">critically succeed</a> on a <a href="#define-reaction-roll">reaction roll</a>, you don't clear a <a href="#define-stress">Stress</a> or gain a <a href="#define-hope">Hope</a>, but you do ignore any effects that would have impacted you&mdash;for example, taking <a href="#define-damage">damage</a> or marking <a href="#define-stress">Stress</a>.</p>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -10662,10 +10659,6 @@
 				<dt>Help From Allies</dt>
 				<dd>If another PC uses the <a href="#define-hope">Help an Ally</a> move to aid you, they roll their own advantage die, and if you have advantage, you roll yours. After all advantage dice are rolled, keep only the highest advantage die's result as the bonus to your roll.</dd>
 			</dl>
-			<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-				<p><strong>Editor's Notes &mdash;</strong> The interaction of <a href="#define-advantage">advantage and disadvantage</a> with <a href="#define-bard">Rally Dice</a>, <a href="#define-warrior-call-of-the-slayer">Slayer Dice</a>, and help from multiple allies is based on a comment by designer by Spenser Starke. It is included here in anticipation of official errata.</p>
-				<p><em>See: <a href="https://www.reddit.com/r/daggerheart/comments/1l5agtn/help_an_ally_multiple_help_sources//">r/daggerheart: Help an ally - multiple help sources.</a></em></p>
-			</div>
 		</div>
 	</div>
 </div>
@@ -10877,9 +10870,6 @@
 				<dt>Incoming Damage</dt>
 				<dd>Incoming damage is the total damage from a single attack or source that is compared to the target's <a href="#define-hit-point">damage thresholds</a>. Some features and <a href="#define-domain-card">domain cards</a> allow you to reduce incoming damage&mdash;for example, <a href="#define-domain-card-rune-ward">Rune Ward</a> allows you to reduce incoming damage by <strong>1d8</strong>.</dd>
 			</dl>
-			<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-				<p><strong>Editor's Notes &mdash;</strong> Some features and <a href="#define-domain-card">domain cards</a> allow you to manipulate aspects of a damage roll&mdash;for example, the <a href="#define-domain-card-not-good-enough">Not Good Enough</a> allows you to reroll damage dice that result in a 1 or 2. The <a href="#define-rogue">Rogue</a> class feature <em>Sneak Attack</em> adds a number of d6s to your damage roll&mdash;these dice are incorporated with the damage roll's dice. In contrast, <a href="#define-warrior-call-of-the-slayer">Slayer Dice</a> are not damage dice&mdash;they are rolled independently of the damage roll.</p>
-			</div>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
