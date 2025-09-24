@@ -13285,6 +13285,7 @@
 <ul class="og-list-inline og-ref og-omit"><li>Page 208</li><li>Editorial Addition</li></ul>
 <div class="alert ps-4 pb-0 og-omit">
 	<ul class="list-unstyled og-qr">
+		<li><a href="#define-adversary-benchmarks-hit-points">Hit Points</a></li>
 		<li><a href="#define-adversary-benchmarks-type-bruiser">Bruisers</a></li>
 		<li><a href="#define-adversary-benchmarks-type-horde">Hordes</a></li>
 		<li><a href="#define-adversary-benchmarks-type-leader">Leaders</a></li>
@@ -13300,6 +13301,8 @@
 		<li><a href="#define-adversary-reactions">Reactions</a></li>
 		<li><a href="#define-adversary-hope-loss">Hope Loss</a></li>
 		<li><a href="#define-adversary-fear-gain">Fear Gain</a></li>
+		<li><a href="#define-pc-benchmark-defense">PC Defense</a></li>
+		<li><a href="#define-pc-benchmark-damage">PC Damage</a></li>
 	</ul>
 </div>
 <p>The following tables shows ranges and averages for various <a href="#define-adversary">adversary</a> statistics by <a href="#define-adversary-type">adversary type</a>.</p>
@@ -13317,45 +13320,46 @@
 	<dt>Damage</dt>
 	<dd>Increasing the <a href="#define-damage-roll">damage dice</a> increases average damage, but also increases randomness&mdash;especially at higher damage die sizes. Increasing the damage modifier increases a damage roll in a consistent way. Be sure to take the <a href="#define-attack-roll">attack roll</a> modifier into account. For related information, see <a href="#pc-benchmark-defense">PC Defense Benchmarks</a>.</dd>
 </dl>
-<h5 id="adversary-benchmarks-hit-points">Adversary Hit Points<a class="og-h-anchor" href="#adversary-benchmarks-hit-points" title="Permalink" aria-hidden="true"></a></h5>
-<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Adversary Hit Points</caption>
-	<thead>
-		<tr>
-			<th class="text-center og-nowrap" scope="col">Hit Points</th>
-			<th scope="col">Guidelines</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th class="fw-normal text-center">1</th>
-			<td>Defeated by any successful <a href="#define-attack-roll">attack roll</a>. This number is only used for a <a href="#define-adversary-type">Minion</a>.</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center">2</th>
-			<td>Defeated by 1&ndash;2 successful <a href="#define-attack-roll">attack rolls</a>. Assign a Major <a href="#define-hit-point">damage threshold</a>, and a Severe <a href="#define-hit-point">damage threshold</a> of "None".</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center">3</th>
-			<td>Might be defeated with one <a href="#define-attack-roll">attack roll</a> with a high <a href="#define-damage-roll">damage roll</a>, or might take a while to defeat&mdash;assign <a href="#define-difficulty">Difficulty</a> and <a href="#define-hit-point">damage thresholds</a> carefully.</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center">4&ndash;6</th>
-			<td>These enemies will last a while. Assign this range to a <a href="#define-adversary-type">Standard</a> adversary.</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center">7&ndash;9</th>
-			<td>Tougher than usual, but be careful&mdash;too many adversaries with too many <a href="#define-hit-point">Hit Points</a> will cause an encounter to last too long.</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center">10+</th>
-			<td>An extremely tough enemy&mdash;avoid using more than one of these in an encounter, and supplement them with weaker underlings.</td>
-		</tr>
-	</tbody>
-</table></div>
+<div id="define-adversary-benchmarks-hit-points">
+	<h5 id="adversary-benchmarks-hit-points">Adversary Hit Points<a class="og-h-anchor" href="#adversary-benchmarks-hit-points" title="Permalink" aria-hidden="true"></a></h5>
+	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+		<caption>Adversary Hit Points</caption>
+		<thead>
+			<tr>
+				<th class="text-center og-nowrap" scope="col">Hit Points</th>
+				<th scope="col">Guidelines</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="fw-normal text-center">1</th>
+				<td>Defeated by any successful <a href="#define-attack-roll">attack roll</a>. This number is only used for a <a href="#define-adversary-type">Minion</a>.</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center">2</th>
+				<td>Defeated by 1&ndash;2 successful <a href="#define-attack-roll">attack rolls</a>. Assign a Major <a href="#define-hit-point">damage threshold</a>, and a Severe <a href="#define-hit-point">damage threshold</a> of "None".</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center">3</th>
+				<td>Might be defeated with one <a href="#define-attack-roll">attack roll</a> with a high <a href="#define-damage-roll">damage roll</a>, or might take a while to defeat&mdash;assign <a href="#define-difficulty">Difficulty</a> and <a href="#define-hit-point">damage thresholds</a> carefully.</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center">4&ndash;6</th>
+				<td>These enemies will last a while. Assign this range to a <a href="#define-adversary-type">Standard</a> adversary.</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center">7&ndash;9</th>
+				<td>Tougher than usual, but be careful&mdash;too many adversaries with too many <a href="#define-hit-point">Hit Points</a> will cause an encounter to last too long.</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center">10+</th>
+				<td>An extremely tough enemy&mdash;avoid using more than one of these in an encounter, and supplement them with weaker underlings.</td>
+			</tr>
+		</tbody>
+	</table></div>
+</div>
 <h5 id="adversary-benchmarks-type">Adversary Type Benchmarks<a class="og-h-anchor" href="#adversary-benchmarks-type" title="Permalink" aria-hidden="true"></a></h5>
-<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 <div id="define-adversary-benchmarks-type-bruiser">
 	<h6 id="adversary-benchmarks-type-bruiser">Bruiser Benchmarks<a class="og-h-anchor" href="#adversary-benchmarks-type-bruiser" title="Permalink" aria-hidden="true"></a></h6>
 	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
@@ -16140,6 +16144,102 @@
 		<li><a href="#define-adversary-perfected-zombie">Perfected Zombie</a> <em>(Bruiser)</em></li>
 		<li><a href="#define-adversary-zombie-legion">Zombie Legion</a> <em>(Horde)</em></li>
 	</ul>
+</div>
+
+<div id="define-pc-benchmark-defense">
+	<h5 id="pc-benchmark-defense">PC Defense Benchmarks<a class="og-h-anchor" href="#pc-benchmark-defense" title="Permalink" aria-hidden="true"></a></h5>
+	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+	<p>Use the following table to help determine the average number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-armor">Armor Slots</a> a successful attack causes the PCs to mark. The listed minimums and maximum <a href="#define-hit-point">damage thresholds</a> assume PCs are wearing tier-appropriate <a href="#define-armor">armor</a>, and account for PCs adding their <a href="#define-level">level</a>, but not other bonuses to thresholds or <a href="#define-armor">Armor Slots</a>&mdash;for example, the <a href="#define-galapa">Galapa</a> ancestry's <em>Shell</em> feature or <a href="#define-domain-card">domain cards</a> like <a href="#define-domain-card-valor-touched">Valor-Touched</a>.</p>
+	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+		<caption>PC Defense Scaling</caption>
+		<thead>
+			<tr>
+				<th class="text-center og-nowrap" scope="col">Tier</th>
+				<th class="text-center" scope="col">Minimum Thresholds</th>
+				<th class="text-center" scope="col">Maximum Thresholds</th>
+				<th class="text-center" scope="col">Armor Base Score</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="fw-normal text-center og-nowrap" scope="row">Tier 1</th>
+				<td class="text-center og-nowrap">6/12</td>
+				<td class="text-center og-nowrap">9/18</td>
+				<td class="text-center og-nowrap">3&ndash;4</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center og-nowrap" scope="row">Tier 2</th>
+				<td class="text-center og-nowrap">9/18</td>
+				<td class="text-center og-nowrap">17/32</td>
+				<td class="text-center og-nowrap">4&ndash;5</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center og-nowrap" scope="row">Tier 3</th>
+				<td class="text-center og-nowrap">14/28</td>
+				<td class="text-center og-nowrap">24/50</td>
+				<td class="text-center og-nowrap">5&ndash;6</td>
+			</tr>
+			<tr>
+				<th class="fw-normal text-center og-nowrap" scope="row">Tier 4</th>
+				<td class="text-center og-nowrap">19/40</td>
+				<td class="text-center og-nowrap">28/58</td>
+				<td class="text-center og-nowrap">6&ndash;8</td>
+			</tr>
+		</tbody>
+	</table></div>
+</div>
+<div id="define-pc-benchmark-damage">
+	<h5 id="pc-benchmark-damage">PC Damage Benchmarks<a class="og-h-anchor" href="#pc-benchmark-damage" title="Permalink" aria-hidden="true"></a></h5>
+	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+	<p>The following table shows <a href="#define-damage-roll">damage roll</a> averages with <a href="#define-weapon">weapons</a>. Actual average damage is more complicated, requiring successful <a href="#define-attack-roll">attack rolls</a>. As they gain <a href="#define-level">levels</a>, PCs will choose <a href="#define-advancement">advancements</a> to increase their <a href="#define-trait">traits</a> and <a href="#define-damage-roll">Proficiency</a>, increasing their accuray and damage.</p>
+	<dl>
+		<dt>Short-Range</dt>
+		<dd>Melee, Very Close, or Close <a href="#define-range">Range</a>.</dd>
+		<dt>Long-Range</dt>
+		<dd>Far or Very Far <a href="#define-range">Range</a>.</dd>
+	</dl>
+	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+		<caption>PC Damage Scaling</caption>
+		<thead>
+			<tr>
+				<th class="text-center og-nowrap" scope="col">Tier</th>
+				<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
+				<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
+				<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
+				<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="fw-normal og-nowrap text-center">Tier 1</th>
+				<td class="text-center"><span class="og-nowrap">1d8+1</span> <span class="d-block og-nowrap small"><em>(6 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">1d10+3</span> <span class="d-block og-nowrap small"><em>(9 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">1d6+1</span> <span class="d-block og-nowrap small"><em>(5 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">1d6+3</span> <span class="d-block og-nowrap small"><em>(7 average)</em></span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal og-nowrap text-center">Tier 2</th>
+				<td class="text-center"><span class="og-nowrap">2d8+3</span> <span class="d-block og-nowrap small"><em>(12 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">2d10+6</span> <span class="d-block og-nowrap small"><em>(17 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">2d6+3</span> <span class="d-block og-nowrap small"><em>(10 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">2d6+6</span> <span class="d-block og-nowrap small"><em>(13 average)</em></span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal og-nowrap text-center">Tier 3</th>
+				<td class="text-center"><span class="og-nowrap">3d8+6 to 4d8+6</span> <span class="d-block og-nowrap small"><em>(20&ndash;24 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">3d10+9 to 4d10+9</span> <span class="d-block og-nowrap small"><em>(26&ndash;31 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">3d6+6 to 4d6+6</span> <span class="d-block og-nowrap small"><em>(17&ndash;20 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">3d6+9 to 4d6+9</span> <span class="d-block og-nowrap small"><em>(20&ndash;23 average)</em></span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal og-nowrap text-center">Tier 4</th>
+				<td class="text-center"><span class="og-nowrap">4d8+9 to 6d8+9</span> <span class="d-block og-nowrap small"><em>(27&ndash;36 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">4d10+12 to 6d10+12</span> <span class="d-block og-nowrap small"><em>(34&ndash;45 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">4d6+9 to 6d6+9</span> <span class="d-block og-nowrap small"><em>(23&ndash;30 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">4d6+12 to 6d6+12</span> <span class="d-block og-nowrap small"><em>(26&ndash;33 average)</em></span></td>
+			</tr>
+		</tbody>
+	</table></div>
 </div>
 <hr>
 <h4 id="adversaries-by-alphabetical-order">Adversary Stat Blocks by Alphabetical Order<a class="og-h-anchor" href="#adversaries-by-alphabetical-order" title="Permalink" aria-hidden="true"></a></h4>
@@ -20202,97 +20302,6 @@
 		<p><strong>Editor's Notes &mdash;</strong> Battle points don't account for complications introduced by the <a href="#define-environment">environment</a>.</p>
 	</div>
 </div>
-<h4 id="pc-benchmark-defense">PC Defense Benchmarks<a class="og-h-anchor" href="#pc-benchmark-defense" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<p><a href="#define-damage-roll">Damage rolls</a> are compared to a PC's <a href="#define-hit-point">damage thresholds</a> from wearing <a href="#define-armor">Armor</a>. Use the following table to help determine the average number of <a href="#define-hit-point">Hit Points</a> or <a href="#define-armor">Armor Slots</a> a successful attack causes the PCs to mark. Features gained from <a href="#define-ancestry">ancestries</a>, <a href="#define-class">class</a> features, and <a href="#define-domain">domain cards</a> can raise these benchmarks even higher. For related information, see <a href="#adversary-benchmarks">Adversary Benchmarks</a>.</p>
-<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-	<caption>PC Defense Scaling</caption>
-	<thead>
-		<tr>
-			<th class="text-center og-nowrap" scope="col">Tier</th>
-			<th class="text-center" scope="col">Major Threshold</th>
-			<th class="text-center" scope="col">Severe Threshold</th>
-			<th class="text-center" scope="col">Armor Base Score</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th class="fw-normal text-center og-nowrap" scope="row">Tier 1</th>
-			<td class="text-center og-nowrap">5&ndash;8</td>
-			<td class="text-center og-nowrap">11&ndash;17</td>
-			<td class="text-center og-nowrap">3&ndash;4</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center og-nowrap" scope="row">Tier 2</th>
-			<td class="text-center og-nowrap">7&ndash;16</td>
-			<td class="text-center og-nowrap">13&ndash;28</td>
-			<td class="text-center og-nowrap">4&ndash;5</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center og-nowrap" scope="row">Tier 3</th>
-			<td class="text-center og-nowrap">9&ndash;17</td>
-			<td class="text-center og-nowrap">23&ndash;43</td>
-			<td class="text-center og-nowrap">5&ndash;6</td>
-		</tr>
-		<tr>
-			<th class="fw-normal text-center og-nowrap" scope="row">Tier 4</th>
-			<td class="text-center og-nowrap">11&ndash;18</td>
-			<td class="text-center og-nowrap">32&ndash;48</td>
-			<td class="text-center og-nowrap">6&ndash;8</td>
-		</tr>
-	</tbody>
-</table></div>
-<h4 id="pc-benchmark-damage">PC Damage Benchmarks<a class="og-h-anchor" href="#pc-benchmark-damage" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-<p>The following table shows <a href="#define-damage-roll">damage roll</a> averages with <a href="#define-weapon">weapons</a>. Average damage is determined <a href="#define-attack-roll">attack roll</a> <a href="#define-procedure">modifier</a> and how many times a PC purchases an <a href="#define-advancement">advancement</a> to increase <a href="#define-damage-roll">Proficiency</a>. For related information, see <a href="#adversary-benchmarks">Adversary Benchmarks</a>.</p>
-<dl>
-	<dt>Short-Range</dt>
-	<dd>Melee, Very Close, or Close <a href="#define-range">Range</a>.</dd>
-	<dt>Long-Range</dt>
-	<dd>Far or Very Far <a href="#define-range">Range</a>.</dd>
-</dl>
-<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-	<caption>PC Damage Scaling</caption>
-	<thead>
-		<tr>
-			<th class="text-center og-nowrap" scope="col">Tier</th>
-			<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
-			<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
-			<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
-			<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th class="fw-normal og-nowrap text-center">Tier 1</th>
-			<td class="text-center"><span class="og-nowrap">1d8+1</span> <span class="d-block og-nowrap small"><em>(6 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">1d10+3</span> <span class="d-block og-nowrap small"><em>(9 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">1d6+1</span> <span class="d-block og-nowrap small"><em>(5 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">1d6+3</span> <span class="d-block og-nowrap small"><em>(7 average)</em></span></td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap text-center">Tier 2</th>
-			<td class="text-center"><span class="og-nowrap">2d8+3</span> <span class="d-block og-nowrap small"><em>(12 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">2d10+6</span> <span class="d-block og-nowrap small"><em>(17 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">2d6+3</span> <span class="d-block og-nowrap small"><em>(10 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">2d6+6</span> <span class="d-block og-nowrap small"><em>(13 average)</em></span></td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap text-center">Tier 3</th>
-			<td class="text-center"><span class="og-nowrap">3d8+6 to 4d8+6</span> <span class="d-block og-nowrap small"><em>(20&ndash;24 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">3d10+9 to 4d10+9</span> <span class="d-block og-nowrap small"><em>(26&ndash;31 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">3d6+6 to 4d6+6</span> <span class="d-block og-nowrap small"><em>(17&ndash;20 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">3d6+9 to 4d6+9</span> <span class="d-block og-nowrap small"><em>(20&ndash;23 average)</em></span></td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap text-center">Tier 4</th>
-			<td class="text-center"><span class="og-nowrap">4d8+9 to 6d8+9</span> <span class="d-block og-nowrap small"><em>(27&ndash;36 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">4d10+12 to 6d10+12</span> <span class="d-block og-nowrap small"><em>(34&ndash;45 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">4d6+9 to 6d6+9</span> <span class="d-block og-nowrap small"><em>(23&ndash;30 average)</em></span></td>
-			<td class="text-center"><span class="og-nowrap">4d6+12 to 6d6+12</span> <span class="d-block og-nowrap small"><em>(26&ndash;33 average)</em></span></td>
-		</tr>
-	</tbody>
-</table></div>
 <hr>
 <div class="row">
 	<div class="col-12 col-md-6">
