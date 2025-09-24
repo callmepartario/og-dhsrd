@@ -116,7 +116,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.02j (2025-09-24)</p>
+<p class="small text-center">version 1.02k (2025-09-24)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -7144,18 +7144,16 @@
 	<div id="define-multiclass">
 		<h4 id="multiclassing">Multiclassing<a class="og-h-anchor" href="#multiclassing" title="Permalink" aria-hidden="true"></a></h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
-		<p>Starting at <a href="#define-tier">Tier 3</a>, you can choose <strong>multiclassing</strong> as an <a href="#define-advancement">advancement</a>.</p>
+		<p>Starting at <a href="#define-tier">Tier 3</a>, you can choose <strong>multiclassing</strong> as an <a href="#define-advancement">advancement</a>. You can only multiclass once.</p>
 		<dl>
 			<dt>Choosing a Multiclass</dt>
 			<dd>Choose a <a href="#define-class">class</a>. You gain access to one of its <a href="#define-domain">domains</a> and its class features. You don't gain its class <a href="#define-hope">Hope</a> feature. Next, choose a <a href="#define-subclass">subclasses</a> for your new class. You gain its foundation features.</dd>
 			<dt>Spellcast Trait</dt>
 			<dd>If your new <a href="#define-subclass">subclass</a> assigns you a second <a href="#define-subclass">Spellcast trait</a>, you can choose which <a href="#define-procedure">modifier</a> to apply when making a <a href="#define-spellcast-roll">Spellcast Roll</a>.</dd>
 			<dt>Features</dt>
-			<dd>Attacks, spells, and other <a href="#define-action">actions</a> use your <a href="#define-level">level</a> and <a href="#define-tier">tier</a>&mdash;for example, if you multiclass into <a href="#define-rogue">Rogue</a> when you reach <a href="#define-level">Level 5</a>, your <strong><em>Sneak Attack</em></strong> damage is <strong>2d6</strong> because your <a href="#define-level">level</a> places you at <a href="#define-tier">Tier 2</a>.</dd>
+			<dd>Attacks, spells, and other <a href="#define-action">actions</a> use your <a href="#define-level">level</a> and <a href="#define-tier">tier</a>&mdash;for example, if you multiclass into <a href="#define-rogue">Rogue</a> when you reach <a href="#define-level">Level 5</a>, your <em>Sneak Attack</em> feature's damage is <strong>2d6</strong> because your <a href="#define-level">level</a> places you at <a href="#define-tier">Tier 2</a>.</dd>
 			<dt>Domain Cards</dt>
 			<dd>When you choose a new <a href="#define-domain-card">domain card</a>, you can choose from cards up to half your <a href="#define-level">level</a> from your multiclass <a href="#define-domain">domain</a>&mdash;for example, if you multiclass into <a href="#define-rogue">Rogue</a> at <a href="#define-level">Level 5</a> and choose its <a href="#define-midnight">Midnight</a> domain, you can choose <a href="#define-domain-card">domain cards</a> up to level 3 from the <a href="#define-midnight">Midnight</a> domain deck.</dd>
-			<dt>Multiclass Limits</dt>
-			<dd>You can only multiclass once.</dd>
 		</dl>
 	</div>
 </div>
@@ -9242,7 +9240,10 @@
 		<dd>You can clear marked armor slots by repairing it during <a href="#define-downtime">downtime</a>.</dd>
 	</dl>
 	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p>Some features give a bonus to your <a href="#define-hit-point">damage thresholds</a>&mdash;for example, the <em>Shell</em> feature from the <a href="#define-galapa">Galapa</a> ancestry, or the <em>Unwavering</em> feature from the <a href="#define-guardian-stalwart">Stalwart</a> <a href="#define-guardian">Guardian</a>. These bonuses apply wether you have equipped armor or are unarmored.</p>
+		<p>Some features give a bonus to your <a href="#define-hit-point">damage thresholds</a>&mdash;for example, the <em>Shell</em> feature from the <a href="#define-galapa">Galapa</a> ancestry, or the <em>Unwavering</em> feature from the <a href="#define-guardian-stalwart">Stalwart</a> <a href="#define-guardian">Guardian</a>. These bonuses apply wether you equip armor or not.</p>
+	</div>
+	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p><strong>Editor's Notes &mdash;</strong> Shields aren't armor, they're <a href="#weapons-secondary-tier-1">secondary weapons</a>.</p>
 	</div>
 </div>
 <h4 id="armor-tables">Armor Tables<a class="og-h-anchor" href="#armor-tables" title="Permalink" aria-hidden="true"></a></h4>
@@ -10057,19 +10058,25 @@
 		<div id="define-gold">
 			<h3 id="gold">Gold<a class="og-h-anchor" href="#gold" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 104</li><li>Page 165</li></ul>
-			<p><strong>Gold</strong> is an abstract measurement wealth measured in handfuls, bags, and chests:</p>
-			<ul class="og-list-disc">
-				<li>10 handfuls of gold equals 1 bag</li>
-				<li>10 bags of gold equals 1 chest</li>
-			</ul>
-			<p>You can't carry more than 1 chest, so you'll need to spend some or store it somewhere before you can acquire more.</p>
-			<p>It's up to the GM and players to decide how much importance to place on tracking gold. If you don't wish to track gold, when PCs go shopping for new items, the GM might allow them choose one or two from a prepared list of appropriate items.</p>
+			<p><strong>Gold</strong> is an abstract measurement wealth measured in handfuls, bags, and chests. It's up to the GM and players to decide how much importance to place on tracking gold. If you don't wish to track gold, the GM might allow the PCs to choose items and services they from a prepared list of available vendors instead.</p>
+			<dl>
+				<dt>Handful</dt>
+				<dd>10 handfuls of gold equals 1 bag.</dd>
+				<dt>Bag</dt>
+				<dd>10 bags of gold equals 1 chest.</dd>
+				<dt>Chest</dt>
+				<dd>You can't carry more than 1 chest, so you'll need to spend some or store it somewhere before you can acquire more.</dd>
+			</dl>
 		</div>
 		<div class="og-topbar">
-			<div id="define-optional-rule-gold">
+			<div id="define-optional-rule-gold-coins">
 				<h4 id="optional-rule-gold-coins">Optional Rule: Gold Coins<a class="og-h-anchor" href="#optional-rule-gold-coins" title="Permalink" aria-hidden="true"></a></h4>
 				<ul class="og-list-inline og-ref og-omit"><li>Page 104</li></ul>
-				<p>If your group wants to track gold with more granularity, you can add coins as your lowest denomination. Following the established pattern, 10 coins equal 1 handful.</p>
+				<p>You can add coins as an even lower denomination:</p>
+				<dl>
+					<dt>Coin</dt>
+					<dd>10 coins equals 1 handful.</dd>
+				</dl>
 			</div>
 		</div>
 	</div>
@@ -10181,6 +10188,7 @@
 		<li><a href="#define-condition">condition</a></li>
 		<li><a href="#define-pvp">conflict between PCs (PVP)</a>&dagger;</li>
 		<li><a href="#define-consumable">consumable</a></li>
+		<li><a href="#define-core-gameplay-loop">Core Gameplay Loop</a>
 		<li><a href="#define-countdown">Countdown</a></li>
 		<li><a href="#define-attack-roll">cover</a></li>
 		<li><a href="#define-temporary">creature</a></li>
@@ -10216,6 +10224,7 @@
 		<li><a href="#define-faun">Faun</a></li>
 		<li><a href="#define-fear">Fear</a></li>
 		<li><a href="#define-action-roll">Fear die</a></li>
+		<li><a href="#define-flow-of-the-game">Flow of the Game</a>
 		<li><a href="#define-finesse">Finesse</a></li>
 		<li><a href="#define-firbolg">Firbolg</a></li>
 		<li><a href="#define-subclass">Foundation Feature</a></li>
@@ -10228,6 +10237,7 @@
 		<li><a href="#define-spotlight">GM turn</a></li>
 		<li><a href="#define-action-roll">GM's die</a></li>
 		<li><a href="#define-gold">gold</a></li>
+		<li><a href="#define-optional-rule-gold-coins">gold coin</a>&dagger;</li>
 		<li><a href="#define-grace">Grace</a></li>
 		<li><a href="#define-group-action-roll">Group Action Roll</a></li>
 		<li><a href="#define-guardian">Guardian</a></li>
@@ -10343,26 +10353,7 @@
 		<div id="define-flow-of-the-game">
 			<h3 id="flow-of-the-game">Flow of the Game<a class="og-h-anchor" href="#flow-of-the-game" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 87</li></ul>
-			<p><a href="#define-daggerheart">Daggerheart</a> is a conversation. The goal is to build on everyone's ideas to tell a satisfying story. The rules provide structure to the conversation, and mechanics for resolving fate or fortune's impact on the outcome.</p>
-		</div>
-		<div id="define-core-gameplay-loop">
-			<h4 id="core-gameplay-loop">Core Gameplay Loop<a class="og-h-anchor" href="#core-gameplay-loop" title="Permalink" aria-hidden="true"></a></h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 88</li></ul>
-			<p>The <strong>core gameplay loop</strong> is the procedure that drives every scene, both in and out of <a href="#define-combat">combat</a>.</p>
-			<h4 class="h6">Step 1: Set the Scene</h4>
-			<p>The GM describes a scenario, establishing the surroundings, and any dangers, <a href="#define-npc">NPCs</a>, or other important details the PCs would notice.</p>
-			<h4 class="h6">Step 2: Ask and Answer Questions</h4>
-			<p>The players ask questions to explore the scene more deeply, gathering information that informs their <a href="#define-action">action</a>. The GM responds to these questions by giving the players information the PCs would already know or could easily obtain, or by asking questions of the players.</p>
-			<h4 class="h6">Step 3: Build on the Fiction</h4>
-			<p>As the scene develops, the PCs take <a href="#define-action">action</a>&mdash;solving problems, overcoming obstacles, and uncovering mysteries. If an action has no chance of failure (or if failure would be boring), they succeed automatically. If the outcome of an action is unknown, the GM calls for an <a href="#define-action-roll">action roll</a>. Either way, the outcome becomes part of the story. The GM <a href="#define-resolving">resolves</a> the outcome, narrating how the PC's action changes things.</p>
-			<h4 class="h6">Step 4: Go Back to Step 1</h4>
-			<p>The process repeats, until the end of the scene is triggered by a mechanic or arrives organically.</p>
-		</div>
-	</div>
-	<div class="col-12 col-md-6">
-		<div id="define-hope-and-fear">
-			<h4 id="hope-and-fear">Hope and Fear<a class="og-h-anchor" href="#hope-and-fear" title="Permalink" aria-hidden="true"></a></h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 90</li><li>Editorial Addition</li></ul>
+			<p><a href="#define-daggerheart">Daggerheart</a> is a conversation. The goal is to build on everyone's ideas to tell a satisfying story. The <a href="#define-core-gameplay-loop">core gameplay loop</a> provides structure to the conversation, and mechanics for resolving fate or fortune's impact on the outcome.</p>
 			<p><a href="#define-hope">Hope</a> and <a href="#define-fear">Fear</a> represent the cosmic forces that shape the events of the story. Hope powers PC abilities and features, while Fear powers <a href="#define-gm-move">GM moves</a>, including actions taken by <a href="#define-adversary">adversaries</a> and <a href="#define-environment">environments</a>.</p>
 			<p>In high-presure situations like <a href="#define-combat">combat</a>, the <a href="#define-spotlight">spotlight</a> determines who decides what happens next&mdash;a player, or the GM. Rolling with Hope or Fear also informs how the GM <a href="#define-resolving">resolves</a> the outcome.</p>
 			<div class="og-topbar text-center">
@@ -10372,6 +10363,21 @@
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 			<p><a href="#define-gm-move">GM moves</a> can be almost anything that advances the story&mdash;see <a href="#define-gm-move-examples">example GM moves</a>.</p>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div id="define-core-gameplay-loop">
+			<h4 id="core-gameplay-loop">Core Gameplay Loop<a class="og-h-anchor" href="#core-gameplay-loop" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>Page 88</li><li>Page 90</li><li>Editorial Addition</li></ul>
+			<p>The <strong>core gameplay loop</strong> is the procedure that drives every scene, both in and out of <a href="#define-combat">combat</a>.</p>
+			<h4 class="h6">Step 1: Set the Scene</h4>
+			<p>The GM describes a scenario, establishing the surroundings, and any dangers, <a href="#define-npc">NPCs</a>, or other important details the PCs would notice.</p>
+			<h4 class="h6">Step 2: Ask and Answer Questions</h4>
+			<p>The players ask questions to explore the scene more deeply, gathering information that informs their <a href="#define-action">action</a>. The GM responds to these questions by giving the players information the PCs would already know or could easily obtain, or by asking questions of the players.</p>
+			<h4 class="h6">Step 3: Build on the Fiction</h4>
+			<p>As the scene develops, the PCs take <a href="#define-action">action</a>&mdash;solving problems, overcoming obstacles, and uncovering mysteries. If an action has no chance of failure (or if failure would be boring), they succeed automatically. If the outcome of an action is unknown, the GM calls for an <a href="#define-action-roll">action roll</a>. Either way, the outcome becomes part of the story. The GM <a href="#define-resolving">resolves</a> the outcome, narrating how the PC's action changes things.</p>
+			<h4 class="h6">Step 4: Go Back to Step 1</h4>
+			<p>The process repeats, until the end of the scene is triggered by a mechanic or arrives organically.</p>
 		</div>
 	</div>
 </div>
@@ -10449,7 +10455,7 @@
 		<div id="define-spotlight">
 			<h3 id="the-spotlight">The Spotlight<a class="og-h-anchor" href="#the-spotlight" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 100</li></ul>
-			<p>In <a href="#define-core-gameplay-loop">core gameplay loop</a>&mdash;including <a href="#define-combat">combat</a>&mdash;the <strong>spotlight</strong> is where the next decisive narrative moment in the scene takes place. There's no set number of <a href="#define-action">moves</a> you can make when you gain the spotlight. If there's no roll involved, the spotlight swings toward whoever or whatever the fiction would naturally turn it, or toward someone who hasn't had the spotlight in a while.</p>
+			<p>In the <a href="#define-core-gameplay-loop">core gameplay loop</a>&mdash;including <a href="#define-combat">combat</a>&mdash;the <strong>spotlight</strong> is where the next decisive narrative moment in the scene takes place. There's no set number of <a href="#define-action">moves</a> you can make when you gain the spotlight. If there's no roll involved, the spotlight swings toward whoever or whatever the fiction would naturally turn it, or toward someone who hasn't had the spotlight in a while.</p>
 			<p>However, once you make an <a href="#define-action-roll">action roll</a>, the cosmic forces of <a href="#define-hope-and-fear">Hope and Fear</a> determine the who gains the spotight next. If you fail an action roll or roll with fear, a <strong>GM turn</strong> begins.</p>
 			<h4 class="h6">GM Turns</h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 89</li><li>Editorial Addition</li></ul>
@@ -10912,7 +10918,7 @@
 		<dt>Clearing Hit Points</dt>
 		<dd>You can clear marked Hit Points during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
 		<dt>Increasing Hit Points</dt>
-		<dd> Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Hit Points (up to a maximum of 12).</dd>
+		<dd>Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Hit Points (up to a maximum of 12).</dd>
 	</dl>
 </div>
 <div class="og-topbar">
@@ -10929,7 +10935,7 @@
 	<p><strong>Stress</strong> represents physical, mental, and emotional strain.</p>
 	<dl>
 		<dt>Marking Stress</dt>
-		<dd>Activating a features might require you to <strong>mark a Stress</strong>. Additionally, the GM can require you to mark Stress as a <a href="#define-gm-move">GM move</a>, or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>. When a character marks their last Stress, they become <a href="#define-condition"><em>Vulnerable</em></a> until they clear at least 1 Stress. If all of a character's Stress slots are marked, they can't use features that requires them to mark Stress, and if something else requires them mark Stress, they mark a <a href="#define-hit-point">Hit Point</a> instead.</dd>
+		<dd>Activating a feature might require you to <strong>mark a Stress</strong>. Additionally, the GM can require you to mark Stress as a <a href="#define-gm-move">GM move</a>, or to represent the cost, complication, or consequence of an <a href="#define-action-roll">action roll</a>. When a character marks their last Stress, they become <a href="#define-condition"><em>Vulnerable</em></a> until they clear at least 1 Stress. If all of a character's Stress slots are marked, they can't use features that require them to mark Stress, and if something else forces them to mark Stress, they mark a <a href="#define-hit-point">Hit Point</a> instead.</dd>
 		<dt>Clearing Stress</dt>
 		<dd>Stress is cleared during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
 		<dt>Increasing Stress Slots</dt>
@@ -11383,7 +11389,7 @@
 		<dt>No Roll</dt>
 		<dd>The GM doesn't need to call for <a href="#define-action-roll">action roll</a> in response to everything the PCs do. Instead, their relevant <a href="#define-experience">Experiences</a> or background, the pressure they're under, or lack of interesting outcomes might mean it's better if the PC succeeds automatically. The GM might also provide the opportunity to forgo an <a href="#define-action">action roll</a> in exchange for an interesting, logical, and story-based outcome, cost, or complication.</dd>
 		<dt>Action Roll</dt>
-		<dd>During the <a href="#define-procedure">action roll procedure</a>, the GM should consider&mdash;and communicate&mdash;the stakes of the <A href="#define-action-roll">action roll</a>&mdash;including any unavoidable consequences&mdash;before the <a href="#define-action-roll">Duality Dice</a> are rolled. The GM then resolves the action, describing how things change, including reflecting an outcome rolled with <a href="#define-hope-and-fear">Hope or Fear</a>, and swinging the <a href="#define-spotlight">spotlight</a> accordingly.</dd>
+		<dd>During the <a href="#define-procedure">action roll procedure</a>, the GM should consider&mdash;and communicate&mdash;the stakes of the <A href="#define-action-roll">action roll</a>&mdash;including any unavoidable consequences&mdash;before the <a href="#define-action-roll">Duality Dice</a> are rolled. The GM then resolves the action, describing how things change, including reflecting an outcome rolled with <a href="#define-hope">Hope</a> or <a href="#define-fear">Fear</a>, and swinging the <a href="#define-spotlight">spotlight</a> accordingly.</dd>
 	</dl>
 	<p>If an outcome is not obvious, the GM should try one of the following:</p>
 	<ul class="og-list-disc">
@@ -13135,7 +13141,7 @@
 				<dt>Difficulty</dt>
 				<dd>The <a href="#define-difficulty">Difficulty</a> of most <a href="#define-action-roll">action rolls</a> made against them.</dd>
 				<dt>Damage Thresholds, Hit Points, and Stress</dt>
-				<dd><a href="#define-hit-point">Damage thresholds</a>, <a href="#define-hit-point">Hit Points</a>, and <a href="#define-stress">Stress</a> work exactly the same as for PCs.</dd>
+				<dd><a href="#define-hit-point">Damage thresholds</a>, <a href="#define-hit-point">Hit Points</a>, and <a href="#define-stress">Stress</a> work exactly the same as they do for PCs.</dd>
 				<dt>Attack</dt>
 				<dd>Includes <a href="#define-attack-roll">attack roll</a> <a href="#define-procedure">modifier</a>, name, <a href="#define-range">range</a>, and <a href="#define-damage-roll">damage roll</a>.</dd>
 				<dt>Experience</dt>
@@ -13144,15 +13150,15 @@
 				<dd>Additional <a href="#define-adversary-feature">adversary features</a>.</dd>
 			</dl>
 		</div>
-		<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p><strong>Editor's Notes &mdash;</strong> Just as PCs must <a href="#define-experience">Utilize an Experience</a> before an <a href="#define-action-roll">action roll</a> as a matter of <a href="#define-procedure">procedure</a>, an adversary Utilizing an Experience to raise the <a href="#define-difficulty">Difficulty</a> of a roll made against them should do so before the roll.</p>
-			<p>Similarly, if an adversary marks their last <a href="#define-stress">Stress</a>, they are <a href="#define-condition"><em>Vulnerable</em></a>.</p>
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>Just as PCs must <a href="#define-experience">Utilize an Experience</a> before an <a href="#define-action-roll">action roll</a> as a matter of <a href="#define-procedure">procedure</a>, an adversary Utilizing an Experience to raise the <a href="#define-difficulty">Difficulty</a> of a roll made against them should do so before the roll.</p>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
 		<div id="define-adversary-type">
 			<h4 id="adversary-types">Adversary Types<a class="og-h-anchor" href="#adversary-types" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 194</li></ul>
+			<p>For additional detail on each type, see the <a href="#define-adversary-benchmarks">adversary benchmarks</a>.</p>
 			<dl>
 				<dt>Bruiser</dt>
 				<dd>Tough; delivers powerful attacks.</dd>
@@ -13177,7 +13183,7 @@
 			</dl>
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p>Adversary types vary how in how they relate to the <a href="#define-spotlight">spotlight</a> as defined in their <a href="#define-adversary-feature">adversary features</a>&mdash;for example, most <strong>minions</strong> like the <a href="#define-adversary-jagged-knife-lackey">Jagged Knife Lackey</a> attack as a group, and take damage as a group based on their <a href="#define-range">range</a> apart from one another.  Others&mdash;for example, the <a href="#define-adversary-cave-ogre">Cave Ogre</a>&mdash;make multiple attacks, or act in response to damage.</p>
+			<p>Adversary types vary how in how they relate to the <a href="#define-spotlight">spotlight</a> as defined in their <a href="#define-adversary-feature">adversary features</a>&mdash;for example, <strong>minions</strong> like the <a href="#define-adversary-jagged-knife-lackey">Jagged Knife Lackey</a> attack and take damage as a group based on their <a href="#define-range">range</a> apart from one another.  <strong>Solos</strong> like the <a href="#define-adversary-cave-ogre">Cave Ogre</a>&mdash;make multiple attacks, or attack in response to damage without even the need for the <a href="#define-spotlight">spotlight</a>.</p>
 		</div>
 	</div>
 </div>
@@ -13281,45 +13287,47 @@
 		</div>
 	</div>
 </div>
-<h4 id="adversary-benchmarks">Adversary Benchmarks<a class="og-h-anchor" href="#adversary-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Page 208</li><li>Editorial Addition</li></ul>
-<div class="alert ps-4 pb-0 og-omit">
-	<ul class="list-unstyled og-qr">
-		<li><a href="#define-adversary-benchmarks-hit-points">Hit Points</a></li>
-		<li><a href="#define-adversary-benchmarks-type-bruiser">Bruisers</a></li>
-		<li><a href="#define-adversary-benchmarks-type-horde">Hordes</a></li>
-		<li><a href="#define-adversary-benchmarks-type-leader">Leaders</a></li>
-		<li><a href="#define-adversary-benchmarks-type-minion">Minions</a></li>
-		<li><a href="#define-adversary-benchmarks-type-ranged">Rangeds</a></li>
-		<li><a href="#define-adversary-benchmarks-type-skulk">Skulks</a></li>
-		<li><a href="#define-adversary-benchmarks-type-social">Socials</a></li>
-		<li><a href="#define-adversary-benchmarks-type-solo">Solos</a></li>
-		<li><a href="#define-adversary-benchmarks-type-standard">Standards</a></li>
-		<li><a href="#define-adversary-benchmarks-type-support">Supports</a></li>
-		<li><a href="#define-adversary-conditions">Applying Conditions</a></li>
-		<li><a href="#define-adversary-passives">Passives</a></li>
-		<li><a href="#define-adversary-reactions">Reactions</a></li>
-		<li><a href="#define-adversary-hope-loss">Hope Loss</a></li>
-		<li><a href="#define-adversary-fear-gain">Fear Gain</a></li>
-		<li><a href="#define-pc-benchmark-defense">PC Defense</a></li>
-		<li><a href="#define-pc-benchmark-damage">PC Damage</a></li>
-	</ul>
+<div id="define-adversary-benchmarks">
+	<h4 id="adversary-benchmarks">Adversary Benchmarks<a class="og-h-anchor" href="#adversary-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 208</li><li>Editorial Addition</li></ul>
+	<div class="alert ps-4 pb-0 og-omit">
+		<ul class="list-unstyled og-qr">
+			<li><a href="#define-adversary-benchmarks-hit-points">Hit Points</a></li>
+			<li><a href="#define-adversary-benchmarks-type-bruiser">Bruisers</a></li>
+			<li><a href="#define-adversary-benchmarks-type-horde">Hordes</a></li>
+			<li><a href="#define-adversary-benchmarks-type-leader">Leaders</a></li>
+			<li><a href="#define-adversary-benchmarks-type-minion">Minions</a></li>
+			<li><a href="#define-adversary-benchmarks-type-ranged">Rangeds</a></li>
+			<li><a href="#define-adversary-benchmarks-type-skulk">Skulks</a></li>
+			<li><a href="#define-adversary-benchmarks-type-social">Socials</a></li>
+			<li><a href="#define-adversary-benchmarks-type-solo">Solos</a></li>
+			<li><a href="#define-adversary-benchmarks-type-standard">Standards</a></li>
+			<li><a href="#define-adversary-benchmarks-type-support">Supports</a></li>
+			<li><a href="#define-adversary-conditions">Applying Conditions</a></li>
+			<li><a href="#define-adversary-passives">Passives</a></li>
+			<li><a href="#define-adversary-reactions">Reactions</a></li>
+			<li><a href="#define-adversary-hope-loss">Hope Loss</a></li>
+			<li><a href="#define-adversary-fear-gain">Fear Gain</a></li>
+			<li><a href="#define-pc-benchmark-defense">PC Defense</a></li>
+			<li><a href="#define-pc-benchmark-damage">PC Damage</a></li>
+		</ul>
+	</div>
+	<p>The following tables shows ranges and averages for various <a href="#define-adversary">adversary</a> statistics by <a href="#define-adversary-type">adversary type</a>.</p>
+	<dl>
+		<dt>Difficulty</dt>
+		<dd><a href="#define-difficulty">Difficulty</a> determines the chance a PC's <a href="#define-attack-roll">attack roll</a> succeeds. It also determines a PC's chance to succeed against <a href="#define-reaction-roll">reaction rolls</a> prompted by <a href="#define-adversary-feature">adversary features</a> (unless the feature specifies otherwise). For related information, see <a href="#duality-dice-benchmark">Duality Dice Benchmarks</a>.</dd>
+		<dt>Damage Thresholds</dt>
+		<dd>Major and Severe <a href="#define-hit-point">damage thresholds</a> determine how many <a href="#define-hit-point">Hit Points</a> an adversary marks in response to a PC's <a href="#define-damage-roll">damage roll</a>. For related information, see <a href="#pc-benchmark-damage">PC Damage Benchmarks</a>.</dd>
+		<dt>Hit Points</dt>
+		<dd><a href="#define-hit-point">Hit Points</a> determine the number of successful <a href="#define-attack-roll">attack rolls</a> the PCs must make to defeat an <a href="#define-adversary">adversary</a>. Adversaries with <a href="#define-hit-points">damage thresholds</a> will mark Hit Points more frequently.</dd>
+		<dt>Stress</dt>
+		<dd><a href="#define-stress">Stress</a> can be used to fuel <a href="#define-adversary-feature">adversary features</a>, and delays the onset of the <a href="#define-condition"><em>Vulnerable</em></a> condition.</dd>
+		<dt>Attack Modifier</dt>
+		<dd>Increase or decrease an adversary's attack modifier by up to &plusmn;4 to make an <a href="#define-attack-roll">attack roll</a> more or less likely to succeed. For related information, see <a href="#adversary-benchmark-success">Adversary Success Benchmarks</a>.</dd>
+		<dt>Damage</dt>
+		<dd>Increasing the <a href="#define-damage-roll">damage dice</a> increases average damage, but also increases randomness&mdash;especially at higher damage die sizes. Increasing the damage modifier increases a damage roll in a consistent way. Be sure to take the <a href="#define-attack-roll">attack roll</a> modifier into account. For related information, see <a href="#pc-benchmark-defense">PC Defense Benchmarks</a>.</dd>
+	</dl>
 </div>
-<p>The following tables shows ranges and averages for various <a href="#define-adversary">adversary</a> statistics by <a href="#define-adversary-type">adversary type</a>.</p>
-<dl>
-	<dt>Difficulty</dt>
-	<dd><a href="#define-difficulty">Difficulty</a> determines the chance a PC's <a href="#define-attack-roll">attack roll</a> succeeds. It also determines a PC's chance to succeed against <a href="#define-reaction-roll">reaction rolls</a> prompted by <a href="#define-adversary-feature">adversary features</a> (unless the feature specifies otherwise). For related information, see <a href="#duality-dice-benchmark">Duality Dice Benchmarks</a>.</dd>
-	<dt>Damage Thresholds</dt>
-	<dd>Major and Severe <a href="#define-hit-point">damage thresholds</a> determine how many <a href="#define-hit-point">Hit Points</a> an adversary marks in response to a PC's <a href="#define-damage-roll">damage roll</a>. For related information, see <a href="#pc-benchmark-damage">PC Damage Benchmarks</a>.</dd>
-	<dt>Hit Points</dt>
-	<dd><a href="#define-hit-point">Hit Points</a> determine the number of successful <a href="#define-attack-roll">attack rolls</a> the PCs must make to defeat an <a href="#define-adversary">adversary</a>. Adversaries with <a href="#define-hit-points">damage thresholds</a> will mark Hit Points more frequently.</dd>
-	<dt>Stress</dt>
-	<dd><a href="#define-stress">Stress</a> can be used to fuel <a href="#define-adversary-feature">adversary features</a>, and delays the onset of the <a href="#define-condition"><em>Vulnerable</em></a> condition.</dd>
-	<dt>Attack Modifier</dt>
-	<dd>Increase or decrease an adversary's attack modifier by up to &plusmn;4 to make an <a href="#define-attack-roll">attack roll</a> more or less likely to succeed. For related information, see <a href="#adversary-benchmark-success">Adversary Success Benchmarks</a>.</dd>
-	<dt>Damage</dt>
-	<dd>Increasing the <a href="#define-damage-roll">damage dice</a> increases average damage, but also increases randomness&mdash;especially at higher damage die sizes. Increasing the damage modifier increases a damage roll in a consistent way. Be sure to take the <a href="#define-attack-roll">attack roll</a> modifier into account. For related information, see <a href="#pc-benchmark-defense">PC Defense Benchmarks</a>.</dd>
-</dl>
 <div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 	<p><strong>Editor's Notes &mdash;</strong> Additional guidance for creating adversary stat blocks is provided in the <a href="https://www.daggerheart.com/downloads/">Daggerheart Homebrew Kit</a>. Tools like <a href="https://anydice.com">anydice.com</a> provide damage ranges and averages for adversary <a href="#define-damage-roll">damage rolls</a> you can compare against the PCs' <a href="#define-hit-point">damage thresholds</a> an <a href="#define-condtion">conditions</a> they can apply.</p>
 </div>
