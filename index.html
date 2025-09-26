@@ -116,7 +116,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.02m (2025-09-25)</p>
+<p class="small text-center">version 1.02n (2025-09-26)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -13257,6 +13257,7 @@
 			<li><a href="#define-adversary-conditions">Conditions</a></li>
 			<li><a href="#define-adversary-hope-loss">Hope Loss</a></li>
 			<li><a href="#define-adversary-fear-gain">Fear Gain</a></li>
+			<li><a href="#define-adversary-fear-features">Fear Features</a></li>
 		</ul>
 		<h5 class="h6">PC Benchmarks</h5>
 		<ul class="list-unstyled og-qr">
@@ -14360,15 +14361,12 @@
 <div id="define-adversary-passives">
 	<h5 id="adversary-passives">Adversaries with Passives<a class="og-h-anchor" href="#adversary-passives" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 195</li><li>Editorial Addition</li></ul>
-	<p>The following adversaries have <a href="#define-adversary-feature">Passive</a> features other than <em>Horde</em>, <em>Minion</em>, <em>Relentless</em>, or <em>Terrifying</em>.</p>
+	<p>The following adversaries have <a href="#define-adversary-feature">Passive</a> features other than <a href="#define-adversary-benchmarks-type-horde"><em>Horde</em></a>, <a href="#define-adversary-benchmarks-type-minion"><em>Minion</em></a>, <em>Relentless</em>, or <a href="#define-adversary-fear-gain"><em>Terrifying</em></a>.</p>
 	<div class="og-topbar">
 		<h6>Example Passive Features</h6>
 		<ul class="list-unstyled og-list-hang mt-0 mb-2">
 			<li class="og-wrap"><p><strong><em>Arcane Form&mdash;Passive:</em></strong> This adversary is <a href="#define-damage-type">resistant</a> to <a href="#define-damage-type">magic damage</a>.</p></li>
 			<li class="og-wrap"><p><strong><em>Armored Carapace&mdash;Passive:</em></strong> When this adversary takes <a href="#define-damage-type">physical damage</a>, reduce it by X.</p></li>
-			<li class="og-wrap"><p><strong><em>Horde (X)&mdash;Passive:</em></strong> When the Horde has marked half or more of their <a href="#define-hit-point">Hit Points</a>, their standard attack deals X damage instead.</p></li>
-			<li class="og-wrap"><p><strong><em>Minion (X)&mdash;Passive:</em></strong> This adversary is defeated when they take any damage. For every X damage a PC deals to this adversary, defeat an additional <strong>Minion</strong> within range the attack would succeed against.</p></li>
-			<li class="og-wrap"><p><strong><em>Ramp Up&mdash;Passive:</em></strong> You must <a href="#define-fear"><strong>spend a Fear</strong></a> to <a href="#define-spotlight">spotlight</a> the adversary. While <a href="#define-spotlight">spotlighted</a>, they can make their standard attack against all targets within range.</p></li>
 			<li class="og-wrap"><p><strong><em>Relentless (X)&mdash;Passive:</em></strong> This adversary can be <a href="#define-spotlight">spotlighted</a> up to X times per GM turn. Spend <a href="#define-fear">Fear</a> as usual to spotlight them.</p></li>
 			<li class="og-wrap"><p><strong><em>Slow&mdash;Passive:</em></strong> When you <a href="#define-spotlight">spotlight</a> this adversary and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you <a href="#define-spotlight">spotlight</a> this adversary and they have a token on their stat block, clear the token and they can act.</p></li>
 		</ul>
@@ -16187,6 +16185,7 @@
 		<h6>Example Fear Features</h6>
 		<ul class="list-unstyled og-list-hang mt-0 mb-2">
 			<li class="og-wrap"><p><strong><em>Explosion&mdash;Action:</em></strong> <strong><a href="#define-fear">Spend a Fear</a></strong> to erupt in a fiery explosion. Make an attack against all targets within <a href="#define-range">Close</a> range. Targets the adversary succeeds against take <strong>1d8</strong> magic damage and are knocked back to <a href="#define-range">Far</a> range.</p></li>
+			<li class="og-wrap"><p><strong><em>Ramp Up&mdash;Passive:</em></strong> You must <a href="#define-fear"><strong>spend a Fear</strong></a> to <a href="#define-spotlight">spotlight</a> the adversary. While <a href="#define-spotlight">spotlighted</a>, they can make their standard attack against all targets within range.</p></li>
 		</ul>
 	</div>
 </div>
@@ -16577,50 +16576,54 @@
 		<caption>PC Defense Scaling</caption>
 		<thead>
 			<tr>
-				<th class="text-center og-nowrap" scope="col">Tier</th>
-				<th class="text-center" scope="col">Evasion</th>
-				<th class="text-center" scope="col">Minimum Thresholds</th>
-				<th class="text-center" scope="col">Maximum Thresholds</th>
-				<th class="text-center" scope="col">Armor Base Score</th>
-				<th class="text-center" scope="col">Hit Points</th>
-				<th class="text-center" scope="col">Stress</th>
+				<th class="og-nowrap" scope="col">Type</th>
+				<th class="text-center og-nowrap" scope="col">Tier 1</th>
+				<th class="text-center og-nowrap" scope="row">Tier 2</th>
+				<th class="text-center og-nowrap" scope="row">Tier 3</th>
+				<th class="text-center og-nowrap" scope="row">Tier 4</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<th class="fw-normal text-center og-nowrap" scope="row">Tier 1</th>
+				<th class="fw-normal" scope="row">Evasion</th>
 				<td class="text-center og-nowrap">8&ndash;14</td>
+				<td class="text-center og-nowrap">8&ndash;16</td>
+				<td class="text-center og-nowrap">8&ndash;18</td>
+				<td class="text-center og-nowrap">8&ndash;20</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Minimum Thresholds</th>
 				<td class="text-center og-nowrap">6/12</td>
 				<td class="text-center og-nowrap">9/18</td>
-				<td class="text-center og-nowrap">3&ndash;4</td>
-				<td class="text-center og-nowrap">5&ndash;9</td>
-				<td class="text-center og-nowrap">6&ndash;8</td>
+				<td class="text-center og-nowrap">14/28</td>
+				<td class="text-center og-nowrap">19/40</td>
 			</tr>
 			<tr>
-				<th class="fw-normal text-center og-nowrap" scope="row">Tier 2</th>
-				<td class="text-center og-nowrap">8&ndash;16</td>
+				<th class="fw-normal" scope="row">Maximum Thresholds</th>
 				<td class="text-center og-nowrap">9/18</td>
 				<td class="text-center og-nowrap">17/32</td>
-				<td class="text-center og-nowrap">4&ndash;5</td>
-				<td class="text-center og-nowrap">5&ndash;11</td>
-				<td class="text-center og-nowrap">6&ndash;10</td>
-			</tr>
-			<tr>
-				<th class="fw-normal text-center og-nowrap" scope="row">Tier 3</th>
-				<td class="text-center og-nowrap">8&ndash;18</td>
-				<td class="text-center og-nowrap">14/28</td>
 				<td class="text-center og-nowrap">24/50</td>
-				<td class="text-center og-nowrap">5&ndash;6</td>
-				<td class="text-center og-nowrap">5&ndash;12</td>
-				<td class="text-center og-nowrap">6&ndash;12</td>
+				<td class="text-center og-nowrap">28/58</td>
 			</tr>
 			<tr>
-				<th class="fw-normal text-center og-nowrap" scope="row">Tier 4</th>
-				<td class="text-center og-nowrap">8&ndash;20</td>
-				<td class="text-center og-nowrap">19/40</td>
-				<td class="text-center og-nowrap">28/58</td>
+				<th class="fw-normal" scope="row">Armor Base Score</th>
+				<td class="text-center og-nowrap">3&ndash;4</td>
+				<td class="text-center og-nowrap">4&ndash;5</td>
+				<td class="text-center og-nowrap">5&ndash;6</td>
 				<td class="text-center og-nowrap">6&ndash;8</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Hit Points</th>
+				<td class="text-center og-nowrap">5&ndash;9</td>
+				<td class="text-center og-nowrap">5&ndash;11</td>
 				<td class="text-center og-nowrap">5&ndash;12</td>
+				<td class="text-center og-nowrap">5&ndash;12</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Stress</th>
+				<td class="text-center og-nowrap">6&ndash;8</td>
+				<td class="text-center og-nowrap">6&ndash;10</td>
+				<td class="text-center og-nowrap">6&ndash;12</td>
 				<td class="text-center og-nowrap">6&ndash;12</td>
 			</tr>
 		</tbody>
@@ -16640,40 +16643,40 @@
 		<caption>PC Damage Scaling</caption>
 		<thead>
 			<tr>
-				<th class="text-center og-nowrap" scope="col">Tier</th>
-				<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
-				<th class="text-center" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
-				<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
-				<th class="text-center" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
+				<th class="og-nowrap" scope="col">Type</th>
+				<th class="text-center og-nowrap" scope="col">Tier 1</th>
+				<th class="text-center og-nowrap" scope="row">Tier 2</th>
+				<th class="text-center og-nowrap" scope="row">Tier 3</th>
+				<th class="text-center og-nowrap" scope="row">Tier 4</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<th class="fw-normal og-nowrap text-center">Tier 1</th>
+				<th class="fw-normal" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
 				<td class="text-center"><span class="og-nowrap">1d8+1</span> <span class="d-block og-nowrap small"><em>(6 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">1d10+3</span> <span class="d-block og-nowrap small"><em>(9 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">1d6+1</span> <span class="d-block og-nowrap small"><em>(5 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">1d6+3</span> <span class="d-block og-nowrap small"><em>(7 average)</em></span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal og-nowrap text-center">Tier 2</th>
 				<td class="text-center"><span class="og-nowrap">2d8+3</span> <span class="d-block og-nowrap small"><em>(12 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">2d10+6</span> <span class="d-block og-nowrap small"><em>(17 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">2d6+3</span> <span class="d-block og-nowrap small"><em>(10 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">2d6+6</span> <span class="d-block og-nowrap small"><em>(13 average)</em></span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal og-nowrap text-center">Tier 3</th>
 				<td class="text-center"><span class="og-nowrap">3d8+6 to 4d8+6</span> <span class="d-block og-nowrap small"><em>(20&ndash;24 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">3d10+9 to 4d10+9</span> <span class="d-block og-nowrap small"><em>(26&ndash;31 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">3d6+6 to 4d6+6</span> <span class="d-block og-nowrap small"><em>(17&ndash;20 average)</em></span></td>
-				<td class="text-center"><span class="og-nowrap">3d6+9 to 4d6+9</span> <span class="d-block og-nowrap small"><em>(20&ndash;23 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">4d8+9 to 6d8+9</span> <span class="d-block og-nowrap small"><em>(27&ndash;36 average)</em></span></td>
 			</tr>
 			<tr>
-				<th class="fw-normal og-nowrap text-center">Tier 4</th>
-				<td class="text-center"><span class="og-nowrap">4d8+9 to 6d8+9</span> <span class="d-block og-nowrap small"><em>(27&ndash;36 average)</em></span></td>
+				<th class="fw-normal" scope="col"><span class="og-nowrap">Short-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
+				<td class="text-center"><span class="og-nowrap">1d10+3</span> <span class="d-block og-nowrap small"><em>(9 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">2d10+6</span> <span class="d-block og-nowrap small"><em>(17 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">3d10+9 to 4d10+9</span> <span class="d-block og-nowrap small"><em>(26&ndash;31 average)</em></span></td>
 				<td class="text-center"><span class="og-nowrap">4d10+12 to 6d10+12</span> <span class="d-block og-nowrap small"><em>(34&ndash;45 average)</em></span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>One-Handed</em></span></th>
+				<td class="text-center"><span class="og-nowrap">1d6+1</span> <span class="d-block og-nowrap small"><em>(5 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">2d6+3</span> <span class="d-block og-nowrap small"><em>(10 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">3d6+6 to 4d6+6</span> <span class="d-block og-nowrap small"><em>(17&ndash;20 average)</em></span></td>
 				<td class="text-center"><span class="og-nowrap">4d6+9 to 6d6+9</span> <span class="d-block og-nowrap small"><em>(23&ndash;30 average)</em></span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="col"><span class="og-nowrap">Long-Range</span> <span class="d-block og-nowrap"><em>Two-Handed</em></span></th>
+				<td class="text-center"><span class="og-nowrap">1d6+3</span> <span class="d-block og-nowrap small"><em>(7 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">2d6+6</span> <span class="d-block og-nowrap small"><em>(13 average)</em></span></td>
+				<td class="text-center"><span class="og-nowrap">3d6+9 to 4d6+9</span> <span class="d-block og-nowrap small"><em>(20&ndash;23 average)</em></span></td>
 				<td class="text-center"><span class="og-nowrap">4d6+12 to 6d6+12</span> <span class="d-block og-nowrap small"><em>(26&ndash;33 average)</em></span></td>
 			</tr>
 		</tbody>
