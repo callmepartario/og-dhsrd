@@ -116,7 +116,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.02p (2025-09-26)</p>
+<p class="small text-center">version 1.02q (2025-09-28)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -154,7 +154,9 @@
 			<dt>Address Players First</dt>
 			<dd>Organize information for those who haven't played a tabletop role-playing game (TTRPG) before, and write to the player&mdash;"you" is <strong>you, the player&mdash;or your Player Character (PC)</strong>. "The GM" is the <strong>Game Master (GM)</strong>.</dd>
 			<dt>Improve Accessibility and Inclusion</dt>
-			<dd>Avoid referencing character sheets or physical cards the reader might not own or be able to use. Add inline imperial to metric unit conversions. Provide a mobile-friendly format, extensive hyperlinks, tooltips for quick reference, and indices of <a href="#key-terms">Key Terms</a>, <a href="#define-optional-rules">Optional Rules</a>, and <a href="#gm-tools">GM tools</a>.</dd>
+			<dd>Avoid referencing character sheets or physical cards the reader might not own or be able to use. Add inline imperial to metric unit conversions. Provide a mobile-friendly format, extensive hyperlinks, tooltips for quick reference.</dd>
+			<dt>Index Information</dt>
+			<dd>Add helpful visualizations to <a href="#flow-of-the-game">Flow of the Game</a>. Index <a href="#key-terms">Key Terms</a>, <a href="#define-optional-rules">Optional Rules</a>, and <a href="#gm-tools">GM tools</a>. Provide <a href="#difficulty-benchmarks">Difficulty Benchmarks</a> and improved <a href="#adversary-benchmarks">Adversary Benchmarks</a>.</dd>
 			<dt>100% Human-Made</dt>
 			<dd>No algorithmic machine learning or large-language models are used to create the product.</dd>
 		</dl>
@@ -10444,7 +10446,7 @@
 			<ul class="og-list-inline og-ref og-omit"><li>Page 87</li></ul>
 			<p><a href="#define-daggerheart">Daggerheart</a> is a conversation. The goal is to build on everyone's ideas to tell a satisfying story. The <a href="#define-core-gameplay-loop">core gameplay loop</a> provides structure to the conversation, and mechanics for resolving fate or fortune's impact on the outcome.</p>
 			<p><a href="#define-hope">Hope</a> and <a href="#define-fear">Fear</a> represent the cosmic forces that shape the events of the story. Hope powers PC abilities and features, while Fear powers <a href="#define-gm-move">GM moves</a>, including actions taken by <a href="#define-adversary">adversaries</a> and <a href="#define-environment">environments</a>.</p>
-			<p>In high-presure situations like <a href="#define-combat">combat</a>, the <a href="#define-spotlight">spotlight</a> determines who decides what happens next&mdash;a player, or the GM. Rolling with Hope or Fear also informs how the GM <a href="#define-resolving">resolves</a> the outcome.</p>
+			<p>The results of <a href="#define-action-roll">action rolls</a> determine what happens next, and how the outcome is <a href="#define-resolving-actions-table">resolved</a>. On a success with Hope, a PC usually gains the <a href="#define-spotlight">spotlight</a>. On a failure or a roll with Fear, a <a href="#define-spotlight">GM Turn</a> begins.</p>
 			<div class="og-topbar text-center">
 				<img class="og-fig-lg mb-2 d-light" src="images/dh-flowchart-light.svg" alt="Flow of the Game" aria-hidden="true">
 				<img class="og-fig-lg mb-2 d-dark" src="images/dh-flowchart-dark.svg" alt="Flow of the Game" aria-hidden="true">
@@ -11486,74 +11488,76 @@
 		<li>Consult the list of <a href="#define-gm-move-examples">Example GM Moves</a></li>
 	</ul>
 </div>
-<h4 class="h6">Action Roll Resolution</h4>
-<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Action Roll Resolution</caption>
-	<thead>
-		<tr>
-			<th scope="col">Action Roll</th>
-			<th scope="col">Phrase</th>
-			<th scope="col">Resolution</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th class="fw-normal og-nowrap">Success with Hope</th>
-			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
-					<li>The player describes the success.</li>
-					<li>The GM describes how the world reacts to it.</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Success with Fear</th>
-			<td class="og-nowrap">Yes, but&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The GM gains a <a href="#define-fear">Fear</a>.</li>
-					<li>The GM works with the player to describe the success, adding a cost or complication.</li>
-					<li>The <a href="#define-spotlight">spotlight</a> swings to the GM, who makes a harder <a href="#define-gm-move">GM move</a>.</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Failure with Hope</th>
-			<td class="og-nowrap">No, but&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
-					<li>The GM describes how the PC fails to get what they want, with minor consequences.</li>
-					<li>The <a href="#define-spotlight">spotlight</a> swings to the GM, who makes a softer <a href="#define-gm-move">GM move</a>.</li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Failure with Fear</th>
-			<td class="og-nowrap">No, and&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The GM gains a <a href="#define-fear">Fear</a>.</li>
-					<li>The GM describes how the PC fails to get what they want, with major consequences.</li>
-					<li>The <a href="#define-spotlight">spotlight</a> swings to the GM, who makes a harder <a href="#define-gm-move">GM move</a></li>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th class="fw-normal og-nowrap">Critical Success</th>
-			<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
-			<td>
-				<ul class="og-list-disc mb-0">
-					<li>The PC gains 1 <a href="#define-hope">Hope</a> and clears 1 <a href="#stress">Stress</a>.</li>
-					<li>The player describes the success.</li>
-					<li>The GM provides the PC an additional opportunity, <a href="#define-advantage">advantage</a>, or reward.</li>
-				</ul>
-			</td>
-		</tr>
-	</tbody>
-</table></div>
+<div id="define-resolving-actions-table">
+	<h4 class="h6">Action Roll Resolution</h4>
+	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+		<caption>Action Roll Resolution</caption>
+		<thead>
+			<tr>
+				<th scope="col">Action Roll</th>
+				<th scope="col">Phrase</th>
+				<th scope="col">Resolution</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="fw-normal og-nowrap">Success with Hope</th>
+				<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
+				<td>
+					<ul class="og-list-disc mb-0">
+						<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
+						<li>The player describes the success.</li>
+						<li>The GM describes how the world reacts to it.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th class="fw-normal og-nowrap">Success with Fear</th>
+				<td class="og-nowrap">Yes, but&mldr;&nbsp;&nbsp;</td>
+				<td>
+					<ul class="og-list-disc mb-0">
+						<li>The GM gains a <a href="#define-fear">Fear</a>.</li>
+						<li>The GM works with the player to describe the success, adding a cost or complication.</li>
+						<li>The <a href="#define-spotlight">spotlight</a> swings to the GM, who makes a harder <a href="#define-gm-move">GM move</a>.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th class="fw-normal og-nowrap">Failure with Hope</th>
+				<td class="og-nowrap">No, but&mldr;&nbsp;&nbsp;</td>
+				<td>
+					<ul class="og-list-disc mb-0">
+						<li>The PC gains 1 <a href="#define-hope">Hope</a>.</li>
+						<li>The GM describes how the PC fails to get what they want, with minor consequences.</li>
+						<li>The <a href="#define-spotlight">spotlight</a> swings to the GM, who makes a softer <a href="#define-gm-move">GM move</a>.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th class="fw-normal og-nowrap">Failure with Fear</th>
+				<td class="og-nowrap">No, and&mldr;&nbsp;&nbsp;</td>
+				<td>
+					<ul class="og-list-disc mb-0">
+						<li>The GM gains a <a href="#define-fear">Fear</a>.</li>
+						<li>The GM describes how the PC fails to get what they want, with major consequences.</li>
+						<li>The <a href="#define-spotlight">spotlight</a> swings to the GM, who makes a harder <a href="#define-gm-move">GM move</a></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th class="fw-normal og-nowrap">Critical Success</th>
+				<td class="og-nowrap">Yes, and&mldr;&nbsp;&nbsp;</td>
+				<td>
+					<ul class="og-list-disc mb-0">
+						<li>The PC gains 1 <a href="#define-hope">Hope</a> and clears 1 <a href="#stress">Stress</a>.</li>
+						<li>The player describes the success.</li>
+						<li>The GM provides the PC an additional opportunity, <a href="#define-advantage">advantage</a>, or reward.</li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table></div>
+</div>
 <hr>
 <h3 id="difficulty-benchmarks">Difficulty Benchmarks<a class="og-h-anchor" href="#difficulty-benchmarks" title="Permalink" aria-hidden="true"></a></h3>
 <ul class="og-list-inline og-ref og-omit"><li>Page 158</li><li>Editorial Addition</li></ul>
