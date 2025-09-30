@@ -116,7 +116,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.02r (2025-09-30)</p>
+<p class="small text-center">version 1.03a (2025-09-30)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -9538,10 +9538,21 @@
 			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-loot-4d12" aria-label="New Loot: 4d12">4d12</button></p></li>
 			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-loot-5d12" aria-label="New Loot: 5d12">5d12</button></p></li>
 		</ul>
-		<ul class="list-unstyled">
-			<li><p><strong><span id="random-loot-roll">Xd12</span>:</strong> <span id="random-loot-result">Y</span></p></li>
-			<li id="random-loot"><p><em>(Loot Result)</em></p></li>
-		</ul>
+		<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Random Loot</caption>
+			<thead>
+				<tr>
+					<th class="text-center w-10" scope="col"><span id="random-loot-roll">&mdash;</span></th>
+					<th>Loot</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-loot-result">&mdash;</span></th>
+					<td><div class="og-item" id="random-loot"><p>&mdash;</p></div></td>
+				</tr>
+			</tbody>
+		</table></div>
 		<h4 class="h6">Loot Table</h4>
 		<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 			<caption>Loot</caption>
@@ -9813,6 +9824,31 @@
 				<li><strong>Legendary:</strong> 4d12 or 5d12</li>
 			</ul>
 		</div>
+		<h4 class="h6">Random Consumable</h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+		<ul class="list-inline">
+			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-consumable-1d12" aria-label="New Consumable: 1d12">1d12</button></p></li>
+			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-consumable-2d12" aria-label="New Consumable: 2d12">2d12</button></p></li>
+			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-consumable-3d12" aria-label="New Consumable: 3d12">3d12</button></p></li>
+			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-consumable-4d12" aria-label="New Consumable: 4d12">4d12</button></p></li>
+			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-consumable-5d12" aria-label="New Consumable: 5d12">5d12</button></p></li>
+		</ul>
+		<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+			<caption>Random Consumable</caption>
+			<thead>
+				<tr>
+					<th class="text-center w-10" scope="col"><span id="random-consumable-roll">&mdash;</span></th>
+					<th>Consumable</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-consumable-result">&mdash;</span></th>
+					<td><div class="og-item" id="random-consumable"><p>&mdash;</p></div></td>
+				</tr>
+			</tbody>
+		</table></div>
+		<h4 class="h6">Consumables Table</h4>
 		<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 			<caption>Consumables</caption>
 			<thead>
