@@ -30,35 +30,35 @@ function randomLoot1d12() {
     document.getElementById("random-loot-roll").innerHTML = "1d12";
     let randomLootResult = rolld12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = data.loot[randomLootResult];
+    let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot2d12() {
     document.getElementById("random-loot-roll").innerHTML = "2d12";
     let randomLootResult = rolld12() + rolld12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = data.loot[randomLootResult];
+    let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot3d12() {
     document.getElementById("random-loot-roll").innerHTML = "3d12";
     let randomLootResult = rolld12() + rolld12() + rolld12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = data.loot[randomLootResult];
+    let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot4d12() {
     document.getElementById("random-loot-roll").innerHTML = "4d12";
     let randomLootResult = rolld12() + rolld12() + rolld12() + rolld12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = data.loot[randomLootResult];
+    let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot5d12() {
     document.getElementById("random-loot-roll").innerHTML = "5d12";
     let randomLootResult = rolld12() + rolld12() + rolld12() + rolld12() + rolld12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = data.loot[randomLootResult];
+    let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 
@@ -82,22 +82,27 @@ document.getElementById("new-random-ancestry-mix").addEventListener("click", fun
 
 document.getElementById("new-random-loot-1d12").addEventListener("click", function (event) {
   randomLoot1d12();
+  refreshTooltips();
 });
 
 document.getElementById("new-random-loot-2d12").addEventListener("click", function (event) {
   randomLoot2d12();
+  refreshTooltips();
 });
 
 document.getElementById("new-random-loot-3d12").addEventListener("click", function (event) {
   randomLoot3d12();
+  refreshTooltips();
 });
 
 document.getElementById("new-random-loot-4d12").addEventListener("click", function (event) {
   randomLoot4d12();
+  refreshTooltips();
 });
 
 document.getElementById("new-random-loot-5d12").addEventListener("click", function (event) {
   randomLoot5d12();
+  refreshTooltips();
 });
 
 
