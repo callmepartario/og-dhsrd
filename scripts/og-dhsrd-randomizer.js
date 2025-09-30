@@ -22,41 +22,41 @@ function randomAncestryFeature2() {
   document.getElementById("random-ancestry-feature-2").innerHTML = secondfeature;
 }
 
-function rolld12 () {
+function d12() {
   return Math.floor(Math.random(12));
 }
 
 function randomLoot1d12() {
     document.getElementById("random-loot-roll-1d12").innerHTML = "1d12";
-    let randomLootResult = rolld12();
+    let randomLootResult = d12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot2d12() {
     document.getElementById("random-loot-roll-2d12").innerHTML = "2d12";
-    let randomLootResult = rolld12() + 1 + rolld12();
+    let randomLootResult = d12() + 1 + d12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot3d12() {
     document.getElementById("random-loot-roll-3d12").innerHTML = "3d12";
-    let randomLootResult = rolld12() + 2 + rolld12() + rolld12();
+    let randomLootResult = d12() + 2 + d12() + d12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot4d12() {
     document.getElementById("random-loot-roll-4d12").innerHTML = "4d12";
-    let randomLootResult = rolld12() + 3 + rolld12() + rolld12() + rolld12();
+    let randomLootResult = d12() + 3 + d12() + d12() + d12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
 }
 function randomLoot5d12() {
     document.getElementById("random-loot-roll-5d12").innerHTML = "5d12";
-    let randomLootResult = rolld12() + 4 + rolld12() + rolld12() + rolld12() + rolld12();
+    let randomLootResult = d12() + 4 + d12() + d12() + d12() + d12();
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[Math.floor(randomLootResult)];
     document.getElementById("random-loot").innerHTML = randomLoot;
