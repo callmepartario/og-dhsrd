@@ -43,7 +43,7 @@
 }
 @font-face {
     font-family: 'Be Vietnam Pro';
-    src:url('../fonts/BeVietnamPro-RegularItalic.ttf') format(truetype);
+    src:url('../fonts/BeVietnamPro-Italic.ttf') format(truetype);
 	font-weight: 400;
 	font-style: italic;
 }
@@ -153,7 +153,7 @@
 }
 @font-face {
     font-family: 'Public Sans';
-    src:url('../fonts/PublicSans-RegularItalic.ttf') format(truetype);
+    src:url('../fonts/PublicSans-Italic.ttf') format(truetype);
 	font-weight: 400;
 	font-style: italic;
 }
@@ -263,7 +263,7 @@
 }
 @font-face {
 	font-family: 'Fira Sans';
-    src:url('../fonts/FiraSans-RegularItalic.ttf') format(truetype);
+    src:url('../fonts/FiraSans-Italic.ttf') format(truetype);
 	font-weight: 400;
 	font-style: italic;
 }

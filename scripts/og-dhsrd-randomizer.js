@@ -69,35 +69,35 @@ function randomLoot5d12() {
 
 function randomConsumable1d12() {
     document.getElementById("random-consumable-roll").innerHTML = "1d12";
-    let randomConsumableResult = rolldice(1, 12);
+    let randomConsumableResult = rollDice(1, 12);
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
 }
 function randomConsumable2d12() {
     document.getElementById("random-consumable-roll").innerHTML = "2d12";
-    let randomConsumableResult = rolldice(2, 12);
+    let randomConsumableResult = rollDice(2, 12);
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
 }
 function randomConsumable3d12() {
     document.getElementById("random-consumable-roll").innerHTML = "3d12";
-    let randomConsumableResult = rolldice(3, 12);
+    let randomConsumableResult = rollDice(3, 12);
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
 }
 function randomConsumable4d12() {
     document.getElementById("random-consumable-roll").innerHTML = "4d12";
-    let randomConsumableResult = rolldice(4, 12);
+    let randomConsumableResult = rollDice(4, 12);
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
 }
 function randomConsumable5d12() {
     document.getElementById("random-consumable-roll").innerHTML = "5d12";
-    let randomConsumableResult = rolldice(5, 12);
+    let randomConsumableResult = rollDice(5, 12);
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
