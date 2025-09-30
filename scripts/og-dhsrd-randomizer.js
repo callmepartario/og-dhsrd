@@ -24,11 +24,9 @@ function randomAncestryFeature2() {
 
 function rollDice(pool, sides) {
   let rollTotal = 0;
-  const results = [];
   for (let i = 0; i < pool; i++) {
-    const roll = Math.floor(Math.random() * sides) + 1;
-    results.push(`Die ${i + 1}: ${roll}`);
-    rollTotal += roll;
+    let roll = Math.floor(Math.random() * sides) + 1;
+    rollTotal = rollTotal + roll;
   }
   return rollTotal;
 }
