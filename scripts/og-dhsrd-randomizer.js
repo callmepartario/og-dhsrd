@@ -22,7 +22,7 @@ function randomAncestryFeature2() {
 }
 
 function d12() {
-  return Math.random(12) + 1;
+  return Math.floor(Math.random(12)) + 1;
 }
 
 function randomLoot1d12() {
