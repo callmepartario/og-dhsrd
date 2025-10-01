@@ -119,7 +119,7 @@
 	"<strong><em>Morphing Clay:</em></strong> You can spend 4 <a href='#define-hope'>Hope</a> to use this clay, altering your face enough to make you unrecognizable until your next <a href='#define-downtime'>rest</a>.",
 	"<strong><em>Vial of Darksmoke:</em></strong> When an <a href='#define-adversary'>adversary</a> attacks you, use this vial and roll a number of <strong>d6</strong> equal to your <a href='#define-agility'>Agility</a>. Add the highest result to your <a href='#define-evasion'>Evasion</a> against the attack.",
 	"<strong><em>Jumping Root:</em></strong> Eat this root to leap up to <a href='#define-range'>Far</a> range once without needing to roll.",
-	"<strong><em>Snap Powder:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> and clear a <a href='#define-hit-point'>Hit Points</a>.",
+	"<strong><em>Snap Powder:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> and clear a <a href='#define-hit-point'>Hit Point</a>.",
 	"<strong><em>Health Potion:</em></strong> Clear 1d4+1 <a href='#define-hit-point'>Hit Points</a>.",
 	"<strong><em>Stamina Potion:</em></strong> Clear 1d4+1 <a href='#define-stress'>Stress</a>.",
 	"<strong><em>Armor Stitcher:</em></strong> You can use this stitcher to spend any number of Hope and clear that many <a href='#define-armor'>Armor Slots</a>.",
