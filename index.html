@@ -117,7 +117,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.04c (2025-10-02)</p>
+<p class="small text-center">version 1.05a (2025-10-03)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -9349,7 +9349,7 @@
             <th class="fw-normal" scope="row">Runetan Floating Armor</th>
             <td class="text-center og-nowrap">9/20</td>
             <td class="text-center og-nowrap">4</td>
-            <td><strong><em>Shifting:</em></strong> When you are targeted for an attack, you can <strong><a href="#define-armor">mark an Armor Slot</a></strong> to give the attack roll against you disadvantage.</td>
+            <td><strong><em>Shifting:</em></strong> When you are targeted for an attack, you can <strong><a href="#define-armor">mark an Armor Slot</a></strong> to give the attack roll against you <a href="define-advantage">disadvantage</a>.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Tyris Soft Armor</th>
@@ -9493,8 +9493,7 @@
             <th class="fw-normal" scope="row">Emberwoven Armor</th>
             <td class="text-center og-nowrap">13/36</td>
             <td class="text-center og-nowrap">6</td>
-            <td><strong><em>Burning:</em></strong> When an <a href="#define-adversary">adversary</a> attacks you within <a href="#define-range">Melee</a> range, they mark a <a href="#define-stress">Stress</a>.
-            </td>
+            <td><strong><em>Burning:</em></strong> When an <a href="#define-adversary">adversary</a> attacks you within <a href="#define-range">Melee</a> range, they mark a <a href="#define-stress">Stress</a>.</td>
         </tr>
         <tr>
             <th class="fw-normal" scope="row">Full Fortified Armor</th>
@@ -13231,23 +13230,32 @@
 <h2 id="encounters">Encounters<a class="og-h-anchor" href="#encounters" title="Permalink" aria-hidden="true"></a></h2>
 
 <h4 id="pc-benchmarks">PC Benchmarks<a class="og-h-anchor" href="#pc-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
-<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 <div class="alert ps-4 pb-0 og-omit">
 	<ul class="list-unstyled og-qr">
-		<li><a href="#define-pc-benchmark-defense">Defense</a></li>
-		<li><a href="#define-pc-benchmark-damage">Damage</a></li>
-		<li><a href="#pc-benchmark-weapons">Weapon Features</a></li>
-		<li><a href="#pc-benchmark-weapons-primary">Primary Weapon Features</a></li>
-		<li><a href="#pc-benchmark-weapons-secondary">Secondary Weapon Features</a></li>
+		<li>
+			<span class="h6"><a href="#define-pc-benchmark-defense">Defense</a></span>
+			<ul class="og-list-inline small">
+				<li class="d-block"><a href="#pc-benchmark-armor-standard">Standard Armor Features</a></li>
+				<li class="d-block"><a href="#pc-benchmark-armor-special">Special Armor Features</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="h6"><a href="#define-pc-benchmark-damage">Damage</a></span>
+			<ul class="og-list-inline small">
+				<li><a href="#pc-benchmark-weapons-primary">Primary Weapon Features</a></li>
+				<li><a href="#pc-benchmark-weapons-secondary">Secondary Weapon Features</a></li>
+			</ul>
+		</li>
 	</ul>
 </div>
-<p>The following tables provide information the GM can use to develop original <a href="#define-weapon">weapons</a> and <a href="#define-armor">armor</a>.</p>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<p>The following tables provide information the GM can use to help <a href="building-encounters">build encounters</a>, compare to <a href="##adversary-benchmarks">adversary benchmarks</a>, or create original <a href="#define-equipment">equipment</a>.</p>
 <div id="define-pc-benchmark-defense">
 	<h5 id="pc-benchmark-defense">PC Defense Benchmarks<a class="og-h-anchor" href="#pc-benchmark-defense" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-	<p>The listed values assume PCs wear tier-appropriate <a href="#define-armor">armor</a>, and account for PCs adding their <a href="#define-level">level</a>, but not other bonuses to a <a href="#define-evasion">Evasion</a>, <a href="#define-hit-pont">damage thresholds</a> or <a href="#define-armor">Armor Slots</a>&mdash;for example, the <a href="#define-galapa">Galapa</a> ancestry's <em>Shell</em> feature or <a href="#define-domain-card">domain cards</a> like <a href="#define-domain-card-valor-touched">Valor-Touched</a>.</p>
+	<p>The contents of this table assume PCs wear tier-appropriate <a href="#define-equipment">equipment</a>, and account for PCs adding their <a href="#define-level">level</a> and other features to their <a href="#define-hit-point">damage thresholds</a>. They don't account for every possible bonus, however&mdash;for example, <a href="#define-domain-card">domain cards</a> like <a href="#define-domain-card-fortified-armor">Fortified Armor</a>. As a result, specialized PCs might be able to exceed the listed numbers.</p>
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-		<caption>PC Defense Scaling</caption>
+		<caption>PC Defense Benchmarks</caption>
 		<thead>
 			<tr>
 				<th class="og-nowrap" scope="col">Type</th>
@@ -13266,27 +13274,6 @@
 				<td class="text-center og-nowrap">8&ndash;20</td>
 			</tr>
 			<tr>
-				<th class="fw-normal" scope="row">Minimum Thresholds</th>
-				<td class="text-center og-nowrap">5/11 <span class="d-block og-nowrap small"><em>(+1 each)</em></span></td>
-				<td class="text-center og-nowrap">7/16 <span class="d-block og-nowrap small"><em>(+2&ndash;4 each)</em></span></td>
-				<td class="text-center og-nowrap">9/23 <span class="d-block og-nowrap small"><em>(+5&ndash;7 each)</em></span></td>
-				<td class="text-center og-nowrap">11/32 <span class="d-block og-nowrap small"><em>(+8&ndash;10 each)</em></span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Maximum Thresholds</th>
-				<td class="text-center og-nowrap">8/17 <span class="d-block og-nowrap small"><em>(+1 each)</em></span></td>
-				<td class="text-center og-nowrap">11/23 <span class="d-block og-nowrap small"><em>(+2&ndash;4 each)</em></span></td>
-				<td class="text-center og-nowrap">17/43 <span class="d-block og-nowrap small"><em>(+5&ndash;7 each)</em></span></td>
-				<td class="text-center og-nowrap">18/48 <span class="d-block og-nowrap small"><em>(+8&ndash;10 each)</em></span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Armor Base Score</th>
-				<td class="text-center og-nowrap">3&ndash;4</td>
-				<td class="text-center og-nowrap">4&ndash;5</td>
-				<td class="text-center og-nowrap">5&ndash;6</td>
-				<td class="text-center og-nowrap">6&ndash;8</td>
-			</tr>
-			<tr>
 				<th class="fw-normal" scope="row">Hit Points</th>
 				<td class="text-center og-nowrap">5&ndash;9</td>
 				<td class="text-center og-nowrap">5&ndash;11</td>
@@ -13300,17 +13287,276 @@
 				<td class="text-center og-nowrap">6&ndash;12</td>
 				<td class="text-center og-nowrap">6&ndash;12</td>
 			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Standard Armor Thresholds</th>
+				<td class="text-center og-nowrap">6/13</td>
+				<td class="text-center og-nowrap">9/20</td>
+				<td class="text-center og-nowrap">11/27</td>
+				<td class="text-center og-nowrap">13/36</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">PC Minimum Base Thresholds</th>
+				<td class="text-center og-nowrap">5/11</td>
+				<td class="text-center og-nowrap">7/16</td>
+				<td class="text-center og-nowrap">9/23</td>
+				<td class="text-center og-nowrap">11/32</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">PC Maximum Base Thresholds</th>
+				<td class="text-center og-nowrap">8/17</td>
+				<td class="text-center og-nowrap">13/28</td>
+				<td class="text-center og-nowrap">17/43</td>
+				<td class="text-center og-nowrap">18/48</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">PC Damage Threshold Bonus</th>
+				<td class="text-center og-nowrap">+1 to +4</td>
+				<td class="text-center og-nowrap">+2 to +8</td>
+				<td class="text-center og-nowrap">+5 to +13</td>
+				<td class="text-center og-nowrap">+8 to +18</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Standard Armor Base Score</th>
+				<td class="text-center og-nowrap">3</td>
+				<td class="text-center og-nowrap">4</td>
+				<td class="text-center og-nowrap">5</td>
+				<td class="text-center og-nowrap">6</td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">PC Maximum Armor Score</th>
+				<td class="text-center og-nowrap">7</td>
+				<td class="text-center og-nowrap">8</td>
+				<td class="text-center og-nowrap">10</td>
+				<td class="text-center og-nowrap">12</td>
+			</tr>
 		</tbody>
 	</table></div>
 </div>
+<h6 id="pc-benchmark-armor-standard">Standard Armor Features<a class="og-h-anchor" href="#pc-benchmark-armor-standard" title="Permalink" aria-hidden="true"></a></h6>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Standard Armor Feature Benchmarks</caption>
+	<thead>
+		<tr>
+			<th class="visually-hidden" scope="col">Feature</th>
+			<th class="w-40" scope="col">Feature <span class="visually-hidden">(Verbose)</span></th>
+			<th class="w-15 text-center" scope="col">Threshold Changes</th>
+			<th class="w-15 text-center" scope="col">Base Score Change</th>
+			<th class="w-30" scope="col">Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Flexible</th>
+			<td><strong><em>Flexible:</em></strong> +1 to <a href="#define-evasion">Evasion</a></td>
+			<td class="text-center">Varies</td>
+			<td class="text-center">&minus;1</td>
+			<td>Apply threshold changes based on tier: <ul class="list-unstyled mb-0"><li><strong>Tier 1:</strong> &minus;1/&minus;2</li><li><strong>Tier 2, 3, or 4:</strong> &minus;2/&minus;4</li></ul></td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Heavy</th>
+			<td><strong><em>Heavy:</em></strong> &minus;1 to <a href="#define-evasion">Evasion</a></td>
+			<td class="text-center">Varies</td>
+			<td class="text-center">+1</td>
+			<td>Apply threshold changes based on tier: <ul class="list-unstyled mb-0"><li><strong>Tier 1:</strong> +1/+2</li><li><strong>Tier 2, 3, or 4</strong>: +2/+4</li></ul></td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Very Heavy</th>
+			<td><strong><em>Very Heavy:</em></strong> &minus;2 to <a href="#define-evasion">Evasion</a>; &minus;1 to <a href="#define-agility">Agility</a></td>
+			<td class="text-center">Varies</td>
+			<td class="text-center">+1</td>
+			<td>Apply threshold changes based on tier: <ul class="list-unstyled mb-0"><li><strong>Tier 1:</strong> +2/+4</li><li><strong>Tier 2, 3, or 4:</strong> +4/+8</li></ul></td>
+		</tr>
+	</tbody>
+</table></div>
+<h6 id="pc-benchmark-armor-special">Special Armor Features<a class="og-h-anchor" href="#pc-benchmark-armor-special" title="Permalink" aria-hidden="true"></a></h6>
+<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+	<caption>Special Armor Feature Benchmarks</caption>
+	<thead>
+		<tr>
+			<th class="visually-hidden" scope="col">Feature</th>
+			<th class="w-40" scope="col">Feature <span class="visually-hidden">(Verbose)</span></th>
+			<th class="w-15 text-center" scope="col">Threshold Changes</th>
+			<th class="w-15 text-center" scope="col">Base Score Change</th>
+			<th class="w-30" scope="col">Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Burning</th>
+			<td><strong><em>Burning:</em></strong> When an <a href="#define-adversary">adversary</a> attacks you within <a href="#define-range">Melee</a> range, they mark a <a href="#define-stress">Stress</a>.</td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 4.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Channeling</th>
+			<td><strong><em>Channeling:</em></strong> +1 to <a href="#define-spellcast-roll">Spellcast Rolls</a></td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">&minus;1</td>
+			<td>Minimum tier 4.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Difficult</th>
+			<td><strong><em>Difficult:</em></strong> &minus;1 to all character <a href="#define-trait">traits</a> and <a href="#define-evasion">Evasion</a></td>
+			<td class="text-center">+5/+12</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 4.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Fortified</th>
+			<td><strong><em>Fortified:</em></strong> When you mark an <a href="#define-armor">Armor Slot</a>, you reduce the severity of an attack by two <a href="#define-hit-point">thresholds</a> instead of one.</td>
+			<td class="text-center">+2/+4</td>
+			<td class="text-center">&minus;2</td>
+			<td>Minimum tier 4.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Gilded</th>
+			<td><strong><em>Gilded:</em></strong> +1 to Presence</td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 3.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Hopeful</th>
+			<td><strong><em>Hopeful:</em></strong> When you would spend a Hope, you can <strong><a href="#define-armor">mark an Armor Slot</a></strong> instead.</td>
+			<td class="text-center">+2/+3</td>
+			<td class="text-center">+1</td>
+			<td>Minimum tier 2.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Impenetrable</th>
+			<td><strong><em>Impenetrable:</em></strong> Once per <a href="#define-short-rest">short rest</a>, when you would mark your last Hit Point, you can instead mark a <a href="#define-stress">Stress</a>.</td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 3.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Magic</th>
+			<td><strong><em>Magic:</em></strong> You can't mark an <a href="#define-armor">Armor Slot</a> to reduce <a href="#define-damage-type">physical damage</a>.</td>
+			<td class="text-center">+5/+12</td>
+			<td class="text-center">+1</td>
+			<td>Minimum tier 3.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Painful</th>
+			<td><strong><em>Painful:</em></strong> Each time you mark an <a href="#define-armor">Armor Slot</a>, you must mark a <a href="#define-stress">Stress</a>.</td>
+			<td class="text-center">+6/+16</td>
+			<td class="text-center">+1</td>
+			<td>Minimum tier 3.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Physical</th>
+			<td><strong><em>Physical:</em></strong> You can't mark an <a href="#define-armor">Armor Slot</a> to reduce <a href="#define-damage-type">magic damage</a>.</td>
+			<td class="text-center">+5/+12</td>
+			<td class="text-center">+1</td>
+			<td>Minimum tier 3.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Quiet</th>
+			<td><strong><em>Quiet:</em></strong> You gain a +2 bonus to rolls you make to move silently.</td>
+			<td class="text-center">&minus;1/&minus;2</td>
+			<td class="text-center">+1</td>
+			<td>Minimum tier 2.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Reinforced</th>
+			<td><strong><em>Reinforced:</em></strong> When you mark your last <a href="#define-armor">Armor Slot</a>, increase your <a href="#define-hit-point">damage thresholds</a> by +2 until you clear at least 1 Armor Slot.</td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 2.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Resilient</th>
+			<td><strong><em>Resilient:</em></strong> Before you mark your last <a href="#define-armor">Armor Slot</a>, roll a <strong>d6</strong>. On a result of 6, reduce the severity by one threshold without marking an Armor Slot.</td>
+			<td class="text-center">+0/+1</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 2.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Sharp</th>
+			<td><strong><em>Sharp:</em></strong> On a successful attack against a target within <a href="#define-range">Melee</a> range, add a <strong>d4</strong> to the damage roll.</td>
+			<td class="text-center">&minus;1/&minus;2</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 2.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Shifting</th>
+			<td><strong><em>Shifting:</em></strong> When you are targeted for an attack, you can <strong><a href="#define-armor">mark an Armor Slot</a></strong> to give the attack roll against you <a href="define-advantage">disadvantage</a>.</td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 2.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Timeslowing</th>
+			<td><strong><em>Timeslowing:</em></strong> <strong><a href="#define-armor">mark an Armor Slot</a></strong> to roll a <strong>d4</strong> and add its result as a bonus to your <a href="#define-evasion">Evasion</a> against an incoming attack.</td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">+1</td>
+			<td>Minimum tier 4.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Truthseeking</th>
+			<td><strong><em>Truthseeking:</em></strong> This <a href="#define-armor">armor</a> glows when another creature within <a href="#define-range">Close</a> range tells a lie.</td>
+			<td class="text-center">&mdash;</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 4.</td>
+		</tr>
+		<tr>
+			<th class="fw-normal visually-hidden" scope="col">Warded</th>
+			<td><strong><em>Warded:</em></strong> You reduce incoming <a href="#define-damage-type">magic damage</a> by your <a href="#define-armor">Armor Score</a> before applying it to your <a href="#define-hit-point">damage thresholds</a>.</td>
+			<td class="text-center">+0/+1</td>
+			<td class="text-center">&mdash;</td>
+			<td>Minimum tier 2.</td>
+		</tr>
+	</tbody>
+</table></div>
 <div id="define-pc-benchmark-damage">
 	<h5 id="pc-benchmark-damage">PC Damage Benchmarks<a class="og-h-anchor" href="#pc-benchmark-damage" title="Permalink" aria-hidden="true"></a></h5>
-	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-	<p>The following table shows <a href="#define-damage-roll">damage roll</a> averages PCs make with <a href="#define-weapon">weapons</a>. Actual average damage is more complicated, requiring successful <a href="#define-attack-roll">attack rolls</a>. As they gain <a href="#define-level">levels</a>, PCs gain new features, <a href="#define-domain-card">domain cards</a>, and choose <a href="#define-advancement">advancements</a> that increase their <a href="#define-trait">traits</a> (accuracy) and <a href="#define-damage-roll">Proficiency</a> (damage).</p>
-	<h6>One-Handed Weapons</h6>
+	<div class="row og-omit">
+		<div class="col-12 col-md-6">
+			<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+			<p>This section contains a table with <a href="#define-damage-roll">damage roll</a> averages PCs make with <a href="#define-weapon">weapons</a>, but not features that increase an instance of damage, for example, <a href="#define-faun">Faun</a> acestry's <em>Kick</em> feature or the <a href="#define-rogue">Rogue</a> class feature <em>Sneak Attack</em>.</p>
+			<p>Actual average <a href="#define-damage-roll">damage rolls</a> will be higher than these listings, and more complicated to calculate&mdash;after all, dealing damage requires a successful <a href="#define-attack-roll">attack rolls</a> against the <a href="#define-difficulty">Difficulty</a> of an <a href="#define-adversary">adversary</a>. As they gain <a href="#define-level">levels</a>, PCs can gain new features, <a href="#define-domain-card">domain cards</a>, and <a href="#define-advancement">advancements</a> that increase their <a href="#define-trait">traits</a> (accuracy) or <a href="#define-damage-roll">Proficiency</a> (damage).</p>
+			<p>Additional tables provide recommended modifications to <a href="#define-weapon">primary and secondary weapons</a> with features&mdash;based upon their other properties, along with recommended changes to their <a href="#define-damage-roll">damage roll</a>.</p>
+			<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, and d12." aria-hidden="true">
+		</div>
+		<div class="col-12 col-md-6">
+			<div class="og-topbar">
+				<dl>
+					<dt>Steps</dt>
+					<dd>Damage dice are arranged into the following steps:
+						<ul class="og-list-inline">
+							<li>d4</li>
+							<li>d6</li>
+							<li>d8</li>
+							<li>d10</li>
+							<li>d12</li>
+							<li>d20</li>
+						</ul>
+					</dd>
+					<dt>Stepping Up</dt>
+					<dd>Increase the number of faces on the die&mdash;for example, from <strong>d6</strong> to <strong>d8</strong>.</dd>
+					<dt>Stepping Down</dt>
+					<dd>Decreases the number of faces on the die&mdash;for example, from <strong>d12</strong> to <strong>d10</strong>.</dd>
+					<dt>Multiple Steps</dt>
+					<dd>You step a die more than once&mdash;for example, a <strong>d10</strong> moved two steps down becomes a <strong>d6</strong>.</dd>
+					<dt>Prerequisites</dt>
+					<dd>
+						<ul class="og-list-disc">
+							<li>If a feature would step a weapon's damage die up to <strong>d20</strong> or down to <strong>d4</strong>, it can't be applied.</li>
+							<li>If a feature would reduce a weapon's damage modifier to less than 0, it can't be applied.</li>
+							<li>Other prerequisites might include the type of weapon (physical or magic), a minimum <a href="define-tier">tier</a>, or a specific <a href="#define-range">range</a>.</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<h6 id="pc-benchmark-weapons-one-handed">One-Handed Weapons<a class="og-h-anchor" href="#pc-benchmark-weapons-one-handed" title="Permalink" aria-hidden="true"></a></h6>
 	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-		<caption>PC Damage Scaling</caption>
+		<caption>One-Handed Weapon Benchmarks</caption>
 		<thead>
 			<tr>
 				<th class="og-nowrap" scope="col">Type</th>
@@ -13358,10 +13604,10 @@
 			</tr>
 		</tbody>
 	</table></div>
-	<h6>Two-Handed Weapons</h6>
+	<h6 id="pc-benchmark-weapons-two-handed">Two-Handed Weapons<a class="og-h-anchor" href="#pc-benchmark-weapons-two-handed" title="Permalink" aria-hidden="true"></a></h6>
 	<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-		<caption>PC Damage Scaling</caption>
+		<caption>Two-Handed Weapon Benchmarks</caption>
 		<thead>
 			<tr>
 				<th class="og-nowrap" scope="col">Type</th>
@@ -13403,30 +13649,9 @@
 		</tbody>
 	</table></div>
 </div>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<h5 id="pc-benchmark-weapons">Weapon Features<a class="og-h-anchor" href="#pc-benchmark-weapons" title="Permalink" aria-hidden="true"></a></h5>
-		<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-		<p>These table provides recommended modifications to <a href="#define-weapon">primary and secondary weapons</a> with features&mdash;based upon their other properties, along with recommended changes to their <a href="#damage-roll">damage die and modifier</a>.</p>
-	</div>
-	<div class="col-12 col-md-6">
-		<div class="og-topbar">
-			<p><strong><em>Damage Die Steps:</em></strong> "Stepping up" increases die size, for example from d6 to d8. "Stepping down" decreases die size, for example, from a d12 to a d10:</p>
-			<ul class="og-list-inline visually-hidden">
-				<li>d4</li>
-				<li>d6</li>
-				<li>d8</li>
-				<li>d10</li>
-				<li>d12</li>
-				<li>d20</li>
-			</ul>
-			<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, and d12." aria-hidden="true">
-		</div>
-	</div>
-</div>
 <h6 id="pc-benchmark-weapons-primary">Primary Weapon Features<a class="og-h-anchor" href="#pc-benchmark-weapons-primary" title="Permalink" aria-hidden="true"></a></h6>
 <div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Primary Weapon Features</caption>
+	<caption>Primary Weapon Feature Benchmarks</caption>
 	<thead>
 		<tr>
 			<th class="visually-hidden" scope="col">Feature</th>
@@ -13439,259 +13664,259 @@
 	<tbody>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Bonded</th>
-			<td class="og-ind-hang"><strong><em>Bonded:</em></strong> Gain a bonus to your damage rolls equal to your <a href="#define-level">level</a>.</td>
+			<td><strong><em>Bonded:</em></strong> Gain a bonus to your damage rolls equal to your <a href="#define-level">level</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;3</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Bouncing</th>
-			<td class="og-ind-hang"><strong><em>Bouncing:</em></strong> Mark 1 or more <a href="#define-stress">Stress</a> to hit that many targets in <a href="#define-range">range</a> of the <a href="#define-attack-roll">attack</a>.</td>
+			<td><strong><em>Bouncing:</em></strong> Mark 1 or more <a href="#define-stress">Stress</a> to hit that many targets in <a href="#define-range">range</a> of the <a href="#define-attack-roll">attack</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>Minimum of tier 3.</td>
+			<td>Minimum tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Brave</th>
-			<td class="og-ind-hang"><strong><em>Brave:</em></strong> &minus;1 to <a href="#define-evasion">Evasion</a>; +3 to Severe <a href="#define-hit-point">damage threshold</a></td>
+			<td><strong><em>Brave:</em></strong> &minus;1 to <a href="#define-evasion">Evasion</a>; +3 to Severe <a href="#define-hit-point">damage threshold</a></td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">&minus;2</td>
-			<td>Minimum of tier 3.</td>
+			<td>Minimum tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Brutal</th>
-			<td class="og-ind-hang"><strong><em>Brutal:</em></strong> When you roll the maximum value on a <a href="#define-damage-roll">damage die</a>, roll an additional <a href="#define-damage-roll">damage die</a>.</td>
+			<td><strong><em>Brutal:</em></strong> When you roll the maximum value on a <a href="#define-damage-roll">damage die</a>, roll an additional <a href="#define-damage-roll">damage die</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">Varies</td>
-			<td>Minimum of tier 2. Apply modifier change based on the size of the original damage die: <ul class="list-unstyled mb-0"><li><a href="#define-strength">Strength</a>: &mdash;</li><li class="og-nowrap"><a href="#define-agility">Agility</a>, <a href="#define-finesse">Finesse</a>, <a href="#define-instinct">Instinct</a>, <a href="#define-presence">Presence</a>, or <a href="#define-knowledge">Knowledge</a>: &minus;2</li></ul></td>
+			<td>Minimum tier 2. Apply modifier change based on the size of the original damage die: <ul class="list-unstyled mb-0"><li><a href="#define-strength">Strength</a>: &mdash;</li><li><a href="#define-agility">Agility</a>, <a href="#define-finesse">Finesse</a>, <a href="#define-instinct">Instinct</a>, <a href="#define-presence">Presence</a>, or <a href="#define-knowledge">Knowledge</a>: &minus;2</li></ul></td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Burning</th>
-			<td class="og-ind-hang"><strong><em>Burning:</em></strong> When you roll a 6 on a <a href="#define-damage-roll">damage die</a>, the target must mark a <a href="#define-stress">Stress</a>.</td>
+			<td><strong><em>Burning:</em></strong> When you roll a 6 on a <a href="#define-damage-roll">damage die</a>, the target must mark a <a href="#define-stress">Stress</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;2</td>
-			<td>Minimum of tier 3.</td>
+			<td>Minimum tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Concussive</th>
-			<td class="og-ind-hang"><strong><em>Concussive:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-hope">spend a Hope</a></strong> to knock the target back to <a href="#define-range">Far</a> range.</td>
+			<td><strong><em>Concussive:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-hope">spend a Hope</a></strong> to knock the target back to <a href="#define-range">Far</a> range.</td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">+1</td>
-			<td>Minimum of tier 3.</td>
+			<td>Minimum tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Cumbersome</th>
-			<td class="og-ind-hang"><strong><em>Cumbersome:</em></strong> &minus;1 to <a href="#define-finesse">Finesse</a></td>
+			<td><strong><em>Cumbersome:</em></strong> &minus;1 to <a href="#define-finesse">Finesse</a></td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">&mdash;</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Deadly</th>
-			<td class="og-ind-hang"><strong><em>Deadly:</em></strong> When you deal <a href="#define-hit-point">Severe</a> damage, the target must mark an additional <a href="#define-hit-point">Hit Point</a>.</td>
+			<td><strong><em>Deadly:</em></strong> When you deal <a href="#define-hit-point">Severe</a> damage, the target must mark an additional <a href="#define-hit-point">Hit Point</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>Minimum of tier 2.</td>
+			<td>Minimum tier 2.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Destructive</th>
-			<td class="og-ind-hang"><strong><em>Destructive:</em></strong> &minus;1 to <a href="#define-agility">Agility</a>; on a successful <a href="#define-attack-roll">attack</a>, all adversaries within <a href="#define-range">Very Close</a> range must mark a <a href="#define-stress">Stress</a>.</td>
+			<td><strong><em>Destructive:</em></strong> &minus;1 to <a href="#define-agility">Agility</a>; on a successful <a href="#define-attack-roll">attack</a>, all adversaries within <a href="#define-range">Very Close</a> range must mark a <a href="#define-stress">Stress</a>.</td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">+1</td>
-			<td>Minimum of tier 3.</td>
+			<td>Minimum tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Devastating</th>
-			<td class="og-ind-hang"><strong><em>Devastating:</em></strong> Before you make an <a href="#define-attack-roll">attack roll</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to use a <strong>d20</strong> as your <a href="#define-damage-roll">damage die</a>.</td>
+			<td><strong><em>Devastating:</em></strong> Before you make an <a href="#define-attack-roll">attack roll</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to use a <strong>d20</strong> as your <a href="#define-damage-roll">damage die</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;2</td>
-			<td>Minimum of tier 3.</td>
+			<td>Minimum tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Eruptive</th>
-			<td class="og-ind-hang"><strong><em>Eruptive:</em></strong> On a successful attack against a target within <a href="#define-range">Melee</a> range, all other adversaries within <a href="#define-range">Very Close</a> range must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> (14) or take half damage.</td>
+			<td><strong><em>Eruptive:</em></strong> On a successful attack against a target within <a href="#define-range">Melee</a> range, all other adversaries within <a href="#define-range">Very Close</a> range must succeed on a <a href="#define-reaction-roll">Reaction Roll</a> (14) or take half damage.</td>
 			<td class="text-center og-nowrap">Step down</td>
 			<td class="text-center">&mdash;</td>
 			<td>Magic weapon only; minimum of tier 2.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Grappling</th>
-			<td class="og-ind-hang"><strong><em>Grappling:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-hope">spend a Hope</a></strong> to <a href="#define-condition"><em>Restrain</em></a> the target or pull them into <a href="#define-range">Melee</a> range with you.</td>
+			<td><strong><em>Grappling:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-hope">spend a Hope</a></strong> to <a href="#define-condition"><em>Restrain</em></a> the target or pull them into <a href="#define-range">Melee</a> range with you.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Greedy</th>
-			<td class="og-ind-hang"><strong><em>Greedy:</em></strong> Spend a handful of <a href="#define-gold">gold</a> to gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a> on a <a href="#define-damage-roll">damage roll</a>.</td>
+			<td><strong><em>Greedy:</em></strong> Spend a handful of <a href="#define-gold">gold</a> to gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a> on a <a href="#define-damage-roll">damage roll</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;3</td>
-			<td>Minimum of tier 4.</td>
+			<td>Minimum tier 4.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Healing</th>
-			<td class="og-ind-hang"><strong><em>Healing:</em></strong> During <a href="#define-downtime">downtime</a>, automatically clear a <a href="#define-hit-point">Hit Point</a>.</td>
+			<td><strong><em>Healing:</em></strong> During <a href="#define-downtime">downtime</a>, automatically clear a <a href="#define-hit-point">Hit Point</a>.</td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">&minus;1</td>
 			<td>Magic weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Heavy</th>
-			<td class="og-ind-hang"><strong><em>Heavy:</em></strong> &minus;1 to <a href="#define-evasion">Evasion</a></td>
+			<td><strong><em>Heavy:</em></strong> &minus;1 to <a href="#define-evasion">Evasion</a></td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">&mdash;</td>
 			<td>Assign <a href="#trait">Strength</a> for trait, <a href="#define-range">Melee</a> range, <a href="#define-damage-type">physical damage</a>, and Two-Handed <a href="#define-weapon">burden</a>.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Hot</th>
-			<td class="og-ind-hang"><strong><em>Hot:</em></strong> This <a href="#define-weapon">weapon</a> cuts through solid material.</td>
+			<td><strong><em>Hot:</em></strong> This <a href="#define-weapon">weapon</a> cuts through solid material.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>Minimum of tier 4.</td>
+			<td>Minimum tier 4.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Invigorating</th>
-			<td class="og-ind-hang"><strong><em>Invigorating:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, roll a <strong>d4</strong>. On a result of 4, clear a <a href="#define-stress">Stress</a>.</td>
+			<td><strong><em>Invigorating:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, roll a <strong>d4</strong>. On a result of 4, clear a <a href="#define-stress">Stress</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>Magic weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Lifestealing</th>
-			<td class="og-ind-hang"><strong><em>Lifestealing:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, roll a <strong>d6</strong>. On a result of 6, clear a <a href="#define-hit-point">Hit Point</a> or clear a <a href="#define-stress">Stress</a>.</td>
+			<td><strong><em>Lifestealing:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, roll a <strong>d6</strong>. On a result of 6, clear a <a href="#define-hit-point">Hit Point</a> or clear a <a href="#define-stress">Stress</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;3</td>
-			<td>Minimum of tier 4.</td>
+			<td>Minimum tier 4.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Long</th>
-			<td class="og-ind-hang"><strong><em>Long:</em></strong> This <a href="#define-weapon">weapon</a>'s <a href="#define-attack-roll">attack</a> targets all adversaries in a line within <a href="#define-range">range</a>.</td>
+			<td><strong><em>Long:</em></strong> This <a href="#define-weapon">weapon</a>'s <a href="#define-attack-roll">attack</a> targets all adversaries in a line within <a href="#define-range">range</a>.</td>
 			<td class="text-center og-nowrap">Step down</td>
 			<td class="text-center">&minus;1</td>
 			<td>Assign <a href="#define-range">Very Close</a> range.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Lucky</th>
-			<td class="og-ind-hang"><strong><em>Lucky:</em></strong> On a failed <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to <a href="#define-reroll">reroll</a> your attack.</td>
+			<td><strong><em>Lucky:</em></strong> On a failed <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to <a href="#define-reroll">reroll</a> your attack.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>Magic weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Massive</th>
-			<td class="og-ind-hang"><strong><em>Massive:</em></strong> &minus;1 to <a href="#define-evasion">Evasion</a>; on a successful <a href="#define-attack-roll">attack</a>, roll an additional <a href="#define-damage-roll">damage die</a> and discard the lowest result.</td>
+			<td><strong><em>Massive:</em></strong> &minus;1 to <a href="#define-evasion">Evasion</a>; on a successful <a href="#define-attack-roll">attack</a>, roll an additional <a href="#define-damage-roll">damage die</a> and discard the lowest result.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>Assign <a href="#trait">Strength</a> for trait, <a href="#define-range">Melee</a> range, <a href="#define-damage-type">physical damage</a>, and Two-Handed <a href="#define-weapon">burden</a>.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Otherworldly</th>
-			<td class="og-ind-hang"><strong><em>Otherworldly:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can deal <a href="#define-damage-type">physical or magic damage</a>.</td>
+			<td><strong><em>Otherworldly:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can deal <a href="#define-damage-type">physical or magic damage</a>.</td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">&mdash;</td>
 			<td>Magic weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Painful</th>
-			<td class="og-ind-hang"><strong><em>Painful:</em></strong> Each time you make a successful <a href="#define-attack-roll">attack</a>, you must mark a <a href="#define-stress">Stress</a>.</td>
+			<td><strong><em>Painful:</em></strong> Each time you make a successful <a href="#define-attack-roll">attack</a>, you must mark a <a href="#define-stress">Stress</a>.</td>
 			<td class="text-center">d20</td>
 			<td class="text-center">Varies</td>
-			<td>Minimum of tier 3. Apply modifier change based on the size of the original damage die: <ul class="list-unstyled mb-0"><li>d6: &minus;2</li><li class="og-nowrap">d8: &minus;5</li></ul></td>
+			<td>Minimum tier 3. Apply modifier change based on the size of the original damage die: <ul class="list-unstyled mb-0"><li>d6: &minus;2</li><li>d8: &minus;5</li></ul></td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Persuasive</th>
-			<td class="og-ind-hang"><strong><em>Persuasive:</em></strong> Before you make a <a href="#define-trait-roll">Presence Roll</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to gain a +2 bonus to the result.</td>
+			<td><strong><em>Persuasive:</em></strong> Before you make a <a href="#define-trait-roll">Presence Roll</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to gain a +2 bonus to the result.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&mdash;</td>
 			<td>Magic weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Pompous</th>
-			<td class="og-ind-hang"><strong><em>Pompous:</em></strong> You must have a <a href="#define-presence">Presence</a> of 0 or lower to use this <a href="#define-weapon">weapon</a>.</td>
+			<td><strong><em>Pompous:</em></strong> You must have a <a href="#define-presence">Presence</a> of 0 or lower to use this <a href="#define-weapon">weapon</a>.</td>
 			<td class="text-center og-nowrap">Two steps up</td>
 			<td class="text-center">&mdash;</td>
 			<td>Apply only to weapons with a d6 or d8 damage die.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Powerful</th>
-			<td class="og-ind-hang"><strong><em>Powerful:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, roll an additional <a href="#define-damage-roll">damage die</a> and discard the lowest result.</td>
+			<td><strong><em>Powerful:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, roll an additional <a href="#define-damage-roll">damage die</a> and discard the lowest result.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">Varies</td>
 			<td>Apply modifier change based on <a href="#define-range">range</a>: <ul class="list-unstyled mb-0"><li><a href="#define-range">Melee</a>: +1</li><li><a href="#define-range">Very Close</a>: &mdash;</li><li><a href="#define-range">Close</a>: &minus;1</li><li><a href="#define-range">Far</a>: &minus;2</li><li><a href="#define-range">Very Far</a>: &minus;3</li></ul></td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Protective</th>
-			<td class="og-ind-hang"><strong><em>Protective:</em></strong> +1 to <a href="#define-armor">Armor Score</a></td>
+			<td><strong><em>Protective:</em></strong> +1 to <a href="#define-armor">Armor Score</a></td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;2</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Quick</th>
-			<td class="og-ind-hang"><strong><em>Quick:</em></strong> When you make an <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to target another creature within <a href="#define-range">range</a>.</td>
+			<td><strong><em>Quick:</em></strong> When you make an <a href="#define-attack-roll">attack</a>, you can <strong><a href="#define-stress">mark a Stress</a></strong> to target another creature within <a href="#define-range">range</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">Varies</td>
-			<td>Apply modifier change based on burden: <ul class="list-unstyled mb-0"><li>One-Handed: &minus;1</li><li class="og-nowrap">Two-Handed: &minus;3</li></ul></td>
+			<td>Apply modifier change based on burden: <ul class="list-unstyled mb-0"><li>One-Handed: &minus;1</li><li>Two-Handed: &minus;3</li></ul></td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Reliable</th>
-			<td class="og-ind-hang"><strong><em>Reliable:</em></strong> +1 to <a href="#define-attack-roll">attack rolls</a></td>
+			<td><strong><em>Reliable:</em></strong> +1 to <a href="#define-attack-roll">attack rolls</a></td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Reloading</th>
-			<td class="og-ind-hang"><strong><em>Reloading:</em></strong> After you make an <a href="#define-attack-roll">attack</a>, roll a <strong>d6</strong>. On a result of 1, you must mark a <a href="#define-stress">Stress</a> to reload this <a href="#define-weapon">weapon</a> before you can fire it again.</td>
+			<td><strong><em>Reloading:</em></strong> After you make an <a href="#define-attack-roll">attack</a>, roll a <strong>d6</strong>. On a result of 1, you must mark a <a href="#define-stress">Stress</a> to reload this <a href="#define-weapon">weapon</a> before you can fire it again.</td>
 			<td class="text-center">Step up</td>
 			<td class="text-center">+1</td>
 			<td>Assign to firearm weapons.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Retractable</th>
-			<td class="og-ind-hang"><strong><em>Retractable:</em></strong> The blade can be hidden in the hilt to avoid detection.</td>
+			<td><strong><em>Retractable:</em></strong> The blade can be hidden in the hilt to avoid detection.</td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">&mdash;</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Returning</th>
-			<td class="og-ind-hang"><strong><em>Returning:</em></strong> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
+			<td><strong><em>Returning:</em></strong> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Self-Correcting</th>
-			<td class="og-ind-hang"><strong><em>Self-Correcting:</em></strong> When you roll a 1 on a <a href="#define-damage-roll">damage die</a>, it deals 6 damage instead.</td>
+			<td><strong><em>Self-Correcting:</em></strong> When you roll a 1 on a <a href="#define-damage-roll">damage die</a>, it deals 6 damage instead.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;2</td>
 			<td>Magic weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Scary</th>
-			<td class="og-ind-hang"><strong><em>Scary:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, the target must mark a <a href="#define-stress">Stress</a>.</td>
+			<td><strong><em>Scary:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, the target must mark a <a href="#define-stress">Stress</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&mdash;2</td>
-			<td>Minimum of tier 2.</td>
+			<td>Minimum tier 2.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Serrated</th>
-			<td class="og-ind-hang"><strong><em>Serrated:</em></strong> When you roll a 1 on a <a href="#define-damage-roll">damage die</a>, it deals 8 damage instead.</td>
+			<td><strong><em>Serrated:</em></strong> When you roll a 1 on a <a href="#define-damage-roll">damage die</a>, it deals 8 damage instead.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>Physical weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Timebending</th>
-			<td class="og-ind-hang"><strong><em>Timebending:</em></strong> You choose the target of your attack after making your <a href="#define-attack-roll">attack roll</a>.</td>
+			<td><strong><em>Timebending:</em></strong> You choose the target of your attack after making your <a href="#define-attack-roll">attack roll</a>.</td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">+2</td>
 			<td>Magic weapon only; minimum of tier 3. This is an unusually powerful feature.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Versatile</th>
-			<td class="og-ind-hang"><strong><em>Versatile:</em></strong> This <a href="#define-weapon">weapon</a> can also be used with these statistics&mdash;[<a href="#define-trait">Trait</a>], [<a href="#define-range">Range</a>], [<a href="#define-damage-roll">damage roll</a>].</td>
+			<td><strong><em>Versatile:</em></strong> This <a href="#define-weapon">weapon</a> can also be used with these statistics&mdash;[<a href="#define-trait">Trait</a>], [<a href="#define-range">Range</a>], [<a href="#define-damage-roll">damage roll</a>].</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;3</td>
 			<td>Set the alternate <a href="#define-damage-roll">damage roll</a> to that of a tier-equivalent weapon of the selected range, and step down its damage die.</td>
@@ -13701,7 +13926,7 @@
 <h6 id="pc-benchmark-weapons-secondary">Secondary Weapon Features<a class="og-h-anchor" href="#pc-benchmark-weapons-secondary" title="Permalink" aria-hidden="true"></a></h6>
 <ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
 <div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-	<caption>Secondary Weapon Features</caption>
+	<caption>Secondary Weapon Feature Benchmarks</caption>
 	<thead>
 		<tr>
 			<th class="visually-hidden" scope="col">Feature</th>
@@ -13714,98 +13939,98 @@
 	<tbody>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Barrier</th>
-			<td class="og-ind-hang"><strong><em>Barrier:</em></strong> +2 to <a href="#define-armor">Armor Score</a>; &minus;1 to <a href="#define-evasion">Evasion</a></td>
+			<td><strong><em>Barrier:</em></strong> +2 to <a href="#define-armor">Armor Score</a>; &minus;1 to <a href="#define-evasion">Evasion</a></td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Charged</th>
-			<td class="og-ind-hang"><strong><em>Charged:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a> on a <a href="#define-weapon">primary weapon</a> attack.</td>
+			<td><strong><em>Charged:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a> on a <a href="#define-weapon">primary weapon</a> attack.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>Magic weapon only; minimum of tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Deflecting</th>
-			<td class="og-ind-hang"><strong><em>Deflecting:</em></strong> When you are attacked, you can <strong><a href="#define-armor">mark an Armor Slot</a></strong> to gain a bonus to your <a href="#define-evasion">Evasion</a> equal to your available <a href="#define-armor">Armor Slots</a> against the attack.</td>
+			<td><strong><em>Deflecting:</em></strong> When you are attacked, you can <strong><a href="#define-armor">mark an Armor Slot</a></strong> to gain a bonus to your <a href="#define-evasion">Evasion</a> equal to your available <a href="#define-armor">Armor Slots</a> against the attack.</td>
 			<td class="text-center og-nowrap">Step down</td>
 			<td class="text-center">&minus;1</td>
-			<td>Minimum of tier 3.</td>
+			<td>Minimum tier 3.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Double Duty</th>
-			<td class="og-ind-hang"><strong><em>Double Duty:</em></strong> +1 to <a href="#define-armor">Armor Score</a>; +1 to <a href="#define-weapon">primary weapon</a> damage within <a href="#define-range">Melee</a> range</td>
+			<td><strong><em>Double Duty:</em></strong> +1 to <a href="#define-armor">Armor Score</a>; +1 to <a href="#define-weapon">primary weapon</a> damage within <a href="#define-range">Melee</a> range</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>Minimum of tier 2.</td>
+			<td>Minimum tier 2.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Doubled Up</th>
-			<td class="og-ind-hang"><strong><em>Doubled Up:</em></strong> When you make an attack with your <a href="#define-weapon">primary weapon</a>, you can deal damage to another target within <a href="#define-range">Melee</a> range.</td>
+			<td><strong><em>Doubled Up:</em></strong> When you make an attack with your <a href="#define-weapon">primary weapon</a>, you can deal damage to another target within <a href="#define-range">Melee</a> range.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">+1</td>
-			<td>Minimum of tier 4.</td>
+			<td>Minimum tier 4.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Hooked</th>
-			<td class="og-ind-hang"><strong><em>Hooked:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can pull the target into <a href="#define-range">Melee</a> range.</td>
+			<td><strong><em>Hooked:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, you can pull the target into <a href="#define-range">Melee</a> range.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Locked On</th>
-			<td class="og-ind-hang"><strong><em>Locked On:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, your next attack against the same target with your <a href="#define-weapon">primary weapon</a> automatically succeeds.</td>
+			<td><strong><em>Locked On:</em></strong> On a successful <a href="#define-attack-roll">attack</a>, your next attack against the same target with your <a href="#define-weapon">primary weapon</a> automatically succeeds.</td>
 			<td class="text-center og-nowrap">Step down</td>
 			<td class="text-center">&minus;7</td>
-			<td>Minimum of tier 4.</td>
+			<td>Minimum tier 4.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Paired</th>
-			<td class="og-ind-hang"><strong><em>Paired:</em></strong> +2 to <a href="#define-weapon">primary weapon</a> damage to targets within <a href="#define-range">Melee</a> range</td>
+			<td><strong><em>Paired:</em></strong> +2 to <a href="#define-weapon">primary weapon</a> damage to targets within <a href="#define-range">Melee</a> range</td>
 			<td class="text-center og-nowrap">Step up</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Parry</th>
-			<td class="og-ind-hang"><strong><em>Parry:</em></strong> When you are attacked, roll this <a href="#define-weapon">weapon</a>'s damage dice. If any of the attacker's damage dice rolled the same value as your dice, the matching results are discarded from the attacker's damage dice before the damage you take is totaled.</td>
+			<td><strong><em>Parry:</em></strong> When you are attacked, roll this <a href="#define-weapon">weapon</a>'s damage dice. If any of the attacker's damage dice rolled the same value as your dice, the matching results are discarded from the attacker's damage dice before the damage you take is totaled.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>Minimum of tier 2.</td>
+			<td>Minimum tier 2.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Protective</th>
-			<td class="og-ind-hang"><strong><em>Protective:</em></strong> +1 to <a href="#define-armor">Armor Score</a></td>
+			<td><strong><em>Protective:</em></strong> +1 to <a href="#define-armor">Armor Score</a></td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Returning</th>
-			<td class="og-ind-hang"><strong><em>Returning:</em></strong> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
+			<td><strong><em>Returning:</em></strong> When this <a href="#define-weapon">weapon</a> is <a href="#define-weapon">thrown</a> within its <a href="#define-range">range</a>, it appears in your hand immediately after the <a href="#define-attack-roll">attack</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">+1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Sheltering</th>
-			<td class="og-ind-hang"><strong><em>Sheltering:</em></strong> When you mark an <a href="#define-armor">Armor Slot</a>, it reduces damage for you and all allies within <a href="#define-range">Melee</a> range of you who took the same damage.</td>
+			<td><strong><em>Sheltering:</em></strong> When you mark an <a href="#define-armor">Armor Slot</a>, it reduces damage for you and all allies within <a href="#define-range">Melee</a> range of you who took the same damage.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>Minimum of tier 4.</td>
+			<td>Minimum tier 4.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Startling</th>
-			<td class="og-ind-hang"><strong><em>Startling:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to crack the whip and force all adversaries within <a href="#define-range">Melee</a> range back to <a href="#define-range">Close</a> range.</td>
+			<td><strong><em>Startling:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to crack the whip and force all adversaries within <a href="#define-range">Melee</a> range back to <a href="#define-range">Close</a> range.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>&mdash;</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="col">Versatile</th>
-			<td class="og-ind-hang"><strong><em>Versatile:</em></strong> This <a href="#define-weapon">weapon</a> can also be used with these statistics&mdash;[<a href="#define-trait">Trait</a>], [<a href="#define-range">Range</a>], [<a href="#define-damage-roll">damage roll</a>].</td>
+			<td><strong><em>Versatile:</em></strong> This <a href="#define-weapon">weapon</a> can also be used with these statistics&mdash;[<a href="#define-trait">Trait</a>], [<a href="#define-range">Range</a>], [<a href="#define-damage-roll">damage roll</a>].</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
 			<td>If the alternate attack is a shorter <a href="#define-range">range</a>, step up the damage die.</td>
@@ -13983,7 +14208,6 @@
 </div>
 <div id="define-adversary-benchmarks">
 	<h4 id="adversary-benchmarks">Adversary Benchmarks<a class="og-h-anchor" href="#adversary-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 208</li><li>Editorial Addition</li></ul>
 	<div class="alert ps-4 pb-0 og-omit">
 		<h5 class="h6">Adversary Benchmarks</h5>
 		<ul class="list-unstyled og-qr">
@@ -14013,7 +14237,13 @@
 			<li><a href="#define-adversary-fear-gain">Fear Gain</a></li>
 			<li><a href="#define-adversary-fear-features">Fear Features</a></li>
 		</ul>
+		<h5 class="h6">PC Benchmark Comparisons</h5>
+		<ul class="list-unstyled og-qr">
+			<li><a href="#define-pc-benchmark-defense">Defense</a></li>
+			<li><a href="#define-pc-benchmark-damage">Damage</a></li>
+		</ul>		
 	</div>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 208</li><li>Editorial Addition</li></ul>
 	<p>The following tables shows ranges and averages for various <a href="#define-adversary">adversary</a> statistics by <a href="#define-adversary-type">adversary type</a>.</p>
 	<dl>
 		<dt>Difficulty</dt>
