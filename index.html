@@ -117,7 +117,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.05f (2025-10-16)</p>
+<p class="small text-center">version 1.05g (2025-10-19)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -2409,7 +2409,7 @@
 				<th class="fw-normal" scope="row">Vicious</th>
 				<td>You can choose to use this advancement to modify your companion's standard attack in one of two ways:
 					<ul class="og-list-disc mb-0">
-						<li>Increase <a href="#define-damage-roll">damage dice</a> by one step, up to a maximum of <strong>d12</strong>.</li>
+						<li>Increase <a href="#define-damage-roll">damage dice</a> by one step (to a maximum of <strong>d12</strong>).</li>
 						<li>Increase <a href="#define-range">range</a> by one step, for example, from Melee to Close.</li>
 					</ul>
 				</td>
@@ -9233,17 +9233,21 @@
 		<dd>While unarmored, your base Armor Score is 0, your <a href="#define-hit-point">Major threshold</a> is equal to your <a href="#define-level">level</a>, and your <a href="#define-hit-point">Severe threshold</a> is equal to twice your <a href="#define-level">level</a>.</dd>
 		<dt>Equipping Armor</dt>
 		<dd>You can't equip armor while in danger or under pressure, and you can't equip armor of a higher <a href="#define-tier">tier</a> than yours. You can equip only one set of armor.  Each set of armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</dd>
-		<dt>Armor Score and Armor Slots</dt>
-		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href="#define-procedure">modifiers</a> (to a maximum of 12) you gain from your <a class="#define-ancestry">ancestry</a>, <a href="#define-class">class</a>, or <a href="#define-subclass">subclass</a> features and your <a href="#define-domain-card">domain cards</a>. When <a href="#define-damage-roll">incoming damage</a> would cause you to mark <a href="#define-hit-point">Hit Points</a>, you can mark one <strong>Armor Slot</strong> to reduce the severity of the damage by one <a href="#define-hit-point">threshold</a>&mdash;for example, from Severe to Major, Major to Minor, or Minor to Nothing. If your Armor Score gains a <a href="#define-temporary">temporary</a> bonus, your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>
 		<dt>Base Thresholds</dt>
 		<dd>When equipped, a set of armor's base thresholds determine your Major and Severe <a href="#define-hit-point">damage thresholds</a>. Add your <a href="#define-level">level</a> to each.</dd>
+		<dt>Armor Score and Armor Slots</dt>
+		<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href="#define-procedure">modifiers</a> (to a maximum of 12) you gain from your <a class="#define-ancestry">ancestry</a>, <a href="#define-class">class</a>, or <a href="#define-subclass">subclass</a> features and your <a href="#define-domain-card">domain cards</a>. When <a href="#define-damage-roll">incoming damage</a> would cause you to mark <a href="#define-hit-point">Hit Points</a>, you can mark one <strong>Armor Slot</strong> to reduce the severity of the damage by one <a href="#define-hit-point">threshold</a>&mdash;for example, from Severe to Major, Major to Minor, or Minor to Nothing.</dd>
 		<dt>Feature</dt>
 		<dd>Some armors grant a feature when equipped.</dd>
+		<dt>Temporary Armor</dt>
+		<dd>If your Armor Score gains a <a href="#define-temporary">temporary</a> bonus&mdash;for example, from a <a href="#define-domain-card">domain card</a> like <a href="#define-domain-card-book-of-ava">Book of Ava</a>&mdash;your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>
 		<dt>Repairing Armor</dt>
-		<dd>You can clear marked armor slots by repairing it during <a href="#define-downtime">downtime</a>.</dd>
+		<dd>When you take a <a href="#define-downtime">rest</a>, you can clear marked armor slots as a <a href="#define-downtime-move">downtime move</a>.</dd>
+		<dt>Shields</dt>
+		<dd>Shields are <a href="#weapons-secondary">secondary weapons</a> that provide a bonus to your Armor Score.</dt>
 	</dl>
 	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p>Some features give a bonus to your <a href="#define-hit-point">damage thresholds</a>&mdash;for example, the <em>Shell</em> feature from the <a href="#define-galapa">Galapa</a> ancestry, or the <em>Unwavering</em> feature from the <a href="#define-guardian-stalwart">Stalwart</a> <a href="#define-guardian">Guardian</a>. These bonuses apply wether you equip armor or not. Shields aren't technically armor, but are <a href="#weapons-secondary-tier-1">secondary weapons</a> instead.</p>
+		<p>Some features alter your <a href="#define-hit-point">damage thresholds</a>&mdash;for example, the <em>Shell</em> feature from the <a href="#define-galapa">Galapa</a> ancestry, or the <em>Unwavering</em> feature from the <a href="#define-guardian-stalwart">Stalwart</a> <a href="#define-guardian">Guardian</a>, or <a href="#define-domain-card">domain cards</a> like <a href="#define-domain-card-bare-bones">Bare Bones</a>.</p>
 	</div>
 </div>
 <h4 id="armor-tables">Armor Tables<a class="og-h-anchor" href="#armor-tables" title="Permalink" aria-hidden="true"></a></h4>
@@ -10919,17 +10923,34 @@
 		<div id="define-falling">
 			<h4 id="falling-and-collision-damage">Falling and Collision Damage<a class="og-h-anchor" href="#falling-and-collision-damage" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 168</li></ul>
-			<p>If a character falls or collides with something at high speed, the GM might use the <a href="#define-range">range</a> fallen to determine the <a href="#define-damage-roll">damage</a> the collision inflicts:</p>
-			<dl>
-				<dt>Very Close Fall</dt>
-				<dd><strong>1d10+3</strong> <a href="#define-damage-type">physical damage</a></dd>
-				<dt>Close Fall</dt>
-				<dd><strong>1d20+5</strong> <a href="#define-damage-type">physical damage</a></dd>
-				<dt>Far or Very Far Fall</dt>
-				<dd><strong>1d100+15</strong> <a href="#define-damage-type">physical damage</a> (or <a href="#define-death">death</a>, at the GM's discretion)</dd>
-				<dt>Collision at Dangerous Speed</dt>
-				<dd><strong>1d20+5</strong> <a href="#define-damage-type">direct physical damage</a></dd>
-			</dl>
+			<p>If a character falls or collides with something at high speed, the GM might use the <a href="#define-range">range</a> fallen to determine how much <a href="#define-damage-type">physical damage</a> the collision inflicts.</p>
+			<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
+				<caption>Falling and Collision Damage</caption>
+				<thead>
+					<tr>
+						<th scope="col">Fall Distance</th>
+						<th scope="col">Damage</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row" class="fw-normal">Very Close</th>
+						<td><strong>1d10+3</strong></td>
+					</tr>
+					<tr>
+						<th scope="row" class="fw-normal">Close</th>
+						<td><strong>1d20+5</strong></td>
+					</tr>
+					<tr>
+						<th scope="row" class="fw-normal">Far or Very Far</th>
+						<td><strong>1d100+15</strong> (or <a href="#define-death">death</a>, at the GM's discretion)</td>
+					</tr>
+					<tr>
+						<th scope="row" class="fw-normal">Collision at Dangerous Speed</th>
+						<td><strong>1d20+5</strong> <a href="#define-damage-type">direct damage</a></td>
+					</tr>
+				</tbody>
+			</table></div>
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
@@ -10990,7 +11011,7 @@
 			<p>After a successful <a href="#define-attack-roll">attack roll</a>, you make a <strong>damage roll</strong>.</p>
 			<dl>
 				<dt>Proficiency</dt>
-				<dd>Your Proficiency determines the number of damage dice you roll&mdash;for example, if your Proficiency is and 2 you are wielding a <a href="#define-weapon">weapons</a>, you roll two damage dice. Your Proficiency starts at 1 and increases each time you reach a new <a href="#define-tier">tier</a>. You can purchase an <a href="#define-advancement">advancement</a> to increase your Proficiency when you gain a <a href="#define-level">level</a>.</dd>
+				<dd>Your Proficiency determines the number of damage dice you roll&mdash;for example, if your Proficiency is and 2 you are wielding a <a href="#define-weapon">weapon</a>, you roll two damage dice. Your Proficiency starts at 1 and increases each time you reach a new <a href="#define-tier">tier</a>. When you reach Tiers 2 and 3, you can purchase an <a href="#define-advancement">advancement</a> to increase your Proficiency when you gain a <a href="#define-level">level</a>.</dd>
 			</dl>
 			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 				<p>Some <a href="#define-subclass">subclass</a> features and <a href="#define-domain-card">domain cards</a> are enhanced by your Proficiency in other ways.</p>
@@ -11026,9 +11047,9 @@
 				<dt>Direct damage</dt>
 				<dd>Direct damage can be magic or physical. Either way, it can't be reduced by marking <a href="#define-armor">Armor Slots</a>.</dd>
 				<dt>Resistance</dt>
-				<dd>Resistance reduces incoming damage of a type by half, and is applied before other ways of reducing incoming damage&mdash;for example, marking <a href="#define-armor">Armor Slots</a>. Resistance doesn't <a href="#define-temporary">stack</a>. If an attack deals physical and magic damage, the target must be resistant to both.</dd>
+				<dd>Resistance to a type of damage reduces incoming damage by half before other modifiers that reduce incoming damage&mdash;for example, <a href="#define-domain-card">domain cards</a> like <a href="#define-domain-card-rune-ward">Rune Ward</a>. Resistance doesn't <a href="#define-temporary">stack</a>. If an effect deals both physical and magic damage, the target must be resistant to both.</dd>
 				<dt>Immunity</dt>
-				<dd>A target with immunity to a damage type ignores it. If an attack deals both physical and magic damage, the target must be immune to both.</dd>
+				<dd>A target with immunity to a damage type ignores it. If an effect deals both physical and magic damage, the target must be immune to both.</dd>
 				<dt>Multiple Sources of Damage</dt>
 				<dd>Total simultaneous damage before comparing it to a target's <a href="#define-hit-point">damage thresholds</a>. <span class="og-omit">For example, if you are an <a href="#define-orc">orc</a> who successfully <a href="#define-attack-roll">attacks</a> a target within <a href="#define-range">Melee</a> range and <strong><a href="#define-hope">spend a Hope</a></strong> to use your <strong><em>Tusks</em></strong> feature, you roll your <a href="#define-weapon">weapon</a> damage and add <strong>1d6</strong> to the result.</span></dd>
 			</dl>
@@ -11039,7 +11060,7 @@
 <div id="define-hit-point">
 	<h3 id="damage-thresholds-and-hit-points">Damage Thresholds and Hit Points<a class="og-h-anchor" href="#damage-thresholds-and-hit-points" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 91</li><li>Errata</li></ul>
-	<p><strong>Hit Points</strong> represent capacity to withstand physical injury. When a character takes <a href="#define-damage-roll">damage</a>, they mark 1&ndash;3 Hit Points, based on their <strong>damage thresholds</strong>. Your damage thresholds are determined by your <a href="#define-armor">armor</a>, and gain a bonus equal to your <a href="#define-level">level</a>.</p>
+	<p><strong>Hit Points</strong> represent capacity to withstand physical injury. When a character takes <a href="#define-damage-roll">incoming damage</a>, they compare it to their <strong>damage thresholds</strong>. Your damage thresholds are determined by your <a href="#define-armor">armor</a>, and gain a bonus equal to your <a href="#define-level">level</a>.</p>
 	<dl>
 		<dt>Severe Damage</dt>
 		<dd>If the damage meets or beats the <strong>Severe</strong> damage threshold, mark 3 Hit Points.</dd>
@@ -11048,13 +11069,13 @@
 		<dt>Minor Damage</dt>
 		<dd>If the damage is below the <strong>Major</strong> damage threshold, mark 1 Hit Point.</dd>
 		<dt>Marking Hit Points</dt>
-		<dd>When <a href="#define-damage-roll">incoming damage</a> would cause you to mark Hit Points, you can mark one <a href="#define-armor">Armor Slot</a> instead of a Hit Point. Some features allow you to mark <a href="#define-stress">Stress</a> instead of Hit Points. Some features allow you to mark additional Armor slots&mdash;for example, the <a href="#define-guardian-stalwart">Stalwart</a> <a href="#define-guardian">Guardian's</a> <em>Iron Will</em> feature, and <a href="#define-domain-card">domain cards</a> like <a href="#define-domain-card-brace">Brace</a>.</dd>
+		<dd>When <a href="#define-damage-roll">incoming damage</a> would cause you to mark Hit Points, you can mark one <a href="#define-armor">Armor Slot</a> instead of a Hit Point. Some features allow you to mark additional Armor slots or avoid marking Hit Points in other ways&mdash;for example, the <a href="#define-guardian-stalwart">Stalwart</a> <a href="#define-guardian">Guardian's</a> <em>Iron Will</em> feature, and <a href="#define-domain-card">domain cards</a> like <a href="#define-domain-card-brace">Brace</a> and <a href="#define-domain-card-get-back-up">Get Back Up</a>.</dd>
 		<dt>Death and Defeat</dt>
 		<dd>If you mark your last Hit Point, make a <a href="#define-death">death move</a>. If an <a href="#define-adversary">adversary</a>'s last Hit Point is marked, they are defeated&mdash;incapacitated, tied up, routed, killed&mdash;whatever makes sense.</dd>
 		<dt>Clearing Hit Points</dt>
 		<dd>You can clear marked Hit Points during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
 		<dt>Increasing Hit Points</dt>
-		<dd>Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Hit Points (up to a maximum of 12).</dd>
+		<dd>Your starting Hit Points are determined by your <a href="#define-class">class</a>, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Hit Points (to a maximum of 12).</dd>
 	</dl>
 </div>
 <div class="og-topbar">
@@ -11075,7 +11096,7 @@
 		<dt>Clearing Stress</dt>
 		<dd>Stress is cleared during <a href="#define-downtime">downtime</a> or by activating certain features.</dd>
 		<dt>Increasing Stress Slots</dt>
-		<dd>You start with 6 Stress slots, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Stress slots (up to a maximum of 12).</dd>
+		<dd>You start with 6 Stress slots, but they might have been modified by your <a href="#define-subclass">subclass</a> or <a href="#define-ancestry">ancestry</a>. When you gain a <a href="#define-level">level</a>, can purchase an <a href="#define-advancement">advancement</a> to increase your Stress slots (to a maximum of 12).</dd>
 	</dl>
 </div>
 <hr>
@@ -12557,7 +12578,7 @@
 		<div id="define-fear">
 			<h3 id="fear">Fear<a class="og-h-anchor" href="#fear" title="Permalink" aria-hidden="true"></a></h3>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 91</li><li>Page 153</li><li>Page 154</li></ul>
-			<p>The GM starts the game with a number of <strong>Fear</strong> equal to the number of PCs. Like <a href="#define-hope">Hope</a>, Fear carries over between sessions. The GM gains Fear (up to a maximum of 12) when:</p>
+			<p>The GM starts the game with a number of <strong>Fear</strong> equal to the number of PCs. Like <a href="#define-hope">Hope</a>, Fear carries over between sessions. The GM gains Fear (to a maximum of 12) when:</p>
 			<ul class="og-list-disc">
 				<li>A PC <a href="#define-action-roll">rolls with Fear</a></li>
 				<li>The PCs take a <a href="#define-downtime">short rest</a>, <a href="#define-downtime">long rest</a> or extended <a href="#define-downtime">downtime</a></li>
@@ -13929,10 +13950,10 @@
 	<tbody>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="row">Barrier</th>
-			<td><strong><em>Barrier:</em></strong> +2 to <a href="#define-armor">Armor Score</a>; &minus;1 to <a href="#define-evasion">Evasion</a></td>
+			<td><strong><em>Barrier:</em></strong> +<strong>X</strong> to <a href="#define-armor">Armor Score</a>; &minus;1 to <a href="#define-evasion">Evasion</a></td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>&mdash;</td>
+			<td>X is equal to weapon tier + 1.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="row">Charged</th>
@@ -13992,10 +14013,10 @@
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="row">Protective</th>
-			<td><strong><em>Protective:</em></strong> +1 to <a href="#define-armor">Armor Score</a></td>
+			<td><strong><em>Protective:</em></strong> +<strong>X</strong> to <a href="#define-armor">Armor Score</a></td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">&minus;1</td>
-			<td>&mdash;</td>
+			<td>X is equal to weapon tier.</td>
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="row">Returning</th>
