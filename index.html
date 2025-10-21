@@ -95,7 +95,7 @@
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-encounters" role="button" data-bs-toggle="dropdown" aria-expanded="false">Encounters</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-encounters">
 						<li><a class="dropdown-item og-nav" href="#pc-benchmarks">PC Benchmarks</a></li>
-						<li><a class="dropdown-item og-nav" href="#encounters">NPCs</a></li>
+						<li><a class="dropdown-item og-nav" href="#npcs">NPCs</a></li>
 						<li><a class="dropdown-item og-nav" href="#adversaries">Adversaries</a></li>
 						<li><a class="dropdown-item og-nav" href="#adversary-benchmarks">Adversary Benchmarks</a></li>
 						<li><a class="dropdown-item og-nav" href="#adversary-stat-blocks">Adversary Stat Blocks</a></li>
@@ -117,7 +117,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.05g (2025-10-19)</p>
+<p class="small text-center">version 1.05h (2025-10-21)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -157,9 +157,23 @@
 			<dt>Improve Accessibility and Inclusion</dt>
 			<dd>Avoid referencing character sheets or physical cards the reader might not own or be able to use. Add metric unit conversions. Provide a mobile-friendly format, extensive hyperlinks, tooltips for quick reference.</dd>
 			<dt>Add Indices</dt>
-			<dd><ul class="og-list-inline"><li><a href="#define-mixed-ancestry">Mixed Ancestry</a></li><li><a href="#define-loot">Loot</a></li><li><a href="#define-consumable">Consumables</a><li><a href="#flow-of-the-game">Flow of the Game</a></li><li><a href="#key-terms">Key Terms</a></li><li><a href="#define-optional-rules">Optional Rules</a><li><a href="#gm-tools">GM tools</a></li><li><a href="#difficulty-benchmarks">Difficulty Benchmarks</a></li><li><a href="#pc-benchmarks">PC Benchmarks</a></li><li><a href="#adversary-benchmarks">Adversary Benchmarks</a></li></ul></dd>
+			<dd>
+				<ul class="og-list-inline">
+					<li><a href="#adversary-benchmarks">Adversary Benchmarks</a></li>
+					<li><a href="#difficulty-benchmarks">Difficulty Benchmarks</a></li>
+					<li><a href="#define-conditions">Conditions</a></li>
+					<li><a href="#define-consumable">Consumables</a></li>
+					<li><a href="#flow-of-the-game">Flow of the Game</a></li>
+					<li><a href="#gm-tools">GM tools</a></li>
+					<li><a href="#key-terms">Key Terms</a></li>
+					<li><a href="#define-mixed-ancestry">Mixed Ancestry</a></li>
+					<li><a href="#define-loot">Loot</a></li>
+					<li><a href="#define-optional-rules">Optional Rules</a></li>
+					<li><a href="#pc-benchmarks">PC Benchmarks</a></li>
+				</ul>
+			</dd>
 			<dt>100% Human-Made</dt>
-			<dd>No algorithmic machine learning or large-language models are used to create the product.</dd>
+			<dd>No algorithmic machine learning or large-language models are used to create the product. This is a living document&mdash;revisions are an ongoing project.</dd>
 		</dl>
 		<h3 class="h6">Translations</h3>
 		<p>While the editor can't verify their accuracy, translations of the OG-DHSRD are available:</p>
@@ -250,7 +264,7 @@
 			<dd>A polyhedral die is noted by the number of sides it has&mdash;for example, a <strong>d6</strong> is a six-sided die. Multiple dice are called for, too&mdash;for example, <strong>2d10</strong> is two ten-sided dice. Each player will need at least <strong>2d12</strong> for <a href="#define-action-roll">Duality Dice</a>, and at least one <strong>d20</strong>, <strong>d10</strong>, <strong>d8</strong>, <strong>d6</strong>, and <strong>d4</strong> each. At higher <a href="#define-level">levels</a>&mdash;or if you're the GM&mdash;you'll probably need a few of each. You can share dice with others. If you can't use dice, any method of generating random numbers works&mdash;spinners, digital apps, or virtual tabletops (VTTs) are all good options.</dd>
 		</dl>
 		<div class="text-center og-omit">
-			<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, and d12." aria-hidden="true">
+			<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, d12, and d20." aria-hidden="true">
 		</div>
 		<dl>
 			<dt>Notes</dt>
@@ -2313,25 +2327,30 @@
 <div id="define-beastbound-companion">
 	<h4 id="ranger-beastbound-companion">Beastbound Companion<a class="og-h-anchor" href="#ranger-beastbound-companion" title="Permalink" aria-hidden="true"></a></h4>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 40</li><li>Errata</li></ul>
-	<p>Your <a href="#define-ranger-beastbound">Beastbound</a> <a href="#define-ranger">ranger</a> companion starts with the following statistics:</p>
+	<p>Your <a href="#define-ranger-beastbound">Beastbound</a> companion starts with the following statistics:</p>
 	<div class="og-topbar">
 		<ul class="list-unstyled">
-			<li><strong><span class="og-omit">Starting </span>Evasion:</strong> 10</li>
-			<li><strong><span class="og-omit">Starting </span>Stress Slots:</strong> 3</li>
-			<li><strong><span class="og-omit">Starting </span>Damage:</strong> d6 (When you gain your companion, choose whether they deal <a href="#define-damage-type">physical</a> or <a href="#define-damage-type">magic damage)</a></li>
-			<li><strong><span class="og-omit">Starting </span>Experiences:</strong> 2</li>
+			<li><strong>Evasion:</strong> 10</li>
+			<li><strong>Stress Slots:</strong> 3</li>
+			<li><strong>Attack:</strong> <a href="#define-range">Melee</a>, d6</a></li>
+			<li><strong>Experiences:</strong> 2</li>
 		</ul>
 	</div>
 	<dl>
 		<dt>Companion Basics</dt>
-		<dd>Work with the GM to choose the type of animal, their name, and <span class="og-omit">based on their training and your shared history, </span>create two <a href="#define-experience">Experiences</a> for them<span class="og-omit">, each with a +2 <a href="#define-procedure">modifier</a></span>.</dd>
-		<dt>Using Spellcast Rolls, Hope, and Experiences</dt>
-		<dd>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll</a></strong> to command your companion to take <a href="#define-action">action</a>, and <strong><a href="#define-hope">spend a Hope</a></strong> to add a relevant <a href="#define-beastbound-companion">companion</a> <a href="#define-experience">Experience</a>'s <a href="#define-procedure">modifier</a><span class="og-omit"> to the roll</span>. On a <a href="#define-action-roll">success with Hope</a>, if your next <a href="#define-action">action</a> builds on their success, you gain <a href="#define-advantage">advantage</a> on the roll.</dd>
-		<dt>Attacking With Your Companion</dt>
-		<dd>Companion <a href="#define-attack-roll">attack rolls</a> gain any benefits that normally only apply to you, for example, <a href="#define-ranger">Ranger's Focus</a>. The companion's <a href="#define-damage-roll">damage roll</a> uses your <a href="#define-damage-roll">Proficiency</a> and the <a href="#define-beastbound-companion">companion</a>'s damage die&mdash;for example, at <a href="#define-level">Level 1</a>, the companion deals <strong>1d6</strong> damage.</dd>
+		<dd>Work with the GM to choose the type of animal and their name. Choose whether they deal <a href="#define-damage-type">physical damage</a> or <a href="#define-damage-type">magic damage.</a></dd>
+		<dt>Companion Experiences</dt>
+		<dd>Based on their training and your shared history, create two <a href="#define-experience">Experiences</a> for your companion, each with a +2 <a href="#define-procedure">modifier</a>. You can increase the bonus of a companion experience as a <a href="#define-beastbound-companion-advancement">companion advancement</a>.</dd>
+		<dt>Issuing Commands</dt>
+		<dd>Make a <strong><a href="#define-spellcast-roll">Spellcast Roll</a></strong> to command your companion to take <a href="#define-action">action</a>. You can <strong><a href="#define-hope">spend a Hope</a></strong> to add a relevant companion Experience's <a href="#define-procedure">modifier</a> to the roll. On a <a href="#define-action-roll">success with Hope</a>, if your next <a href="#define-action">action</a> builds on their success, you gain <a href="#define-advantage">advantage</a> on the roll.</dd>
+		<dt>Companion Attacks</dt>
+		<dd>Your companion's <a href="#define-attack-roll">attack rolls</a> gain benefits that normally only apply to you&mdash;for example, your <a href="#define-ranger"><em>Ranger's Focus</em></a> feature. The companion's <a href="#define-damage-roll">damage roll</a> uses your <a href="#define-damage-roll">Proficiency</a> and the companion's <a href="#define-damage-roll">damage die</a>, which starts as a <strong>d6</strong>. You can increase your companion's damage die or the range of its attacks as a <a href="#define-beastbound-companion-advancement">companion advancement</a>.</dd>
 		<dt>Stress as Damage</dt>
-		<dd>When your companion would take any amount of damage, they mark a <a href="#define-stress">Stress</a> instead. If you choose a <a href="#define-downtime-move">downtime move</a> that clears your Stress, your companion clears an equal amount. If their last Stress is marked, they exit the scene, becoming unavailable until the start of your next <a href="#define-downtime">long rest</a>, when they clear 1 Stress and return to you.</dd>
+		<dd>When your companion would take any amount of damage, they mark a <a href="#define-stress">Stress</a> instead. If you choose a <a href="#define-downtime-move">downtime move</a> that clears your Stress, your companion clears an equal amount. If their last Stress is marked, they exit the scene, becoming unavailable until the start of your next <a href="#define-downtime">long rest</a>, when they clear 1 Stress and return to you. You can increase your companion's Stress slots as a <a href="#define-beastbound-companion-advancement">companion advancement</a>.</dd>
 	</dl>
+	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p>Since companion damage is measured in <a href="#define-stress">Stress</a>, they don't have <a href="#define-hit-point">damage thresholds</a> or <a href="#define-hit-point">Hit Points</a>.</p>
+	</div>	
 </div>
 <div class="og-topbar">
 	<h5 class="h6" id="ranger-example-companion-experiences">Example Companion Experiences</h5>
@@ -2365,13 +2384,13 @@
 	</ul>
 </div>
 <div id="define-beastbound-companion-advancement">
-	<h5 id="ranger-companion-levels">Companion Levels<a class="og-h-anchor" href="#ranger-companion-levels" title="Permalink" aria-hidden="true"></a></h5>
+	<h5 id="ranger-companion-levels">Beastbound Companion Levels<a class="og-h-anchor" href="#ranger-companion-levels" title="Permalink" aria-hidden="true"></a></h5>
 	<ul class="og-list-inline og-ref og-omit"><li>Page 40</li></ul>
 	<p>When you gain a <a href="#define-level">level</a>, choose one available option for your <a href="#define-beastbound-companion">companion</a> from the following list. Options with multiple slots can be chosen more than once. When you choose an advancement, mark one of its slots.</p>
 	<p>Additionally, whenever you gain a new <a href="#define-experience">Experience</a> by reaching a new <a href="#define-tier">tier</a>, your companion also gains a new <a href="#define-experience">Experience</a> at +2.</p>
-	<h4 class="h6">Ranger Companion Advancements</h4>
-	<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
-		<caption>Ranger Companion Advancements</caption>
+	<h4 class="h6">Beastbound Companion Advancements</h4>
+	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+		<caption>Beastbound Companion Advancements</caption>
 		<thead>
 			<tr>
 				<th scope="col">Advancement</th>
@@ -2382,12 +2401,12 @@
 		<tbody>
 			<tr>
 				<th class="fw-normal" scope="row">Intelligent</th>
-				<td>Companion gains a +1 bonus to an <a href="#define-experience">Experience</a>.</td>
+				<td>Your companion gains a +1 bonus to an <a href="#define-experience">Experience</a>.</td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2B54;&nbsp;&#x2B54;&nbsp;&#x2B54;</span></td>
 			</tr>
 			<tr>
 				<th class="fw-normal" scope="row">Light in the Dark</th>
-				<td>Companion gains a <a href="#define-hope">Hope</a> slot you can use as if it were your own.</td>
+				<td>Your companion gains a <a href="#define-hope">Hope</a> slot you can use as if it were your own.</td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">1</span><span aria-hidden="true">&#x2B54;</span></td>
 			</tr>
 			<tr>
@@ -2410,14 +2429,14 @@
 				<td>You can choose to use this advancement to modify your companion's standard attack in one of two ways:
 					<ul class="og-list-disc mb-0">
 						<li>Increase <a href="#define-damage-roll">damage dice</a> by one step (to a maximum of <strong>d12</strong>).</li>
-						<li>Increase <a href="#define-range">range</a> by one step, for example, from Melee to Close.</li>
+						<li>Increase <a href="#define-range">range</a> by one step, for example, from Melee to Very Close.</li>
 					</ul>
 				</td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2B54;&nbsp;&#x2B54;&nbsp;&#x2B54;</span></td>
 			</tr>
 			<tr>
 				<th class="fw-normal" scope="row">Resilient</th>
-				<td>Companion gains 1 <a href="#define-stress">Stress</a> slot.</td>
+				<td>Your companion gains 1 <a href="#define-stress">Stress</a> slot.</td>
 				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2B54;&nbsp;&#x2B54;&nbsp;&#x2B54;</span></td>
 			</tr>
 			<tr>
@@ -11020,10 +11039,10 @@
 				<dt>Spellcast Trait</dt>
 				<dd>If a feature states you deal damage using your <a href="#define-subclass">Spellcast trait</a>, you roll a number of dice equal to it instead. If your <a href="#define-subclass">Spellcast trait</a> is +0 or lower, you don't roll any dice. You can purchase an <a href="#define-advancement">advancement</a> to increase <a href="#define-trait">traits</a> when you gain a <a href="#define-level">level</a>.</dd>
 				<dt>Damage Dice</dt>
-				<dd>Damage dice are arranged into <strong>steps</strong> by an increasing number of faces on the die: <strong>d4</strong>, <strong>d6</strong>, <strong>d8</strong>, <strong>d10</strong>, <strong>d12</strong>, and <strong>d20</strong>.</dd>
+				<dd>Damage dice are arranged into <strong>steps</strong> by an increasing number of faces on the die: <ul class="og-list-inline"><li>d4</li><li>d6</li><li>d8</li><li>d10</li><li>d12</li><li>d20</li></ul></dd>
 			</dl>
 			<div class="text-center og-omit">
-				<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, and d12." aria-hidden="true">
+				<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, d12, and d20." aria-hidden="true">
 			</div>
 			<dl>
 				<dt>Modifiers and Results</dt>
@@ -13528,7 +13547,7 @@
 			<p>This section contains a table with <a href="#define-damage-roll">damage roll</a> averages PCs make with <a href="#define-weapon">weapons</a>, but not features that increase an instance of damage, for example, <a href="#define-faun">Faun</a> ancestry's <em>Kick</em>, the <a href="#define-rogue">Rogue</a> class' <em>Sneak Attack</em>, or <a href="#define-warrior">Warrior</a> class' <em>Combat Training</em>.</p>
 			<p>Actual average <a href="#define-damage-roll">damage rolls</a> will be higher than these listings, and more complicated to calculate&mdash;after all, dealing damage requires a successful <a href="#define-attack-roll">attack rolls</a> against the <a href="#define-difficulty">Difficulty</a> of an <a href="#define-adversary">adversary</a>. As they gain <a href="#define-level">levels</a>, PCs can gain new features, <a href="#define-domain-card">domain cards</a>, and <a href="#define-advancement">advancements</a> that increase their <a href="#define-trait">traits</a> (accuracy) or <a href="#define-damage-roll">Proficiency</a> (damage).</p>
 			<p>Additional tables provide recommended modifications to <a href="#define-weapon">primary and secondary weapons</a> with features&mdash;based upon their other properties, along with recommended changes to their <a href="#define-damage-roll">damage roll</a>.</p>
-			<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, and d12." aria-hidden="true">
+			<img class="img-fluid mb-3 ps-4 pe-4" src="images/dice.svg" alt="Polyhedral Dice: d4, d6, d8, d10, d12, and d20." aria-hidden="true">
 		</div>
 		<div class="col-12 col-md-6">
 			<div class="og-topbar">
