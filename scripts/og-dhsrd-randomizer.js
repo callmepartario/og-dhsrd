@@ -37,6 +37,8 @@ function randomLoot1d12() {
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[randomLootResult - 1];
     document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = data.chance1d12[RandomLoot];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
 }
 function randomLoot2d12() {
     document.getElementById("random-loot-roll").innerHTML = "2d12";
@@ -44,6 +46,8 @@ function randomLoot2d12() {
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[randomLootResult - 1];
     document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = data.chance2d12[RandomLoot];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
 }
 function randomLoot3d12() {
     document.getElementById("random-loot-roll").innerHTML = "3d12";
@@ -51,6 +55,8 @@ function randomLoot3d12() {
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[randomLootResult - 1];
     document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = data.chance3d12[RandomLoot];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
 }
 function randomLoot4d12() {
     document.getElementById("random-loot-roll").innerHTML = "4d12";
@@ -58,6 +64,8 @@ function randomLoot4d12() {
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[randomLootResult - 1];
     document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = data.chance4d12[RandomLoot];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
 }
 function randomLoot5d12() {
     document.getElementById("random-loot-roll").innerHTML = "5d12";
@@ -65,6 +73,8 @@ function randomLoot5d12() {
     document.getElementById("random-loot-result").innerHTML = randomLootResult;
     let randomLoot = data.loot[randomLootResult - 1];
     document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = data.chance5d12[RandomLoot];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
 }
 
 function randomConsumable1d12() {
@@ -73,6 +83,8 @@ function randomConsumable1d12() {
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = data.chance1d12[RandomConsumable];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
 }
 function randomConsumable2d12() {
     document.getElementById("random-consumable-roll").innerHTML = "2d12";
@@ -80,6 +92,8 @@ function randomConsumable2d12() {
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = data.chance2d12[RandomConsumable];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
 }
 function randomConsumable3d12() {
     document.getElementById("random-consumable-roll").innerHTML = "3d12";
@@ -87,6 +101,8 @@ function randomConsumable3d12() {
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = data.chance3d12[RandomConsumable];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
 }
 function randomConsumable4d12() {
     document.getElementById("random-consumable-roll").innerHTML = "4d12";
@@ -94,6 +110,8 @@ function randomConsumable4d12() {
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = data.chance4d12[RandomConsumable];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
 }
 function randomConsumable5d12() {
     document.getElementById("random-consumable-roll").innerHTML = "5d12";
@@ -101,6 +119,8 @@ function randomConsumable5d12() {
     document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
     let randomConsumable = data.consumables[randomConsumableResult - 1];
     document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = data.chance5d12[RandomConsumable];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
 }
 
 // Listen
