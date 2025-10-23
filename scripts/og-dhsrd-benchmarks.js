@@ -187,8 +187,8 @@ function calcHopeFear() {
   document.getElementById('benchmark-hope-die').innerHTML = "d" + Hdie;
   document.getElementById('benchmark-fear-die').innerHTML = "d" + Fdie;
   // populate percentages
-  document.getElementById('benchmark-hope-percent').innerHTML = dualityDiceHope;
   document.getElementById('benchmark-fear-percent').innerHTML = dualityDiceFear;
+  document.getElementById('benchmark-hope-percent').innerHTML = dualityDiceHope;
   document.getElementById('benchmark-crit-percent').innerHTML = dualityDiceCrit;
   // populate chart widths
   $("#benchmark-hope-chart").css("width", dualityDiceHope);
