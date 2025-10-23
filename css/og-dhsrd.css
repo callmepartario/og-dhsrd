@@ -989,6 +989,62 @@ body.theme-dark .tooltip-inner {
 	padding-bottom: 0;
 }
 
+/* special buttons */
+.theme-light .btn-hope {
+    background-color: #fad3a0 !important;
+}
+.theme-light .btn-hope:hover {
+    background-color: #ffe9cd !important;
+}
+.theme-dark .btn-hope {
+    background-color: #ba4b00 !important;
+}
+.theme-dark .btn-hope:hover {
+    background-color: #d85c00 !important;
+}
+.theme-light .btn-fear {
+    background-color: #e4cbff !important;
+}
+.theme-light .btn-fear:hover {
+    background-color: #f0e2fe !important;
+}
+.theme-dark .btn-fear {
+    background-color: #4300ad !important;
+}
+.theme-dark .btn-fear:hover {
+    background-color: #70f !important;
+}
+.theme-light .btn-advantage {
+    background-color: #a1ffd3 !important;
+}
+.theme-light .btn-advantage:hover {
+    background-color: #c7ffe5 !important;
+}
+.theme-dark .btn-advantage {
+    background-color: #145e39 !important;
+}
+.theme-dark .btn-advantage:hover {
+    background-color: #1b8754 !important;
+}
+.theme-light .btn-disadvantage {
+    background-color: #ffcbd0 !important;
+}
+.theme-light .btn-disadvantage:hover {
+    background-color: #ffdde1 !important;
+}
+.theme-dark .btn-disadvantage {
+    background-color: #8e2433 !important;
+}
+.theme-dark .btn-disadvantage:hover {
+    background-color: #dc3545 !important;
+}
+
+.text-fear { color: #70f; }
+.bg-fear { background-color: #70f; }
+
+.text-hope { color: #f70; }
+.bg-hope { background-color: #f70; }
+
 /* ARCANA THEME */
 .og-theme-arcana .og-statblock, 
 .tooltip-inner .og-domain-arcana { 
