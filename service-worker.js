@@ -8,6 +8,7 @@ const cacheFiles = [
     'scripts/waitload.js',
     'scripts/jquery-3.7.1.min.js',
     'scripts/og-dhsrd-randomizer.js',
+    'scripts/og-dhsrd-benchmarks.js',
     'scripts/og-dhsrd-tooltips.js',
 ]
 // the cache version gets updated every time there is a new deployment
