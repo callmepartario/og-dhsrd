@@ -1,13 +1,13 @@
 const cacheFiles = [
     'index.html',
-    'db/og-dhsrd.json',
     'css/bootstrap.min.css',
     'css/og-dhsrd.css',
     'scripts/bootstrap.bundle.min',
     'scripts/modeswitch.js',
     'scripts/waitload.js',
     'scripts/jquery-3.7.1.min.js',
-    'scripts/og-dhsrd-randomizer.js',
+    'scripts/og-dhsrd-ancestries.js',
+    'scripts/og-dhsrd-loot.js',
     'scripts/og-dhsrd-benchmarks.js',
     'scripts/og-dhsrd-tooltips.js',
 ]

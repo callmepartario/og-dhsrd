@@ -1,0 +1,338 @@
+
+// data
+const loot = [
+	"<strong><em>Premium Bedroll:</em></strong> During <a href='#define-downtime'>downtime</a>, you automatically clear a <a href='#define-stress'>Stress</a>.",
+	"<strong><em>Piper Whistle:</em></strong> This handcrafted whistle has a distinctive sound. When you blow this whistle, its piercing tone can be heard within a 1-mile (1.6 km) radius.",
+	"<strong><em>Charging Quiver:</em></strong> When you succeed on an attack with an arrow stored in this quiver, gain a bonus to the <a href='#define-damage-roll'>damage roll</a> equal to your current <a href='#define-tier'>tier</a>.",
+	"<strong><em>Alistair's Torch:</em></strong> You can light this magic torch at will. The flame's light fills a much larger space than it should, enough to illuminate a cave bright as day.",
+	"<strong><em>Speaking Orbs:</em></strong> This pair of orbs allows any creatures holding them to communicate with each other across any distance.",
+	"<strong><em>Manacles:</em></strong> This pair of locking cuffs comes with a key.",
+	"<strong><em>Arcane Cloak:</em></strong> A creature with a <a href='#define-subclass'>Spellcast trait</a> wearing this cloak can adjust its color, texture, and size at will.",
+	"<strong><em>Woven Net:</em></strong> You can make a <a href='#define-trait-roll'>Finesse Roll</a> using this net to trap a small creature. A trapped target can break free with a successful <a href='#define-attack-roll'>Attack Roll</a> <strong>(16)</strong>.",
+	"<strong><em>Fire Jar:</em></strong> You can pour out the strange liquid contents of this jar to instantly produce fire. The contents regenerate when you take a <a href='#define-downtime'>long rest</a>.",
+	"<strong><em>Suspended Rod:</em></strong> This flat rod is inscribed with runes. When you activate the rod, it is immediately suspended in place. Until the rod is deactivated, it can't move, doesn't abide by the rules of gravity, and remains in place.",
+	"<strong><em>Glamour Stone:</em></strong> Activate this pebble-sized stone to memorize the appearance of someone you can see. <strong><a href='#define-hope'>Spend a Hope</a></strong> to magically recreate this guise on yourself as an illusion.",
+	"<strong><em>Empty Chest:</em></strong> This magical chest appears empty. When you speak a specific trigger word or action and open the chest, you can see the items stored within it.",
+	"<strong><em>Companion Case:</em></strong> This case can fit a small animal companion. While the companion is inside, the animal and case are <a href='#define-damage-type'>immune</a> to all damage and harmful effects.",
+	"<strong><em>Piercing Arrows:</em></strong> Three times per <a href='#define-downtime'>rest</a> when you succeed on an attack with one of these arrows, you can add your <a href='#define-damage-roll'>Proficiency</a> to the <a href='#define-damage-roll'>damage roll</a>.",
+	"<strong><em>Valorstone:</em></strong> You can attach this stone to <a href='#define-armor'>armor</a> that doesn't already have a feature. The armor gains the following feature.<ul class='og-list-disc mb-0'><li><strong><em>Resilient:</em></strong> Before you mark your last <a href='#define-armor'>Armor Slot</a>, roll a <strong>d6</strong>. On a result of 6,reduce the severity by one threshold without marking an Armor Slot.</li></ul>",
+	"<strong><em>Skeleton Key:</em></strong> When you use this key to open a locked door, you gain advantage on the <a href='#define-trait-roll'>Finesse Roll</a>.",
+	"<strong><em>Arcane Prism:</em></strong> Position this prism in a location of your choosing and activate it. All allies within <a href='#define-range'>Close</a> range of it gain a +1 bonus to their <a href='#define-spellcast-roll'>Spellcast Rolls</a>. While activated, the prism can't be moved. Once the prism is deactivated, it can't be activated again until your next <a href='#define-downtime'>long rest</a>.",
+	"<strong><em>Minor Stamina Potion Recipe:</em></strong> As a <a href='#define-downtime'-move>downtime move</a>, you can use the bone of a creature to craft a <a href='#define-loot-minor-stamina-potion'>Minor Stamina Potion</a>.",
+	"<strong><em>Minor Health Potion Recipe:</em></strong> As a <a href='#define-downtime'-move>downtime move</a>, you can use a vial of blood to craft a <a href='#define-loot-minor-health-potion'>Minor Health Potion</a>.",
+	"<strong><em>Homing Compasses:</em></strong> These two compasses point toward each other no matter how far apart they are.",
+	"<strong><em>Corrector Sprite:</em></strong> This tiny sprite sits in the curve of your ear canal and whispers helpful advice during combat. Once per <a href='#define-downtime'>short rest</a>, you can gain <a href='#define-advantage'>advantage</a> on an <a href='#define-attack-roll'>attack roll</a>.",
+	"<strong><em>Gecko Gloves:</em></strong> You can climb up vertical surfaces and across ceilings.",
+	"<strong><em>Lorekeeper:</em></strong> You can store the name and details of up to three hostile creatures inside this book. You gain a +1 bonus to <a href='#define-action-roll'>action rolls</a> against those creatures.",
+	"<strong><em>Vial of Darksmoke Recipe:</em></strong> As a <a href='#define-downtime'-move>downtime move</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to craft a <a href='#define-loot-vial-of-darksmoke'>Vial of Darksmoke</a>.",
+	"<strong><em>Bloodstone:</em></strong> You can attach this stone to a <a href='#define-weapon'>weapon</a> that doesn't already have a feature. The weapon gains the following feature.<ul class='og-list-disc mb-0'><li><strong><em>Brutal:</em></strong> When you roll the maximum value on a <a href='#define-damage-roll'>damage die</a>, roll an additional <a href='#define-damage-roll'>damage die</a>.</li></ul>",
+	"<strong><em>Greatstone:</em></strong> You can attach this stone to a <a href='#define-weapon'>weapon</a> that doesn't already have a feature. The weapon gains the following feature.<ul class='og-list-disc mb-0'><li><strong><em>Powerful:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, roll an additional <a href='#define-damage-roll'>damage die</a> and discard the lowest result.</li></ul>",
+	"<strong><em>Glider:</em></strong> While falling, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to deploy this small parachute and glide safely to the ground.",
+	"<strong><em>Ring of Silence:</em></strong> <strong><a href='#define-hope'>Spend a Hope</a></strong> to activate this ring. Your footsteps are silent until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Calming Pendant:</em></strong> When you would mark your last <a href='#define-stress'>Stress</a>, roll a <strong>d6</strong>. On a result of 5 or higher, don't mark it.",
+	"<strong><em>Dual Flask:</em></strong> This flask can hold two different liquids. You can swap between them by flipping a small switch on the flask's side.",
+	"<strong><em>Bag of Ficklesand:</em></strong> You can convince this small bag of sand to be much heavier or lighter with a successful <strong><a href='#define-trait-roll'>Presence Roll (10)</a></strong>. Additionally, on a successful <strong><a href='#define-trait-roll'>Finesse Roll (10)</a></strong>, you can blow a bit of sand into a target's face to make them <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.",
+	"<strong><em>Ring of Resistance:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can activate this ring after a successful attack against you to halve the damage.",
+	"<strong><em>Phoenix Feather:</em></strong> If you have at least one Phoenix Feather on you when you fall unconscious, you gain a +1 bonus to the roll you make to determine whether you gain a <a href='#define-death'>scar</a>.",
+	"<strong><em>Box of Many Goods:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can open this small box and roll a d12. On a result of 1&ndash;6, it's empty. On a result of 7&ndash;10, it contains one random common consumable. On a result of 11&ndash;12, it contains two random common <a href='#define-consumable'>consumables</a>.",
+	"<strong><em>Airblade Charm:</em></strong> You can attach this charm to a <a href='#define-weapon'>weapon</a> with a <a href='#define-range'>Melee</a> range. Three times per <a href='#define-downtime'>rest</a>, you can activate the charm and attack a target within <a href='#define-range'>Close</a> range.",
+	"<strong><em>Portal Seed:</em></strong> You can plant this seed in the ground to grow a portal in that spot. The portal is ready to use in 24 hours. You can use this portal to travel to any other location where you planted a portal seed. A portal can be destroyed by dealing any amount of <a href='#define-damage-type'>magic damage</a> to it.",
+	"<strong><em>Paragon's Chain:</em></strong> As a <a href='#define-downtime'-move>downtime move</a>, you can meditate on an ideal or principle you hold dear and focus your will into this chain. Once per <a href='#define-downtime'>long rest</a>, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to roll a <strong>d20</strong> as your <a href='#define-action-roll'>Hope Die</a> for rolls that directly align with that principle.",
+	"<strong><em>Elusive Amulet:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can activate this amulet to become <a href='#define-condition'><em>Hidden</em></a> until you move. While <em>Hidden</em> in this way, you remain unseen even if an <a href='#define-adversary'>adversary</a> moves to where they would normally see you.",
+	"<strong><em>Hopekeeper Locket:</em></strong> During a <a href='#define-downtime'>long rest</a>, if you have 6 <a href='#define-hope'>Hope</a>, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to imbue this locket with your bountiful resolve. When you have 0 <a href='#define-hope'>Hope</a>, you can use the locket to immediately gain a <a href='#define-hope'>Hope</a>. The locket must be re-imbued before it can be used this way again.",
+	"<strong><em>Infinite Bag:</em></strong> When you store items in this bag, they are kept in a pocket dimension that never runs out of space. You can retrieve an item at any time.",
+	"<strong><em>Stride Relic:</em></strong> You gain a +1 bonus to your <a href='#define-agility'>Agility</a>. You can only carry one relic.",
+	"<strong><em>Bolster Relic:</em></strong> You gain a +1 bonus to your <a href='#define-strength'>Strength</a>. You can only carry one relic.",
+	"<strong><em>Control Relic:</em></strong> You gain a +1 bonus to your  <a href='#define-finesse'>Finesse</a>. You can only carry one relic.",
+	"<strong><em>Attune Relic:</em></strong> You gain a +1 bonus to your  <a href='#define-instinct'>Instinct</a>. You can only carry one relic.",
+	"<strong><em>Charm Relic:</em></strong> You gain a +1 bonus to your  <a href='#define-presence'>Presence</a>. You can only carry one relic.",
+	"<strong><em>Enlighten Relic:</em></strong> You gain a +1 bonus to your  <a href='#define-knowledge'>Knowledge</a>. You can only carry one relic.",
+	"<strong><em>Honing Relic:</em></strong> You gain a +1 bonus to an <a href='#define-experience'>Experience</a> of your choice. You can only carry one relic.",
+	"<strong><em>Flickerfly Pendant:</em></strong> While you carry this pendant, your <a href='#define-weapon'>weapons</a> with a <a href='#define-range'>Melee</a> range that deal <a href='#define-damage-type'>physical damage</a> have a gossamer sheen and can attack targets within <a href='#define-range'>Very Close</a> range.",
+	"<strong><em>Lasketider Boots:</em></strong> You can walk on the surface of water as if it were soft ground.</span></td>",
+	"<strong><em>Clay Companion:</em></strong> When you sculpt this ball of clay into a clay animal companion, it behaves as that animal. For example, a clay spider can spin clay webs, while a clay bird can fly. The clay companion retains memory and identity across different shapes, but they can adopt new mannerisms with each form.",
+	"<strong><em>Mythic Dust Recipe:</em></strong> As a <a href='#define-downtime'-move>downtime move</a>, you can use a handful of fine gold dust to craft <a href='#define-loot-mythic-dust'>Mythic Dust</a>.",
+	"<strong><em>Shard of Memory:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can <strong><a href='#define-hope'>spend 2 Hope</a></strong> to recall a <a href='#define-domain-card'>domain card</a> from your <a href='#define-loadout'>vault</a> instead of paying its <a href='#define-domain-card'>Recall Cost</a>.",
+	"<strong><em>Gem of Alacrity:</em></strong> You can attach this gem to a <a href='#define-weapon'>weapon</a>, allowing you to use your <a href='#define-agility'>Agility</a> when making an <a href='#define-attack-roll'>attack</a> with that weapon.",
+	"<strong><em>Gem of Might:</em></strong> You can attach this gem to a <a href='#define-weapon'>weapon</a>, allowing you to use your <a href='#define-strength'>Strength</a> when making an <a href='#define-attack-roll'>attack</a> with that weapon.",
+	"<strong><em>Gem of Precision:</em></strong> You can attach this gem to a <a href='#define-weapon'>weapon</a>, allowing you to use your <a href='#define-finesse'>Finesse</a> when making an <a href='#define-attack-roll'>attack</a> with that weapon.",
+	"<strong><em>Gem of Insight:</em></strong> You can attach this gem to a <a href='#define-weapon'>weapon</a>, allowing you to use your <a href='#define-instinct'>Instinct</a> when making an <a href='#define-attack-roll'>attack</a> with that weapon.",
+	"<strong><em>Gem of Audacity:</em></strong> You can attach this gem to a <a href='#define-weapon'>weapon</a>, allowing you to use your <a href='#define-presence'>Presence</a> when making an <a href='#define-attack-roll'>attack</a> with that weapon.",
+	"<strong><em>Gem of Sagacity:</em></strong> You can attach this gem to a <a href='#define-weapon'>weapon</a>, allowing you to use your <a href='#define-knowledge'>Knowledge</a> when making an <a href='#define-attack-roll'>attack</a> with that weapon.",
+	"<strong><em>Ring of Unbreakable Resolve:</em></strong> Once per session, when the GM spends a <a href='#define-fear'>Fear</a>, you can spend 4 <a href='#define-hope'>Hope</a> to cancel the effects of that spent <a href='#define-fear'>Fear</a>.",
+	"<strong><em>Belt of Unity:</em></strong> Once per session, you can <strong><a href='#define-hope'>spend 5 Hope</a></strong> to lead a <a href='#define-tag-team-roll'>Tag Team Roll</a> with three PCs instead of two."
+  ]
+const consumables = [
+	"<strong><em>Stride Potion:</em></strong> You gain a +1 bonus to your next <a href='#define-trait-roll'>Agility Roll</a>.",
+	"<strong><em>Bolster Potion:</em></strong> You gain a +1 bonus to your next <a href='#define-trait-roll'>Strength Roll</a>.",
+	"<strong><em>Control Potion:</em></strong> You gain a +1 bonus to your next <a href='#define-trait-roll'>Finesse Roll</a>.",
+	"<strong><em>Attune Potion:</em></strong> You gain a +1 bonus to your next <a href='#define-trait-roll'>Instinct Roll</a>.",
+	"<strong><em>Charm Potion:</em></strong> You gain a +1 bonus to your next <a href='#define-trait-roll'>Presence Roll</a>.",
+	"<strong><em>Enlighten Potion:</em></strong> You gain a +1 bonus to your next <a href='#define-trait-roll'>Knowledge Roll</a>.",
+	"<strong><em>Minor Health Potion:</em></strong> Clear 1d4 <a href='#define-hit-point'>Hit Points</a>.",
+	"<strong><em>Minor Stamina Potion:</em></strong> Clear 1d4 <a href='#define-stress'>Stress</a>.",
+	"<strong><em>Grindletooth Venom:</em></strong> You can apply this venom to a <a href='#define-weapon'>weapon</a> that deals <a href='#define-damage-type'>physical damage</a> to add a <strong>d6</strong> to your next <a href='#define-damage-roll'>damage roll</a> with that weapon.",
+	"<strong><em>Varik Leaves:</em></strong> You can eat these paired leaves to immediately gain 2 <a href='#define-hope'>Hope</a>.",
+	"<strong><em>Vial of Moondrip:</em></strong> When you drink the contents of this vial, you can see in total darkness until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Unstable Arcane Shard:</em></strong> You can make a <a href='#define-trait-roll'>Finesse Roll</a> to throw this shard at a group of adversaries within <a href='#define-range'>Far</a> range. Targets you succeed against take <strong>1d20</strong> <a href='#define-damage-type'>magic damage</a>.",
+	"<strong><em>Potion of Stability:</em></strong> You can drink this potion to choose one additional <a href='#define-downtime'-move>downtime move</a>.",
+	"<strong><em>Improved Grindletooth Venom:</em></strong> You can apply this venom to a <a href='#define-weapon'>weapon</a> that deals <a href='#define-damage-type'>physical damage</a> to add a <strong>d8</strong> to your next <a href='#define-damage-roll'>damage roll</a> with that weapon.",
+	"<strong><em>Morphing Clay:</em></strong> You can spend 4 <a href='#define-hope'>Hope</a> to use this clay, altering your face enough to make you unrecognizable until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Vial of Darksmoke:</em></strong> When an <a href='#define-adversary'>adversary</a> attacks you, use this vial and roll a number of <strong>d6</strong> equal to your <a href='#define-agility'>Agility</a>. Add the highest result to your <a href='#define-evasion'>Evasion</a> against the attack.",
+	"<strong><em>Jumping Root:</em></strong> Eat this root to leap up to <a href='#define-range'>Far</a> range once without needing to roll.",
+	"<strong><em>Snap Powder:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> and clear a <a href='#define-hit-point'>Hit Point</a>.",
+	"<strong><em>Health Potion:</em></strong> Clear 1d4+1 <a href='#define-hit-point'>Hit Points</a>.",
+	"<strong><em>Stamina Potion:</em></strong> Clear 1d4+1 <a href='#define-stress'>Stress</a>.",
+	"<strong><em>Armor Stitcher:</em></strong> You can use this stitcher to spend any number of Hope and clear that many <a href='#define-armor'>Armor Slots</a>.",
+	"<strong><em>Gill Salve:</em></strong> You can apply this salve to your neck to breathe underwater for a number of minutes equal to your <a href='#define-level'>level",
+	"<strong><em>Replication Parchment:</em></strong> By touching this piece of parchment to another, you can perfectly copy the second parchment's contents. Once used, this parchment becomes mundane paper.",
+	"<strong><em>Improved Arcane Shard:</em></strong> You can make a <a href='#define-trait-roll'>Finesse Roll</a> to throw this shard at a group of adversaries within <a href='#define-range'>Far</a> range. Targets you succeed against take <strong>2d20</strong> <a href='#define-damage-type'>magic damage</a>.",
+	"<strong><em>Major Stride Potion:</em></strong> You gain a +1 bonus to your <a href='#define-agility'>Agility</a> until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Major Bolster Potion:</em></strong> You gain a +1 bonus to your <a href='#define-strength'>Strength</a> until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Major Control Potion:</em></strong> You gain a +1 bonus to your <a href='#define-finesse'>Finesse</a> until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Major Attune Potion:</em></strong> You gain a +1 bonus to your <a href='#define-instinct'>Instinct</a> until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Major Charm Potion:</em></strong> You gain a +1 bonus to your <a href='#define-presence'>Presence</a> until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Major Enlighten Potion:</em></strong> You gain a +1 bonus to your <a href='#define-knowledge'>Knowledge</a> until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Blood of the Yorgi:</em></strong> You can drink this blood to disappear from where you are and immediately reappear at a point you can see within <a href='#define-range'>Very Far</a> range.",
+	"<strong><em>Homet's Secret Potion:</em></strong> After drinking this potion, the next successful <a href='#define-attack-roll'>attack</a> you make <a href='#define-damage-roll'>critically succeeds</a>.",
+	"<strong><em>Redthorn Saliva:</em></strong> You can apply this saliva to a <a href='#define-weapon'>weapon</a> that deals <a href='#define-damage-type'>physical damage</a> to add a <strong>d12</strong> to your next <a href='#define-damage-roll'>damage roll</a> with that weapon.",
+	"<strong><em>Channelstone:</em></strong> You can use this stone to take a spell or grimoire from your <a href='#define-loadout'>vault</a>, use it once, and return it to your <a href='#define-loadout'>vault</a>.",
+	"<strong><em>Mythic Dust:</em></strong> You can apply this dust to a <a href='#define-weapon'>weapon</a> that deals <a href='#define-damage-type'>magic damage</a> to add a <strong>d12</strong> to your next <a href='#define-damage-roll'>damage roll</a> with that weapon.",
+	"<strong><em>Acidpaste:</em></strong> This paste eats away walls and other surfaces in bright flashes.",
+	"<strong><em>Hopehold Flare:</em></strong> When you use this flare, allies within <a href='#define-range'>Close</a> range roll a <strong>d6</strong> when they <strong><a href='#define-hope'>spend a Hope</a></strong>. On a result of 6, they gain the effect of that <a href='#define-hope'>Hope</a> without spending it. The flare lasts until the end of the scene.",
+	"<strong><em>Major Arcane Shard:</em></strong> You can make a <a href='#define-trait-roll'>Finesse Roll</a> to throw this shard at a group of adversaries within <a href='#define-range'>Far</a> range. Targets you succeed against take <strong>4d20</strong> <a href='#define-damage-type'>magic damage</a>.",
+	"<strong><em>Featherbone:</em></strong> You can use this bone to control your falling speed for a number of minutes equal to your <a href='#define-level'>level</a>.",
+	"<strong><em>Circle of the Void:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to create a void that extends up to <a href='#define-range'>Far</a> range. No magic can be cast inside the void, and creatures within the void are <a href='#define-damage-type'>immune</a> to <a href='#define-damage-type'>magic damage</a>.",
+	"<strong><em>Sun Tree Sap:</em></strong> Consume this sap to roll a <strong>d6</strong>. On a result of 5&ndash;6, clear 2 <a href='#define-hit-point'>Hit Points</a>. On a result of 2&ndash;4, clear 3 <a href='#define-stress'>Stress</a>. On a result of 1, see through the veil of death and return unscathed, gaining one scar.",
+	"<strong><em>Dripfang Poison:</em></strong> A creature who consumes this poison takes <strong>2d10</strong> <a href='#define-damage-type'>direct magic damage</a>.",
+	"<strong><em>Major Health Potion:</em></strong> Clear <strong>1d4+2</strong> <a href='#define-hit-point'>Hit Points</a>.",
+	"<strong><em>Major Stamina Potion:</em></strong> Clear <strong>1d4+2</strong> <a href='#define-stress'>Stress</a>.",
+	"<strong><em>Ogre Musk:</em></strong> You can use this musk to prevent anyone from tracking you by mundane or magical means until your next <a href='#define-downtime'>rest</a>.",
+	"<strong><em>Wingsprout:</em></strong> You gain magic wings that allow you to fly for a number of minutes equal to your <a href='#define-level'>level</a>.",
+	"<strong><em>Jar of Lost Voices:</em></strong> You can open this jar to release a deafening echo of voices for a number of minutes equal to your <a href='#define-instinct'>Instinct</a>. Creatures within <a href='#define-range'>Far</a> range unprepared for the sound take <strong>6d8</strong> <a href='#define-damage-type'>magic damage</a>.",
+	"<strong><em>Dragonbloom Tea:</em></strong> You can drink this tea to unleash a fiery breath attack. Make an <strong><a href='#define-trait-roll'>Instinct Roll</a></strong> against all adversaries in front of you within <a href='#define-range'>Close</a> range. Targets you succeed against take <strong>2d20</strong> <a href='#define-damage-type'>physical damage</a> using your Proficiency.",
+	"<strong><em>Bridge Seed:</em></strong> Thick vines grow from your location to a point of your choice within <a href='#define-range'>Far</a> range, allowing you to climb up or across them. The vines dissipate on your next <a href='#define-downtime'>short rest</a>.",
+	"<strong><em>Sleeping Sap:</em></strong> You can drink this potion to fall asleep for a full night's rest. You clear all <a href='#define-stress'>Stress</a> upon waking.",
+	"<strong><em>Feast of Xuria:</em></strong> You can eat this meal to clear all <a href='#define-hit-point'>Hit Points</a> and <a href='#define-stress'>Stress</a> and gain <strong>1d4</strong> <a href='#define-hope'>Hope</a>.",
+	"<strong><em>Bonding Honey:</em></strong> This honey can be used to glue two objects together permanently.",
+	"<strong><em>Shrinking Potion:</em></strong> You can drink this potion to halve your size until you choose to drop this form or your next <a href='#define-downtime'>rest</a>. While in this form, you have a +2 bonus to <a href='#define-agility'>Agility</a> and a &ndash;1 penalty to your Proficiency.",
+	"<strong><em>Growing Potion:</em></strong> You can drink this potion to double your size until you choose to drop this form or your next <a href='#define-downtime'>rest</a>. While in this form, you have a +2 bonus to <a href='#define-strength'>Strength</a> and a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a>.",
+	"<strong><em>Knowledge Stone:</em></strong> If you die while holding this stone, an ally can take a card from your loadout to place in their <a href='#define-loadout'>loadout or vault</a>. After they take this knowledge, the stone crumbles.",
+	"<strong><em>Sweet Moss:</em></strong> You can consume this moss during a rest to clear <strong>1d10</strong> <a href='#define-hit-point'>Hit Points</a> or <strong>1d10</strong> <a href='#define-stress'>Stress</a>.",
+	"<strong><em>Blinding Orb:</em></strong> You can activate this orb to create a flash of bright light. All targets within <a href='#define-range'>Close</a> range become <a href='#define-condition'><em>Vulnerable</em></a> until they mark <a href='#define-hit-point'>Hit Points</a>.",
+	"<strong><em>Death Tea:</em></strong> After you drink this tea, you instantly kill your target when you <a href='#define-damage-roll'>critically succeed</a> on an <a href='#define-attack-roll'>attack</a>. If you don't critically succeed on an attack before your next <a href='#define-downtime'>long rest</a>, you die.",
+	"<strong><em>Mirror of Marigold:</em></strong> When you take <a href='#define-hit-point'>damage</a>, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to negate that damage, after which the mirror shatters.",
+	"<strong><em>Stardrop:</em></strong> You can use this stardrop to summon a hailstorm of comets that deals <strong>8d20</strong> <a href='#define-damage-type'>physical damage</a> to all targets within <a href='#define-range'>Very Far</a> range."
+  ]
+const chance1d12 = ["8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;"]
+const chance2d12 = ["&mdash;","0.69%","1.39%","2.08%","2.78%","3.47%","4.17%","4.86%","5.56%","6.25%","6.94%","7.64%","8.33%","7.64%","6.94%","6.25%","5.56%","4.86%","4.17%","3.47%","2.78%","2.08%","1.39%","0.69%","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;"]
+const chance3d12 = ["&mdash;","&mdash;","0.06%","0.17%","0.35%","0.58%","0.87%","1.22%","1.62%","2.08%","2.60%","3.18%","3.82%","4.51%","5.09%","5.56%","5.90%","6.13%","6.25%","6.25%","6.13%","5.90%","5.56%","5.09%","4.51%","3.82%","3.18%","2.60%","2.08%","1.62%","1.22%","0.87%","0.58%","0.35%","0.17%","0.06%","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;"]
+const chance4d12 = ["&mdash;","&mdash;","&mdash;","0.00%","0.02%","0.05%","0.10%","0.17%","0.27%","0.41%","0.58%","0.80%","1.06%","1.38%","1.76%","2.17%","2.62%","3.09%","3.55%","4.00%","4.42%","4.79%","5.11%","5.36%","5.52%","5.57%","5.52%","5.36%","5.11%","4.79%","4.42%","4.00%","3.55%","3.09%","2.62%","2.17%","1.76%","1.38%","1.06%","0.80%","0.58%","0.41%","0.27%","0.17%","0.10%","0.05%","0.02%","0.00%","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;"]
+const chance5d12 = ["&mdash;","&mdash;","&mdash;","&mdash;","0.00%","0.00%","0.01%","0.01%","0.03%","0.05%","0.08%","0.13%","0.20%","0.29%","0.40%","0.55%","0.73%","0.95%","1.20%","1.49%","1.81%","2.15%","2.52%","2.90%","3.28%","3.65%","4.00%","4.31%","4.58%","4.78%","4.93%","5.00%","5.00%","4.93%","4.78%","4.58%","4.31%","4.00%","3.65%","3.28%","2.90%","2.52%","2.15%","1.81%","1.49%","1.20%","0.95%","0.73%","0.55%","0.40%","0.29%","0.20%","0.13%","0.08%","0.05%","0.03%","0.01%","0.01%","0.00%","0.00%"]
+
+// Randomize
+
+function rollDice(pool, sides) {
+  let rollTotal = 0;
+  for (let i = 0; i < pool; i++) {
+    let roll = Math.floor(Math.random() * sides) + 1;
+    rollTotal = rollTotal + roll;
+  }
+  return rollTotal;
+}
+
+function deselectLoot() {
+  document.getElementById('new-random-loot-1d12').classList.remove('btn-hope');
+  document.getElementById('new-random-loot-2d12').classList.remove('btn-hope');
+  document.getElementById('new-random-loot-3d12').classList.remove('btn-hope');
+  document.getElementById('new-random-loot-4d12').classList.remove('btn-hope');
+  document.getElementById('new-random-loot-5d12').classList.remove('btn-hope');
+}
+
+function randomLoot1d12() {
+    document.getElementById("random-loot-roll").innerHTML = "1d12";
+    let randomLootResult = rollDice(1, 12);
+    document.getElementById("random-loot-result").innerHTML = randomLootResult;
+    let randomLoot = loot[randomLootResult - 1];
+    document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = chance1d12[randomLootResult - 1];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
+    deselectLoot();
+    document.getElementById('new-random-loot-1d12').classList.add('btn-hope');
+}
+function randomLoot2d12() {
+    document.getElementById("random-loot-roll").innerHTML = "2d12";
+    let randomLootResult = rollDice(2, 12);
+    document.getElementById("random-loot-result").innerHTML = randomLootResult;
+    let randomLoot = loot[randomLootResult - 1];
+    document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = chance2d12[randomLootResult - 1];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
+    deselectLoot();
+    document.getElementById('new-random-loot-2d12').classList.add('btn-hope');
+}
+function randomLoot3d12() {
+    document.getElementById("random-loot-roll").innerHTML = "3d12";
+    let randomLootResult = rollDice(3, 12);
+    document.getElementById("random-loot-result").innerHTML = randomLootResult;
+    let randomLoot = loot[randomLootResult - 1];
+    document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = chance3d12[randomLootResult - 1];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
+    deselectLoot();
+    document.getElementById('new-random-loot-3d12').classList.add('btn-hope');
+}
+function randomLoot4d12() {
+    document.getElementById("random-loot-roll").innerHTML = "4d12";
+    let randomLootResult = rollDice(4, 12);
+    document.getElementById("random-loot-result").innerHTML = randomLootResult;
+    let randomLoot = loot[randomLootResult - 1];
+    document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = chance4d12[randomLootResult - 1];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
+    deselectLoot();
+    document.getElementById('new-random-loot-4d12').classList.add('btn-hope');
+}
+function randomLoot5d12() {
+    document.getElementById("random-loot-roll").innerHTML = "5d12";
+    let randomLootResult = rollDice(5, 12);
+    document.getElementById("random-loot-result").innerHTML = randomLootResult;
+    let randomLoot = loot[randomLootResult - 1];
+    document.getElementById("random-loot").innerHTML = randomLoot;
+    let randomLootChance = chance5d12[randomLootResult - 1];
+    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
+    deselectLoot();
+    document.getElementById('new-random-loot-5d12').classList.add('btn-hope');
+}
+
+function deselectConsumable() {
+  document.getElementById('new-random-consumable-1d12').classList.remove('btn-hope');
+  document.getElementById('new-random-consumable-2d12').classList.remove('btn-hope');
+  document.getElementById('new-random-consumable-3d12').classList.remove('btn-hope');
+  document.getElementById('new-random-consumable-4d12').classList.remove('btn-hope');
+  document.getElementById('new-random-consumable-5d12').classList.remove('btn-hope');
+}
+
+function randomConsumable1d12() {
+    document.getElementById("random-consumable-roll").innerHTML = "1d12";
+    let randomConsumableResult = rollDice(1, 12);
+    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
+    let randomConsumable = consumables[randomConsumableResult - 1];
+    document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = chance1d12[randomConsumableResult - 1];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
+    deselectConsumable();
+    document.getElementById('new-random-consumable-1d12').classList.add('btn-hope');
+}
+function randomConsumable2d12() {
+    document.getElementById("random-consumable-roll").innerHTML = "2d12";
+    let randomConsumableResult = rollDice(2, 12);
+    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
+    let randomConsumable = consumables[randomConsumableResult - 1];
+    document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = chance2d12[randomConsumableResult - 1];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
+    deselectConsumable();
+    document.getElementById('new-random-consumable-2d12').classList.add('btn-hope');
+}
+function randomConsumable3d12() {
+    document.getElementById("random-consumable-roll").innerHTML = "3d12";
+    let randomConsumableResult = rollDice(3, 12);
+    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
+    let randomConsumable = consumables[randomConsumableResult - 1];
+    document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = chance3d12[randomConsumableResult - 1];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
+    deselectConsumable();
+    document.getElementById('new-random-consumable-3d12').classList.add('btn-hope');
+}
+function randomConsumable4d12() {
+    document.getElementById("random-consumable-roll").innerHTML = "4d12";
+    let randomConsumableResult = rollDice(4, 12);
+    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
+    let randomConsumable = consumables[randomConsumableResult - 1];
+    document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = chance4d12[randomConsumableResult - 1];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
+    deselectConsumable();
+    document.getElementById('new-random-consumable-4d12').classList.add('btn-hope');
+}
+function randomConsumable5d12() {
+    document.getElementById("random-consumable-roll").innerHTML = "5d12";
+    let randomConsumableResult = rollDice(5, 12);
+    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
+    let randomConsumable = consumables[randomConsumableResult - 1];
+    document.getElementById("random-consumable").innerHTML = randomConsumable;
+    let randomConsumableChance = chance5d12[randomConsumableResult - 1];
+    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
+    deselectConsumable();
+    document.getElementById('new-random-consumable-5d12').classList.add('btn-hope');
+}
+
+// Listen
+
+document.getElementById("new-random-loot-1d12").addEventListener("click", function (event) {
+  randomLoot1d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-loot-2d12").addEventListener("click", function (event) {
+  randomLoot2d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-loot-3d12").addEventListener("click", function (event) {
+  randomLoot3d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-loot-4d12").addEventListener("click", function (event) {
+  randomLoot4d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-loot-5d12").addEventListener("click", function (event) {
+  randomLoot5d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-consumable-1d12").addEventListener("click", function (event) {
+  randomConsumable1d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-consumable-2d12").addEventListener("click", function (event) {
+  randomConsumable2d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-consumable-3d12").addEventListener("click", function (event) {
+  randomConsumable3d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-consumable-4d12").addEventListener("click", function (event) {
+  randomConsumable4d12();
+  refreshTooltips();
+});
+
+document.getElementById("new-random-consumable-5d12").addEventListener("click", function (event) {
+  randomConsumable5d12();
+  refreshTooltips();
+});
+
+function refreshTooltips() {
+    $("a[href^=\\#define-]")
+        .tooltip({
+            html: true,
+            title: function () {
+                return $(this.href.substring(this.href.lastIndexOf("#"))).clone().wrap('<div></div>').parent()
+            }
+        })
+}
+
+//initialize
+
+randomLoot1d12();
+randomConsumable1d12();
+refreshTooltips();
