@@ -140,7 +140,6 @@ function rollDice(pool, sides) {
   return rollTotal;
 }
 
-
 function randomLoot(x) {
     document.getElementById("random-loot-roll").innerHTML = x + "d12";
     for (let i = 0; i < 5; i++) {
@@ -156,13 +155,6 @@ function randomLoot(x) {
       document.getElementById("new-random-loot-" + y + "d12").classList.remove('btn-hope');
     }
     document.getElementById("new-random-loot-" + x + "d12").classList.add('btn-hope');
-}
-
-function deselectConsumable() {
-  for (let i = 0; i < 5; i++) {
-      let y = i + 1;
-      
-  }
 }
 
 function randomConsumable(x) {
