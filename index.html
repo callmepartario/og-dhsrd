@@ -117,7 +117,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.07d (2025-10-25)</p>
+<p class="small text-center">version 1.07e (2025-10-26)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -9611,6 +9611,7 @@
 		</div>
 		<h4 class="h6">Random Loot</h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+		<p>The GM can use the following generator to produce a cache of five pieces of <a href="#define-loot">loot</a> using the dice rolls specified above.</p>
 		<ul class="list-inline">
 			<li class="list-inline-item"><p><button class="btn mt-1 mb-1 theme-light border" type="button" id="new-random-loot-1d12" aria-label="New Loot: 1d12">1d12</button></p></li>
 			<li class="list-inline-item"><p><button class="btn mt-1 mb-1 theme-light border" type="button" id="new-random-loot-2d12" aria-label="New Loot: 2d12">2d12</button></p></li>
@@ -9628,8 +9629,24 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th class="text-center fw-normal"><span id="random-loot-result">&mdash;</span><span class="d-block small">(<span id="random-loot-chance">&mdash;</span>)</span></th>
-					<td><div class="og-item" id="random-loot">&mdash;</div></td>
+					<th class="text-center fw-normal"><span id="random-loot-result-1">&mdash;</span><span class="d-block small">(<span id="random-loot-chance-1">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-loot-1">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-loot-result-2">&mdash;</span><span class="d-block small">(<span id="random-loot-chance-2">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-loot-2">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-loot-result-3">&mdash;</span><span class="d-block small">(<span id="random-loot-chance-3">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-loot-3">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-loot-result-4">&mdash;</span><span class="d-block small">(<span id="random-loot-chance-4">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-loot-4">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-loot-result-5">&mdash;</span><span class="d-block small">(<span id="random-loot-chance-5">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-loot-5">&mdash;</div></td>
 				</tr>
 			</tbody>
 		</table></div>
@@ -9907,6 +9924,7 @@
 		</div>
 		<h4 class="h6">Random Consumable</h4>
 		<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+		<p>The GM can use the following generator to produce a cache of five <a href="#define-consumable">consumables</a> using the dice rolls specified above.</p>
 		<ul class="list-inline">
 			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-consumable-1d12" aria-label="New Consumable: 1d12">1d12</button></p></li>
 			<li class="list-inline-item"><p><button class="btn btn-light mt-1 mb-1 theme-light border text-white" type="button" id="new-random-consumable-2d12" aria-label="New Consumable: 2d12">2d12</button></p></li>
@@ -9924,8 +9942,24 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th class="text-center fw-normal"><span id="random-consumable-result">&mdash;</span><span class="d-block small">(<span id="random-consumable-chance">&mdash;</span>)</span></th>
-					<td><div class="og-item" id="random-consumable">&mdash;</div></td>
+					<th class="text-center fw-normal"><span id="random-consumable-result-1">&mdash;</span><span class="d-block small">(<span id="random-consumable-chance-1">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-consumable-1">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-consumable-result-2">&mdash;</span><span class="d-block small">(<span id="random-consumable-chance-2">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-consumable-2">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-consumable-result-3">&mdash;</span><span class="d-block small">(<span id="random-consumable-chance-3">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-consumable-3">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-consumable-result-4">&mdash;</span><span class="d-block small">(<span id="random-consumable-chance-4">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-consumable-4">&mdash;</div></td>
+				</tr>
+				<tr>
+					<th class="text-center fw-normal"><span id="random-consumable-result-5">&mdash;</span><span class="d-block small">(<span id="random-consumable-chance-5">&mdash;</span>)</span></th>
+					<td><div class="og-item" id="random-consumable-5">&mdash;</div></td>
 				</tr>
 			</tbody>
 		</table></div>

@@ -1,4 +1,3 @@
-
 // data
 const loot = [
 	"<strong><em>Premium Bedroll:</em></strong> During <a href='#define-downtime'>downtime</a>, you automatically clear a <a href='#define-stress'>Stress</a>.",
@@ -141,185 +140,101 @@ function rollDice(pool, sides) {
   return rollTotal;
 }
 
-function deselectLoot() {
-  document.getElementById('new-random-loot-1d12').classList.remove('btn-hope');
-  document.getElementById('new-random-loot-2d12').classList.remove('btn-hope');
-  document.getElementById('new-random-loot-3d12').classList.remove('btn-hope');
-  document.getElementById('new-random-loot-4d12').classList.remove('btn-hope');
-  document.getElementById('new-random-loot-5d12').classList.remove('btn-hope');
-}
 
-function randomLoot1d12() {
-    document.getElementById("random-loot-roll").innerHTML = "1d12";
-    let randomLootResult = rollDice(1, 12);
-    document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = loot[randomLootResult - 1];
-    document.getElementById("random-loot").innerHTML = randomLoot;
-    let randomLootChance = chance1d12[randomLootResult - 1];
-    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
-    deselectLoot();
-    document.getElementById('new-random-loot-1d12').classList.add('btn-hope');
-}
-function randomLoot2d12() {
-    document.getElementById("random-loot-roll").innerHTML = "2d12";
-    let randomLootResult = rollDice(2, 12);
-    document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = loot[randomLootResult - 1];
-    document.getElementById("random-loot").innerHTML = randomLoot;
-    let randomLootChance = chance2d12[randomLootResult - 1];
-    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
-    deselectLoot();
-    document.getElementById('new-random-loot-2d12').classList.add('btn-hope');
-}
-function randomLoot3d12() {
-    document.getElementById("random-loot-roll").innerHTML = "3d12";
-    let randomLootResult = rollDice(3, 12);
-    document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = loot[randomLootResult - 1];
-    document.getElementById("random-loot").innerHTML = randomLoot;
-    let randomLootChance = chance3d12[randomLootResult - 1];
-    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
-    deselectLoot();
-    document.getElementById('new-random-loot-3d12').classList.add('btn-hope');
-}
-function randomLoot4d12() {
-    document.getElementById("random-loot-roll").innerHTML = "4d12";
-    let randomLootResult = rollDice(4, 12);
-    document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = loot[randomLootResult - 1];
-    document.getElementById("random-loot").innerHTML = randomLoot;
-    let randomLootChance = chance4d12[randomLootResult - 1];
-    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
-    deselectLoot();
-    document.getElementById('new-random-loot-4d12').classList.add('btn-hope');
-}
-function randomLoot5d12() {
-    document.getElementById("random-loot-roll").innerHTML = "5d12";
-    let randomLootResult = rollDice(5, 12);
-    document.getElementById("random-loot-result").innerHTML = randomLootResult;
-    let randomLoot = loot[randomLootResult - 1];
-    document.getElementById("random-loot").innerHTML = randomLoot;
-    let randomLootChance = chance5d12[randomLootResult - 1];
-    document.getElementById("random-loot-chance").innerHTML = randomLootChance;
-    deselectLoot();
-    document.getElementById('new-random-loot-5d12').classList.add('btn-hope');
+function randomLoot(x) {
+    document.getElementById("random-loot-roll").innerHTML = x + "d12";
+    for (let i = 0; i < 5; i++) {
+      let y = i + 1;
+      let result = rollDice(x, 12);
+      document.getElementById("random-loot-result-" + y).innerHTML = result;
+      document.getElementById("random-loot-" + y).innerHTML = loot[result - 1];
+      if ( x == 1) { document.getElementById("random-loot-chance-" + y).innerHTML = chance1d12[result - 1]; }
+      else if ( x == 2) { document.getElementById("random-loot-chance-" + y).innerHTML = chance2d12[result - 1]; }
+      else if ( x == 3) { document.getElementById("random-loot-chance-" + y).innerHTML = chance3d12[result - 1]; }
+      else if ( x == 4) { document.getElementById("random-loot-chance-" + y).innerHTML = chance4d12[result - 1]; }
+      else if ( x == 5) { document.getElementById("random-loot-chance-" + y).innerHTML = chance5d12[result - 1]; }
+      document.getElementById("new-random-loot-" + y + "d12").classList.remove('btn-hope');
+    }
+    document.getElementById("new-random-loot-" + x + "d12").classList.add('btn-hope');
 }
 
 function deselectConsumable() {
-  document.getElementById('new-random-consumable-1d12').classList.remove('btn-hope');
-  document.getElementById('new-random-consumable-2d12').classList.remove('btn-hope');
-  document.getElementById('new-random-consumable-3d12').classList.remove('btn-hope');
-  document.getElementById('new-random-consumable-4d12').classList.remove('btn-hope');
-  document.getElementById('new-random-consumable-5d12').classList.remove('btn-hope');
+  for (let i = 0; i < 5; i++) {
+      let y = i + 1;
+      
+  }
 }
 
-function randomConsumable1d12() {
-    document.getElementById("random-consumable-roll").innerHTML = "1d12";
-    let randomConsumableResult = rollDice(1, 12);
-    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
-    let randomConsumable = consumables[randomConsumableResult - 1];
-    document.getElementById("random-consumable").innerHTML = randomConsumable;
-    let randomConsumableChance = chance1d12[randomConsumableResult - 1];
-    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
-    deselectConsumable();
-    document.getElementById('new-random-consumable-1d12').classList.add('btn-hope');
-}
-function randomConsumable2d12() {
-    document.getElementById("random-consumable-roll").innerHTML = "2d12";
-    let randomConsumableResult = rollDice(2, 12);
-    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
-    let randomConsumable = consumables[randomConsumableResult - 1];
-    document.getElementById("random-consumable").innerHTML = randomConsumable;
-    let randomConsumableChance = chance2d12[randomConsumableResult - 1];
-    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
-    deselectConsumable();
-    document.getElementById('new-random-consumable-2d12').classList.add('btn-hope');
-}
-function randomConsumable3d12() {
-    document.getElementById("random-consumable-roll").innerHTML = "3d12";
-    let randomConsumableResult = rollDice(3, 12);
-    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
-    let randomConsumable = consumables[randomConsumableResult - 1];
-    document.getElementById("random-consumable").innerHTML = randomConsumable;
-    let randomConsumableChance = chance3d12[randomConsumableResult - 1];
-    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
-    deselectConsumable();
-    document.getElementById('new-random-consumable-3d12').classList.add('btn-hope');
-}
-function randomConsumable4d12() {
-    document.getElementById("random-consumable-roll").innerHTML = "4d12";
-    let randomConsumableResult = rollDice(4, 12);
-    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
-    let randomConsumable = consumables[randomConsumableResult - 1];
-    document.getElementById("random-consumable").innerHTML = randomConsumable;
-    let randomConsumableChance = chance4d12[randomConsumableResult - 1];
-    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
-    deselectConsumable();
-    document.getElementById('new-random-consumable-4d12').classList.add('btn-hope');
-}
-function randomConsumable5d12() {
-    document.getElementById("random-consumable-roll").innerHTML = "5d12";
-    let randomConsumableResult = rollDice(5, 12);
-    document.getElementById("random-consumable-result").innerHTML = randomConsumableResult;
-    let randomConsumable = consumables[randomConsumableResult - 1];
-    document.getElementById("random-consumable").innerHTML = randomConsumable;
-    let randomConsumableChance = chance5d12[randomConsumableResult - 1];
-    document.getElementById("random-consumable-chance").innerHTML = randomConsumableChance;
-    deselectConsumable();
-    document.getElementById('new-random-consumable-5d12').classList.add('btn-hope');
+function randomConsumable(x) {
+    document.getElementById("random-consumable-roll").innerHTML = x + "d12";
+    for (let i = 0; i < 5; i++) {
+      let y = i + 1;
+      let result = rollDice(x, 12);
+      document.getElementById("random-consumable-result-" + y).innerHTML = result;
+      document.getElementById("random-consumable-" + y).innerHTML = consumables[result - 1];
+      if ( x == 1) { document.getElementById("random-consumable-chance-" + y).innerHTML = chance1d12[result - 1]; }
+      else if ( x == 2) { document.getElementById("random-consumable-chance-" + y).innerHTML = chance2d12[result - 1]; }
+      else if ( x == 3) { document.getElementById("random-consumable-chance-" + y).innerHTML = chance3d12[result - 1]; }
+      else if ( x == 4) { document.getElementById("random-consumable-chance-" + y).innerHTML = chance4d12[result - 1]; }
+      else if ( x == 5) { document.getElementById("random-consumable-chance-" + y).innerHTML = chance5d12[result - 1]; }
+      document.getElementById("new-random-consumable-" + y + "d12").classList.remove('btn-hope');
+    }
+    document.getElementById("new-random-consumable-" + x + "d12").classList.add('btn-hope');
 }
 
 // Listen
 
 document.getElementById("new-random-loot-1d12").addEventListener("click", function (event) {
-  randomLoot1d12();
+  randomLoot(1);
   refreshTooltips();
 });
 
 document.getElementById("new-random-loot-2d12").addEventListener("click", function (event) {
-  randomLoot2d12();
+  randomLoot(2);
   refreshTooltips();
 });
 
 document.getElementById("new-random-loot-3d12").addEventListener("click", function (event) {
-  randomLoot3d12();
+  randomLoot(3);
   refreshTooltips();
 });
 
 document.getElementById("new-random-loot-4d12").addEventListener("click", function (event) {
-  randomLoot4d12();
+  randomLoot(4);
   refreshTooltips();
 });
 
 document.getElementById("new-random-loot-5d12").addEventListener("click", function (event) {
-  randomLoot5d12();
+  randomLoot(5);
   refreshTooltips();
 });
 
 document.getElementById("new-random-consumable-1d12").addEventListener("click", function (event) {
-  randomConsumable1d12();
+  randomConsumable(1);
   refreshTooltips();
 });
 
 document.getElementById("new-random-consumable-2d12").addEventListener("click", function (event) {
-  randomConsumable2d12();
+  randomConsumable(2);
   refreshTooltips();
 });
 
 document.getElementById("new-random-consumable-3d12").addEventListener("click", function (event) {
-  randomConsumable3d12();
+  randomConsumable(3);
   refreshTooltips();
 });
 
 document.getElementById("new-random-consumable-4d12").addEventListener("click", function (event) {
-  randomConsumable4d12();
+  randomConsumable(4);
   refreshTooltips();
 });
 
 document.getElementById("new-random-consumable-5d12").addEventListener("click", function (event) {
-  randomConsumable5d12();
+  randomConsumable(5);
   refreshTooltips();
 });
+
+// refresh tooltips after population
 
 function refreshTooltips() {
     $("a[href^=\\#define-]")
@@ -333,6 +248,6 @@ function refreshTooltips() {
 
 //initialize
 
-randomLoot1d12();
-randomConsumable1d12();
+randomLoot(1);
+randomConsumable(1);
 refreshTooltips();
