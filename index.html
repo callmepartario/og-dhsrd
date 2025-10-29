@@ -117,7 +117,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 1.07e (2025-10-26)</p>
+<p class="small text-center">version 1.07f (2025-10-29)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -10946,9 +10946,9 @@
 		</div>
 	</div>
 	<div class="col-12 col-md-6">
-		<h4 class="h6">Dynamic Countdowns</h4>
+		<h3 id="dynamic-countdowns">Dynamic Countdowns<a class="og-h-anchor" href="#dynamic-countdowns" title="Permalink" aria-hidden="true"></a></h3>
 		<ul class="og-list-inline og-ref og-omit"><li>Page 163</li></ul>
-		<p>		<p>The GM might also use the results of <a href="#define-action-roll">action rolls</a> to determine changes to a countdown, as shown in the <a href="#define-environment-cliffside-ascent">Cliffside Ascent</a> <a href="#define-environment">environment</a>. If a <strong>Progress Countdown</strong> and <strong>Consequence Countdown</strong> are linked, tick each down differently:</p>
+		<p>The GM might also use the results of <a href="#define-action-roll">action rolls</a> to determine changes to a countdown, as shown in the <a href="#define-environment-cliffside-ascent">Cliffside Ascent</a> <a href="#define-environment">environment</a>. If a <strong>Progress Countdown</strong> and <strong>Consequence Countdown</strong> are linked, tick each down differently:</p>
 		<div class="table-responsive og-omit"><table class="table table-light table-striped table-sm mb-3">
 			<caption>Dynamic Countdowns</caption>
 			<thead>
@@ -14087,28 +14087,27 @@
 		<div id="define-adversary-type">
 			<h4 id="adversary-types">Adversary Types<a class="og-h-anchor" href="#adversary-types" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 194</li></ul>
-			<p>For additional detail on each type, see the <a href="#define-adversary-benchmarks">adversary benchmarks</a>.</p>
 			<dl>
 				<dt>Bruiser</dt>
-				<dd>Tough; delivers powerful attacks.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-bruiser">Bruisers</a> are tough, and make powerful attacks.</dd>
 				<dt>Horde</dt>
-				<dd>Groups acting as a single unit.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-horde">Hordes</a> are creature groups acting together.</dd>
 				<dt>Leader</dt>
-				<dd>Commands and summons allies.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-leader">Leaders</a> command or summon other adversaries.</dd>
 				<dt>Minion</dt>
-				<dd>Easily dispatched; dangerous in numbers.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-minion">Minions</a> are easily dispatched, but dangerous in numbers.</dd>
 				<dt>Ranged</dt>
-				<dd>High damage at range; fragile up close.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-Ranged">Rangeds</a> deal high damage, but are fragile up close.</dd>
 				<dt>Skulk</dt>
-				<dd>Maneuvers to ambush.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-skulk">Skulks</a> are highly mobile, maneuvering to ambush.</dd>
 				<dt>Social</dt>
-				<dd>Social challenges with conversation, not combat.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-social">Socials</a> challenges PCs in conversation, not combat.</dd>
 				<dt>Solo</dt>
-				<dd>A formidable challenge for the entire party&mdash;maybe more.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-solo">Solos</a> present a formidable challenge for the party.</dd>
 				<dt>Standard</dt>
-				<dd>Representative of their fictional group.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-standard">Standards</a> are representative of their fictional group.</dd>
 				<dt>Support</dt>
-				<dd>Enhances allies; disrupt foes.</dd>
+				<dd><a href="#define-adversary-benchmarks-type-support">Supports</a> enhance allies or disrupt the PCs.</dd>
 			</dl>
 		</div>
 		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
@@ -21678,13 +21677,13 @@
 			<h4 id="battle-guide">Battle Guide<a class="og-h-anchor" href="#battle-guide" title="Permalink" aria-hidden="true"></a></h4>
 			<ul class="og-list-inline og-ref og-omit"><li>Page 197</li></ul>
 			<h3 class="h6">Calculate Battle Points</h3>
-			<p>Start with <strong>3 &times; the number of PCs + 2 Battle Points</strong>, and modify the results:</p>
+			<p>Start with <strong>3 &times; the number of PCs + 2 Battle Points</strong>. Modify the results, depending on the type of encounter:</p>
 			<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
 				<caption>Battle Point Modifiers</caption>
 				<thead>
 					<tr>
 						<th scope="col">Encounter</th>
-						<th class="text-center" scope="col">Modifier</th>
+						<th class="text-center w-30" scope="col">Modifier</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -21721,12 +21720,12 @@
 				<thead>
 					<tr>
 						<th scope="col">Adversary Type</th>
-						<th class="text-center" scope="col">Battle Points</th>
+						<th class="text-center w-30" scope="col">Battle Points</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th class="fw-normal" scope="row"><a href="#define-adversary-type">Minion</a> (one per PC)</th>
+						<th class="fw-normal" scope="row"><a href="#define-adversary-type">Minions</a> (equal to the number of PCs)</th>
 						<td class="text-center">1</td>
 					</tr>
 					<tr>
@@ -21751,8 +21750,8 @@
 					</tr>
 				</tbody>
 			</table></div>
-			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-				<p>Battle points don't account for complications introduced by the <a href="#define-environment">environment</a>.</p>
+			<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+				<p><strong>Editor's Notes &mdash;</strong> Battle points don't account for the <a href="#define-environment">environment</a>. Depending on its complexity or deadliness, it can be a good idea to reserve 1&ndash;2 Battle Points to spend on it.</p>
 			</div>
 		</div>
 	</div>
@@ -21926,8 +21925,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="col-12 col-md-6">
         <div class="og-statblock">
             <div id="define-environment-ambushers">
                 <h5 id="environment-ambushers">Ambushers<a class="og-h-anchor" href="#environment-ambushers" title="Permalink" aria-hidden="true"></a></h5>
