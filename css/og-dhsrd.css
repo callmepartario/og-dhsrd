@@ -543,10 +543,6 @@ h6::before, .h6::before {
 	padding-right: 0.15rem;
 }
 
-.og-statblock-q {
-	margin-left: 0.75rem;
-}
-
 /* anchor link iconography - position */
 h2 a.og-h-anchor,
 h3 a.og-h-anchor,
@@ -1059,6 +1055,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-arcana .h6, 
 .theme-dark .og-theme-arcana ul.og-list-inline li::before, 
 .theme-dark .og-domain-arcana ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-arcana::before, 
 .theme-light .og-theme-arcana .og-ref,
 .theme-light .og-domain-arcana .og-ref {
 	color: #5a3c6f !important; 
@@ -1067,6 +1064,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-arcana .h6, 
 .theme-light .og-theme-arcana ul.og-list-inline li::before, 
 .theme-light .og-domain-arcana ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-arcana::before, 
 .theme-dark .og-theme-arcana .og-ref,
 .theme-dark .og-domain-arcana .og-ref {
 	color: #c292ff !important; 
@@ -1100,6 +1098,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-blade .h6, 
 .theme-dark .og-theme-blade ul.og-list-inline li::before, 
 .theme-dark .og-domain-blade ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-blade::before, 
 .theme-light .og-theme-blade .og-ref,
 .theme-light .og-domain-blade .og-ref {
 	color: #801b1a !important; 
@@ -1108,6 +1107,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-blade .h6, 
 .theme-light .og-theme-blade ul.og-list-inline li::before, 
 .theme-light .og-domain-blade ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-blade::before, 
 .theme-dark .og-theme-blade .og-ref,
 .theme-dark .og-domain-blade .og-ref {
 	color: #ff4f4d !important; 
@@ -1141,6 +1141,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-bone .h6, 
 .theme-dark .og-theme-bone ul.og-list-inline li::before, 
 .theme-dark .og-domain-bone ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-bone::before, 
 .theme-light .og-theme-bone .og-ref,
 .theme-light .og-domain-bone .og-ref {
 	color: #4d4641 !important; 
@@ -1149,6 +1150,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-bone .h6, 
 .theme-light .og-theme-bone ul.og-list-inline li::before, 
 .theme-light .og-domain-bone ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-bone::before, 
 .theme-dark .og-theme-bone .og-ref,
 .theme-dark .og-domain-bone .og-ref {
 	color: #ccc0b8 !important; 
@@ -1182,6 +1184,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-codex .h6, 
 .theme-dark .og-theme-codex ul.og-list-inline li::before, 
 .theme-dark .og-domain-codex ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-codex::before, 
 .theme-light .og-theme-codex .og-ref,
 .theme-light .og-domain-codex .og-ref {
 	color: #1f4071 !important; 
@@ -1190,6 +1193,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-codex .h6, 
 .theme-light .og-theme-codex ul.og-list-inline li::before, 
 .theme-light .og-domain-codex ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-codex::before, 
 .theme-dark .og-theme-codex .og-ref,
 .theme-dark .og-domain-codex .og-ref {
 	color: #66b3ff !important; 
@@ -1223,6 +1227,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-grace .h6, 
 .theme-dark .og-theme-grace ul.og-list-inline li::before, 
 .theme-dark .og-domain-grace ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-grace::before, 
 .theme-light .og-theme-grace .og-ref,
 .theme-light .og-domain-grace .og-ref {
 	color: #801a52 !important; 
@@ -1231,6 +1236,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-grace .h6, 
 .theme-light .og-theme-grace ul.og-list-inline li::before, 
 .theme-light .og-domain-grace ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-grace::before, 
 .theme-dark .og-theme-grace .og-ref,
 .theme-dark .og-domain-grace .og-ref {
 	color: #eb6ab3 !important; 
@@ -1264,6 +1270,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-midnight .h6, 
 .theme-dark .og-theme-midnight ul.og-list-inline li::before, 
 .theme-dark .og-domain-midnight ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-midnight::before, 
 .theme-light .og-theme-midnight .og-ref,
 .theme-light .og-domain-midnight .og-ref {
 	color: #2b3247 !important; 
@@ -1272,6 +1279,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-midnight .h6, 
 .theme-light .og-theme-midnight ul.og-list-inline li::before, 
 .theme-light .og-domain-midnight ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-midnight::before, 
 .theme-dark .og-theme-midnight .og-ref,
 .theme-dark .og-domain-midnight .og-ref {
 	color: #8897c2 !important; 
@@ -1305,6 +1313,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-sage .h6, 
 .theme-dark .og-theme-sage ul.og-list-inline li::before, 
 .theme-dark .og-domain-sage ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-sage::before, 
 .theme-light .og-theme-sage .og-ref,
 .theme-light .og-domain-sage .og-ref {
 	color: #19542b !important; 
@@ -1313,6 +1322,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-sage .h6, 
 .theme-light .og-theme-sage ul.og-list-inline li::before, 
 .theme-light .og-domain-sage ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-sage::before, 
 .theme-dark .og-theme-sage .og-ref,
 .theme-dark .og-domain-sage .og-ref {
 	color: #70cc8c !important; 
@@ -1346,6 +1356,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-splendor .h6, 
 .theme-dark .og-theme-splendor ul.og-list-inline li::before, 
 .theme-dark .og-domain-splendor ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-splendor::before, 
 .theme-light .og-theme-splendor .og-ref,
 .theme-light .og-domain-splendor .og-ref {
 	color: #bc8e00 !important; 
@@ -1354,6 +1365,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-splendor .h6, 
 .theme-light .og-theme-splendor ul.og-list-inline li::before, 
 .theme-light .og-domain-splendor ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-splendor::before, 
 .theme-dark .og-theme-splendor .og-ref,
 .theme-dark .og-domain-splendor .og-ref {
 	color: #fbec9e !important; 
@@ -1388,6 +1400,7 @@ body.theme-dark .tooltip-inner {
 .theme-light .og-theme-valor .h6, 
 .theme-dark .og-theme-valor ul.og-list-inline li::before, 
 .theme-dark .og-domain-valor ul.og-list-inline li::before, 
+.theme-dark ul.og-list-inline li.og-theme-valor::before, 
 .theme-light .og-theme-valor .og-ref,
 .theme-light .og-domain-valor .og-ref {
 	color: #a64000 !important; 
@@ -1396,6 +1409,7 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-theme-valor .h6, 
 .theme-light .og-theme-valor ul.og-list-inline li::before, 
 .theme-light .og-domain-valor ul.og-list-inline li::before, 
+.theme-light ul.og-list-inline li.og-theme-valor::before, 
 .theme-dark .og-theme-valor .og-ref,
 .theme-dark .og-domain-valor .og-ref {
 	color: #ff9159 !important; 
