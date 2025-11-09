@@ -2675,7 +2675,7 @@ function printWeaponsPrimary() {
 	wProp += "<div id='define-combat-wheelchair'>"; // open def
 	wProp += "<h4 id='combat-wheelchair'>Combat Wheelchair<a class='og-h-anchor' href='#combat-wheelchair' title='Permalink' aria-hidden='true'></a></h4>";
 	wProp += "<ul class='og-list-inline og-ref og-omit'><li>Page 122</li><li>Page 123</li></ul>";
-	wProp += "<p>Combat wheelcharis are <a href='#define-weapon'>primary weapons</a>.</p>";
+	wProp += "<p>Combat wheelchairs are <a href='#define-weapon'>primary weapons</a>.</p>";
 	wProp += "<dl>";
 	wProp += "<dt>Movement</dt>";
 	wProp += "<dd>You are skilled in navigating your wheelchair in numerous situations.</dd>";
