@@ -1,36 +1,52 @@
+var ccUserClass = 0;
+var ccUserSubclass = 0;
+var ccUserAncestry = 0;
+var ccUserCommunity = 0;
+var ccUserWeaponPrimary = 0;
+var ccUserWeaponSecondary = 0;
+var ccUserArmor = 0;
+var ccUserConsumable = 0;
+var ccUserDomainCard1 = 0;
+var ccUserDomainCard2 = 0;
+var ccUserDomainCard3 = 0;
+var ccUserExperience1 = 0;
+var ccUserExperience2 = 0;
+
+const ccUserClassDeck = [0,1,2,3,4,5];
+
 /* DATA */
 // classes
 const classList = [
-{ label: "Bard", name: "bard", pages: ["Page 28"], summary: "<p>Bards are the most charismatic people in all the realms. <span class='og-omit'>Members of this class are masters of captivation and specialize in a variety of performance types, including singing, playing musical instruments, weaving tales, or telling jokes. Whether performing for an audience or speaking to an individual, bards thrive in social situations. Members of this profession bond and train at schools or guilds, but a current of egotism runs through those of the bardic persuasion. While they may be the most likely class to bring people together, a bard of ill temper can just as easily tear a party apart.</span></p>", domains: ["Grace", "Codex"], evasion: 10, hp: 5, items: "A romance novel, or a letter never opened", hopefeature: "<strong><em>Make a Scene:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to <a href='#define-temporary'>temporarily</a> <em>Distract</em> a target within <a href='#define-range'>Close</a> range, giving them a &minus;2 penalty to their <a href='#define-difficulty'>Difficulty</a>.", features: ["<strong><em>Rally:</em></strong> Once per session, describe how you rally the party and give yourself and each of your allies a Rally Die. At level 1, your Rally Die is a <strong>d6</strong>. A PC can spend their Rally Die to roll it, adding the result to their <a href='#define-action-roll'>action roll</a>, <a href='#define-reaction-roll'>reaction roll</a>, <a href='#define-damage-roll'>damage roll</a>, or to clear a number of <a href='#define-stress'>Stress</a> equal to the result. At the end of each session, clear all unspent Rally Dice. At level 5, your Rally Die increases to a <strong>d8</strong>."], sidebar: "", subclasses: ["Troubadour", "Wordsmith"], traitarray: ["+0", "&minus;1", "+1", "+0", "+2", "+1"], weaponprimary: "Rapier", weaponsecondary: "Small Dagger", armor: "Gambeson Armor", questions: ["Who from your community taught you to have such confidence in yourself?", "You were in love once. Who did you adore, and how did they hurt you?", "You've always looked up to another bard. Who are they, and why do you idolize them?"], connections: ["What made you realize we were going to be such good friends?", "What do I do that annoys you?", "Why do you grab my hand at night?"] },
-{ label: "Druid", name: "druid", pages:["Page 30"], summary: "<p>Becoming a druid is more than an occupation; it's a calling for those who wish to learn from and protect the magic of the wilderness. <span class='og-omit'>While one might underestimate a gentle druid who practices the often-quiet work of cultivating flora, druids who channel the untamed forces of nature are terrifying to behold. Druids cultivate their abilities in small groups, often connected by a specific ethos or locale, but some choose to work alone. Through years of study and dedication, druids can learn to transform into beasts and shape nature itself.</span></p>", domains: ["Sage", "Arcana"], evasion: 10, hp: 6, items: "A small bag of rocks and bones, or a strange pendant found in the dirt", hopefeature: "<p><strong><em>Evolution:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to transform into a <strong><em>Beastform</em></strong> without marking a <a href='#define-stress'>Stress</a>. When you do, choose one <a href='define-trait'>trait</a> to raise by +1 until you drop out of that Beastform.</p>", features: ["<p><strong><em>Beastform:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to magically transform into a creature of your <a href='#define-tier'>tier</a> or lower from the <a href='#define-druid-beastform-options'>Beastform list</a>. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href='#define-domain-card'>domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href='#define-evasion'>Evasion</a> bonus to your Evasion, and use the <a href='#define-trait'>trait</a> specified in their statistics for your <a href='#define-attack-roll'>attack</a>. While you're in a Beastform, your armor becomes part of your body and you mark <a href='#define-armor'>Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href='#define-armor'>Armor Slots</a> remain marked. If you mark your last <a href='#define-hit-point'>Hit Point</a>, you automatically drop out of this form.</p>", "<p><strong><em>Wildtouch:</em></strong> You can perform harmless, subtle effects that involve nature&mdash;such as causing a flower to rapidly grow, summoning a slight gust of wind, or starting a campfire&mdash;at will.</p>"], sidebar: "", subclasses: ["Warden of the Elements", "Warden of Renewal"], traitarray: ["+1", "+0", "+1", "+2", "&minus;1", "+0"], weaponprimary: "Shortstaff", weaponsecondary: "Round Shield", armor: "Leather Armor", questions: ["Why was the community you grew up in so reliant on nature and its creatures?", "Who was the first wild animal you bonded with? Why did your bond end?", "Who has been trying to hunt you down? What do they want from you?"], connections: ["What did you confide in me that makes me leap into danger for you every time?", "What animal do I say you remind me of?", "What affectionate nickname have you given me?"] },
-{ label: "Guardian", name: "guardian", pages: ["Page 36"], summary: "<p>The title of guardian represents an array of martial professions, speaking more to their moral compass and unshakeable fortitude than the means by which they fight. <span class='og-omit'>While many guardians join groups of militants for either a country or cause, they're more likely to follow those few they truly care for, majority be damned. Guardians are known for fighting with remarkable ferocity even against overwhelming odds, defending their cohort above all else. Woe betide those who harm the ally of a guardian, as the guardian will answer this injury in kind.</span></p>", domains: ["Valor", "Blade"], evasion: 9, hp: 7, items: "A totem from your mentor, or a secret key", hopefeature: "<p><strong><em>Frontline Tank:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to clear 2 <a href='#define-armor'>Armor Slots</a>.</p>", features: ["<p><strong><em>Unstoppable:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can become <em>Unstoppable</em>. You gain an Unstoppable Die. At level 1, your Unstoppable Die is a <strong>d4</strong>. Place it on your character sheet in the space provided, starting with the 1 value facing up. After you make a <a href='#define-damage-roll'>damage roll</a> that deals 1 or more <a href='#define-hit-point'>Hit Points</a> to a target, increase the Unstoppable Die value by one. When the die's value would exceed its maximum value or when the scene ends, remove the die and drop out of <em>Unstoppable</em>. At level 5, your Unstoppable Die increases to a <strong>d6</strong>.</p><p>While <em>Unstoppable</em>, you gain the following benefits:</p><ul class='og-list-disc'><li>You reduce the severity of <a href='#define-damage-type'>physical damage</a> by one threshold (Severe to Major, Major to Minor, Minor to None).</li><li>You add the current value of the Unstoppable Die to your damage roll.</li><li>You can't be <a href='#define-condition'><em>Restrained</em></a> or <a href='#define-condition'><em>Vulnerable</em></a>.</li></ul>"], sidebar: "<p>If your Unstoppable Die is a <strong>d4</strong> and the 4 is currently facing up, the next time you would increase it, you remove the die instead. If your Unstoppable Die increases to a <strong>d6</strong> and the 4 is currently facing up, you'll turn it to 5, and remove it after it would exceed its maximum of 6.</p>", subclasses: ["Stalwart", "Vengeance"], traitarray: ["+1", "+2", "&minus;1", "+0", "+1", "+0"], weaponprimary: "Battleaxe", weaponsecondary: "", armor: "Chainmail Armor", questions: ["Who from your community did you fail to protect, and why do you still think of them?", "You've been tasked with protecting something important and delivering it somewhere dangerous. What is it, and where does it need to go?", "You consider an aspect of yourself to be a weakness. What is it, and how has it affected you?"], connections: ["How did I save your life the first time we met?", "What small gift did you give me that you notice I always carry with me?", "What lie have you told me about yourself that I absolutely believe?"] },
-{ label: "Ranger", name: "ranger", pages: ["Page 38"], summary: "<p>Rangers are highly skilled hunters who, despite their martial abilities, rarely lend their skills to an army. <span class='og-omit'>Through mastery of the body and a deep understanding of the wilderness, rangers become sly tacticians, pursuing their quarry with cunning and patience. Many rangers track and fight alongside an animal companion with whom they've forged a powerful spiritual bond. By honing their skills in the wild, rangers become expert trackers, as likely to ensnare their foes in a trap as they are to assail them head-on.</span></p>",domains: ["Bone", "Sage"],evasion: 12, hp: 6, items: "A trophy from your first kill, or a seemingly broken compass", hopefeature: "<p><strong><em>Hold Them Off:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> when you succeed on an <a href='#define-attack-roll'>attack</a> with a <a href='#define-weapon'>weapon</a> to use that same roll against two additional adversaries within <a href='#define-range'>range</a> of the attack.</p>", features: ["<p><strong><em>Ranger's Focus:</em></strong> <strong><a href='#define-hope'>Spend a Hope</a></strong> and make an attack against a target. On a success, deal your attack's normal damage and <a href='#define-temporary'>temporarily</a> make the attack's target your <em>Focus</em>. Until this feature ends or you make a different creature your <em>Focus</em>, you gain the following benefits against your <em>Focus</em>:</p><ul class='og-list-disc'><li>You know precisely what direction they are in.</li><li>When you deal damage to them, they must mark a <a href='#define-stress'>Stress</a>.</li><li>When you fail an attack against them, you can end your <strong><em>Ranger's Focus</em></strong> feature to <a href='#define-reroll'>reroll</a> your <a href='#define-action-roll'>Duality Dice</a>.</li></ul>"], sidebar: "", subclasses: ["Beastbound", "Wayfinder"], traitarray: ["+2", "+0", "+1", "+1", "&minus;1", "+0"], weaponprimary: "Shortbow", weaponsecondary: "", armor: "Leather Armor", questions: ["A terrible creature hurt your community, and you've vowed to hunt them down. What are they, and what unique trail or sign do they leave behind?", "Your first kill almost killed you, too. What was it, and what part of you was never the same after that event?", "You've traveled many dangerous lands, but what is the one place you refuse to go?"], connections: ["What friendly competition do we have?", "Why do you act differently when we're alone than when others are around?", "What threat have you asked me to watch for, and why are you worried about it?"] },
-{ label: "Rogue", name: "rogue", pages: ["Page 42", "Errata"], summary: "<p>Rogues are scoundrels, often in both attitude and practice. Broadly known as liars and thieves, the best among this class move through the world anonymously. <span class='og-omit'>Utilizing their sharp wits and blades, rogues trick their foes through social manipulation as easily as breaking locks, climbing through windows, or dealing underhanded blows. These masters of magical craft manipulate shadow and movement, adding an array of useful and deadly tools to their repertoire. Rogues frequently establish guilds to meet future accomplices, hire out jobs, and hone secret skills, proving that there's honor among thieves for those who know where to look.</span></p>", domains: ["Midnight", "Grace"], evasion: 12, hp: 6, items: "A set of forgery tools, or a grappling hook", hopefeature: "<p><strong><em>Rogue's Dodge:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to gain a +2 bonus to your <a href='#define-evasion'>Evasion</a> until the next time an attack succeeds against you. Otherwise, this bonus lasts until your next <a href='#define-downtime'>rest</a>.</p>", features: ["<p><strong><em>Cloaked:</em></strong> Any time you would be <a href='#define-condition'><em>Hidden</em></a>, you are instead <em>Cloaked</em>. In addition to the benefits of the <a href='#define-condition'><em>Hidden</em></a> condition, while <em>Cloaked</em> you remain unseen if you are stationary when an <a href='#define-adversary'>adversary</a> moves to where they would normally see you. After you make an <a href='#define-attack-roll'>attack</a> or end a move within line of sight of an adversary, you are no longer <em>Cloaked</em>. Otherwise, this bonus lasts until your next rest.</p>", "<p><strong><em>Sneak Attack:</em></strong> When you succeed on an attack while <em>Cloaked</em> or while an ally is within <a href='#define-range'>Melee</a> range of your target, add a number of <strong>d6s</strong> equal to your <a href='#define-tier'>tier</a> to your <a href='#define-damage-roll'>damage roll</a>.</p>"], sidebar: "",   subclasses: ["Nightwalker", "Syndicate"], traitarray: ["+1", "&minus;1", "+2", "+0", "+1", "+0"], weaponprimary: "Dagger", weaponsecondary: "Small Dagger", armor: "Gambeson Armor", questions: ["What did you get caught doing that got you exiled from your home community?", "You used to have a different life, but you've tried to leave it behind. Who from your past is still chasing you?", "Who from your past were you most sad to say goodbye to?"], connections: ["What did I recently convince you to do that got us both in trouble?", "What have I discovered about your past that I hold secret from the others?", "Who do you know from my past, and how have they influenced your feelings about me?"] },
-{ label: "Seraph", name: "seraph", pages: ["Page 44"], summary: "<p>Seraphs are divine fighters and healers imbued with sacred purpose. A wide array of deities exist within the realms, and thus numerous kinds of seraphs are appointed by these gods. <span class='og-omit'>Their ethos traditionally aligns with the domain or goals of their god, such as defending the weak, exacting vengeance, protecting a land or artifact, or upholding a particular faith. Some seraphs ally themselves with an army or locale, much to the satisfaction of their rulers, but other crusaders fight in opposition to the follies of the Mortal Realm. It is better to be a seraph's ally than their enemy, as they are terrifying foes to those who defy their purpose.</span></p>", domains: ["Splendor", "Valor"], evasion: 9, hp: 7, items: "A bundle of offerings, or a sigil of your god", hopefeature: "<p><strong><em>Life Support:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to clear a <a href='#define-hit-point'>Hit Point</a> on an ally within <a href='#define-range'>Close</a> range.</p>", features: ["<p><strong><em>Prayer Dice:</em></strong> At the beginning of each session, roll a number of <strong>d4s</strong> equal to your <a href='#define-subclass'>subclass</a>'s Spellcast trait and place them on your character sheet in the space provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally within <a href='#define-range'>Far</a> range. You can use a spent die's value to reduce incoming damage, add to a roll's result after the roll is made, or gain <a href='#define-hope'>Hope</a> equal to the result. At the end of each session, clear all unspent Prayer Dice.</p>"], sidebar: "", subclasses: ["Divine Wielder", "Winged Sentinel"], traitarray: ["+0", "+2", "+0", "+1", "+1", "&minus;1"], weaponprimary: "Hallowed Axe", weaponsecondary: "Round Shield", armor: "Chainmail Armor", questions: ["Which god did you devote yourself to? What incredible feat did they perform for you in a moment of desperation?", "How did your appearance change after taking your oath?", "In what strange or unique way do you communicate with your god?"], connections: ["What promise did you make me agree to, should you die on the battlefield?", "Why do you ask me so many questions about my god?", "You've told me to protect one member of our party above all others, even yourself. Who are they and why?"] },
-{ label: "Sorcerer", name: "sorcerer", pages: ["Page 46"], summary: "<p>Not all innate magic users choose to hone their craft, but those who do can become powerful sorcerers. <span class='og-omit'>The gifts of these wielders are passed down through families, even if the family is unaware of or reluctant to practice them. A sorcerer's abilities can range from the elemental to the illusionary and beyond, and many practitioners band together into collectives based on their talents. The act of becoming a formidable sorcerer is not the practice of acquiring power, but learning to cultivate and control the power one already possesses. The magic of a misguided or undisciplined sorcerer is a dangerous force indeed.</span></p>", domains: ["Arcana", "Midnight"], evasion: 10, hp: 6, items: "A whispering orb, or a family heirloom", hopefeature: "<p><strong><em>Volatile Magic:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to <a href='#define-reroll'>reroll</a> any number of your damage dice on an attack that deals <a href='#define-damage-type'>magic damage</a>.</p>",features: ["<p><strong><em>Arcane Sense:</em></strong> You can sense the presence of magical people and objects within <a href='range'>Close</a> range.</p>", "<p><strong><em>Minor Illusion:</em></strong> Make a <strong><a href='spellcast-roll'>Spellcast Roll (10)</a></strong>. On a success, you create a minor visual illusion no larger than yourself within <a href='range'>Close</a> range. This illusion is convincing to anyone at <a href='range'>Close</a> range or farther.</p>", "<p><strong><em>Channel Raw Power:</em></strong> Once per <a href='downtime'>long rest</a>, you can place a <a href='domain-card'>domain card</a> from your <a href='loadout'>loadout</a> into your <a href='loadout'>vault</a> and choose to either:</p><ul class='og-list-disc'><li>Gain <a href='hope'>Hope</a> equal to the level of the card.</li><li>Enhance a spell that deals damage, gaining a bonus to your <a href='damage-roll'>damage roll</a> equal to twice the level of the card.</li></ul></li>"], sidebar: "", subclasses: ["Elemental Origin", "Primal Origin"], traitarray: ["+0", "&minus;1", "+1", "+2", "+1", "+0"], weaponprimary: "Dualstaff", weaponsecondary: "", armor: "Gambeson Armor", questions: ["What did you do that made the people in your community wary of you?", "What mentor taught you to control your untamed magic, and why are they no longer able to guide you?", "You have a deep fear you hide from everyone. What is it, and why does it scare you?"], connections: ["Why do you trust me so deeply?", "What did I do that makes you cautious around me?", "Why do we keep our shared past a secret?"] },
-{ label: "Warrior", name: "warrior", pages: ["Page 48"], summary: "<p>Becoming a warrior requires years, often a lifetime, of training and dedication to the mastery of weapons and violence. <span class='og-omit'>While many who seek to fight hone only their strength, warriors understand the importance of an agile body and mind, making them some of the most sought-after fighters across the realms. Frequently, warriors find employment within an army, a band of mercenaries, or even a royal guard, but their potential is wasted in any position where they cannot continue to improve and expand their skills. Warriors are known to have a favored weapon; to come between them and their blade would be a grievous mistake.</span></p>",domains: ["Blade", "Bone"],evasion: 11, hp: 6, items: "The drawing of a lover, or a sharpening stone", hopefeature: "<p><strong><em>No Mercy:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to gain a +1 bonus to your <a href='#define-attack-roll'>attack rolls</a> until your next <a href='#define-downtime'>rest</a>.</p>",features: ["<p><strong><em>Attack of Opportunity:</em></strong> If an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range attempts to leave that range, make a <a href='#define-reaction-roll'>reaction roll</a> using a <a href='#define-trait'>trait</a> of your choice against their <a href='#define-difficulty'>Difficulty</a>. Choose one effect on a success, or two if you critically succeed:</p><ul class='og-list-disc'><li>They can't move from where they are.</li><li>You deal damage to them equal to your primary weapon's damage.</li><li>You move with them.</li></ul>", "<p><strong><em>Combat Training:</em></strong> You ignore burden when equipping <a href='#define-weapon'>weapons</a>. When you deal <a href='#define-damage-type'>physical damage</a>, you gain a bonus to your <a href='#define-damage-roll'>damage roll</a> equal to your <a href='#define-level'>level</a>.</p>"], sidebar: "", subclasses: ["Call of the Brave", "Call of the Slayer"], traitarray: ["+2", "+1", "+0", "+1", "&minus;1", "+0"], weaponprimary: "Longsword", weaponsecondary: "", armor: "Chainmail Armor", questions: ["Who taught you to fight, and why did they stay behind when you left home?", "Somebody defeated you in battle years ago and left you to die. Who was it, and how did they betray you?", "What legendary place have you always wanted to visit, and why is it so special?"], connections: ["We knew each other long before this party came together. How?", "What mundane task do you usually help me with off the battlefield?", "What fear am I helping you overcome?"] },
-{ label: "Wizard", name: "wizard", pages: ["Page 50"], summary: "<p>Whether through an institution or individual study, those known as wizards acquire and hone immense magical power over years of learning using a variety of tools, including books, stones, potions, and herbs. <span class='og-omit'>Some wizards dedicate their lives to mastering a particular school of magic, while others learn from a wide variety of disciplines. Many wizards become wise and powerful figures in their communities, advising rulers, providing medicines and healing, and even leading war councils. While these mages all work toward the common goal of collecting magical knowledge, wizards often have the most conflict within their own ranks, as the acquisition, keeping, and sharing of powerful secrets is a topic of intense debate that has resulted in innumerable deaths.</span></p>", domains: ["Codex", "Splendor"], evasion: 11, hp: 5, items: "A book you're trying to translate, or a tiny, harmless elemental", hopefeature: "<p><strong><em>Not This Time:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to force an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Far</a> range to <a href='#define-reroll'>reroll</a> an <a href='#define-attack-roll'>attack</a> or <a href='#define-damage-roll'>damage roll</a>.</p>",features: ["<p><strong><em>Prestidigitation:</em></strong> You can perform harmless, subtle magical effects at will. For example, you can change an object's color, create a smell, light a candle, cause a tiny object to float, illuminate a room, or repair a small object.</p>", "<p><strong><em>Strange Patterns:</em></strong> Choose a number between 1 and 12. When you roll that number on a Duality Die, gain a <a href='#define-hope'>Hope</a> or clear a <a href='#define-stress'>Stress</a>.</p><p>You can change this number when you take a <a href='#define-downtime'>long rest</a>.</p>"], sidebar: "", subclasses: ["School of Knowledge", "School of War"], traitarray: ["−1", "+0", "+0", "+1", "+1", "+2"], weaponprimary: "Greatstaff", weaponsecondary: "", armor: "Leather Armor", questions: ["What responsibilities did your community once count on you for? How did you let them down?", "You've spent your life searching for a book or object of great significance. What is it, and why is it so important to you?", "You have a powerful rival. Who are they, and why are you so determined to defeat them?"], connections: ["What favor have I asked of you that you're not sure you can fulfill?", "What weird hobby or strange fascination do we both share?", "What secret about yourself have you entrusted only to me?"] },
+{ label: "Bard", name: "bard", pages: ["Page 28"], summarybrief: "<a href='#define-bard'>Bards</a> are the most charismatic people in all the realms.", summary: "Bards are the most charismatic people in all the realms. Members of this class are masters of captivation and specialize in a variety of performance types, including singing, playing musical instruments, weaving tales, or telling jokes. Whether performing for an audience or speaking to an individual, bards thrive in social situations. Members of this profession bond and train at schools or guilds, but a current of egotism runs through those of the bardic persuasion. While they may be the most likely class to bring people together, a bard of ill temper can just as easily tear a party apart.", domains: ["Grace", "Codex"], evasion: 10, hp: 5, items: "A romance novel, or a letter never opened", hopefeature: "<strong><em>Make a Scene:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to <a href='#define-temporary'>temporarily</a> <em>Distract</em> a target within <a href='#define-range'>Close</a> range, giving them a &minus;2 penalty to their <a href='#define-difficulty'>Difficulty</a>.", features: ["<strong><em>Rally:</em></strong> Once per session, describe how you rally the party and give yourself and each of your allies a Rally Die. At level 1, your Rally Die is a <strong>d6</strong>. A PC can spend their Rally Die to roll it, adding the result to their <a href='#define-action-roll'>action roll</a>, <a href='#define-reaction-roll'>reaction roll</a>, <a href='#define-damage-roll'>damage roll</a>, or to clear a number of <a href='#define-stress'>Stress</a> equal to the result. At the end of each session, clear all unspent Rally Dice. At level 5, your Rally Die increases to a <strong>d8</strong>."], sidebar: "", subclasses: ["Troubadour", "Wordsmith"], traitarray: ["+0", "&minus;1", "+1", "+0", "+2", "+1"], weaponprimary: "Rapier", weaponsecondary: "Small Dagger", armor: "Gambeson Armor", questions: ["Who from your community taught you to have such confidence in yourself?", "You were in love once. Who did you adore, and how did they hurt you?", "You've always looked up to another bard. Who are they, and why do you idolize them?"], connections: ["What made you realize we were going to be such good friends?", "What do I do that annoys you?", "Why do you grab my hand at night?"], qualities: "As a <a href='#define-bard'>Bard</a>, you know how to get people to talk, bring attention to yourself, and use words or music to influence the world around you.",  clothes: ["extravagant", "fancy", "loud", "oversized", "ragged", "sleek", "wild"],attitudes: ["barkeep", "magician", "ringmaster", "rock star", "swashbuckler"] },
+{ label: "Druid", name: "druid", pages:["Page 30"], summarybrief: "Becoming a <a href='#define-druid'>druid</a> is more than an occupation; it's a calling for those who wish to learn from and protect the magic of the wilderness.", summary: "Becoming a duird is more than an occupation; it's a calling for those who wish to learn from and protect the magic of the wilderness. While one might underestimate a gentle druid who practices the often-quiet work of cultivating flora, druids who channel the untamed forces of nature are terrifying to behold. Druids cultivate their abilities in small groups, often connected by a specific ethos or locale, but some choose to work alone. Through years of study and dedication, druids can learn to transform into beasts and shape nature itself.", domains: ["Sage", "Arcana"], evasion: 10, hp: 6, items: "A small bag of rocks and bones, or a strange pendant found in the dirt", hopefeature: "<p><strong><em>Evolution:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to transform into a <strong><em>Beastform</em></strong> without marking a <a href='#define-stress'>Stress</a>. When you do, choose one <a href='#define-trait'>trait</a> to raise by +1 until you drop out of that Beastform.</p>", features: ["<p><strong><em>Beastform:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to magically transform into a creature of your <a href='#define-tier'>tier</a> or lower from the <a href='#define-druid-beastform-options'>Beastform list</a>. You can drop out of this form at any time. While transformed, you can't use weapons or cast spells from <a href='#define-domain-card'>domain cards</a>, but you can still use other features or abilities you have access to. Spells you cast before you transform stay active and last for their normal duration, and you can talk and communicate as normal. Additionally, you gain the Beastform's features, add their <a href='#define-evasion'>Evasion</a> bonus to your Evasion, and use the <a href='#define-trait'>trait</a> specified in their statistics for your <a href='#define-attack-roll'>attack</a>. While you're in a Beastform, your armor becomes part of your body and you mark <a href='#define-armor'>Armor Slots</a> as usual; when you drop out of a Beastform, those marked <a href='#define-armor'>Armor Slots</a> remain marked. If you mark your last <a href='#define-hit-point'>Hit Point</a>, you automatically drop out of this form.</p>", "<p><strong><em>Wildtouch:</em></strong> You can perform harmless, subtle effects that involve nature&mdash;such as causing a flower to rapidly grow, summoning a slight gust of wind, or starting a campfire&mdash;at will.</p>"], sidebar: "", subclasses: ["Warden of the Elements", "Warden of Renewal"], traitarray: ["+1", "+0", "+1", "+2", "&minus;1", "+0"], weaponprimary: "Shortstaff", weaponsecondary: "Round Shield", armor: "Leather Armor", questions: ["Why was the community you grew up in so reliant on nature and its creatures?", "Who was the first wild animal you bonded with? Why did your bond end?", "Who has been trying to hunt you down? What do they want from you?"], connections: ["What did you confide in me that makes me leap into danger for you every time?", "What animal do I say you remind me of?", "What affectionate nickname have you given me?"], qualities: "As a <a href='#define-druid'>Druid</a>, you are a force of nature, preserving the balance of life and death by channeling the wilds themselves through you.",  clothes: ["camouflaged", "grown", "loose", "natural", "patchwork", "regal", "scraps"], attitudes: ["firecracker", "fox", "guide", "hippie", "witch"] },
+{ label: "Guardian", name: "guardian", pages: ["Page 36"], summarybrief: "The title of <a href='#define-guardian'>guardian</a> represents an array of martial professions, speaking more to their moral compass and unshakeable fortitude than the means by which they fight.", summary: "The title of guardian represents an array of martial professions, speaking more to their moral compass and unshakeable fortitude than the means by which they fight. While many guardians join groups of militants for either a country or cause, they're more likely to follow those few they truly care for, majority be damned. Guardians are known for fighting with remarkable ferocity even against overwhelming odds, defending their cohort above all else. Woe betide those who harm the ally of a guardian, as the guardian will answer this injury in kind.", domains: ["Valor", "Blade"], evasion: 9, hp: 7, items: "A totem from your mentor, or a secret key", hopefeature: "<p><strong><em>Frontline Tank:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to clear 2 <a href='#define-armor'>Armor Slots</a>.</p>", features: ["<p><strong><em>Unstoppable:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can become <em>Unstoppable</em>. You gain an Unstoppable Die. At level 1, your Unstoppable Die is a <strong>d4</strong>. Place it on your character sheet in the space provided, starting with the 1 value facing up. After you make a <a href='#define-damage-roll'>damage roll</a> that deals 1 or more <a href='#define-hit-point'>Hit Points</a> to a target, increase the Unstoppable Die value by one. When the die's value would exceed its maximum value or when the scene ends, remove the die and drop out of <em>Unstoppable</em>. At level 5, your Unstoppable Die increases to a <strong>d6</strong>.</p><p>While <em>Unstoppable</em>, you gain the following benefits:</p><ul class='og-list-disc'><li>You reduce the severity of <a href='#define-damage-type'>physical damage</a> by one <a href='#define-hit-point'>threshold</a> (Severe to Major, Major to Minor, Minor to None).</li><li>You add the current value of the Unstoppable Die to your damage roll.</li><li>You can't be <a href='#define-condition'><em>Restrained</em></a> or <a href='#define-condition'><em>Vulnerable</em></a>.</li></ul>"], sidebar: "<p>If your Unstoppable Die is a <strong>d4</strong> and the 4 is currently facing up, the next time you would increase it, you remove the die instead. If your Unstoppable Die increases to a <strong>d6</strong> and the 4 is currently facing up, you'll turn it to 5, and remove it after it would exceed its maximum of 6.</p>", subclasses: ["Stalwart", "Vengeance"], traitarray: ["+1", "+2", "&minus;1", "+0", "+1", "+0"], weaponprimary: "Battleaxe", weaponsecondary: "", armor: "Chainmail Armor", questions: ["Who from your community did you fail to protect, and why do you still think of them?", "You've been tasked with protecting something important and delivering it somewhere dangerous. What is it, and where does it need to go?", "You consider an aspect of yourself to be a weakness. What is it, and how has it affected you?"], connections: ["How did I save your life the first time we met?", "What small gift did you give me that you notice I always carry with me?", "What lie have you told me about yourself that I absolutely believe?"], qualities: "As a <a href='#define-guardian'>Guardian</a>, you run into danger to protect your party, keeping watch over those who might not survive without you there.",  clothes: ["casual", "intricate", "loose", "padded", "royal", "tactical", "weathered"], attitudes: ["captain", "caretaker", "elephant", "general", "wrestler"] },
+{ label: "Ranger", name: "ranger", pages: ["Page 38"], summarybrief: "<a href='#define-ranger'>Rangers</a> are highly skilled hunters who, despite their martial abilities, rarely lend their skills to an army.", summary: "Rangers are highly skilled hunters who, despite their martial abilities, rarely lend their skills to an army. Through mastery of the body and a deep understanding of the wilderness, rangers become sly tacticians, pursuing their quarry with cunning and patience. Many rangers track and fight alongside an animal companion with whom they've forged a powerful spiritual bond. By honing their skills in the wild, rangers become expert trackers, as likely to ensnare their foes in a trap as they are to assail them head-on.", domains: ["Bone", "Sage"], evasion: 12, hp: 6, items: "A trophy from your first kill, or a seemingly broken compass", hopefeature: "<p><strong><em>Hold Them Off:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> when you succeed on an <a href='#define-attack-roll'>attack</a> with a <a href='#define-weapon'>weapon</a> to use that same roll against two additional adversaries within <a href='#define-range'>range</a> of the attack.</p>", features: ["<p><strong><em>Ranger's Focus:</em></strong> <strong><a href='#define-hope'>Spend a Hope</a></strong> and make an attack against a target. On a success, deal your attack's normal damage and <a href='#define-temporary'>temporarily</a> make the attack's target your <em>Focus</em>. Until this feature ends or you make a different creature your <em>Focus</em>, you gain the following benefits against your <em>Focus</em>:</p><ul class='og-list-disc'><li>You know precisely what direction they are in.</li><li>When you deal damage to them, they must mark a <a href='#define-stress'>Stress</a>.</li><li>When you fail an attack against them, you can end your <strong><em>Ranger's Focus</em></strong> feature to <a href='#define-reroll'>reroll</a> your <a href='#define-action-roll'>Duality Dice</a>.</li></ul>"], sidebar: "", subclasses: ["Beastbound", "Wayfinder"], traitarray: ["+2", "+0", "+1", "+1", "&minus;1", "+0"], weaponprimary: "Shortbow", weaponsecondary: "", armor: "Leather Armor", questions: ["A terrible creature hurt your community, and you've vowed to hunt them down. What are they, and what unique trail or sign do they leave behind?", "Your first kill almost killed you, too. What was it, and what part of you was never the same after that event?", "You've traveled many dangerous lands, but what is the one place you refuse to go?"], connections: ["What friendly competition do we have?", "Why do you act differently when we're alone than when others are around?", "What threat have you asked me to watch for, and why are you worried about it?"], qualities: "As a <a href='#define-range'>Ranger</a>, your keen eyes and graceful haste make you indespensible when tracking down enemies and navigating the wilds.",  clothes: ["flowing", "muted", "natural", "stained", "tactical", "tight", "woven"], attitudes: ["child", "ghost", "survivalist", "teacher", "watchdog"] },
+{ label: "Rogue", name: "rogue", pages: ["Page 42", "Errata"], summarybrief: "<a href='#define-rogue'>Rogues</a> are scoundrels, often in both attitude and practice. Broadly known as liars and thieves, the best among this class move through the world anonymously.", summary: "Rogues are scoundrels, often in both attitude and practice. Broadly known as liars and thieves, the best among this class move through the world anonymously. Utilizing their sharp wits and blades, rogues trick their foes through social manipulation as easily as breaking locks, climbing through windows, or dealing underhanded blows. These masters of magical craft manipulate shadow and movement, adding an array of useful and deadly tools to their repertoire. Rogues frequently establish guilds to meet future accomplices, hire out jobs, and hone secret skills, proving that there's honor among thieves for those who know where to look.", domains: ["Midnight", "Grace"], evasion: 12, hp: 6, items: "A set of forgery tools, or a grappling hook", hopefeature: "<p><strong><em>Rogue's Dodge:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to gain a +2 bonus to your <a href='#define-evasion'>Evasion</a> until the next time an attack succeeds against you. Otherwise, this bonus lasts until your next <a href='#define-downtime'>rest</a>.</p>", features: ["<p><strong><em>Cloaked:</em></strong> Any time you would be <a href='#define-condition'><em>Hidden</em></a>, you are instead <em>Cloaked</em>. In addition to the benefits of the <a href='#define-condition'><em>Hidden</em></a> condition, while <em>Cloaked</em> you remain unseen if you are stationary when an <a href='#define-adversary'>adversary</a> moves to where they would normally see you. After you make an <a href='#define-attack-roll'>attack</a> or end a move within line of sight of an adversary, you are no longer <em>Cloaked</em>. Otherwise, this bonus lasts until your next rest.</p>", "<p><strong><em>Sneak Attack:</em></strong> When you succeed on an attack while <em>Cloaked</em> or while an ally is within <a href='#define-range'>Melee</a> range of your target, add a number of <strong>d6s</strong> equal to your <a href='#define-tier'>tier</a> to your <a href='#define-damage-roll'>damage roll</a>.</p>"], sidebar: "",   subclasses: ["Nightwalker", "Syndicate"], traitarray: ["+1", "&minus;1", "+2", "+0", "+1", "+0"], weaponprimary: "Dagger", weaponsecondary: "Small Dagger", armor: "Gambeson Armor", questions: ["What did you get caught doing that got you exiled from your home community?", "You used to have a different life, but you've tried to leave it behind. Who from your past is still chasing you?", "Who from your past were you most sad to say goodbye to?"], connections: ["What did I recently convince you to do that got us both in trouble?", "What have I discovered about your past that I hold secret from the others?", "Who do you know from my past, and how have they influenced your feelings about me?"], qualities: "As a <a href='#define-Rogue'>rogue</a>, you have experience fighting with your blade as well as your wit, preferring to move quickly and fight quietly.",  clothes: ["clean", "dark", "inconspicuous", "leather", "scary", "tactical", "tight"], attitudes: ["bandit", "con artist", "gambler", "mob boss", "pirate"] },
+{ label: "Seraph", name: "seraph", pages: ["Page 44"], summarybrief: "<a href='#define-seraph'>Seraphs</a> are divine fighters and healers imbued with sacred purpose. A wide array of deities exist within the realms, and thus numerous kinds of seraphs are appointed by these gods.", summary: "Seraphs are divine fighters and healers imbued with sacred purpose. A wide array of deities exist within the realms, and thus numerous kinds of seraphs are appointed by these gods. Their ethos traditionally aligns with the domain or goals of their god, such as defending the weak, exacting vengeance, protecting a land or artifact, or upholding a particular faith. Some seraphs ally themselves with an army or locale, much to the satisfaction of their rulers, but other crusaders fight in opposition to the follies of the Mortal Realm. It is better to be a seraph's ally than their enemy, as they are terrifying foes to those who defy their purpose.", domains: ["Splendor", "Valor"], evasion: 9, hp: 7, items: "A bundle of offerings, or a sigil of your god", hopefeature: "<p><strong><em>Life Support:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to clear a <a href='#define-hit-point'>Hit Point</a> on an ally within <a href='#define-range'>Close</a> range.</p>", features: ["<p><strong><em>Prayer Dice:</em></strong> At the beginning of each session, roll a number of <strong>d4s</strong> equal to your <a href='#define-subclass'>subclass</a>'s Spellcast trait and place them on your character sheet in the space provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally within <a href='#define-range'>Far</a> range. You can use a spent die's value to reduce incoming damage, add to a roll's result after the roll is made, or gain <a href='#define-hope'>Hope</a> equal to the result. At the end of each session, clear all unspent Prayer Dice.</p>"], sidebar: "", subclasses: ["Divine Wielder", "Winged Sentinel"], traitarray: ["+0", "+2", "+0", "+1", "+1", "&minus;1"], weaponprimary: "Hallowed Axe", weaponsecondary: "Round Shield", armor: "Chainmail Armor", questions: ["Which god did you devote yourself to? What incredible feat did they perform for you in a moment of desperation?", "How did your appearance change after taking your oath?", "In what strange or unique way do you communicate with your god?"], connections: ["What promise did you make me agree to, should you die on the battlefield?", "Why do you ask me so many questions about my god?", "You've told me to protect one member of our party above all others, even yourself. Who are they and why?"], qualities: "As a <a href='#define-seraph'>Seraph</a>, you've taken a vow to a god who helps you channel sacred arcane power to keep your party on their feet.",  clothes: ["glowing", "rippling", "ornate", "tight", "modest", "strange", "natural"], attitudes: ["angel", "doctor", "evangelist", "monk", "priest"] },
+{ label: "Sorcerer", name: "sorcerer", pages: ["Page 46"], summarybrief: "Not all innate magic users choose to hone their craft, but those who do can become powerful <a href='#define-sorcerer'>sorcerers</a>.", summary: "Not all innate magic users choose to hone their craft, but those who do can become powerful sorcerers. The gifts of these wielders are passed down through families, even if the family is unaware of or reluctant to practice them. A sorcerer's abilities can range from the elemental to the illusionary and beyond, and many practitioners band together into collectives based on their talents. The act of becoming a formidable sorcerer is not the practice of acquiring power, but learning to cultivate and control the power one already possesses. The magic of a misguided or undisciplined sorcerer is a dangerous force indeed.", domains: ["Arcana", "Midnight"], evasion: 10, hp: 6, items: "A whispering orb, or a family heirloom", hopefeature: "<p><strong><em>Volatile Magic:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to <a href='#define-reroll'>reroll</a> any number of your damage dice on an attack that deals <a href='#define-damage-type'>magic damage</a>.</p>",features: ["<p><strong><em>Arcane Sense:</em></strong> You can sense the presence of magical people and objects within <a href='range'>Close</a> range.</p>", "<p><strong><em>Minor Illusion:</em></strong> Make a <strong><a href='spellcast-roll'>Spellcast Roll (10)</a></strong>. On a success, you create a minor visual illusion no larger than yourself within <a href='range'>Close</a> range. This illusion is convincing to anyone at <a href='range'>Close</a> range or farther.</p>", "<p><strong><em>Channel Raw Power:</em></strong> Once per <a href='downtime'>long rest</a>, you can place a <a href='domain-card'>domain card</a> from your <a href='loadout'>loadout</a> into your <a href='loadout'>vault</a> and choose to either:</p><ul class='og-list-disc'><li>Gain <a href='hope'>Hope</a> equal to the level of the card.</li><li>Enhance a spell that deals damage, gaining a bonus to your <a href='damage-roll'>damage roll</a> equal to twice the level of the card.</li></ul></li>"], sidebar: "", subclasses: ["Elemental Origin", "Primal Origin"], traitarray: ["+0", "&minus;1", "+1", "+2", "+1", "+0"], weaponprimary: "Dualstaff", weaponsecondary: "", armor: "Gambeson Armor", questions: ["What did you do that made the people in your community wary of you?", "What mentor taught you to control your untamed magic, and why are they no longer able to guide you?", "You have a deep fear you hide from everyone. What is it, and why does it scare you?"], connections: ["Why do you trust me so deeply?", "What did I do that makes you cautious around me?", "Why do we keep our shared past a secret?"], qualities: "As a <a href='#define-sorcerer'>Sorcerer</a>, you were born with innate magical power, and you've learned how to wield that power to get what you want.",  clothes: ["always moving", "flamboyant", "inconspicuous", "layered", "ornate", "tight"], attitudes: ["celebrity", "commander", "politician", "prankster", "wolf in sheep's clothing"] },
+{ label: "Warrior", name: "warrior", pages: ["Page 48"], summarybrief: "Becoming a <a href='#define-warrior'>warrior</a> requires years, often a lifetime, of training and dedication to the mastery of weapons and violence.", summary: "Becoming a warrior requires years, often a lifetime, of training and dedication to the mastery of weapons and violence. While many who seek to fight hone only their strength, warriors understand the importance of an agile body and mind, making them some of the most sought-after fighters across the realms. Frequently, warriors find employment within an army, a band of mercenaries, or even a royal guard, but their potential is wasted in any position where they cannot continue to improve and expand their skills. Warriors are known to have a favored weapon; to come between them and their blade would be a grievous mistake.", domains: ["Blade", "Bone"],evasion: 11, hp: 6, items: "The drawing of a lover, or a sharpening stone", hopefeature: "<p><strong><em>No Mercy:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to gain a +1 bonus to your <a href='#define-attack-roll'>attack rolls</a> until your next <a href='#define-downtime'>rest</a>.</p>",features: ["<p><strong><em>Attack of Opportunity:</em></strong> If an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range attempts to leave that range, make a <a href='#define-reaction-roll'>reaction roll</a> using a <a href='#define-trait'>trait</a> of your choice against their <a href='#define-difficulty'>Difficulty</a>. Choose one effect on a success, or two if you critically succeed:</p><ul class='og-list-disc'><li>They can't move from where they are.</li><li>You deal damage to them equal to your primary weapon's damage.</li><li>You move with them.</li></ul>", "<p><strong><em>Combat Training:</em></strong> You ignore burden when equipping <a href='#define-weapon'>weapons</a>. When you deal <a href='#define-damage-type'>physical damage</a>, you gain a bonus to your <a href='#define-damage-roll'>damage roll</a> equal to your <a href='#define-level'>level</a>.</p>"], sidebar: "", subclasses: ["Call of the Brave", "Call of the Slayer"], traitarray: ["+2", "+1", "+0", "+1", "&minus;1", "+0"], weaponprimary: "Longsword", weaponsecondary: "", armor: "Chainmail Armor", questions: ["Who taught you to fight, and why did they stay behind when you left home?", "Somebody defeated you in battle years ago and left you to die. Who was it, and how did they betray you?", "What legendary place have you always wanted to visit, and why is it so special?"], connections: ["We knew each other long before this party came together. How?", "What mundane task do you usually help me with off the battlefield?", "What fear am I helping you overcome?"], qualities: "As a <a href='#define-warrior'>Warrior</a>, you run into battle without hestation or caution, knowing you can strike down whatever enemy stands in your path.",  clothes: ["bold", "patched", "reinforced", "royal", "sleek", "sparing", "weathered"], attitudes: ["bull, dedicated soldier, gladiator, hero, hired hand"] },
+{ label: "Wizard", name: "wizard", pages: ["Page 50"], summarybrief: "Whether through an institution or individual study, those known as <a href='#define-wizard'>wizards</a> acquire and hone immense magical power over years of learning using a variety of tools, including books, stones, potions, and herbs.", summary: "Whether through an institution or individual study, those known as wizards acquire and hone immense magical power over years of learning using a variety of tools, including books, stones, potions, and herbs. Some wizards dedicate their lives to mastering a particular school of magic, while others learn from a wide variety of disciplines. Many wizards become wise and powerful figures in their communities, advising rulers, providing medicines and healing, and even leading war councils. While these mages all work toward the common goal of collecting magical knowledge, wizards often have the most conflict within their own ranks, as the acquisition, keeping, and sharing of powerful secrets is a topic of intense debate that has resulted in innumerable deaths.", domains: ["Codex", "Splendor"], evasion: 11, hp: 5, items: "A book you're trying to translate, or a tiny, harmless elemental", hopefeature: "<p><strong><em>Not This Time:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to force an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Far</a> range to <a href='#define-reroll'>reroll</a> an <a href='#define-attack-roll'>attack</a> or <a href='#define-damage-roll'>damage roll</a>.</p>",features: ["<p><strong><em>Prestidigitation:</em></strong> You can perform harmless, subtle magical effects at will. For example, you can change an object's color, create a smell, light a candle, cause a tiny object to float, illuminate a room, or repair a small object.</p>", "<p><strong><em>Strange Patterns:</em></strong> Choose a number between 1 and 12. When you roll that number on a Duality Die, gain a <a href='#define-hope'>Hope</a> or clear a <a href='#define-stress'>Stress</a>.</p><p>You can change this number when you take a <a href='#define-downtime'>long rest</a>.</p>"], sidebar: "", subclasses: ["School of Knowledge", "School of War"], traitarray: ["&minus;1", "+0", "+0", "+1", "+1", "+2"], weaponprimary: "Greatstaff", weaponsecondary: "", armor: "Leather Armor", questions: ["What responsibilities did your community once count on you for? How did you let them down?", "You've spent your life searching for a book or object of great significance. What is it, and why is it so important to you?", "You have a powerful rival. Who are they, and why are you so determined to defeat them?"], connections: ["What favor have I asked of you that you're not sure you can fulfill?", "What weird hobby or strange fascination do we both share?", "What secret about yourself have you entrusted only to me?"], qualities: "As a <a href='#define-wizard'>Wizard</a>, you've become familiar with the arcane through the relentless study of grimoires and other tools of magic",  clothes: ["beautiful", "clean", "common", "flowing", "layered", "patchwork", "tight"], attitudes: ["eccentric", "librarian", "lit fuse", "philosopher", "professor"] }
 ];
 // subclasses
 const subclassList = [
-{ label: "Troubadour", name: "troubadour", pages: ["Page 28"], summary: "Play the Troubadour if you want to play music to bolster your allies.", spellcast: "Presence", foundation: ["<p><strong><em>Gifted Performer:</em></strong> You can play three different types of songs, once each per <a href='#define-downtime'>long rest</a>; describe how you perform for others to gain the listed benefit:</p><ul class='og-list-disc'><li><strong><em>Relaxing Song:</em></strong> You and all allies within <a href='#define-range'>Close</a> range clear a <a href='#define-hit-point'>Hit Point</a>.</li><li><strong><em>Epic Song:</em></strong> Make a target within <a href='#define-range'>Close</a> range <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</li><li><strong><em>Heartbreaking Song:</em></strong> You and all allies within <a href='#define-range'>Close</a> range gain a <a href='#define-hope'>Hope</a>.</li></ul>"], specialization: ["<p><strong><em>Maestro:</em></strong> Your rallying songs steel the courage of those who listen. When you give a Rally Die to an ally, they can gain a <a href='#define-hope'>Hope</a> or clear a <a href='#define-stress'>Stress</a>.</p>"], mastery: ["<p><strong><em>Virtuoso:</em></strong> You are among the greatest of your craft and your skill is boundless. You can perform each of your <strong><em>Gifted Performer</em></strong> feature's songs twice per <a href='#define-downtime'>long rest</a>.</p>"] },
-{ label: "Wordsmith", name: "wordsmith", pages: ["Page 29"], summary: "Play the Wordsmith if you want to use clever wordplay and captivate crowds.", spellcast: "Presence", foundation: ["<p><strong><em>Rousing Speech:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can give a heartfelt, inspiring speech. All allies within <a href='#define-range'>Far</a> range clear 2 <a href='#define-stress'>Stress</a>.</p>", "<p><strong><em>Heart of a Poet:</em></strong> After you make an <a href='#define-action-roll'>action roll</a> to impress, persuade, or offend someone, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to add a <strong>d4</strong> to the roll.</p>"], specialization: ["<p><strong><em>Eloquent:</em></strong> Your moving words boost morale. Once per session, when you encourage an ally, you can do one of the following:</p><ul class='og-list-disc'><li>Allow them to find a mundane object or tool they need.</li><li><a href='#define-hope'>Help an Ally</a> without spending <a href='#define-hope'>Hope</a>.</li><li>Give them an additional <a href='#define-downtime-move'>downtime move</a>  during their next <a href='#define-downtime'>rest</a>.</li></ul>"], mastery: ["<p><strong><em>Epic Poetry:</em></strong> Your Rally Die increases to a <strong>d10</strong>. Additionally, when you <a href='#define-hope'>Help an Ally</a>, you can narrate the moment as if you were writing the tale of their heroism in a memoir. When you do, roll a <strong>d10</strong> as your <a href='#define-advantage'>advantage</a> die.</p>"] },
-{ label: "Warden of the Elements", name: "warden-of-the-elements", pages: ["Page 30"], summary: "Play the Warden of the Elements if you want to embody the natural elements of the wild.", spellcast: "Instinct", foundation: ["<p><strong><em>Elemental Incarnation:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to <em>Channel</em> one of the following elements until you take <a href='#define-hit-point'>Severe</a> damage or until your next <a href='#define-downtime'>rest</a>:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range deals damage to you, they take <strong>1d10</strong> <a href='#define-damage-type'>magic damage</a>.</li><li><strong><em>Earth:</em></strong> Gain a bonus to your <a href='#define-hit-point'>damage thresholds</a> equal to your <a href='#define-damage-roll'>Proficiency</a>.</li><li><strong><em>Water:</em></strong> When you deal damage to an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range, all other adversaries within <a href='#define-range'>Very Close</a> range must mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Air:</em></strong> You can hover, gaining <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Agility Rolls</a>.</li></ul>"], specialization: ["<p><strong><em>Elemental Aura:</em></strong> Once per <a href='#define-downtime'>rest</a> while <em>Channeling</em>, you can assume an aura matching your element. The aura affects targets within <a href='#define-range'>Close</a> range until your <em>Channeling</em> ends.</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> marks 1 or more <a href='#define-hit-point'>Hit Points</a>, they must also mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Earth:</em></strong> Your allies gain a +1 bonus to <a href='#define-strength'>Strength</a>.</li><li><strong><em>Water:</em></strong> When an <a href='#define-adversary'>adversary</a> deals damage to you, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to move them anywhere within <a href='#define-range'>Very Close</a> range of where they are.</li><li><strong><em>Air:</em></strong> When you or an ally takes damage from an attack beyond <a href='#define-range'>Melee</a> range, reduce the damage by <strong>1d8</strong>.</li></ul>"], mastery: ["<p><strong><em>Elemental Dominion:</em></strong> You further embody your element. While <em>Channeling</em>, you gain the following benefit:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> You gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> for attacks and spells that deal damage.</li><li><strong><em>Earth:</em></strong> When you would mark <a href='#define-hit-point'>Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li><li><strong><em>Water:</em></strong> When an attack against you succeeds, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to make the attacker <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</li><li><strong><em>Air:</em></strong> You gain a +1 bonus to your <a href='#define-evasion'>Evasion</a> and can fly.</li></ul>"]},
-{ label: "Warden of Renewal", name: "warden-of-renewal", pages: ["Page 31"], summary: "Play the Warden of Renewal if you want to use powerful magic to heal your party.", spellcast: "Instinct", foundation: ["<p><strong><em>Clarity of Nature:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can create a space of natural serenity within <a href='#define-range'>Close</a> range. When you spend a few minutes resting within the space, clear <a href='#define-stress'>Stress</a> equal to your <a href='#define-instinct'>Instinct</a>, distributed as you choose between you and your allies.</p>", "<p><strong><em>Regeneration:</em></strong> Touch a creature and <strong><a href='#define-hope'>spend 3 Hope</a></strong>. That creature clears <strong>1d4</strong> <a href='#define-hit-point'>Hit Points</a>.</p>"], specialization: ["<p><strong><em>Regenerative Reach:</em></strong> You can target creatures within <a href='#define-range'>Very Close</a> range with your <strong><em>Regeneration</em></strong> feature.</p>", "<p><strong><em>Warden's Protection:</em></strong> Once per <a href='#define-downtime'>long rest</a>, <strong><a href='#define-hope'>spend 2 Hope</a></strong> to clear 2 Hit Points on <strong>1d4</strong> allies within <a href='#define-range'>Close</a> range.</p>"], mastery: ["<p><strong><em>Defender:</em></strong> Your animal transformation embodies a healing guardian spirit. When you're in Beastform and an ally within <a href='#define-range'>Close</a> range marks 2 or more <a href='#define-hit-point'>Hit Points</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to reduce the number of Hit Points they mark by 1.</p>"] },
-{ label: "Stalwart", name: "stalwart", pages: ["Page 36"], summary: "Play the Stalwart if you want to take heavy blows and keep fighting.", spellcast: "", foundation: ["<p><strong><em>Unwavering:</em></strong> Gain a permanent +1 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Iron Will:</em></strong> When you take <a href='#define-damage-type'>physical damage</a>, you can <strong><a href='#define-armor'>mark an additional Armor Slot</a></strong> to reduce the severity.</p>"], specialization: ["<p><strong><em>Unrelenting:</em></strong> Gain a permanent +2 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Partners-in-Arms:</em></strong> When an ally within <a href='#define-range'>Very Close</a> range takes damage, you can <strong><a href='#define-armor'>mark an Armor Slot</a></strong> to reduce the severity by one threshold.</p>"], mastery: ["<p><strong><em>Undaunted:</em></strong> Gain a permanent +3 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Loyal Protector:</em></strong> When an ally within <a href='#define-range'>Close</a> range has 2 or fewer <a href='#define-hit-point'>Hit Points</a> and would take damage, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to sprint to their side and take the damage instead.</p>"] },
-{ label: "Vengeance", name: "vengeance", pages: ["Page 36"], summary: "Play the Vengeance if you want to strike down enemies who harm you or your allies.", spellcast: "", foundation: ["<p><strong><em>At Ease:</em></strong> Gain an additional <a href='#define-stress'>Stress</a> slot.</p>", "<p><strong><em>Revenge:</em></strong> When an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range succeeds on an attack against you, you can <strong><a href='#define-stress'>mark 2 Stress</a></strong> to force the attacker to mark a <a href='#define-hit-point'>Hit Point</a>.</p>"], specialization: ["<p><strong><em>Act of Reprisal:</em></strong> When an <a href='#define-adversary'>adversary</a> damages an ally within <a href='#define-range'>Melee</a> range, you gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> for the next successful attack you make against that adversary.</p>"], mastery: ["<p><strong><em>Nemesis:</em></strong> <strong><a href='#define-hope'>Spend 2 Hope</a></strong> to <em>Prioritize</em> an <a href='#define-adversary'>adversary</a> until your next <a href='#define-downtime'>rest</a>. When you make an attack against your <em>Prioritized</em> adversary, you can swap the results of your <a href='#define-action-roll'>Hope and Fear Dice</a>. You can only Prioritize one adversary at a time.</p>"]},
-{ label: "Beastbound", name: "beastbound", pages: ["Page 38"], summary: "Play the Beastbound if you want to form a deep bond with an animal ally.", spellcast: "Agility", foundation: ["<p><strong><em>Companion:</em></strong> You have an animal <a href='#define-beastbound-companion'>companion</a> of your choice (at the GM's discretion). They stay by your side unless you tell them otherwise.</p><p>Take the <a href='https://www.daggerheart.com/downloads/'>Ranger Companion sheet</a>. When you <a href='#define-level'>level up</a>, choose a <a href='#define-beastbound-companion-advancement'>level up option</a> for your companion as well.</p>"], specialization: ["<p><strong><em>Expert Training:</em></strong> Choose an additional level-up option for your companion.</p>"], mastery: ["<p><strong><em>Advanced Training:</em></strong> Choose two additional level-up options for your companion.</p>", "<p><strong><em>Loyal Friend:</em></strong> Once per <a href='#define-downtime'>long rest</a>, when the damage from an attack would mark your companion's last <a href='#define-stress'>Stress</a> or your last <a href='#define-hit-point'>Hit Point</a> and you're within <a href='#define-range'>Close</a> range of each other, you or your companion can rush to the other's side and take that damage instead.</p>"] },
-{ label: "Wayfinder", name: "wayfinder", pages: ["Page 39"], summary: "Play the Wayfinder if you want to hunt your prey and strike with deadly force.", spellcast: "Agility", foundation: ["<p><strong><em>Ruthless Predator:</em></strong> When you make a <a href='#define-damage-roll'>damage roll</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a>. Additionally, when you deal <a href='#define-hit-point'>Severe</a> damage to an <a href='#define-adversary'>adversary</a>, they must mark a <a href='#define-stress'>Stress</a>.</p>", "<p><strong><em>Path Forward:</em></strong> When you're traveling to a place you've previously visited or you carry an object that has been at the location before, you can identify the shortest, most direct path to your destination.</p>"], specialization: ["<p><strong><em>Elusive Predator:</em></strong> When your <em>Focus</em> makes an attack against you, you gain a +2 bonus to your <a href='#define-evasion'>Evasion</a> against the attack.</p>"], mastery: ["<p><strong><em>Apex Predator:</em></strong> Before you make an <a href='#define-attack-roll'>attack roll</a> against your <em>Focus</em>, you can <strong><a href='#define-hope'>spend a Hope</a></strong>. On a successful <a href='#define-attack-roll'>attack</a>, you remove a <a href='#define-fear'>Fear</a> from the GM's Fear pool.</p>"]},
-{ label: "Nightwalker", name: "nightwalker", pages: ["Page 42"], summary: "Play the Nightwalker if you want to manipulate shadows to maneuver through the environment.", spellcast: "Finesse", foundation: ["<p><strong><em>Shadow Stepper:</em></strong> You can move from shadow to shadow. When you move into an area of darkness or a shadow cast by another creature or object, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to disappear from where you are and reappear inside another shadow within <a href='#define-range'>Far</a> range. When you reappear, you are <em>Cloaked</em>.</p></li>"], specialization: ["<p><strong><em>Dark Cloud:</em></strong> Make a <strong><a href='#define-spellcast-roll'>Spellcast Roll (15)</a></strong>. On a success, create a <a href='#define-temporary'>temporary</a> dark cloud that covers any area within <a href='#define-range'>Close</a> range. Anyone in this cloud can't see outside of it, and anyone outside of it can't see in. You're considered <em>Cloaked</em> from any <a href='#define-adversary'>adversary</a> for whom the cloud blocks line of sight.</p></li><p><strong><em>Adrenaline:</em></strong> While you're <a href='#define-condition'>Vulnerable</a>, add your level to your <a href='#define-damage-roll'>damage rolls</a>.</p></li>"], mastery: ["<p><strong><em>Shadow Stepper:</em></strong> Gain a permanent +1 bonus to your <a href='#define-evasion'>Evasion</a>. You can use your <strong><em>Shadow Stepper</em></strong> feature to move within <a href='#define-range'>Very Far</a> range.</p></li><p><strong><em>Vanishing Act:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to become <em>Cloaked</em> at any time. When <em>Cloaked</em> from this feature, you automatically clear the <a href='#define-condition'><em>Restrained</em></a> condition if you have it. You remain <em>Cloaked</em> in this way until you roll with Fear or until your next <a href='#define-downtime'>rest</a>.</p></li>"] },
-{ label: "Syndicate", name: "syndicate", pages: ["Page 43"], summary: "Play the Syndicate if you want to have a web of contacts everywhere you go.", spellcast: "Finesse", foundation: ["<p><strong><em>Well-Connected:</em></strong> When you arrive in a prominent town or environment, you know somebody who calls this place home. Give them a name, note how you think they could be useful, and choose one fact from the following list:</p><ul class='og-list-disc'><li>They owe me a favor, but they'll be hard to find.</li><li>They're going to ask for something in exchange.</li><li>They're always in a great deal of trouble.</li><li>We used to be together. It's a long story.</li><li>We didn't part on great terms.</li></ul>"], specialization: ["<p><strong><em>Contacts Everywhere:</em></strong> Once per session, you can briefly call on a shady contact. Choose one of the following benefits and describe what brought them here to help you in this moment:</p><ul class='og-list-disc'><li>They provide 1 handful of <a href='#define-gold'>gold</a>, a unique tool, or a mundane object that the situation requires.</li><li>On your next <a href='#define-action-roll'>action roll</a>, their help provides a +3 bonus to the result of your <a href='#define-action-roll'>Hope or Fear Die</a>.</li><li>The next time you deal damage, they snipe from the shadows, adding <strong>2d8</strong> to your <a href='#define-damage-roll'>damage roll</a>.</li></ul>"], mastery: ["<p><strong><em>Reliable Backup:</em></strong> You can use your <strong><em>Contacts Everywhere</em></strong> feature three times per session. The following options are added to the list of benefits you can choose from when you use that feature:</p><ul class='og-list-disc'><li>When you mark 1 or more <a href='#define-hit-point'>Hit Points</a>, they can rush out to shield you, reducing the Hit Points marked by 1.</li><li>When you make a <a href='#define-trait-roll'>Presence Roll</a> in conversation, they back you up. You can roll a <strong>d20</strong> as your <a href='#define-action-roll'>Hope Die</a>.</li></ul>"] },
-{ label: "Divine Wielder", name: "divine-wielder", pages: ["Page 44"], summary: "Play the Divine Wielder if you want to dominate the battlefield with a legendary weapon.", spellcast: "Strength", foundation: ["<p><strong><em>Spirit Weapon:</em></strong> When you have an equipped <a href='#define-weapon'>weapon</a> with a range of Melee or Very Close, it can fly from your hand to attack an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Close</a> range and then return to you. You can <strong><a href='#define-stress'>mark a Stress</a></strong> to target an additional adversary within <a href='#define-range'>range</a> with the same <a href='#define-attack-roll'>attack roll</a>.</p>", "<p><strong><em>Sparing Touch:</em></strong> Once per <a href='#define-downtime'>long rest</a>, touch a creature and clear 2 <a href='#define-hit-point'>Hit Points</a> or 2 <a href='#stress'>Stress</a> from them.</p>"], specialization: ["<p><strong><em>Devout:</em></strong> When you roll your Prayer Dice, you can roll an additional die and discard the lowest result. Additionally, you can use your <strong><em>Sparing Touch</em></strong> feature twice instead of once per <a href='#define-downtime'>long rest</a>.</p>"], mastery: ["<p><strong><em>Sacred Resonance:</em></strong> When you roll damage for your <strong><em>Spirit Weapon</em></strong> feature, if any of the die results match, double the value of each matching die. For example, if you roll two 5s, they count as two 10s.</p>"] },
-{ label: "Winged Sentinel", name: "winged-sentinel", pages: ["Page 45"], summary: "Play the Winged Sentinel if you want to take flight and strike crushing blows from the sky.", spellcast: "Strength", foundation: ["<p><strong><em>Wings of Light:</em></strong> You can fly. While flying, you can do the following:</p><ul class='og-list-disc'><li><strong><a href='#define-stress'>Mark a Stress</a></strong> to pick up and carry another willing creature approximately your size or smaller.</li><li><strong><a href='#define-hope'>Spend a Hope</a></strong> to deal an extra <strong>1d8</strong> damage on a successful attack.</li></ul>"], specialization: ["<p><strong><em>Ethereal Visage:</em></strong> Your supernatural visage strikes awe and fear. While flying, you have <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Presence Rolls</a>. When you succeed with <a href='#define-hope'>Hope</a> on a <a href='#define-trait-roll'>Presence Roll</a>, you can remove a <a href='#define-fear'>Fear</a> from the GM's Fear pool instead of gaining <a href='#define-hope'>Hope</a>.</p>"], mastery: ["<p><strong><em>Ascendant:</em></strong> Gain a permanent +4 bonus to your Severe <a href='#define-hit-point'>damage threshold</a>.</p>", "<p><strong><em>Power of the Gods:</em></strong> While flying, you deal an extra <strong>1d12</strong> damage instead of 1d8 from your <strong><em>Wings of Light</em></strong> feature.</p>"] },
-{ label: "Elemental Origin", name: "elemental-origin", pages: ["Page 46"], summary: "Play the Elemental Origin if you want to channel raw magic to take the shape of a particular element.", spellcast: "Instinct", foundation: ["<p><strong><em>Elementalist:</em></strong> Choose one of the following elements at <a href='#define-character-creation'>character creation</a>: air, earth, fire, lightning, water. You can shape this element into harmless effects.</p><p>Additionally, <strong><a href='#define-hope'>spend a Hope</a></strong> and describe how your control over this element helps an <a href='#define-action-roll'>action roll</a> you're about to make, then either gain a +2 bonus to the roll or a +3 bonus to the roll's damage.</p>"], specialization: ["<p><strong><em>Natural Evasion:</em></strong> You can call forth your element to protect you from harm. When an <a href='#define-attack-roll'>attack roll</a> against you succeeds, you can <strong><a href='#define-stress'>mark a Stress</a></strong> and describe how you use your element to defend you. When you do, roll a <strong>d6</strong> and add its result to your <a href='#define-evasion'>Evasion</a> against the attack.</p>"], mastery: ["<p><strong><em>Transcendence:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can transform into a physical manifestation of your element. When you do, describe your transformation and choose two of the following benefits to gain until your next <a href='#define-downtime'>rest</a>:</p><ul class='og-list-disc'><li>+4 bonus to your Severe <a href='#define-hit-point'>threshold</a></li><li>+1 bonus to a character trait of your choice</li><li>+1 bonus to your <a href='#define-damage-roll'>Proficiency</a></li><li>+2 bonus to your <a href='#define-evasion'>Evasion</a></li></ul>"] },
-{ label: "Primal Origin", name: "primal-origin", pages: ["Page 47"], summary: "Play the Primal Origin if you want to extend the versatility of your spells in powerful ways.", spellcast: "Instinct", foundation: ["<p><strong><em>Manipulate Magic:</em></strong> Your primal origin allows you to modify the essence of magic itself. After you cast a spell or make an attack using a <a href='#define-weapon'>weapon</a> that deals <a href='#define-damage-type'>magic damage</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to do one of the following:</p><ul class='og-list-disc'><li>Extend the spell or attack's reach by one range</li><li>Gain a +2 bonus to the <a href='#define-action-roll'>action roll</a>'s result</li><li>Double a damage die of your choice</li><li>Hit an additional target within <a href='#define-range'>range</a></li></ul>"], specialization: ["<p><strong><em>Enchanted Aid:</em></strong> You can enhance the magic of others with your essence. When you <a href='#define-hope'>Help an Ally</a> with a <a href='#define-spellcast-roll'>Spellcast Roll</a>, you can roll a <strong>d8</strong> as your <a href='#define-advantage'>advantage</a> die. Once per <a href='#define-downtime'>long rest</a>, after an ally has made a Spellcast Roll with your help, you can swap the results of their <a href='#define-action-roll'>Duality Dice</a>.</p>"], mastery: ["<p><strong><em>Arcane Charge:</em></strong> You can gather magical energy to enhance your capabilities. When you take <a href='#define-damage-type'>magic damage</a>, you become <em>Charged</em>. Alternatively, you can <strong><a href='#define-hope'>spend 2 Hope</a></strong> to become <em>Charged</em>. When you successfully make an attack that deals <a href='#define-damage-type'>magic damage</a> while <em>Charged</em>, you can clear your Charge to either gain a +10 bonus to the <a href='#define-damage-roll'>damage roll</a> or gain a +3 bonus to the <a href='#define-difficulty'>Difficulty</a> of a <a href='#define-reaction-roll'>reaction roll</a> the spell causes the target to make. You stop being <em>Charged</em> at your next <a href='#define-downtime'>long rest</a>.</p>"] },
-{ label: "Call of the Brave", name: "call-of-the-brave", pages: ["Page 48"], summary: "Play the Call of the Brave if you want to use the might of your enemies to fuel your own power.", spellcast: "", foundation: ["<p><strong><em>Courage:</em></strong> When you fail a <a href='#define-action-roll'>roll with Fear</a>, you gain a <a href='#define-hope'>Hope</a>.</p>", "<p><strong><em>Battle Ritual:</em></strong> Once per <a href='#define-downtime'>long rest</a>, before you attempt something incredibly dangerous or face off against a foe who clearly outmatches you, describe what ritual you perform or preparations you make. When you do, clear 2 <a href='#define-stress'>Stress</a> and gain 2 <a href='#define-hope'>Hope</a>.</p>"], specialization: ["<p><strong><em>Rise to the Challenge:</em></strong> You are vigilant in the face of mounting danger. While you have 2 or fewer <a href='#define-hit-point'>Hit Points</a> unmarked, you can roll a <strong>d20</strong> as your <a href='#define-action-roll'>Hope Die</a>.</p>"], mastery: ["<p><strong><em>Camaraderie:</em></strong> Your unwavering bravery is a rallying point for your allies. You can initiate a <a href='#define-tag-team-roll'>Tag Team Roll</a> one additional time per session. Additionally, when an ally initiates a <a href='#define-tag-team-roll'>Tag Team Roll</a> with you, they only need to spend 2 <a href='#define-hope'>Hope</a> to do so.</p>"] },
-{ label: "Call of the Slayer", name: "call-of-the-slayer", pages: ["Page 49"], summary: "Play the Call of the Slayer if you want to strike down adversaries with immense force.", spellcast: "", foundation: ["<p><strong><em>Slayer:</em></strong> You gain a pool of dice called Slayer Dice. On a roll with <a href='#define-hope'>Hope</a>, you can place a <strong>d6</strong> on this card instead of gaining a <a href='#define-hope'>Hope</a>, adding the die to the pool. You can store a number of Slayer Dice equal to your <a href='#define-damage-roll'>Proficiency</a>. When you make an <a href='#define-attack-roll'>attack roll</a> or <a href='#define-damage-roll'>damage roll</a>, you can spend any number of these Slayer Dice, rolling them and adding their result to the roll. At the end of each session, clear any unspent Slayer Dice on this card and gain a <a href='#define-hope'>Hope</a> per die cleared.</p>"], specialization: ["<p><strong><em>Weapon Specialist:</em></strong> You can wield multiple <a href='#define-weapon'>weapons</a> with dangerous ease. When you succeed on an attack, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to add one of the damage dice from your secondary weapon to the <a href='#define-damage-roll'>damage roll</a>. Additionally, once per <a href='#define-downtime'>long rest</a> when you roll your Slayer Dice, <a href='#define-reroll'>reroll</a> any 1s.</p>"], mastery: ["<p><strong><em>Martial Preparation:</em></strong> You're an inspirational warrior to all who travel with you. Your party gains access to the Martial Preparation <a href='#define-downtime-move'>downtime move</a>. To use this move during a rest, describe how you instruct and train with your party. You and each ally who chooses this downtime move gain a <strong>d6</strong> Slayer Die. A PC with a Slayer Die can spend it to roll the die and add the result to an attack or <a href='#define-damage-roll'>damage roll</a> of their choice.</p>"] },
-{ label: "School of Knowledge", name: "school-of-knowledge", pages: ["Page 50"], summary: "Play the School of Knowledge if you want a keen understanding of the world around you.", spellcast: "Knowledge", foundation: ["<p><strong><em>Prepared:</em></strong> Take an additional <a href='#define-domain-card'>domain card</a> of your level or lower from a domain you have access to.</p>", "<p><strong><em>Adept:</em></strong> When you <a href='#define-experience'>Utilize an Experience</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> instead of spending a <a href='#define-hope'>Hope</a>. If you do, double your Experience <a href='#define-procedure'>modifier</a> for that roll.</p>"], specialization: ["<p><strong><em>Accomplished:</em></strong> Take an additional <a href='#define-domain-card'>domain card</a> of your level or lower from a <a href='#define-domain'>domain</a> you have access to.</p>", "<p><strong><em>Perfect Recall:</em></strong> Once per <a href='#define-downtime'>rest</a>, when you recall a <a href='#define-domain-card'>domain card</a> in your <a href='#define-loadout'>vault</a>, you can reduce its <a href='#define-domain-card'>Recall Cost</a> by 1.</p>"], mastery: ["<p><strong><em>Brilliant:</em></strong> Take an additional <a href='#define-domain-card'>domain card</a> of your level or lower from a domain you have access to.</p>", "<p><strong><em>Honed Expertise:</em></strong> When you use an <a href='#define-experience'>Experience</a>, roll a <strong>d6</strong>. On a result of 5 or higher, you can use it without spending <a href='#define-hope'>Hope</a>.</p>"] },
-{ label: "School of War", name: "school-of-war", pages: ["Page 51"], summary: "Play the School of War if you want to utilize trained magic for violence.", spellcast: "Knowledge", foundation: ["<p><strong><em>Battlemage:</em></strong> You've focused your studies on becoming an unconquerable force on the battlefield. Gain an additional <a href='#define-hit-point'>Hit Point</a> slot.</p>", "<p><strong><em>Face Your Fear:</em></strong> When you succeed with <a href='#define-fear'>Fear</a> on an <a href='#define-attack-roll'>attack roll</a>, you deal an extra <strong>1d10</strong> <a href='#define-damage-type'>magic damage</a>.</p>"], specialization: ["<p><strong><em>Conjure Shield:</em></strong> You can maintain a protective barrier of magic. While you have at least 2 Hope, you add your <a href='#define-damage-roll'>Proficiency</a> to your <a href='#define-evasion'>Evasion</a>.</p>", "<p><strong><em>Fueled by Fear:</em></strong> The extra <a href='#define-damage-type'>magic damage</a> from your <strong><em>Face Your Fear</em></strong> feature increases to <strong>2d10</strong>.</p>"], mastery: ["<p><strong><em>Thrive in Chaos:</em></strong> When you succeed on an attack, you can <strong><a href='#define-stress'>mark a Stress</a></strong> after rolling damage to force the target to mark an additional <a href='#define-hit-point'>Hit Point</a>.</p>", "<p><strong><em>Have No Fear:</em></strong> The extra <a href='#define-damage-type'>magic damage</a> from your <strong><em>Face Your Fear</em></strong> feature increases to <strong>3d10</strong>.</p>"] }
+{ label: "Troubadour", name: "troubadour", pages: ["Page 28"], summarybrief: "Play the <a href='#define-troubadour'>Troubadour</a> if you want to play music to bolster your allies.", summary: "Play the Troubadour if you want to play music to bolster your allies.", spellcast: "Presence", foundation: ["<p><strong><em>Gifted Performer:</em></strong> You can play three different types of songs, once each per <a href='#define-downtime'>long rest</a>; describe how you perform for others to gain the listed benefit:</p><ul class='og-list-disc'><li><strong><em>Relaxing Song:</em></strong> You and all allies within <a href='#define-range'>Close</a> range clear a <a href='#define-hit-point'>Hit Point</a>.</li><li><strong><em>Epic Song:</em></strong> Make a target within <a href='#define-range'>Close</a> range <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</li><li><strong><em>Heartbreaking Song:</em></strong> You and all allies within <a href='#define-range'>Close</a> range gain a <a href='#define-hope'>Hope</a>.</li></ul>"], specialization: ["<p><strong><em>Maestro:</em></strong> Your rallying songs steel the courage of those who listen. When you give a Rally Die to an ally, they can gain a <a href='#define-hope'>Hope</a> or clear a <a href='#define-stress'>Stress</a>.</p>"], mastery: ["<p><strong><em>Virtuoso:</em></strong> You are among the greatest of your craft and your skill is boundless. You can perform each of your <strong><em>Gifted Performer</em></strong> feature's songs twice per <a href='#define-downtime'>long rest</a>.</p>"] },
+{ label: "Wordsmith", name: "wordsmith", pages: ["Page 29"], summarybrief: "Play the <a href='#define-wordsmith'>Wordsmith</a> if you want to use clever wordplay and captivate crowds.", summary: "Play the Wordsmith if you want to use clever wordplay and captivate crowds.", spellcast: "Presence", foundation: ["<p><strong><em>Rousing Speech:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can give a heartfelt, inspiring speech. All allies within <a href='#define-range'>Far</a> range clear 2 <a href='#define-stress'>Stress</a>.</p>", "<p><strong><em>Heart of a Poet:</em></strong> After you make an <a href='#define-action-roll'>action roll</a> to impress, persuade, or offend someone, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to add a <strong>d4</strong> to the roll.</p>"], specialization: ["<p><strong><em>Eloquent:</em></strong> Your moving words boost morale. Once per session, when you encourage an ally, you can do one of the following:</p><ul class='og-list-disc'><li>Allow them to find a mundane object or tool they need.</li><li><a href='#define-hope'>Help an Ally</a> without spending <a href='#define-hope'>Hope</a>.</li><li>Give them an additional <a href='#define-downtime-move'>downtime move</a>  during their next <a href='#define-downtime'>rest</a>.</li></ul>"], mastery: ["<p><strong><em>Epic Poetry:</em></strong> Your Rally Die increases to a <strong>d10</strong>. Additionally, when you <a href='#define-hope'>Help an Ally</a>, you can narrate the moment as if you were writing the tale of their heroism in a memoir. When you do, roll a <strong>d10</strong> as your <a href='#define-advantage'>advantage</a> die.</p>"] },
+{ label: "Warden of the Elements", name: "warden-of-the-elements", pages: ["Page 30"], summarybrief: "Play the <a href='#define-warden-of-the-elements'>Warden of the Elements</a> if you want to embody the natural elements of the wild.", summary: "Play the Warden of the Elements if you want to embody the natural elements of the wild.", spellcast: "Instinct", foundation: ["<p><strong><em>Elemental Incarnation:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to <em>Channel</em> one of the following elements until you take <a href='#define-hit-point'>Severe</a> damage or until your next <a href='#define-downtime'>rest</a>:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range deals damage to you, they take <strong>1d10</strong> <a href='#define-damage-type'>magic damage</a>.</li><li><strong><em>Earth:</em></strong> Gain a bonus to your <a href='#define-hit-point'>damage thresholds</a> equal to your <a href='#define-damage-roll'>Proficiency</a>.</li><li><strong><em>Water:</em></strong> When you deal damage to an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range, all other adversaries within <a href='#define-range'>Very Close</a> range must mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Air:</em></strong> You can hover, gaining <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Agility Rolls</a>.</li></ul>"], specialization: ["<p><strong><em>Elemental Aura:</em></strong> Once per <a href='#define-downtime'>rest</a> while <em>Channeling</em>, you can assume an aura matching your element. The aura affects targets within <a href='#define-range'>Close</a> range until your <em>Channeling</em> ends.</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> marks 1 or more <a href='#define-hit-point'>Hit Points</a>, they must also mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Earth:</em></strong> Your allies gain a +1 bonus to <a href='#define-strength'>Strength</a>.</li><li><strong><em>Water:</em></strong> When an <a href='#define-adversary'>adversary</a> deals damage to you, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to move them anywhere within <a href='#define-range'>Very Close</a> range of where they are.</li><li><strong><em>Air:</em></strong> When you or an ally takes damage from an attack beyond <a href='#define-range'>Melee</a> range, reduce the damage by <strong>1d8</strong>.</li></ul>"], mastery: ["<p><strong><em>Elemental Dominion:</em></strong> You further embody your element. While <em>Channeling</em>, you gain the following benefit:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> You gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> for attacks and spells that deal damage.</li><li><strong><em>Earth:</em></strong> When you would mark <a href='#define-hit-point'>Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li><li><strong><em>Water:</em></strong> When an attack against you succeeds, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to make the attacker <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</li><li><strong><em>Air:</em></strong> You gain a +1 bonus to your <a href='#define-evasion'>Evasion</a> and can fly.</li></ul>"]},
+{ label: "Warden of Renewal", name: "warden-of-renewal", pages: ["Page 31"], summarybrief: "Play the <a href='#define-warden-of-renewal'>Warden of Renewal</a> if you want to use powerful magic to heal your party.", summary: "Play the Warden of Renewal if you want to use powerful magic to heal your party.", spellcast: "Instinct", foundation: ["<p><strong><em>Clarity of Nature:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can create a space of natural serenity within <a href='#define-range'>Close</a> range. When you spend a few minutes resting within the space, clear <a href='#define-stress'>Stress</a> equal to your <a href='#define-instinct'>Instinct</a>, distributed as you choose between you and your allies.</p>", "<p><strong><em>Regeneration:</em></strong> Touch a creature and <strong><a href='#define-hope'>spend 3 Hope</a></strong>. That creature clears <strong>1d4</strong> <a href='#define-hit-point'>Hit Points</a>.</p>"], specialization: ["<p><strong><em>Regenerative Reach:</em></strong> You can target creatures within <a href='#define-range'>Very Close</a> range with your <strong><em>Regeneration</em></strong> feature.</p>", "<p><strong><em>Warden's Protection:</em></strong> Once per <a href='#define-downtime'>long rest</a>, <strong><a href='#define-hope'>spend 2 Hope</a></strong> to clear 2 Hit Points on <strong>1d4</strong> allies within <a href='#define-range'>Close</a> range.</p>"], mastery: ["<p><strong><em>Defender:</em></strong> Your animal transformation embodies a healing guardian spirit. When you're in Beastform and an ally within <a href='#define-range'>Close</a> range marks 2 or more <a href='#define-hit-point'>Hit Points</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to reduce the number of Hit Points they mark by 1.</p>"] },
+{ label: "Stalwart", name: "stalwart", pages: ["Page 36"], summarybrief: "Play the <a href='#define-stalwart'>Stalwart</a> if you want to take heavy blows and keep fighting.", summary: "Play the Stalwart if you want to take heavy blows and keep fighting.", spellcast: "", foundation: ["<p><strong><em>Unwavering:</em></strong> Gain a permanent +1 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Iron Will:</em></strong> When you take <a href='#define-damage-type'>physical damage</a>, you can <strong><a href='#define-armor'>mark an additional Armor Slot</a></strong> to reduce the severity.</p>"], specialization: ["<p><strong><em>Unrelenting:</em></strong> Gain a permanent +2 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Partners-in-Arms:</em></strong> When an ally within <a href='#define-range'>Very Close</a> range takes damage, you can <strong><a href='#define-armor'>mark an Armor Slot</a></strong> to reduce the severity by one threshold.</p>"], mastery: ["<p><strong><em>Undaunted:</em></strong> Gain a permanent +3 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Loyal Protector:</em></strong> When an ally within <a href='#define-range'>Close</a> range has 2 or fewer <a href='#define-hit-point'>Hit Points</a> and would take damage, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to sprint to their side and take the damage instead.</p>"] },
+{ label: "Vengeance", name: "vengeance", pages: ["Page 36"], summarybrief: "Play the <a href='#define-vengeance'>Vengeance</a> if you want to strike down enemies who harm you or your allies.", summary: "Play the Vengeance if you want to strike down enemies who harm you or your allies.", spellcast: "", foundation: ["<p><strong><em>At Ease:</em></strong> Gain an additional <a href='#define-stress'>Stress</a> slot.</p>", "<p><strong><em>Revenge:</em></strong> When an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range succeeds on an attack against you, you can <strong><a href='#define-stress'>mark 2 Stress</a></strong> to force the attacker to mark a <a href='#define-hit-point'>Hit Point</a>.</p>"], specialization: ["<p><strong><em>Act of Reprisal:</em></strong> When an <a href='#define-adversary'>adversary</a> damages an ally within <a href='#define-range'>Melee</a> range, you gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> for the next successful attack you make against that adversary.</p>"], mastery: ["<p><strong><em>Nemesis:</em></strong> <strong><a href='#define-hope'>Spend 2 Hope</a></strong> to <em>Prioritize</em> an <a href='#define-adversary'>adversary</a> until your next <a href='#define-downtime'>rest</a>. When you make an attack against your <em>Prioritized</em> adversary, you can swap the results of your <a href='#define-action-roll'>Hope and Fear Dice</a>. You can only Prioritize one adversary at a time.</p>"]},
+{ label: "Beastbound", name: "beastbound", pages: ["Page 38"], summarybrief: "Play the <a href='#define-beastbound'>Beastbound</a> if you want to form a deep bond with an animal ally.", summary: "Play the Beastbound if you want to form a deep bond with an animal ally.", spellcast: "Agility", foundation: ["<p><strong><em>Companion:</em></strong> You have an animal <a href='#define-beastbound-companion'>companion</a> of your choice (at the GM's discretion). They stay by your side unless you tell them otherwise.</p><p>Take the <a href='https://www.daggerheart.com/downloads/'>Ranger Companion sheet</a>. When you <a href='#define-level'>level up</a>, choose a <a href='#define-beastbound-companion-advancement'>level up option</a> for your companion as well.</p>"], specialization: ["<p><strong><em>Expert Training:</em></strong> Choose an additional level-up option for your companion.</p>"], mastery: ["<p><strong><em>Advanced Training:</em></strong> Choose two additional level-up options for your companion.</p>", "<p><strong><em>Loyal Friend:</em></strong> Once per <a href='#define-downtime'>long rest</a>, when the damage from an attack would mark your companion's last <a href='#define-stress'>Stress</a> or your last <a href='#define-hit-point'>Hit Point</a> and you're within <a href='#define-range'>Close</a> range of each other, you or your companion can rush to the other's side and take that damage instead.</p>"] },
+{ label: "Wayfinder", name: "wayfinder", pages: ["Page 39"], summarybrief: "Play the <a href='#define-wayfinder'>Wayfinder</a> if you want to hunt your prey and strike with deadly force.", summary: "Play the Wayfinder if you want to hunt your prey and strike with deadly force.", spellcast: "Agility", foundation: ["<p><strong><em>Ruthless Predator:</em></strong> When you make a <a href='#define-damage-roll'>damage roll</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a>. Additionally, when you deal <a href='#define-hit-point'>Severe</a> damage to an <a href='#define-adversary'>adversary</a>, they must mark a <a href='#define-stress'>Stress</a>.</p>", "<p><strong><em>Path Forward:</em></strong> When you're traveling to a place you've previously visited or you carry an object that has been at the location before, you can identify the shortest, most direct path to your destination.</p>"], specialization: ["<p><strong><em>Elusive Predator:</em></strong> When your <em>Focus</em> makes an attack against you, you gain a +2 bonus to your <a href='#define-evasion'>Evasion</a> against the attack.</p>"], mastery: ["<p><strong><em>Apex Predator:</em></strong> Before you make an <a href='#define-attack-roll'>attack roll</a> against your <em>Focus</em>, you can <strong><a href='#define-hope'>spend a Hope</a></strong>. On a successful <a href='#define-attack-roll'>attack</a>, you remove a <a href='#define-fear'>Fear</a> from the GM's Fear pool.</p>"]},
+{ label: "Nightwalker", name: "nightwalker", pages: ["Page 42"], summarybrief: "Play the <a href='#define-nightwalker'>Nightwalker</a> if you want to manipulate shadows to maneuver through the environment.", summary: "Play the Nightwalker if you want to manipulate shadows to maneuver through the environment.", spellcast: "Finesse", foundation: ["<p><strong><em>Shadow Stepper:</em></strong> You can move from shadow to shadow. When you move into an area of darkness or a shadow cast by another creature or object, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to disappear from where you are and reappear inside another shadow within <a href='#define-range'>Far</a> range. When you reappear, you are <em>Cloaked</em>.</p></li>"], specialization: ["<p><strong><em>Dark Cloud:</em></strong> Make a <strong><a href='#define-spellcast-roll'>Spellcast Roll (15)</a></strong>. On a success, create a <a href='#define-temporary'>temporary</a> dark cloud that covers any area within <a href='#define-range'>Close</a> range. Anyone in this cloud can't see outside of it, and anyone outside of it can't see in. You're considered <em>Cloaked</em> from any <a href='#define-adversary'>adversary</a> for whom the cloud blocks line of sight.</p></li><p><strong><em>Adrenaline:</em></strong> While you're <a href='#define-condition'>Vulnerable</a>, add your level to your <a href='#define-damage-roll'>damage rolls</a>.</p></li>"], mastery: ["<p><strong><em>Shadow Stepper:</em></strong> Gain a permanent +1 bonus to your <a href='#define-evasion'>Evasion</a>. You can use your <strong><em>Shadow Stepper</em></strong> feature to move within <a href='#define-range'>Very Far</a> range.</p></li><p><strong><em>Vanishing Act:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to become <em>Cloaked</em> at any time. When <em>Cloaked</em> from this feature, you automatically clear the <a href='#define-condition'><em>Restrained</em></a> condition if you have it. You remain <em>Cloaked</em> in this way until you roll with Fear or until your next <a href='#define-downtime'>rest</a>.</p></li>"] },
+{ label: "Syndicate", name: "syndicate", pages: ["Page 43"], summarybrief: "Play the <a href='#define-syndicate'>Syndicate</a> if you want to have a web of contacts everywhere you go.", summary: "Play the Syndicate if you want to have a web of contacts everywhere you go.", spellcast: "Finesse", foundation: ["<p><strong><em>Well-Connected:</em></strong> When you arrive in a prominent town or environment, you know somebody who calls this place home. Give them a name, note how you think they could be useful, and choose one fact from the following list:</p><ul class='og-list-disc'><li>They owe me a favor, but they'll be hard to find.</li><li>They're going to ask for something in exchange.</li><li>They're always in a great deal of trouble.</li><li>We used to be together. It's a long story.</li><li>We didn't part on great terms.</li></ul>"], specialization: ["<p><strong><em>Contacts Everywhere:</em></strong> Once per session, you can briefly call on a shady contact. Choose one of the following benefits and describe what brought them here to help you in this moment:</p><ul class='og-list-disc'><li>They provide 1 handful of <a href='#define-gold'>gold</a>, a unique tool, or a mundane object that the situation requires.</li><li>On your next <a href='#define-action-roll'>action roll</a>, their help provides a +3 bonus to the result of your <a href='#define-action-roll'>Hope or Fear Die</a>.</li><li>The next time you deal damage, they snipe from the shadows, adding <strong>2d8</strong> to your <a href='#define-damage-roll'>damage roll</a>.</li></ul>"], mastery: ["<p><strong><em>Reliable Backup:</em></strong> You can use your <strong><em>Contacts Everywhere</em></strong> feature three times per session. The following options are added to the list of benefits you can choose from when you use that feature:</p><ul class='og-list-disc'><li>When you mark 1 or more <a href='#define-hit-point'>Hit Points</a>, they can rush out to shield you, reducing the Hit Points marked by 1.</li><li>When you make a <a href='#define-trait-roll'>Presence Roll</a> in conversation, they back you up. You can roll a <strong>d20</strong> as your <a href='#define-action-roll'>Hope Die</a>.</li></ul>"] },
+{ label: "Divine Wielder", name: "divine-wielder", pages: ["Page 44"], summarybrief: "Play the <a href='#define-divine-wielder'>Divine Wielder</a> if you want to dominate the battlefield with a legendary weapon.", summary: "Play the Divine Wielder if you want to dominate the battlefield with a legendary weapon.", spellcast: "Strength", foundation: ["<p><strong><em>Spirit Weapon:</em></strong> When you have an equipped <a href='#define-weapon'>weapon</a> with a range of Melee or Very Close, it can fly from your hand to attack an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Close</a> range and then return to you. You can <strong><a href='#define-stress'>mark a Stress</a></strong> to target an additional adversary within <a href='#define-range'>range</a> with the same <a href='#define-attack-roll'>attack roll</a>.</p>", "<p><strong><em>Sparing Touch:</em></strong> Once per <a href='#define-downtime'>long rest</a>, touch a creature and clear 2 <a href='#define-hit-point'>Hit Points</a> or 2 <a href='#stress'>Stress</a> from them.</p>"], specialization: ["<p><strong><em>Devout:</em></strong> When you roll your Prayer Dice, you can roll an additional die and discard the lowest result. Additionally, you can use your <strong><em>Sparing Touch</em></strong> feature twice instead of once per <a href='#define-downtime'>long rest</a>.</p>"], mastery: ["<p><strong><em>Sacred Resonance:</em></strong> When you roll damage for your <strong><em>Spirit Weapon</em></strong> feature, if any of the die results match, double the value of each matching die. For example, if you roll two 5s, they count as two 10s.</p>"] },
+{ label: "Winged Sentinel", name: "winged-sentinel", pages: ["Page 45"], summarybrief: "Play the <a href='#define-winged-sentinel'>Winged Sentinel</a> if you want to take flight and strike crushing blows from the sky.", summary: "Play the Winged Sentinel if you want to take flight and strike crushing blows from the sky.", spellcast: "Strength", foundation: ["<p><strong><em>Wings of Light:</em></strong> You can fly. While flying, you can do the following:</p><ul class='og-list-disc'><li><strong><a href='#define-stress'>Mark a Stress</a></strong> to pick up and carry another willing creature approximately your size or smaller.</li><li><strong><a href='#define-hope'>Spend a Hope</a></strong> to deal an extra <strong>1d8</strong> damage on a successful attack.</li></ul>"], specialization: ["<p><strong><em>Ethereal Visage:</em></strong> Your supernatural visage strikes awe and fear. While flying, you have <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Presence Rolls</a>. When you succeed with <a href='#define-hope'>Hope</a> on a <a href='#define-trait-roll'>Presence Roll</a>, you can remove a <a href='#define-fear'>Fear</a> from the GM's Fear pool instead of gaining <a href='#define-hope'>Hope</a>.</p>"], mastery: ["<p><strong><em>Ascendant:</em></strong> Gain a permanent +4 bonus to your Severe <a href='#define-hit-point'>damage threshold</a>.</p>", "<p><strong><em>Power of the Gods:</em></strong> While flying, you deal an extra <strong>1d12</strong> damage instead of 1d8 from your <strong><em>Wings of Light</em></strong> feature.</p>"] },
+{ label: "Elemental Origin", name: "elemental-origin", pages: ["Page 46"], summarybrief: "Play the <a href='#define-elemental-origin'>Elemental Origin</a> if you want to channel raw magic to take the shape of a particular element.", summary: "Play the Elemental Origin if you want to channel raw magic to take the shape of a particular element.", spellcast: "Instinct", foundation: ["<p><strong><em>Elementalist:</em></strong> Choose one of the following elements at <a href='#define-character-creation'>character creation</a>: air, earth, fire, lightning, water. You can shape this element into harmless effects.</p><p>Additionally, <strong><a href='#define-hope'>spend a Hope</a></strong> and describe how your control over this element helps an <a href='#define-action-roll'>action roll</a> you're about to make, then either gain a +2 bonus to the roll or a +3 bonus to the roll's damage.</p>"], specialization: ["<p><strong><em>Natural Evasion:</em></strong> You can call forth your element to protect you from harm. When an <a href='#define-attack-roll'>attack roll</a> against you succeeds, you can <strong><a href='#define-stress'>mark a Stress</a></strong> and describe how you use your element to defend you. When you do, roll a <strong>d6</strong> and add its result to your <a href='#define-evasion'>Evasion</a> against the attack.</p>"], mastery: ["<p><strong><em>Transcendence:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can transform into a physical manifestation of your element. When you do, describe your transformation and choose two of the following benefits to gain until your next <a href='#define-downtime'>rest</a>:</p><ul class='og-list-disc'><li>+4 bonus to your Severe <a href='#define-hit-point'>threshold</a></li><li>+1 bonus to a character trait of your choice</li><li>+1 bonus to your <a href='#define-damage-roll'>Proficiency</a></li><li>+2 bonus to your <a href='#define-evasion'>Evasion</a></li></ul>"] },
+{ label: "Primal Origin", name: "primal-origin", pages: ["Page 47"], summarybrief: "Play the <a href='#define-primal-origin'>Primal Origin</a> if you want to extend the versatility of your spells in powerful ways.", summary: "Play the Primal Origin if you want to extend the versatility of your spells in powerful ways.", spellcast: "Instinct", foundation: ["<p><strong><em>Manipulate Magic:</em></strong> Your primal origin allows you to modify the essence of magic itself. After you cast a spell or make an attack using a <a href='#define-weapon'>weapon</a> that deals <a href='#define-damage-type'>magic damage</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to do one of the following:</p><ul class='og-list-disc'><li>Extend the spell or attack's reach by one range</li><li>Gain a +2 bonus to the <a href='#define-action-roll'>action roll</a>'s result</li><li>Double a damage die of your choice</li><li>Hit an additional target within <a href='#define-range'>range</a></li></ul>"], specialization: ["<p><strong><em>Enchanted Aid:</em></strong> You can enhance the magic of others with your essence. When you <a href='#define-hope'>Help an Ally</a> with a <a href='#define-spellcast-roll'>Spellcast Roll</a>, you can roll a <strong>d8</strong> as your <a href='#define-advantage'>advantage</a> die. Once per <a href='#define-downtime'>long rest</a>, after an ally has made a Spellcast Roll with your help, you can swap the results of their <a href='#define-action-roll'>Duality Dice</a>.</p>"], mastery: ["<p><strong><em>Arcane Charge:</em></strong> You can gather magical energy to enhance your capabilities. When you take <a href='#define-damage-type'>magic damage</a>, you become <em>Charged</em>. Alternatively, you can <strong><a href='#define-hope'>spend 2 Hope</a></strong> to become <em>Charged</em>. When you successfully make an attack that deals <a href='#define-damage-type'>magic damage</a> while <em>Charged</em>, you can clear your Charge to either gain a +10 bonus to the <a href='#define-damage-roll'>damage roll</a> or gain a +3 bonus to the <a href='#define-difficulty'>Difficulty</a> of a <a href='#define-reaction-roll'>reaction roll</a> the spell causes the target to make. You stop being <em>Charged</em> at your next <a href='#define-downtime'>long rest</a>.</p>"] },
+{ label: "Call of the Brave", name: "call-of-the-brave", pages: ["Page 48"], summarybrief: "Play the <a href='#define-call-of-the-brave'>Call of the Brave</a> if you want to use the might of your enemies to fuel your own power.", summary: "Play the Call of the Brave if you want to use the might of your enemies to fuel your own power.", spellcast: "", foundation: ["<p><strong><em>Courage:</em></strong> When you fail a <a href='#define-action-roll'>roll with Fear</a>, you gain a <a href='#define-hope'>Hope</a>.</p>", "<p><strong><em>Battle Ritual:</em></strong> Once per <a href='#define-downtime'>long rest</a>, before you attempt something incredibly dangerous or face off against a foe who clearly outmatches you, describe what ritual you perform or preparations you make. When you do, clear 2 <a href='#define-stress'>Stress</a> and gain 2 <a href='#define-hope'>Hope</a>.</p>"], specialization: ["<p><strong><em>Rise to the Challenge:</em></strong> You are vigilant in the face of mounting danger. While you have 2 or fewer <a href='#define-hit-point'>Hit Points</a> unmarked, you can roll a <strong>d20</strong> as your <a href='#define-action-roll'>Hope Die</a>.</p>"], mastery: ["<p><strong><em>Camaraderie:</em></strong> Your unwavering bravery is a rallying point for your allies. You can initiate a <a href='#define-tag-team-roll'>Tag Team Roll</a> one additional time per session. Additionally, when an ally initiates a <a href='#define-tag-team-roll'>Tag Team Roll</a> with you, they only need to spend 2 <a href='#define-hope'>Hope</a> to do so.</p>"] },
+{ label: "Call of the Slayer", name: "call-of-the-slayer", pages: ["Page 49"], summarybrief: "Play the <a href='#define-call-of-the-slayer'>Call of the Slayer</a> if you want to strike down adversaries with immense force.", summary: "Play the Call of the Slayer if you want to strike down adversaries with immense force.", spellcast: "", foundation: ["<p><strong><em>Slayer:</em></strong> You gain a pool of dice called Slayer Dice. On a roll with <a href='#define-hope'>Hope</a>, you can place a <strong>d6</strong> on this card instead of gaining a <a href='#define-hope'>Hope</a>, adding the die to the pool. You can store a number of Slayer Dice equal to your <a href='#define-damage-roll'>Proficiency</a>. When you make an <a href='#define-attack-roll'>attack roll</a> or <a href='#define-damage-roll'>damage roll</a>, you can spend any number of these Slayer Dice, rolling them and adding their result to the roll. At the end of each session, clear any unspent Slayer Dice on this card and gain a <a href='#define-hope'>Hope</a> per die cleared.</p>"], specialization: ["<p><strong><em>Weapon Specialist:</em></strong> You can wield multiple <a href='#define-weapon'>weapons</a> with dangerous ease. When you succeed on an attack, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to add one of the damage dice from your secondary weapon to the <a href='#define-damage-roll'>damage roll</a>. Additionally, once per <a href='#define-downtime'>long rest</a> when you roll your Slayer Dice, <a href='#define-reroll'>reroll</a> any 1s.</p>"], mastery: ["<p><strong><em>Martial Preparation:</em></strong> You're an inspirational warrior to all who travel with you. Your party gains access to the Martial Preparation <a href='#define-downtime-move'>downtime move</a>. To use this move during a rest, describe how you instruct and train with your party. You and each ally who chooses this downtime move gain a <strong>d6</strong> Slayer Die. A PC with a Slayer Die can spend it to roll the die and add the result to an attack or <a href='#define-damage-roll'>damage roll</a> of their choice.</p>"] },
+{ label: "School of Knowledge", name: "school-of-knowledge", pages: ["Page 50"], summarybrief: "Play the <a href='#define-school-of-knowledge'>School of Knowledge</a> if you want a keen understanding of the world around you.", summary: "Play the School of Knowledge if you want a keen understanding of the world around you.", spellcast: "Knowledge", foundation: ["<p><strong><em>Prepared:</em></strong> Take an additional <a href='#define-domain-card'>domain card</a> of your level or lower from a domain you have access to.</p>", "<p><strong><em>Adept:</em></strong> When you <a href='#define-experience'>Utilize an Experience</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> instead of spending a <a href='#define-hope'>Hope</a>. If you do, double your Experience <a href='#define-procedure'>modifier</a> for that roll.</p>"], specialization: ["<p><strong><em>Accomplished:</em></strong> Take an additional <a href='#define-domain-card'>domain card</a> of your level or lower from a <a href='#define-domain'>domain</a> you have access to.</p>", "<p><strong><em>Perfect Recall:</em></strong> Once per <a href='#define-downtime'>rest</a>, when you recall a <a href='#define-domain-card'>domain card</a> in your <a href='#define-loadout'>vault</a>, you can reduce its <a href='#define-domain-card'>Recall Cost</a> by 1.</p>"], mastery: ["<p><strong><em>Brilliant:</em></strong> Take an additional <a href='#define-domain-card'>domain card</a> of your level or lower from a domain you have access to.</p>", "<p><strong><em>Honed Expertise:</em></strong> When you use an <a href='#define-experience'>Experience</a>, roll a <strong>d6</strong>. On a result of 5 or higher, you can use it without spending <a href='#define-hope'>Hope</a>.</p>"] },
+{ label: "School of War", name: "school-of-war", pages: ["Page 51"], summarybrief: "Play the <a href='#define-school-of-war'>School of War</a> if you want to utilize trained magic for violence.", summary: "Play the School of War if you want to utilize trained magic for violence.", spellcast: "Knowledge", foundation: ["<p><strong><em>Battlemage:</em></strong> You've focused your studies on becoming an unconquerable force on the battlefield. Gain an additional <a href='#define-hit-point'>Hit Point</a> slot.</p>", "<p><strong><em>Face Your Fear:</em></strong> When you succeed with <a href='#define-fear'>Fear</a> on an <a href='#define-attack-roll'>attack roll</a>, you deal an extra <strong>1d10</strong> <a href='#define-damage-type'>magic damage</a>.</p>"], specialization: ["<p><strong><em>Conjure Shield:</em></strong> You can maintain a protective barrier of magic. While you have at least 2 Hope, you add your <a href='#define-damage-roll'>Proficiency</a> to your <a href='#define-evasion'>Evasion</a>.</p>", "<p><strong><em>Fueled by Fear:</em></strong> The extra <a href='#define-damage-type'>magic damage</a> from your <strong><em>Face Your Fear</em></strong> feature increases to <strong>2d10</strong>.</p>"], mastery: ["<p><strong><em>Thrive in Chaos:</em></strong> When you succeed on an attack, you can <strong><a href='#define-stress'>mark a Stress</a></strong> after rolling damage to force the target to mark an additional <a href='#define-hit-point'>Hit Point</a>.</p>", "<p><strong><em>Have No Fear:</em></strong> The extra <a href='#define-damage-type'>magic damage</a> from your <strong><em>Face Your Fear</em></strong> feature increases to <strong>3d10</strong>.</p>"] }
 ];
 // druid beastforms
 const beastformList = [
@@ -51,24 +67,24 @@ const beastformList = [
 { label: "Great Winged Beast", name: "great-winged-beast", tier: 3, pages: ["Page 34"], examples: "(Giant Eagle, Falcon, etc.),", stat: "Finesse", statbonus: 2, evasionbonus: "3", attackrange: "Melee", attacktrait: "Finesse", attackdamage: "d8+6", attackdamagetype: "phy", advantage: "deceive, distract, locate", features: ["<p><strong><em>Bird's-Eye View:</em></strong> You can fly at will. Once per <a href='#define-downtime'>rest</a> while you are airborne, you can ask the GM a question about the scene below you without needing to roll. The first time a character makes a roll to act on this information, they gain <a href='#define-advantage'>advantage</a> on the roll.</p>", "<p><strong><em>Carrier:</em></strong> You can carry up to two willing allies with you when you move.</p>"] },
 { label: "Legendary Beast", name: "legendary-beast", tier: 3, pages: ["Page 34"], examples: "(Upgraded <a href='#druid-beastform-tier-1'>Tier 1</a> Options)", stat: "Strength", statbonus: 2, evasionbonus: "3", attackrange: "Melee", attacktrait: "Strength", attackdamage: "d10+8", attackdamagetype: "phy", features: ["<p><strong><em>Evolved:</em></strong> Pick a Tier 1 <a href='#druid-beastform-options-by-tier'>Beastform option</a> and become a larger, more powerful version of that creature. While you're in this form, you retain all traits and features from the original form and gain the following bonuses:</p><ul class='og-list-disc'><li>A +6 bonus to <a href='#define-damage-roll'>damage rolls</a></li><li>A +1 bonus to the <a href='#define-trait'>trait</a> used by this form</li><li>A +2 bonus to <a href='#define-evasion'>Evasion</a></li></ul>"] }, { label: "Legendary Hybrid", name: "legendary-hybrid", tier: 3, pages: ["Page 34"], examples: "(Griffon, Sphinx, etc.),", stat: "Strength", statbonus: 2, evasionbonus: "3", attackrange: "Melee", attacktrait: "Strength", attackdamage: "d10+8", attackdamagetype: "phy", advantage: "hybrid features", features: ["<p><strong><em>Hybrid Features:</em></strong> To transform into this creature, <strong><a href='#define-stress'>mark an additional Stress</a></strong>. Choose any two <a href='#druid-beastform-options-by-tier'>Beastform options</a> from Tiers 1&ndash;2. Choose a total of four advantages and two features from those options.</p>"] },
 { label: "Mighty Lizard", name: "mighty-lizard", tier: 3, pages: ["Page 34"], examples: "(Alligator, Crocodile, Gila Monster, etc.),", stat: "Instinct", statbonus: 2, evasionbonus: "1", attackrange: "Melee", attacktrait: "Instinct", attackdamage: "d10+7", attackdamagetype: "phy", advantage: "attack, sneak, track", features: ["<p><strong><em>Physical Defense:</em></strong> You gain a +3 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Snapping Strike:</em></strong> When you succeed on an attack against a target within <a href='#define-range'>Melee</a> range, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to clamp that opponent in your jaws, making them <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Restrained</em></a> and <a href='#define-condition'><em>Vulnerable</em></a>.</p>"] },
-{ label: "Epic Aquatic Beast", name: "epic-aquatic-beast", tier: 4, pages: ["Page 35"], examples: "(Giant Squid, Whale, etc.)", stat: "Agility", statbonus: 3, evasionbonus: "3", attackrange: "Melee", attacktrait: "Agility", attackdamage: "d10+10", attackdamagetype: "phy", advantage: "locate, protect, scare, track", features: ["<p><strong><em>Ocean Master:</em></strong> You can breathe and move naturally underwater. When you succeed on an attack against a target within <a href='#define-range'>Melee</a> range, you can <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Restrain</em></a> them.</p>", "<p><strong><em>Unyielding:</em></strong> When you would mark an <a href='#define-armor'>Armor Slot</a>, roll a <strong>d6</strong>. On a result of 5 or higher, reduce the severity by one <a href='#define-hit-point'>threshold</a> without marking an Armor Slot.</p>"], },
-{ label: "Massive Behemoth", name: "massive-behemoth", tier: 4, pages: ["Page 35"], examples: "(Elephant, Mammoth, Rhinoceros, etc.),", stat: "Strength", statbonus: 3, evasionbonus: "1", attackrange: "Melee", attacktrait: "Strength", attackdamage: "d12+12", attackdamagetype: "phy", advantage: "locate, protect, scare, sprint", features: ["<p><strong><em>Carrier:</em></strong> You can carry up to four willing allies with you when you move.</p>", "<p><strong><em>Demolish:</em></strong> <strong><a href='#define-hope'>Spend a Hope</a></strong> to move up to <a href='#define-range'>Far</a> range in a straight line and make an attack against all targets within <a href='#define-range'>Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href='#define-damage-type'>physical damage</a> using your <a href='#define-damage-roll'>Proficiency</a> and are <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</p>", "<p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href='#define-hit-point'>damage thresholds</a>.</p>"], },
-{ label: "Mythic Aerial Hunter", name: "mythic-aerial-hunter", tier: 4, pages: ["Page 35"], examples: "(Dragon, Pterodactyl, Roc, Wyvern, etc.),", stat: "Finesse", statbonus: 3, evasionbonus: "4", attackrange: "Melee", attacktrait: "Finesse", attackdamage: "d10+11", attackdamagetype: "phy", advantage: "attack, deceive, locate, navigate", features: ["<p><strong><em>Carrier:</em></strong> You can carry up to three willing allies with you when you move.</p>", "<p><strong><em>Deadly Raptor:</em></strong> You can fly at will and move up to <a href='#define-range'>Far</a> range as part of your <a href='#define-action'>action</a>. When you move in a straight line into <a href='#define-range'>Melee</a> range of a target from at least <a href='#define-range'>Close</a> range and make an attack against that target in the same action, you can <a href='#define-reroll'>reroll</a> all damage dice that rolled a result lower than your <a href='#define-damage-roll'>Proficiency</a>.</p>"], },
-{ label: "Mythic Beast", name: "mythic-beast", tier: 4, pages: ["Page 35"], examples: "(Upgraded <a href='#druid-beastform-tier-1'>Tier 1</a> or <a href='#druid-beastform-tier-2'>Tier 2</a> Options)", stat: "", statbonus: "", evasionbonus: "", attackrange: "", attacktrait: "", attackdamage: "", attackdamagetype: "", advantage: "", features: ["<p><strong><em>Evolved:</em></strong> Pick a Tier 1 or Tier 2 <a href='#druid-beastform-options-by-tier'>Beastform option</a> and become a larger, more powerful version of that creature. While you're in this form, you retain all traits and features from the original form and gain the following bonuses:</p><ul class='og-list-disc'><li>A +9 bonus to <a href='#define-damage-roll'>damage rolls</a></li><li>A +2 bonus to the <a href='#define-trait'>trait</a> used by this form</li><li>Your damage die increases by one size (<strong>d6</strong> becomes <strong>d8</strong>, <strong>d8</strong> becomes <strong>d10</strong>, <em>etc.</em>)</li></ul>"], },
-{ label: "Mythic Hybrid", name: "mythic-hybrid", tier: 4, pages: ["Page 35"], examples: "(Chimera, Cockatrice, Manticore.),", stat: "Strength", statbonus: 3, evasionbonus: "2", attackrange: "Melee", attacktrait: "Strength", attackdamage: "d12+10", attackdamagetype: "phy", advantage: "", features: ["<p><strong><em>Hybrid Features:</em></strong> To transform into this creature, mark 2 additional <a href='#define-stress'>Stress</a>. Choose any three <a href='#druid-beastform-options-by-tier'>Beastform options</a> from Tiers 1&ndash;3. Choose a total of five advantages and three features from those options.</p>"], },
+{ label: "Epic Aquatic Beast", name: "epic-aquatic-beast", tier: 4, pages: ["Page 35"], examples: "(Giant Squid, Whale, etc.)", stat: "Agility", statbonus: 3, evasionbonus: "3", attackrange: "Melee", attacktrait: "Agility", attackdamage: "d10+10", attackdamagetype: "phy", advantage: "locate, protect, scare, track", features: ["<p><strong><em>Ocean Master:</em></strong> You can breathe and move naturally underwater. When you succeed on an attack against a target within <a href='#define-range'>Melee</a> range, you can <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Restrain</em></a> them.</p>", "<p><strong><em>Unyielding:</em></strong> When you would mark an <a href='#define-armor'>Armor Slot</a>, roll a <strong>d6</strong>. On a result of 5 or higher, reduce the severity by one <a href='#define-hit-point'>threshold</a> without marking an Armor Slot.</p>"] },
+{ label: "Massive Behemoth", name: "massive-behemoth", tier: 4, pages: ["Page 35"], examples: "(Elephant, Mammoth, Rhinoceros, etc.),", stat: "Strength", statbonus: 3, evasionbonus: "1", attackrange: "Melee", attacktrait: "Strength", attackdamage: "d12+12", attackdamagetype: "phy", advantage: "locate, protect, scare, sprint", features: ["<p><strong><em>Carrier:</em></strong> You can carry up to four willing allies with you when you move.</p>", "<p><strong><em>Demolish:</em></strong> <strong><a href='#define-hope'>Spend a Hope</a></strong> to move up to <a href='#define-range'>Far</a> range in a straight line and make an attack against all targets within <a href='#define-range'>Melee</a> range of the line. Targets you succeed against take <strong>d8+10</strong> <a href='#define-damage-type'>physical damage</a> using your <a href='#define-damage-roll'>Proficiency</a> and are <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</p>", "<p><strong><em>Undaunted:</em></strong> You gain a +2 bonus to all your <a href='#define-hit-point'>damage thresholds</a>.</p>"] },
+{ label: "Mythic Aerial Hunter", name: "mythic-aerial-hunter", tier: 4, pages: ["Page 35"], examples: "(Dragon, Pterodactyl, Roc, Wyvern, etc.),", stat: "Finesse", statbonus: 3, evasionbonus: "4", attackrange: "Melee", attacktrait: "Finesse", attackdamage: "d10+11", attackdamagetype: "phy", advantage: "attack, deceive, locate, navigate", features: ["<p><strong><em>Carrier:</em></strong> You can carry up to three willing allies with you when you move.</p>", "<p><strong><em>Deadly Raptor:</em></strong> You can fly at will and move up to <a href='#define-range'>Far</a> range as part of your <a href='#define-action'>action</a>. When you move in a straight line into <a href='#define-range'>Melee</a> range of a target from at least <a href='#define-range'>Close</a> range and make an attack against that target in the same action, you can <a href='#define-reroll'>reroll</a> all damage dice that rolled a result lower than your <a href='#define-damage-roll'>Proficiency</a>.</p>"] },
+{ label: "Mythic Beast", name: "mythic-beast", tier: 4, pages: ["Page 35"], examples: "(Upgraded <a href='#druid-beastform-tier-1'>Tier 1</a> or <a href='#druid-beastform-tier-2'>Tier 2</a> Options)", stat: "", statbonus: "", evasionbonus: "", attackrange: "", attacktrait: "", attackdamage: "", attackdamagetype: "", advantage: "", features: ["<p><strong><em>Evolved:</em></strong> Pick a Tier 1 or Tier 2 <a href='#druid-beastform-options-by-tier'>Beastform option</a> and become a larger, more powerful version of that creature. While you're in this form, you retain all traits and features from the original form and gain the following bonuses:</p><ul class='og-list-disc'><li>A +9 bonus to <a href='#define-damage-roll'>damage rolls</a></li><li>A +2 bonus to the <a href='#define-trait'>trait</a> used by this form</li><li>Your damage die increases by one size (<strong>d6</strong> becomes <strong>d8</strong>, <strong>d8</strong> becomes <strong>d10</strong>, <em>etc.</em>)</li></ul>"] },
+{ label: "Mythic Hybrid", name: "mythic-hybrid", tier: 4, pages: ["Page 35"], examples: "(Chimera, Cockatrice, Manticore.),", stat: "Strength", statbonus: 3, evasionbonus: "2", attackrange: "Melee", attacktrait: "Strength", attackdamage: "d12+10", attackdamagetype: "phy", advantage: "", features: ["<p><strong><em>Hybrid Features:</em></strong> To transform into this creature, mark 2 additional <a href='#define-stress'>Stress</a>. Choose any three <a href='#druid-beastform-options-by-tier'>Beastform options</a> from Tiers 1&ndash;3. Choose a total of five advantages and three features from those options.</p>"] },
 { label: "Terrible Lizard", name: "terrible-lizard", tier: 4, pages: ["Page 35"], examples: "(Brachiosaurus, Tyrannosaurus, etc.),", stat: "Strength", statbonus: 3, evasionbonus: "2", attackrange: "Melee", attacktrait: "Strength", attackdamage: "d12+10", attackdamagetype: "phy", advantage: "attack, deceive, scare, track", features: ["<p><strong><em>Devastating Strikes:</em></strong> When you deal <a href='#define-hit-point'>Severe</a> damage to a target within <a href='#define-range'>Melee</a> range, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to force them to mark an additional <a href='#define-hit-point'>Hit Point</a>.</p>", "<p><strong><em>Massive Stride:</em></strong> You can move up to <a href='#define-range'>Far</a> range without rolling. You ignore rough terrain (at the GM's discretion) due to your size.</p>"], }
 ];
 // domains
 const domainList = [
-{ label: "Arcana", name: "arcana", pages: ["Page 24", "Page 328"], theme: "Innate and Instinctual magic", summary: "<p>Those who choose this path tap into the raw, enigmatic forces of the realms to manipulate both their own energy and the elements. Arcana offers wielders a volatile power, but it is incredibly potent when correctly channeled.</p>" },
-{ label: "Blade", name: "blade", pages: ["Page 24", "Page 329"], theme: "Weapon mastery", summary: "<p>Whether by steel, bow, or perhaps a more specialized arm, those who follow this path have the skill to cut short the lives of others. Wielders of Blade dedicate themselves to achieving inexorable power over death.</p>" },
-{ label: "Bone", name: "bone", pages: ["Page 24", "Page 331"], theme: "Tactics and the body", summary: "<p>Practitioners of this domain have an uncanny control over their own physical abilities and an eye for predicting the behaviors of others in combat. Adherents to Bone gain an unparalleled understanding of bodies and their movements.</p>" },
-{ label: "Codex", name: "codex", pages: ["Page 24", "Page "], theme: "Intensive magical study", summary: "<p>Those who seek magical knowledge turn to the equations of power recorded in books, written on scrolls, etched into walls, or tattooed on bodies. Codex offers a commanding and versatile understanding of magic to devotees who pursue knowledge beyond the boundaries of common wisdom.</p>" },
-{ label: "Grace", name: "grace", pages: ["Page 24", "Page 334"], theme: "Charisma", summary: "<p>Through rapturous storytelling, charming spells, or a shroud of lies, those who channel this power define the realities of their adversaries, bending perception to their will. Grace offers its wielders raw magnetism and mastery over language.</p>" },
-{ label: "Midnight", name: "midnight", pages: ["Page 24", "Page 336"], theme: "Shadows and secrecy", summary: "<p>Whether by clever tricks, deft magic, or the cloak of night, those who channel these forces practice the art of obscurity and can uncover sequestered treasures. Midnight offers practitioners the power to control and create enigmas.</p>" },
-{ label: "Sage", name: "sage", pages: ["Page 24", "Page 338"], theme: "The natural world", summary: "<p>Those who walk this path tap into the unfettered power of the earth and its creatures to unleash raw magic. Sage grants its adherents the vitality of a blooming flower and the ferocity of a ravenous predator.</p>" },
-{ label: "Splendor", name: "splendor", pages: ["Page 24", "Page 340", "Errata"], theme: "Life", summary: "<p>Splendor is the domain of life. Through this magic, followers gain the ability to heal and, to an extent, control death.</p>" },
-{ label: "Valor", name: "valor", pages: ["Page 24", "Page 341"], theme: "Protection", summary: "<p>Whether through attack or defense, those who choose this discipline channel formidable strength to protect their allies in battle. Valor offers great power to those who raise their shields in defense of others.</p>" }
+{ label: "Arcana", name: "arcana", pages: ["Page 24", "Page 328"], theme: "Innate and Instinctual magic", summarybrief: "<a href='#define-arcana'>Arcana</a> offers wielders a volatile power, but it is incredibly potent when correctly channeled.", summary: "<p>Those who choose this path tap into the raw, enigmatic forces of the realms to manipulate both their own energy and the elements. Arcana offers wielders a volatile power, but it is incredibly potent when correctly channeled.</p>" },
+{ label: "Blade", name: "blade", pages: ["Page 24", "Page 329"], theme: "Weapon mastery", summarybrief: "Wielders of <a href='#define-blade'>Blade</a> dedicate themselves to achieving inexorable power over death.", summary: "<p>Whether by steel, bow, or perhaps a more specialized arm, those who follow this path have the skill to cut short the lives of others. Wielders of Blade dedicate themselves to achieving inexorable power over death.</p>" },
+{ label: "Bone", name: "bone", pages: ["Page 24", "Page 331"], theme: "Tactics and the body", summarybrief: "Adherents to <a href='#define-bone'>Bone</a> gain an unparalleled understanding of bodies and their movements.", summary: "<p>Practitioners of this domain have an uncanny control over their own physical abilities and an eye for predicting the behaviors of others in combat. Adherents to Bone gain an unparalleled understanding of bodies and their movements.</p>" },
+{ label: "Codex", name: "codex", pages: ["Page 24", "Page "], theme: "Intensive magical study", summarybrief: "<a href='#define-codex'>Codex</a> offers a commanding and versatile understanding of magic to devotees who pursue knowledge beyond the boundaries of common wisdom.", summary: "<p>Those who seek magical knowledge turn to the equations of power recorded in books, written on scrolls, etched into walls, or tattooed on bodies. Codex offers a commanding and versatile understanding of magic to devotees who pursue knowledge beyond the boundaries of common wisdom.</p>" },
+{ label: "Grace", name: "grace", pages: ["Page 24", "Page 334"], theme: "Charisma", summarybrief: "<a href='#define-grace'>Grace</a> offers its wielders raw magnetism and mastery over language.", summary: "<p>Through rapturous storytelling, charming spells, or a shroud of lies, those who channel this power define the realities of their adversaries, bending perception to their will. Grace offers its wielders raw magnetism and mastery over language.</p>" },
+{ label: "Midnight", name: "midnight", pages: ["Page 24", "Page 336"], theme: "Shadows and secrecy", summarybrief: "<a href='#define-midnight'>Midnight</a> offers practitioners the power to control and create enigmas.", summary: "<p>Whether by clever tricks, deft magic, or the cloak of night, those who channel these forces practice the art of obscurity and can uncover sequestered treasures. Midnight offers practitioners the power to control and create enigmas.</p>" },
+{ label: "Sage", name: "sage", pages: ["Page 24", "Page 338"], theme: "The natural world", summarybrief: "<a href='#define-sage'>Sage</a> grants its adherents the vitality of a blooming flower and the ferocity of a ravenous predator.", summary: "<p>Those who walk this path tap into the unfettered power of the earth and its creatures to unleash raw magic. Sage grants its adherents the vitality of a blooming flower and the ferocity of a ravenous predator.</p>" },
+{ label: "Splendor", name: "splendor", pages: ["Page 24", "Page 340", "Errata"], theme: "Life", summarybrief: "<a href='#define-splendor'>Splendor</a> is the domain of life. Through this magic, followers gain the ability to heal and, to an extent, control death.", summary: "<p>Splendor is the domain of life. Through this magic, followers gain the ability to heal and, to an extent, control death.</p>" },
+{ label: "Valor", name: "valor", pages: ["Page 24", "Page 341"], theme: "Protection", summarybrief: "<a href='#define-valor'>Valor</a> offers great power to those who raise their shields in defense of others.", summary: "<p>Whether through attack or defense, those who choose this discipline channel formidable strength to protect their allies in battle. Valor offers great power to those who raise their shields in defense of others.</p>" }
 ];
 // domain cards
 const domaincardList = [
@@ -264,36 +280,36 @@ const domaincardList = [
 ];
 // ancestries
 const ancestryList = [
-{ label: "Clank", name: "clank", pages: ["Page 53"], summary: "<p>Clanks are sentient mechanical beings built from a variety of materials, including metal, wood, and stone. <span class='og-omit'>They can resemble humanoids, animals, or even inanimate objects. Like organic beings, their bodies come in a wide array of sizes. Because of their bespoke construction, many clanks have highly specialized physical configurations. Examples include clawed hands for grasping, wheels for movement, or built-in weaponry.</span></p><p class='og-omit'>Many clanks embrace body modifications for style as well as function, and members of other ancestries often turn to clank artisans to construct customized mobility aids and physical adornments. Other ancestries can create clanks, even using their own physical characteristics as inspiration, but it's also common for clanks to build one another. A clank's lifespan extends as long as they're able to acquire or craft new parts, making their physical form effectively immortal. That said, their minds are subject to the effects of time, and deteriorate as the magic that powers them loses potency.</p>", features: ["<p><strong><em>Purposeful Design:</em></strong> Decide who made you and for what purpose. At <a href='#define-character-creation'>character creation</a>, choose one of your <a href='#define-experience'>Experiences</a> that best aligns with this purpose and gain a permanent +1 bonus to it.</p>", "<p><strong><em>Efficient:</em></strong> When you take a <a href='#define-downtime'>short rest</a>, you can choose a <a href='#define-downtime'>long rest</a> move instead of a short rest move.</p>"] },
-{ label: "Drakona", name: "drakona", pages: ["Page 54"], summary: "<p>Drakona resemble wingless dragons in humanoid form and possess a powerful elemental breath. <span class='og-omit'>All drakona have thick scales that provide excellent natural armor against both attacks and the forces of nature. They are large in size, ranging from 5&ndash;7 feet (1.5&ndash;2.1m) on average, with long sharp teeth. New teeth grow throughout a drakona's approximately 350-year lifespan, so they are never in danger of permanently losing an incisor. Unlike their dragon ancestors, drakona don't have wings and can't fly without magical aid. Members of this ancestry pass down the element of their breath through generations, though in rare cases, a drakona's elemental power will differ from the rest of their family's.</span></p>", features: ["<p><strong><em>Scales:</em></strong> Your scales act as natural protection. When you would take <a href='#define-hit-point'>Severe</a> damage, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to mark 1 fewer <a href='#define-hit-point'>Hit Points</a>.</p>", "<p><strong><em>Elemental Breath:</em></strong> Choose an element for your breath (such as electricity, fire, or ice). You can use this breath against a target or group of targets within <a href='#define-range'>Very Close</a> range, treating it as an <a href='#define-instinct'>Instinct</a> <a href='#define-weapon'>weapon</a> that deals <strong>d8</strong> <a href='#define-damage-type'>magic damage</a> using your <a href='#define-damage-roll'>Proficiency</a>.</p>"] },
-{ label: "Dwarf", name: "dwarf", pages: ["Page 55"], summary: "<p>Dwarves are most easily recognized as short humanoids with square frames, dense musculature, and thick hair. <span class='og-omit'>Their average height ranges from 4&ndash;5&half; feet (1.2&ndash;1.7 m), and they are often broad in proportion to their stature. Their skin and nails contain a high amount of keratin, making them naturally resilient. This allows dwarves to embed gemstones into their bodies and decorate themselves with tattoos or piercings.</span></p><p class='og-omit'>Their hair grows thickly&mdash;usually on their heads, but some dwarves have thick hair across their bodies as well. Dwarves of all genders can grow facial hair, which they often style in elaborate arrangements. Typically, dwarves live up to 250 years of age, maintaining their muscle mass well into later life.</p>", features: ["<p><strong><em>Thick Skin:</em></strong> When you take <a href='#define-hit-point'>Minor</a> damage, you can <strong><a href='#define-stress'>mark 2 Stress</a></strong> instead of marking a <a href='#define-hit-point'>Hit Point</a>.</p>", "<p><strong><em>Increased Fortitude:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to halve incoming <a href='#define-damage-type'>physical damage</a>.</p>"] },
-{ label: "Elf", name: "elf", pages: ["Page 56"], summary: "<p>Elves are typically tall humanoids with pointed ears and acutely attuned senses. <span class='og-omit'>Their ears vary in size and pointed shape, and as they age, the tips begin to droop. While elves come in a wide range of body types, they are all fairly tall, with heights ranging from about 6&ndash;6&half; feet (1.8&ndash;2.0 m). All elves have the ability to drop into a celestial trance, rather than sleep. This allows them to <a href='#define-downtime'>rest</a> effectively in a short amount of time. Some elves possess what is known as a <strong>mystic form</strong>, which occurs when an elf has dedicated themself to the study or protection of the natural world so deeply that their physical form changes. These characteristics can include celestial freckles, the presence of leaves, vines, or flowers in their hair, eyes that flicker like fire, and more. Sometimes these traits are inherited from parents, but if an elf changes their environment or magical focus, their appearance changes over time. Because elves live for about 350 years, these traits can shift more than once throughout their lifespan.</span></p>", features: ["<p><strong><em>Quick Reactions:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to gain <a href='#define-advantage'>advantage</a> on a <a href='#define-reaction-roll'>reaction roll</a>.</p>", "<p><strong><em>Celestial Trance:</em></strong> During a rest, you can drop into a trance to choose an additional <a href='#define-downtime-move'>downtime move</a>.</p>"] },
-{ label: "Faerie", name: "faerie", pages: ["Page 57"], summary: "<p>Faeries are winged humanoid creatures with insectile features.</p><p class='og-omit'>These characteristics cover a broad spectrum from humanoid to insectoid&mdash;some possess additional arms, compound eyes, lantern organs, chitinous exoskeletons, or stingers.</p><p class='og-omit'>Because of their close ties to the natural world, they also frequently possess attributes that allow them to blend in with various plants. The average height of a faerie ranges from about 2&ndash;5 feet (0.6&ndash;1.5 m), but some faeries grow up to 7 feet (2.1 m) tall. All faeries possess membranous wings and they each go through a process of metamorphosis. The process and changes differ from faerie to faerie, but during this transformation each individual manifests the unique appearance they will carry throughout the rest of their approximately 50-year lifespan.</p>", features: ["<p><strong><em>Luckbender:</em></strong> Once per session, after you or a willing ally within <a href='#define-range'>Close</a> range makes an action roll, you can spend 3 Hope to <a href='#define-reroll'>reroll</a> the <a href='#define-action-roll'>Duality Dice</a>.</p>", "<p><strong><em>Wings:</em></strong> You can fly. While flying, you can <strong><a href='#define-stress'>mark a Stress</a></strong> after an <a href='#define-adversary'>adversary</a> makes an attack against you to gain a +2 bonus to your <a href='#define-evasion'>Evasion</a> against that attack.</p>"] },
-{ label: "Faun", name: "faun", pages: ["Page 58"], summary: "<p>Fauns resemble humanoid goats with curving horns, square pupils, and cloven hooves. <span class='og-omit'>Though their appearances may vary, most fauns have a humanoid torso and a goatlike lower body covered in dense fur.</span></p><p class='og-omit'>Faun faces can be more caprine or more humanlike, and they have a wide variety of ear and horn shapes. Faun horns range from short with minimal curvature to much larger with a distinct curl. The average faun ranges from 4&ndash;6&half; feet (1.2&ndash;2.0 m) tall, but their height can change dramatically from one moment to the next based on their stance. The majority of fauns have proportionately long limbs, no matter their size or shape, and are known for their ability to deliver powerful blows with their split hooves. Fauns live for roughly 225 years, and as they age, their appearance can become increasingly goatlike.</p>", features: ["<p><strong><em>Caprine Leap:</em></strong> You can leap anywhere within <a href='#define-range'>Close</a> range as though you were using normal movement, allowing you to vault obstacles, jump across gaps, or scale barriers with ease.</p>", "<p><strong><em>Kick:</em></strong> When you succeed on an attack against a target within <a href='#define-range'>Melee</a> range, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to kick yourself off them, dealing an extra <strong>2d6</strong> damage and knocking back either yourself or the target to <a href='#define-range'>Very Close</a> range.</p>"] },
-{ label: "Firbolg", name: "firbolg", pages: ["Page 59"], summary: "<p>Firbolgs are bovine humanoids typically recognized by their broad noses and long, drooping ears. <span class='og-omit'>Some have faces that are a blend of humanoid and bison, ox, cow, or other bovine creatures. Others, often referred to as minotaurs, have heads that entirely resemble cattle. They are tall and muscular creatures, with heights ranging from around 5&ndash;7 feet (1.5&ndash;2.1 m), and possess remarkable strength no matter their age. Some firbolgs are known to use this strength to charge their adversaries, an action that is particularly effective for those who have one of the many varieties of horn styles commonly found in this ancestry. Though their unique characteristics can vary, all firbolgs are covered in fur, which can be muted and earth-toned in color, or come in a variety of pastels, such as soft pinks and blues. On average, firbolgs live for about 150 years.</span></p>", features: ["<p><strong><em>Charge:</em></strong> When you succeed on an <a href='#define-trait-roll'>Agility Roll</a> to move from Far or <a href='#define-range'>Very Far</a> range into <a href='#define-range'>Melee</a> range with one or more targets, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to deal <strong>1d12</strong> <a href='#define-damage-type'>physical damage</a> to all targets within <a href='#define-range'>Melee</a> range.</p>", "<p><strong><em>Unshakable:</em></strong> When you would mark a <a href='#define-stress'>Stress</a>, roll a <strong>d6</strong>. On a result of 6, don't mark it.</p>"] },
-{ label: "Fungril", name: "fungril", pages: ["Page 60"], summary: "<p>Fungril resemble humanoid mushrooms. <span class='og-omit'>They can be either more humanoid or more fungal in appearance, and they come in an assortment of colors, from earth tones to bright reds, yellows, purples, and blues. Fungril display an incredible variety of bodies, faces, and limbs, as there's no single common shape among them. Even their heights range from a tiny 2 feet tall to a staggering 7 feet (0.6&ndash;2.1 m) tall. While the common lifespan of a fungril is about 300 years, some have been reported to live much longer. They can communicate nonverbally, and many members of this ancestry use a mycelial array to chemically exchange information with other fungril across long distances.</span></p>", features: ["<p><strong><em>Fungril Network:</em></strong> Make an <strong><a href='#define-trait-roll'>Instinct Roll (12)</a></strong> to use your mycelial array to speak with others of your ancestry. On a success, you can communicate across any distance.</p>", "<p><strong><em>Death Connection:</em></strong> While touching a corpse that died recently, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to extract one memory from the corpse related to a specific emotion or sensation of your choice.</p>"] },
-{ label: "Galapa", name: "galapa", pages: ["Page 61"], summary: "<p>Galapa resemble anthropomorphic turtles with large, domed shells into which they can retract. <span class='og-omit'>On average, they range from 4&ndash;6 feet (1.2&ndash;1.8 m) in height, and their head and body shapes can resemble any type of turtle.</span></p><p class='og-omit'>Galapa come in a variety of earth tones&mdash;most often shades of green and brown&mdash; and possess unique patterns on their shells. Members of this ancestry can draw their head, arms, and legs into their shell for protection to use it as a natural shield when defensive measures are needed. Some supplement their shell's strength or appearance by attaching armor or carving unique designs, but the process is exceedingly painful. Most galapa move slowly no matter their age, and they can live approximately 150 years.</p>", features: ["<p><strong><em>Shell:</em></strong> Gain a bonus to your  <a href='#define-hit-point'>damage thresholds</a> equal to your <a href='#define-damage-roll'>Proficiency</a>.</p>", "<p><strong><em>Retract:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to retract into your shell. While in your shell, you have <a href='#define-damage-type'>resistance</a> to <a href='#define-damage-type'>physical damage</a>, you have <a href='#define-advantage'>disadvantage</a> on <a href='#define-action-roll'>action rolls</a>, and you can't move.</p>"] },
-{ label: "Giant", name: "giant", pages: ["Page 62"], summary: "<p>Giants are towering humanoids with broad shoulders, long arms, and one to three eyes. <span class='og-omit'>Adult giants range from 6&half;&ndash;8&half; feet (2&ndash;2.6 m) tall and are naturally muscular, regardless of body type. They are easily recognized by their wide frames and elongated arms and necks. Though they can have up to three eyes, all giants are born with none and remain sightless for their first year of life. Until a giant reaches the age of 10 and their features fully develop, the formation of their eyes may fluctuate. Those with a single eye are commonly known as cyclops. The average giant lifespan is about 75 years.</span></p>", features: ["<p><strong><em>Endurance:</em></strong> Gain an additional <a href='#define-hit-point'>Hit Point</a> slot at <a href='#define-character-creation'>character creation</a>.</p>", "<p><strong><em>Reach:</em></strong> Treat any <a href='#define-weapon'>weapon</a>, ability, spell, or other feature that has a <a href='#define-range'>Melee</a> range as though it has a <a href='#define-range'>Very Close</a> range instead.</p>"] },
-{ label: "Goblin", name: "goblin", pages: ["Page 63"], summary: "<p>Goblins are small humanoids easily recognizable by their large eyes and massive membranous ears. <span class='og-omit'>With keen hearing and sharp eyesight, they perceive details both at great distances and in darkness, allowing them to move through less-optimal environments with ease. Their skin and eye colors are incredibly varied, with no one hue, either vibrant or subdued, more dominant than another. A typical goblin stands between 3&ndash;4 feet (0.9&ndash;1.2 m) tall, and each of their ears is about the size of their head. Goblins are known to use ear positions to very specific effect when communicating nonverbally. A goblin's lifespan is roughly 100 years, and many maintain their keen hearing and sight well into advanced age.</span></p>", features: ["<p><strong><em>Surefooted:</em></strong> You ignore <a href='#define-advantage'>disadvantage</a> on <a href='#define-trait-roll'>Agility Rolls</a>.</p>", "<p><strong><em>Danger Sense:</em></strong> Once per <a href='#define-downtime'>rest</a>, mark a <a href='#define-stress'>Stress</a> to force an <a href='#define-adversary'>adversary</a> to <a href='#define-reroll'>reroll</a> an attack against you or an ally within <a href='#define-range'>Very Close</a> range.</p>"] },
-{ label: "Halfling", name: "halfling", pages: ["Page 64"], summary: "<p>Halflings are small humanoids with large hairy feet and prominent rounded ears. <span class='og-omit'>On average, halflings are 3&ndash;4 feet (0.9&ndash;1.2 m) in height, and their ears, nose, and feet are larger in proportion to the rest of their body. Members of this ancestry live for around 150 years, and a halfling's appearance is likely to remain youthful even as they progress from adulthood into old age. Halflings are naturally attuned to the magnetic fields of the Mortal Realm, granting them a strong internal compass. They also possess acute senses of hearing and smell, and can often detect those who are familiar to them by the sound of their movements.</span></p>", features: ["<p><strong><em>Luckbringer:</em></strong> At the start of each session, everyone in your party gains a <a href='#define-hope'>Hope</a>.</p>", "<p><strong><em>Internal Compass:</em></strong> When you roll a 1 on your <a href='#define-action-roll'>Hope Die</a>, you can <a href='#define-reroll'>reroll</a> it.</p>"] },
-{ label: "Human", name: "human", pages: ["Page 65"], summary: "<p>Humans are most easily recognized by their dexterous hands, rounded ears, and bodies built for endurance. <span class='og-omit'>Their average height ranges from just under 5&ndash;6&half; feet (1.5&ndash;2.0 m). They have a wide variety of builds, with some being quite broad, others lithe, and many inhabiting the spectrum in between.</span></p><p class='og-omit'>Humans are physically adaptable and adjust to harsh climates with relative ease. In general, humans live to an age of about 100, with their bodies changing dramatically between their youngest and oldest years.</p>", features: ["<p><strong><em>High Stamina:</em></strong> Gain an additional <a href='#define-stress'>Stress</a> slot at <a href='#define-character-creation'>character creation</a>.</p>", "<p><strong><em>Adaptability:</em></strong> When you fail a roll that <a href='#define-experience'>utilized one of your Experiences</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to <a href='#define-reroll'>reroll</a>.</p>"] },
-{ label: "Infernis", name: "infernis", pages: ["Page 66"], summary: "<p>Infernis are humanoids who possess sharp canine teeth, pointed ears, and horns. <span class='og-omit'>They are the descendants of demons from the Circles Below. On average, infernis range in height from 5&ndash;7 feet (1.5&ndash;2.1 m) and are known to have long fingers and pointed nails. Some have long, thin, and smooth tails that end in points, forks, or arrowheads. It's common for infernis to have two or four horns&mdash;though some have crowns of many horns, or only one. These horns can also grow asymmetrically, forming unique, often curving, shapes that infernis enhance with carving and ornamentation. Their skin, hair, and horns come in an assortment of colors that can include soft pastels, stark tones, or vibrant hues, such as rosy scarlet, deep purple, and pitch black.</span></p><p class='og-omit'>Infernis possess a <strong><em>dread visage</em></strong> that manifests both involuntarily, such as when they experience fear or other strong emotions, or purposefully, such as when they wish to intimidate an <a href='#define-adversary'>adversary</a>. This visage can briefly modify their appearance in a variety of ways, including lengthening their teeth and nails, changing the colors of their eyes, twisting their horns, or enhancing their height. On average, infernis live up to 350 years, with some attributing this lifespan to their demonic lineage.</p>", features: ["<p><strong><em>Fearless:</em></strong> When you <a href='#define-action-roll'>roll with Fear</a>, you can <strong><a href='#define-stress'>mark 2 Stress</a></strong> to change it into a <a href='#define-action-roll'>roll with Hope</a> instead.</p>", "<p><strong><em>Dread Visage:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to intimidate hostile creatures.</p>"] },
-{ label: "Katari", name: "katari", pages: ["Page 67"], summary: "<p>Katari are feline humanoids with retractable claws, vertically slit pupils, and high, triangular ears. <span class='og-omit'>They can also have small, pointed canine teeth, soft fur, and long whiskers that assist their perception and navigation. Their ears can swivel nearly 180 degrees to detect sound, adding to their heightened senses. Katari may look more or less feline or humanoid, with catlike attributes in the form of hair, whiskers, and a muzzle.</span></p><p class='og-omit'>About half of the katari population have tails. Their skin and fur come in a wide range of hues and patterns, including solid colors, calico tones, tabby stripes, and an array of spots, patches, marbling, or bands. Their height ranges from about 3&ndash;6&half; feet (0.9&ndash;2.0 m), and they live to around 150 years.</p>", features: ["<p><strong><em>Feline Instincts:</em></strong> When you make an <a href='#define-trait-roll'>Agility Roll</a>, you can <strong><a href='#define-hope'>spend 2 Hope</a></strong> to <a href='#define-reroll'>reroll</a> your <a href='#define-action-roll'>Hope Die</a>.</p>", "<p><strong><em>Retracting Claws:</em></strong> Make an <strong><a href='#define-trait-roll'>Agility Roll</a></strong> to scratch a target within <a href='#define-range'>Melee</a> range. On a success, they become <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</p>"] },
-{ label: "Orc", name: "orc", pages: ["Page 68"], summary: "<p>Orcs are humanoids most easily recognized by their square features and boar-like tusks that protrude from their lower jaw.</p><p class='og-omit'>Tusks come in various sizes, and though they extend from the mouth, they aren't used for consuming food. Instead, many orcs choose to decorate their tusks with significant ornamentation. Orcs typically live for 125 years, and unless altered, their tusks continue to grow throughout the course of their lives. Their ears are pointed, and their hair and skin typically have green, blue, pink, or gray tones. Orcs tend toward a muscular build, and their average height ranges from 5&ndash;6&half; feet (1.5&ndash;2.0 m).</p>", features: ["<p><strong><em>Sturdy:</em></strong> When you have 1 <a href='#define-hit-point'>Hit Point</a> remaining, attacks against you have <a href='#define-advantage'>disadvantage</a>.</p>", "<p><strong><em>Tusks:</em></strong> When you succeed on an attack against a target within <a href='#define-range'>Melee</a> range, you can spend a Hope to gore the target with your tusks, dealing an extra <strong>1d6</strong> damage.</p>"] },
-{ label: "Ribbet", name: "ribbet", pages: ["Page 69"], summary: "<p>Ribbets resemble anthropomorphic frogs with protruding eyes and webbed hands and feet. <span class='og-omit'>They have smooth (though sometimes warty) moist skin and eyes positioned on either side of their head. Some ribbets have hind legs more than twice the length of their torso, while others have short limbs. No matter their size (which ranges from about 3&ndash;4&half; feet (0.9&ndash;1.4 m)), ribbets primarily move by hopping. All ribbets have webbed appendages, allowing them to swim with ease. Some ribbets possess a natural green-and-brown camouflage, while others are vibrantly colored with bold patterns. No matter their appearance, all ribbets are born from eggs laid in the water, hatch into tadpoles, and after about 6 to 7 years, grow into amphibians that can move around on land. Ribbets live for approximately 100 years.</span></p>", features: ["<p><strong><em>Amphibious:</em></strong> You can breathe and move naturally underwater.</p>", "<p><strong><em>Long Tongue:</em></strong> You can use your long tongue to grab onto things within <a href='#define-range'>Close</a> range. <strong><a href='#define-stress'>Mark a Stress</a></strong> to use your tongue as a <a href='#define-finesse'>Finesse</a> <a href='#define-range'>Close</a> <a href='#define-weapon'>weapon</a> that deals <strong>d12</strong> <a href='#define-damage-type'>physical damage</a> using your <a href='#define-damage-roll'>Proficiency</a>.</p>"] },
-{ label: "Simiah", name: "simiah", pages: ["Page 70"], summary: "<p>Simiah resemble anthropomorphic monkeys and apes with long limbs and prehensile feet. <span class='og-omit'>While their appearance reflects all simian creatures, from the largest gorilla to the smallest marmoset, their size does not align with their animal counterparts, and they can be anywhere from 2&ndash;6 feet (0.6&ndash;1.8 m) tall. All simiah can use their dexterous feet for nonverbal communication, work, and combat. Additionally, some also have prehensile tails that can grasp objects or help with balance during difficult maneuvers. These traits grant members of this ancestry unique agility that aids them in a variety of physical tasks. In particular, simiah are skilled climbers and can easily transition from bipedal movement to knuckle-walking and climbing, and back again. On average, simiah live for about 100 years.</span></p>", features: ["<p><strong><em>Natural Climber:</em></strong> You have <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Agility Rolls</a> that involve balancing and climbing.</p>", "<p><strong><em>Nimble:</em></strong> Gain a permanent +1 bonus to your <a href='#define-evasion'>Evasion</a> at <a href='#define-character-creation'>character creation</a>.</p>"] }
+{ label: "Clank", name: "clank", pages: ["Page 53"], summarybrief: "<a href='#define-clank'>Clanks</a> are sentient mechanical beings built from a variety of materials, including metal, wood, and stone.", summary: "<p>Clanks are sentient mechanical beings built from a variety of materials, including metal, wood, and stone. <span class='og-omit'>They can resemble humanoids, animals, or even inanimate objects. Like organic beings, their bodies come in a wide array of sizes. Because of their bespoke construction, many clanks have highly specialized physical configurations. Examples include clawed hands for grasping, wheels for movement, or built-in weaponry.</span></p><p class='og-omit'>Many clanks embrace body modifications for style as well as function, and members of other ancestries often turn to clank artisans to construct customized mobility aids and physical adornments. Other ancestries can create clanks, even using their own physical characteristics as inspiration, but it's also common for clanks to build one another. A clank's lifespan extends as long as they're able to acquire or craft new parts, making their physical form effectively immortal. That said, their minds are subject to the effects of time, and deteriorate as the magic that powers them loses potency.</p>", featurelabel: ["Purposeful Design", "Efficient"], features: ["<p><strong><em>Purposeful Design:</em></strong> Decide who made you and for what purpose. At <a href='#define-character-creation'>character creation</a>, choose one of your <a href='#define-experience'>Experiences</a> that best aligns with this purpose and gain a permanent +1 bonus to it.</p>", "<p><strong><em>Efficient:</em></strong> When you take a <a href='#define-downtime'>short rest</a>, you can choose a <a href='#define-downtime'>long rest</a> move instead of a short rest move.</p>"] },
+{ label: "Drakona", name: "drakona", pages: ["Page 54"], summarybrief: "<a href='#define-drakona'>Drakona</a> resemble wingless dragons in humanoid form and possess a powerful elemental breath.", summary: "<p>Drakona resemble wingless dragons in humanoid form and possess a powerful elemental breath. <span class='og-omit'>All drakona have thick scales that provide excellent natural armor against both attacks and the forces of nature. They are large in size, ranging from 5&ndash;7 feet (1.5&ndash;2.1m) on average, with long sharp teeth. New teeth grow throughout a drakona's approximately 350-year lifespan, so they are never in danger of permanently losing an incisor. Unlike their dragon ancestors, drakona don't have wings and can't fly without magical aid. Members of this ancestry pass down the element of their breath through generations, though in rare cases, a drakona's elemental power will differ from the rest of their family's.</span></p>", featurelabel: ["Scales", "Elemental Breath"], features: ["<p><strong><em>Scales:</em></strong> Your scales act as natural protection. When you would take <a href='#define-hit-point'>Severe</a> damage, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to mark 1 fewer <a href='#define-hit-point'>Hit Points</a>.</p>", "<p><strong><em>Elemental Breath:</em></strong> Choose an element for your breath (such as electricity, fire, or ice). You can use this breath against a target or group of targets within <a href='#define-range'>Very Close</a> range, treating it as an <a href='#define-instinct'>Instinct</a> <a href='#define-weapon'>weapon</a> that deals <strong>d8</strong> <a href='#define-damage-type'>magic damage</a> using your <a href='#define-damage-roll'>Proficiency</a>.</p>"] },
+{ label: "Dwarf", name: "dwarf", pages: ["Page 55"], summarybrief: "<a href='#define-dwarf'>Dwarves</a> are most easily recognized as short humanoids with square frames, dense musculature, and thick hair.", summary: "<p>Dwarves are most easily recognized as short humanoids with square frames, dense musculature, and thick hair. <span class='og-omit'>Their average height ranges from 4&ndash;5&half; feet (1.2&ndash;1.7 m), and they are often broad in proportion to their stature. Their skin and nails contain a high amount of keratin, making them naturally resilient. This allows dwarves to embed gemstones into their bodies and decorate themselves with tattoos or piercings.</span></p><p class='og-omit'>Their hair grows thickly&mdash;usually on their heads, but some dwarves have thick hair across their bodies as well. Dwarves of all genders can grow facial hair, which they often style in elaborate arrangements. Typically, dwarves live up to 250 years of age, maintaining their muscle mass well into later life.</p>", featurelabel: ["Thick Skin", "Increased Fortitude"], features: ["<p><strong><em>Thick Skin:</em></strong> When you take <a href='#define-hit-point'>Minor</a> damage, you can <strong><a href='#define-stress'>mark 2 Stress</a></strong> instead of marking a <a href='#define-hit-point'>Hit Point</a>.</p>", "<p><strong><em>Increased Fortitude:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to halve incoming <a href='#define-damage-type'>physical damage</a>.</p>"] },
+{ label: "Elf", name: "elf", pages: ["Page 56"], summarybrief: "<a href='#define-elf'>Elves</a> are typically tall humanoids with pointed ears and acutely attuned senses.", summary: "<p>Elves are typically tall humanoids with pointed ears and acutely attuned senses. <span class='og-omit'>Their ears vary in size and pointed shape, and as they age, the tips begin to droop. While elves come in a wide range of body types, they are all fairly tall, with heights ranging from about 6&ndash;6&half; feet (1.8&ndash;2.0 m). All elves have the ability to drop into a celestial trance, rather than sleep. This allows them to <a href='#define-downtime'>rest</a> effectively in a short amount of time. Some elves possess what is known as a <strong>mystic form</strong>, which occurs when an elf has dedicated themself to the study or protection of the natural world so deeply that their physical form changes. These characteristics can include celestial freckles, the presence of leaves, vines, or flowers in their hair, eyes that flicker like fire, and more. Sometimes these traits are inherited from parents, but if an elf changes their environment or magical focus, their appearance changes over time. Because elves live for about 350 years, these traits can shift more than once throughout their lifespan.</span></p>", featurelabel: ["Quick Reactions", "Celestial Trance"], features: ["<p><strong><em>Quick Reactions:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to gain <a href='#define-advantage'>advantage</a> on a <a href='#define-reaction-roll'>reaction roll</a>.</p>", "<p><strong><em>Celestial Trance:</em></strong> During a rest, you can drop into a trance to choose an additional <a href='#define-downtime-move'>downtime move</a>.</p>"] },
+{ label: "Faerie", name: "faerie", pages: ["Page 57"], summarybrief: "<a href='#define-faerie'>Faeries</a> are winged humanoid creatures with insectile features.", summary: "<p>Faeries are winged humanoid creatures with insectile features.</p><p class='og-omit'>These characteristics cover a broad spectrum from humanoid to insectoid&mdash;some possess additional arms, compound eyes, lantern organs, chitinous exoskeletons, or stingers.</p><p class='og-omit'>Because of their close ties to the natural world, they also frequently possess attributes that allow them to blend in with various plants. The average height of a faerie ranges from about 2&ndash;5 feet (0.6&ndash;1.5 m), but some faeries grow up to 7 feet (2.1 m) tall. All faeries possess membranous wings and they each go through a process of metamorphosis. The process and changes differ from faerie to faerie, but during this transformation each individual manifests the unique appearance they will carry throughout the rest of their approximately 50-year lifespan.</p>", featurelabel: ["Luckbender", "Wings"], features: ["<p><strong><em>Luckbender:</em></strong> Once per session, after you or a willing ally within <a href='#define-range'>Close</a> range makes an action roll, you can spend 3 Hope to <a href='#define-reroll'>reroll</a> the <a href='#define-action-roll'>Duality Dice</a>.</p>", "<p><strong><em>Wings:</em></strong> You can fly. While flying, you can <strong><a href='#define-stress'>mark a Stress</a></strong> after an <a href='#define-adversary'>adversary</a> makes an attack against you to gain a +2 bonus to your <a href='#define-evasion'>Evasion</a> against that attack.</p>"] },
+{ label: "Faun", name: "faun", pages: ["Page 58"], summarybrief: "<a href='#define-faun'>Fauns</a> resemble humanoid goats with curving horns, square pupils, and cloven hooves.", summary: "<p>Fauns resemble humanoid goats with curving horns, square pupils, and cloven hooves. <span class='og-omit'>Though their appearances may vary, most fauns have a humanoid torso and a goatlike lower body covered in dense fur.</span></p><p class='og-omit'>Faun faces can be more caprine or more humanlike, and they have a wide variety of ear and horn shapes. Faun horns range from short with minimal curvature to much larger with a distinct curl. The average faun ranges from 4&ndash;6&half; feet (1.2&ndash;2.0 m) tall, but their height can change dramatically from one moment to the next based on their stance. The majority of fauns have proportionately long limbs, no matter their size or shape, and are known for their ability to deliver powerful blows with their split hooves. Fauns live for roughly 225 years, and as they age, their appearance can become increasingly goatlike.</p>", featurelabel: ["Caprine Leap", "Kick"], features: ["<p><strong><em>Caprine Leap:</em></strong> You can leap anywhere within <a href='#define-range'>Close</a> range as though you were using normal movement, allowing you to vault obstacles, jump across gaps, or scale barriers with ease.</p>", "<p><strong><em>Kick:</em></strong> When you succeed on an attack against a target within <a href='#define-range'>Melee</a> range, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to kick yourself off them, dealing an extra <strong>2d6</strong> damage and knocking back either yourself or the target to <a href='#define-range'>Very Close</a> range.</p>"] },
+{ label: "Firbolg", name: "firbolg", pages: ["Page 59"], summarybrief: "<a href='#define-firbolg'>Firbolgs</a> are bovine humanoids typically recognized by their broad noses and long, drooping ears.", summary: "<p>Firbolgs are bovine humanoids typically recognized by their broad noses and long, drooping ears. <span class='og-omit'>Some have faces that are a blend of humanoid and bison, ox, cow, or other bovine creatures. Others, often referred to as minotaurs, have heads that entirely resemble cattle. They are tall and muscular creatures, with heights ranging from around 5&ndash;7 feet (1.5&ndash;2.1 m), and possess remarkable strength no matter their age. Some firbolgs are known to use this strength to charge their adversaries, an action that is particularly effective for those who have one of the many varieties of horn styles commonly found in this ancestry. Though their unique characteristics can vary, all firbolgs are covered in fur, which can be muted and earth-toned in color, or come in a variety of pastels, such as soft pinks and blues. On average, firbolgs live for about 150 years.</span></p>", featurelabel: ["Charge", "Unshakable"], features: ["<p><strong><em>Charge:</em></strong> When you succeed on an <a href='#define-trait-roll'>Agility Roll</a> to move from Far or <a href='#define-range'>Very Far</a> range into <a href='#define-range'>Melee</a> range with one or more targets, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to deal <strong>1d12</strong> <a href='#define-damage-type'>physical damage</a> to all targets within <a href='#define-range'>Melee</a> range.</p>", "<p><strong><em>Unshakable:</em></strong> When you would mark a <a href='#define-stress'>Stress</a>, roll a <strong>d6</strong>. On a result of 6, don't mark it.</p>"] },
+{ label: "Fungril", name: "fungril", pages: ["Page 60"], summarybrief: "<a href='#define-fungril'>Fungril</a> resemble humanoid mushrooms.", summary: "<p>Fungril resemble humanoid mushrooms. <span class='og-omit'>They can be either more humanoid or more fungal in appearance, and they come in an assortment of colors, from earth tones to bright reds, yellows, purples, and blues. Fungril display an incredible variety of bodies, faces, and limbs, as there's no single common shape among them. Even their heights range from a tiny 2 feet tall to a staggering 7 feet (0.6&ndash;2.1 m) tall. While the common lifespan of a fungril is about 300 years, some have been reported to live much longer. They can communicate nonverbally, and many members of this ancestry use a mycelial array to chemically exchange information with other fungril across long distances.</span></p>", featurelabel: ["Fungril Network", "Death Connection"], features: ["<p><strong><em>Fungril Network:</em></strong> Make an <strong><a href='#define-trait-roll'>Instinct Roll (12)</a></strong> to use your mycelial array to speak with others of your ancestry. On a success, you can communicate across any distance.</p>", "<p><strong><em>Death Connection:</em></strong> While touching a corpse that died recently, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to extract one memory from the corpse related to a specific emotion or sensation of your choice.</p>"] },
+{ label: "Galapa", name: "galapa", pages: ["Page 61"], summarybrief: "<a href='#define-galapa'>Galapa</a> resemble anthropomorphic turtles with large, domed shells into which they can retract.", summary: "<p>Galapa resemble anthropomorphic turtles with large, domed shells into which they can retract. <span class='og-omit'>On average, they range from 4&ndash;6 feet (1.2&ndash;1.8 m) in height, and their head and body shapes can resemble any type of turtle.</span></p><p class='og-omit'>Galapa come in a variety of earth tones&mdash;most often shades of green and brown&mdash; and possess unique patterns on their shells. Members of this ancestry can draw their head, arms, and legs into their shell for protection to use it as a natural shield when defensive measures are needed. Some supplement their shell's strength or appearance by attaching armor or carving unique designs, but the process is exceedingly painful. Most galapa move slowly no matter their age, and they can live approximately 150 years.</p>", featurelabel: ["Shell", "Retract"], features: ["<p><strong><em>Shell:</em></strong> Gain a bonus to your  <a href='#define-hit-point'>damage thresholds</a> equal to your <a href='#define-damage-roll'>Proficiency</a>.</p>", "<p><strong><em>Retract:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to retract into your shell. While in your shell, you have <a href='#define-damage-type'>resistance</a> to <a href='#define-damage-type'>physical damage</a>, you have <a href='#define-advantage'>disadvantage</a> on <a href='#define-action-roll'>action rolls</a>, and you can't move.</p>"] },
+{ label: "Giant", name: "giant", pages: ["Page 62"], summarybrief: "<a href='#define-giant'>Giants</a> are towering humanoids with broad shoulders, long arms, and one to three eyes.", summary: "<p>Giants are towering humanoids with broad shoulders, long arms, and one to three eyes. <span class='og-omit'>Adult giants range from 6&half;&ndash;8&half; feet (2&ndash;2.6 m) tall and are naturally muscular, regardless of body type. They are easily recognized by their wide frames and elongated arms and necks. Though they can have up to three eyes, all giants are born with none and remain sightless for their first year of life. Until a giant reaches the age of 10 and their features fully develop, the formation of their eyes may fluctuate. Those with a single eye are commonly known as cyclops. The average giant lifespan is about 75 years.</span></p>", featurelabel: ["Endurance", "Reach"], features: ["<p><strong><em>Endurance:</em></strong> Gain an additional <a href='#define-hit-point'>Hit Point</a> slot at <a href='#define-character-creation'>character creation</a>.</p>", "<p><strong><em>Reach:</em></strong> Treat any <a href='#define-weapon'>weapon</a>, ability, spell, or other feature that has a <a href='#define-range'>Melee</a> range as though it has a <a href='#define-range'>Very Close</a> range instead.</p>"] },
+{ label: "Goblin", name: "goblin", pages: ["Page 63"], summarybrief: "<a href='#define-goblin'>Goblins</a> are small humanoids easily recognizable by their large eyes and massive membranous ears.", summary: "<p>Goblins are small humanoids easily recognizable by their large eyes and massive membranous ears. <span class='og-omit'>With keen hearing and sharp eyesight, they perceive details both at great distances and in darkness, allowing them to move through less-optimal environments with ease. Their skin and eye colors are incredibly varied, with no one hue, either vibrant or subdued, more dominant than another. A typical goblin stands between 3&ndash;4 feet (0.9&ndash;1.2 m) tall, and each of their ears is about the size of their head. Goblins are known to use ear positions to very specific effect when communicating nonverbally. A goblin's lifespan is roughly 100 years, and many maintain their keen hearing and sight well into advanced age.</span></p>", featurelabel: ["Surefooted", "Danger Sense"], features: ["<p><strong><em>Surefooted:</em></strong> You ignore <a href='#define-advantage'>disadvantage</a> on <a href='#define-trait-roll'>Agility Rolls</a>.</p>", "<p><strong><em>Danger Sense:</em></strong> Once per <a href='#define-downtime'>rest</a>, mark a <a href='#define-stress'>Stress</a> to force an <a href='#define-adversary'>adversary</a> to <a href='#define-reroll'>reroll</a> an attack against you or an ally within <a href='#define-range'>Very Close</a> range.</p>"] },
+{ label: "Halfling", name: "halfling", pages: ["Page 64"], summarybrief: "<a href='#define-halfling'>Halflings</a> are small humanoids with large hairy feet and prominent rounded ears.", summary: "<p>Halflings are small humanoids with large hairy feet and prominent rounded ears. <span class='og-omit'>On average, halflings are 3&ndash;4 feet (0.9&ndash;1.2 m) in height, and their ears, nose, and feet are larger in proportion to the rest of their body. Members of this ancestry live for around 150 years, and a halfling's appearance is likely to remain youthful even as they progress from adulthood into old age. Halflings are naturally attuned to the magnetic fields of the Mortal Realm, granting them a strong internal compass. They also possess acute senses of hearing and smell, and can often detect those who are familiar to them by the sound of their movements.</span></p>", featurelabel: ["Luckbringer", "Internal Compass"], features: ["<p><strong><em>Luckbringer:</em></strong> At the start of each session, everyone in your party gains a <a href='#define-hope'>Hope</a>.</p>", "<p><strong><em>Internal Compass:</em></strong> When you roll a 1 on your <a href='#define-action-roll'>Hope Die</a>, you can <a href='#define-reroll'>reroll</a> it.</p>"] },
+{ label: "Human", name: "human", pages: ["Page 65"], summarybrief: "<a href='#define-human'>Humans</a> are most easily recognized by their dexterous hands, rounded ears, and bodies built for endurance.", summary: "<p>Humans are most easily recognized by their dexterous hands, rounded ears, and bodies built for endurance. <span class='og-omit'>Their average height ranges from just under 5&ndash;6&half; feet (1.5&ndash;2.0 m). They have a wide variety of builds, with some being quite broad, others lithe, and many inhabiting the spectrum in between.</span></p><p class='og-omit'>Humans are physically adaptable and adjust to harsh climates with relative ease. In general, humans live to an age of about 100, with their bodies changing dramatically between their youngest and oldest years.</p>", featurelabel: ["High Stamina", "Adaptability"], features: ["<p><strong><em>High Stamina:</em></strong> Gain an additional <a href='#define-stress'>Stress</a> slot at <a href='#define-character-creation'>character creation</a>.</p>", "<p><strong><em>Adaptability:</em></strong> When you fail a roll that <a href='#define-experience'>utilized one of your Experiences</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to <a href='#define-reroll'>reroll</a>.</p>"] },
+{ label: "Infernis", name: "infernis", pages: ["Page 66"], summarybrief: "<a href='#define-infernis'>Infernis</a> are humanoids who possess sharp canine teeth, pointed ears, and horns.", summary: "<p>Infernis are humanoids who possess sharp canine teeth, pointed ears, and horns. <span class='og-omit'>They are the descendants of demons from the Circles Below. On average, infernis range in height from 5&ndash;7 feet (1.5&ndash;2.1 m) and are known to have long fingers and pointed nails. Some have long, thin, and smooth tails that end in points, forks, or arrowheads. It's common for infernis to have two or four horns&mdash;though some have crowns of many horns, or only one. These horns can also grow asymmetrically, forming unique, often curving, shapes that infernis enhance with carving and ornamentation. Their skin, hair, and horns come in an assortment of colors that can include soft pastels, stark tones, or vibrant hues, such as rosy scarlet, deep purple, and pitch black.</span></p><p class='og-omit'>Infernis possess a <strong><em>dread visage</em></strong> that manifests both involuntarily, such as when they experience fear or other strong emotions, or purposefully, such as when they wish to intimidate an <a href='#define-adversary'>adversary</a>. This visage can briefly modify their appearance in a variety of ways, including lengthening their teeth and nails, changing the colors of their eyes, twisting their horns, or enhancing their height. On average, infernis live up to 350 years, with some attributing this lifespan to their demonic lineage.</p>", featurelabel: ["Fearless", "Dread Visage"], features: ["<p><strong><em>Fearless:</em></strong> When you <a href='#define-action-roll'>roll with Fear</a>, you can <strong><a href='#define-stress'>mark 2 Stress</a></strong> to change it into a <a href='#define-action-roll'>roll with Hope</a> instead.</p>", "<p><strong><em>Dread Visage:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to intimidate hostile creatures.</p>"] },
+{ label: "Katari", name: "katari", pages: ["Page 67"], summarybrief: "<a href='#define-katari'>Katari</a> are feline humanoids with retractable claws, vertically slit pupils, and high, triangular ears.", summary: "<p>Katari are feline humanoids with retractable claws, vertically slit pupils, and high, triangular ears. <span class='og-omit'>They can also have small, pointed canine teeth, soft fur, and long whiskers that assist their perception and navigation. Their ears can swivel nearly 180 degrees to detect sound, adding to their heightened senses. Katari may look more or less feline or humanoid, with catlike attributes in the form of hair, whiskers, and a muzzle.</span></p><p class='og-omit'>About half of the katari population have tails. Their skin and fur come in a wide range of hues and patterns, including solid colors, calico tones, tabby stripes, and an array of spots, patches, marbling, or bands. Their height ranges from about 3&ndash;6&half; feet (0.9&ndash;2.0 m), and they live to around 150 years.</p>", featurelabel: ["Feline Instincts", "Retracting Claws"], features: ["<p><strong><em>Feline Instincts:</em></strong> When you make an <a href='#define-trait-roll'>Agility Roll</a>, you can <strong><a href='#define-hope'>spend 2 Hope</a></strong> to <a href='#define-reroll'>reroll</a> your <a href='#define-action-roll'>Hope Die</a>.</p>", "<p><strong><em>Retracting Claws:</em></strong> Make an <strong><a href='#define-trait-roll'>Agility Roll</a></strong> to scratch a target within <a href='#define-range'>Melee</a> range. On a success, they become <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</p>"] },
+{ label: "Orc", name: "orc", pages: ["Page 68"], summarybrief: "<a href='#define-orc'>Orcs</a> are humanoids most easily recognized by their square features and boar-like tusks that protrude from their lower jaw.", summary: "<p>Orcs are humanoids most easily recognized by their square features and boar-like tusks that protrude from their lower jaw.</p><p class='og-omit'>Tusks come in various sizes, and though they extend from the mouth, they aren't used for consuming food. Instead, many orcs choose to decorate their tusks with significant ornamentation. Orcs typically live for 125 years, and unless altered, their tusks continue to grow throughout the course of their lives. Their ears are pointed, and their hair and skin typically have green, blue, pink, or gray tones. Orcs tend toward a muscular build, and their average height ranges from 5&ndash;6&half; feet (1.5&ndash;2.0 m).</p>", featurelabel: ["Sturdy", "Tusks"], features: ["<p><strong><em>Sturdy:</em></strong> When you have 1 <a href='#define-hit-point'>Hit Point</a> remaining, attacks against you have <a href='#define-advantage'>disadvantage</a>.</p>", "<p><strong><em>Tusks:</em></strong> When you succeed on an attack against a target within <a href='#define-range'>Melee</a> range, you can spend a Hope to gore the target with your tusks, dealing an extra <strong>1d6</strong> damage.</p>"] },
+{ label: "Ribbet", name: "ribbet", pages: ["Page 69"], summarybrief: "<a href='#define-ribbet'>Ribbets</a> resemble anthropomorphic frogs with protruding eyes and webbed hands and feet.", summary: "<p>Ribbets resemble anthropomorphic frogs with protruding eyes and webbed hands and feet. <span class='og-omit'>They have smooth (though sometimes warty) moist skin and eyes positioned on either side of their head. Some ribbets have hind legs more than twice the length of their torso, while others have short limbs. No matter their size (which ranges from about 3&ndash;4&half; feet (0.9&ndash;1.4 m)), ribbets primarily move by hopping. All ribbets have webbed appendages, allowing them to swim with ease. Some ribbets possess a natural green-and-brown camouflage, while others are vibrantly colored with bold patterns. No matter their appearance, all ribbets are born from eggs laid in the water, hatch into tadpoles, and after about 6 to 7 years, grow into amphibians that can move around on land. Ribbets live for approximately 100 years.</span></p>", featurelabel: ["Amphibious", "Long Tongue"], features: ["<p><strong><em>Amphibious:</em></strong> You can breathe and move naturally underwater.</p>", "<p><strong><em>Long Tongue:</em></strong> You can use your long tongue to grab onto things within <a href='#define-range'>Close</a> range. <strong><a href='#define-stress'>Mark a Stress</a></strong> to use your tongue as a <a href='#define-finesse'>Finesse</a> <a href='#define-range'>Close</a> <a href='#define-weapon'>weapon</a> that deals <strong>d12</strong> <a href='#define-damage-type'>physical damage</a> using your <a href='#define-damage-roll'>Proficiency</a>.</p>"] },
+{ label: "Simiah", name: "simiah", pages: ["Page 70"], summarybrief: "<a href='#define-simiah'>Simiah</a> resemble anthropomorphic monkeys and apes with long limbs and prehensile feet.", summary: "<p>Simiah resemble anthropomorphic monkeys and apes with long limbs and prehensile feet. <span class='og-omit'>While their appearance reflects all simian creatures, from the largest gorilla to the smallest marmoset, their size does not align with their animal counterparts, and they can be anywhere from 2&ndash;6 feet (0.6&ndash;1.8 m) tall. All simiah can use their dexterous feet for nonverbal communication, work, and combat. Additionally, some also have prehensile tails that can grasp objects or help with balance during difficult maneuvers. These traits grant members of this ancestry unique agility that aids them in a variety of physical tasks. In particular, simiah are skilled climbers and can easily transition from bipedal movement to knuckle-walking and climbing, and back again. On average, simiah live for about 100 years.</span></p>", featurelabel: ["Natural Climber", "Nimble"], features: ["<p><strong><em>Natural Climber:</em></strong> You have <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Agility Rolls</a> that involve balancing and climbing.</p>", "<p><strong><em>Nimble:</em></strong> Gain a permanent +1 bonus to your <a href='#define-evasion'>Evasion</a> at <a href='#define-character-creation'>character creation</a>.</p>"] }
 ];
 // communities
 const communityList = [
-{ label: "Highborne", name: 'highborne', pages: ["Page 73"], summary: "<p>Being part of a highborne community means you're accustomed to a life of elegance, opulence, and prestige within the upper echelons of society. <span class='og-omit'>Traditionally, members of a highborne community possess incredible material wealth. While this can take a variety of forms depending on the community&mdash;including gold and other minerals, land, or controlling the means of production&mdash;this status always comes with power and influence. Highborne place great value on titles and possessions, and there is little social mobility within their ranks. Members of a highborne community often control the political and economic status of the areas in which they live due to their ability to influence people and the economy with their substantial wealth. The health and safety of the less affluent people who live in these locations often hinges on the ability of this highborne ruling class to prioritize the well-being of their subjects over profit.</span></p>", roleplay: "Highborne are often amiable, candid, conniving, enterprising, ostentatious, and unflappable.", feature: "<p><strong><em>Privilege:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to consort with nobles, negotiate prices, or leverage your reputation to get what you want.</p></li>" },
-{ label: "Loreborne", name: 'loreborne', pages: ["Page 74"], summary: "<p>Being part of a loreborne community means you're from a society that favors strong academic or political prowess. <span class='og-omit'>Loreborne communities highly value knowledge, frequently in the form of historical preservation, political advancement, scientific study, skill development, or lore and mythology compilation. Most members of these communities research in institutions built in bastions of civilization, while some eclectic few thrive in gathering information from the natural world. Some may be isolationists, operating in smaller enclaves, schools, or guilds and following their own unique ethos. Others still wield their knowledge on a larger scale, making deft political maneuvers across governmental landscapes.</span></p>", roleplay: "Loreborne are often direct, eloquent, inquisitive, patient, rhapsodic, and witty.", feature: "<p><strong><em>Well-Read:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls that involve the history, culture, or politics of a prominent person or place.</p></li>" },
-{ label: "Orderborne", name: 'orderborne', pages: ["Page 75"], summary: "<p>Being part of an orderborne community means you're from a collective that focuses on discipline or faith, and you uphold a set of principles that reflect your experience there. <span class='og-omit'>Orderborne are frequently some of the most powerful among the surrounding communities. By aligning the members of their society around a common value or goal, such as a god, doctrine, ethos, or even a shared business or trade, the ruling bodies of these enclaves can mobilize larger populations with less effort. While orderborne communities take a variety of forms&mdash;some even profoundly pacifistic&mdash;perhaps the most feared are those that structure themselves around military prowess. In such a case, it's not uncommon for orderborne to provide soldiers for hire to other cities or countries.</span></p>", roleplay: "Orderborne are often ambitious, benevolent, pensive, prudent, sardonic, and stoic.", feature: "<p><strong><em>Dedicated:</em></strong> Record three sayings or values your upbringing instilled in you. Once per <a href='#define-downtime'>rest</a>, when you describe how you're embodying one of these principles through your current action, you can roll a <strong>d20</strong> as your <a href='#define-action-roll'>Hope Die</a>.</p></li>" },
-{ label: "Ridgeborne", name: 'ridgeborne', pages: ["Page 76"], summary: "<p>Being part of a ridgeborne community means you've called the rocky peaks and sharp cliffs of the mountainside home. <span class='og-omit'>Those who've lived in the mountains often consider themselves hardier than most because they've thrived among the most dangerous terrain many continents have to offer. These groups are adept at adaptation, developing unique technologies and equipment to move both people and products across difficult terrain. As such, ridgeborne grow up scrambling and climbing, making them sturdy and strong-willed. Ridgeborne localities appear in a variety of forms&mdash;some cities carve out entire cliff faces, others construct castles of stone, and still more live in small homes on windblown peaks. Outside forces often struggle to attack ridgeborne groups, as the small militias and large military forces of the mountains are adept at utilizing their high-ground advantage.</span></p>", roleplay: "Ridgeborne are often bold, hardy, indomitable, loyal, reserved, and stubborn.", feature: "<p><strong><em>Steady:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to traverse dangerous cliffs and ledges, navigate harsh environments, and use your survival knowledge.</p></li>" },
-{ label: "Seaborne", name: 'seaborne', pages: ["Page 77"], summary: "<p>Being part of a seaborne community means you lived on or near a large body of water. <span class='og-omit'>Seaborne communities are built, both physically and culturally, around the specific waters they call home. Some of these groups live along the shore, constructing ports for locals and travelers alike. These harbors function as centers of commerce, tourist attractions, or even just a safe place to lay down one's head after weeks of travel. Other seaborne live on the water in small boats or large ships, with the idea of 'home' comprising a ship and its crew, rather than any one landmass. No matter their exact location, seaborne communities are closely tied to the ocean tides and the creatures who inhabit them. Seaborne learn to fish at a young age, and train from birth to hold their breath and swim in even the most tumultuous waters. Individuals from these groups are highly sought after for their sailing skills, and many become captains of vessels, whether within their own community, working for another, or even at the helm of a powerful naval operation.</span></p>", roleplay: "Seaborne are often candid, cooperative, exuberant, fierce, resolute, and weathered.", feature: "<p><strong><em>Know the Tide:</em></strong> You can sense the ebb and flow of life. When you <a href='#define-action-roll'>roll with Fear</a>, place a token on your community card. You can hold a number of tokens equal to your <a href='#define-level'>level</a>. Before you make an <a href='#define-action-roll'>action roll</a>, you can spend any number of these tokens to gain a +1 bonus to the roll for each token spent. At the end of each session, clear all unspent tokens.</p></li>" },
-{ label: "Slyborne", name: 'slyborne', pages: ["Page 78"], summary: "<p>Being part of a slyborne community means you come from a group that operates outside the law, including all manner of criminals, grifters, and con artists. <span class='og-omit'>Members of slyborne communities are brought together by their disreputable goals and their clever means of achieving them. Many people in these communities have an array of unscrupulous skills: forging, thievery, smuggling, and violence. People of any social class can be slyborne, from those who have garnered vast wealth and influence to those without a coin to their name. To the outside eye, slyborne might appear to be ruffians with no loyalty, but these communities possess some of the strictest codes of honor which, when broken, can result in a terrifying end for the transgressor.</span></p>", roleplay: "Slyborne are often calculating, clever, formidable, perceptive, shrewd, and tenacious.", feature: "<p><strong><em>Scoundrel:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to negotiate with criminals, detect lies, or find a safe place to hide.</p></li>" },
-{ label: "Underborne", name: 'underborne', pages: ["Page 79"], summary: "<p>Being part of an underborne community means you're from a subterranean society. Many underborne live right beneath the cities and villages of other collectives, while some live much deeper. <span class='og-omit'>These communities range from small family groups in burrows to massive metropolises in caverns of stone. In many locales, underborne are recognized for their incredible boldness and skill that enable great feats of architecture and engineering. Underborne are regularly hired for their bravery, as even the least daring among them has likely encountered formidable belowground beasts, and learning to dispatch such creatures is common practice amongst these societies. Because of the dangers of their environment, many underborne communities develop unique nonverbal languages that prove equally useful on the surface.</span></p>", roleplay: "Underborne are often composed, elusive, indomitable, innovative, resourceful, and unpretentious.", feature: "<p><strong><em>Low-Light Living:</em></strong> When you're in an area with low light or heavy shadow, you have <a href='#define-advantage'>advantage</a> on rolls to hide, investigate, or perceive details within that area.</p></li>" },
-{ label: "Wanderborne", name: 'wanderborne', pages: ["Page 80"], summary: "<p>Being part of a wanderborne community means you've lived as a nomad, forgoing a permanent home and experiencing a wide variety of cultures. <span class='og-omit'>Unlike many communities that are defined by their locale, wanderborne are defined by their traveling lifestyle. Because of their frequent migration, wanderborne put less value on the accumulation of material possessions in favor of acquiring information, skills, and connections. While some wanderborne are allied by a common ethos, such as a religion or a set of political or economic values, others come together after shared tragedy, such as the loss of their home or land. No matter the reason, the dangers posed by life on the road and the choice to continue down that road together mean that wanderborne are known for their unwavering loyalty.</span></p>", roleplay: "Wanderborne are often inscrutable, magnanimous, mirthful, reliable, savvy, and unorthodox.", feature: "<p><strong><em>Nomadic Pack:</em></strong> Add a <strong><em>Nomadic Pack</em></strong> to your inventory. Once per session, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to reach into this pack and pull out a mundane item that's useful to your situation. Work with the GM to figure out what item you take out.</p></li>" },
-{ label: "Wildborne", name: 'wildborne', pages: ["Page 81"], summary: "<p>Being part of a wildborne community means you lived deep within the forest. <span class='og-omit'>Wildborne communities are defined by their dedication to the conservation of their homelands, and many have strong religious or cultural ties to the fauna they live among. This results in unique architectural and technological advancements that favor sustainability over short-term, high-yield results. It is a hallmark of wildborne societies to integrate their villages and cities with the natural environment and avoid disturbing the lives of the plants and animals. While some construct their lodgings high in the branches of trees, others establish their homes on the ground beneath the forest canopy. It's not uncommon for wildborne to remain reclusive and hidden within their woodland homes.</span></p>", roleplay: "Wildborne are often hardy, loyal, nurturing, reclusive, sagacious, and vibrant.", feature: "<p><strong><em>Lightfoot:</em></strong> Your movement is naturally silent. You have <a href='#define-advantage'>advantage</a> on rolls to move without being heard.</p></li>" }
+{ label: "Highborne", name: 'highborne', pages: ["Page 73"], summarybrief: "Being part of a <a href='#define-highborne'>highborne</a> community means you're accustomed to a life of elegance, opulence, and prestige within the upper echelons of society.", summary: "<p>Being part of a highborne community means you're accustomed to a life of elegance, opulence, and prestige within the upper echelons of society. <span class='og-omit'>Traditionally, members of a highborne community possess incredible material wealth. While this can take a variety of forms depending on the community&mdash;including gold and other minerals, land, or controlling the means of production&mdash;this status always comes with power and influence. Highborne place great value on titles and possessions, and there is little social mobility within their ranks. Members of a highborne community often control the political and economic status of the areas in which they live due to their ability to influence people and the economy with their substantial wealth. The health and safety of the less affluent people who live in these locations often hinges on the ability of this highborne ruling class to prioritize the well-being of their subjects over profit.</span></p>", roleplay: "Highborne are often amiable, candid, conniving, enterprising, ostentatious, and unflappable.", feature: "<p><strong><em>Privilege:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to consort with nobles, negotiate prices, or leverage your reputation to get what you want.</p></li>" },
+{ label: "Loreborne", name: 'loreborne', pages: ["Page 74"], summarybrief: "Being part of a <a href='#define-loreborne'>loreborne</a> community means you're from a society that favors strong academic or political prowess.", summary: "<p>Being part of a lore</a> means you're from a society that favors strong academic or political prowess. <span class='og-omit'>Loreborne communities highly value knowledge, frequently in the form of historical preservation, political advancement, scientific study, skill development, or lore and mythology compilation. Most members of these communities research in institutions built in bastions of civilization, while some eclectic few thrive in gathering information from the natural world. Some may be isolationists, operating in smaller enclaves, schools, or guilds and following their own unique ethos. Others still wield their knowledge on a larger scale, making deft political maneuvers across governmental landscapes.</span></p>", roleplay: "Loreborne are often direct, eloquent, inquisitive, patient, rhapsodic, and witty.", feature: "<p><strong><em>Well-Read:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls that involve the history, culture, or politics of a prominent person or place.</p></li>" },
+{ label: "Orderborne", name: 'orderborne', pages: ["Page 75"], summarybrief: "Being part of an <a href='#define-orderborne'>orderborne</a> community means you're from a collective that focuses on discipline or faith, and you uphold a set of principles that reflect your experience there.", summary: "<p>Being part of an orderborne community means you're from a collective that focuses on discipline or faith, and you uphold a set of principles that reflect your experience there. <span class='og-omit'>Orderborne are frequently some of the most powerful among the surrounding communities. By aligning the members of their society around a common value or goal, such as a god, doctrine, ethos, or even a shared business or trade, the ruling bodies of these enclaves can mobilize larger populations with less effort. While orderborne communities take a variety of forms&mdash;some even profoundly pacifistic&mdash;perhaps the most feared are those that structure themselves around military prowess. In such a case, it's not uncommon for orderborne to provide soldiers for hire to other cities or countries.</span></p>", roleplay: "Orderborne are often ambitious, benevolent, pensive, prudent, sardonic, and stoic.", feature: "<p><strong><em>Dedicated:</em></strong> Record three sayings or values your upbringing instilled in you. Once per <a href='#define-downtime'>rest</a>, when you describe how you're embodying one of these principles through your current action, you can roll a <strong>d20</strong> as your <a href='#define-action-roll'>Hope Die</a>.</p></li>" },
+{ label: "Ridgeborne", name: 'ridgeborne', pages: ["Page 76"], summarybrief: "Being part of a <a href='#define-ridgeborne'>ridgeborne</a> community means you've called the rocky peaks and sharp cliffs of the mountainside home.", summary: "<p>Being part of a ridgeborne community means you've called the rocky peaks and sharp cliffs of the mountainside home. <span class='og-omit'>Those who've lived in the mountains often consider themselves hardier than most because they've thrived among the most dangerous terrain many continents have to offer. These groups are adept at adaptation, developing unique technologies and equipment to move both people and products across difficult terrain. As such, ridgeborne grow up scrambling and climbing, making them sturdy and strong-willed. Ridgeborne localities appear in a variety of forms&mdash;some cities carve out entire cliff faces, others construct castles of stone, and still more live in small homes on windblown peaks. Outside forces often struggle to attack ridgeborne groups, as the small militias and large military forces of the mountains are adept at utilizing their high-ground advantage.</span></p>", roleplay: "Ridgeborne are often bold, hardy, indomitable, loyal, reserved, and stubborn.", feature: "<p><strong><em>Steady:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to traverse dangerous cliffs and ledges, navigate harsh environments, and use your survival knowledge.</p></li>" },
+{ label: "Seaborne", name: 'seaborne', pages: ["Page 77"], summarybrief: "Being part of a <a href='#define-seaborne'>seaborne</a> community means you lived on or near a large body of water.", summary: "<p>Being part of a seaborne community means you lived on or near a large body of water. <span class='og-omit'>Seaborne communities are built, both physically and culturally, around the specific waters they call home. Some of these groups live along the shore, constructing ports for locals and travelers alike. These harbors function as centers of commerce, tourist attractions, or even just a safe place to lay down one's head after weeks of travel. Other seaborne live on the water in small boats or large ships, with the idea of 'home' comprising a ship and its crew, rather than any one landmass. No matter their exact location, seaborne communities are closely tied to the ocean tides and the creatures who inhabit them. Seaborne learn to fish at a young age, and train from birth to hold their breath and swim in even the most tumultuous waters. Individuals from these groups are highly sought after for their sailing skills, and many become captains of vessels, whether within their own community, working for another, or even at the helm of a powerful naval operation.</span></p>", roleplay: "Seaborne are often candid, cooperative, exuberant, fierce, resolute, and weathered.", feature: "<p><strong><em>Know the Tide:</em></strong> You can sense the ebb and flow of life. When you <a href='#define-action-roll'>roll with Fear</a>, place a token on your community card. You can hold a number of tokens equal to your <a href='#define-level'>level</a>. Before you make an <a href='#define-action-roll'>action roll</a>, you can spend any number of these tokens to gain a +1 bonus to the roll for each token spent. At the end of each session, clear all unspent tokens.</p></li>" },
+{ label: "Slyborne", name: 'slyborne', pages: ["Page 78"], summarybrief: "Being part of a <a href='#define-slyborne'>slyborne</a> community means you come from a group that operates outside the law, including all manner of criminals, grifters, and con artists.", summary: "<p>Being part of a slyborne community means you come from a group that operates outside the law, including all manner of criminals, grifters, and con artists. <span class='og-omit'>Members of slyborne communities are brought together by their disreputable goals and their clever means of achieving them. Many people in these communities have an array of unscrupulous skills: forging, thievery, smuggling, and violence. People of any social class can be slyborne, from those who have garnered vast wealth and influence to those without a coin to their name. To the outside eye, slyborne might appear to be ruffians with no loyalty, but these communities possess some of the strictest codes of honor which, when broken, can result in a terrifying end for the transgressor.</span></p>", roleplay: "Slyborne are often calculating, clever, formidable, perceptive, shrewd, and tenacious.", feature: "<p><strong><em>Scoundrel:</em></strong> You have <a href='#define-advantage'>advantage</a> on rolls to negotiate with criminals, detect lies, or find a safe place to hide.</p></li>" },
+{ label: "Underborne", name: 'underborne', pages: ["Page 79"], summarybrief: "Being part of an <a href='#define-underborne'>underborne</a> community means you're from a subterranean society.", summary: "<p>Being part of an underborne community means you're from a subterranean society. Many underborne live right beneath the cities and villages of other collectives, while some live much deeper. <span class='og-omit'>These communities range from small family groups in burrows to massive metropolises in caverns of stone. In many locales, underborne are recognized for their incredible boldness and skill that enable great feats of architecture and engineering. Underborne are regularly hired for their bravery, as even the least daring among them has likely encountered formidable belowground beasts, and learning to dispatch such creatures is common practice amongst these societies. Because of the dangers of their environment, many underborne communities develop unique nonverbal languages that prove equally useful on the surface.</span></p>", roleplay: "Underborne are often composed, elusive, indomitable, innovative, resourceful, and unpretentious.", feature: "<p><strong><em>Low-Light Living:</em></strong> When you're in an area with low light or heavy shadow, you have <a href='#define-advantage'>advantage</a> on rolls to hide, investigate, or perceive details within that area.</p></li>" },
+{ label: "Wanderborne", name: 'wanderborne', pages: ["Page 80"], summarybrief: "Being part of a <a href='#define-wanderborne'>wanderborne</a> community means you've lived as a nomad, forgoing a permanent home and experiencing a wide variety of cultures.", summary: "<p>Being part of a wanderborne community means you've lived as a nomad, forgoing a permanent home and experiencing a wide variety of cultures. <span class='og-omit'>Unlike many communities that are defined by their locale, wanderborne are defined by their traveling lifestyle. Because of their frequent migration, wanderborne put less value on the accumulation of material possessions in favor of acquiring information, skills, and connections. While some wanderborne are allied by a common ethos, such as a religion or a set of political or economic values, others come together after shared tragedy, such as the loss of their home or land. No matter the reason, the dangers posed by life on the road and the choice to continue down that road together mean that wanderborne are known for their unwavering loyalty.</span></p>", roleplay: "Wanderborne are often inscrutable, magnanimous, mirthful, reliable, savvy, and unorthodox.", feature: "<p><strong><em>Nomadic Pack:</em></strong> Add a <strong><em>Nomadic Pack</em></strong> to your inventory. Once per session, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to reach into this pack and pull out a mundane item that's useful to your situation. Work with the GM to figure out what item you take out.</p></li>" },
+{ label: "Wildborne", name: 'wildborne', pages: ["Page 81"], summarybrief: "Being part of a <a href='#define-wildborne'>wildborne</a> community means you lived deep within the forest.", summary: "<p>Being part of a wildborne community means you lived deep within the forest. <span class='og-omit'>Wildborne communities are defined by their dedication to the conservation of their homelands, and many have strong religious or cultural ties to the fauna they live among. This results in unique architectural and technological advancements that favor sustainability over short-term, high-yield results. It is a hallmark of wildborne societies to integrate their villages and cities with the natural environment and avoid disturbing the lives of the plants and animals. While some construct their lodgings high in the branches of trees, others establish their homes on the ground beneath the forest canopy. It's not uncommon for wildborne to remain reclusive and hidden within their woodland homes.</span></p>", roleplay: "Wildborne are often hardy, loyal, nurturing, reclusive, sagacious, and vibrant.", feature: "<p><strong><em>Lightfoot:</em></strong> Your movement is naturally silent. You have <a href='#define-advantage'>advantage</a> on rolls to move without being heard.</p></li>" }
 ];
 // traits
 const traitList = [ 
@@ -470,14 +486,14 @@ const weaponsecondaryList = [
 { label: "Small Dagger", tier: 1, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Melee", damage: "d8", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Paired:</em></strong> +2 to <a href='#define-weapon'>primary weapon</a> damage to targets within <a href='#define-range'>Melee</a> range" },
 { label: "Whip", tier: 1, pages: ["Page 124"], errata: false, trait: "Presence", range: "Very Close", damage: "d6", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Startling:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to crack the whip and force all <a href='#define-adversary'>adversaries</a> within <a href='#define-range'>Melee</a> range back to <a href='#define-range'>Close</a> range." },
 { label: "Grappler", tier: 1, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Close", damage: "d6", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Hooked:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, you can pull the target into <a href='#define-range'>Melee</a> range." },
-{ label: "Hand Crossbow", tier: 1, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Far", damage: "d6+1", damagetype: "phy", burden: "One-Handed", feature: "&mdash;" },
+{ label: "Hand Crossbow", tier: 1, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Far", damage: "d6+1", damagetype: "phy", burden: "One-Handed", feature: "" },
 { label: "Improved Shortsword", tier: 2, pages: ["Page 124"], errata: false, trait: "Agility", range: "Melee", damage: "d8+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Paired:</em></strong> +3 to <a href='#define-weapon'>primary weapon</a> damage to targets within <a href='#define-range'>Melee</a> range" },
 { label: "Improved Round Shield", tier: 2, pages: ["Page 124"], errata: false, trait: "Strength", range: "Melee", damage: "d4+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Protective:</em></strong> +2 to <a href='#define-armor'>Armor Score</a>" },
 { label: "Improved Tower Shield", tier: 2, pages: ["Page 124"], errata: false, trait: "Strength", range: "Melee", damage: "d6+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Barrier:</em></strong> +3 to <a href='#define-armor'>Armor Score</a>; &minus;1 to <a href='#define-evasion'>Evasion</a>" },
 { label: "Improved Small Dagger", tier: 2, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Melee", damage: "d8+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Paired:</em></strong> +3 to <a href='#define-weapon'>primary weapon</a> damage to targets within <a href='#define-range'>Melee</a> range" },
 { label: "Improved Whip", tier: 2, pages: ["Page 124"], errata: false, trait: "Presence", range: "Very Close", damage: "d6+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Startling:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to crack the whip and force all <a href='#define-adversary'>adversaries</a> within <a href='#define-range'>Melee</a> range back to <a href='#define-range'>Close</a> range." },
 { label: "Improved Grappler", tier: 2, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Close", damage: "d6+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Hooked:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, you can pull the target into <a href='#define-range'>Melee</a> range." },
-{ label: "Improved Hand Crossbow", tier: 2, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Far", damage: "d6+3", damagetype: "phy", burden: "One-Handed", feature: "&mdash;" },
+{ label: "Improved Hand Crossbow", tier: 2, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Far", damage: "d6+3", damagetype: "phy", burden: "One-Handed", feature: "" },
 { label: "Spiked Shield", tier: 2, pages: ["Page 124"], errata: false, trait: "Strength", range: "Melee", damage: "d6+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Double Duty:</em></strong> +1 to <a href='#define-armor'>Armor Score</a>; +1 to <a href='#define-weapon'>primary weapon</a> damage within <a href='#define-range'>Melee</a> range" },
 { label: "Parrying Dagger", tier: 2, pages: ["Page 124"], errata: false, trait: "Finesse", range: "Melee", damage: "d6+2", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Parry:</em></strong> When you are attacked, roll this weapon's <a href='#define-damage-roll'>damage dice</a>. If any of the attacker's damage dice rolled the same value as your dice, the matching results are discarded from the attacker's damage dice before the damage you take is totaled." },
 { label: "Returning Axe", tier: 2, pages: ["Page 124"], errata: false, trait: "Agility", range: "Close", damage: "d6+4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Returning:</em></strong> When this <a href='#define-weapon'>weapon</a> is <a href='#define-weapon'>thrown</a> within its <a href='#define-range'>range</a>, it appears in your hand immediately after the attack." },
@@ -487,7 +503,7 @@ const weaponsecondaryList = [
 { label: "Advanced Small Dagger", tier: 3, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Melee", damage: "d8+4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Paired:</em></strong> +4 to <a href='#define-weapon'>primary weapon</a> damage to targets within <a href='#define-range'>Melee</a> range" },
 { label: "Advanced Whip", tier: 3, pages: ["Page 125"], errata: false, trait: "Presence", range: "Very Close", damage: "d6+4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Startling:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to crack the whip and force all <a href='#define-adversary'>adversaries</a> within <a href='#define-range'>Melee</a> range back to <a href='#define-range'>Close</a> range." },
 { label: "Advanced Grappler", tier: 3, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Close", damage: "d6+4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Hooked:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, you can pull the target into <a href='#define-range'>Melee</a> range." },
-{ label: "Advanced Hand Crossbow", tier: 3, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Far", damage: "d6+5", damagetype: "phy", burden: "One-Handed", feature: "&mdash;" },
+{ label: "Advanced Hand Crossbow", tier: 3, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Far", damage: "d6+5", damagetype: "phy", burden: "One-Handed", feature: "" },
 { label: "Buckler", tier: 3, pages: ["Page 125"], errata: true, trait: "Agility", range: "Melee", damage: "d4+4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Deflecting:</em></strong> When you are attacked, you can <strong><a href='#define-armor'>mark an Armor Slot</a></strong> to gain a bonus to your <a href='#define-evasion'>Evasion</a> equal to your available <a href='#define-armor'>Armor Slots</a> against the attack." },
 { label: "Powered Gauntlet", tier: 3, pages: ["Page 125"], errata: false, trait: "Knowledge", range: "Close", damage: "d6+4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Charged:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> on a <a href='#define-weapon'>primary weapon</a> attack." },
 { label: "Hand Sling", tier: 3, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Very Close", damage: "d6+4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Versatile:</em></strong> This <a href='#define-weapon'>weapon</a> can also be used with these statistics&mdash;Finesse, Close, d8+4." },
@@ -497,7 +513,7 @@ const weaponsecondaryList = [
 { label: "Legendary Small Dagger", tier: 4, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Melee", damage: "d8+6", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Paired:</em></strong> +5 to <a href='#define-weapon'>primary weapon</a> damage to targets within <a href='#define-range'>Melee</a> range" },
 { label: "Legendary Whip", tier: 4, pages: ["Page 125"], errata: false, trait: "Presence", range: "Very Close", damage: "d6+6", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Startling:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to crack the whip and force all <a href='#define-adversary'>adversaries</a> within <a href='#define-range'>Melee</a> range back to <a href='#define-range'>Close</a> range." },
 { label: "Legendary Grappler", tier: 4, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Close", damage: "d6+6", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Hooked:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, you can pull the target into <a href='#define-range'>Melee</a> range." },
-{ label: "Legendary Hand Crossbow", tier: 4, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Far", damage: "d6+7", damagetype: "phy", burden: "One-Handed", feature: "&mdash;" },
+{ label: "Legendary Hand Crossbow", tier: 4, pages: ["Page 125"], errata: false, trait: "Finesse", range: "Far", damage: "d6+7", damagetype: "phy", burden: "One-Handed", feature: "" },
 { label: "Braveshield", tier: 4, pages: ["Page 125"], errata: false, trait: "Agility", range: "Melee", damage: "d4+6", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Sheltering:</em></strong> When you mark an <a href='#define-armor'>Armor Slot</a>, it reduces damage for you and all allies within <a href='#define-range'>Melee</a> range of you who took the same damage." },
 { label: "Knuckle Claws", tier: 4, pages: ["Page 125"], errata: false, trait: "Strength", range: "Melee", damage: "d6+8", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Doubled Up:</em></strong> When you make an attack with your <a href='#define-weapon'>primary weapon</a>, you can deal damage to another target within <a href='#define-range'>Melee</a> range." },
 { label: "Primer Shard", tier: 4, pages: ["Page 125"], errata: false, trait: "Instinct", range: "Very Close", damage: "d4", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Locked On:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, your next attack against the same target with your <a href='#define-weapon'>primary weapon</a> automatically succeeds." },
@@ -505,11 +521,11 @@ const weaponsecondaryList = [
 // armor
 const armorList = [
 { label: "Gambeson Armor", tier: 1, pages: ["Page 126"], errata: false, thresholdmajor: 5, thresholdsevere: 11, score: 3, feature: "<strong><em>Flexible:</em></strong> +1 to <a href='#define-evasion'>Evasion</a>" },
-{ label: "Leather Armor", tier: 1, pages: ["Page 126"], errata: false, thresholdmajor: 6, thresholdsevere: 13, score: 3, feature: "&mdash;" },
+{ label: "Leather Armor", tier: 1, pages: ["Page 126"], errata: false, thresholdmajor: 6, thresholdsevere: 13, score: 3, feature: "" },
 { label: "Chainmail Armor", tier: 1, pages: ["Page 126"], errata: false, thresholdmajor: 7, thresholdsevere: 15, score: 4, feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
 { label: "Full Plate Armor", tier: 1, pages: ["Page 126"], errata: false, thresholdmajor: 8, thresholdsevere: 17, score: 4, feature: "<strong><em>Very Heavy:</em></strong> &minus;2 to <a href='#define-evasion'>Evasion</a>; &minus;1 to <a href='#define-agility'>Agility</a>" },
 { label: "Improved Gambeson Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 7, thresholdsevere: 16, score: 4, feature: "<strong><em>Flexible:</em></strong> +1 to <a href='#define-evasion'>Evasion</a>" },
-{ label: "Improved Leather Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 9, thresholdsevere: 20, score: 4, feature: "&mdash;" },
+{ label: "Improved Leather Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 9, thresholdsevere: 20, score: 4, feature: "" },
 { label: "Improved Chainmail Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 11, thresholdsevere: 24, score: 5, feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
 { label: "Improved Full Plate Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 13, thresholdsevere: 28, score: 5, feature: "<strong><em>Very Heavy:</em></strong> &minus;2 to <a href='#define-evasion'>Evasion</a>; &minus;1 to <a href='#define-agility'>Agility</a>" },
 { label: "Elundrian Chain Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 9, thresholdsevere: 21, score: 4, feature: "<strong><em>Warded:</em></strong> You reduce incoming <a href='#define-damage-type'>magic damage</a> by your <a href='#define-armor'>Armor Score</a> before applying it to your <a href='#define-hit-point'>damage thresholds</a>." },
@@ -519,7 +535,7 @@ const armorList = [
 { label: "Tyris Soft Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 8, thresholdsevere: 18, score: 5, feature: "<strong><em>Quiet:</em></strong> You gain a +2 bonus to rolls you make to move silently." },
 { label: "Rosewild Armor", tier: 2, pages: ["Page 126"], errata: false, thresholdmajor: 11, thresholdsevere: 23, score: 5, feature: "<strong><em>Hopeful:</em></strong> When you would spend a <a href='#define-hope'>Hope</a>, you can <strong><a href='#define-armor'>mark an Armor Slot</a></strong> instead." },
 { label: "Advanced Gambeson Armor", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 9, thresholdsevere: 23, score: 5, feature: "<strong><em>Flexible:</em></strong> +1 to <a href='#define-evasion'>Evasion</a>" },
-{ label: "Advanced Leather Armor", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 11, thresholdsevere: 27, score: 5, feature: "&mdash;" },
+{ label: "Advanced Leather Armor", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 11, thresholdsevere: 27, score: 5, feature: "" },
 { label: "Advanced Chainmail Armor", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 13, thresholdsevere: 31, score: 6, feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
 { label: "Advanced Full Plate Armor", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 15, thresholdsevere: 35, score: 6, feature: "<strong><em>Very Heavy:</em></strong> &minus;2 to <a href='#define-evasion'>Evasion</a>; &minus;1 to <a href='#define-agility'>Agility</a>" },
 { label: "Bellamoi Fine Armor", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 11, thresholdsevere: 27, score: 5, feature: "<strong><em>Gilded:</em></strong> +1 to <a href='#define-presence'>Presence</a>" },
@@ -529,7 +545,7 @@ const armorList = [
 { label: "Monett's Cloak", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 16, thresholdsevere: 39, score: 6, feature: "<strong><em>Magic:</em></strong> You can't mark an <a href='#define-armor'>Armor Slot</a> to reduce <a href='#define-damage-type'>physical damage</a>." },
 { label: "Runes of Fortification", tier: 3, pages: ["Page 127"], errata: false, thresholdmajor: 17, thresholdsevere: 43, score: 6, feature: "<strong><em>Painful:</em></strong> Each time you mark an <a href='#define-armor'>Armor Slot</a>, you must mark a <a href='#define-stress'>Stress</a>." },
 { label: "Legendary Gambeson Armor", tier: 4, pages: ["Page 127"], errata: false, thresholdmajor: 11, thresholdsevere: 32, score: 6, feature: "<strong><em>Flexible:</em></strong> +1 to <a href='#define-evasion'>Evasion</a>" },
-{ label: "Legendary Leather Armor", tier: 4, pages: ["Page 127"], errata: false, thresholdmajor: 13, thresholdsevere: 36, score: 6, feature: "&mdash;" },
+{ label: "Legendary Leather Armor", tier: 4, pages: ["Page 127"], errata: false, thresholdmajor: 13, thresholdsevere: 36, score: 6, feature: "" },
 { label: "Legendary Chainmail Armor", tier: 4, pages: ["Page 127"], errata: false, thresholdmajor: 15, thresholdsevere: 40, score: 7, feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
 { label: "Legendary Full Plate Armor", tier: 4, pages: ["Page 127"], errata: false, thresholdmajor: 17, thresholdsevere: 44, score: 7, feature: "<strong><em>Very Heavy:</em></strong> &minus;2 to <a href='#define-evasion'>Evasion</a>; &minus;1 to <a href='#define-agility'>Agility</a>" },
 { label: "Dunamis Silkchain", tier: 4, pages: ["Page 127"], errata: false, thresholdmajor: 13, thresholdsevere: 36, score: 7, feature: "<strong><em>Timeslowing:</em></strong> <strong><a href='#define-armor'>mark an Armor Slot</a></strong> to roll a <strong>d4</strong> and add its result as a bonus to your <a href='#define-evasion'>Evasion</a> against an incoming attack." },
@@ -555,7 +571,7 @@ const lootList = [
 { label: "Empty Chest", name: "empty-chest", pages: ["Page 129"], errata: false, feature: "This magical chest appears empty. When you speak a specific trigger word or action and open the chest, you can see the items stored within it." },
 { label: "Companion Case", name: "companion-case", pages: ["Page 129"], errata: false, feature: "This case can fit a small animal companion. While the companion is inside, the animal and case are <a href='#define-damage-type'>immune</a> to all damage and harmful effects." },
 { label: "Piercing Arrows", name: "piercing-arrows", pages: ["Page 129"], errata: false, feature: "Three times per <a href='#define-downtime'>rest</a> when you succeed on an attack with one of these arrows, you can add your <a href='#define-damage-roll'>Proficiency</a> to the <a href='#define-damage-roll'>damage roll</a>." },
-{ label: "Valorstone", name: "valorstone", pages: ["Page 129"], errata: false, feature: "You can attach this stone to <a href='#define-armor'>armor</a> that doesn't already have a feature. The armor gains the following feature.<br><strong><em>Resilient:</em></strong> Before you mark your last <a href='#define-armor'>Armor Slot</a>, roll a <strong>d6</strong>. On a result of 6,reduce the severity by one threshold without marking an Armor Slot.", },
+{ label: "Valorstone", name: "valorstone", pages: ["Page 129"], errata: false, feature: "You can attach this stone to <a href='#define-armor'>armor</a> that doesn't already have a feature. The armor gains the following feature.<br><strong><em>Resilient:</em></strong> Before you mark your last <a href='#define-armor'>Armor Slot</a>, roll a <strong>d6</strong>. On a result of 6,reduce the severity by one threshold without marking an Armor Slot." },
 { label: "Skeleton Key", name: "skeleton-key", pages: ["Page 129"], errata: false, feature: "When you use this key to open a locked door, you gain advantage on the <a href='#define-trait-roll'>Finesse Roll</a>." },
 { label: "Arcane Prism", name: "arcane-prism", pages: ["Page 129"], errata: false, feature: "Position this prism in a location of your choosing and activate it. All allies within <a href='#define-range'>Close</a> range of it gain a +1 bonus to their <a href='#define-spellcast-roll'>Spellcast Rolls</a>. While activated, the prism can't be moved. Once the prism is deactivated, it can't be activated again until your next <a href='#define-downtime'>long rest</a>." },
 { label: "Minor Stamina Potion Recipe", name: "minor-stamina-potion-recipe", pages: ["Page 129"], errata: false, feature: "As a <a href='#define-downtime'-move>downtime move</a>, you can use the bone of a creature to craft a <a href='#define-loot-minor-stamina-potion'>Minor Stamina Potion</a>." },
@@ -566,7 +582,7 @@ const lootList = [
 { label: "Lorekeeper", name: "lorekeeper", pages: ["Page 130"], errata: false, feature: "You can store the name and details of up to three hostile creatures inside this book. You gain a +1 bonus to <a href='#define-action-roll'>action rolls</a> against those creatures." },
 { label: "Vial of Darksmoke Recipe", name: "vial-of-darksmoke-recipe", pages: ["Page 130"], errata: false, feature: "As a <a href='#define-downtime'-move>downtime move</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to craft a <a href='#define-loot-vial-of-darksmoke'>Vial of Darksmoke</a>." },
 { label: "Bloodstone", name: "bloodstone", pages: ["Page 130"], errata: false, feature: "You can attach this stone to a <a href='#define-weapon'>weapon</a> that doesn't already have a feature. The weapon gains the following feature.<br><strong><em>Brutal:</em><strong> When you roll the maximum value on a <a href='#define-damage-roll'>damage die</a>, roll an additional <a href='#define-damage-roll'>damage die</a>." },
-{ label: "Greatstone", name: "greatstone", pages: ["Page 130"], errata: false, feature: "You can attach this stone to a <a href='#define-weapon'>weapon</a> that doesn't already have a feature. The weapon gains the following feature.<br><strong><em>Powerful:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, roll an additional <a href='#define-damage-roll'>damage die</a> and discard the lowest result.", },
+{ label: "Greatstone", name: "greatstone", pages: ["Page 130"], errata: false, feature: "You can attach this stone to a <a href='#define-weapon'>weapon</a> that doesn't already have a feature. The weapon gains the following feature.<br><strong><em>Powerful:</em></strong> On a successful <a href='#define-attack-roll'>attack</a>, roll an additional <a href='#define-damage-roll'>damage die</a> and discard the lowest result." },
 { label: "Glider", name: "glider", pages: ["Page 130"], errata: false, feature: "While falling, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to deploy this small parachute and glide safely to the ground." },
 { label: "Ring of Silence", name: "ring-of-silence", pages: ["Page 130"], errata: false, feature: "<strong><a href='#define-hope'>Spend a Hope</a></strong> to activate this ring. Your footsteps are silent until your next <a href='#define-downtime'>rest</a>." },
 { label: "Calming Pendant", name: "calming-pendant", pages: ["Page 130"], errata: false, feature: "When you would mark your last <a href='#define-stress'>Stress</a>, roll a <strong>d6</strong>. On a result of 5 or higher, don't mark it." },
@@ -671,6 +687,19 @@ const chance2d12 = ["&mdash;","0.69%","1.39%","2.08%","2.78%","3.47%","4.17%","4
 const chance3d12 = ["&mdash;","&mdash;","0.06%","0.17%","0.35%","0.58%","0.87%","1.22%","1.62%","2.08%","2.60%","3.18%","3.82%","4.51%","5.09%","5.56%","5.90%","6.13%","6.25%","6.25%","6.13%","5.90%","5.56%","5.09%","4.51%","3.82%","3.18%","2.60%","2.08%","1.62%","1.22%","0.87%","0.58%","0.35%","0.17%","0.06%","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;"]
 const chance4d12 = ["&mdash;","&mdash;","&mdash;","0.00%","0.02%","0.05%","0.10%","0.17%","0.27%","0.41%","0.58%","0.80%","1.06%","1.38%","1.76%","2.17%","2.62%","3.09%","3.55%","4.00%","4.42%","4.79%","5.11%","5.36%","5.52%","5.57%","5.52%","5.36%","5.11%","4.79%","4.42%","4.00%","3.55%","3.09%","2.62%","2.17%","1.76%","1.38%","1.06%","0.80%","0.58%","0.41%","0.27%","0.17%","0.10%","0.05%","0.02%","0.00%","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;","&mdash;"]
 const chance5d12 = ["&mdash;","&mdash;","&mdash;","&mdash;","0.00%","0.00%","0.01%","0.01%","0.03%","0.05%","0.08%","0.13%","0.20%","0.29%","0.40%","0.55%","0.73%","0.95%","1.20%","1.49%","1.81%","2.15%","2.52%","2.90%","3.28%","3.65%","4.00%","4.31%","4.58%","4.78%","4.93%","5.00%","5.00%","4.93%","4.78%","4.58%","4.31%","4.00%","3.65%","3.28%","2.90%","2.52%","2.15%","1.81%","1.49%","1.20%","0.95%","0.73%","0.55%","0.40%","0.29%","0.20%","0.13%","0.08%","0.05%","0.03%","0.01%","0.01%","0.00%","0.00%"]
+const chance2d20 = ["&mdash;","0.25%","0.50%","0.75%","1.00%","1.25%","1.50%","1.75%","2.00%","2.25%","2.50%","2.75%","3.00%","3.25%","3.50%","3.75%","4.00%","4.25%","4.50%","4.75%","5.00%","4.75%","4.50%","4.25%","4.00%","3.75%","3.50%","3.25%","3.00%","2.75%","2.50%","2.25%","2.00%","1.75%","1.50%","1.25%","1.00%","0.75%","0.50%","0.25%"]
+const chance3d20 = ["&mdash;%","&mdash;%","0.01%","0.04%","0.07%","0.13%","0.19%","0.26%","0.35%","0.45%","0.56%","0.69%","0.82%","0.97%","1.14%","1.31%","1.50%","1.70%","1.91%","2.14%","2.38%","2.63%","2.85%","3.05%","3.23%","3.38%","3.50%","3.60%","3.67%","3.73%","3.75%","3.75%","3.73%","3.67%","3.60%","3.50%","3.38%","3.23%","3.05%","2.85%","2.63%","2.38%","2.14%","1.91%","1.70%","1.50%","1.31%","1.14%","0.97%","0.82%","0.69%","0.56%","0.45%","0.35%","0.26%","0.19%","0.13%","0.07%","0.04%","0.01%"]
+
+const experiencesList  = [ 
+	{ 
+		backgrounds: [ "Assassin", "Blacksmith", "Bodyguard", "Bounty Hunter", "Chef to the Royal Family", "Circus Performer", "Con Artist", "Fallen Monarch", "Field Medic", "High Priestess", "Merchant", "Noble", "Pirate", "Politician", "Runaway", "Scholar", "Sellsword", "Soldier", "Storyteller", "Thief", "World Traveler" ], 
+		characteristics: [ "Affable", "Battle-Hardened", "Bookworm", "Charming", "Cowardly", "Friend to All", "Helpful", "Intimidating Presence", "Leader", "Lone Wolf", "Loyal", "Observant", "Prankster", "Silver Tongue", "Sticky Fingers", "Stubborn to a Fault", "Survivor", "Young and Naive" ], 
+		specialties: [ "Acrobat", "Gambler", "Healer", "Inventor", "Magical Historian", "Mapmaker", "Master of Disguise", "Navigator", "Sharpshooter", "Survivalist", "Swashbuckler", "Tactician" ], 
+		skills: [ "Animal Whisperer", "Barter", "Deadly Aim", "Fast Learner", "Incredible Strength", "Liar", "Light Feet", "Negotiator", "Photographic Memory", "Quick Hands", "Repair", "Scavenger", "Tracker" ], 
+		phrases: [ "Catch Me If You Can", "Fake It Till You Make It", "First Time's the Charm", "Hold the Line", "I Won't Let You Down", "I'll Catch You", "I've Got Your Back", "Knowledge Is Power", "Nature's Friend", "Never Again", "No One Left Behind", "Pick on Someone Your Own Size", "The Show Must Go On", "This Is Not a Negotiation", "Wolf in Sheep's Clothing"] 
+	}
+];
+
 // adversaries
 const adversaryList = [
 { label: "Acid Burrower", name: "acid-burrower", tier: 1, type: "Solo", pages: ["Page 210"], summary: "A horse-sized insect with digging claws and acidic blood.", motive: "Burrow, drag away, feed, reposition", difficulty: 14, thresholdmajor: 8, thresholdsevere: 15, hp: 8, hphorde: 0, stress: 3, attackbonus: "+3", attacklabel: "Claws", attackrange: "Very Close", attackdamage: "1d12+2", attackdamagetype: "phy", experiences: ["Tremor Sense +2"], features: ["<p><strong><em>Relentless (3)&mdash;Passive:</em></strong> The Burrower can be <a href='#define-spotlight'>spotlighted</a> up to three times per <a href='#define-spotlight'>GM turn</a>. Spend <a href='#define-fear'>Fear</a> as usual to <a href='#define-spotlight'>spotlight</a> them.</p>", "<p><strong><em>Earth Eruption&mdash;Action:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to have the Burrower burst out of the ground. All creatures within <a href='#define-range'>Very Close</a> range must succeed on an <a href='#define-agility'>Agility</a> <a href='#define-reaction-roll'>Reaction Roll</a> or be knocked over, making them <a href='#define-condition'><em>Vulnerable</em></a> until they next act.</p>", "<p><strong><em>Spit Acid&mdash;Action:</em></strong> Make an attack against all targets in front of the Burrower within <a href='#define-range'>Close</a> range. Targets the Burrower succeeds against take <strong>2d6</strong> <a href='#define-damage-type'>physical damage</a> and must mark an <a href='#define-armor'>Armor Slot</a> without receiving its benefits (they can still use <a href='#define-armor'>armor</a> to reduce the damage). If they can't mark an <a href='#define-armor'>Armor Slot</a>, they must mark an additional <a href='#define-hit-point'>HP</a> and you gain a <a href='#define-fear'>Fear</a>.</p>", "<p><strong><em>Acid Bath&mdash;Reaction:</em></strong> When the Burrower takes <a href='#define-hit-point'>Severe</a> damage, all creatures within <a href='#define-range'>Close</a> range are bathed in their acidic blood, taking <strong>1d10</strong> <a href='#define-damage-type'>physical damage</a>. This splash covers the ground within <a href='#define-range'>Very Close</a> range with blood, and all creatures other than the Burrower who move through it take <strong>1d6</strong> <a href='#define-damage-type'>physical damage</a>.</p>"] },
@@ -833,10 +862,14 @@ function refreshTooltips() {
 		.tooltip({
 			html: true,
 			title: function () {
-				return $(this.href.substring(this.href.lastIndexOf("#"))).clone().wrap('<div></div>').parent()
+				return $(this.href.substring(this.href.lastIndexOf("#"))).clone().wrap('<div></div>').parent();
 			}
 		})
-}
+};
+// get 2-digit percentage from numerator and denominator
+function getChance(x,y) {
+  return (x/y*100).toFixed(2) + "%";
+};
 // roll dice pools
 function rollDice(pool, sides) {
 	let rollTotal = 0;
@@ -845,26 +878,118 @@ function rollDice(pool, sides) {
 	    rollTotal = rollTotal + roll;
 	}
 	return rollTotal;
-}
-// link a trait
-function linkTrait(x) {
-	let linkTrait = x;
-	for (let t = 0; t < traitList.length; t++) {
-		if (x == traitList[t].label) {
-			linkTrait = "<a href='#define-" + traitList[t].name + "'>" + traitList[t].label + "</a>";
-		}
-	}
-	return linkTrait;
 };
-// link a class
-function linkClass(x) {
-	let linkClass = x;
-	for (let c = 0; c < classList.length; c++) {
-		if (x == classList[c].label) {
-			linkClass = "<a href='#define-" + classList[c].name + "'>" + classList[c].label + "</a>";
+// print sidebar (lengthy)
+function getSidebar(x) {
+	return "<div class='og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit'>" + x + "</div>";
+};
+// print character creation notes
+function getCCnote(x) {
+	return "<p class='og-questions small'>" + x + "</p>";
+};
+// print ednote (one paragraph only)
+function getEdnote(x) {
+	return "<div class='og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit'><p><strong>Editor's Notes &mdash;</strong> " + x + "</p></div>";
+};
+// link definitions
+function linkAncestry(x) {
+	let link = x;
+	for (let i = 0; i < ancestryList.length; i++) {
+		if (x == ancestryList[i].label) {
+			link = "<a href='#define-" + ancestryList[i].name + "'>" + ancestryList[i].label + "</a>";
 		}
 	}
-	return linkClass;
+	return link;
+};
+function linkAdversary(x) {
+	let link = x;
+	for (let i = 0; i < adversaryList.length; i++) {
+		if (x == adversaryList[i].label) {
+			link = "<a href='#define-adversary-" + adversaryList[i].name + "'>" + adversaryList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkClass(x) {
+	let link = x;
+	for (let i = 0; i < classList.length; i++) {
+		if (x == classList[i].label) {
+			link = "<a href='#define-" + classList[i].name + "'>" + classList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkCommunity(x) {
+	let link = x;
+	for (let i = 0; i < communityList.length; i++) {
+		if (x == communityList[i].label) {
+			link = "<a href='#define-" + communityList[i].name + "'>" + communityList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkConsumable(x) {
+	let link = x;
+	for (let i = 0; i < consumableList.length; i++) {
+		if (x == consumableList[i].label) {
+			link = "<a href='#define-consumable-" + consumableList[i].name + "'>" + consumableList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkDomain(x) {
+	let link = x;
+	for (let i = 0; i < domainList.length; i++) {
+		if (x == domainList[i].label) {
+			link = "<a href='#define-" + domainList[i].name + "'>" + domainList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkDomainCard(x) {
+	let link = x;
+	for (let i = 0; i < domaincardList.length; i++) {
+		if (x == domaincardList[i].label) {
+			link = "<a href='#define-domain-card" + domaincardList[i].name + "'>" + domaincardList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkEnvironment(x) {
+	let link = x;
+	for (let i = 0; i < environmentList.length; i++) {
+		if (x == environmentList[i].label) {
+			link = "<a href='#define-environment-" + environmentList[i].name + "'>" + environmentList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkLoot(x) {
+	let link = x;
+	for (let i = 0; i < linkLoot.length; i++) {
+		if (x == linkLoot[i].label) {
+			link = "<a href='#define-loot-" + linkLoot[i].name + "'>" + linkLoot[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkSubclass(x) {
+	let link = x;
+	for (let i = 0; i < subclassList.length; i++) {
+		if (x == subclassList[i].label) {
+			link = "<a href='#define-" + subclassList[i].name + "'>" + subclassList[i].label + "</a>";
+		}
+	}
+	return link;
+};
+function linkTrait(x) {
+	let link = x;
+	for (let i = 0; i < traitList.length; i++) {
+		if (x == traitList[i].label) {
+			link = "<a href='#define-" + traitList[i].name + "'>" + traitList[i].label + "</a>";
+		}
+	}
+	return link;
 };
 // create a page reference from an array
 function getReferences(array) {
@@ -882,67 +1007,933 @@ function getTierLevels(t) {
 	else if (t == 3 ) { return "Level 5&ndash;7"; }
 	else if (t == 4 ) { return "Level 8&ndash;10"; }
 	else return "";
-}
+};
 
 /* PRINTOUTS */
-// suggested traitarrays
-function printClassTraitArrays() {
-	let tArray = "";
-	tArray += "<h3 class='h6'>Suggested Trait Arrays</h3>";
-	tArray += "<p>You can use these suggestions for each <a href='#define-class'>class</a>:</p>";
-	tArray += "<div class='table-responsive og-omit small'><table class='table table-light table-striped table-sm mb-3'>";
-	tArray += "<caption>Suggested Trait Arrays</caption>";
-	tArray += "<thead><th scope='col'>Class</th><th class='text-center' scope='col'>Agility</th><th class='text-center' scope='col'>Strength</th><th class='text-center' scope='col'>Finesse</th><th class='text-center' scope='col'>Instinct</th><th class='text-center' scope='col'>Presence</th><th class='text-center' scope='col'>Knowledge</th></tr></thead><tbody>";
-	for (c = 0; c < classList.length; c++) {
-		tArray += "<tr>";
-		tArray += "<th class='fw-normal' scope='row'>" + linkClass(classList[c].label) + "</th>";
-		tArray += "<td class='text-center og-nowrap'>" + classList[c].traitarray[0] + "</td>";
-		tArray += "<td class='text-center og-nowrap'>" + classList[c].traitarray[1] + "</td>";
-		tArray += "<td class='text-center og-nowrap'>" + classList[c].traitarray[2] + "</td>";
-		tArray += "<td class='text-center og-nowrap'>" + classList[c].traitarray[3] + "</td>";
-		tArray += "<td class='text-center og-nowrap'>" + classList[c].traitarray[4] + "</td>";
-		tArray += "<td class='text-center og-nowrap'>" + classList[c].traitarray[5] + "</td>";
-		tArray += "</tr>";
+// character creation
+function printCC() {
+	let CC = "";
+	CC += "<div id='define-character-creation'>"; // open definition
+	CC += "<h2 id='character-creation'>Character Creation<a class='og-h-anchor' href='#character-creation' title='Permalink' aria-hidden='true'></a></h2>";
+	CC += "<ul class='og-list-inline og-ref og-omit'><li>Page 13</li><li>Editorial Addition</li></ul>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += getCCnote("Create your player character (PC) by making a series of choices.");
+	CC += getCCnote("Think about the types of <a href='#define-action'>moves and actions</a> you want to make, and what types of <a href='#define-action-roll'>action rolls</a> you want to suceed with.");
+	CC += getCCnote("Some choices won't affect game mechanics, but could have a big impact on the story.</p>");
+	CC += "<ol>";
+	CC += "<li><a href='#cc-step-1'>Class and Subclass</a></li>";
+	CC += "<li><a href='#cc-step-2'>Heritage</a></li>";
+	CC += "<li><a href='#cc-step-3'>Traits</a></li>";
+	CC += "<li><a href='#cc-step-4'>Equipment</a></li>";
+	CC += "<li><a href='#cc-step-5'>Domain Cards</a></li>";
+	CC += "<li><a href='#cc-step-6'>Additional Statistics</a></li>";
+	CC += "<li><a href='#cc-step-7'>Experiences and Description</a></li>";
+	CC += "<li><a href='#cc-step-8'>Background and Connnections</a></li>";
+	CC += "</ol>";
+	CC += "<p class='og-questions small'>Additional playtest character options are available from <a href='https://www.daggerheart.com/thevoid/'>Daggerheart&mdash;The Void</a>.</p>";
+	CC += "</div>"; // close topbar
+	CC += "</div>"; // close definition
+	CC += getEdnote("These steps differ from those in the <a href='https://www.daggerheart.com/buy/'>Daggerheart Core Rulebook</a>, but the genereal outline of character creation remains the same.");
+	// STEP 1:
+	CC += "<h3 id='cc-step-1'><span class='h6'>Step 1:</span> Class and Subclass<a class='og-h-anchor' href='#cc-step-1' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<div class='row'>"; // open row
+	CC += "<div class='col-12 col-md-6'>"; // open column 1
+	CC += "<h4 class='og-tab'>Class</h4>"
+	// select class
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseClass'>Class:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseClass'>"; // id
+	for (let i = 0; i < classList.length; i++) {
+		CC += "<option value='" + i + "'>" + classList[i].label + "</option>";
 	}
-	tArray += "</tbody></table></div>";
-	document.getElementById("printClassTraitArrays").innerHTML = tArray;
-};
-function printClassDefenses() {
-	let dArray = "";
-	dArray += "<h4 class='h6'>Starting Hit Points and Evasion</h4>";
-	dArray += "<div class='table-responsive og-omit small'><table class='table table-light table-striped table-sm mb-3'>";
-	dArray += "<caption>Starting Hit Points and Evasion</caption>";
-	dArray += "<thead><tr><th scope='col'>Class</th><th class='text-end' scope='col'>Evasion</th><th class='text-center' scope='col'>Hit Points</th></tr></thead><tbody>";
-	for (c = 0; c < classList.length; c++) {
-		dArray += "<tr>";
-		dArray += "<th class='fw-normal' scope='row'>" + linkClass(classList[c].label) + "</th>";
-		dArray += "<td class='text-end'>" + classList[c].evasion + "</td>";
-		dArray += "<td class='text-center'>" + classList[c].hp + "</td>";
-		dArray += "</tr>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div id='ccClass'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column 1
+	CC += "<div class='col-12 col-md-6'>";
+	CC += "<h4 class='og-tab'>Subclass</h4>"
+	// select subclass
+	CC += "<div class='input-group mb-2'>"; // open column 2
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseSubclass'>Subclass:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseSubclass'>"; // id
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div id='ccSubclass'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>";
+	CC += "</div>"; // close column 2
+	CC += "</div>"; // close row
+	CC += "</div>"; // close topbar
+	// STEP 2
+	CC += "<h3 id='cc-step-2'><span class='h6'>Step 2:</span> Heritage<a class='og-h-anchor' href='#cc-step-2' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<div class='row'>"; // open row
+	CC += "<div class='col-12 col-md-6'>"; // open column 1
+	CC += "<h4 class='og-tab'>Ancestry</h4>";
+	// select ancestry
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseAncestry'>Ancestry:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseAncestry'>"; // id
+	for (let i = 0; i < ancestryList.length + 1; i++) {
+		CC += "<option value='" + i + "'>"
+		if (i == ancestryList.length) { CC += "Mixed Ancestry"; }
+		else { CC += ancestryList[i].label; }
+		CC += "</option>";
 	}
-	dArray += "</tbody></table></div>";
-	document.getElementById("printClassDefenses").innerHTML = dArray;
-};
-function printClassEquipment() {
-	let eArray = "";
-	eArray += "<h4 class='h6'>Suggested Weapons and Armor</h4>";
-	eArray += "<div class='table-responsive og-omit small'><table class='table table-light table-striped table-sm mb-3'>";
-	eArray += "<caption>Suggested Weapons and Armor</caption>";
-	eArray += "<thead><tr><th class='w-10' scope='col'>Class</th><th class='w-45' scope='col'>Weapons</th><th class='w-45' scope='col'>Armor</th></tr></thead><tbody>";
-	for (c = 0; c < classList.length; c++) {
-		eArray += "<tr>";
-		eArray += "<th class='fw-normal' scope='row'>" + linkClass(classList[c].label) + "</th>";
-		eArray += "<td><ul class='og-list-inline'>";
-		eArray += defineWeaponPrimary(classList[c].weaponprimary);
-		if (classList[c].weaponsecondary != "") {
-			eArray += defineWeaponSecondary(classList[c].weaponsecondary);
+	CC += "</select>";
+	CC += "</div>";
+	// mixed ancestry fields to hide and show
+	CC += "<div id='ccMixedAncestryOptions' class='d-none'>";
+	for (let i = 0; i < 2; i++) {
+		let mixfeature = "First";
+		if (i > 0) {mixfeature = "Second";}
+		CC += "<div class='input-group mb-2'>";
+		CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseAncestryMixed" + (i+1) + "'>" + mixfeature +":</label>";
+		CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseAncestryMixed" + (i+1) + "'>"; // id
+		for (let a = 0; a < ancestryList.length; a++) {
+			CC += "<option value='" + a + "'>" + ancestryList[a].label + " (" + ancestryList[a].featurelabel[i] + ")</option>";
 		}
-		eArray += "</ul></td>";
-		eArray += "<td>" + defineArmor(classList[c].armor) + "</td>";
-		eArray += "</tr>";
+		CC += "</select>";
+		CC += "</div>";
 	}
-	eArray += "</tbody></table></div>";
-	document.getElementById("printClassEquipment").innerHTML = eArray;
+	CC += "</div>";
+	CC += "<div id='ccAncestry'><p>&mdash;</p></div>"; // pop field
+	// mixed ancestry output
+	CC += "<div id='ccMixedAncestryChoices'>";
+	CC += "<p class='og-questions small'>A <a href='#define-mixed-ancestry'>mixed ancestry</a> can be shaped by blood, magic, proximity, or other variety of factors.</p>";
+	CC += "<h5 class='h6'>Ancestry Features</h6>";
+	CC += "<ul class='list-unstyled'>";
+	CC += "<li id='ccAncestryMixed1'><p>&mdash;</p></li>"; // pop field
+	CC += "<li id='ccAncestryMixed2'><p>&mdash;</p></li>"; // pop field
+	CC += "</ul>";
+	CC += "</div>"
+	CC += "</div>"; // close column 1
+	CC += "<div class='col-12 col-md-6'>"; // open column 2
+	CC += "<h4 class='og-tab'>Community</h4>";
+	// select community
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseCommunity'>Community:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseCommunity'>"; // id
+	for (let i = 0; i < communityList.length; i++) {
+		CC += "<option value='" + i + "'>" + communityList[i].label + "</option>";
+	}
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div id='ccCommunity'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column 2
+	CC += "</div>"; // close row
+	CC += "</div>"; // close topbar
+	// STEP 3: ASSIGN TRAITS 
+	CC += "<h3 id='cc-step-3'><span class='h6'>Step 3:</span> Assign Traits<a class='og-h-anchor' href='#cc-step-3' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<div id='ccChooseTraits'></div>"; // pop field
+	CC += "</div>"; // close topbar
+	// STEP 4: EQUIPMENT
+	CC += "<h3 id='cc-step-4'><span class='h6'>Step 4:</span> Equipment<a class='og-h-anchor' href='#cc-step-4' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div id='ccWeaponMagic'></div>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<div class='row'>"; // open topbar
+	CC += "<div class='col-12 col-md-6'>"; // open column 1
+	// choose weapon
+	CC += "<h4 class='og-tab'>Weapons and Armor</h4>";
+	CC += getCCnote("Use suggested <a href='#define-weapon'>weapons</a> and <a href='#define-armor'>armor</a>, or choose your own.");
+	// choose primary weapon
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseWeaponPrimary'>Primary:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseWeaponPrimary'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccWeaponPrimary'><p>&mdash;</p></div>"; // pop field
+	// choose secondary weapon
+	CC += "<div class='input-group mb-2' id='ccChooseWeaponSecondarySelect'>"; // begin hide
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseWeaponSecondary'>Secondary:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseWeaponSecondary'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>"; // end hide
+	CC += "<div class='mb-3'  id='ccWeaponSecondary'><p>&mdash;</p></div>"; // pop field
+	// choose armor
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseArmor'>Armor:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseArmor'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccArmor'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column 1
+	CC += "<div class='col-12 col-md-6'>"; // open column 2
+	// choose consumable
+	CC += "<h4 class='og-tab'>Inventory</h4>";
+	CC += getCCnote("Choose a <a href='#define-consumable'>consumable</a>.");
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseConsumable'>Consumable:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseConsumable'>"; // id
+	for (let i = 0; i < consumableList.length; i++) {
+		if (consumableList[i].label == "Minor Health Potion" || consumableList[i].label == "Minor Stamina Potion") {
+			CC += "<option value='" + i + "'>" + consumableList[i].label + "</option>";
+		}
+	}
+	CC += "</select>";
+	CC += "</div>";
+	// inventory list
+	CC += "<div class='mb-3' id='ccInventory'>";
+	CC += "<p id='ccConsumable'>&mdash;</p>";
+	// class item
+	CC += "<div id='ccUserClassItem'><p>&mdash;</p></div>"; // pop id
+	// end if
+	CC += "<h5 class='h6'>Additional Items</h5>";
+	CC += "<ul class='og-list-disc'>";
+	CC += "<li>One handful of <a href='#define-gold'>gold</a></li>";
+    CC += "<li>Torch</li>";
+    CC += "<li>50 feet (15 m) of rope</li>";
+    CC += "<li>Basic supplies</li>";
+	CC += "</ul>";
+	CC += "</div>";
+	CC += "</div>"; // close column 3
+	CC += "</div>"; // close row
+	CC += "</div>"; // close topbar
+	// STEP 5:
+	CC += "<h3 id='cc-step-5'><span class='h6'>Step 5:</span> Domain Cards<a class='og-h-anchor' href='#cc-step-5' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<h4 class='og-tab'>Domain Cards</h4>";
+	CC += "<div id='ccUserDomainCardOptions'></div>";
+	CC += "<div id='ccUserDomainCardBonus'></div>";
+	CC += "<div class='row'>"; // open row, pops option and menus in columns
+	// choose domain card 1
+	CC += "<div class='col-12 col-md-6' id='ccDomainCard1Display'>"; // open column
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard1'>First Card:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard1'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccDomainCard1'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column
+	// choose domain card 2
+	CC += "<div class='col-12 col-md-6' id='ccDomainCard2Display'>"; // open column
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard2'>Second Card:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard2'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccDomainCard2'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column
+	// choose domain card 3
+	CC += "<div class='col-12 col-md-4' id='ccDomainCard3Display'>"; // open column
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard3'>Third Card:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard3'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccDomainCard3'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column
+	CC += "</div>"; // close row
+	CC += "</div>"; // close topbar
+	// STEP 6: ADDITIONAL STATISTICS
+	CC += "<h3 id='cc-step-6'><span class='h6'>Step 6:</span> Record Character Statistics<a class='og-h-anchor' href='#cc-step-6' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<h4 class='og-tab'>Additional Statistics</h4>";
+	CC += "<div id='ccPrintAdditionalStatistics'><p>&mdash;</p></div>", // pop field
+	CC += "</div>"; // close topbar
+	// STEP 7: EXPERIENCES AND DESCRIPTION
+	CC += "<h3 id='cc-step-7'><span class='h6'>Step 7:</span> Experiences and Description<a class='og-h-anchor' href='#cc-step-7' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<div class='row'>"; // open row
+	CC += "<div class='col-12 col-md-6'>"; // open col
+	CC += "<h4 class='og-tab'>Experiences</h4>";
+	CC += "<div id='ccClassQualities'><p>&mdash;</p></div>"
+	CC += getCCnote("Create two <a href='#define-experience'>Experiences</a> that evoke your personality traits, aptitudes, or life lessons you've learned. You can use these examples, or create your own experiences with the GM.</p>");
+	CC += "<ul class='list-unstyled'>";
+	CC += "<li class='h6'>First Experience +2</li>";
+	CC += "<li class='h6 mt-3'>Second Experience +2</li>";
+	CC += "</ul>";
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseExperienceList'>Example Experiences:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseExperienceList'>"; // id
+	CC += "<option id='ccChooseExp-0' value='0'>Backgrounds</option>";
+	CC += "<option id='ccChooseExp-1' value='1'>Characteristics</option>";
+	CC += "<option id='ccChooseExp-2' value='2'>Specialties</option>";
+	CC += "<option id='ccChooseExp-3' value='3'>Skills</option>";
+	CC += "<option id='ccChooseExp-4' value='4'>Phrases</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div id='ccPrintExperienceList'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close col
+	CC += "<div class='col-12 col-md-6'>"; // open col
+	CC += "<h4 class='og-tab'>Description</h4>";
+	CC += getCCnote("Choose a <strong>name</strong>, <strong>pronouns</strong>, and <strong>description</strong> for your character. You can use these suggestions to describe your character, or come up with your own.");
+	CC += "<div class='row'>"; //open row (sub)
+	CC += "<div class='col-6'>"; // open col (sub)
+	CC += "<h5 class='h6'>Eyes</h5>";
+	CC += "<ul class='og-list-inline og-ref og-omit'><li>carnations</li><li>earth</li><li>endless ocean</li><li>fire</li><li>ivy</li><li>lilacs</li><li>night</li><li>seafoam</li><li>winter</li></ul>";
+	CC += "<h5 class='h6'>Body</h5>";
+	CC += "<ul class='og-list-inline og-ref og-omit'><li>broad</li><li>carved</li><li>curvy</li><li>lanky</li><li>rotund</li><li>short</li><li>stocky</li><li>tall</li><li>thin</li><li>tiny</li><li>toned</li></ul>";
+	CC += "<h5 class='h6'>Skin</h5>";
+	CC += "<ul class='og-list-inline og-ref og-omit'><li>ashes</li><li>clover</li><li>falling snow</li><li>fine sand</li><li>obsidian</li><li>rose</li><li>sapphire</li><li>wisteria</li></ul>";
+	CC += "</div>"; // close  col (sub)
+	CC += "<div class='col-6'>"; // open col (sub)
+	CC += "<div id='ccClassClothes'><p>&mdash;</p></div>"
+	CC += "<div id='ccClassAttitudes'><p>&mdash;</p></div>"
+	CC += "</div>"; // close  col (sub)
+	CC += "</div>"; // close row (sub)
+	CC += "</div>"; // close col
+	CC += "</div>"; // close row
+	CC += "</div>"; // close topbar
+	// STEP 8: BACKGROUND AND CONNECTIONS
+	CC += "<h3 id='cc-step-8'><span class='h6'>Step 7:</span> Background and Connections<a class='og-h-anchor' href='#cc-step-8' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<div class='row'>"; // open row
+	CC += "<div class='col-12 col-md-6'>"; // open col
+	CC += "<h4 class='og-tab'>Background</h4>";
+	CC += "<div id='ccClassBackground'><p>&mdash;</div>"; // pop field
+	CC += "</div>"; // close col
+	CC += "<div class='col-12 col-md-6'>"; // open col
+	CC += "<h4 class='og-tab'>Connections</h4>";
+	CC += "<div id='ccClassConnection'><p>&mdash;</div>"; // pop field
+	CC += "</div>"; // close col
+	CC += "</div>"; // close row
+	CC += "</div>"; // close topbar
+	CC += "<hr>"; // divide and continue to printing classes
+	// print it
+	document.getElementById("printCC").innerHTML = CC;
+};
+function ccChooseClass() {
+	ccUserClass = document.getElementById("ccChooseClass").value;
+	let cDetail = "";
+	// print class foundations
+	cDetail += "<div class='ps-2 pe-2'>"
+	cDetail += "<p class='og-questions small'>" + linkClass(classList[ccUserClass].summarybrief) + "</p>";
+	cDetail += "<h5 class='h6'>" + classList[ccUserClass].name + "'s Hope Feature</h5>";
+	cDetail += "<ul class='list-unstyled'><li>" + classList[ccUserClass].hopefeature + "</li></ul>";
+	cDetail += "<h5 class='h6'>Class Feature";
+	if (classList[ccUserClass].features.length > 1) {
+		cDetail += "s";
+	}
+	cDetail += "</h5>";
+	cDetail += "<ul class='list-unstyled'>";
+	for (let f = 0; f < classList[ccUserClass].features.length; f++) {
+		cDetail +=  "<li>" + classList[ccUserClass].features[f] + "</li>";
+	}
+	cDetail += "</ul>";
+	cDetail += "</div>";
+	document.getElementById("ccClass").innerHTML = cDetail;
+	// set subclass options and populate
+	let sOptions = "";
+	for (let i = 0; i < classList[ccUserClass].subclasses.length; i++) {
+		sOptions += "<option value='" + i + "'>" + classList[ccUserClass].subclasses[i] + "</option>";
+	}
+	document.getElementById("ccChooseSubclass").innerHTML = sOptions;
+	// run subclass
+	ccChooseSubclass();
+};
+function ccChooseSubclass() {
+	let s = document.getElementById("ccChooseSubclass").value;
+	let sDetail = "";
+	sDetail += "<div class='ps-2 pe-2'>";
+	for (let i = 0; i < subclassList.length; i++) {
+		if (classList[ccUserClass].subclasses[s] == subclassList[i].label ) {
+			ccUserSubclass = i; // record confirmed selection
+			sDetail += "<p class='og-questions small'>" + subclassList[i].summarybrief + "</p>";
+			for (let t = 0; t < traitList.length; t++) {
+				if ( subclassList[i].spellcast == traitList[t].label ) {
+					sDetail += "<h6>Spellcast Trait</h6>";
+					sDetail += "<p>" + linkTrait(subclassList[i].spellcast) + "</p>";
+				}
+			}
+			sDetail += "<h6>Foundation Feature";
+			if (subclassList[i].foundation.length > 1) {
+				sDetail += "s";
+			}
+			sDetail += "</h6>";
+			sDetail += "<ul class='list-unstyled'>";
+			for (let ff = 0; ff < subclassList[i].foundation.length; ff++) {
+				sDetail += "<li>" + subclassList[i].foundation[ff] + "</li>";
+			}
+			sDetail += "</ul>";
+		}
+	}
+	sDetail += "</div";
+	document.getElementById("ccSubclass").innerHTML = sDetail;
+	// suggest traits
+	let tArray = "";
+	tArray += "<h4 class='og-tab'>" + classList[ccUserClass].label + " Traits</h4>";
+	tArray += getCCnote("<a href='#define-trait'>Traits</a> represent your physical, mental, and social aptitudes. You can use the following suggestions, or assign each trait's <a href='#define-procedure'>modifier</a> as you choose.");
+	tArray += "<div class='row'>"; // open row
+	for (let i = 0; i < traitList.length; i++) {
+		tArray += "<div class='col-12 col-md-6 col-lg-4'>";
+		tArray += "<h5 class='h6'>" + linkTrait(traitList[i].label) + "&nbsp;&nbsp;" + classList[ccUserClass].traitarray[i] + "</h5>";
+		tArray += "<p class='og-questions small'>";
+		if (traitList[i].label == subclassList[ccUserSubclass].spellcast) {
+			tArray += "<a href='#define-spellcast-roll'>Spellcast Rolls</a>, ";
+		}
+		tArray += traitList[i].actions + "</p>";
+		tArray += "</div>";
+	}
+	tArray += "</div>"; // close row
+	document.getElementById("ccChooseTraits").innerHTML = tArray;
+	// populate primary weapon options
+	let wOptionsPrimary = "";
+	for (let i = 0; i < weaponprimaryList.length; i++) {
+		// abbreviate burden
+		let b = weaponprimaryList[i].burden;
+		if (b == "One-Handed") { b = "1H"; }
+		else if (b == "Two-Handed") { b = "2H"; }
+		// list tier 1 primary weapons
+		if (weaponprimaryList[i].tier == 1 && weaponprimaryList[i].magic == false) {
+			wOptionsPrimary += "<option value='" + i + "'>" + weaponprimaryList[i].label + " &mdash; " + b;
+			// note suggestion
+			if (weaponprimaryList[i].label == classList[ccUserClass].weaponprimary) {
+				wOptionsPrimary += " (Suggested)</option>";
+			}
+			wOptionsPrimary += "</option>";
+		}
+		// display magic weapons for spellcasters
+		if (subclassList[ccUserSubclass].spellcast != "" && weaponprimaryList[i].tier == 1 && weaponprimaryList[i].magic == true) {
+			wOptionsPrimary += "<option value='" + i + "'>" + weaponprimaryList[i].label + " &mdash; Magic, " + b;
+			// note suggestion
+			if (weaponprimaryList[i].label == classList[ccUserClass].weaponprimary) {
+				wOptionsPrimary += " (Suggested)</option>";
+			}
+			wOptionsPrimary += "</option>";
+		}
+	}
+	if (classList[ccUserClass].spellcast == "") {
+		document.getElementById("ccWeaponMagic").innerHTML = "<p>Your " + linkSubclass(ccUserSubclass) + " does't have a Spellcast trait, which are required to .</p>";
+	
+	}
+	document.getElementById("ccChooseWeaponPrimary").innerHTML = wOptionsPrimary;
+	// populate secondary weapon options
+	let wOptionsSecondary = "";
+	for (let i = 0; i < weaponsecondaryList.length; i++) {
+		if (weaponsecondaryList[i].tier == 1) {
+			wOptionsSecondary += "<option value='" + i + "'>" + weaponsecondaryList[i].label;
+			// note suggestion
+			if (weaponsecondaryList[i].label == classList[ccUserClass].weaponsecondary) {
+				wOptionsSecondary += " (Suggested)";
+			}
+			wOptionsSecondary += "</option>";
+		}
+	}
+	document.getElementById("ccChooseWeaponSecondary").innerHTML = wOptionsSecondary;
+	// populate armor options
+	let aOptions = "";
+	for (let i = 0; i < armorList.length; i++) {
+		if (armorList[i].tier == 1) {
+			aOptions += "<option value='" + i + "'>" + armorList[i].label;
+			// note suggestion
+			if (armorList[i].label == classList[ccUserClass].armor) {
+				aOptions += " (Suggested)";
+			}
+			aOptions += "</option>";
+		}
+	}
+	document.getElementById("ccChooseArmor").innerHTML = aOptions;
+	// preselect suggested primary weapon
+	for (let i = 0; i < weaponprimaryList.length; i++) {
+		if (classList[ccUserClass].weaponprimary == weaponprimaryList[i].label) {
+			document.getElementById("ccChooseWeaponPrimary").value = i;
+		}
+	}
+	ccChooseWeapon(1);
+	// if secondary weapon is suggested, preselect it
+	if (classList[ccUserClass].weaponsecondary != "") {
+		for (let s = 0; s < weaponsecondaryList.length; s++) {
+			if (classList[ccUserClass].weaponsecondary == weaponsecondaryList[s].label) {
+					document.getElementById("ccChooseWeaponSecondary").value = s;
+			}
+		}
+		ccChooseWeapon(2);
+	}
+	// preselect suggested armor
+	for (let i = 0; i < armorList.length; i++) {
+		if (classList[ccUserClass].armor == armorList[i].label) {
+			document.getElementById("ccChooseArmor").value = i;
+		}
+	}
+	ccChooseArmor();
+	// populate class item
+	let classItem = "";
+	classItem += "<h5 class='h6'>" + classList[ccUserClass].label + " Item</h5>";
+	classItem += "<p>" + classList[ccUserClass].items + "</p>"; // pop id
+	document.getElementById("ccUserClassItem").innerHTML = classItem;
+	// populate class domains
+	let classDomains ="";
+	classDomains += "Your " + linkClass(classList[ccUserClass].label) + " class provides access to two <a href='#define-domain'>domains</a>: ";
+	for (let i = 0; i < classList[ccUserClass].domains.length; i++) {
+		for (let d = 0; d < domainList.length; d++) {
+			if ( classList[ccUserClass].domains[i] ==  domainList[d].label ) {
+				classDomains += " " + domainList[d].summarybrief;
+			}
+		}
+	}
+	classDomains = getCCnote(classDomains);
+	document.getElementById("ccUserDomainCardOptions").innerHTML = classDomains;
+	// adjust layout for third domain card
+	if (subclassList[ccUserSubclass].label == "School of Knowledge") {
+		document.getElementById("ccDomainCard1Display").classList.remove("col-md-6");
+		document.getElementById("ccDomainCard1Display").classList.add("col-md-4");
+		document.getElementById("ccDomainCard2Display").classList.remove("col-md-6");
+		document.getElementById("ccDomainCard2Display").classList.add("col-md-4");
+		document.getElementById("ccDomainCard3Display").classList.remove("d-none");
+		document.getElementById("ccUserDomainCardBonus").innerHTML = getCCnote("Your " + linkSubclass(subclassList[ccUserSubclass].label) + " subclass' <strong>Prepared</strong> feature grants you the choice of a third domain card.");
+	}
+	else { 
+		document.getElementById("ccDomainCard1Display").classList.remove("col-md-4");
+		document.getElementById("ccDomainCard1Display").classList.add("col-md-6");
+		document.getElementById("ccDomainCard2Display").classList.remove("col-md-4");
+		document.getElementById("ccDomainCard2Display").classList.add("col-md-6");
+		document.getElementById("ccDomainCard3Display").classList.add("d-none");
+		document.getElementById("ccUserDomainCardBonus").innerHTML = "";
+	}
+	// store domain card options
+	let classDeck = 0;
+	for (let d = 0; d < classList[ccUserClass].domains.length; d++) {
+		for (let i = 0; i < domaincardList.length; i++) {
+			if (domaincardList[i].level == 1 && domaincardList[i].domain == classList[ccUserClass].domains[d]) {
+				ccUserClassDeck[classDeck] = i;
+				classDeck++;
+			}
+		}
+	}
+	// populate domain card selections
+	let cardOptions = "";
+	for (let c = 1; c < 4; c++) {
+		cardOptions = "";
+		for (let d = 0; d < classList[ccUserClass].domains.length; d++) {
+			cardOptions += "<optgroup label='" + classList[ccUserClass].domains[d] + " Domain'>";
+			for (let i = 0; i < ccUserClassDeck.length; i++) {
+				if (classList[ccUserClass].domains[d] == domaincardList[ccUserClassDeck[i]].domain) {
+					cardOptions += "<option id='ccCardSelect" + (c) + "-" + ccUserClassDeck[i] + "' value=" + ccUserClassDeck[i] + ">" + domaincardList[ccUserClassDeck[i]].label + "</option>";
+				}
+			}
+			cardOptions += "</optgroup>";
+			document.getElementById("ccChooseDomainCard" + c).innerHTML = cardOptions;
+		}
+	}
+	// preselect cards
+	document.getElementById("ccChooseDomainCard1").value = ccUserClassDeck[0];
+	document.getElementById("ccChooseDomainCard2").value = ccUserClassDeck[3];
+	document.getElementById("ccChooseDomainCard3").value = ccUserClassDeck[2];
+	ccChooseDomainCard1();
+	document.getElementById("ccClassQualities").innerHTML = getCCnote(classList[ccUserClass].qualities);
+	// background questions
+	ccPrintBackgroundQuestions();
+	// clothes
+	let classDrip = "";
+	classDrip += "<h5 class='h6'>" + classList[ccUserClass].label + " Clothes</h5>";
+	classDrip += "<ul class='og-list-inline og-ref og-omit'>";
+
+	for (let i = 0; i < classList[ccUserClass].clothes.length; i++) {
+		classDrip += "<li>" + classList[ccUserClass].clothes[i] +  "</li>";
+	}
+	classDrip += "</ul>";
+	document.getElementById("ccClassClothes").innerHTML = classDrip;
+	// attitudes
+	let classTudes = "";
+	classTudes += "<h5 class='h6'>" + classList[ccUserClass].label + " Attitudes</h5>";
+	classTudes += "<ul class='og-list-inline og-ref og-omit'>";
+
+	for (let i = 0; i < classList[ccUserClass].attitudes.length; i++) {
+		classTudes += "<li>" + classList[ccUserClass].attitudes[i] +  "</li>";
+	}
+	classTudes += "</ul>";
+	document.getElementById("ccClassAttitudes").innerHTML = classTudes;
+};
+function ccChooseAncestry() {
+	let a = document.getElementById("ccChooseAncestry").value;
+	ccUserAncestry = a;
+	let aDetail = "";
+	if (a == ancestryList.length) {
+		document.getElementById("ccMixedAncestryOptions").classList.remove('d-none');
+		document.getElementById("ccMixedAncestryChoices").classList.remove('d-none');
+	}
+	else {
+		document.getElementById("ccMixedAncestryOptions").classList.add('d-none');
+		document.getElementById("ccMixedAncestryChoices").classList.add('d-none');
+		// print ancestry features
+		aDetail += "<p class='og-questions small'>" + linkClass(ancestryList[a].summarybrief) + "</p>";
+		aDetail += "<h5 class='h6'>Ancestry Features</h6>";
+		aDetail += "<ul class='list-unstyled'>";
+		for (let i = 0; i < ancestryList[a].features.length; i++) {
+			aDetail += "<li>" + ancestryList[a].features[i] + "</li>";
+		}
+		aDetail += "</ul>";
+	}
+	document.getElementById("ccAncestry").innerHTML = aDetail;
+	ccPrintAdditionalStatistics();
+	ccPrintBackgroundQuestions();
+};
+function ccChooseAncestryMixed1 () {
+	let mFeat = document.getElementById("ccChooseAncestryMixed1").value;
+	document.getElementById("ccAncestryMixed1").innerHTML = ancestryList[mFeat].features[0];
+	ccUserAncestryMixed1 = mFeat;
+	ccPrintAdditionalStatistics();
+};
+function ccChooseAncestryMixed2 () {
+	ccUserAncestryMixed2 = document.getElementById("ccChooseAncestryMixed2").value;
+	document.getElementById("ccAncestryMixed2").innerHTML = ancestryList[ccUserAncestryMixed2].features[1];
+	ccPrintAdditionalStatistics();
+};
+function ccChooseCommunity() {
+	ccUserCommunity = document.getElementById("ccChooseCommunity").value;
+	let cDetail = "";
+	cDetail += "<p class='og-questions small'>" + communityList[ccUserCommunity].summarybrief + " " + communityList[ccUserCommunity].roleplay + "</p>";
+	cDetail += "<h5 class='h6'>Community Feature</h6>";
+	cDetail += "<ul class='list-unstyled'>";
+	cDetail += "<li>" + communityList[ccUserCommunity].feature + "</li>";
+	cDetail += "</ul>";
+	document.getElementById("ccCommunity").innerHTML = cDetail;
+	ccPrintBackgroundQuestions();
+};
+function ccChooseWeapon(x) {
+	// primary
+	if (x == 1) { 
+		ccUserWeaponPrimary = document.getElementById("ccChooseWeaponPrimary").value; 
+		// show or hide second field
+		if (weaponprimaryList[ccUserWeaponPrimary].burden == "Two-Handed") { 
+			document.getElementById("ccChooseWeaponSecondarySelect").classList.add('d-none'); 
+			document.getElementById("ccWeaponSecondary").classList.add('d-none'); 
+		}
+		else { 
+			document.getElementById("ccChooseWeaponSecondarySelect").classList.remove('d-none'); 
+			document.getElementById("ccWeaponSecondary").classList.remove('d-none'); 
+		}
+		// details
+		let pWep = "";
+		pWep += "<ul class='og-list-inline'>";
+		pWep += "<li class='pb-1'><strong>Trait:</strong> " + linkTrait(weaponprimaryList[ccUserWeaponPrimary].trait) + "</li>";
+		pWep += "<li class='pb-1'><strong>Range:</strong> <a href='#define-range'>" + weaponprimaryList[ccUserWeaponPrimary].range + "</a></li>";
+		pWep += "<li class='pb-1'><strong>Damage:</strong> <a href='#define-damage-roll'>" + weaponprimaryList[ccUserWeaponPrimary].damage + "</a> <a href='#define-damage-type'>" + weaponprimaryList[ccUserWeaponPrimary].damagetype + "</a></li>";
+		if (weaponprimaryList[ccUserWeaponPrimary].feature != "") {
+			pWep += "<li class='pb-1'><strong>Feature:</strong> <span class='og-divider d-inline og-wrap'>" + weaponprimaryList[ccUserWeaponPrimary].feature + "</span></li>";
+		}
+		pWep += "</ul>";
+		document.getElementById("ccWeaponPrimary").innerHTML = pWep;
+	}
+	// secondary
+	else if (x == 2) { 
+		ccUserWeaponSecondary = document.getElementById("ccChooseWeaponSecondary").value;
+		//
+		// details
+		let sWep = "";
+		sWep += "<ul class='og-list-inline'>";
+		sWep += "<li class='pb-1'><strong>Trait:</strong> " + linkTrait(weaponsecondaryList[ccUserWeaponSecondary].trait) + "</li>";
+		sWep += "<li class='pb-1'><strong>Range:</strong> <a href='#define-range'>" + weaponsecondaryList[ccUserWeaponSecondary].range + "</a></li>";
+		sWep += "<li class='pb-1'><strong>Damage:</strong> <a href='#define-damage-roll'>" + weaponsecondaryList[ccUserWeaponSecondary].damage + "</a> <a href='#define-damage-type'>" + weaponsecondaryList[ccUserWeaponSecondary].damagetype + "</a></li>";
+		if (weaponsecondaryList[ccUserWeaponSecondary].feature != "") {
+			sWep += "<li class='pb-1'><strong>Feature:</strong> <span class='og-divider d-inline og-wrap'>" + weaponsecondaryList[ccUserWeaponSecondary].feature + "</span></li>";
+		}
+		sWep += "</ul>";
+		document.getElementById("ccWeaponSecondary").innerHTML = sWep;
+	}
+	ccPrintAdditionalStatistics();
+	refreshTooltips();
+};
+function ccChooseArmor() {
+	ccUserArmor = document.getElementById("ccChooseArmor").value; 
+	let armor = "";
+	armor += "<ul class='og-list-inline'>";
+	armor += "<li class='pb-1'><strong>Base Score:</strong> " + armorList[ccUserArmor].score + "</li>";
+	armor += "<li class='pb-1'><strong>Base Thresholds:</strong> " + armorList[ccUserArmor].thresholdmajor + "/" + armorList[ccUserArmor].thresholdsevere + "</li>";
+	if (armorList[ccUserArmor].feature != "") {
+		armor += "<li class='pb-1'><strong>Feature:</strong> <span class='og-divider'>" + armorList[ccUserArmor].feature + "</span></li>";
+	}
+	armor += "</ul>";
+	document.getElementById("ccArmor").innerHTML = armor;
+	ccPrintAdditionalStatistics();
+};
+function ccChooseConsumable() {
+	ccUserConsumable = document.getElementById("ccChooseConsumable").value;
+	document.getElementById("ccConsumable").innerHTML = "<strong><em>" + consumableList[ccUserConsumable].label + ":</em></strong> " + consumableList[ccUserConsumable].feature;
+	refreshTooltips();
+};
+function ccChooseDomainCard1() {
+	ccUserDomainCard1 = document.getElementById("ccChooseDomainCard1").value;
+	document.getElementById("ccDomainCard1").innerHTML = ccPrintDomainCard(ccUserDomainCard1);
+	// clear any disabled selections
+	for (let i = 0; i < ccUserClassDeck.length; i++) {
+		document.getElementById("ccChooseDomainCard2").options["ccCardSelect2-" + ccUserClassDeck[i]].disabled = false;
+		document.getElementById("ccChooseDomainCard3").options["ccCardSelect3-" + ccUserClassDeck[i]].disabled = false;
+	}
+	// check domain card 2
+	if (ccUserDomainCard1 == ccUserDomainCard2) {
+		for (let d = 0; d < ccUserClassDeck.length; d++) {
+			ccUserClassDeck[i] == ccUserClassDeck.indexOf(ccUserDomainCard1);
+			if (ccUserClassDeck[d] != ccUserDomainCard2) {
+				document.getElementById("ccChooseDomainCard2").value = ccUserClassDeck[d];
+			}
+		}
+	}
+	// check domain card 3, replace if duplicate
+	if (ccUserDomainCard1 == ccUserDomainCard3) {
+		for (let d = 0; d < ccUserClassDeck.length; d++) {
+			ccUserClassDeck[i] == ccUserClassDeck.indexOf(ccUserDomainCard1);
+			if (ccUserClassDeck[d] != ccUserDomainCard2) {
+				document.getElementById("ccChooseDomainCard3").value = ccUserClassDeck[d];
+			}
+		}
+	}
+	// set disabled selections
+	document.getElementById("ccChooseDomainCard2").options["ccCardSelect2-" + ccUserDomainCard1].disabled = true;
+	ccChooseDomainCard2();
+};
+function ccChooseDomainCard2() {
+	ccUserDomainCard2 = document.getElementById("ccChooseDomainCard2").value;
+	document.getElementById("ccDomainCard2").innerHTML = ccPrintDomainCard(ccUserDomainCard2);
+	// clear any disabled selections
+	for (let i = 0; i < ccUserClassDeck.length; i++) {
+		document.getElementById("ccChooseDomainCard3").options["ccCardSelect3-" + ccUserClassDeck[i]].disabled = false;
+	}
+	// check domain card 3, replace if duplicate
+	if (ccUserDomainCard1 == ccUserDomainCard3 || ccUserDomainCard2 == ccUserDomainCard3) {
+		for (let d = 0; d < ccUserClassDeck.length; d++) {
+			ccUserClassDeck[i] == ccUserClassDeck.indexOf(ccUserDomainCard1);
+			if (ccUserClassDeck[d] != ccUserDomainCard1 && ccUserClassDeck[d] != ccUserDomainCard2) {
+				document.getElementById("ccChooseDomainCard3").value = ccUserClassDeck[d];
+			}
+		}
+	}
+	// set disabled selections
+	document.getElementById("ccChooseDomainCard3").options["ccCardSelect3-" + ccUserDomainCard1].disabled = true;
+	document.getElementById("ccChooseDomainCard3").options["ccCardSelect3-" + ccUserDomainCard2].disabled = true;
+	ccChooseDomainCard3();
+	refreshTooltips();
+};
+function ccChooseDomainCard3() {
+	ccUserDomainCard3 = document.getElementById("ccChooseDomainCard3").value;
+	document.getElementById("ccDomainCard3").innerHTML = ccPrintDomainCard(ccUserDomainCard3);
+};
+function ccPrintDomainCard(x) {
+	// determine domain id for themeing
+	let theme = "";
+	for (i = 0; i < domainList.length; i++) { 
+		if (domaincardList[x].domain == domainList[i].label) { 
+			theme = domainList[i].name;
+		}
+	}
+	// return domain card
+	let dc = "";
+	dc += "<div class='og-theme-" + theme + "'>";
+	dc += "<div class='og-statblock'>";
+	dc += "<div class='og-domain og-domain-" + theme + "'>";
+	dc += "<h6 class='og-tab'>" + domaincardList[x].label + "</h6>"
+	dc += "<ul class='og-list-inline og-ref og-omit'>";
+	dc += "<li>" + classList[ccUserClass].label + "</li>";
+	if ((domaincardList[x].type == "Spell" || domaincardList[x].type == "Grimoire" )) {
+		dc += "<li>Spellcast: " + linkTrait(subclassList[ccUserSubclass].spellcast); + "</li>";
+	}
+	dc += "</ul>"
+	dc += "<ul class='list-unstyled fw-bold'><li>Level " + domaincardList[x].level + " " + linkDomain(domaincardList[x].domain) + " <a href='#define-domain-card'>" + domaincardList[x].type + "</a></li><li>Recall Cost: " + domaincardList[x].recall + "<span class='og-recall' aria-hidden='true'>&#9889;</span></strong></li></ul>";
+	dc += domaincardList[x].effects;
+	dc += "</div>";
+	dc += "</div>";
+	dc += "</div>";
+	return dc;
+};
+function ccPrintAdditionalStatistics() {
+	let userStats = "";
+	userStats += "<div class='row'>"; // open row
+	userStats += "<div class='col-12 col-md-6 col-lg-3'>"; // open col
+	// print level
+	userStats += "<h5 class='h6'><a href='#define-level'>Level</a>&nbsp;&nbsp;" + 1 + "</h5>";
+	userStats += getCCnote("As you gain levels, you'll reach higher <a href='#define-tier'>tiers</a> and choose <a href='#define-advancement'>advancements</a>.");
+	// calculate evasion
+	let userEvasion = classList[ccUserClass].evasion;
+	let userEvasionBonus = 0;
+	// record evasion modifiers
+	let eMods = "";
+	eMods += "<ul class='og-list-inline og-ref og-omit'>";
+	eMods += "<li>" + linkClass(classList[ccUserClass].label) + ": " + classList[ccUserClass].evasion + "</li>";
+	// evasion modifiers, ancestry
+	if (ccUserAncestry == ancestryList.length && ancestryList[ccUserAncestryMixed2].label == "Simiah") {
+		userEvasionBonus = userEvasionBonus +1;
+		eMods += "<li><a href='#define-mixed-ancestry'>Mixed Ancestry</a> (" + ancestryList[ccUserAncestryMixed2].featurelabel[1] + "): +1</li>";
+	}
+	else if (ccUserAncestry < ancestryList.length && ancestryList[ccUserAncestry].label == "Simiah") {
+		userEvasionBonus = userEvasionBonus +1;
+		eMods += "<li>" + linkAncestry("Simiah") + " (" + ancestryList[ccUserAncestry].featurelabel[1] + "): +1</li>";
+	}
+	// evasion modifiers, equipment
+	if (weaponprimaryList[ccUserWeaponPrimary].label == "Greatsword") {
+		userEvasionBonus = userEvasionBonus -1;
+		eMods += "<li>Greatsword (Massive): &minus;1</li>";
+	}
+	// evasion modifiers, equipment
+	if (weaponprimaryList[ccUserWeaponPrimary].label == "Warhammer") {
+		userEvasionBonus = userEvasionBonus -1;
+		eMods += "<li>Warhammer (Heavy): &minus;1</li>";
+	}
+	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed" && weaponsecondaryList[ccUserWeaponSecondary].label == "Tower Shield") {
+		userEvasionBonus = userEvasionBonus -1;
+		eMods += "<li>Tower Shield (Barrier): &minus;1</li>";
+	}
+	if (armorList[ccUserArmor].label == "Gambeson Armor") {
+		userEvasionBonus = userEvasionBonus +1;
+		eMods += "<li>Gambeson Armor (Flexible): +1</li>";
+	}
+	if (armorList[ccUserArmor].label == "Chainmail Armor") {
+		userEvasionBonus = userEvasionBonus -1;
+		eMods += "<li>Chainmail Armor (Heavy): &minus;1</li>";
+	}
+	if (armorList[ccUserArmor].label == "Full Plate Armor") {
+		userEvasionBonus = userEvasionBonus -2;
+		eMods += "<li>Full Plate Armor (Very Heavy): &minus;2</li>";
+	}
+	eMods += "</ul>";
+	// print evasion
+	userStats += "<h5 class='h6'><a href='#define-evasion'>Evasion</a>&nbsp;&nbsp;" + (userEvasion + userEvasionBonus) + "</h5>";
+	userStats += eMods;
+	userStats += "</div>"; // close col
+	userStats += "<div class='col-6 col-lg-3'>"; // open col
+	// calculate armor
+	let userArmor = armorList[ccUserArmor].score;
+	let userArmorBonus = 0;
+	// record armor modifiers
+	let aMods = "";
+	aMods += "<ul class='og-list-inline og-ref og-omit'>";
+	aMods += "<li>" + armorList[ccUserArmor].label + ": " + armorList[ccUserArmor].score + "</li>";
+	// armor modifiers, equipment
+	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed" && weaponsecondaryList[ccUserWeaponSecondary].label == "Round Shield") {
+		userArmorBonus = userArmorBonus +1;
+		aMods += "<li>Round Shield (Protective): +1</li>";
+	}
+	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed" && weaponsecondaryList[ccUserWeaponSecondary].label == "Tower Shield") {
+		userArmorBonus = userArmorBonus +2;
+		aMods += "<li>Tower Shield (Barrier): +2</li>";
+	}
+	aMods += "</ul>";
+	// print armor
+	userStats += "<h5 class='h6'><a href='#define-armor'>Armor</a>&nbsp;&nbsp;" + (userArmor + userArmorBonus) + "</h5>";
+	userStats += aMods;
+	// calculate thresholds
+	let userThresholdBonus = 0;
+	// record threshold modifiers
+	let tMods = "";
+	tMods += "<ul class='og-list-inline og-ref og-omit'>";
+	// threshold modifiers, armor and level
+	tMods += "<li>" + armorList[ccUserArmor].label + ": " + armorList[ccUserArmor].thresholdmajor + "/" + armorList[ccUserArmor].thresholdsevere + "</li>";
+	userThresholdBonus = userThresholdBonus +1;
+	tMods += "<li>Level: +1/+1</li>";
+	// threshold modifiers, subclass
+	if (subclassList[ccUserSubclass].label == "Stalwart") {
+		userThresholdBonus = userThresholdBonus +1;
+		tMods += "<li>" +  linkSubclass("Stalwart") + " (Unwavering): +1/+1</li>";
+	}
+	// threshold modifiers, ancestry
+	if (ccUserAncestry == ancestryList.length && ancestryList[ccUserAncestryMixed1].label == "Galapa") {
+		userThresholdBonus = userThresholdBonus +1;
+		tMods += "<li><a href='#define-mixed-ancestry'>Mixed Ancestry</a> (" + ancestryList[ccUserAncestryMixed1].featurelabel[0] + "): +1/+1</li>";
+	}
+	else if (ccUserAncestry < ancestryList.length && ancestryList[ccUserAncestry].label == "Galapa") {
+		userThresholdBonus = userThresholdBonus +1;
+		tMods += "<li>" + linkAncestry("Galapa") + " (" + ancestryList[ccUserAncestry].featurelabel[0] + "): +1/+1</li>";
+	}
+	tMods += "</ul>";
+	// thresholds
+	// print thresholds
+	userStats += "<h5 class='h6'><a href='#define-hit-point'>Thresholds</a>&nbsp;&nbsp;" + (armorList[ccUserArmor].thresholdmajor + userThresholdBonus) + "/" + (armorList[ccUserArmor].thresholdsevere + userThresholdBonus) + "</h5>";
+	userStats += tMods;
+	userStats += "</div>"; // close col
+	userStats += "<div class='col-6 col-lg-3'>"; // open col
+	// hit points
+	let userHP = classList[ccUserClass].hp;
+	let userHPBonus = 0;
+	hpMods = "";
+	hpMods += "<ul class='og-list-inline og-ref og-omit'>";
+	// hp modifiers, subclass
+	hpMods += "<li>" +  linkClass(classList[ccUserClass].label) + ": " + userHP + "</li>";
+	if (subclassList[ccUserSubclass].label == "School of War") {
+		userHPBonus = userHPBonus +1;
+		hpMods += "<li>" +  linkSubclass("School of War") + " (Battlemage): +1</li>";
+	}
+	// hp modifiers, ancestry
+	if (ccUserAncestry == ancestryList.length && ancestryList[ccUserAncestryMixed1].label == "Giant") {
+		userHPBonus = userHPBonus +1;
+		hpMods += "<li><a href='#define-mixed-ancestry'>Mixed Ancestry</a> (" + ancestryList[ccUserAncestryMixed1].featurelabel[0] + "): +1</li>";
+	}
+	else if (ccUserAncestry < ancestryList.length && ancestryList[ccUserAncestry].label == "Giant") {
+		userHPBonus = userHPBonus +1;
+		hpMods += "<li>" + linkAncestry("Giant") + " (" + ancestryList[ccUserAncestry].featurelabel[0] + "): +1</li>";
+	}
+	hpMods += "</ul>";
+	// print hp
+	userStats += "<h5 class='h6'><a href='#define-hit-point'>Hit Points</a>&nbsp;&nbsp;" + (userHP + userHPBonus) + "</h5>";
+	userStats += hpMods;
+	// stress
+	let userStress = classList[ccUserClass].hp;
+	let userStressBonus = 0;
+	stressMods = "";
+	stressMods += "<ul class='og-list-inline og-ref og-omit'>";
+	// stress modifiers, subclass
+	userStress = 6 // set base
+	stressMods += "<li>Base: 6</li>";
+	if (subclassList[ccUserSubclass].label == "Vengeance") {
+		userStressBonus = userStressBonus +1;
+		stressMods += "<li>" +  linkSubclass("Vengeance") + " (At Ease): +1</li>";
+	}
+	// stress modifiers, ancestry
+	if (ccUserAncestry == ancestryList.length && ancestryList[ccUserAncestryMixed1].label == "Human") {
+		userStressBonus = userStressBonus +1;
+		stressMods += "<li><a href='#define-mixed-ancestry'>Mixed Ancestry</a> (" + ancestryList[ccUserAncestryMixed1].featurelabel[0] + "): +1</li>";
+	}
+	else if (ccUserAncestry < ancestryList.length && ancestryList[ccUserAncestry].label == "Human") {
+		userStressBonus = userStressBonus +1;
+		stressMods += "<li>" + linkAncestry("Human") + " (" + ancestryList[ccUserAncestry].featurelabel[0] + "): +1</li>";
+	}
+	stressMods += "</ul>";
+	userStats += "<h5 class='h6'><a href='#define-stress'>Stress</a>&nbsp;&nbsp;" + (userStress + userStressBonus) + "</h5>";
+	userStats += stressMods;
+	userStats += "</div>"; // close col
+	userStats += "<div class='col-6 col-lg-3'>"; // open col
+	// proficiency
+	userStats += "<h5 class='h6'><a href='#define-damage-roll'>Proficiency</a>&nbsp;&nbsp;" + 1 + "</h5>";
+	userStats += getCCnote("Proficiency determines <a href='damage-rolls'>damage rolls</a> and interacts with some features and <a href='#define-domain-card'>domain cards</a>.");
+	// hope
+	userStats += "<h5 class='h6'><a href='#define-hope'>Hope</a>&nbsp;&nbsp;" + 2 + "</h5>";
+	userStats += getCCnote("You'll gain more Hope in <a href='#define-flow-of-the-game'>flow of the game</a> and during <a href='#define-downtime'>downtime</a>.");
+	userStats += "</div>"; // close col
+	userStats += "</div>"; // close row
+	document.getElementById("ccPrintAdditionalStatistics").innerHTML = userStats;
+	refreshTooltips();
+};
+function ccPrintBackgroundQuestions() {
+	//background
+	let bgQ = "";
+	bgQ += getCCnote("Think about your unique <strong>Background</strong> as a " + linkCommunity(communityList[ccUserCommunity].label) + " " + linkAncestry(ancestryList[ccUserAncestry].label) + " " + linkSubclass(subclassList[ccUserSubclass].label) + " " + " " + linkClass(classList[ccUserClass].label) + ". Depending on the setting, the GM might ask different questions.");
+	bgQ += "<ul class='og-questions small'>";
+	for (i = 0; i < classList[ccUserClass].questions.length; i++) {
+		bgQ += "<li>" + classList[ccUserClass].questions[i] + "</li>";
+	}
+	bgQ += "</ul>";
+	document.getElementById("ccClassBackground").innerHTML = bgQ;
+	// connections
+	let cQ = "";
+	cQ += getCCnote("You can use these " + linkClass(classList[ccUserClass].label) + " questions to build connections with the other player characters, or come up with your own.");
+	cQ += "<ul class='og-questions small'>";
+	for (i = 0; i < classList[ccUserClass].connections.length; i++) {
+		cQ += "<li>" + classList[ccUserClass].connections[i] + "</li>";
+	}
+	cQ += "</ul>";
+	cQ += "";
+	document.getElementById("ccClassConnection").innerHTML = cQ;
+
+	refreshTooltips();
+}
+function ccPrintExperienceList() {
+	ccUserExperience1 = document.getElementById("ccChooseExperienceList").value;
+	let expList = "";
+	expList += "<ul class='og-list-inline og-ref og-omit'>";
+	if  (ccUserExperience1 == 0) { for (let i = 0; i < experiencesList[0].backgrounds.length; i++) { expList += "<li>" + experiencesList[0].backgrounds[i] + "</li>"; } }
+	else if  (ccUserExperience1 == 1) { for (let i = 0; i < experiencesList[0].characteristics.length; i++) { expList += "<li>" + experiencesList[0].characteristics[i] + "</li>"; } }
+	else if  (ccUserExperience1 == 2) { for (let i = 0; i < experiencesList[0].specialties.length; i++) { expList += "<li>" + experiencesList[0].specialties[i] + "</li>"; } }
+	else if  (ccUserExperience1 == 3) { for (let i = 0; i < experiencesList[0].skills.length; i++) { expList += "<li>" + experiencesList[0].skills[i] + "</li>"; } }
+	else if  (ccUserExperience1 == 4) { for (let i = 0; i < experiencesList[0].phrases.length; i++) { expList += "<li>" + experiencesList[0].phrases[i] + "</li>"; } }
+	expList += "</ul>";
+	document.getElementById("ccPrintExperienceList").innerHTML = expList;
 };
 // classes
 function printClasses() {
@@ -951,7 +1942,8 @@ function printClasses() {
 		let classRecord = "<div id='define-" + classList[i].name + "'>";
 		classRecord += "<h3 class='og-tab' id='" + classList[i].name + "'>" + classList[i].label + "<a class='og-h-anchor' href='#" + classList[i].name + "' title='Permalink' aria-hidden='true'></a></h3>";
 		classRecord += getReferences(classList[i].pages);
-		classRecord += classList[i].summary;
+		classRecord += "<p class='og-tooltip-block'>" + classList[i].summarybrief + "</p>";
+		classRecord += "<p class='og-omit'>" + classList[i].summary + "</p>";
 		classRecord += "<div class='og-topbar'><ul class='list-unstyled'>";
 		classRecord += "<li><strong>Domains:</strong> <ul class='d-inline og-list-inline'>";
 		for (let domainCount = 0; domainCount < classList[i].domains.length; domainCount++) {
@@ -979,7 +1971,7 @@ function printClasses() {
 		}
 		classRecord += "</ul>";
 		if (classList[i].sidebar != "") {
-			classRecord += "<div class='og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit'>" + classList[i].sidebar + "</div>";
+			classRecord += getSidebar(classList[i].sidebar);
 		}
 		classRecord += "</div>";
 		// subclasses
@@ -987,16 +1979,16 @@ function printClasses() {
 		classRecord += "<div class='row'>";
 		for (let subclassCount = 0; subclassCount < classList[i].subclasses.length; subclassCount++) {
 			for (let s = 0; s < subclassList.length; s++) {
-				if ( subclassList[s].label == classList[i].subclasses[subclassCount] ) {
+				if (subclassList[s].label == classList[i].subclasses[subclassCount]) {
 					classRecord += "<div class='col-12 col-md-6'>";
-					classRecord += "<div id='define-" + classList[i].name + "-" + subclassList[s].name + "'>";
-					classRecord += "<h5 class='og-tab' id='" + classList[i].name + "-" + subclassList[s].name + "'>" + subclassList[s].label +"<a class='og-h-anchor' href='#" + classList[i].name + "-" + subclassList[s].name + "' title='Permalink' aria-hidden='true'></a></h5>";
+					classRecord += "<div id='define-" + subclassList[s].name + "'>";
+					classRecord += "<h5 class='og-tab' id='" + subclassList[s].name + "'>" + subclassList[s].label +"<a class='og-h-anchor' href='#" + subclassList[s].name + "' title='Permalink' aria-hidden='true'></a></h5>";
 					classRecord += getReferences(subclassList[s].pages);
 					classRecord += "<p>" + subclassList[s].summary + "</p>";
 					for (let t = 0; t < traitList.length; t++) {
-						if ( subclassList[s].spellcast == traitList[t].label ) {
+						if (subclassList[s].spellcast == traitList[t].label) {
 							classRecord += "<h6>Spellcast Trait</h6>";
-							classRecord += "<p><a href='#define-" + traitList[t].name + "'>" + traitList[t].label + "</a></p>";
+							classRecord += "<p>" + linkTrait(subclassList[s].spellcast) + "</p>";
 						}
 					}
 					classRecord += "<h6>Foundation Feature";
@@ -1123,9 +2115,7 @@ function printClasses() {
 			classRecord += "<dt>Stress as Damage</dt>";
 			classRecord += "<dd>When your companion would take any amount of damage, they mark a <a href='#define-stress'>Stress</a> instead. If you choose a <a href='#define-downtime-move'>downtime move</a> that clears your Stress, your companion clears an equal amount. If their last Stress is marked, they exit the scene, becoming unavailable until the start of your next <a href='#define-downtime'>long rest</a>, when they clear 1 Stress and return to you. You can increase your companion's Stress slots as a <a href='#define-beastbound-companion-advancement'>companion advancement</a>.</dd>";
 			classRecord += "</dl>";
-			classRecord += "<div class='og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit'>";
-			classRecord += "<p>Since companion damage is measured in <a href='#define-stress'>Stress</a>, they don't have <a href='#define-hit-point'>damage thresholds</a> or <a href='#define-hit-point'>Hit Points</a>.</p>";
-			classRecord += "</div>";
+			classRecord += getSidebar("<p>Since companion damage is measured in <a href='#define-stress'>Stress</a>, they don't have <a href='#define-hit-point'>damage thresholds</a> or <a href='#define-hit-point'>Hit Points</a>.</p>");
 			classRecord += "</div>";
 			classRecord += "<div class='og-topbar'>";
 			classRecord += "<h5 class='h6' id='ranger-example-companion-experiences'>Example Companion Experiences</h5>";
@@ -1152,12 +2142,7 @@ function printClasses() {
 			classRecord += "<li>You Can't Hit What You Can't Find</li>";
 			classRecord += "</ul>";
 			classRecord += "</div>";
-			classRecord += "<div class='og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit'>";
-			classRecord += "<p><strong>Editor's Notes &mdash;</strong> The game doesn't include any rules for riding your mount in combat, but the <a href='#define-domain-card-conjured-steeds'>Conjured Steeds</a> spell suggests these <a href='#define-procedure'>modifications</a>:</p>";
-			classRecord += "<ul class='list-unstyled'>";
-			classRecord += "<li><p><strong><em>Mounted:</em></strong> &minus;2 to <a href='#define-attack-roll'>attack rolls</a>; +2 to <a href='#define-damage-roll'>damage rolls</a></p></li>";
-			classRecord += "</ul>";
-			classRecord += "</div>";
+			classRecord += getEdnote("There aren't rules for riding a companion. Consider choosing a riding <a href='#define-experience'>Experience</a> for you, your companion, or both.");
 			classRecord += "<div id='define-beastbound-companion-advancement'>";
 			classRecord += "<h5 id='ranger-companion-levels'>Beastbound Companion Levels<a class='og-h-anchor' href='#ranger-companion-levels' title='Permalink' aria-hidden='true'></a></h5>";
 			classRecord += "<ul class='og-list-inline og-ref og-omit'><li>Page 40</li></ul>";
@@ -1312,29 +2297,17 @@ function printAncestries() {
 	}
 	document.getElementById("printAncestries").innerHTML = ancestryContent;
 };
-// mixed ancestry
-function randomAncestry(x) {
-	let selection = document.getElementById("mixed-ancestry-select-" + x);
-	selection.value = (Math.floor(Math.random() * (ancestryList.length)) + 1);
-};
-function setAncestryFeatures() {
-    let ancestry1 = document.getElementById("mixed-ancestry-select-1");
-	document.getElementById("random-ancestry-feature-1").innerHTML = ancestryList[ancestry1.value - 1].features[0];
-    let ancestry2 = document.getElementById("mixed-ancestry-select-2");
-	document.getElementById("random-ancestry-feature-2").innerHTML = ancestryList[ancestry2.value - 1].features[1];
-    refreshTooltips();
-};
 // communities
 function printCommunities() {
 	let communityContent = "";
-	for (let c = 0; c < communityList.length; c++) {
-		communityContent += "<div id='define-" + communityList[c].name + "'>";
-		communityContent += "<h3 class='og-tab' id='" + communityList[c].name + "'>" + communityList[c].label + "<a class='og-h-anchor' href='#" + communityList[c].name + "' title='Permalink' aria-hidden='true'></a></h3>";
-		communityContent += getReferences(communityList[c].pages);
-		communityContent += communityList[c].summary;
-		communityContent += "<p class='og-questions'>" + communityList[c].roleplay + "</p>";
+	for (let i = 0; i < communityList.length; i++) {
+		communityContent += "<div id='define-" + communityList[i].name + "'>";
+		communityContent += "<h3 class='og-tab' id='" + communityList[i].name + "'>" + communityList[i].label + "<a class='og-h-anchor' href='#" + communityList[i].name + "' title='Permalink' aria-hidden='true'></a></h3>";
+		communityContent += getReferences(communityList[i].pages);
+		communityContent += communityList[i].summary;
+		communityContent += "<p class='og-questions small'>" + communityList[i].roleplay + "</p>";
 		communityContent += "<h4 class='h6'>Community Features</h4>";
-		communityContent += "<ul class='list-unstyled'><li>" + communityList[c].feature + "</li></ul>";
+		communityContent += "<ul class='list-unstyled'><li>" + communityList[i].feature + "</li></ul>";
 		communityContent += "</div><hr>";
 	}
 	document.getElementById("printCommunities").innerHTML = communityContent;
@@ -1415,7 +2388,7 @@ function printWeaponPrimaryTable(weaponTier, weaponType) {
 	}
 	weaponContent += "<ul class='og-list-inline og-ref og-omit'><li>" + weaponPage + "</li></ul>";
 	if (weaponErrata == true) {
-		weaponContent += "<p class='og-questions'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
+		weaponContent += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
 	}
 	weaponContent += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
 	weaponContent += "<caption>Tier " + weaponTier + " " + weaponTypeLabel + " Weapons</caption>";
@@ -1477,7 +2450,7 @@ function printWeaponsSecondary() {
 		}
 		secondaryweaponContent += "<ul class='og-list-inline og-ref og-omit'><li>" + weaponPage + "</li></ul>";
 		if (weaponErrata == true) {
-			secondaryweaponContent += "<p class='og-questions'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
+			secondaryweaponContent += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
 		}
 		secondaryweaponContent += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
 		secondaryweaponContent += "<caption>Tier " + t + " Secondary Weapons</caption>";
@@ -1563,21 +2536,29 @@ function printArmor() {
 	document.getElementById("printArmor").innerHTML = armorContent;
 };
 // loot
-function randomLoot(x) {
-	document.getElementById("random-loot-roll").innerHTML = x + "d12";
+function randomLoot(p, d) {
+	document.getElementById("random-loot-roll").innerHTML = p + "d" + d;
 	for (let i = 1; i < 6; i++) {
-	  let roll = rollDice(x, 12);
+	  let roll = rollDice(p, d);
       let result = roll - 1;
 	  document.getElementById("random-loot-result-" + i).innerHTML = roll;
 	  document.getElementById("random-loot-" + i).innerHTML = "<strong><em>" + lootList[result].label + ":</em></strong> " + lootList[result].feature;
-	  if ( x == 1) { document.getElementById("random-loot-chance-" + i).innerHTML = chance1d12[result]; }
-	  else if ( x == 2) { document.getElementById("random-loot-chance-" + i).innerHTML = chance2d12[result]; }
-	  else if ( x == 3) { document.getElementById("random-loot-chance-" + i).innerHTML = chance3d12[result]; }
-	  else if ( x == 4) { document.getElementById("random-loot-chance-" + i).innerHTML = chance4d12[result]; }
-	  else if ( x == 5) { document.getElementById("random-loot-chance-" + i).innerHTML = chance5d12[result]; }
-	  document.getElementById("new-random-loot-" + i + "d12").classList.remove('btn-hope');
+	  if ( p == 1 ) { document.getElementById("random-loot-chance-" + i).innerHTML = getChance(1, d); }
+	  else if ( p == 2 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance2d12[result]; }
+	  else if ( p == 3 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance3d12[result]; }
+	  else if ( p == 4 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance4d12[result]; }
+	  else if ( p == 5 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance5d12[result]; }
+	  else if ( p == 2 && d == 20) { document.getElementById("random-loot-chance-" + i).innerHTML = chance2d20[result]; }
+	  else if ( p == 3 && d == 20) { document.getElementById("random-loot-chance-" + i).innerHTML = chance3d20[result]; }
 	}
-	document.getElementById("new-random-loot-" + x + "d12").classList.add('btn-hope');
+	for (let i = 1; i < 6; i++) {
+		document.getElementById("new-random-loot-" + i + "d12").classList.remove('btn-hope');
+	}
+	for (let i = 1; i < 4; i++) {
+		document.getElementById("new-random-loot-" + i + "d20").classList.remove('btn-hope');
+	}
+	document.getElementById("new-random-loot-" + p + "d" + d).classList.add('btn-hope');
+	refreshTooltips(); 
 };
 function printLoot() {
 	let lootContent = "";
@@ -1596,21 +2577,29 @@ function printLoot() {
 	document.getElementById("printLoot").innerHTML = lootContent;
 };
 // consumables
-function randomConsumable(x) {
-	document.getElementById("random-consumable-roll").innerHTML = x + "d12";
+function randomConsumable(p, d) {
+	document.getElementById("random-consumable-roll").innerHTML = p + "d" + d;
 	for (let i = 1; i < 6; i++) {
-	  let roll = rollDice(x, 12);
+	  let roll = rollDice(p, d);
       let result = roll - 1;
 	  document.getElementById("random-consumable-result-" + i).innerHTML = roll;
 	  document.getElementById("random-consumable-" + i).innerHTML = "<strong><em>" + consumableList[result].label + ":</em></strong> " + consumableList[result].feature;
-	  if ( x == 1) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance1d12[result]; }
-	  else if ( x == 2) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance2d12[result]; }
-	  else if ( x == 3) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance3d12[result]; }
-	  else if ( x == 4) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance4d12[result]; }
-	  else if ( x == 5) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance5d12[result]; }
-	  document.getElementById("new-random-consumable-" + i + "d12").classList.remove('btn-hope');
+	  if ( p == 1 ) { document.getElementById("random-consumable-chance-" + i).innerHTML = getChance(1, d); }
+	  else if ( p == 2 && d == 12) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance2d12[result]; }
+	  else if ( p == 3 && d == 12) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance3d12[result]; }
+	  else if ( p == 4 && d == 12) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance4d12[result]; }
+	  else if ( p == 5 && d == 12) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance5d12[result]; }
+	  else if ( p == 2 && d == 20) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance2d20[result]; }
+	  else if ( p == 3 && d == 20) { document.getElementById("random-consumable-chance-" + i).innerHTML = chance3d20[result]; }
 	}
-	document.getElementById("new-random-consumable-" + x + "d12").classList.add('btn-hope');
+	for (let i = 1; i < 6; i++) {
+		document.getElementById("new-random-consumable-" + i + "d12").classList.remove('btn-hope');
+	}
+	for (let i = 1; i < 4; i++) {
+		document.getElementById("new-random-consumable-" + i + "d20").classList.remove('btn-hope');
+	}
+	document.getElementById("new-random-consumable-" + p + "d" + d).classList.add('btn-hope');
+	refreshTooltips(); 
 };
 function printConsumables() {
 	let consumableContent = "";
@@ -1656,7 +2645,7 @@ function printAdversaries() {
 		adversaryContent += "</li>";
 		adversaryContent += "<li><strong>HP:</strong> " + adversaryList[a].hp + "</li>";
 		adversaryContent += "<li><strong>Stress:</strong> " + adversaryList[a].stress + "</li>";
-		adversaryContent += "<li class='d-block'><strong>ATK:</strong> " + adversaryList[a].attackbonus + "<span class='og-divider'><strong>" + adversaryList[a].attacklabel + ":</strong> <a href='#define-range'>" + adversaryList[a].attackrange + "</a></span><span class='og-divider'>" + adversaryList[a].attackdamage + " <a href='define-damage-type'>" + adversaryList[a].attackdamagetype + "</a></span></li>";
+		adversaryContent += "<li class='d-block'><strong>ATK:</strong> " + adversaryList[a].attackbonus + "<span class='og-divider'><strong>" + adversaryList[a].attacklabel + ":</strong> <a href='#define-range'>" + adversaryList[a].attackrange + "</a></span><span class='og-divider'>" + adversaryList[a].attackdamage + " <a href='#define-damage-type'>" + adversaryList[a].attackdamagetype + "</a></span></li>";
 		if (adversaryList[a].experiences != "") {
 			adversaryContent += "<div class='og-topbar2'>";
 			adversaryContent += "<p><strong>Experience:</strong> " + adversaryList[a].experiences + "</p>";
@@ -1678,7 +2667,9 @@ function printAdversaries() {
 function printEnvironments() {
 	let environmentContent = "<div class='row'>";
 	for (let e = 0; e < environmentList.length; e++) {
-		environmentContent += "<div class='col-12 col-md-6'><div class='og-statblock'><div id='define-environment-" + environmentList[e].name + "'>";
+		environmentContent += "<div class='col-12 col-md-6'>"; // open col
+		environmentContent += "<div class='og-statblock'>";  // open statblock
+		environmentContent += "<div id='define-environment-" + environmentList[e].name + "'>";  // open def
 		environmentContent += "<h5 id='environment-" + environmentList[e].name + "'>" + environmentList[e].label + "<a class='og-h-anchor' href='#environment-" + environmentList[e].name + "' title='Permalink' aria-hidden='true'></a></h5>";
 		environmentContent += getReferences(environmentList[e].pages);
 		environmentContent += "<ul class='list-unstyled'>";
@@ -1699,89 +2690,81 @@ function printEnvironments() {
 			environmentContent += "<li>" + environmentList[e].features[efeat] + "</li>";
 		}
 		environmentContent += "</ul>";
-		environmentContent += "</div></div></div>";
+		environmentContent += "</div>"; // close def
+		environmentContent += "</div>"; // close statblock
+		environmentContent += "</div>"; // close col
 	}
-	environmentContent += "</div><hr>";
+	environmentContent += "</div>"; // close col
+	environmentContent += "<hr>"; // divide and move one
 	document.getElementById("printEnvironments").innerHTML = environmentContent;
 };
 
 /* LISTENERS */
-// Mixed Ancestry Random Inputs
-document.getElementById("new-random-ancestry-mix").addEventListener("click", function (event) { 
-  randomAncestry(1); 
-  randomAncestry(2); 
-  setAncestryFeatures()
-});
-document.getElementById("new-random-ancestry-feature-1").addEventListener("click", function (event) { 
-  randomAncestry(1);
-  setAncestryFeatures()
-});
-document.getElementById("new-random-ancestry-feature-2").addEventListener("click", function (event) { 
-  randomAncestry(2); 
-  setAncestryFeatures()
-});
-// Mixed Ancestry Manual Inputs
-document.querySelector('#mixed-ancestry-select-1').addEventListener("change", function() { setAncestryFeatures(); });
-document.querySelector('#mixed-ancestry-select-2').addEventListener("change", function() { setAncestryFeatures(); });
 // Loot Inputs
-document.getElementById("new-random-loot-1d12").addEventListener("click", function (event) {
-  randomLoot(1);
-  refreshTooltips();
-});
-document.getElementById("new-random-loot-2d12").addEventListener("click", function (event) {
-  randomLoot(2);
-  refreshTooltips();
-});
-document.getElementById("new-random-loot-3d12").addEventListener("click", function (event) {
-  randomLoot(3);
-  refreshTooltips();
-});
-document.getElementById("new-random-loot-4d12").addEventListener("click", function (event) {
-  randomLoot(4);
-  refreshTooltips();
-});
-document.getElementById("new-random-loot-5d12").addEventListener("click", function (event) {
-  randomLoot(5);
-  refreshTooltips();
-});
+document.getElementById("new-random-loot-1d12").addEventListener("click", function (event) { randomLoot(1,12); });
+document.getElementById("new-random-loot-2d12").addEventListener("click", function (event) { randomLoot(2,12); });
+document.getElementById("new-random-loot-3d12").addEventListener("click", function (event) { randomLoot(3,12); });
+document.getElementById("new-random-loot-4d12").addEventListener("click", function (event) { randomLoot(4,12); });
+document.getElementById("new-random-loot-5d12").addEventListener("click", function (event) { randomLoot(5,12); });
+document.getElementById("new-random-loot-1d20").addEventListener("click", function (event) { randomLoot(1,20); });
+document.getElementById("new-random-loot-2d20").addEventListener("click", function (event) { randomLoot(2,20); });
+document.getElementById("new-random-loot-3d20").addEventListener("click", function (event) { randomLoot(3,20); });
 // Consumable Inputs
-document.getElementById("new-random-consumable-1d12").addEventListener("click", function (event) {
-  randomConsumable(1);
-  refreshTooltips();
-});
-document.getElementById("new-random-consumable-2d12").addEventListener("click", function (event) {
-  randomConsumable(2);
-  refreshTooltips();
-});
-document.getElementById("new-random-consumable-3d12").addEventListener("click", function (event) {
-  randomConsumable(3);
-  refreshTooltips();
-});
-document.getElementById("new-random-consumable-4d12").addEventListener("click", function (event) {
-  randomConsumable(4);
-  refreshTooltips();
-});
-document.getElementById("new-random-consumable-5d12").addEventListener("click", function (event) {
-  randomConsumable(5);
-  refreshTooltips();
-});
+document.getElementById("new-random-consumable-1d12").addEventListener("click", function (event) { randomConsumable(1,12); });
+document.getElementById("new-random-consumable-2d12").addEventListener("click", function (event) { randomConsumable(2,12); });
+document.getElementById("new-random-consumable-3d12").addEventListener("click", function (event) { randomConsumable(3,12); });
+document.getElementById("new-random-consumable-4d12").addEventListener("click", function (event) { randomConsumable(4,12); });
+document.getElementById("new-random-consumable-5d12").addEventListener("click", function (event) { randomConsumable(5,12); });
+document.getElementById("new-random-consumable-1d20").addEventListener("click", function (event) { randomConsumable(1,20); });
+document.getElementById("new-random-consumable-2d20").addEventListener("click", function (event) { randomConsumable(2,20); });
+document.getElementById("new-random-consumable-3d20").addEventListener("click", function (event) { randomConsumable(3,20); });
 
 // INITIALIZE ON LOAD
 window.addEventListener("load", (event) => { 
+	// class
+	document.querySelector('#ccChooseClass').addEventListener("change", function() { ccChooseClass(); });
+	document.querySelector('#ccChooseSubclass').addEventListener("change", function() { ccChooseSubclass(); });
+	// heritage
+	document.querySelector('#ccChooseAncestry').addEventListener("change", function() { ccChooseAncestry(); });
+	document.querySelector('#ccChooseAncestryMixed1').addEventListener("change", function() { ccChooseAncestryMixed1(); });
+	document.querySelector('#ccChooseAncestryMixed2').addEventListener("change", function() { ccChooseAncestryMixed2(); });
+	document.querySelector('#ccChooseCommunity').addEventListener("change", function() { ccChooseCommunity(); });
+	// equipment
+	document.querySelector('#ccChooseWeaponPrimary').addEventListener("change", function() { ccChooseWeapon(1); });
+	document.querySelector('#ccChooseWeaponSecondary').addEventListener("change", function() { ccChooseWeapon(2); });
+	document.querySelector('#ccChooseArmor').addEventListener("change", function() { ccChooseArmor(); });
+	document.querySelector('#ccChooseConsumable').addEventListener("change", function() { ccChooseConsumable(); });
+	// domain card
+	document.querySelector('#ccChooseDomainCard1').addEventListener("change", function() { ccChooseDomainCard1(); });
+	document.querySelector('#ccChooseDomainCard2').addEventListener("change", function() { ccChooseDomainCard2(); });
+	document.querySelector('#ccChooseDomainCard3').addEventListener("change", function() { ccChooseDomainCard3(); });
+	// experiences
+	document.querySelector('#ccChooseExperienceList').addEventListener("change", function() { ccPrintExperienceList(); });
+	
+	// cc init
+	ccChooseClass();
+	ccChooseAncestry();
+	ccChooseAncestryMixed1();
+	ccChooseAncestryMixed2();
+	ccChooseCommunity();
+	// default to health potion
+	for (i = 0; i < consumableList.length; i++) {
+		if (consumableList[i].label == "Minor Health Potion") {
+			document.getElementById("ccChooseConsumable").value = i;
+			ccChooseConsumable();
+		}
+	}
+	ccPrintExperienceList();
 	// randomizers
-	randomLoot(1);
-	randomConsumable(1);
-	randomAncestry(1); 
-	randomAncestry(2); 
-	setAncestryFeatures();
+	randomLoot(1,12);
+	randomConsumable(1,12);
 	// refresh tooltips
 	refreshTooltips(); 
 });
 
 /* CONSTRUCT */
 // print character creation assistance
-printClassTraitArrays()
-printClassDefenses()
+printCC();
 // print character options
 printClasses();
 printDomains();
