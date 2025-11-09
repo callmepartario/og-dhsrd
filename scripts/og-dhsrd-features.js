@@ -313,12 +313,12 @@ const communityList = [
 ];
 // traits
 const traitList = [ 
-{ label: "Agility", name: "agility", pages: ["Page 17"], actions: "Sprint, Leap, Maneuver", summary: "<p>A high <strong>Agility</strong> means you're fast on your feet, nimble on difficult terrain, and quick to react to danger. You'll make an <a href='#define-trait-roll'>Agility Roll</a> to scurry up a rope, sprint to cover, or bound from rooftop to rooftop.</p>" },
-{ label: "Strength", name: "strength", pages: ["Page 17"], actions: "Lift, Smash, Grapple", summary: "<p>A high <strong>Strength</strong> means you're better at feats that test your physical prowess and stamina. You'll make a <a href='#define-trait-roll'>Strength Roll</a> to break through a door, lift heavy objects, or hold your ground against a charging foe.</p>" },
-{ label: "Finesse", name: "finesse", pages: ["Page 17"], actions: "Control, Hide, Tinker", summary: "<p>A high <strong>Finesse</strong> means you're skilled at tasks that require accuracy, stealth, or the utmost control. You'll make a <a href='#define-trait-roll'>Finesse Roll</a> to use fine tools, escape notice, or strike with precision.</p>" },
-{ label: "Instinct", name: "instinct", pages: ["Page 17"], actions: "Perceive, Sense, Navigate", summary: "<p>A high <strong>Instinct</strong> means you have a keen sense of your surroundings and a natural intuition. You'll make an <a href='#define-trait-roll'>Instinct Roll</a> to sense danger, notice details in the world around you, or track an elusive foe.</p>" },
-{ label: "Presence", name: "presence", pages: ["Page 17"], actions: "Charm, Perform, Deceive", summary: "<p>A high <strong>Presence</strong> means you have a strong force of personality and a facility for social situations. You'll make a <a href='#define-trait-roll'>Presence Roll</a> to plead your case, intimidate a foe, or capture the attention of a crowd.</p>" },
-{ label: "Knowledge", name: "knowledge", pages: ["Page 17"], actions: "Recall, Analyze, Comprehend", summary: "<p>A high <strong>Knowledge</strong> means you know information others don't and understand how to apply your mind through deduction and inference. You'll make a <a href='#define-trait-roll'>Knowledge Roll</a> to interpret facts, see the patterns clearly, or remember important information.</p>" }
+{ label: "Agility", name: "agility", pages: ["Page 17", "Page 158"], summary: "<p>A high <strong>Agility</strong> means you're fast on your feet, nimble on difficult terrain, and quick to react to danger. You'll make an <a href='#define-trait-roll'>Agility Roll</a> to scurry up a rope, sprint to cover, or bound from rooftop to rooftop.</p>", action: ["Sprint", "Leap", "Maneuver"], roll5: ["Sprint within <a href='#define-range'>Close</a> range across an open field with an enemy present.", "Make a running jump of half your height<span class='og-omit'> (about 3 feet (0.9 m) for a human)</span>.</td>", "Walk slowly across a narrow beam."], roll10: ["Sprint within <a href='#define-range'>Far</a> range across an open field with an enemy present.", "Make a running jump of your height<span class='og-omit'> (about 6 feet (1.8 m) for a human)</span>.", "Walk quickly across a narrow beam."], roll15: ["Sprint within <a href='#define-range'>Close</a> range across rough terrain with an enemy present.", "Make a running jump of double your height<span class='og-omit'> (about 12 feet (3.6 m) for a human)</span>.", "Run across a narrow beam."], roll20: ["Sprint within <a href='#define-range'>Close</a> range through an active battle of multiple enemies.", "Make a running jump of three times your height<span class='og-omit'> (about 18 feet (5.5 m) for a human)</span>.", "Run across a narrow beam in heavy wind."], roll25: ["Sprint within <a href='#define-range'>Far</a> range through a <a href='#define-environment-pitched-battle'>pitched battle</a> in rough terrain.", "Make a running jump of five times your height<span class='og-omit'> (about 30 feet (9.1 m) for a human)</span>.", "Run across a very narrow beam in an active rainstorm."], roll30: ["Sprint across the heads of your enemies in a <a href='#define-environment-pitched-battle'>pitched battle</a>.", "Make a running jump of ten times your height<span class='og-omit'> (about 60 feet (18.3 m) for a human)</span>.", "Run across an inch-wide, oil-slicked beam in an active rainstorm."] },
+{ label: "Strength", name: "strength", pages: ["Page 17", "Page 158"], summary: "<p>A high <strong>Strength</strong> means you're better at feats that test your physical prowess and stamina. You'll make a <a href='#define-trait-roll'>Strength Roll</a> to break through a door, lift heavy objects, or hold your ground against a charging foe.</p>", action: ["Lift", "Smash", "Grapple"], roll5: ["Lift a chair.", "Destroy a glass cup.</td>", "Subdue a child."], roll10: ["Lift a table or small chest.", "Destroy a small wooden table."], roll15: [">Lift a grown person or large chest.", "Break through a wooden door.", "Subdue an average adult."], roll20: ["Lift the side of a laden cart or carry a large chest up stairs.", "Break through a stone wall.", "Subdue a skilled wrestler."], roll25: ["Lift a horse, an ox, or a large monster.", "Break through a dragon's teeth.", "Subdue a large beast."], roll30: ["Lift a falling portcullis gate.", "Break a god's grip.", "Subdue a legendary beast."] },
+{ label: "Finesse", name: "finesse", pages: ["Page 17", "Page 158"], summary: "<p>A high <strong>Finesse</strong> means you're skilled at tasks that require accuracy, stealth, or the utmost control. You'll make a <a href='#define-trait-roll'>Finesse Roll</a> to use fine tools, escape notice, or strike with precision.</p>", action: ["Control", "Hide", "Tinker"], roll5: ["Ride a horse through easy terrain.", "Evade notice under full cover on a moonless night.</td>", "Open a sticky lock with the appropriate key."], roll10: ["Drive an ox-pulled cart.", "Evade notice in limited cover on a moonless night.", "Open a simple puzzle box."], roll15: ["Ride a horse through rough terrain.", "Evade notice in limited cover on an average night.", "Disable a standard trap."], roll20: ["Drive a cart through rough terrain.", "Evade notice in the shadows on an average night.", "Disable a complicated trap."], roll25: ["Ride a wild horse through dangerous terrain.", "Evade notice with minimal cover in ample light.", "Open a door secured by a sequence of elaborate locks."], roll30: ["Ride an enraged beast through dangerous terrain.", "Evade notice with no cover in full daylight.", "Disable an incredibly sensitive and deadly trap."] },
+{ label: "Instinct", name: "instinct", pages: ["Page 17", "Page 159"], summary: "<p>A high <strong>Instinct</strong> means you have a keen sense of your surroundings and a natural intuition. You'll make an <a href='#define-trait-roll'>Instinct Roll</a> to sense danger, notice details in the world around you, or track an elusive foe.</p>", action: ["Perceive", "Sense", "Navigate"], roll5: ["Hear a loud noise twenty paces away.", "Detect an obvious ambush or notice an obvious deception.</td>", "Follow a well-trod path in good lighting and weather."], roll10: ["Hear a speaking voice fifty paces away.", "Detect a looming threat or notice an average person's lies.", "Follow an average path in good lighting and weather."], roll15: ["Hear someone walking in the woods fifty paces away.", "Detect hostile intent from a foe or see through a merchant's lies.", "Follow a subtle path through rough conditions."], roll20: ["Hear someone sneaking through the woods fifty paces away.", "Detect a politician's veiled hostility or detect a nearby assassin.", "Follow a subtle path through harsh conditions."], roll25: ["Hear a prowling animal fifty paces away.", "Identify a spymaster's plot or read a politician's true intentions.", "Find your way with no path through dangerous conditions."], roll30: ["Hear a diving bird a hundred paces away.", "Sense a shred of doubt within a god's pronouncement.", "Find your way through a trickery god's maze."] },
+{ label: "Presence", name: "presence", pages: ["Page 17", "Page 159"], summary: "<p>A high <strong>Presence</strong> means you have a strong force of personality and a facility for social situations. You'll make a <a href='#define-trait-roll'>Presence Roll</a> to plead your case, intimidate a foe, or capture the attention of a crowd.</p>", action: ["Charm", "Perform", "Deceive"], roll5: ["Win the trust of a friendly neighbor.", "Earn a meal from a friendly crowd.</td>", "Trick a trusting acquaintance."], roll10: ["Win the trust of a friendly stranger.", "Earn room and board in a small town or impress a small crowd.", "Trick an average stranger."], roll15: ["Win the trust of a cautious stranger or talk your way into a noble's party.", "Earn room and board in a low-end tavern or impress a large crowd.", "Trick an average merchant."], roll20: ["Win the trust of a sympathetic foe or talk your way into an enemy's party.", "Earn lodging in a high-end tavern or impress a full theater.", "Trick a trained courtier."], roll25: ["Turn an enemy against their ruler or talk your way into a fae court.", "Earn your keep in a royal court or impress a full colosseum.", "Trick a spymaster."], roll30: ["Talk a hostile god into granting you a boon.", "Save yourself from execution after offending the queen.", "Trick a god."] },
+{ label: "Knowledge", name: "knowledge", pages: ["Page 17", "Page 159"], summary: "<p>A high <strong>Knowledge</strong> means you know information others don't and understand how to apply your mind through deduction and inference. You'll make a <a href='#define-trait-roll'>Knowledge Roll</a> to interpret facts, see the patterns clearly, or remember important information.</p>", action: ["Recall", "Analyze", "Comprehend"], roll5: ["Recall uncommon facts about your community.", "Unpack an obvious metaphor in a simple text.</td>", "Learn simple skills from an excellent teacher."], roll10: ["Recall uncommon facts about a neighboring community.", "Identify obvious subtext in a conversation.", "Learn simple skills from an average teacher."], roll15: [">Recall uncommon facts about a distant community.", "Break an average cipher in a coded message.", "Learn complicated skills from an excellent teacher."], roll20: ["Recall specialized facts about a distant community.", "Identify a weakness in a complicated battle plan.", "Learn complicated skills under poor conditions."], roll25: ["Recall specialized facts about a fallen kingdom.", "Predict the downfall of a nation based on concealed misdeeds.", "Learn complicated skills quickly under dangerous conditions."], roll30: ["Recall secret information about an obscure historical group.", "Identify the weakness in a divine champion's fighting form.", "Learn complicated skills quickly from incomplete information."] }
 ];
 // weapons, primary
 const weaponprimaryList = [
@@ -1361,7 +1361,10 @@ function ccChooseSubclass() {
 		if (traitList[i].label == subclassList[ccUserSubclass].spellcast) {
 			tArray += "<a href='#define-spellcast-roll'>Spellcast Rolls</a>, ";
 		}
-		tArray += traitList[i].actions + "</p>";
+		for (v = 0; v < traitList[i].action.length; v++) {
+			tArray += traitList[i].action[v] + ", ";
+		}
+		tArray += "etc.</p>";
 		tArray += "</div>";
 	}
 	tArray += "</div>"; // close row
@@ -2559,7 +2562,11 @@ function printTraits() {
 		let traitRecord = "<div class='col-12 col-md-6 col-lg-4'><div id='define-" + traitList[i].name + "'>";
 		traitRecord += "<h3 class='og-tab' id='" + traitList[i].name + "'>" + traitList[i].label + "<a class='og-h-anchor' href='#" + traitList[i].name + "' title='Permalink' aria-hidden='true'></a></h3>";
 		traitRecord += getReferences(traitList[i].pages);
-		traitRecord += "<h4 class='h6'>" + traitList[i].actions + ", <em>etc.</em></h4>";
+		traitRecord += "<h4 class='h6'>";
+		for (v = 0; v < traitList[i].action.length; v++) {
+			traitRecord += traitList[i].action[v] + ", ";
+		}
+		traitRecord += " <em>etc.</em></h4>";
 		traitRecord += traitList[i].summary;
 		traitRecord += "<p class='fst-italic og-omit'><strong>Difficulty:</strong> <a href='#define-" + traitList[i].name + "-benchmark'>" + traitList[i].label + " Benchmarks</a></p>";
 		traitRecord += "</div></div>";
@@ -2567,6 +2574,45 @@ function printTraits() {
 	}
 	traitContent += "</div><hr>";
 	document.getElementById("printTraits").innerHTML = traitContent;
+	// trait benchmarks
+	let tBench = "";
+	for (let i = 0; i < traitList.length; i++) {
+		tBench += "<div id='define-" + traitList[i].name + "-benchmark'>";
+		tBench += "<h4 id='difficulty-benchmarks-" + traitList[i].name + "'>" + traitList[i].label + "<a class='og-h-anchor' href='#difficulty-benchmarks-" + traitList[i].name + "' title='Permalink' aria-hidden='true'></a></h4>";
+		tBench += getReferences(traitList[i].pages);
+		tBench += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
+		tBench += "<caption>Difficulty Benchmarks &mdash; " + traitList[i].label + "</caption>";
+		tBench += "<thead>";
+		tBench += "<tr>";
+		tBench += "<th class='text-center w-10' scope='col'>Roll</th>";
+		for (col = 0; col < 3; col++) {
+			tBench += "<th class='w-30' scope='col'>" + traitList[i].action[col] + "</th>";
+		}
+		tBench += "</tr>";
+		tBench += "</thead>";
+		tBench += "<tbody>";
+		for (let row = 1; row < 7; row++) {
+			let d = row * 5;
+			tBench += "<tr>";
+			tBench += "<th class='text-center fw-normal' scope='row'>" + (d) + "</th>";
+			for (col = 0; col < 3; col++) {
+				tBench += "<td>";
+				if (d == 5) { tBench += traitList[i].roll5[col] }
+				if (d == 10) { tBench += traitList[i].roll10[col] }
+				if (d == 15) { tBench += traitList[i].roll15[col] }
+				if (d == 20) { tBench += traitList[i].roll20[col] }
+				if (d == 25) { tBench += traitList[i].roll25[col] }
+				if (d == 30) { tBench += traitList[i].roll30[col] }
+				tBench += "</td>";
+			}
+			tBench += "</tr>";
+		}
+		tBench += "</tbody>";
+		tBench += "</div>";
+		tBench += "</div>";
+	}
+	// populate trait benchmarks
+	document.getElementById("printTraitBenchmarks").innerHTML = tBench;
 };
 // weapons, primary
 function printWeaponsPrimary() {
