@@ -1284,7 +1284,7 @@ function printCC() {
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
 	// STEP 8: BACKGROUND AND CONNECTIONS
-	CC += "<h3 id='cc-step-8'><span class='h6'>Step 7:</span> Background and Connections<a class='og-h-anchor' href='#cc-step-8' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<h3 id='cc-step-8'><span class='h6'>Step 8:</span> Background and Connections<a class='og-h-anchor' href='#cc-step-8' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<div class='row'>"; // open row
 	CC += "<div class='col-12 col-md-6'>"; // open col
