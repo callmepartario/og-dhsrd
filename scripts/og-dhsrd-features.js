@@ -1900,7 +1900,7 @@ function ccPrintAdditionalStatistics() {
 	let userTraitModWeapon = "";
 	if (armorList[ccUserArmor].label == "Full Plate Armor") {
 		userTraitMods = true;
-		userTraitModArmor += "<div class='col-12 col-md-6 col-lg-3'>"; // open col	
+		userTraitModArmor += "<div class='col-12 col-md-6 col-lg-4'>"; // open col	
 		userTraitModArmor += "<h5 class='h6 og-wrap'>" + linkTrait("Agility") + " &minus;1</h5>";
 		userTraitModArmor += "<ul class='og-list-inline og-ref og-omit'>";
 		userTraitModArmor += "<li>" + armorList[ccUserArmor].label + " (Very Heavy): &minus;1</li>";
@@ -1909,7 +1909,7 @@ function ccPrintAdditionalStatistics() {
 	}
 	if (weaponprimaryList[ccUserWeaponPrimary].label == "Halberd" || weaponprimaryList[ccUserWeaponPrimary].label == "Longbow") {
 		userTraitMods = true;
-		userTraitModWeapon += "<div class='col-12 col-md-6 col-lg-3'>"; // open col	
+		userTraitModWeapon += "<div class='col-12 col-md-6 col-lg-4'>"; // open col	
 		userTraitModWeapon += "<h5 class='h6 og-wrap'>" + linkTrait("Finesse") + " &minus;1</h5>";
 		userTraitModWeapon += "<ul class='og-list-inline og-ref og-omit'>";
 		userTraitModWeapon += "<li>" + weaponprimaryList[ccUserWeaponPrimary].label + " (Cumbersome): &minus;1</li>";
