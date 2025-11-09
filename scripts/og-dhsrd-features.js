@@ -31,7 +31,7 @@ const classList = [
 const subclassList = [
 { label: "Troubadour", name: "troubadour", pages: ["Page 28"], summarybrief: "Play the <strong><a href='#define-troubadour'>Troubadour</a></strong> if you want to play music to bolster your allies.", summary: "Play the Troubadour if you want to play music to bolster your allies.", spellcast: "Presence", foundation: ["<p><strong><em>Gifted Performer:</em></strong> You can play three different types of songs, once each per <a href='#define-downtime'>long rest</a>; describe how you perform for others to gain the listed benefit:</p><ul class='og-list-disc'><li><strong><em>Relaxing Song:</em></strong> You and all allies within <a href='#define-range'>Close</a> range clear a <a href='#define-hit-point'>Hit Point</a>.</li><li><strong><em>Epic Song:</em></strong> Make a target within <a href='#define-range'>Close</a> range <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</li><li><strong><em>Heartbreaking Song:</em></strong> You and all allies within <a href='#define-range'>Close</a> range gain a <a href='#define-hope'>Hope</a>.</li></ul>"], specialization: ["<p><strong><em>Maestro:</em></strong> Your rallying songs steel the courage of those who listen. When you give a Rally Die to an ally, they can gain a <a href='#define-hope'>Hope</a> or clear a <a href='#define-stress'>Stress</a>.</p>"], mastery: ["<p><strong><em>Virtuoso:</em></strong> You are among the greatest of your craft and your skill is boundless. You can perform each of your <strong><em>Gifted Performer</em></strong> feature's songs twice per <a href='#define-downtime'>long rest</a>.</p>"] },
 { label: "Wordsmith", name: "wordsmith", pages: ["Page 29"], summarybrief: "Play the <strong><a href='#define-wordsmith'>Wordsmith</a></strong> if you want to use clever wordplay and captivate crowds.", summary: "Play the Wordsmith if you want to use clever wordplay and captivate crowds.", spellcast: "Presence", foundation: ["<p><strong><em>Rousing Speech:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can give a heartfelt, inspiring speech. All allies within <a href='#define-range'>Far</a> range clear 2 <a href='#define-stress'>Stress</a>.</p>", "<p><strong><em>Heart of a Poet:</em></strong> After you make an <a href='#define-action-roll'>action roll</a> to impress, persuade, or offend someone, you can <strong><a href='#define-hope'>spend a Hope</a></strong> to add a <strong>d4</strong> to the roll.</p>"], specialization: ["<p><strong><em>Eloquent:</em></strong> Your moving words boost morale. Once per session, when you encourage an ally, you can do one of the following:</p><ul class='og-list-disc'><li>Allow them to find a mundane object or tool they need.</li><li><a href='#define-hope'>Help an Ally</a> without spending <a href='#define-hope'>Hope</a>.</li><li>Give them an additional <a href='#define-downtime-move'>downtime move</a>  during their next <a href='#define-downtime'>rest</a>.</li></ul>"], mastery: ["<p><strong><em>Epic Poetry:</em></strong> Your Rally Die increases to a <strong>d10</strong>. Additionally, when you <a href='#define-hope'>Help an Ally</a>, you can narrate the moment as if you were writing the tale of their heroism in a memoir. When you do, roll a <strong>d10</strong> as your <a href='#define-advantage'>advantage</a> die.</p>"] },
-{ label: "Warden of the Elements", name: "warden-of-the-elements", pages: ["Page 30"], summarybrief: "Play the <strong><a href='#define-warden-of-the-elements'>Warden of the Elements</a> if you want to embody the natural elements of the wild.", summary: "Play the Warden of the Elements if you want to embody the natural elements of the wild.", spellcast: "Instinct", foundation: ["<p><strong><em>Elemental Incarnation:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to <em>Channel</em> one of the following elements until you take <a href='#define-hit-point'>Severe</a> damage or until your next <a href='#define-downtime'>rest</a>:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range deals damage to you, they take <strong>1d10</strong> <a href='#define-damage-type'>magic damage</a>.</li><li><strong><em>Earth:</em></strong> Gain a bonus to your <a href='#define-hit-point'>damage thresholds</a> equal to your <a href='#define-damage-roll'>Proficiency</a>.</li><li><strong><em>Water:</em></strong> When you deal damage to an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range, all other adversaries within <a href='#define-range'>Very Close</a> range must mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Air:</em></strong> You can hover, gaining <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Agility Rolls</a>.</li></ul>"], specialization: ["<p><strong><em>Elemental Aura:</em></strong> Once per <a href='#define-downtime'>rest</a> while <em>Channeling</em>, you can assume an aura matching your element. The aura affects targets within <a href='#define-range'>Close</a> range until your <em>Channeling</em> ends.</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> marks 1 or more <a href='#define-hit-point'>Hit Points</a>, they must also mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Earth:</em></strong> Your allies gain a +1 bonus to <a href='#define-strength'>Strength</a>.</li><li><strong><em>Water:</em></strong> When an <a href='#define-adversary'>adversary</a> deals damage to you, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to move them anywhere within <a href='#define-range'>Very Close</a> range of where they are.</li><li><strong><em>Air:</em></strong> When you or an ally takes damage from an attack beyond <a href='#define-range'>Melee</a> range, reduce the damage by <strong>1d8</strong>.</li></ul>"], mastery: ["<p><strong><em>Elemental Dominion:</em></strong> You further embody your element. While <em>Channeling</em>, you gain the following benefit:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> You gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> for attacks and spells that deal damage.</li><li><strong><em>Earth:</em></strong> When you would mark <a href='#define-hit-point'>Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li><li><strong><em>Water:</em></strong> When an attack against you succeeds, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to make the attacker <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</li><li><strong><em>Air:</em></strong> You gain a +1 bonus to your <a href='#define-evasion'>Evasion</a> and can fly.</li></ul>"]},
+{ label: "Warden of the Elements", name: "warden-of-the-elements", pages: ["Page 30"], summarybrief: "Play the <strong><a href='#define-warden-of-the-elements'>Warden of the Elements</a></strong> if you want to embody the natural elements of the wild.", summary: "Play the Warden of the Elements if you want to embody the natural elements of the wild.", spellcast: "Instinct", foundation: ["<p><strong><em>Elemental Incarnation:</em></strong> <strong><a href='#define-stress'>Mark a Stress</a></strong> to <em>Channel</em> one of the following elements until you take <a href='#define-hit-point'>Severe</a> damage or until your next <a href='#define-downtime'>rest</a>:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range deals damage to you, they take <strong>1d10</strong> <a href='#define-damage-type'>magic damage</a>.</li><li><strong><em>Earth:</em></strong> Gain a bonus to your <a href='#define-hit-point'>damage thresholds</a> equal to your <a href='#define-damage-roll'>Proficiency</a>.</li><li><strong><em>Water:</em></strong> When you deal damage to an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range, all other adversaries within <a href='#define-range'>Very Close</a> range must mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Air:</em></strong> You can hover, gaining <a href='#define-advantage'>advantage</a> on <a href='#define-trait-roll'>Agility Rolls</a>.</li></ul>"], specialization: ["<p><strong><em>Elemental Aura:</em></strong> Once per <a href='#define-downtime'>rest</a> while <em>Channeling</em>, you can assume an aura matching your element. The aura affects targets within <a href='#define-range'>Close</a> range until your <em>Channeling</em> ends.</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> When an <a href='#define-adversary'>adversary</a> marks 1 or more <a href='#define-hit-point'>Hit Points</a>, they must also mark a <a href='#define-stress'>Stress</a>.</li><li><strong><em>Earth:</em></strong> Your allies gain a +1 bonus to <a href='#define-strength'>Strength</a>.</li><li><strong><em>Water:</em></strong> When an <a href='#define-adversary'>adversary</a> deals damage to you, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to move them anywhere within <a href='#define-range'>Very Close</a> range of where they are.</li><li><strong><em>Air:</em></strong> When you or an ally takes damage from an attack beyond <a href='#define-range'>Melee</a> range, reduce the damage by <strong>1d8</strong>.</li></ul>"], mastery: ["<p><strong><em>Elemental Dominion:</em></strong> You further embody your element. While <em>Channeling</em>, you gain the following benefit:</p><ul class='og-list-disc'><li><strong><em>Fire:</em></strong> You gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> for attacks and spells that deal damage.</li><li><strong><em>Earth:</em></strong> When you would mark <a href='#define-hit-point'>Hit Points</a>, roll a <strong>d6</strong> per Hit Point marked. For each result of 6, reduce the number of Hit Points you mark by 1.</li><li><strong><em>Water:</em></strong> When an attack against you succeeds, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to make the attacker <a href='#define-temporary'>temporarily</a> <a href='#define-condition'><em>Vulnerable</em></a>.</li><li><strong><em>Air:</em></strong> You gain a +1 bonus to your <a href='#define-evasion'>Evasion</a> and can fly.</li></ul>"]},
 { label: "Warden of Renewal", name: "warden-of-renewal", pages: ["Page 31"], summarybrief: "Play the <strong><a href='#define-warden-of-renewal'>Warden of Renewal</a></strong> if you want to use powerful magic to heal your party.", summary: "Play the Warden of Renewal if you want to use powerful magic to heal your party.", spellcast: "Instinct", foundation: ["<p><strong><em>Clarity of Nature:</em></strong> Once per <a href='#define-downtime'>long rest</a>, you can create a space of natural serenity within <a href='#define-range'>Close</a> range. When you spend a few minutes resting within the space, clear <a href='#define-stress'>Stress</a> equal to your <a href='#define-instinct'>Instinct</a>, distributed as you choose between you and your allies.</p>", "<p><strong><em>Regeneration:</em></strong> Touch a creature and <strong><a href='#define-hope'>spend 3 Hope</a></strong>. That creature clears <strong>1d4</strong> <a href='#define-hit-point'>Hit Points</a>.</p>"], specialization: ["<p><strong><em>Regenerative Reach:</em></strong> You can target creatures within <a href='#define-range'>Very Close</a> range with your <strong><em>Regeneration</em></strong> feature.</p>", "<p><strong><em>Warden's Protection:</em></strong> Once per <a href='#define-downtime'>long rest</a>, <strong><a href='#define-hope'>spend 2 Hope</a></strong> to clear 2 Hit Points on <strong>1d4</strong> allies within <a href='#define-range'>Close</a> range.</p>"], mastery: ["<p><strong><em>Defender:</em></strong> Your animal transformation embodies a healing guardian spirit. When you're in Beastform and an ally within <a href='#define-range'>Close</a> range marks 2 or more <a href='#define-hit-point'>Hit Points</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to reduce the number of Hit Points they mark by 1.</p>"] },
 { label: "Stalwart", name: "stalwart", pages: ["Page 36"], summarybrief: "Play the <strong><a href='#define-stalwart'>Stalwart</a></strong> if you want to take heavy blows and keep fighting.", summary: "Play the Stalwart if you want to take heavy blows and keep fighting.", spellcast: "", foundation: ["<p><strong><em>Unwavering:</em></strong> Gain a permanent +1 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Iron Will:</em></strong> When you take <a href='#define-damage-type'>physical damage</a>, you can <strong><a href='#define-armor'>mark an additional Armor Slot</a></strong> to reduce the severity.</p>"], specialization: ["<p><strong><em>Unrelenting:</em></strong> Gain a permanent +2 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Partners-in-Arms:</em></strong> When an ally within <a href='#define-range'>Very Close</a> range takes damage, you can <strong><a href='#define-armor'>mark an Armor Slot</a></strong> to reduce the severity by one threshold.</p>"], mastery: ["<p><strong><em>Undaunted:</em></strong> Gain a permanent +3 bonus to your <a href='#define-hit-point'>damage thresholds</a>.</p>", "<p><strong><em>Loyal Protector:</em></strong> When an ally within <a href='#define-range'>Close</a> range has 2 or fewer <a href='#define-hit-point'>Hit Points</a> and would take damage, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to sprint to their side and take the damage instead.</p>"] },
 { label: "Vengeance", name: "vengeance", pages: ["Page 36"], summarybrief: "Play the <strong><a href='#define-vengeance'>Vengeance</a></strong> if you want to strike down enemies who harm you or your allies.", summary: "Play the Vengeance if you want to strike down enemies who harm you or your allies.", spellcast: "", foundation: ["<p><strong><em>At Ease:</em></strong> Gain an additional <a href='#define-stress'>Stress</a> slot.</p>", "<p><strong><em>Revenge:</em></strong> When an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range succeeds on an attack against you, you can <strong><a href='#define-stress'>mark 2 Stress</a></strong> to force the attacker to mark a <a href='#define-hit-point'>Hit Point</a>.</p>"], specialization: ["<p><strong><em>Act of Reprisal:</em></strong> When an <a href='#define-adversary'>adversary</a> damages an ally within <a href='#define-range'>Melee</a> range, you gain a +1 bonus to your <a href='#define-damage-roll'>Proficiency</a> for the next successful attack you make against that adversary.</p>"], mastery: ["<p><strong><em>Nemesis:</em></strong> <strong><a href='#define-hope'>Spend 2 Hope</a></strong> to <em>Prioritize</em> an <a href='#define-adversary'>adversary</a> until your next <a href='#define-downtime'>rest</a>. When you make an attack against your <em>Prioritized</em> adversary, you can swap the results of your <a href='#define-action-roll'>Hope and Fear Dice</a>. You can only Prioritize one adversary at a time.</p>"]},
@@ -1040,7 +1040,7 @@ function printCC() {
 	// select ancestry
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseAncestry'>Ancestry:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseAncestry'>"; // id
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseAncestry'>"; // id
 	for (let i = 0; i < ancestryList.length + 1; i++) {
 		CC += "<option value='" + i + "'>"
 		if (i == ancestryList.length) { CC += "Mixed Ancestry"; }
@@ -1056,7 +1056,7 @@ function printCC() {
 		if (i > 0) {mixfeature = "Second";}
 		CC += "<div class='input-group mb-2'>";
 		CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseAncestryMixed" + (i+1) + "'>" + mixfeature +":</label>";
-		CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseAncestryMixed" + (i+1) + "'>"; // id
+		CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseAncestryMixed" + (i+1) + "'>"; // id
 		for (let a = 0; a < ancestryList.length; a++) {
 			CC += "<option value='" + a + "'>" + ancestryList[a].label + " (" + ancestryList[a].featurelabel[i] + ")</option>";
 		}
@@ -1067,7 +1067,7 @@ function printCC() {
 	CC += "<div id='ccAncestry'><p>&mdash;</p></div>"; // pop field
 	// mixed ancestry output
 	CC += "<div id='ccMixedAncestryChoices'>";
-	CC += "<p class='og-questions small'>A <a href='#define-mixed-ancestry'>mixed ancestry</a> can be shaped by blood, magic, proximity, or other variety of factors.</p>";
+	CC += "<p class='og-questions small'>A <strong><a href='#define-mixed-ancestry'>mixed ancestry</a></strong> can be shaped by blood, magic, proximity, or other variety of factors.</p>";
 	CC += "<h5 class='h6'>Ancestry Features</h6>";
 	CC += "<ul class='list-unstyled'>";
 	CC += "<li id='ccAncestryMixed1'><p>&mdash;</p></li>"; // pop field
@@ -1080,7 +1080,7 @@ function printCC() {
 	// select community
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseCommunity'>Community:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseCommunity'>"; // id
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseCommunity'>"; // id
 	for (let i = 0; i < communityList.length; i++) {
 		CC += "<option value='" + i + "'>" + communityList[i].label + "</option>";
 	}
@@ -1099,7 +1099,7 @@ function printCC() {
 	// select class
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseClass'>Class:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseClass'>"; // id
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseClass'>"; // id
 	for (let i = 0; i < classList.length; i++) {
 		CC += "<option value='" + i + "'>" + classList[i].label + "</option>";
 	}
@@ -1112,7 +1112,7 @@ function printCC() {
 	// select subclass
 	CC += "<div class='input-group mb-2'>"; // open column 2
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseSubclass'>Subclass:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseSubclass'>"; // id
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseSubclass'>"; // id
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
 	CC += "</div>";
@@ -1132,7 +1132,7 @@ function printCC() {
 	CC += "<div class='col-12 col-md-6' id='ccDomainCard1Display'>"; // open column
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard1'>First Card:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard1'>"; // pop options
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseDomainCard1'>"; // pop options
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
 	CC += "</div>";
@@ -1142,7 +1142,7 @@ function printCC() {
 	CC += "<div class='col-12 col-md-6' id='ccDomainCard2Display'>"; // open column
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard2'>Second Card:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard2'>"; // pop options
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseDomainCard2'>"; // pop options
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
 	CC += "</div>";
@@ -1152,7 +1152,7 @@ function printCC() {
 	CC += "<div class='col-12 col-md-4' id='ccDomainCard3Display'>"; // open column
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard3'>Third Card:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard3'>"; // pop options
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseDomainCard3'>"; // pop options
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
 	CC += "</div>";
@@ -1172,7 +1172,7 @@ function printCC() {
 	// choose primary weapon
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseWeaponPrimary'>Primary:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseWeaponPrimary'>"; // pop options
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseWeaponPrimary'>"; // pop options
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
 	CC += "</div>";
@@ -1180,7 +1180,7 @@ function printCC() {
 	// choose secondary weapon
 	CC += "<div class='input-group mb-2' id='ccChooseWeaponSecondarySelect'>"; // begin hide
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseWeaponSecondary'>Secondary:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseWeaponSecondary'>"; // pop options
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseWeaponSecondary'>"; // pop options
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
 	CC += "</div>"; // end hide
@@ -1188,7 +1188,7 @@ function printCC() {
 	// choose armor
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseArmor'>Armor:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseArmor'>"; // pop options
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseArmor'>"; // pop options
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
 	CC += "</div>";
@@ -1200,7 +1200,7 @@ function printCC() {
 	CC += getCCnote("Choose a <a href='#define-consumable'>consumable</a>.");
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseConsumable'>Consumable:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseConsumable'>"; // id
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseConsumable'>"; // id
 	for (let i = 0; i < consumableList.length; i++) {
 		if (consumableList[i].label == "Minor Health Potion" || consumableList[i].label == "Minor Stamina Potion") {
 			CC += "<option value='" + i + "'>" + consumableList[i].label + "</option>";
@@ -1250,7 +1250,7 @@ function printCC() {
 	CC += "</ul>";
 	CC += "<div class='input-group mb-2'>";
 	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseExperienceList'>Examples:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseExperienceList'>"; // id
+	CC += "<select class='form-select link-dark bg-light border-light og-cc-drop' id='ccChooseExperienceList'>"; // id
 	CC += "<option id='ccChooseExp-0' value='0'>Backgrounds</option>";
 	CC += "<option id='ccChooseExp-1' value='1'>Characteristics</option>";
 	CC += "<option id='ccChooseExp-2' value='2'>Specialties</option>";
