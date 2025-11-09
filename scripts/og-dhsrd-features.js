@@ -1930,7 +1930,16 @@ function ccPrintAdditionalStatistics() {
 function ccPrintBackgroundQuestions() {
 	//background
 	let bgQ = "";
-	bgQ += getCCnote("Think about your unique <strong>background</strong> as a " + linkCommunity(communityList[ccUserCommunity].label) + " " + linkAncestry(ancestryList[ccUserAncestry].label) + " " + linkSubclass(subclassList[ccUserSubclass].label) + " " + " " + linkClass(classList[ccUserClass].label) + ". Depending on the setting, the GM might ask different questions.");
+	let ccUserSummary = "";
+	ccUserSummary += "Think about your unique <strong>background</strong> as a " + linkCommunity(communityList[ccUserCommunity].label) + " ";
+	if (ccUserAncestry == ancestryList.length) { 
+		ccUserSummary += "<a href='#define-mixed-ancestry'>Mixed Ancestry</a>"; 
+	}
+	else { 
+		ccUserSummary += linkAncestry(ancestryList[ccUserAncestry].label); 
+	}
+	ccUserSummary += " " + linkSubclass(subclassList[ccUserSubclass].label) + " " + " " + linkClass(classList[ccUserClass].label) + ". Depending on the setting, the GM might ask different questions.";
+	bgQ += getCCnote(ccUserSummary);
 	bgQ += "<ul class='og-questions small'>";
 	for (i = 0; i < classList[ccUserClass].questions.length; i++) {
 		bgQ += "<li>" + classList[ccUserClass].questions[i] + "</li>";
