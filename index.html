@@ -36,15 +36,15 @@
 					<a class="nav-link dropdown-toggle" href="#" id="og-navbar-pcs" role="button" data-bs-toggle="dropdown" aria-expanded="false">PCs</a>
 					<ul class="dropdown-menu dropdown-menu-light theme-light" aria-labelledby="og-navbar-pcs">
 						<li><a class="dropdown-item og-nav" href="#character-creation">Character Creation</a></li>
-						<li><a class="dropdown-item og-nav" href="#classes">Classes</a></li>
-						<li><a class="dropdown-item og-nav" href="#domains">Domains</a></li>
 						<li><a class="dropdown-item og-nav" href="#ancestries">Ancestries</a></li>
 						<li><a class="dropdown-item og-nav" href="#communities">Communities</a></li>
-						<li><a class="dropdown-item og-nav" href="#traits">Traits</a></li>
-						<li><a class="dropdown-item og-nav" href="#experiences">Experiences</a></li>
-						<li><a class="dropdown-item og-nav" href="#hope">Hope</a></li>
-						<li><a class="dropdown-item og-nav" href="#gaining-levels">Gaining Levels</a></li>
+						<li><a class="dropdown-item og-nav" href="#classes-and-subclasses">Classes and Subclasses</a></li>
+						<li><a class="dropdown-item og-nav" href="#domains">Domains and Domain Cards</a></li>
 						<li><a class="dropdown-item og-nav" href="#equipment">Equipment</a></li>
+						<li><a class="dropdown-item og-nav" href="#traits">Traits</a></li>
+						<li><a class="dropdown-item og-nav" href="#hope">Hope</a></li>
+						<li><a class="dropdown-item og-nav" href="#experiences">Experiences</a></li>
+						<li><a class="dropdown-item og-nav" href="#gaining-levels">Gaining Levels</a></li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
@@ -117,7 +117,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 2.00b (2025-11-09)</p>
+<p class="small text-center">version 2.01a (2025-11-09)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://daggerheart.com">Daggerheart Official</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="https://github.com/callmepartario/og-dhsrd">Github</a></li>
@@ -167,7 +167,6 @@
 					<li><a href="#flow-of-the-game">Flow of the Game</a></li>
 					<li><a href="#gm-tools">GM tools</a></li>
 					<li><a href="#key-terms">Key Terms</a></li>
-					<li><a href="#define-mixed-ancestry">Mixed Ancestry</a></li>
 					<li><a href="#define-loot">Loot</a></li>
 					<li><a href="#define-optional-rules">Optional Rules</a></li>
 					<li><a href="#pc-benchmarks">PC Benchmarks</a></li>
@@ -204,22 +203,24 @@
 			<div class="text-center og-omit mb-3">
 				<img class="og-fig-md" src="images/duality-dice.svg" alt="Duality Dice: The Hope die result is 12. The Fear die result is 1." aria-hidden="true">
 			</div>
-			<h4 id="video-overview">Video Overview<a class="og-h-anchor" href="#video-overview" title="Permalink" aria-hidden="true"></a></h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
-			<p>This video covers the <a href="#flow-of-the-game">flow of the game</a>, and several <a href="#key-terms">key terms</a>, including:</p>
-			<ul class="og-list-inline">
-				<li><a href="#define-action-roll">action rolls</a></li>
-				<li><a href="#define-hope">Hope</a></li>
-				<li><a href="#define-fear">Fear</a></li>
-				<li><a href="#define-damage-roll">damage rolls</a></li>
-				<li><a href="#define-reaction-roll">reaction rolls</a></li>
-				<li><a href="#define-evasion">Evasion</a></li>
-				<li><a href="#define-hit-point">Hit Points and damage thresholds</a></li>
-				<li><a href="#define-armor">armor</a></li>
-				<li><a href="#define-range">range</a></li>
-				<li><a href="#define-stress">Stress</a></li>
-				<li><a href="#define-downtime">downtime</a></li>
-			</ul>
+			<div class="og-omit">
+				<h4 id="video-overview">Video Overview<a class="og-h-anchor" href="#video-overview" title="Permalink" aria-hidden="true"></a></h4>
+				<ul class="og-list-inline og-ref og-omit"><li>Editorial Addition</li></ul>
+				<p>This video covers the <a href="#flow-of-the-game">flow of the game</a>, and several <a href="#key-terms">key terms</a>, including:</p>
+				<ul class="og-list-inline">
+					<li><a href="#define-action-roll">action rolls</a></li>
+					<li><a href="#define-hope">Hope</a></li>
+					<li><a href="#define-fear">Fear</a></li>
+					<li><a href="#define-damage-roll">damage rolls</a></li>
+					<li><a href="#define-reaction-roll">reaction rolls</a></li>
+					<li><a href="#define-evasion">Evasion</a></li>
+					<li><a href="#define-hit-point">Hit Points and damage thresholds</a></li>
+					<li><a href="#define-armor">armor</a></li>
+					<li><a href="#define-range">range</a></li>
+					<li><a href="#define-stress">Stress</a></li>
+					<li><a href="#define-downtime">downtime</a></li>
+				</ul>
+			</div>
 			<div class="ratio ratio-16x9 mb-3 mt-3">
 				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6bV2K5eoJgk"></iframe>
 			</div>
@@ -274,537 +275,11 @@
 </div>
 <hr>
 <div id="printCC"></div>
-<div id="define-class">
-	<h2 id="classes">Classes<a class="og-h-anchor" href="#classes" title="Permalink" aria-hidden="true"></a></h2>
-	<div class="alert ps-4 pb-0 og-omit">
-		<ul class="list-unstyled og-qr">
-			<li>
-				<span class="h6"><a href="#define-bard">Bard</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-troubadour">Troubadour</a></li>
-					<li class="d-block"><a href="#define-wordsmith">Wordsmith</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-druid">Druid</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-warden-of-the-elements">Warden of the Elements</a></li>
-					<li class="d-block"><a href="#define-warden-of-renewal">Warden of Renewal</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-guardian">Guardian</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-stalwart">Stalwart</a></li>
-					<li class="d-block"><a href="#define-vengeance">Vengeance</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-ranger">Ranger</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-beastbound">Beastbound</a></li>
-					<li class="d-block"><a href="#define-wayfinder">Wayfinder</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-rogue">Rogue</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-nightwalker">Nightwalker</a></li>
-					<li class="d-block"><a href="#define-syndicate">Syndicate</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-seraph">Seraph</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-divine-wielder">Divine Wielder</a></li>
-					<li class="d-block"><a href="#define-winged-sentinel">Winged Sentinel</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-sorcerer">Sorcerer</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-elemental-origin">Elemental Origin</a></li>
-					<li class="d-block"><a href="#define-primal-origin">Primal Origin</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-warrior">Warrior</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-call-of-the-brave">Call of the Brave</a></li>
-					<li class="d-block"><a href="#define-call-of-the-slayer">Call of the Slayer</a></li>
-				</ul>
-			</li>
-			<li>
-				<span class="h6"><a href="#define-wizard">Wizard</a></span>
-				<ul class="og-list-inline small">
-					<li class="d-block"><a href="#define-school-of-knowledge">School of Knowledge</a></li>
-					<li class="d-block"><a href="#define-school-of-war">School of War</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 27</li></ul>
-	<p>A <strong>class</strong> is a role-based archetype that grants you:</p>
-	<ul class="og-list-disc">
-		<li>Access to two <a href="#define-domain">domains</a></li>
-		<li>Starting <a href="#define-evasion">Evasion</a> and <a href="#define-hit-point">Hit Points</a></li>
-		<li>Starting items</li>
-		<li>Class features, including a <a href="#define-hope">Hope Feature</a></li>
-		<li>A choice of <a href="#define-subclass">subclass</a></li>
-	</ul>
-	<p>There are nine classes in the <a href="#define-daggerheart">Daggerheart</a> core materials.</p>
-	<ul class="og-list-inline og-tooltip-block">
-		<li><a href="#bard">Bard</a></li>
-		<li><a href="#druid">Druid</a></li>
-		<li><a href="#guardian">Guardian</a></li>
-		<li><a href="#ranger">Ranger</a></li>
-		<li><a href="#rogue">Rogue</a></li>
-		<li><a href="#seraph">Seraph</a></li>
-		<li><a href="#sorcerer">Sorcerer</a></li>
-		<li><a href="#warrior">Warrior</a></li>
-		<li><a href="#wizard">Wizard</a></li>
-	</ul>
-	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p>When you reach <a href="#define-level">Level 5</a> or higher, you can select the <a href="#define-multiclass">Multiclassing</a> advancement, gaining a second class and <a href="#define-subclass">subclass</a>.</p>
-	</div>
-</div>
-<hr>
-<div id="define-subclass">
-	<h3 id="subclasses">Subclasses<a class="og-h-anchor" href="#subclasses" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 27</li></ul>
-	<p>Each <a href="#define-class">class</a> is divided into two subclasses, each of which further refines its archetype.</p>
-	<dl>
-		<dt>Spellcast Trait</dt>
-		<dd>If the subclass casts spells, this is the <a href="#define-trait">trait</a> <a href="#define-procedure">modifier</a> added to <a href="#define-spellcast-roll">Spellcast Rolls</a> and is sometimes used to determine a spell's <a href="#define-damage-roll">damage roll</a>.</dd>
-		<dt>Foundation Features</dt>
-		<dd>These features gained at <a href="#define-level">Level 1</a>.</dd>
-		<dt>Specialization Features</dt>
-		<dd>At <a href="#define-tier">Tier 3</a>, you can purchase the Enhanced Subclass <a href="#define-advancement">advancement</a> to gain its Specialization Features.</dd>
-		<dt>Mastery Features</dt>
-		<dd>At <a href="#define-tier">Tier 4</a>, if you already have its Specialization Features, you can purchase another Enhanced Subclass <a href="#define-advancement">advancement</a> to gain its Mastery Features.</dd>
-	</dl>
-</div>
-<hr>
+<div id="printAncestries"></div>
+<div id="printCommunities"></div>
 <div id="printClasses"></div>
-<div id="define-domain">
-	<h2 id="domains">Domains<a class="og-h-anchor" href="#domains" title="Permalink" aria-hidden="true"></a></h2>
-	<div class="alert ps-4 pb-0 og-omit">
-		<ul class="list-unstyled og-qr-compact">
-			<li><a href="#define-arcana">Arcana</a></li>
-			<li><a href="#define-blade">Blade</a></li>
-			<li><a href="#define-bone">Bone</a></li>
-			<li><a href="#define-codex">Codex</a></li>
-			<li><a href="#define-grace">Grace</a></li>
-			<li><a href="#define-midnight">Midnight</a></li>
-			<li><a href="#define-sage">Sage</a></li>
-			<li><a href="#define-splendor">Splendor</a></li>
-			<li><a href="#define-valor">Valor</a></li>
-		</ul>
-	</div>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 24</li></ul>
-	<p>The <a href="#define-daggerheart">Daggerheart</a> core set includes nine thematic <strong>Domain Decks</strong>, comprised of a collection of <a href="#define-domain-card">domain cards</a>.</p>
-	<p>Each <a href="#define-class">class</a> grants access to two domains.</p>
-	<ul class="og-list-inline og-tooltip-block">
-		<li>Arcana</li>
-		<li>Blade</li>
-		<li>Bone</li>
-		<li>Codex</li>
-		<li>Grace</li>
-		<li>Midnight</li>
-		<li>Sage</li>
-		<li>Splendor</li>
-		<li>Valor</li>
-	</ul>
-</div>
-<hr>
-<div class="row">
-	<div class="col-12 col-md-6">
-		<div id="define-domain-card">
-			<h3 id="domain-cards">Domain Cards<a class="og-h-anchor" href="#domain-cards" title="Permalink" aria-hidden="true"></a></h3>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 26</li></ul>
-			<p>Domain cards provide unique <a href="#define-action">moves</a>, passive bonuses, <a href="#define-downtime-move">downtime moves</a>, or <a href="#define-temporary">temporary</a> benefits to your PC. You choose two Level 1 <strong>domain cards</strong> at <a href="#define-character-creation">character creation</a>, and choose another each time you gain a <a href="#define-level">level</a>. You can gain an additional domain card each <a href="#define-tir">tier</a> by purchasing an <a href="#define-advancement">advancement</a>.</p>
-			<h4 class="h6">Domain Card Anatomy</h4>
-			<p>In addition to describing its effects or special rules for using the card, each includes:</p>
-			<dl>
-				<dt>Level</dt>
-				<dd>You can't choose a domain card with a <a href="#define-level">level</a> greater than yours&mdash;or half your level if you gained access to the card's <a href="#define-domain">domain</a> deck by <a href="#define-multiclass">multiclassing</a>.</dd>
-				<dt>Domain</dt>
-				<dd>You can only choose cards from your <a href="#define-class">class</a> <a href="#define-domain">domains</a>.</dd>
-				<dt>Recall Cost: X<span class="og-recall" aria-hidden="true">&#9889;</span></dt>
-				<dd>When you have the <a href="#define-spotlight">spotlight</a>, you can mark <a href="#define-stress">Stress</a> equal to a <a href="#define-loadout">vaulted</a> domain card's Recall Cost to exchange it for one in your <a href="#define-loadout">loadout</a>.</dd>
-				<dt>Type</dt>
-				<dd>There are three types of domain cards: <strong>Abilities</strong> are non-magical. <strong>Spells</strong> are magical. <strong>Grimoires</strong> from the <a href="#define-codex">Codex</a> domain grant you multiple, less potent spells.</dd>
-				<dt>Usage Limits</dt>
-				<dd>Some domain cards can only be used a certain number of times before a <a href="#define-downtime">short rest</a> or <a href="#define-downtime">long rest</a>. If a card has number of uses equal to a <a href="#define-trait">trait</a> with a <a href="#define-procedure">modifier</a> of +0 or less, you can't use it.</dd>
-			</dl>
-			<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-				<p>When you place cards with a Usage Limit in your <a href="#define-loaout">loadout</a>, be sure to track that information.</p>
-			</div>
-		</div>
-	</div>
-	<div class="col-12 col-md-6">
-		<div id="define-loadout">
-			<h4 id="loadout-and-vault">Loadout and Vault<a class="og-h-anchor" href="#loadout-and-vault" title="Permalink" aria-hidden="true"></a></h4>
-			<ul class="og-list-inline og-ref og-omit"><li>Page 101</li><li>Page 107</li></ul>
-			<dl>
-				<dt>Loadout</dt>
-				<dd>Your loadout is the set of <a href="#define-domain-card">domain cards</a> you can use during play. You can have up to 5 domain cards in your loadout.</dd>
-				<dt>Vault</dt>
-				<dd>Domain cards that aren't in our loadout are placed in your vault. Unless stated otherwise, vaulted cards don't provide you any benefits. If you cast a spell and then place that <a href="#define-domain-card">domain card</a> in your vault, its effects remain.</dd>
-				<dt>Exchanging Cards</dt>
-				<dd>At the start of <a href="#define-downtime">downtime</a>, you can exchange cards between your loadout and vault without paying <a href="#define-domain-card">Recall Costs</a>.</dd>
-			</dl>
-		</div>
-		<div class="text-center">
-			<img class="og-fig-lg d-light" src="images/class-domain-wheel-light.svg" alt="Classes and Domains" aria-hidden="true">
-			<img class="og-fig-lg d-dark" src="images/class-domain-wheel-dark.svg" alt="Classes and Domains" aria-hidden="true">
-		</div>
-	</div>
-</div>
-<hr>
 <div id="printDomains"></div>
 <div id="printDomainCards"></div>
-<div id="define-ancestry">
-	<h2 id="ancestries">Ancestries<a class="og-h-anchor" href="#ancestries" title="Permalink" aria-hidden="true"></a></h2>
-	<div class="alert ps-4 pb-0 og-omit">
-		<ul class="list-unstyled og-qr-compact">
-			<li><a href="#define-clank">Clank</a></li>
-			<li><a href="#define-drakona">Drakona</a></li>
-			<li><a href="#define-dwarf">Dwarf</a></li>
-			<li><a href="#define-elf">Elf</a></li>
-			<li><a href="#define-faerie">Faerie</a></li>
-			<li><a href="#define-faun">Faun</a></li>
-			<li><a href="#define-firbolg">Firbolg</a></li>
-			<li><a href="#define-fungril">Fungril</a></li>
-			<li><a href="#define-galapa">Galapa</a></li>
-			<li><a href="#define-giant">Giant</a></li>
-			<li><a href="#define-goblin">Goblin</a></li>
-			<li><a href="#define-halfling">Halfling</a></li>
-			<li><a href="#define-human">Human</a></li>
-			<li><a href="#define-infernis">Infernis</a></li>
-			<li><a href="#define-katari">Katari</a></li>
-			<li><a href="#define-orc">Orc</a></li>
-			<li><a href="#define-ribbet">Ribbet</a></li>
-			<li><a href="#define-simiah">Simiah</a></li>
-			<li><a href="#define-mixed-ancestry">Mixed Ancestry</a></li>
-		</ul>
-	</div>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 52</li></ul>
-	<p><strong>Ancestries</strong> represent a PC's lineage and physical appearance. The following section describes each ancestry. Each description includes characteristics shared by most with that ancestry, but each player decides how much their PCs aligns with the average expression of their ancestry.</p>
-	<p>There are eighteen ancestries in the <a href="#define-daggerheart">Daggerheart</a> core materials.</p>
-	<ul class="og-list-inline og-tooltip-block">
-		<li><a href="#clank">Clank</a></li>
-		<li><a href="#drakona">Drakona</a></li>
-		<li><a href="#dwarf">Dwarf</a></li>
-		<li><a href="#elf">Elf</a></li>
-		<li><a href="#faerie">Faerie</a></li>
-		<li><a href="#faun">Faun</a></li>
-		<li><a href="#firbolg">Firbolg</a></li>
-		<li><a href="#fungril">Fungril</a></li>
-		<li><a href="#galapa">Galapa</a></li>
-		<li><a href="#giant">Giant</a></li>
-		<li><a href="#goblin">Goblin</a></li>
-		<li><a href="#halfling">Halfling</a></li>
-		<li><a href="#human">Human</a></li>
-		<li><a href="#infernis">Infernis</a></li>
-		<li><a href="#katari">Katari</a></li>
-		<li><a href="#orc">Orc</a></li>
-		<li><a href="#ribbet">Ribbet</a></li>
-		<li><a href="#simiah">Simiah</a></li>
-		<li><a href="#mixed-ancestry">Mixed Ancestry</a></li>
-	</ul>
-	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p><strong>People</strong> refers to all ancestries. Some ancestries are described as humanoid. This doesn't imply genetic relation to <a href="#define-human">humans</a>, but rather to a set of anatomical characteristics&mdash;bipedal movement, upright posture, and facial structure.</p>
-	</div>
-	<h3 class="h6">Ancestry Features</h3>
-	<p>Each ancestry grants two ancestry features. While some features&mdash;for example, the ability to fly&mdash;are implicitly tied to anatomy, you determine your PC's physical form. Work with the GM to change any implied characteristics that don't align with your character concept.</p>
-</div>
-<hr>
-<div id="printAncestries"></div>
-<div id="define-mixed-ancestry">
-	<h3 class="og-tab" id="mixed-ancestry">Mixed Ancestry<a class="og-h-anchor" href="#mixed-ancestry" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 71</li></ul>
-	<p>Families are as unique as the peoples and cultures that inhabit them. Anyone's appearance and abilities can be shaped by blood, magic, proximity, or other variety of factors. If you are a descendant of multiple ancestries, use the steps below:</p>
-	<h4 class="h6">Step 1: Choose an Ancestry Combination</h4>
-	<p>When you choose an heritage at <a href="#define-character-creation">character creation</a>, write down how you identify&mdash;for example, if you are descended from <a href="#define-goblin">goblins</a> and <a href="#define-orc">orcs</a>, you could be a <strong>goblin-orc</strong>. You could also choose the ancestry you identify with&mdash;<strong>goblin</strong> or <strong>orc</strong>. Alternatively, invent a new name for your ancestry&mdash;for example, <strong>toothling</strong>.</p>
-	<h4 class="h6">Step 2: Choose Ancestry Features</h4>
-	<p>Choose the <strong>first feature</strong> from one ancestry, and the <strong>second feature</strong> from the other&mdash;for example, if you are mixing the <a href="#define-goblin">goblin</a>-<a href="#define-orc">orc</a> ancestries, you can take the <strong><em>Surefooted</em></strong> and <strong><em>Tusks</em></strong> features, or the <strong><em>Sturdy</em></strong> and <strong><em>Danger Sense</em></strong> features.</p>
-</div>
-<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-	<p>If your heritage includes more than two ancestries, you can represent additional ancestries through their appearance, backstory, and <a href="#define-experience">Experiences</a>. You can experiment with different mixed ancestry combinations in <a href="#cc-step-2">Character Creation Step 2: Choose a Heritage</a>.</p>
-</div>
-<hr>
-<div id="define-community">
-	<h2 id="communities">Communities<a class="og-h-anchor" href="#communities" title="Permalink" aria-hidden="true"></a></h2>
-	<div class="alert ps-4 pb-0 og-omit">
-		<ul class="list-unstyled og-qr-compact">
-			<li><a href="#define-highborne">Highborne</a></li>
-			<li><a href="#define-loreborne">Loreborne</a></li>
-			<li><a href="#define-orderborne">Orderborne</a></li>
-			<li><a href="#define-ridgeborne">Ridgeborne</a></li>
-			<li><a href="#define-seaborne">Seaborne</a></li>
-			<li><a href="#define-slyborne">Slyborne</a></li>
-			<li><a href="#define-underborne">Underborne</a></li>
-			<li><a href="#define-wanderborne">Wanderborne</a></li>
-			<li><a href="#define-wildborne">Wildborne</a></li>
-		</ul>
-	</div>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 72</li></ul>
-	<p>Communities represent the <strong>culture</strong>, <strong>class</strong>, or <strong>environment of origin</strong> that has had a significant on a PC's upbringing.</p>
-	<p>There are nine communities in the <a href="#define-daggerheart">Daggerheart</a> core materials.</p>
-	<ul class="og-list-inline og-tooltip-block">
-		<li><a href="#define-highborne">Highborne</a></li>
-		<li><a href="#define-loreborne">Loreborne</a></li>
-		<li><a href="#define-orderborne">Orderborne</a></li>
-		<li><a href="#define-ridgeborne">Ridgeborne</a></li>
-		<li><a href="#define-seaborne">Seaborne</a></li>
-		<li><a href="#define-slyborne">Slyborne</a></li>
-		<li><a href="#define-underborne">Underborne</a></li>
-		<li><a href="#define-wanderborne">Wanderborne</a></li>
-		<li><a href="#define-wildborne">Wildborne</a></li>
-	</ul>
-	<h3 class="h6">Community Features</h3>
-	<p>Your community grants you a <strong>community feature</strong>.</p>
-</div>
-<hr>
-<div id="printCommunities"></div>
-<div id="define-trait">
-	<h2 id="traits">Traits<a class="og-h-anchor" href="#traits" title="Permalink" aria-hidden="true"></a></h2>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 17</li></ul>
-	<p>You have six <strong>traits</strong> that represent your physical, mental, and social aptitudes.</p>
-	<ul class="og-list-inline og-tooltip-block">
-		<li><a href="#define-agility">Agility</a></li>
-		<li><a href="#define-strength">Strength</a></li>
-		<li><a href="#define-finesse">Finesse</a></li>
-		<li><a href="#define-instinct">Instinct</a></li>
-		<li><a href="#define-presence">Presence</a></li>
-		<li><a href="#define-knowledge">Knowledge</a></li>
-	</ul>
-	<dl>
-		<dt>Trait Arrays</dt>
-		<dd>Your traits start with an <a href="#define-trait-array">array</a> of <a href="#define-procedure">modifiers</a> assigned during <a href="#define-character-creation">character creation</a>.</dd>
-		<dt>Traits and Action Rolls</dt>
-		<dd>When you make an <a href="#define-action-roll">action roll</a>, the relevant trait's <a href="#define-procedure">modifier</a> is added to the roll's total.</dd>
-		<dt>Negative Modifiers</dt>
-		<dd>Unless otherwise stated, if a mechanic other than a roll uses a trait modifier and yours is negative, treat it as if it were 0&mdash;for example, if you are a <a href="#define-druid">Druid</a> and choose the <a href="#define-warden-of-renewal">Warden of Renewal</a>, your <strong><em>Clarity of Nature</em></strong> feature requires an <a href="#define-instinct">Instinct</a> modifier of +1 or higher to have any effect. A few mechanics set a minimum&mdash;for example, the <a href="#define-domain-card-flight">Flight</a> spell grants 1 counter even if your <a href="#define-agility">Agility</a> modifier is &minus;1.</dd> 
-		<dt>Increasing Trait Modifiers</dt>
-		<dd>When you gain a <a href="#define-level">level</a>, you can increase purchase an <a href="#define-advancement">advancement</a> to increase the modifiers of two traits. You can increase a trait's modifier only once each <a href="#define-tier">tier</a>.</dd>
-	</dl>
-</div>
-<hr>
-<div id="printTraits"></div>
-<div id="define-experience">
-	<h2 id="experiences">Experiences<a class="og-h-anchor" href="#experiences" title="Permalink" aria-hidden="true"></a></h2>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 20</li><li>Page 93</li></ul>
-	<p>An <strong>Experience</strong> is a word or phrase that evokes a personality traits or aptitudes you've acquired. Experiences can relate to your backstory, characteristics, specialties, or skills.</p>
-	<dl>
-		<dt>Creating Experiences</dt>
-		<dd>You start with two Experiences from <a href="#define-character-creation">character creation</a>. You create new Experiences each time you reach a new <a href="#define-tier">tier</a>. Experiences start with a +2 <a href="#define-procedure">modifier</a>. </dd>
-		<dt>Utilize an Experience</dt>
-		<dd>When you make an <a href="#define-action-roll">action roll</a> or <a href="#define-reaction-roll">reaction roll</a>, you can <strong><a href="#define-hope">spend a Hope</a></strong> to add a relevant experience's <a href="#define-procedure">modifier</a> to the result. Describe how the Experience applies. The GM might require you further justify the Experience's relevance, but you decide whether the Experience applies (within reason). You can apply more than one Experience to a roll.</dd>
-		<dt>Increasing Experience Modifiers</dt>
-		<dd>When you gain a <a href="#define-level">level</a>, you can purchase an <a href="#define-advancement">advancement</a> to increase an Experience's <a href="#define-procedure">modifier</a>.</dd>
-	</dl>
-	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-		<p>For more on creating Experiences, see <a href="#define-character-creation">Character Creation</a>.</p>
-	</div>
-</div>
-<hr>
-<div id="define-hope">
-	<h2 id="hope">Hope<a class="og-h-anchor" href="#hope" title="Permalink" aria-hidden="true"></a></h2>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 90</li></ul>
-	<p>You start with 2 <strong>Hope</strong> at <a href="#define-character-creation">character creation</a> and gain one more when you <a href="#define-action-roll">roll with Hope</a>. You have a maximum of 6 Hope slots. Hope carries over between sessions.</p>
-	<p class="h6">Spending Hope</p>
-	<dl>
-		<dt>Help an Ally (1 Hope)</dt>
-		<dd>You help a PC with an <a href="#define-action-roll">action roll</a>. Describe how you help, roll your own <a href="#define-advantage">advantage</a> die, and apply the result as a <a href="#define-procedure">modifier</a> to their roll. If the PC you help gains advantage from multiple sources, they add only the highest result from any rolled advantage dice.</dd>
-		<dt>Utilize an Experience (1+ Hope)</dt>
-		<dd>When you <a href="#define-experience">Utilize an Experience</a> on a relevant roll, add its <a href="#define-procedure">modifier</a> to the result. You can spend additional Hope to utilize additional relevant Experiences.</dd>
-		<dt>Tag Team Roll (3 Hope)</dt>
-		<dd>Initiate a <a href="#define-tag-team-roll">Tag Team Roll</a>.</dd>
-		<dt>Class Hope Feature (3 Hope)</dt>
-		<dd>Each <a href="#define-class">class</a> provides a class Hope feature.</dd>
-		<dt>Other Uses for Hope (1+ Hope)</dt>
-		<dd>Other uses for Hope are defined by <a href="#define-class">class</a> or <a href="#define-class">subclass</a> features, <a href="#define-domain-card">domain cards</a>, and <a href="#define-equipment">equipment</a>.</dd>
-		<dt>Rolling with Hope</dt>
-		<dd>If you <a href="#define-action-roll">roll with Hope</a> for an <a href="#define-action">action</a> prompted by a Hope Feature or <a href="#define-domain-card">domain card</a>, you can spend the Hope you gain from the roll on the action.</dd>
-	</dl>
-</div>
-<hr>
-<div id="define-level">
-	<h2 id="gaining-levels">Gaining Levels<a class="og-h-anchor" href="#gaining-levels" title="Permalink" aria-hidden="true"></a></h2>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 109</li><li>Page 110</li><li>Page 111</li></ul>
-	<p>The PCs gain a <strong>level</strong> when the GM decides you've reached a narrative milestone (usually about every 3 sessions).</p>
-	<p>Each time you gain a level, go through the following four steps:</p>
-	<dl>
-		<dt class="h6">Step 1: Check for Tier Achievements</dt>
-		<dd>There are 10 PC levels, which are divided into 4 <a href="#define-tier">tiers</a>. When gaining a level causes you reach a new tier&mdash;at <strong>Level 2</strong>, <strong>Level 5</strong>, and <strong>Level 8</strong>&mdash;you gain new <a href="#define-tier">tier achievements</a>.</dd>
-		<dt class="h6">Step 2: Purchase Advancements</dt>
-		<dd>You gain two <a href="#define-advancement">advancements</a>, which you use to purchase benefits available to your <a href="#define-tier">tier</a> or lower. Additional advancements become available at <a href="#define-tier">Tier 3</a> and <a href="#define-tier">Tier 4</a>.</dd>
-		<dt class="h6">Step 3: Increase Damage Thresholds</dt>
-		<dd>Increase your Major and Severe <a href="#define-hit-point">damage thresholds</a> by 1.</dd>
-		<dt class="h6">Step 4: Choose A Domain Card</dt>
-		<dd>You gain one <a href="#define-domain-card">domain card</a> and add it to your <a href="#define-loadout">loadout or vault</a>. If your loadout is full, you can immediately place a card into your vault to make room. Additionally, you can exchange one of your domain cards for another of equal or lower level.</dd>
-	</dl>
-</div>
-<hr>
-<div id="define-tier">
-    <h3 id="tier-achievments">Tier Achievements<a class="og-h-anchor" href="#tier-achievments" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 109</li></ul>
-	<p>Your <strong>tier</strong> affects your <strong>tier achievements</strong>, and access to <a href="#define-advancement">advancements</a>.</p>
-	<h4 class="h6">Levels, Tiers, and Tier Achievements</h4>
-	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-		<caption>Levels, Tiers, and Tier Achievements</caption>
-		<thead>
-			<tr>
-				<th class="text-center" scope="col">Level</th>
-				<th class="text-center" scope="col">Tier</th>
-				<th scope="col">Tier Achievements</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th class="text-center fw-normal" scope="row">Level 1</th>
-				<td class="text-center">Tier 1</td>
-				<td>&mdash;</td>
-			</tr>
-			<tr>
-				<th class="text-center fw-normal" scope="row">Level 2&ndash;4</th>
-				<td class="text-center">Tier 2</td>
-				<td>				
-					<ul class="og-list-disc mb-0">
-						<li>Gain a new <a href="#define-experience">Experience</a></li>
-						<li>Gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a></li>
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<th class="text-center fw-normal" scope="row">Level 5&ndash;7</th>
-				<td class="text-center">Tier 3</td>
-				<td>				
-					<ul class="og-list-disc mb-0">
-						<li>Gain a new <a href="#define-experience">Experience</a></li>
-						<li>Gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a></li>
-						<li>Clear marked <a href="#define-trait">traits</a></li>
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<th class="text-center fw-normal" scope="row">Level 8&ndash;10</th>
-				<td class="text-center">Tier 4</td>
-				<td>				
-					<ul class="og-list-disc mb-0">
-						<li>Gain a new <a href="#define-experience">Experience</a></li>
-						<li>Gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a></li>
-						<li>Clear marked <a href="#define-trait">traits</a></li>
-					</ul>
-				</td>
-			</tr>
-		</tbody>
-	</table></div>
-</div>
-<hr>
-<div id="define-advancement">
-	<h3 id="advancements">Advancements<a class="og-h-anchor" href="#advancements" title="Permalink" aria-hidden="true"></a></h3>
-	<ul class="og-list-inline og-ref og-omit"><li>Page 110</li></ul>
-	<p>You can purchase an advancement a number of times equal to its slots. The <a href="#define-damage-roll">Proficiency</a> and <a href="#define-multiclass">Multiclassing</a> options require spending both advancements to purchase.</p>
-	<h4 class="h6">Advancements by Tier</h4>
-	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
-		<caption>Advancements by Tier</caption>
-		<thead>
-			<tr>
-				<th scope="col">Advancement</th>
-				<th scope="col">Benefits</th>
-				<th class="text-end og-nowrap ps-2 pe-3" scope="col">Tier 2</th>
-				<th class="text-end og-nowrap ps-2 pe-3" scope="col">Tier 3</th>
-				<th class="text-end og-nowrap ps-2 pe-2" scope="col">Tier 4</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th class="fw-normal" scope="row">Traits</th>
-				<td><span class="og-omit">Gain a </span>+1 bonus to two <a href="#define-trait">trait</a> <a href="#define-procedure">modifiers</a><span class="og-omit"> and mark them. You can't use this advancement to increase a marked trait until you reach a new <a href="#define-tier">tier</a> and clear it</span>.</td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54; &nbsp;&#x2b54;</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54; &nbsp;&#x2b54;</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54; &nbsp;&#x2b54;</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Hit Point</th>
-				<td>Gain a <a href="#define-hit-point">Hit Point</a> slot.</td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">2</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Stress</th>
-				<td>Gain a <a href="#define-stress">Stress</a> slot.</td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span><span class="visually-hidden">2</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span><span class="visually-hidden">2</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span><span class="visually-hidden">2</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Experiences</th>
-				<td><span class="og-omit">Gain a </span>+1 bonus to two <a href="#define-experience">Experiences</a>.</td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Domain Card</th>
-				<td>Choose a new <a href="#define-domain-card">domain card</a><span class="og-omit"> from your <a href="#define-domain">domains</a>. The card's level can't exceed the level range of the <a href="#define-tier">tier</a> slot used to purchase this advancement</span>.</td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Evasion</th>
-				<td><span class="og-omit">Gain a </span>+1 bonus to your <a href="#define-evasion">Evasion</a>.</td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Enhanced Subclass</th>
-				<td>Progress a <a href="#define-subclass">subclass</a><span class="og-omit">, gaining its specialization feature&mdash;or if you have them already, its mastery features. Choosing this option excludes the <strong>Multiclass</strong> advancement for this <a href="#define-tier">tier</a></span>.</td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">&mdash;</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Proficiency</th>
-				<td><span class="og-omit">Gain a </span>+1 bonus to your <a href="#define-damage-roll">Proficiency</a>. <span class="og-omit">You must spend both advancements to purchase this benefit.</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">&mdash;</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-			</tr>
-			<tr>
-				<th class="fw-normal" scope="row">Multiclassing</th>
-				<td>You gain additional <a href="#define-class">class</a>, as described under <a href="#define-multiclass">multiclassing</a>. <span class="og-omit">You must spend both advancements to purchase this benefit. Choosing this option excludes the <strong>Enhanced Subclass</strong> advancement for this <a href="#define-tier">tier</a>, and the <strong>Multiclass</strong> option for other <a href="#define-tier">tiers</a>.</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">&mdash;</span></td>
-				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
-			</tr>
-		</tbody>
-	</table></div>
-</div>
-<div class="og-topbar">
-	<div id="define-multiclass">
-		<h4 id="multiclassing">Multiclassing<a class="og-h-anchor" href="#multiclassing" title="Permalink" aria-hidden="true"></a></h4>
-		<ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
-		<p>Starting at <a href="#define-tier">Tier 3</a>, you can choose <strong>multiclassing</strong> as an <a href="#define-advancement">advancement</a>. You can only multiclass once.</p>
-		<dl>
-			<dt>Choosing a Multiclass</dt>
-			<dd>Choose a <a href="#define-class">class</a>. You gain access to one of its <a href="#define-domain">domains</a> and its class features. You don't gain its class <a href="#define-hope">Hope</a> feature. Next, choose a <a href="#define-subclass">subclasses</a> for your new class. You gain its foundation features.</dd>
-			<dt>Spellcast Trait</dt>
-			<dd>If your new <a href="#define-subclass">subclass</a> assigns you a second <a href="#define-subclass">Spellcast trait</a>, you can choose which <a href="#define-procedure">modifier</a> to apply when making a <a href="#define-spellcast-roll">Spellcast Roll</a>.</dd>
-			<dt>Features</dt>
-			<dd>Attacks, spells, and other <a href="#define-action">actions</a> use your <a href="#define-level">level</a> and <a href="#define-tier">tier</a>&mdash;for example, if you multiclass into <a href="#define-rogue">Rogue</a> when you reach <a href="#define-level">Level 5</a>, your <em>Sneak Attack</em> feature's damage is <strong>2d6</strong> because your <a href="#define-level">level</a> places you at <a href="#define-tier">Tier 2</a>.</dd>
-			<dt>Domain Cards</dt>
-			<dd>When you choose a new <a href="#define-domain-card">domain card</a>, you can choose from cards up to half your <a href="#define-level">level</a> from your multiclass <a href="#define-domain">domain</a>&mdash;for example, if you multiclass into <a href="#define-rogue">Rogue</a> at <a href="#define-level">Level 5</a> and choose its <a href="#define-midnight">Midnight</a> domain, you can choose <a href="#define-domain-card">domain cards</a> up to level 3 from the <a href="#define-midnight">Midnight</a> domain deck.</dd>
-		</dl>
-	</div>
-</div>
-<hr>
 <div id="define-equipment">
 	<h2 id="equipment">Equipment<a class="og-h-anchor" href="#define-equipment" title="Permalink" aria-hidden="true"></a></h2>
 	<div class="alert ps-4 pb-0 og-omit">
@@ -1370,6 +845,219 @@
 	</div>
 </div>
 <hr>
+<div id="printTraits"></div>
+<div id="define-hope">
+	<h2 id="hope">Hope<a class="og-h-anchor" href="#hope" title="Permalink" aria-hidden="true"></a></h2>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 90</li></ul>
+	<p>You start with 2 <strong>Hope</strong> at <a href="#define-character-creation">character creation</a> and gain one more when you <a href="#define-action-roll">roll with Hope</a>. You have a maximum of 6 Hope slots. Hope carries over between sessions.</p>
+	<p class="h6">Spending Hope</p>
+	<dl>
+		<dt>Help an Ally (1 Hope)</dt>
+		<dd>You help a PC with an <a href="#define-action-roll">action roll</a>. Describe how you help, roll your own <a href="#define-advantage">advantage</a> die, and apply the result as a <a href="#define-procedure">modifier</a> to their roll. If the PC you help gains advantage from multiple sources, they add only the highest result from any rolled advantage dice.</dd>
+		<dt>Utilize an Experience (1+ Hope)</dt>
+		<dd>When you <a href="#define-experience">Utilize an Experience</a> on a relevant roll, add its <a href="#define-procedure">modifier</a> to the result. You can spend additional Hope to utilize additional relevant Experiences.</dd>
+		<dt>Tag Team Roll (3 Hope)</dt>
+		<dd>Initiate a <a href="#define-tag-team-roll">Tag Team Roll</a>.</dd>
+		<dt>Class Hope Feature (3 Hope)</dt>
+		<dd>Each <a href="#define-class">class</a> provides a class Hope feature.</dd>
+		<dt>Other Uses for Hope (1+ Hope)</dt>
+		<dd>Other uses for Hope are defined by <a href="#define-class">class</a> or <a href="#define-class">subclass</a> features, <a href="#define-domain-card">domain cards</a>, and <a href="#define-equipment">equipment</a>.</dd>
+		<dt>Rolling with Hope</dt>
+		<dd>If you <a href="#define-action-roll">roll with Hope</a> for an <a href="#define-action">action</a> prompted by a Hope Feature or <a href="#define-domain-card">domain card</a>, you can spend the Hope you gain from the roll on the action.</dd>
+	</dl>
+</div>
+<hr>
+<div id="define-experience">
+	<h2 id="experiences">Experiences<a class="og-h-anchor" href="#experiences" title="Permalink" aria-hidden="true"></a></h2>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 20</li><li>Page 93</li></ul>
+	<p>An <strong>Experience</strong> is a word or phrase that evokes a personality traits or aptitudes you've acquired. Experiences can relate to your backstory, characteristics, specialties, or skills.</p>
+	<dl>
+		<dt>Creating Experiences</dt>
+		<dd>You start with two Experiences from <a href="#define-character-creation">character creation</a>. You create new Experiences each time you reach a new <a href="#define-tier">tier</a>. Experiences start with a +2 <a href="#define-procedure">modifier</a>. </dd>
+		<dt>Utilize an Experience</dt>
+		<dd>When you make an <a href="#define-action-roll">action roll</a> or <a href="#define-reaction-roll">reaction roll</a>, you can <strong><a href="#define-hope">spend a Hope</a></strong> to add a relevant experience's <a href="#define-procedure">modifier</a> to the result. Describe how the Experience applies. The GM might require you further justify the Experience's relevance, but you decide whether the Experience applies (within reason). You can apply more than one Experience to a roll.</dd>
+		<dt>Increasing Experience Modifiers</dt>
+		<dd>When you gain a <a href="#define-level">level</a>, you can purchase an <a href="#define-advancement">advancement</a> to increase an Experience's <a href="#define-procedure">modifier</a>.</dd>
+	</dl>
+	<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p>For more on creating Experiences, see <a href="#define-character-creation">Character Creation</a>.</p>
+	</div>
+</div>
+<hr>
+<div id="define-level">
+	<h2 id="gaining-levels">Gaining Levels<a class="og-h-anchor" href="#gaining-levels" title="Permalink" aria-hidden="true"></a></h2>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 109</li><li>Page 110</li><li>Page 111</li></ul>
+	<p>The PCs gain a <strong>level</strong> when the GM decides you've reached a narrative milestone (usually about every 3 sessions).</p>
+	<p>Each time you gain a level, go through the following four steps:</p>
+	<dl>
+		<dt class="h6">Step 1: Check for Tier Achievements</dt>
+		<dd>There are 10 PC levels, which are divided into 4 <a href="#define-tier">tiers</a>. When gaining a level causes you reach a new tier&mdash;at <strong>Level 2</strong>, <strong>Level 5</strong>, and <strong>Level 8</strong>&mdash;you gain new <a href="#define-tier">tier achievements</a>.</dd>
+		<dt class="h6">Step 2: Purchase Advancements</dt>
+		<dd>You gain two <a href="#define-advancement">advancements</a>, which you use to purchase benefits available to your <a href="#define-tier">tier</a> or lower. Additional advancements become available at <a href="#define-tier">Tier 3</a> and <a href="#define-tier">Tier 4</a>.</dd>
+		<dt class="h6">Step 3: Increase Damage Thresholds</dt>
+		<dd>Increase your Major and Severe <a href="#define-hit-point">damage thresholds</a> by 1.</dd>
+		<dt class="h6">Step 4: Choose A Domain Card</dt>
+		<dd>You gain one <a href="#define-domain-card">domain card</a> and add it to your <a href="#define-loadout">loadout or vault</a>. If your loadout is full, you can immediately place a card into your vault to make room. Additionally, you can exchange one of your domain cards for another of equal or lower level.</dd>
+	</dl>
+</div>
+<hr>
+<div id="define-tier">
+    <h3 id="tier-achievments">Tier Achievements<a class="og-h-anchor" href="#tier-achievments" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 109</li></ul>
+	<p>Your <strong>tier</strong> affects your <strong>tier achievements</strong>, and access to <a href="#define-advancement">advancements</a>.</p>
+	<h4 class="h6">Levels, Tiers, and Tier Achievements</h4>
+	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+		<caption>Levels, Tiers, and Tier Achievements</caption>
+		<thead>
+			<tr>
+				<th class="text-center" scope="col">Level</th>
+				<th class="text-center" scope="col">Tier</th>
+				<th scope="col">Tier Achievements</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="text-center fw-normal" scope="row">Level 1</th>
+				<td class="text-center">Tier 1</td>
+				<td>&mdash;</td>
+			</tr>
+			<tr>
+				<th class="text-center fw-normal" scope="row">Level 2&ndash;4</th>
+				<td class="text-center">Tier 2</td>
+				<td>				
+					<ul class="og-list-disc mb-0">
+						<li>Gain a new <a href="#define-experience">Experience</a></li>
+						<li>Gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th class="text-center fw-normal" scope="row">Level 5&ndash;7</th>
+				<td class="text-center">Tier 3</td>
+				<td>				
+					<ul class="og-list-disc mb-0">
+						<li>Gain a new <a href="#define-experience">Experience</a></li>
+						<li>Gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a></li>
+						<li>Clear marked <a href="#define-trait">traits</a></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th class="text-center fw-normal" scope="row">Level 8&ndash;10</th>
+				<td class="text-center">Tier 4</td>
+				<td>				
+					<ul class="og-list-disc mb-0">
+						<li>Gain a new <a href="#define-experience">Experience</a></li>
+						<li>Gain a +1 bonus to your <a href="#define-damage-roll">Proficiency</a></li>
+						<li>Clear marked <a href="#define-trait">traits</a></li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table></div>
+</div>
+<hr>
+<div id="define-advancement">
+	<h3 id="advancements">Advancements<a class="og-h-anchor" href="#advancements" title="Permalink" aria-hidden="true"></a></h3>
+	<ul class="og-list-inline og-ref og-omit"><li>Page 110</li></ul>
+	<p>You can purchase an advancement a number of times equal to its slots. The <a href="#define-damage-roll">Proficiency</a> and <a href="#define-multiclass">Multiclassing</a> options require spending both advancements to purchase.</p>
+	<h4 class="h6">Advancements by Tier</h4>
+	<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+		<caption>Advancements by Tier</caption>
+		<thead>
+			<tr>
+				<th scope="col">Advancement</th>
+				<th scope="col">Benefits</th>
+				<th class="text-end og-nowrap ps-2 pe-3" scope="col">Tier 2</th>
+				<th class="text-end og-nowrap ps-2 pe-3" scope="col">Tier 3</th>
+				<th class="text-end og-nowrap ps-2 pe-2" scope="col">Tier 4</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="fw-normal" scope="row">Traits</th>
+				<td><span class="og-omit">Gain a </span>+1 bonus to two <a href="#define-trait">trait</a> <a href="#define-procedure">modifiers</a><span class="og-omit"> and mark them. You can't use this advancement to increase a marked trait until you reach a new <a href="#define-tier">tier</a> and clear it</span>.</td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54; &nbsp;&#x2b54;</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54; &nbsp;&#x2b54;</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">3</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54; &nbsp;&#x2b54;</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Hit Point</th>
+				<td>Gain a <a href="#define-hit-point">Hit Point</a> slot.</td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span class="visually-hidden">2</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span class="visually-hidden">2</span><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Stress</th>
+				<td>Gain a <a href="#define-stress">Stress</a> slot.</td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span><span class="visually-hidden">2</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span><span class="visually-hidden">2</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54; &nbsp;&#x2b54;</span><span class="visually-hidden">2</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Experiences</th>
+				<td><span class="og-omit">Gain a </span>+1 bonus to two <a href="#define-experience">Experiences</a>.</td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Domain Card</th>
+				<td>Choose a new <a href="#define-domain-card">domain card</a><span class="og-omit"> from your <a href="#define-domain">domains</a>. The card's level can't exceed the level range of the <a href="#define-tier">tier</a> slot used to purchase this advancement</span>.</td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Evasion</th>
+				<td><span class="og-omit">Gain a </span>+1 bonus to your <a href="#define-evasion">Evasion</a>.</td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Enhanced Subclass</th>
+				<td>Progress a <a href="#define-subclass">subclass</a><span class="og-omit">, gaining its specialization feature&mdash;or if you have them already, its mastery features. Choosing this option excludes the <strong>Multiclass</strong> advancement for this <a href="#define-tier">tier</a></span>.</td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">&mdash;</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Proficiency</th>
+				<td><span class="og-omit">Gain a </span>+1 bonus to your <a href="#define-damage-roll">Proficiency</a>. <span class="og-omit">You must spend both advancements to purchase this benefit.</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">&mdash;</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+			</tr>
+			<tr>
+				<th class="fw-normal" scope="row">Multiclassing</th>
+				<td>You gain additional <a href="#define-class">class</a>, as described under <a href="#define-multiclass">multiclassing</a>. <span class="og-omit">You must spend both advancements to purchase this benefit. Choosing this option excludes the <strong>Enhanced Subclass</strong> advancement for this <a href="#define-tier">tier</a>, and the <strong>Multiclass</strong> option for other <a href="#define-tier">tiers</a>.</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">&mdash;</span></td>
+				<td class="text-end og-nowrap ps-2 pe-3"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+				<td class="text-end og-nowrap ps-2 pe-2"><span aria-hidden="true">&#x2b54;</span><span class="visually-hidden">1</span></td>
+			</tr>
+		</tbody>
+	</table></div>
+</div>
+<div class="og-topbar">
+	<div id="define-multiclass">
+		<h4 id="multiclassing">Multiclassing<a class="og-h-anchor" href="#multiclassing" title="Permalink" aria-hidden="true"></a></h4>
+		<ul class="og-list-inline og-ref og-omit"><li>Page 111</li></ul>
+		<p>Starting at <a href="#define-tier">Tier 3</a>, you can choose <strong>multiclassing</strong> as an <a href="#define-advancement">advancement</a>. You can only multiclass once.</p>
+		<dl>
+			<dt>Choosing a Multiclass</dt>
+			<dd>Choose a <a href="#define-class">class</a>. You gain access to one of its <a href="#define-domain">domains</a> and its class features. You don't gain its class <a href="#define-hope">Hope</a> feature. Next, choose a <a href="#define-subclass">subclasses</a> for your new class. You gain its foundation features.</dd>
+			<dt>Spellcast Trait</dt>
+			<dd>If your new <a href="#define-subclass">subclass</a> assigns you a second <a href="#define-subclass">Spellcast trait</a>, you can choose which <a href="#define-procedure">modifier</a> to apply when making a <a href="#define-spellcast-roll">Spellcast Roll</a>.</dd>
+			<dt>Features</dt>
+			<dd>Attacks, spells, and other <a href="#define-action">actions</a> use your <a href="#define-level">level</a> and <a href="#define-tier">tier</a>&mdash;for example, if you multiclass into <a href="#define-rogue">Rogue</a> when you reach <a href="#define-level">Level 5</a>, your <em>Sneak Attack</em> feature's damage is <strong>2d6</strong> because your <a href="#define-level">level</a> places you at <a href="#define-tier">Tier 2</a>.</dd>
+			<dt>Domain Cards</dt>
+			<dd>When you choose a new <a href="#define-domain-card">domain card</a>, you can choose from cards up to half your <a href="#define-level">level</a> from your multiclass <a href="#define-domain">domain</a>&mdash;for example, if you multiclass into <a href="#define-rogue">Rogue</a> at <a href="#define-level">Level 5</a> and choose its <a href="#define-midnight">Midnight</a> domain, you can choose <a href="#define-domain-card">domain cards</a> up to level 3 from the <a href="#define-midnight">Midnight</a> domain deck.</dd>
+		</dl>
+	</div>
+</div>
+<hr>
 <h2 id="core-mechanics">Core Mechanics<a class="og-h-anchor" href="#core-mechanics" title="Permalink" aria-hidden="true"></a></h2>
 <div class="alert ps-4 pb-0 og-omit">
 	<h3 id="key-terms">Key Terms<a class="og-h-anchor" href="#key-terms" title="Permalink" aria-hidden="true"></a></h3>
@@ -1426,7 +1114,7 @@
 		<li><a href="#define-bard">Bard</a></li>
 		<li><a href="#define-armor">Base Score</a></li>
 		<li><a href="#define-armor">base threshold</a></li>
-		<li><a href="define-battle-points">Battle points</a></li>
+		<li><a href="#define-battle-points">Battle points</a></li>
 		<li><a href="#define-beastbound">Beastbound</a></li>
 		<li><a href="#define-beastbound-companion">Beastbound companion</a></li>
 		<li><a href="#define-druid-beastform-options">Beastform options</a></li>

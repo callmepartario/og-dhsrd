@@ -1017,63 +1017,29 @@ function printCC() {
 	CC += "<h2 id='character-creation'>Character Creation<a class='og-h-anchor' href='#character-creation' title='Permalink' aria-hidden='true'></a></h2>";
 	CC += "<ul class='og-list-inline og-ref og-omit'><li>Page 13</li><li>Editorial Addition</li></ul>";
 	CC += "<div class='og-topbar'>"; // open topbar
-	CC += getCCnote("Create your player character (PC) by making a series of choices.");
-	CC += getCCnote("Think about the types of <a href='#define-action'>moves and actions</a> you want to make, and what types of <a href='#define-action-roll'>action rolls</a> you want to suceed with.");
-	CC += getCCnote("Some choices won't affect game mechanics, but could have a big impact on the story.</p>");
+	CC += getCCnote("Create your player character (PC) by making a series of choices. Think about the types of <a href='#define-action'>moves and actions</a> you want to make, and what types of <a href='#define-action-roll'>action rolls</a> you want to suceed with. Some choices won't affect game mechanics, but could have a big impact on the story.</p>");
 	CC += "<ol>";
-	CC += "<li><a href='#cc-step-1'>Class and Subclass</a></li>";
-	CC += "<li><a href='#cc-step-2'>Heritage</a></li>";
-	CC += "<li><a href='#cc-step-3'>Traits</a></li>";
+	CC += "<li><a href='#cc-step-1'>Heritage</a></li>";
+	CC += "<li><a href='#cc-step-2'>Class and Subclass</a></li>";
+	CC += "<li><a href='#cc-step-3'>Domain Cards</a></li>";
 	CC += "<li><a href='#cc-step-4'>Equipment</a></li>";
-	CC += "<li><a href='#cc-step-5'>Domain Cards</a></li>";
+	CC += "<li><a href='#cc-step-5'>Traits</a></li>";
 	CC += "<li><a href='#cc-step-6'>Additional Statistics</a></li>";
 	CC += "<li><a href='#cc-step-7'>Experiences and Description</a></li>";
 	CC += "<li><a href='#cc-step-8'>Background and Connnections</a></li>";
 	CC += "</ol>";
-	CC += "<p class='og-questions small'>Additional playtest character options are available from <a href='https://www.daggerheart.com/thevoid/'>Daggerheart&mdash;The Void</a>.</p>";
 	CC += "</div>"; // close topbar
 	CC += "</div>"; // close definition
-	CC += getEdnote("These steps differ from those in the <a href='https://www.daggerheart.com/buy/'>Daggerheart Core Rulebook</a>, but the genereal outline of character creation remains the same.");
-	// STEP 1:
-	CC += "<h3 id='cc-step-1'><span class='h6'>Step 1:</span> Class and Subclass<a class='og-h-anchor' href='#cc-step-1' title='Permalink' aria-hidden='true'></a></h3>";
-	CC += "<div class='og-topbar'>"; // open topbar
-	CC += "<div class='row'>"; // open row
-	CC += "<div class='col-12 col-md-6'>"; // open column 1
-	CC += "<h4 class='og-tab'>Class</h4>"
-	// select class
-	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseClass'>Class:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseClass'>"; // id
-	for (let i = 0; i < classList.length; i++) {
-		CC += "<option value='" + i + "'>" + classList[i].label + "</option>";
-	}
-	CC += "</select>";
-	CC += "</div>";
-	CC += "<div id='ccClass'><p>&mdash;</p></div>"; // pop field
-	CC += "</div>"; // close column 1
-	CC += "<div class='col-12 col-md-6'>";
-	CC += "<h4 class='og-tab'>Subclass</h4>"
-	// select subclass
-	CC += "<div class='input-group mb-2'>"; // open column 2
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseSubclass'>Subclass:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseSubclass'>"; // id
-	CC += "<option value='0'>&mdash;</option>";
-	CC += "</select>";
-	CC += "</div>";
-	CC += "<div id='ccSubclass'><p>&mdash;</p></div>"; // pop field
-	CC += "</div>";
-	CC += "</div>"; // close column 2
-	CC += "</div>"; // close row
-	CC += "</div>"; // close topbar
-	// STEP 2
-	CC += "<h3 id='cc-step-2'><span class='h6'>Step 2:</span> Heritage<a class='og-h-anchor' href='#cc-step-2' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += getEdnote("These steps differ from those in the <a href='https://www.daggerheart.com/buy/'>Daggerheart Core Rulebook</a>, but the general outline of character creation remains the same. Additional playtest character options are available from <a href='https://www.daggerheart.com/thevoid/'>Daggerheart&mdash;The Void</a>.");
+	// STEP 1
+	CC += "<h3 id='cc-step-1'><span class='h6'>Step 1:</span> Heritage<a class='og-h-anchor' href='#cc-step-1' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<div class='row'>"; // open row
 	CC += "<div class='col-12 col-md-6'>"; // open column 1
 	CC += "<h4 class='og-tab'>Ancestry</h4>";
 	// select ancestry
 	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseAncestry'>Ancestry:</label>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseAncestry'>Ancestry:</label>";
 	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseAncestry'>"; // id
 	for (let i = 0; i < ancestryList.length + 1; i++) {
 		CC += "<option value='" + i + "'>"
@@ -1089,7 +1055,7 @@ function printCC() {
 		let mixfeature = "First";
 		if (i > 0) {mixfeature = "Second";}
 		CC += "<div class='input-group mb-2'>";
-		CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseAncestryMixed" + (i+1) + "'>" + mixfeature +":</label>";
+		CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseAncestryMixed" + (i+1) + "'>" + mixfeature +":</label>";
 		CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseAncestryMixed" + (i+1) + "'>"; // id
 		for (let a = 0; a < ancestryList.length; a++) {
 			CC += "<option value='" + a + "'>" + ancestryList[a].label + " (" + ancestryList[a].featurelabel[i] + ")</option>";
@@ -1113,7 +1079,7 @@ function printCC() {
 	CC += "<h4 class='og-tab'>Community</h4>";
 	// select community
 	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseCommunity'>Community:</label>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseCommunity'>Community:</label>";
 	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseCommunity'>"; // id
 	for (let i = 0; i < communityList.length; i++) {
 		CC += "<option value='" + i + "'>" + communityList[i].label + "</option>";
@@ -1124,10 +1090,75 @@ function printCC() {
 	CC += "</div>"; // close column 2
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
-	// STEP 3: TRAITS 
-	CC += "<h3 id='cc-step-3'><span class='h6'>Step 3:</span> Traits<a class='og-h-anchor' href='#cc-step-3' title='Permalink' aria-hidden='true'></a></h3>";
+	// STEP 2
+	CC += "<h3 id='cc-step-2'><span class='h6'>Step 2:</span> Class and Subclass<a class='og-h-anchor' href='#cc-step-2' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
-	CC += "<div id='ccChooseTraits'></div>"; // pop field
+	CC += "<div class='row'>"; // open row
+	CC += "<div class='col-12 col-md-6'>"; // open column 1
+	CC += "<h4 class='og-tab'>Class</h4>"
+	// select class
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseClass'>Class:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseClass'>"; // id
+	for (let i = 0; i < classList.length; i++) {
+		CC += "<option value='" + i + "'>" + classList[i].label + "</option>";
+	}
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div id='ccClass'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column 1
+	CC += "<div class='col-12 col-md-6'>";
+	CC += "<h4 class='og-tab'>Subclass</h4>"
+	// select subclass
+	CC += "<div class='input-group mb-2'>"; // open column 2
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseSubclass'>Subclass:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseSubclass'>"; // id
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div id='ccSubclass'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>";
+	CC += "</div>"; // close column 2
+	CC += "</div>"; // close row
+	CC += "</div>"; // close topbar
+	// STEP 3
+	CC += "<h3 id='cc-step-3'><span class='h6'>Step 3:</span> Domain Cards<a class='og-h-anchor' href='#cc-step-3' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<h4 class='og-tab'>Domain Cards</h4>";
+	CC += "<div id='ccUserDomainCardOptions'></div>";
+	CC += "<div id='ccUserDomainCardBonus'></div>";
+	CC += "<div class='row'>"; // open row, pops option and menus in columns
+	// choose domain card 1
+	CC += "<div class='col-12 col-md-6' id='ccDomainCard1Display'>"; // open column
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard1'>First Card:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard1'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccDomainCard1'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column
+	// choose domain card 2
+	CC += "<div class='col-12 col-md-6' id='ccDomainCard2Display'>"; // open column
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard2'>Second Card:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard2'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccDomainCard2'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column
+	// choose domain card 3
+	CC += "<div class='col-12 col-md-4' id='ccDomainCard3Display'>"; // open column
+	CC += "<div class='input-group mb-2'>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard3'>Third Card:</label>";
+	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard3'>"; // pop options
+	CC += "<option value='0'>&mdash;</option>";
+	CC += "</select>";
+	CC += "</div>";
+	CC += "<div class='mb-3' id='ccDomainCard3'><p>&mdash;</p></div>"; // pop field
+	CC += "</div>"; // close column
+	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
 	// STEP 4: EQUIPMENT
 	CC += "<h3 id='cc-step-4'><span class='h6'>Step 4:</span> Equipment<a class='og-h-anchor' href='#cc-step-4' title='Permalink' aria-hidden='true'></a></h3>";
@@ -1194,52 +1225,18 @@ function printCC() {
 	CC += "</div>"; // close column 3
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
-	// STEP 5:
-	CC += "<h3 id='cc-step-5'><span class='h6'>Step 5:</span> Domain Cards<a class='og-h-anchor' href='#cc-step-5' title='Permalink' aria-hidden='true'></a></h3>";
+	// STEP 5
+	CC += "<h3 id='cc-step-5'><span class='h6'>Step 5:</span> Traits<a class='og-h-anchor' href='#cc-step-5' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
-	CC += "<h4 class='og-tab'>Domain Cards</h4>";
-	CC += "<div id='ccUserDomainCardOptions'></div>";
-	CC += "<div id='ccUserDomainCardBonus'></div>";
-	CC += "<div class='row'>"; // open row, pops option and menus in columns
-	// choose domain card 1
-	CC += "<div class='col-12 col-md-6' id='ccDomainCard1Display'>"; // open column
-	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard1'>First Card:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard1'>"; // pop options
-	CC += "<option value='0'>&mdash;</option>";
-	CC += "</select>";
-	CC += "</div>";
-	CC += "<div class='mb-3' id='ccDomainCard1'><p>&mdash;</p></div>"; // pop field
-	CC += "</div>"; // close column
-	// choose domain card 2
-	CC += "<div class='col-12 col-md-6' id='ccDomainCard2Display'>"; // open column
-	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard2'>Second Card:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard2'>"; // pop options
-	CC += "<option value='0'>&mdash;</option>";
-	CC += "</select>";
-	CC += "</div>";
-	CC += "<div class='mb-3' id='ccDomainCard2'><p>&mdash;</p></div>"; // pop field
-	CC += "</div>"; // close column
-	// choose domain card 3
-	CC += "<div class='col-12 col-md-4' id='ccDomainCard3Display'>"; // open column
-	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseDomainCard3'>Third Card:</label>";
-	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseDomainCard3'>"; // pop options
-	CC += "<option value='0'>&mdash;</option>";
-	CC += "</select>";
-	CC += "</div>";
-	CC += "<div class='mb-3' id='ccDomainCard3'><p>&mdash;</p></div>"; // pop field
-	CC += "</div>"; // close column
-	CC += "</div>"; // close row
+	CC += "<div id='ccChooseTraits'></div>"; // pop field
 	CC += "</div>"; // close topbar
-	// STEP 6: ADDITIONAL STATISTICS
+	// STEP 6
 	CC += "<h3 id='cc-step-6'><span class='h6'>Step 6:</span> Additional Statistics<a class='og-h-anchor' href='#cc-step-6' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<h4 class='og-tab'>Additional Statistics</h4>";
 	CC += "<div id='ccPrintAdditionalStatistics'><p>&mdash;</p></div>", // pop field
 	CC += "</div>"; // close topbar
-	// STEP 7: EXPERIENCES AND DESCRIPTION
+	// STEP 7
 	CC += "<h3 id='cc-step-7'><span class='h6'>Step 7:</span> Experiences and Description<a class='og-h-anchor' href='#cc-step-7' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<div class='row'>"; // open row
@@ -1252,7 +1249,7 @@ function printCC() {
 	CC += "<li class='h6 mt-3'>Second Experience +2</li>";
 	CC += "</ul>";
 	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseExperienceList'>Example Experiences:</label>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseExperienceList'>Examples:</label>";
 	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseExperienceList'>"; // id
 	CC += "<option id='ccChooseExp-0' value='0'>Backgrounds</option>";
 	CC += "<option id='ccChooseExp-1' value='1'>Characteristics</option>";
@@ -1283,7 +1280,7 @@ function printCC() {
 	CC += "</div>"; // close col
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
-	// STEP 8: BACKGROUND AND CONNECTIONS
+	// STEP 8
 	CC += "<h3 id='cc-step-8'><span class='h6'>Step 8:</span> Background and Connections<a class='og-h-anchor' href='#cc-step-8' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<div class='row'>"; // open row
@@ -1361,7 +1358,7 @@ function ccChooseSubclass() {
 	// suggest traits
 	let tArray = "";
 	tArray += "<h4 class='og-tab'>" + classList[ccUserClass].label + " Traits</h4>";
-	tArray += getCCnote("<strong><a href='#define-trait'>Traits</a></strong> represent your physical, mental, and social aptitudes. You can use the following suggestions, or assign each trait's <a href='#define-procedure'>modifier</a> as you choose.");
+	tArray += getCCnote("<strong><a href='#define-trait'>Traits</a></strong> represent physical, mental, and social aptitudes. You can use the following suggestions, or assign each trait's <a href='#define-procedure'>modifier</a> as you choose.");
 	tArray += "<div class='row'>"; // open row
 	for (let i = 0; i < traitList.length; i++) {
 		tArray += "<div class='col-12 col-md-6 col-lg-4'>";
@@ -1374,6 +1371,7 @@ function ccChooseSubclass() {
 		tArray += "</div>";
 	}
 	tArray += "</div>"; // close row
+	tArray += "<div id='ccUserTraitMods'></div>";
 	document.getElementById("ccChooseTraits").innerHTML = tArray;
 	// populate primary weapon options
 	let wOptionsPrimary = "";
@@ -1896,6 +1894,39 @@ function ccPrintAdditionalStatistics() {
 	userStats += getCCnote("You'll gain more Hope through the <a href='#define-flow-of-the-game'>flow of the game</a> and during <a href='#define-downtime'>downtime</a>.");
 	userStats += "</div>"; // close col
 	userStats += "</div>"; // close row
+	// check trait modified by equipment
+	let userTraitMods = false;
+	let userTraitModArmor = "";
+	let userTraitModWeapon = "";
+	if (armorList[ccUserArmor].label == "Full Plate Armor") {
+		userTraitMods = true;
+		userTraitModArmor += "<div class='col-12 col-md-6 col-lg-3'>"; // open col	
+		userTraitModArmor += "<h5 class='h6 og-wrap'>" + linkTrait("Agility") + " &minus;1</h5>";
+		userTraitModArmor += "<ul class='og-list-inline og-ref og-omit'>";
+		userTraitModArmor += "<li>" + armorList[ccUserArmor].label + " (Very Heavy): &minus;1</li>";
+		userTraitModArmor += "</ul>";
+		userTraitModArmor += "</div>"; // close col
+	}
+	if (weaponprimaryList[ccUserWeaponPrimary].label == "Halberd" || weaponprimaryList[ccUserWeaponPrimary].label == "Longbow") {
+		userTraitMods = true;
+		userTraitModWeapon += "<div class='col-12 col-md-6 col-lg-3'>"; // open col	
+		userTraitModWeapon += "<h5 class='h6 og-wrap'>" + linkTrait("Finesse") + " &minus;1</h5>";
+		userTraitModWeapon += "<ul class='og-list-inline og-ref og-omit'>";
+		userTraitModWeapon += "<li>" + weaponprimaryList[ccUserWeaponPrimary].label + " (Cumbersome): &minus;1</li>";
+		userTraitModWeapon += "</ul>";
+		userTraitModWeapon += "</div>"; // close col
+	}
+	// print trait modifications
+	let traitMods = "";
+	if (userTraitMods == true) {
+	traitMods += "<h4 class='og-tab'>Trait Modifications</h4>";
+		traitMods += getCCnote("Your selected <a href='#define-equipment'>equipment</a> modifies your <a href='#define-trait'>traits</a>. Revert the modifications if you change equipment.");
+		traitMods += "<div class='row'>"; // open row
+		traitMods += userTraitModArmor; // agility
+		traitMods += userTraitModWeapon; // finesse
+		traitMods += "</div>"; // close row
+	}
+	document.getElementById("ccUserTraitMods").innerHTML = traitMods;
 	document.getElementById("ccPrintAdditionalStatistics").innerHTML = userStats;
 	refreshTooltips();
 };
@@ -1937,6 +1968,66 @@ function ccPrintExperienceList() {
 // classes
 function printClasses() {
 	let classContent = "";
+	// intro
+	classContent += "<h2 id='classes-and-subclasses'>Classes and Subclasses<a class='og-h-anchor' href='#classes-and-subclasses' title='Permalink' aria-hidden='true'></a></h2>";
+	classContent += "<div class='alert ps-4 pb-0 og-omit'>"; // open index
+	classContent += "<ul class='list-unstyled og-qr'>";
+	for (let i = 0; i < classList.length; i++) {
+		classContent += "<li>";
+		classContent += "<span class='h6'><a href='#define-" + classList[i].name + "'>" + classList[i].label + "</a></span>";
+		classContent += "<ul class='og-list-inline small'>";
+		for (let s = 0; s < classList[i].subclasses.length; s++) {
+			for (let o = 0; o < subclassList.length; o++) {
+				if (classList[i].subclasses[s] == subclassList[o].label) {
+					classContent += "<li class='d-block'><a href='#define-" + subclassList[o].name + "'>" + subclassList[o].label + "</a></li>";
+				}
+			}
+		}
+		classContent += "</ul>";
+		classContent += "</li>";
+	}
+	classContent += "</ul>";
+	classContent += "</div>"; // close index
+	classContent += "<div class='row'>"; // open row
+	classContent += "<div class='col-12 col-md-6'>"; // open col
+	classContent += "<div id='define-class'>"; // open def
+	classContent += "<h3 id='classes'>Class<a class='og-h-anchor' href='#classes' title='Permalink' aria-hidden='true'></a></h3>";
+	classContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 27</li></ul>";
+	classContent += "<p>A <strong>class</strong> is a role-based archetype that grants you:</p>";
+	classContent += "<ul class='og-list-disc'>";
+	classContent += "<li>Access to two <a href='#define-domain'>domains</a></li>";
+	classContent += "<li>Starting <a href='#define-evasion'>Evasion</a> and <a href='#define-hit-point'>Hit Points</a></li>";
+	classContent += "<li>Starting items</li>";
+	classContent += "<li>Class features, including a <a href='#define-hope'>Hope Feature</a></li>";
+	classContent += "<li>A choice of <a href='#define-subclass'>subclass</a></li>";
+	classContent += "</ul>";
+	classContent += "<p>There are nine classes in the <a href='#define-daggerheart'>Daggerheart</a> core materials.</p>";
+	classContent += "<ul class='og-list-inline og-tooltip-block'>";
+	classContent += "<li><a href='#bard'>Bard</a></li>";
+	classContent += "</ul>";
+	classContent += getSidebar("<p>When you reach <a href='#define-level'>Level 5</a> or higher, you can select the <a href='#define-multiclass'>Multiclassing</a> advancement, gaining a second class and <a href='#define-subclass'>subclass</a>.</p>");
+	classContent += "</div>"; // close def
+	classContent += "</div>"; // close col
+	classContent += "<div class='col-12 col-md-6'>"; // open col
+	classContent += "<div id='define-subclass'>"; // open def
+	classContent += "<h4 id='subclasses'>Subclass<a class='og-h-anchor' href='#subclasses' title='Permalink' aria-hidden='true'></a></h4>";
+	classContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 27</li></ul>";
+	classContent += "<p>Each <a href='#define-class'>class</a> is divided into two subclasses, each of which further refines its archetype.</p>";
+	classContent += "<dl>";
+	classContent += "<dt>Spellcast Trait</dt>";
+	classContent += "<dd>If the subclass casts spells, this is the <a href='#define-trait'>trait</a> <a href='#define-procedure'>modifier</a> added to <a href='#define-spellcast-roll'>Spellcast Rolls</a> and is sometimes used to determine a spell's <a href='#define-damage-roll'>damage roll</a>.</dd>";
+	classContent += "<dt>Foundation Features</dt>";
+	classContent += "<dd>These features gained at <a href='#define-level'>Level 1</a>.</dd>";
+	classContent += "<dt>Specialization Features</dt>";
+	classContent += "<dd>At <a href='#define-tier'>Tier 3</a>, you can purchase the Enhanced Subclass <a href='#define-advancement'>advancement</a> to gain its Specialization Features.</dd>";
+	classContent += "<dt>Mastery Features</dt>";
+	classContent += "<dd>At <a href='#define-tier'>Tier 4</a>, if you already have its Specialization Features, you can purchase another Enhanced Subclass <a href='#define-advancement'>advancement</a> to gain its Mastery Features.</dd>";
+	classContent += "</dl>";
+	classContent += "</div>"; // close def
+	classContent += "</div>"; // close col
+	classContent += "</div>"; // close row
+	classContent += "<hr>";
+	// classes
 	for (let i = 0; i < classList.length; i++) {
 		let classRecord = "<div id='define-" + classList[i].name + "'>";
 		classRecord += "<h3 class='og-tab' id='" + classList[i].name + "'>" + classList[i].label + "<a class='og-h-anchor' href='#" + classList[i].name + "' title='Permalink' aria-hidden='true'></a></h3>";
@@ -2220,7 +2311,69 @@ function printClasses() {
 };
 // domains
 function printDomains() {
-	let domainContent = "<div class='row'>";
+	let domainContent = "";
+	domainContent += "<div id='define-domain'>"; // open def
+	domainContent += "<h2 id='domains'>Domains<a class='og-h-anchor' href='#domains' title='Permalink' aria-hidden='true'></a></h2>";
+	domainContent += "<div class='alert ps-4 pb-0 og-omit'>"; // open index
+	domainContent += "<ul class='list-unstyled og-qr-compact'>";
+	for (let i = 0; i < domainList.length; i++) {
+		domainContent += "<li><a href='#define-" + domainList[i].name + "'>" + domainList[i].label + "</a></li>";
+	}
+	domainContent += "</ul>";
+	domainContent += "</div>"; // close index
+	domainContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 24</li></ul>";
+	domainContent += "<p>The <a href='#define-daggerheart'>Daggerheart</a> core set includes nine thematic <strong>Domain Decks</strong>, comprised of a collection of <a href='#define-domain-card'>domain cards</a>.</p>";
+	domainContent += "<p>Each <a href='#define-class'>class</a> grants access to two domains.</p>";
+	domainContent += "<ul class='og-list-inline og-tooltip-block'>";
+	for (let i = 0; i < domainList.length; i++) {
+		domainContent += "<li><a href='#define-" + domainList[i].name + "'>" + domainList[i].label + "</a></li>";
+	}
+	domainContent += "</ul>";
+	domainContent += "</div>"; // close def
+	domainContent += "<hr>";
+	domainContent += "<div class='row'>"; // open row
+	domainContent += "<div class='col-12 col-md-6'>"; // open col
+	domainContent += "<div id='define-domain-card'>"; // open def
+	domainContent += "<h3 id='domain-cards'>Domain Cards<a class='og-h-anchor' href='#domain-cards' title='Permalink' aria-hidden='true'></a></h3>";
+	domainContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 26</li></ul>";
+	domainContent += "<p>Domain cards provide unique <a href='#define-action'>moves</a>, passive bonuses, <a href='#define-downtime-move'>downtime moves</a>, or <a href='#define-temporary'>temporary</a> benefits to your PC. You choose two Level 1 <strong>domain cards</strong> at <a href='#define-character-creation'>character creation</a>, and choose another each time you gain a <a href='#define-level'>level</a>. You can gain an additional domain card each <a href='#define-tir'>tier</a> by purchasing an <a href='#define-advancement'>advancement</a>.</p>";
+	domainContent += "<dl>";
+	domainContent += "<dt>Level</dt>";
+	domainContent += "<dd>You can't choose a domain card with a <a href='#define-level'>level</a> greater than yours&mdash;or half your level if you gained access to the card's <a href='#define-domain'>domain</a> deck by <a href='#define-multiclass'>multiclassing</a>.</dd>";
+	domainContent += "<dt>Domain</dt>";
+	domainContent += "<dd>You can only choose cards from your <a href='#define-class'>class</a> <a href='#define-domain'>domains</a>.</dd>";
+	domainContent += "<dt>Recall Cost: X<span class='og-recall' aria-hidden='true'>&#9889;</span></dt>";
+	domainContent += "<dd>When you have the <a href='#define-spotlight'>spotlight</a>, you can mark <a href='#define-stress'>Stress</a> equal to a <a href='#define-loadout'>vaulted</a> domain card's Recall Cost to exchange it for one in your <a href='#define-loadout'>loadout</a>.</dd>";
+	domainContent += "<dt>Type</dt>";
+	domainContent += "<dd>There are three types of domain cards: <strong>Abilities</strong> are non-magical. <strong>Spells</strong> are magical. <strong>Grimoires</strong> from the <a href='#define-codex'>Codex</a> domain grant you multiple, less potent spells.</dd>";
+	domainContent += "<dt>Usage Limits</dt>";
+	domainContent += "<dd>Some domain cards can only be used a certain number of times before a <a href='#define-downtime'>short rest</a> or <a href='#define-downtime'>long rest</a>. If a card has number of uses equal to a <a href='#define-trait'>trait</a> with a <a href='#define-procedure'>modifier</a> of +0 or less, you can't use it.</dd>";
+	domainContent += "</dl>";
+	domainContent += getSidebar("<p>When you place cards with a Usage Limit in your <a href='#define-loaout'>loadout</a>, be sure to track that information.</p>");
+	domainContent += "</div>"; // close def
+	domainContent += "</div>"; // close col
+	domainContent += "<div class='col-12 col-md-6'>"; // open col
+	domainContent += "<div id='define-loadout'>"; // open def
+	domainContent += "<h4 id='loadout-and-vault'>Loadout and Vault<a class='og-h-anchor' href='#loadout-and-vault' title='Permalink' aria-hidden='true'></a></h4>";
+	domainContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 101</li><li>Page 107</li></ul>";
+	domainContent += "<dl>";
+	domainContent += "<dt>Loadout</dt>";
+	domainContent += "<dd>Your loadout is the set of <a href='#define-domain-card'>domain cards</a> you can use during play. You can have up to 5 domain cards in your loadout.</dd>";
+	domainContent += "<dt>Vault</dt>";
+	domainContent += "<dd>Domain cards that aren't in our loadout are placed in your vault. Unless stated otherwise, vaulted cards don't provide you any benefits. If you cast a spell and then place that <a href='#define-domain-card'>domain card</a> in your vault, its effects remain.</dd>";
+	domainContent += "<dt>Exchanging Cards</dt>";
+	domainContent += "<dd>At the start of <a href='#define-downtime'>downtime</a>, you can exchange cards between your loadout and vault without paying <a href='#define-domain-card'>Recall Costs</a>.</dd>";
+	domainContent += "</dl>";
+	domainContent += "</div>"; // close def
+	domainContent += "<div class='text-center'>"; // open fig
+	domainContent += "<img class='og-fig-lg d-light' src='images/class-domain-wheel-light.svg' alt='Classes and Domains' aria-hidden='true'>";
+	domainContent += "<img class='og-fig-lg d-dark' src='images/class-domain-wheel-dark.svg' alt='Classes and Domains' aria-hidden='true'>";
+	domainContent += "</div>"; // close fig
+	domainContent += "</div>"; // close col
+	domainContent += "</div>"; // close row
+	domainContent += "<hr>";
+	// domain details
+	domainContent += "<div class='row'>";
 	for (let i = 0; i < domainList.length; i++) {
 		let domainRecord = "<div class='col-12 col-md-6 col-lg-4'><div id='define-" + domainList[i].name + "'><div class='og-theme-" + domainList[i].name + "'>";
 		domainRecord += "<h3 class='og-tab og-tab-" + domainList[i].name + "' id='" + domainList[i].name + "'>" + domainList[i].label + "<a class='og-h-anchor' href='#" + domainList[i].name + "' title='Permalink' aria-hidden='true'></a></h3>";
@@ -2256,7 +2409,7 @@ function printDomains() {
 	domainContent += "</div><hr>";
 	document.getElementById("printDomains").innerHTML = domainContent;
 };
-// domain cards
+// domain card details
 function printDomainCards() {
 	let domainCardContent = "<h4 id='domain-card-references'>Domain Card References<a class='og-h-anchor' href='#domain-card-references' title='Permalink' aria-hidden='true'></a></h4>";
 	for (let d = 0; d < domainList.length; d++) {
@@ -2282,6 +2435,30 @@ function printDomainCards() {
 // ancestries
 function printAncestries() {
 	let ancestryContent =  "";
+	ancestryContent += "<div id='define-ancestry'>"; // open def
+	ancestryContent += "<h2 id='ancestries'>Ancestries<a class='og-h-anchor' href='#ancestries' title='Permalink' aria-hidden='true'></a></h2>";
+	ancestryContent += "<div class='alert ps-4 pb-0 og-omit'>"; // open index
+	ancestryContent += "<ul class='list-unstyled og-qr-compact'>";
+	for (i = 0; i < (ancestryList.length + 1); i++) {
+		if (i == ancestryList.length) { ancestryContent += "<li><a href='#define-mixed-ancestry'>Mixed Ancestry</a></li>"; }
+		else { ancestryContent += "<li><a href='#define-" + ancestryList[i].name + "'>" + ancestryList[i].label + "</a></li>"; }
+	}
+	ancestryContent += "</ul>";
+	ancestryContent += "</div>"; // close index
+	ancestryContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 52</li></ul>";
+	ancestryContent += "<p><strong>Ancestry</strong> represent a your lineage and physical appearance. Each ancestry's description includes common characteristics, but you decide how much your PC aligns with the average expression of their ancestry.</p>";
+	ancestryContent += "<p>Each ancestry grants two <strong>ancestry features</strong>. Some features&mdash;for example, the ability to fly&mdash;are tied to anatomy, but you determine your PC's physical form. Work with the GM to change any implied characteristics that don't align with your character concept.</p>";
+	ancestryContent += "<p>There are eighteen ancestries in the <a href='#define-daggerheart'>Daggerheart</a> core materials.</p>";
+	ancestryContent += "<ul class='og-list-inline og-tooltip-block'>";
+	for (i = 0; i < (ancestryList.length + 1); i++) {
+		if (i == ancestryList.length) { ancestryContent += "<li><a href='#define-mixed-ancestry'>Mixed Ancestry</a></li>"; }
+		else { ancestryContent += "<li><a href='#define-" + ancestryList[i].name + "'>" + ancestryList[i].label + "</a></li>"; }
+	}
+	ancestryContent += "</ul>";
+	ancestryContent += getSidebar("<p><strong>People</strong> refers to all ancestries. Some ancestries are described as humanoid. This doesn't imply genetic relation to <a href='#define-human'>humans</a>, but rather to a set of anatomical characteristics&mdash;bipedal movement, upright posture, and facial structure.</p>");
+	ancestryContent += "</div>"; // close def
+	ancestryContent += "<hr>";
+	// print ancestry details
 	for (let a = 0; a < ancestryList.length; a++) {
 		ancestryContent += "<div id='define-" + ancestryList[a].name + "'>";
 		ancestryContent += "<h3 class='og-tab' id='" + ancestryList[a].name + "'>" + ancestryList[a].label + "<a class='og-h-anchor' href='#" + ancestryList[a].name + "' title='Permalink' aria-hidden='true'></a></h3>";
@@ -2295,11 +2472,57 @@ function printAncestries() {
 		ancestryContent += "</ul>";
 		ancestryContent += "</div><hr>";
 	}
+	// add mixed ancestry
+	ancestryContent += "<div id='define-mixed-ancestry'>"; // open def
+	ancestryContent += "<h3 class='og-tab' id='mixed-ancestry'>Mixed Ancestry<a class='og-h-anchor' href='#mixed-ancestry' title='Permalink' aria-hidden='true'></a></h3>";
+	ancestryContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 71</li></ul>";
+	ancestryContent += "<p>Families are as unique as the peoples and cultures that inhabit them. Anyone's appearance and abilities can be shaped by blood, magic, proximity, or other variety of factors. If you are a descendant of multiple ancestries, use the steps below:</p>";
+	ancestryContent += "<h4 class='h6'>Step 1: Choose an Ancestry Combination</h4>";
+	ancestryContent += "<p>When you choose an heritage at <a href='#define-character-creation'>character creation</a>, write down how you identify&mdash;for example, if you are descended from <a href='#define-goblin'>goblins</a> and <a href='#define-orc'>orcs</a>, you could be a <strong>goblin-orc</strong>. You could also choose the ancestry you identify with&mdash;<strong>goblin</strong> or <strong>orc</strong>. Alternatively, invent a new name for your ancestry&mdash;for example, <strong>toothling</strong>.</p>";
+	ancestryContent += "<h4 class='h6'>Step 2: Choose Ancestry Features</h4>";
+	ancestryContent += "<p>Choose the <strong>first feature</strong> from one ancestry, and the <strong>second feature</strong> from the other&mdash;for example, if you are mixing the <a href='#define-goblin'>goblin</a>-<a href='#define-orc'>orc</a> ancestries, you can take the <strong><em>Surefooted</em></strong> and <strong><em>Tusks</em></strong> features, or the <strong><em>Sturdy</em></strong> and <strong><em>Danger Sense</em></strong> features.</p>";
+	ancestryContent += "</div>";
+	ancestryContent += getSidebar("<p>If your heritage includes more than two ancestries, you can represent additional ancestries through their appearance, backstory, and <a href='#define-experience'>Experiences</a>. You can experiment with different mixed ancestry combinations in <a href='#cc-step-2'>Character Creation Step 2: Choose a Heritage</a>.</p>");
+	ancestryContent += "</div>"; // close def
+	ancestryContent += "<hr>"; // divide and move on
 	document.getElementById("printAncestries").innerHTML = ancestryContent;
 };
 // communities
 function printCommunities() {
 	let communityContent = "";
+	communityContent += "<div id='define-community'>";
+	communityContent += "<h2 id='communities'>Communities<a class='og-h-anchor' href='#communities' title='Permalink' aria-hidden='true'></a></h2>";
+	communityContent += "<div class='alert ps-4 pb-0 og-omit'>";
+	communityContent += "<ul class='list-unstyled og-qr-compact'>";
+	communityContent += "<li><a href='#define-highborne'>Highborne</a></li>";
+	communityContent += "<li><a href='#define-loreborne'>Loreborne</a></li>";
+	communityContent += "<li><a href='#define-orderborne'>Orderborne</a></li>";
+	communityContent += "<li><a href='#define-ridgeborne'>Ridgeborne</a></li>";
+	communityContent += "<li><a href='#define-seaborne'>Seaborne</a></li>";
+	communityContent += "<li><a href='#define-slyborne'>Slyborne</a></li>";
+	communityContent += "<li><a href='#define-underborne'>Underborne</a></li>";
+	communityContent += "<li><a href='#define-wanderborne'>Wanderborne</a></li>";
+	communityContent += "<li><a href='#define-wildborne'>Wildborne</a></li>";
+	communityContent += "</ul>";
+	communityContent += "</div>";
+	communityContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 72</li></ul>";
+	communityContent += "<p>Communities represent the <strong>culture</strong>, <strong>class</strong>, or <strong>environment of origin</strong> that has had a significant on a PC's upbringing.</p>";
+	communityContent += "<p>There are nine communities in the <a href='#define-daggerheart'>Daggerheart</a> core materials.</p>";
+	communityContent += "<ul class='og-list-inline og-tooltip-block'>";
+	communityContent += "<li><a href='#define-highborne'>Highborne</a></li>";
+	communityContent += "<li><a href='#define-loreborne'>Loreborne</a></li>";
+	communityContent += "<li><a href='#define-orderborne'>Orderborne</a></li>";
+	communityContent += "<li><a href='#define-ridgeborne'>Ridgeborne</a></li>";
+	communityContent += "<li><a href='#define-seaborne'>Seaborne</a></li>";
+	communityContent += "<li><a href='#define-slyborne'>Slyborne</a></li>";
+	communityContent += "<li><a href='#define-underborne'>Underborne</a></li>";
+	communityContent += "<li><a href='#define-wanderborne'>Wanderborne</a></li>";
+	communityContent += "<li><a href='#define-wildborne'>Wildborne</a></li>";
+	communityContent += "</ul>";
+	communityContent += "<h3 class='h6'>Community Features</h3>";
+	communityContent += "<p>Your community grants you a <strong>community feature</strong>.</p>";
+	communityContent += "</div>";
+	communityContent += "<hr>";
 	for (let i = 0; i < communityList.length; i++) {
 		communityContent += "<div id='define-" + communityList[i].name + "'>";
 		communityContent += "<h3 class='og-tab' id='" + communityList[i].name + "'>" + communityList[i].label + "<a class='og-h-anchor' href='#" + communityList[i].name + "' title='Permalink' aria-hidden='true'></a></h3>";
@@ -2314,7 +2537,30 @@ function printCommunities() {
 };
 // traits
 function printTraits() {
-	let traitContent = "<div class='row'>";
+	let traitContent = "";
+	traitContent += "<div id='define-trait'>";
+	traitContent += "<h2 id='traits'>Traits<a class='og-h-anchor' href='#traits' title='Permalink' aria-hidden='true'></a></h2>";
+	traitContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 17</li></ul>";
+	traitContent += "<p>You have six <strong>traits</strong> that represent your physical, mental, and social aptitudes.</p>";
+	traitContent += "<ul class='og-list-inline og-tooltip-block'>";
+	for (i = 0; i < traitList.length; i++) {
+		traitContent += "<li><a href='#define-" + traitList[i].name + "'>" + traitList[i].label + "</a></li>";
+	}
+	traitContent += "</ul>";
+	traitContent += "<dl>";
+	traitContent += "<dt>Trait Arrays</dt>";
+	traitContent += "<dd>Your traits start with an <a href='#define-trait-array'>array</a> of <a href='#define-procedure'>modifiers</a> assigned during <a href='#define-character-creation'>character creation</a>.</dd>";
+	traitContent += "<dt>Traits and Action Rolls</dt>";
+	traitContent += "<dd>When you make an <a href='#define-action-roll'>action roll</a>, the relevant trait's <a href='#define-procedure'>modifier</a> is added to the roll's total.</dd>";
+	traitContent += "<dt>Negative Modifiers</dt>";
+	traitContent += "<dd>Unless otherwise stated, if a mechanic other than a roll uses a trait modifier and yours is negative, treat it as if it were 0&mdash;for example, if you are a <a href='#define-druid'>Druid</a> and choose the <a href='#define-warden-of-renewal'>Warden of Renewal</a>, your <strong><em>Clarity of Nature</em></strong> feature requires an <a href='#define-instinct'>Instinct</a> modifier of +1 or higher to have any effect. A few mechanics set a minimum&mdash;for example, the <a href='#define-domain-card-flight'>Flight</a> spell grants 1 counter even if your <a href='#define-agility'>Agility</a> modifier is &minus;1.</dd> ";
+	traitContent += "<dt>Increasing Trait Modifiers</dt>";
+	traitContent += "<dd>When you gain a <a href='#define-level'>level</a>, you can increase purchase an <a href='#define-advancement'>advancement</a> to increase the modifiers of two traits. You can increase a trait's modifier only once each <a href='#define-tier'>tier</a>.</dd>";
+	traitContent += "</dl>";
+	traitContent += "</div>";
+	traitContent += "<hr>";
+	// trait details
+	traitContent += "<div class='row'>";
 	for (let i = 0; i < traitList.length; i++) {
 		let traitRecord = "<div class='col-12 col-md-6 col-lg-4'><div id='define-" + traitList[i].name + "'>";
 		traitRecord += "<h3 class='og-tab' id='" + traitList[i].name + "'>" + traitList[i].label + "<a class='og-h-anchor' href='#" + traitList[i].name + "' title='Permalink' aria-hidden='true'></a></h3>";
@@ -2323,7 +2569,7 @@ function printTraits() {
 		traitRecord += traitList[i].summary;
 		traitRecord += "<p class='fst-italic og-omit'><strong>Difficulty:</strong> <a href='#define-" + traitList[i].name + "-benchmark'>" + traitList[i].label + " Benchmarks</a></p>";
 		traitRecord += "</div></div>";
-		 traitContent += traitRecord;
+		traitContent += traitRecord;
 	}
 	traitContent += "</div><hr>";
 	document.getElementById("printTraits").innerHTML = traitContent;

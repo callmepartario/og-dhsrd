@@ -666,6 +666,25 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 	margin-bottom: 1rem;
 }
 
+.og-topbar-cc {
+	border-top: 0.2rem solid;
+	border-bottom: 0.2rem solid;
+	border-color: #146;
+	padding: 1rem 0.5rem 0rem 0.5rem;
+	margin-bottom: 1rem;
+}
+.theme-light .og-topbar-cc {
+	background-color: #e0edf5;
+}
+
+.theme-dark .og-topbar-cc {
+	background-color: #023;
+}
+.input-group {
+	border: 0.2rem solid #146;
+	border-radius: 0.25rem;
+}
+
 .og-topbar2 {
 	margin-top: 0.5rem;
 	padding-top: 0.5rem;
