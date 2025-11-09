@@ -1263,20 +1263,14 @@ function printCC() {
 	CC += "<div class='col-12 col-md-6'>"; // open col
 	CC += "<h4 class='og-tab'>Description</h4>";
 	CC += getCCnote("Choose a <strong>name</strong>, <strong>pronouns</strong>, and <strong>description</strong> for your character. You can use these suggestions to describe your character, or come up with your own.");
-	CC += "<div class='row'>"; //open row (sub)
-	CC += "<div class='col-6'>"; // open col (sub)
 	CC += "<h5 class='h6'>Eyes</h5>";
 	CC += "<ul class='og-list-inline og-ref og-omit'><li>carnations</li><li>earth</li><li>endless ocean</li><li>fire</li><li>ivy</li><li>lilacs</li><li>night</li><li>seafoam</li><li>winter</li></ul>";
 	CC += "<h5 class='h6'>Body</h5>";
 	CC += "<ul class='og-list-inline og-ref og-omit'><li>broad</li><li>carved</li><li>curvy</li><li>lanky</li><li>rotund</li><li>short</li><li>stocky</li><li>tall</li><li>thin</li><li>tiny</li><li>toned</li></ul>";
 	CC += "<h5 class='h6'>Skin</h5>";
 	CC += "<ul class='og-list-inline og-ref og-omit'><li>ashes</li><li>clover</li><li>falling snow</li><li>fine sand</li><li>obsidian</li><li>rose</li><li>sapphire</li><li>wisteria</li></ul>";
-	CC += "</div>"; // close  col (sub)
-	CC += "<div class='col-6'>"; // open col (sub)
 	CC += "<div id='ccClassClothes'><p>&mdash;</p></div>"
 	CC += "<div id='ccClassAttitudes'><p>&mdash;</p></div>"
-	CC += "</div>"; // close  col (sub)
-	CC += "</div>"; // close row (sub)
 	CC += "</div>"; // close col
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
@@ -1933,7 +1927,7 @@ function ccPrintAdditionalStatistics() {
 function ccPrintBackgroundQuestions() {
 	//background
 	let bgQ = "";
-	bgQ += getCCnote("Think about your unique <strong>Background</strong> as a " + linkCommunity(communityList[ccUserCommunity].label) + " " + linkAncestry(ancestryList[ccUserAncestry].label) + " " + linkSubclass(subclassList[ccUserSubclass].label) + " " + " " + linkClass(classList[ccUserClass].label) + ". Depending on the setting, the GM might ask different questions.");
+	bgQ += getCCnote("Think about your unique <strong>background</strong> as a " + linkCommunity(communityList[ccUserCommunity].label) + " " + linkAncestry(ancestryList[ccUserAncestry].label) + " " + linkSubclass(subclassList[ccUserSubclass].label) + " " + " " + linkClass(classList[ccUserClass].label) + ". Depending on the setting, the GM might ask different questions.");
 	bgQ += "<ul class='og-questions small'>";
 	for (i = 0; i < classList[ccUserClass].questions.length; i++) {
 		bgQ += "<li>" + classList[ccUserClass].questions[i] + "</li>";
@@ -1942,7 +1936,7 @@ function ccPrintBackgroundQuestions() {
 	document.getElementById("ccClassBackground").innerHTML = bgQ;
 	// connections
 	let cQ = "";
-	cQ += getCCnote("You can use these " + linkClass(classList[ccUserClass].label) + " questions to build <strong>Party Connections</strong> with the other player characters, or come up with your own.");
+	cQ += getCCnote("You can use these " + linkClass(classList[ccUserClass].label) + " questions to build <strong>party connections</strong> with the other player characters, or come up with your own.");
 	cQ += "<ul class='og-questions small'>";
 	for (i = 0; i < classList[ccUserClass].connections.length; i++) {
 		cQ += "<li>" + classList[ccUserClass].connections[i] + "</li>";
