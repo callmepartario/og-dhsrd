@@ -681,8 +681,16 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 	background-color: #023;
 }
 .input-group {
-	border: 0.2rem solid #146;
+	border: 0.25rem solid #146;
 	border-radius: 0.25rem;
+}
+
+.theme-light .input-group label, .theme-light .input-group select {
+	background-color: #f2fcff !important;
+}
+
+.theme-dark .input-group label, .theme-dark .input-group select {
+	background-color: #023 !important;
 }
 
 .og-topbar2 {
