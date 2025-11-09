@@ -1156,7 +1156,7 @@ function printCC() {
 	CC += "<div class='mb-3'  id='ccWeaponSecondary'><p>&mdash;</p></div>"; // pop field
 	// choose armor
 	CC += "<div class='input-group mb-2'>";
-	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light visually-hidden' for='ccChooseArmor'>Armor:</label>";
+	CC += "<label class='input-group-text fw-bold link-dark bg-light border-light' for='ccChooseArmor'>Armor:</label>";
 	CC += "<select class='form-select link-dark bg-light border-light' id='ccChooseArmor'>"; // pop options
 	CC += "<option value='0'>&mdash;</option>";
 	CC += "</select>";
@@ -1738,7 +1738,7 @@ function ccPrintAdditionalStatistics() {
 	userStats += "<div class='row'>"; // open row
 	userStats += "<div class='col-12 col-md-6 col-lg-3'>"; // open col
 	// print level
-	userStats += "<h5 class='h6'><a href='#define-level'>Level</a>&nbsp;&nbsp;" + 1 + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-level'>Level</a>&nbsp;&nbsp;" + 1 + "</h5>";
 	userStats += getCCnote("As you gain levels, you'll reach higher <a href='#define-tier'>tiers</a> and choose <a href='#define-advancement'>advancements</a>.");
 	// calculate evasion
 	let userEvasion = classList[ccUserClass].evasion;
@@ -1784,10 +1784,10 @@ function ccPrintAdditionalStatistics() {
 	}
 	eMods += "</ul>";
 	// print evasion
-	userStats += "<h5 class='h6'><a href='#define-evasion'>Evasion</a>&nbsp;&nbsp;" + (userEvasion + userEvasionBonus) + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-evasion'>Evasion</a>&nbsp;&nbsp;" + (userEvasion + userEvasionBonus) + "</h5>";
 	userStats += eMods;
 	userStats += "</div>"; // close col
-	userStats += "<div class='col-6 col-lg-3'>"; // open col
+	userStats += "<div class='col-12 col-md-6 col-lg-3'>"; // open col
 	// calculate armor
 	let userArmor = armorList[ccUserArmor].score;
 	let userArmorBonus = 0;
@@ -1806,7 +1806,7 @@ function ccPrintAdditionalStatistics() {
 	}
 	aMods += "</ul>";
 	// print armor
-	userStats += "<h5 class='h6'><a href='#define-armor'>Armor</a>&nbsp;&nbsp;" + (userArmor + userArmorBonus) + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-armor'>Armor</a>&nbsp;&nbsp;" + (userArmor + userArmorBonus) + "</h5>";
 	userStats += aMods;
 	// calculate thresholds
 	let userThresholdBonus = 0;
@@ -1834,10 +1834,10 @@ function ccPrintAdditionalStatistics() {
 	tMods += "</ul>";
 	// thresholds
 	// print thresholds
-	userStats += "<h5 class='h6'><a href='#define-hit-point'>Thresholds</a>&nbsp;&nbsp;" + (armorList[ccUserArmor].thresholdmajor + userThresholdBonus) + "/" + (armorList[ccUserArmor].thresholdsevere + userThresholdBonus) + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-hit-point'>Thresholds</a>&nbsp;&nbsp;" + (armorList[ccUserArmor].thresholdmajor + userThresholdBonus) + "/" + (armorList[ccUserArmor].thresholdsevere + userThresholdBonus) + "</h5>";
 	userStats += tMods;
 	userStats += "</div>"; // close col
-	userStats += "<div class='col-6 col-lg-3'>"; // open col
+	userStats += "<div class='col-12 col-md-6 col-lg-3'>"; // open col
 	// hit points
 	let userHP = classList[ccUserClass].hp;
 	let userHPBonus = 0;
@@ -1860,7 +1860,7 @@ function ccPrintAdditionalStatistics() {
 	}
 	hpMods += "</ul>";
 	// print hp
-	userStats += "<h5 class='h6'><a href='#define-hit-point'>Hit Points</a>&nbsp;&nbsp;" + (userHP + userHPBonus) + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-hit-point'>Hit Points</a>&nbsp;&nbsp;" + (userHP + userHPBonus) + "</h5>";
 	userStats += hpMods;
 	// stress
 	let userStress = classList[ccUserClass].hp;
@@ -1884,15 +1884,15 @@ function ccPrintAdditionalStatistics() {
 		stressMods += "<li>" + linkAncestry("Human") + " (" + ancestryList[ccUserAncestry].featurelabel[0] + "): +1</li>";
 	}
 	stressMods += "</ul>";
-	userStats += "<h5 class='h6'><a href='#define-stress'>Stress</a>&nbsp;&nbsp;" + (userStress + userStressBonus) + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-stress'>Stress</a>&nbsp;&nbsp;" + (userStress + userStressBonus) + "</h5>";
 	userStats += stressMods;
 	userStats += "</div>"; // close col
-	userStats += "<div class='col-6 col-lg-3'>"; // open col
+	userStats += "<div class='col-12 col-md-6 col-lg-3'>"; // open col
 	// proficiency
-	userStats += "<h5 class='h6'><a href='#define-damage-roll'>Proficiency</a>&nbsp;&nbsp;" + 1 + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-damage-roll'>Proficiency</a>&nbsp;&nbsp;" + 1 + "</h5>";
 	userStats += getCCnote("Proficiency determines <a href='damage-rolls'>damage rolls</a> and interacts with some features and <a href='#define-domain-card'>domain cards</a>.");
 	// hope
-	userStats += "<h5 class='h6'><a href='#define-hope'>Hope</a>&nbsp;&nbsp;" + 2 + "</h5>";
+	userStats += "<h5 class='h6 og-wrap'><a href='#define-hope'>Hope</a>&nbsp;&nbsp;" + 2 + "</h5>";
 	userStats += getCCnote("You'll gain more Hope through the <a href='#define-flow-of-the-game'>flow of the game</a> and during <a href='#define-downtime'>downtime</a>.");
 	userStats += "</div>"; // close col
 	userStats += "</div>"; // close row
@@ -1979,8 +1979,8 @@ function printClasses() {
 		for (let subclassCount = 0; subclassCount < classList[i].subclasses.length; subclassCount++) {
 			for (let s = 0; s < subclassList.length; s++) {
 				if (subclassList[s].label == classList[i].subclasses[subclassCount]) {
-					classRecord += "<div class='col-12 col-md-6'>";
-					classRecord += "<div id='define-" + subclassList[s].name + "'>";
+					classRecord += "<div class='col-12 col-md-6'>"; // open div
+					classRecord += "<div id='define-" + subclassList[s].name + "'>"; // open def
 					classRecord += "<h5 class='og-tab' id='" + subclassList[s].name + "'>" + subclassList[s].label +"<a class='og-h-anchor' href='#" + subclassList[s].name + "' title='Permalink' aria-hidden='true'></a></h5>";
 					classRecord += getReferences(subclassList[s].pages);
 					classRecord += "<p>" + subclassList[s].summary + "</p>";
@@ -2001,7 +2001,7 @@ function printClasses() {
 					}
 					classRecord += "</ul>";
 					// omit later cards from tooltips
-					classRecord += "<div class='og-omit'>";
+					classRecord += "<div class='og-omit'>"; // open omit
 					classRecord += "<h6>Specialization Feature";
 					if (subclassList[s].specialization.length > 1) {
 						classRecord += "s";
@@ -2022,12 +2022,13 @@ function printClasses() {
 						classRecord += "<li>" + subclassList[s].mastery[fm] + "</li>";
 					}
 					classRecord += "</ul>";
-					classRecord += "</div>";
-					classRecord += "</div></div>";
+					classRecord += "</div>"; // close omit
+					classRecord += "</div>"; // close def
+					classRecord += "</div>"; // close col
 				}
 			}
 		}
-		classRecord += "</div>";
+		classRecord += "</div>"; // close row
 		// special class indices
 		if (classList[i].label == "Druid") {
 			classRecord += "<div id='define-druid-beastform-options'>";
@@ -2118,7 +2119,7 @@ function printClasses() {
 			classRecord += "</div>";
 			classRecord += "<div class='og-topbar'>";
 			classRecord += "<h5 class='h6' id='ranger-example-companion-experiences'>Example Companion Experiences</h5>";
-			classRecord += "<ul class='og-list-inline mb-3'>";
+			classRecord += "<ul class='og-list-inline og-ref og-omit'>";
 			classRecord += "<li>Bold Distraction</li>";
 			classRecord += "<li>Expert Climber</li>";
 			classRecord += "<li>Fetch</li>";
