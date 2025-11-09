@@ -476,7 +476,19 @@ const weaponprimaryList = [
 { label: "Thistlebow", tier: 4, magic: true, pages: ["Page 121"], errata: false, trait: "Instinct", range: "Far", damage: "d6+13", damagetype: "mag", burden: "Two-Handed", feature: "<strong><em>Reliable:</em></strong> +1 to <a href='#define-attack-roll'>attack rolls</a>" },
 { label: "Wand of Essek", tier: 4, magic: true, pages: ["Page 121"], errata: false, trait: "Knowledge", range: "Far", damage: "d8+13", damagetype: "mag", burden: "One-Handed", feature: "<strong><em>Timebending:</em></strong> You can choose the target of your attack after making your attack roll." },
 { label: "Magus Revolver", tier: 4, magic: true, pages: ["Page 121"], errata: false, trait: "Finesse", range: "Very Far", damage: "d6+13", damagetype: "mag", burden: "One-Handed", feature: "<strong><em>Reloading:</em></strong> After you make an <a href='#define-attack-roll'>attack</a>, roll a <strong>d6</strong>. On a result of 1, you must mark a <a href='#define-stress'>Stress</a> to reload this <a href='#define-weapon'>weapon</a> before you can fire it again." },
-{ label: "Fusion Gloves", tier: 4, magic: true, pages: ["Page 121"], errata: false, trait: "Knowledge", range: "Very Far", damage: "d6+9", damagetype: "mag", burden: "Two-Handed", feature: "<strong><em>Bonded:</em></strong> Gain a bonus to your <a href='#define-damage-roll'>damage rolls</a> equal to your <a href='#define-level'>level</a>." }
+{ label: "Fusion Gloves", tier: 4, magic: true, pages: ["Page 121"], errata: false, trait: "Knowledge", range: "Very Far", damage: "d6+9", damagetype: "mag", burden: "Two-Handed", feature: "<strong><em>Bonded:</em></strong> Gain a bonus to your <a href='#define-damage-roll'>damage rolls</a> equal to your <a href='#define-level'>level</a>." },
+{ label: "Light-Frame Wheelchair", tier: 1, magic: false, pages: ["Page 123"], errata: false, trait: "Agility", range: "Melee", damage: "d8", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Quick:</em></strong> When you make an <a href='#define-attack-roll'>attack</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to target another creature within <a href='#define-range'>range</a>." },
+{ label: "Improved Light-Frame Wheelchair", tier: 2, magic: false, pages: ["Page 123"], errata: false, trait: "Agility", range: "Melee", damage: "d8+3", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Quick:</em></strong> When you make an <a href='#define-attack-roll'>attack</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to target another creature within <a href='#define-range'>range</a>." },
+{ label: "Advanced Light-Frame Wheelchair", tier: 3, magic: false, pages: ["Page 123"], errata: false, trait: "Agility", range: "Melee", damage: "d8+6", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Quick:</em></strong> When you make an <a href='#define-attack-roll'>attack</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to target another creature within <a href='#define-range'>range</a>." },
+{ label: "Legendary Light-Frame Wheelchair", tier: 4, magic: false, pages: ["Page 123"], errata: false, trait: "Agility", range: "Melee", damage: "d8+9", damagetype: "phy", burden: "One-Handed", feature: "<strong><em>Quick:</em></strong> When you make an <a href='#define-attack-roll'>attack</a>, you can <strong><a href='#define-stress'>mark a Stress</a></strong> to target another creature within <a href='#define-range'>range</a>." },
+{ label: "Heavy-Frame Wheelchair", tier: 1, magic: false, pages: ["Page 123"], errata: false, trait: "Strength", range: "Melee", damage: "d12+3", damagetype: "phy", burden: "Two-Handed", feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
+{ label: "Improved Heavy-Frame Wheelchair", tier: 2, magic: false, pages: ["Page 123"], errata: false, trait: "Strength", range: "Melee", damage: "d12+6", damagetype: "phy", burden: "Two-Handed", feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
+{ label: "Advanced Heavy-Frame Wheelchair", tier: 3, magic: false, pages: ["Page 123"], errata: false, trait: "Strength", range: "Melee", damage: "d12+9", damagetype: "phy", burden: "Two-Handed", feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
+{ label: "Legendary Heavy-Frame Wheelchair", tier: 4, magic: false, pages: ["Page 123"], errata: false, trait: "Strength", range: "Melee", damage: "d12+12", damagetype: "phy", burden: "Two-Handed", feature: "<strong><em>Heavy:</em></strong> &minus;1 to <a href='#define-evasion'>Evasion</a>" },
+{ label: "Arcane-Frame Wheelchair", tier: 1, magic: true, pages: ["Page 123"], errata: false, trait: "Spellcast", range: "Far", damage: "d6", damagetype: "mag", burden: "One-Handed", feature: "<strong><em>Reliable:</em></strong> +1 to <a href='#define-attack-roll'>attack rolls</a>" },
+{ label: "Improved Arcane-Frame Wheelchair", tier: 2, magic: true, pages: ["Page 123"], errata: false, trait: "Spellcast", range: "Far", damage: "d6+3", damagetype: "mag", burden: "One-Handed", feature: "<strong><em>Reliable:</em></strong> +1 to <a href='#define-attack-roll'>attack rolls</a>" },
+{ label: "Advanced Arcane-Frame Wheelchair", tier: 3, magic: true, pages: ["Page 123"], errata: false, trait: "Spellcast", range: "Far", damage: "d6+6", damagetype: "mag", burden: "One-Handed", feature: "<strong><em>Reliable:</em></strong> +1 to <a href='#define-attack-roll'>attack rolls</a>" },
+{ label: "Legendary Arcane-Frame Wheelchair", tier: 4, magic: true, pages: ["Page 123"], errata: false, trait: "Spellcast", range: "Far", damage: "d6+9", damagetype: "mag", burden: "One-Handed", feature: "<strong><em>Reliable:</em></strong> +1 to <a href='#define-attack-roll'>attack rolls</a>" }
 ];
 // weapons, secondary
 const weaponsecondaryList = [
@@ -1599,7 +1611,10 @@ function ccChooseWeapon(x) {
 		// details
 		let pWep = "";
 		pWep += "<ul class='og-list-inline'>";
-		pWep += "<li class='pb-1'><strong>Trait:</strong> " + linkTrait(weaponprimaryList[ccUserWeaponPrimary].trait) + "</li>";
+		pWep += "<li class='pb-1'><strong>Trait:</strong> ";
+		if (weaponprimaryList[ccUserWeaponPrimary].trait == "Spellcast") { pWep += "Spellcast (" + linkTrait(subclassList[ccUserSubclass].spellcast) + ")"; }
+		else { linkTrait(weaponprimaryList[ccUserWeaponPrimary].trait) }
+		pWep += "</li>";
 		pWep += "<li class='pb-1'><strong>Range:</strong> <a href='#define-range'>" + weaponprimaryList[ccUserWeaponPrimary].range + "</a></li>";
 		pWep += "<li class='pb-1'><strong>Damage:</strong> <a href='#define-damage-roll'>" + weaponprimaryList[ccUserWeaponPrimary].damage + "</a> <a href='#define-damage-type'>" + weaponprimaryList[ccUserWeaponPrimary].damagetype + "</a></li>";
 		if (weaponprimaryList[ccUserWeaponPrimary].feature != "") {
@@ -1760,6 +1775,10 @@ function ccPrintAdditionalStatistics() {
 	if (weaponprimaryList[ccUserWeaponPrimary].label == "Warhammer") {
 		userEvasionBonus = userEvasionBonus -1;
 		eMods += "<li>Warhammer (Heavy): &minus;1</li>";
+	}
+	if (weaponprimaryList[ccUserWeaponPrimary].label == "Heavy-Frame Wheelchair") {
+		userEvasionBonus = userEvasionBonus -1;
+		eMods += "<li>Heavy-Frame Wheelchair (Heavy): &minus;1</li>";
 	}
 	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed" && weaponsecondaryList[ccUserWeaponSecondary].label == "Tower Shield") {
 		userEvasionBonus = userEvasionBonus -1;
@@ -2625,6 +2644,70 @@ function printTraits() {
 };
 // weapons, primary
 function printWeaponsPrimary() {
+	let wProp = "";
+	wProp += "<div class='row'>"; // open row
+	wProp += "<div class='col-12 col-md-6'>"; // open col
+	wProp += "<div id='define-weapon'>"; // open def
+	wProp += "<h3 id='weapons'>Weapons<a class='og-h-anchor' href='#weapons' title='Permalink' aria-hidden='true'></a></h3>";
+	wProp += "<ul class='og-list-inline og-ref og-omit'><li>Page 96</li><li>Page 112</li><li>Page 113</li><li>Errata</li></ul>";
+	wProp += "<dl>";
+	wProp += "<dt>Equipping Weapons</dt>";
+	wProp += "<dd>You can equip up to two <strong>active weapons</strong>&mdash;one <strong>primary weapon</strong>, and one <strong>secondary weapon</strong>. You can equip weapons whose <a href='#define-tier'>tier</a> is equal or lower than yours. If your <a href='#define-subclass'>subclass</a> didn't assign you a Spellcast trait, you can't equip magic weapons. You can make <a href='#define-attack-roll'>attack rolls</a> with your active weapons. You can carry two <strong>inventory weapons</strong>. You can swap an inventory weapon with an active weapon during <a href='#define-downtime'>downtime</a> or a moment of calm. In danger, you must mark a <a href='#define-stress'>Stress</a> to swap weapons.</dd>";
+	wProp += "<dt>Trait</dt>";
+	wProp += "<dd>The <a href='#define-trait'>trait</a> used for <a href='#define-attack-roll'>attack rolls</a> made using the weapon.</dd>";
+	wProp += "<dt>Range</dt>";
+	wProp += "<dd>The maximum <a href='#define-range'>range</a> between you and the target.</dd>";
+	wProp += "<dt>Damage and Damage Type</dt>";
+	wProp += "<dd>The weapon's <a href='#define-damage-roll'>damage roll</a> and <a href='#define-damage-type'>damage type</a>.</dd>";
+	wProp += "<dt>Burden</dt>";
+	wProp += "<dd>The number of hands the weapon occupies when active. You have two hands.</dd>";
+	wProp += "<dt>Feature</dt>";
+	wProp += "<dd>Some weapons have special properties or features when active.</dd>";
+	wProp += "<dt>Throwing Weapons</dt>";
+	wProp += "<dd>You can make an <a href='#define-finesse'>Finesse</a> <a href='#define-attack-roll'>attack roll</a> to throw an active weapon within <a href='#define-range'>Very Close</a> range, dealing its <a href='#define-damage-roll'>damage</a> on a success. Once thrown, the weapon isn't active.</dd>";
+	wProp += "<dt>Unarmed Attacks</dt>";
+	wProp += "<dd>Use either <a href='#define-strength'>Strength</a> or <a href='#define-finesse'>Finesse</a> for the <a href='#define-attack-roll'>attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href='#define-damage-type'>physical damage</a>.</dd>";
+	wProp += "</dl>";
+	wProp += "</div>"; // close def
+	wProp += getSidebar("<p>Dual wielding is handled through <a href='#pc-benchmark-weapons-secondary'>secondary weapon features</a>.</p>");
+	wProp += "</div>"; // close col
+	wProp += "<div class='col-12 col-md-6'>"; // open col
+	wProp += "<div id='define-combat-wheelchair'>"; // open def
+	wProp += "<h4 id='combat-wheelchair'>Combat Wheelchair<a class='og-h-anchor' href='#combat-wheelchair' title='Permalink' aria-hidden='true'></a></h4>";
+	wProp += "<ul class='og-list-inline og-ref og-omit'><li>Page 122</li><li>Page 123</li></ul>";
+	wProp += "<p>Combat wheelcharis are <a href='#define-weapon'>primary weapons</a>.</p>";
+	wProp += "<dl>";
+	wProp += "<dt>Movement</dt>";
+	wProp += "<dd>You are skilled in navigating your wheelchair in numerous situations.</dd>";
+	wProp += "<dt>Burden</dt>";
+	wProp += "<dd>Wheelchairs have a burden like any <a href='#define-weapon'>weapon</a>. Outside of combat, you can maneuver using one or two hands. If you have limited or no mobility in your arms, a wheelchair can be magically attuned to you.</dd>";
+	wProp += "<dt>Light Frame Models</dt>";
+	wProp += "<dd>Light frame models move with you in more acrobatic ways.</dd>";
+	wProp += "<dt>Heavy Frame Models</dt>";
+	wProp += "<dd>Heavy frame models lend their weight to <a href='#define-attack-roll'>attacks</a>, but make you an easier target.</dd>";
+	wProp += "<dt>Arcane Frame Models</dt>";
+	wProp += "<dd>When <a href='#define-attack-roll'>attacking</a> with an arcane frame model, you can use a <a href='#define-subclass'>Spellcast trait</a> assigned by a <a href='#define-subclass'>subclass</a>.</p>";
+	wProp += "</dl>";
+	wProp += "</div>"; //close def
+	wProp += "<div class='og-topbar'>"; // open topbar
+	wProp += "<h5 class='h6'>Action and Movement</h5>";
+	wProp += "<ul class='og-list-disc og-questions small'>";
+	wProp += "<li>\"I roll over to the door to see if it's open.\"</li>";
+	wProp += "<li>\"I wheel myself over to the group to ask what's going on.\"</li>";
+	wProp += "<li>\"I pull my brakes and skid to a halt, turning in my seat to level my bow at the intruder.\"</li>";
+	wProp += "</ul>";
+	wProp += "<h6 class='h6'>Consequences</h5>";
+	wProp += "<ul class='og-list-disc og-questions small'>";
+	wProp += "<li>\"I pull my brakes, but I don't think to account for the loose gravel on the ground.\"</li>";
+	wProp += "<li>\"I hit a patch of ice awkwardly and am sent skidding out past my target.\"</li>";
+	wProp += "<li>\"I go to push off in pursuit, but one of my front caster wheels snags on a crack in the pavement, stalling me for a moment.\"</li>";
+	wProp += "</ul>";
+	wProp += "</div>"; // close topbar
+	wProp += getSidebar("<p>The GM should avoid breaking removing a PC's wheelchair, unless everyone&mdash;especially the player&mdash;agrees.</p>");
+	wProp += "</div>"; // close col
+	wProp += "</div>"; // close row
+	wProp += "<hr>"; // divide and continue
+	document.getElementById("printWeapons").innerHTML = wProp;
 	let primaryweaponContent = "";
 	primaryweaponContent += "<h4 id='weapons-primary'>Primary Weapon Tables<a class='og-h-anchor' href='#weapons-primary' title='Permalink' aria-hidden='true'></a></h4>";
 	primaryweaponContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 115</li></ul>";
