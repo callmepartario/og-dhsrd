@@ -1628,8 +1628,8 @@ function ccChooseArmor() {
 	ccUserArmor = document.getElementById("ccChooseArmor").value; 
 	let armor = "";
 	armor += "<ul class='og-list-inline'>";
-	armor += "<li class='pb-1'><strong>Base Score:</strong> " + armorList[ccUserArmor].score + "</li>";
-	armor += "<li class='pb-1'><strong>Base Thresholds:</strong> " + armorList[ccUserArmor].thresholdmajor + "/" + armorList[ccUserArmor].thresholdsevere + "</li>";
+	armor += "<li class='pb-1'><strong>Base Score:</strong> <a href='#define-armor'>" + armorList[ccUserArmor].score + "</a></li>";
+	armor += "<li class='pb-1'><strong>Base Thresholds:</strong> <a href='#define-hit-point'>" + armorList[ccUserArmor].thresholdmajor + "/" + armorList[ccUserArmor].thresholdsevere + "</a></li>";
 	if (armorList[ccUserArmor].feature != "") {
 		armor += "<li class='pb-1'><strong>Feature:</strong> <span class='og-divider'>" + armorList[ccUserArmor].feature + "</span></li>";
 	}
