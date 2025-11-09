@@ -680,18 +680,26 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .theme-dark .og-topbar-cc {
 	background-color: #023;
 }
+
+.theme-dark .input-group select.og-cc-drop {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    color: #fff;
+}
+
 .input-group {
-	border: 0.25rem solid #146;
+	border: 0.25rem solid #146 !important;
 	border-radius: 0.25rem;
 }
 
-.theme-light .input-group label, .theme-light .input-group select {
-	background-color: #f2fcff !important;
+.theme-light .input-group label, .theme-light .input-group select.og-cc-drop {
+  background-color: #f2fcff !important;
 }
 
-.theme-dark .input-group label, .theme-dark .input-group select {
-	background-color: #023 !important;
+.theme-dark .input-group label, .theme-dark .input-group select.og-cc-drop {
+  background-color: #023 !important;
 }
+/* .theme-light .input-group select.og-cc-drop:focus { } */
+/* .theme-dark .input-group select.og-cc-drop:focus { } */
 
 .og-topbar2 {
 	margin-top: 0.5rem;
