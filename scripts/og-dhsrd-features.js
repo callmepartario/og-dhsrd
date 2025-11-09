@@ -1124,8 +1124,8 @@ function printCC() {
 	CC += "</div>"; // close column 2
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
-	// STEP 3: ASSIGN TRAITS 
-	CC += "<h3 id='cc-step-3'><span class='h6'>Step 3:</span> Assign Traits<a class='og-h-anchor' href='#cc-step-3' title='Permalink' aria-hidden='true'></a></h3>";
+	// STEP 3: TRAITS 
+	CC += "<h3 id='cc-step-3'><span class='h6'>Step 3:</span> Traits<a class='og-h-anchor' href='#cc-step-3' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<div id='ccChooseTraits'></div>"; // pop field
 	CC += "</div>"; // close topbar
@@ -1234,7 +1234,7 @@ function printCC() {
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
 	// STEP 6: ADDITIONAL STATISTICS
-	CC += "<h3 id='cc-step-6'><span class='h6'>Step 6:</span> Record Character Statistics<a class='og-h-anchor' href='#cc-step-6' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<h3 id='cc-step-6'><span class='h6'>Step 6:</span> Additional Statistics<a class='og-h-anchor' href='#cc-step-6' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<h4 class='og-tab'>Additional Statistics</h4>";
 	CC += "<div id='ccPrintAdditionalStatistics'><p>&mdash;</p></div>", // pop field
