@@ -1382,14 +1382,14 @@ function ccChooseSubclass() {
 	tArray += "</div>"; // close row
 	tArray += "<div id='ccUserTraitMods'></div>";
 	document.getElementById("ccChooseTraits").innerHTML = tArray;
-	// populate primary weapon options
+	// populate physical primary weapon options
 	let wOptionsPrimary = "";
+	// physical weapons
 	for (let i = 0; i < weaponprimaryList.length; i++) {
 		// abbreviate burden
 		let b = weaponprimaryList[i].burden;
 		if (b == "One-Handed") { b = "1H"; }
 		else if (b == "Two-Handed") { b = "2H"; }
-		// list tier 1 primary weapons
 		if (weaponprimaryList[i].tier == 1 && weaponprimaryList[i].magic == false) {
 			wOptionsPrimary += "<option value='" + i + "'>" + weaponprimaryList[i].label + " &mdash; " + b;
 			// note suggestion
@@ -1398,14 +1398,22 @@ function ccChooseSubclass() {
 			}
 			wOptionsPrimary += "</option>";
 		}
-		// display magic weapons for spellcasters
-		if (subclassList[ccUserSubclass].spellcast != "" && weaponprimaryList[i].tier == 1 && weaponprimaryList[i].magic == true) {
-			wOptionsPrimary += "<option value='" + i + "'>" + weaponprimaryList[i].label + " &mdash; Magic, " + b;
-			// note suggestion
-			if (weaponprimaryList[i].label == classList[ccUserClass].weaponprimary) {
-				wOptionsPrimary += " (Suggested)</option>";
+	}
+	// magic weapons (for spellcasters only)
+	if (subclassList[ccUserSubclass].spellcast != "") {
+		for (let i = 0; i < weaponprimaryList.length; i++) {
+			// abbreviate burden
+			let b = weaponprimaryList[i].burden;
+			if (b == "One-Handed") { b = "1H"; }
+			else if (b == "Two-Handed") { b = "2H"; }
+			if (weaponprimaryList[i].tier == 1 && weaponprimaryList[i].magic == true) {
+				wOptionsPrimary += "<option value='" + i + "'>" + weaponprimaryList[i].label + " &mdash; Magic, " + b;
+				// note suggestion
+				if (weaponprimaryList[i].label == classList[ccUserClass].weaponprimary) {
+					wOptionsPrimary += " (Suggested)</option>";
+				}
+				wOptionsPrimary += "</option>";
 			}
-			wOptionsPrimary += "</option>";
 		}
 	}
 	if (classList[ccUserClass].spellcast == "") {
