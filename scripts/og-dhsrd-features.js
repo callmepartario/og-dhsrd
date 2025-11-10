@@ -3165,15 +3165,16 @@ function printAdversaries() {
 	let iAdv = "";
 	iAdv += "<h3 id='adversary-stat-blocks'>Adversary Stat Blocks<a class='og-h-anchor' href='#adversary-stat-blocks' title='Permalink' aria-hidden='true'></a></h3>";
 	iAdv += getReferences(["Page 209"]);
-	iAdv += "<p>This section contains the following stat blocks in alphabetical order:</p>";
 	iAdv += "<div class='alert ps-4 pb-0 og-omit'>";
 	for (t = 1; t < 5; t++) {
 		iAdv += "<h4 id='adversaries-by-tier-" + t + "'>Tier " + t + " (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#adversaries-by-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h4>";
-		iAdv += "<h5 class='h6'>People</h5>";
-		iAdv += "<ul class='list-unstyled og-qr'>";
-		for (let a = 0; a < adversaryList.length; a++) {
-			if (adversaryList[a].tier == t && adversaryList[a].category == "Person") {
-				iAdv += "<li><a href='#define-adversary-" + adversaryList[a].name + "'>" + adversaryList[a].label + "</a> <em>(" + adversaryList[a].type + ")</em></li>";
+		if (t < 4) {
+			iAdv += "<h5 class='h6'>People</h5>";
+			iAdv += "<ul class='list-unstyled og-qr'>";
+			for (let a = 0; a < adversaryList.length; a++) {
+				if (adversaryList[a].tier == t && adversaryList[a].category == "Person") {
+					iAdv += "<li><a href='#define-adversary-" + adversaryList[a].name + "'>" + adversaryList[a].label + "</a> <em>(" + adversaryList[a].type + ")</em></li>";
+				}
 			}
 		}
 		iAdv += "</ul>";
@@ -3258,7 +3259,7 @@ function printEnvironments() {
 		iEnv += "</ul>";
 	}
 	iEnv += "</div>";
-	iEnv += "<h4 id='environments-by-alphabetical-order'>Environment Stat Blocks by Alphabetical Order<a class='og-h-anchor' href='#environments-by-alphabetical-order' title='Permalink' aria-hidden='true'></a></h4>";
+	iEnv += "<h4 id='environments-listings'>Environment Stat Blocks in Alphabetical Order<a class='og-h-anchor' href='#environments-listings' title='Permalink' aria-hidden='true'></a></h4>";
 	// print env statblocks
 	let envStats = "";
 	envStats += "<div class='row'>";
@@ -3293,7 +3294,7 @@ function printEnvironments() {
 		envStats += envSB;
 	}
 	envStats += "</div>"; // close row
-	envStats += "<hr>"; // divide and move one
+	envStats += "<hr>"; // divide and move on
 	// sum sections and populate
 	iEnv = iEnv + envStats;
 	document.getElementById("printEnvironments").innerHTML = iEnv;
