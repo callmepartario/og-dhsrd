@@ -2000,7 +2000,7 @@ function printClasses() {
 	for (let i = 0; i < classList.length; i++) {
 		classContent += "<li>";
 		classContent += "<span class='h6'><a href='#define-" + classList[i].name + "'>" + classList[i].label + "</a></span>";
-		classContent += "<ul class='og-list-inline small'>";
+		classContent += "<ul class='og-list-inline'>";
 		for (let s = 0; s < classList[i].subclasses.length; s++) {
 			for (let o = 0; o < subclassList.length; o++) {
 				if (classList[i].subclasses[s] == subclassList[o].label) {
@@ -2507,7 +2507,7 @@ function printAncestries() {
 	ancestryContent += "<h4 class='h6'>Step 2: Choose Ancestry Features</h4>";
 	ancestryContent += "<p>Choose the <strong>first feature</strong> from one ancestry, and the <strong>second feature</strong> from the other&mdash;for example, if you are mixing the <a href='#define-goblin'>goblin</a>-<a href='#define-orc'>orc</a> ancestries, you can take the <strong><em>Surefooted</em></strong> and <strong><em>Tusks</em></strong> features, or the <strong><em>Sturdy</em></strong> and <strong><em>Danger Sense</em></strong> features.</p>";
 	ancestryContent += "</div>";
-	ancestryContent += getSidebar("<p>If your heritage includes more than two ancestries, you can represent additional ancestries through their appearance, backstory, and <a href='#define-experience'>Experiences</a>. You can experiment with different mixed ancestry combinations in <a href='#cc-step-2'>Character Creation Step 2: Choose a Heritage</a>.</p>");
+	ancestryContent += getSidebar("<p>If your heritage includes more than two ancestries, you can represent additional ancestries through their appearance, backstory, and <a href='#define-experience'>Experiences</a>. You can experiment with different mixed ancestry combinations in <a href='#character-creation'>character creation</a>.</p>");
 	ancestryContent += "</div>"; // close def
 	ancestryContent += "<hr>"; // divide and move on
 	document.getElementById("printAncestries").innerHTML = ancestryContent;
@@ -2644,6 +2644,57 @@ function printTraits() {
 };
 // weapons, primary
 function printWeaponsPrimary() {
+	let iEquip = "";
+	iEquip += "<div id='define-equipment'>";
+	iEquip += "<h2 id='equipment'>Equipment<a class='og-h-anchor' href='#define-equipment' title='Permalink' aria-hidden='true'></a></h2>";
+	iEquip += "<div class='alert ps-4 pb-0 og-omit'>"; // open index
+	iEquip += "<ul class='list-unstyled'>";  // open list
+	// weapons
+	iEquip += "<li><span class='h6'><a href='#define-weapons'>Weapons</a></span></li>";
+	// primary
+	iEquip += "<li>";
+	iEquip += "<span class='h6'><a href='#weapons-primary'>Primary Weapon Tables</a></span>";
+	iEquip += "<ul class='list-unstyled og-qr'>";
+	for (let i = 1; i < 5; i++) {
+		iEquip += "<li><a href='#weapons-primary-tier-" + i + "-physical'>Tier " + i + " Physical</a></li>";
+		iEquip += "<li><a href='#weapons-primary-tier-" + i + "-magic'>Tier " + i + " Magic</a></li>";
+	}
+	iEquip += "</ul>";
+	iEquip += "</li>";
+	// secondary
+	iEquip += "<li>";
+	iEquip += "<span class='h6'><a href='#define-weapon'>Secondary Weapon Tables</a></span>";
+	iEquip += "<ul class='list-unstyled og-qr'>";
+	for (let i = 1; i < 5; i++) {
+		iEquip += "<li><a href='#weapons-secondary-tier-" + i + "'>Tier " + i + "</a></li>";
+	}
+	iEquip += "</ul>";
+	iEquip += "</li>";
+	// armor
+	iEquip += "<li>";
+	iEquip += "<span class='h6'><a href='#define-armor'>Armor</a></span>";
+	iEquip += "<ul class='list-unstyled og-qr'>";
+	for (let i = 1; i < 5; i++) {
+		iEquip += "<li><a href='#armor-tier-" + i + "'>Tier " + i + "</a></li>";
+	}
+	iEquip += "</ul>";
+	iEquip += "</li>";
+	// loot
+	iEquip += "<li>";
+	iEquip += "<span class='h6'><a href='#define-loot'>Loot</a></span>";
+	iEquip += "<ul class='list-unstyled og-qr'>";
+	iEquip += "<li><a href='#define-consumable'>Consumables</a></li>";
+	iEquip += "<li><a href='#define-gold'>Gold</a></li>";
+	iEquip += "</ul>";
+	iEquip += "</li>";
+	iEquip += "</ul>"; // end list
+	iEquip += "</div>"; // close alert
+	iEquip += "<ul class='og-list-inline og-ref og-omit'><li>Page 112</li><li>Page 115</li><li>Errata</li></ul>";
+	iEquip += "<p><strong>Equipment</strong> includes <a href='#define-weapon'>weapons</a>, <a href='#define-armor'>armor</a>, <a href='#define-loot'>loot</a>, <a href='#define-consumable'>consumables</a>, <a href='#define-gold'>gold</a>, and other items the GM makes available you gain <a href='#define-level'>levels</a>.</p>";
+	iEquip += getSidebar("<p>For information on creating new equipment, see <a href='#pc-benchmarks'>PC Benchmarks</a>.</p>");
+	iEquip += "</div>"; // close def
+	iEquip += "<hr>";
+	document.getElementById("printEquipment").innerHTML = iEquip;
 	let wProp = "";
 	wProp += "<div class='row'>"; // open row
 	wProp += "<div class='col-12 col-md-6'>"; // open col
@@ -2872,6 +2923,29 @@ function printWeaponsSecondary() {
 // armor
 function printArmor() {
 	let armorContent = "";
+	armorContent += "<div id='define-armor'>"; // open def
+	armorContent += "<h3 id='armor'>Armor<a class='og-h-anchor' href='#armor' title='Permalink' aria-hidden='true'></a></h3>";
+	armorContent += "<ul class='og-list-inline og-ref og-omit'><li>Page 112</li><li>Page 114</li><li>Errata</li></ul>";
+	armorContent += "<dl>";
+	armorContent += "<dt>Unarmored</dt>";
+	armorContent += "<dd>While unarmored, your base Armor Score is 0, your <a href='#define-hit-point'>Major threshold</a> is equal to your <a href='#define-level'>level</a>, and your <a href='#define-hit-point'>Severe threshold</a> is equal to twice your <a href='#define-level'>level</a>.</dd>";
+	armorContent += "<dt>Equipping Armor</dt>";
+	armorContent += "<dd>You can't equip armor while in danger or under pressure, and you can't equip armor of a higher <a href='#define-tier'>tier</a> than yours. You can equip only one set of armor.  Each set of armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</dd>";
+	armorContent += "<dt>Base Thresholds</dt>";
+	armorContent += "<dd>When equipped, a set of armor's base thresholds determine your Major and Severe <a href='#define-hit-point'>damage thresholds</a>. Add your <a href='#define-level'>level</a> to each.</dd>";
+	armorContent += "<dt>Armor Score and Armor Slots</dt>";
+	armorContent += "<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href='#define-procedure'>modifiers</a> (to a maximum of 12) you gain from your <a href='#define-ancestry'>ancestry</a>, <a href='#define-class'>class</a>, or <a href='#define-subclass'>subclass</a> features and your <a href='#define-domain-card'>domain cards</a>. When <a href='#define-damage-roll'>incoming damage</a> would cause you to mark <a href='#define-hit-point'>Hit Points</a>, you can mark one <strong>Armor Slot</strong> to reduce the severity of the damage by one <a href='#define-hit-point'>threshold</a>&mdash;for example, from Severe to Major, Major to Minor, or Minor to Nothing.</dd>";
+	armorContent += "<dt>Feature</dt>";
+	armorContent += "<dd>Some armors grant a feature when equipped.</dd>";
+	armorContent += "<dt>Temporary Armor</dt>";
+	armorContent += "<dd>If your Armor Score gains a <a href='#define-temporary'>temporary</a> bonus&mdash;for example, from a <a href='#define-domain-card'>domain card</a> like <a href='#define-domain-card-book-of-ava'>Book of Ava</a>&mdash;your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>";
+	armorContent += "<dt>Repairing Armor</dt>";
+	armorContent += "<dd>When you take a <a href='#define-downtime'>rest</a>, you can clear marked armor slots as a <a href='#define-downtime-move'>downtime move</a>.</dd>";
+	armorContent += "<dt>Shields</dt>";
+	armorContent += "<dd>Shields aren't armor. They are <a href='#define-equipment'>secondary weapons</a> that provide a bonus to your Armor Score.</dd>";
+	armorContent += "</dl>";
+	armorContent += getSidebar("<p>Some features alter your <a href='#define-hit-point'>damage thresholds</a>&mdash;for example, the <em>Shell</em> feature from the <a href='#define-galapa'>Galapa</a> ancestry, or the <em>Unwavering</em> feature from the <a href='#define-stalwart'>Stalwart</a> <a href='#define-guardian'>Guardian</a>, or <a href='#define-domain-card'>domain cards</a> like <a href='#define-domain-card-bare-bones'>Bare Bones</a>.</p>");
+	armorContent += "</div>"; // close def
 	armorContent += "<h4 id='armor-tables'>Armor Tables<a class='og-h-anchor' href='#armor-tables' title='Permalink' aria-hidden='true'></a></h4>";
 	for (let t = 1; t < 5; t++) {
 		armorContent += "<h5 id='armor-tier-" + t + "'>Tier " + t + " Armor (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#armor-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
