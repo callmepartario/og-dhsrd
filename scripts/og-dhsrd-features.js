@@ -2093,45 +2093,53 @@ function ccPrintAdditionalStatistics() {
 	summary += "<h5 class='h6'>Character Options</h5>";
 	summary += "<ul class='og-list-inline og-ref og-omit'>";
 	if (ccUserAncestry == ancestryList.length) { 
-		summary += "<li>Ancestry: <a href='#define-mixed-ancestry'>Mixed Ancestry</a> (" + linkAncestry(ancestryList[ccUserAncestryMixed1].label) + "&ndash;" + linkAncestry(ancestryList[ccUserAncestryMixed2].label) + ")</li>"; 
+		summary += "<li>Ancestry <a href='#define-mixed-ancestry'>Mixed Ancestry</a> (" + linkAncestry(ancestryList[ccUserAncestryMixed1].label) + "&ndash;" + linkAncestry(ancestryList[ccUserAncestryMixed2].label) + ")</li>"; 
 	}
-	else { summary += "<li>Ancestry: " + linkAncestry(ancestryList[ccUserAncestry].label) + "</li>"; }
-	summary += "<li>Community: " + linkCommunity(communityList[ccUserCommunity].label) + "</li>";
-	summary += "<li>Class: " + linkClass(classesList[ccUserClass].label) + "</li>";
-	summary += "<li>Subclass: " + linkSubclass(subclassList[ccUserSubclass].label) + "</li>";
-	summary += "<li>Domain Card: " + linkDomainCard(domaincardList[ccUserDomainCard1].label) + "</li>";
-	summary += "<li>Domain Card: " + linkDomainCard(domaincardList[ccUserDomainCard2].label) + "</li>";
+	else { summary += "<li>Ancestry " + linkAncestry(ancestryList[ccUserAncestry].label) + "</li>"; }
+	summary += "<li>Community " + linkCommunity(communityList[ccUserCommunity].label) + "</li>";
+	summary += "<li>Class " + linkClass(classesList[ccUserClass].label) + "</li>";
+	summary += "<li>Subclass " + linkSubclass(subclassList[ccUserSubclass].label) + "</li>";
+	summary += "<li>Domain Card " + linkDomainCard(domaincardList[ccUserDomainCard1].label) + "</li>";
+	summary += "<li>Domain Card " + linkDomainCard(domaincardList[ccUserDomainCard2].label) + "</li>";
 	if (subclassList[ccUserSubclass].label == "School of Knowledge") {
-		summary += "<li>Domain Card: " + linkDomainCard(domaincardList[ccUserDomainCard3].label); + "</li>";
+		summary += "<li>Domain Card " + linkDomainCard(domaincardList[ccUserDomainCard3].label); + "</li>";
 	}
+	summary += "</ul>";
 	// report equipment
 	let wtype = "";
 	if (weaponprimaryList[ccUserWeaponPrimary].magic == false) { wtype = "physical"; }
 	else { wtype = "magic"; }
-	summary += "<li>Primary Weapon: <a href='#weapons-primary-tier-1-" + wtype + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a></li>";
+	summary += "<h5 class='h6'>Equipment and Inventory</h5>";
+	summary += "<ul class='og-list-inline og-ref og-omit'>";
+	summary += "<li>Primary Weapon <a href='#weapons-primary-tier-1-" + wtype + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a></li>";
 	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed") {
-		summary += "<li>Secondary Weapon: <a href='#weapons-secondary-tier-1'>" + weaponsecondaryList[ccUserWeaponSecondary].label + "</a></li>";
+		summary += "<li>Secondary Weapon <a href='#weapons-secondary-tier-1'>" + weaponsecondaryList[ccUserWeaponSecondary].label + "</a></li>";
 	}
-	summary += "<li>Armor: <a href='#armor-tier-1'>" + armorList[ccUserArmor].label + "</a></li>";
+	summary += "<li>Armor <a href='#armor-tier-1'>" + armorList[ccUserArmor].label + "</a></li>";
+
+	summary += "<li><a href='#define-gold'>Gold</a> 1 handful</li>";
+	summary += "<li>Torch</li>";
+	summary += "<li>50 feet (15 m) of rope</li>";
+	summary += "<li>Basic supplies</li>";
 	summary += "</ul>";
 	// report traits
 	summary += "<h5 class='h6'>Traits and Statistics</h5>";
 	summary += "<ul class='og-list-inline og-ref og-omit'>";
-	summary += "<li>" + linkTrait(traitList[0].label) + ": " + getNum(classesList[ccUserClass].traitarray[0] + userAgilityMods) + "</li>";
-	summary += "<li>" + linkTrait(traitList[1].label) + ": " + getNum(classesList[ccUserClass].traitarray[1]) + "</li>";
-	summary += "<li>" + linkTrait(traitList[2].label) + ": " + getNum(classesList[ccUserClass].traitarray[2] + userFinesseMods) + "</li>";
-	summary += "<li>" + linkTrait(traitList[3].label) + ": " + getNum(classesList[ccUserClass].traitarray[3]) + "</li>";
-	summary += "<li>" + linkTrait(traitList[4].label) + ": " + getNum(classesList[ccUserClass].traitarray[4]) + "</li>";
-	summary += "<li>" + linkTrait(traitList[5].label) + ": " + getNum(classesList[ccUserClass].traitarray[5]) + "</li>";
+	summary += "<li>" + linkTrait(traitList[0].label) + " " + getNum(classesList[ccUserClass].traitarray[0] + userAgilityMods) + "</li>";
+	summary += "<li>" + linkTrait(traitList[1].label) + " " + getNum(classesList[ccUserClass].traitarray[1]) + "</li>";
+	summary += "<li>" + linkTrait(traitList[2].label) + " " + getNum(classesList[ccUserClass].traitarray[2] + userFinesseMods) + "</li>";
+	summary += "<li>" + linkTrait(traitList[3].label) + " " + getNum(classesList[ccUserClass].traitarray[3]) + "</li>";
+	summary += "<li>" + linkTrait(traitList[4].label) + " " + getNum(classesList[ccUserClass].traitarray[4]) + "</li>";
+	summary += "<li>" + linkTrait(traitList[5].label) + " " + getNum(classesList[ccUserClass].traitarray[5]) + "</li>";
 	// report statistics
-	summary += "<li><a href='#define-level'>Level</a>: 1</li>";
-	summary += "<li><a href='#define-evasion'>Evasion</a>: " + (userEvasion + userEvasionBonus) + "</li>";
-	summary += "<li><a href='#define-armor'>Armor</a>: " + (userArmor + userArmorBonus) + "</li>";
-	summary += "<li><a href='#define-hit-point'>Thresholds</a>: " + (armorList[ccUserArmor].thresholdmajor + userThresholdBonus) + "/" + (armorList[ccUserArmor].thresholdsevere) + "</li>";
-	summary += "<li><a href='#define-hit-point'>Hit Points</a>: " + (userEvasion + userEvasionBonus) + "</li>";
-	summary += "<li><a href='#define-stress'>Stress</a>: " + (userStress + userStressBonus) + "</li>";
-	summary += "<li><a href='#define-damage-roll'>Proficiency</a>: 1</li>";
-	summary += "<li><a href='#define-hope'>Hope</a>: 2</li>";
+	summary += "<li><a href='#define-level'>Level</a> 1</li>";
+	summary += "<li><a href='#define-evasion'>Evasion</a> " + (userEvasion + userEvasionBonus) + "</li>";
+	summary += "<li><a href='#define-armor'>Armor</a> " + (userArmor + userArmorBonus) + "</li>";
+	summary += "<li><a href='#define-hit-point'>Thresholds</a> " + (armorList[ccUserArmor].thresholdmajor + userThresholdBonus) + "/" + (armorList[ccUserArmor].thresholdsevere) + "</li>";
+	summary += "<li><a href='#define-hit-point'>Hit Points</a> " + (userEvasion + userEvasionBonus) + "</li>";
+	summary += "<li><a href='#define-stress'>Stress</a> " + (userStress + userStressBonus) + "</li>";
+	summary += "<li><a href='#define-damage-roll'>Proficiency</a> 1</li>";
+	summary += "<li><a href='#define-hope'>Hope</a> 2</li>";
 	summary += "</ul>";
 	document.getElementById("ccRandomOutput").innerHTML = summary;
 };
@@ -4175,10 +4183,9 @@ function ccRandomize() {
 	ccChooseSubclass();
 	refreshTooltips();
 	ccChooseDomainCard1();
-
 	// random experiences
 	let pcDetail = "";
-	pcDetail += "<h5 class='h6'>Experiences</h5>";
+	pcDetail += "<h5 class='h6'>Experiences and Description</h5>";
 	pcDetail += "<ul class='og-list-inline og-ref og-omit'>";
 	let eCat1 = Math.floor(Math.random() * 5);
 	let rExp1 = "";
@@ -4187,7 +4194,7 @@ function ccRandomize() {
 	if ( eCat1 == 2) { rExp1 = experiencesList[0].specialties[Math.floor(Math.random() * experiencesList[0].specialties.length)] }
 	if ( eCat1 == 3) { rExp1 = experiencesList[0].skills[Math.floor(Math.random() * experiencesList[0].skills.length)] }
 	if ( eCat1 == 4) { rExp1 = experiencesList[0].phrases[Math.floor(Math.random() * experiencesList[0].phrases.length)] }
-	pcDetail += "<li>" + rExp1 + ": +2</li>";
+	pcDetail += "<li><a href='#define-experience'>" + rExp1 + "</a> +2<li>";
 	let eCat2 = Math.floor(Math.random() * 4);
 	if (eCat2 == eCat1) { eCat2 = eCat2++; }
 	let rExp2 = "";
@@ -4196,17 +4203,15 @@ function ccRandomize() {
 	if ( eCat2 == 2) { rExp2 = experiencesList[0].specialties[Math.floor(Math.random() * experiencesList[0].specialties.length)] }
 	if ( eCat2 == 3) { rExp2 = experiencesList[0].skills[Math.floor(Math.random() * experiencesList[0].skills.length)] }
 	if ( eCat2 == 4) { rExp2 = experiencesList[0].phrases[Math.floor(Math.random() * experiencesList[0].phrases.length)] }
-	pcDetail += "<li>" + rExp2 + ": +2</li>";
-	pcDetail += "</ul>";
-	pcDetail += "<h5 class='h6'>Description</h5>";
-	pcDetail += "<ul class='og-list-inline og-ref og-omit'>";
-	pcDetail += "<li>Clothes: " + classesList[ccUserClass].clothes[Math.floor(Math.random() * classesList[ccUserClass].clothes.length)] + "</li>";
-	pcDetail += "<li>Eyes: " + descriptionList[0].eyes[Math.floor(Math.random() * descriptionList[0].eyes.length)] + "</li>";
-	pcDetail += "<li>Body: " + descriptionList[0].body[Math.floor(Math.random() * descriptionList[0].body.length)] + "</li>";
-	pcDetail += "<li>Skin: " + descriptionList[0].skin[Math.floor(Math.random() * descriptionList[0].skin.length)] + "</li>";
-	pcDetail += "<li>Attitude: " + classesList[ccUserClass].attitudes[Math.floor(Math.random() * classesList[ccUserClass].attitudes.length)] + "</li>";
+	pcDetail += "<a href='#define-experience'>" + rExp2 + "</a> +2</li>";
+	pcDetail += "<li>" + classesList[ccUserClass].clothes[Math.floor(Math.random() * classesList[ccUserClass].clothes.length)] + " clothes</li>";
+	pcDetail += "<li>eyes like " + descriptionList[0].eyes[Math.floor(Math.random() * descriptionList[0].eyes.length)] + "</li>";
+	pcDetail += "<li>" + descriptionList[0].body[Math.floor(Math.random() * descriptionList[0].body.length)] + " body</li>";
+	pcDetail += "<li>skin like " + descriptionList[0].skin[Math.floor(Math.random() * descriptionList[0].skin.length)] + "</li>";
+	pcDetail += "<li>" + classesList[ccUserClass].attitudes[Math.floor(Math.random() * classesList[ccUserClass].attitudes.length)] + " attitude</li>";
 	pcDetail += "</ul>";
 	document.getElementById("ccRandomOutputDetail").innerHTML = pcDetail;
+	refreshTooltips();
 };
 
 // INITIALIZE ON LOAD
