@@ -1143,7 +1143,6 @@ function getTierLevels(t) {
 function printCC() {
 	let CC = "";
 	CC += "<div class='row'>"; // open row
-
 	CC += "<div class='col-12 col-md-6'>"; // open col
 	CC += "<div id='define-character-creation'>"; // open def
 	CC += "<h2 id='character-creation'>Character Creation<a class='og-h-anchor' href='#character-creation' title='Permalink' aria-hidden='true'></a></h2>";
@@ -1154,7 +1153,7 @@ function printCC() {
 	CC += "<li><a href='#cc-step-1'>Heritage</a></li>";
 	CC += "<li><a href='#cc-step-2'>Class and Subclass</a></li>";
 	CC += "<li><a href='#cc-step-3'>Domain Cards</a></li>";
-	CC += "<li><a href='#cc-step-4'>Equipment</a></li>";
+	CC += "<li><a href='#cc-step-4'>Equipment and Inventory</a></li>";
 	CC += "<li><a href='#cc-step-5'>Traits and Statistics</a></li>";
 	CC += "<li><a href='#cc-step-6'>Experiences and Description</a></li>";
 	CC += "<li><a href='#cc-step-7'>Background and Connnections</a></li>";
@@ -1316,7 +1315,7 @@ function printCC() {
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
 	// STEP 4: EQUIPMENT
-	CC += "<h3 id='cc-step-4'><span class='h6'>Step 4:</span> Equipment<a class='og-h-anchor' href='#cc-step-4' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<h3 id='cc-step-4'><span class='h6'>Step 4:</span> Equipment and Inventory<a class='og-h-anchor' href='#cc-step-4' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div id='ccWeaponMagic'></div>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<div class='row'>"; // open topbar
@@ -1381,10 +1380,9 @@ function printCC() {
 	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
 	// STEP 5
-	CC += "<h3 id='cc-step-5'><span class='h6'>Step 5:</span> Traits<a class='og-h-anchor' href='#cc-step-5' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<h3 id='cc-step-5'><span class='h6'>Step 5:</span> Traits and Statistics<a class='og-h-anchor' href='#cc-step-5' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
 	CC += "<div id='ccChooseTraits'></div>"; // pop field
-	CC += "<h4 class='og-tab'>Additional Statistics</h4>";
 	CC += "<div id='ccPrintAdditionalStatistics'><p>&mdash;</p></div>", // pop field
 	CC += "</div>"; // close topbar
 	// STEP 6
@@ -1878,7 +1876,7 @@ function ccPrintAdditionalStatistics() {
 	if (weaponprimaryList[ccUserWeaponPrimary].label == "Halberd" || weaponprimaryList[ccUserWeaponPrimary].label == "Longbow") { userFinesseMods = -1; }
 	// suggest traits
 	let tArray = "";
-	tArray += "<h4 class='og-tab'>Traits and Statistics</h4>";
+	tArray += "<h4 class='og-tab'>Traits</h4>";
 	tArray += getCCnote("<strong><a href='#define-trait'>Traits</a></strong> represent physical, mental, and social aptitudes. Assign each trait one of the array values:");
 	tArray += "<ul class='list-inline'><li class='d-inline-block h6 pe-3'>+2</li><li class='d-inline-block h6 pe-3'>+1</li><li class='d-inline-block h6 pe-3'>+1</li><li class='d-inline-block h6 pe-3'>+0</li><li class='d-inline-block h6 pe-3'>+0</li><li class='d-inline-block h6 pe-3'>&minus;1</li></ul>";
 	tArray += getCCnote("You can use the following suggested trait array for a " + linkClass(classesList[ccUserClass].label) + ". Modifications from selected features are included.");
@@ -1914,6 +1912,7 @@ function ccPrintAdditionalStatistics() {
 	document.getElementById("ccChooseTraits").innerHTML = tArray;
 	// additionalstatistics
 	let userStats = "";
+	userStats += "<h4 class='og-tab'>Statistics</h4>";
 	userStats += "<div class='row'>"; // open row
 	// calculate level
 	userStats += "<div class='col-12 col-md-6 col-lg-4'>"; // open col
