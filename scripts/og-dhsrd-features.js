@@ -30,7 +30,7 @@ const classesList = [
 { label: "Rogue", name: "rogue", pages: ["Page 42", "Errata"], summarybrief: "<strong><a href='#define-rogue'>Rogues</a></strong> are scoundrels, often in both attitude and practice. Broadly known as liars and thieves, the best among this class move through the world anonymously.", summary: "Rogues are scoundrels, often in both attitude and practice. Broadly known as liars and thieves, the best among this class move through the world anonymously. Utilizing their sharp wits and blades, rogues trick their foes through social manipulation as easily as breaking locks, climbing through windows, or dealing underhanded blows. These masters of magical craft manipulate shadow and movement, adding an array of useful and deadly tools to their repertoire. Rogues frequently establish guilds to meet future accomplices, hire out jobs, and hone secret skills, proving that there's honor among thieves for those who know where to look.", domains: ["Midnight", "Grace"], evasion: 12, hp: 6, items: "A set of forgery tools, or a grappling hook", hopefeature: "<p><strong><em>Rogue's Dodge:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to gain a +2 bonus to your <a href='#define-evasion'>Evasion</a> until the next time an attack succeeds against you. Otherwise, this bonus lasts until your next <a href='#define-downtime'>rest</a>.</p>", features: ["<p><strong><em>Cloaked:</em></strong> Any time you would be <a href='#define-condition'><em>Hidden</em></a>, you are instead <em>Cloaked</em>. In addition to the benefits of the <a href='#define-condition'><em>Hidden</em></a> condition, while <em>Cloaked</em> you remain unseen if you are stationary when an <a href='#define-adversary'>adversary</a> moves to where they would normally see you. After you make an <a href='#define-attack-roll'>attack</a> or end a move within line of sight of an adversary, you are no longer <em>Cloaked</em>. Otherwise, this bonus lasts until your next rest.</p>", "<p><strong><em>Sneak Attack:</em></strong> When you succeed on an attack while <em>Cloaked</em> or while an ally is within <a href='#define-range'>Melee</a> range of your target, add a number of <strong>d6s</strong> equal to your <a href='#define-tier'>tier</a> to your <a href='#define-damage-roll'>damage roll</a>.</p>"], sidebar: "",   subclasses: ["Nightwalker", "Syndicate"], traitarray: ["+1", "&minus;1", "+2", "+0", "+1", "+0"], weaponprimary: "Dagger", weaponsecondary: "Small Dagger", armor: "Gambeson Armor", questions: ["What did you get caught doing that got you exiled from your home community?", "You used to have a different life, but you've tried to leave it behind. Who from your past is still chasing you?", "Who from your past were you most sad to say goodbye to?"], connections: ["What did I recently convince you to do that got us both in trouble?", "What have I discovered about your past that I hold secret from the others?", "Who do you know from my past, and how have they influenced your feelings about me?"], qualities: "As a <a href='#define-Rogue'>rogue</a>, you have experience fighting with your blade as well as your wit, preferring to move quickly and fight quietly.",  clothes: ["clean", "dark", "inconspicuous", "leather", "scary", "tactical", "tight"], attitudes: ["bandit", "con artist", "gambler", "mob boss", "pirate"] },
 { label: "Seraph", name: "seraph", pages: ["Page 44"], summarybrief: "<strong><a href='#define-seraph'>Seraphs</a></strong> are divine fighters and healers imbued with sacred purpose. A wide array of deities exist within the realms, and thus numerous kinds of seraphs are appointed by these gods.", summary: "Seraphs are divine fighters and healers imbued with sacred purpose. A wide array of deities exist within the realms, and thus numerous kinds of seraphs are appointed by these gods. Their ethos traditionally aligns with the domain or goals of their god, such as defending the weak, exacting vengeance, protecting a land or artifact, or upholding a particular faith. Some seraphs ally themselves with an army or locale, much to the satisfaction of their rulers, but other crusaders fight in opposition to the follies of the Mortal Realm. It is better to be a seraph's ally than their enemy, as they are terrifying foes to those who defy their purpose.", domains: ["Splendor", "Valor"], evasion: 9, hp: 7, items: "A bundle of offerings, or a sigil of your god", hopefeature: "<p><strong><em>Life Support:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to clear a <a href='#define-hit-point'>Hit Point</a> on an ally within <a href='#define-range'>Close</a> range.</p>", features: ["<p><strong><em>Prayer Dice:</em></strong> At the beginning of each session, roll a number of <strong>d4s</strong> equal to your <a href='#define-subclass'>subclass</a>'s Spellcast trait and place them on your character sheet in the space provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally within <a href='#define-range'>Far</a> range. You can use a spent die's value to reduce incoming damage, add to a roll's result after the roll is made, or gain <a href='#define-hope'>Hope</a> equal to the result. At the end of each session, clear all unspent Prayer Dice.</p>"], sidebar: "", subclasses: ["Divine Wielder", "Winged Sentinel"], traitarray: ["+0", "+2", "+0", "+1", "+1", "&minus;1"], weaponprimary: "Hallowed Axe", weaponsecondary: "Round Shield", armor: "Chainmail Armor", questions: ["Which god did you devote yourself to? What incredible feat did they perform for you in a moment of desperation?", "How did your appearance change after taking your oath?", "In what strange or unique way do you communicate with your god?"], connections: ["What promise did you make me agree to, should you die on the battlefield?", "Why do you ask me so many questions about my god?", "You've told me to protect one member of our party above all others, even yourself. Who are they and why?"], qualities: "As a <a href='#define-seraph'>Seraph</a>, you've taken a vow to a god who helps you channel sacred arcane power to keep your party on their feet.",  clothes: ["glowing", "rippling", "ornate", "tight", "modest", "strange", "natural"], attitudes: ["angel", "doctor", "evangelist", "monk", "priest"] },
 { label: "Sorcerer", name: "sorcerer", pages: ["Page 46"], summarybrief: "Not all innate magic users choose to hone their craft, but those who do can become powerful <strong><a href='#define-sorcerer'>Sorcerers</a></strong>.", summary: "Not all innate magic users choose to hone their craft, but those who do can become powerful sorcerers. The gifts of these wielders are passed down through families, even if the family is unaware of or reluctant to practice them. A sorcerer's abilities can range from the elemental to the illusionary and beyond, and many practitioners band together into collectives based on their talents. The act of becoming a formidable sorcerer is not the practice of acquiring power, but learning to cultivate and control the power one already possesses. The magic of a misguided or undisciplined sorcerer is a dangerous force indeed.", domains: ["Arcana", "Midnight"], evasion: 10, hp: 6, items: "A whispering orb, or a family heirloom", hopefeature: "<p><strong><em>Volatile Magic:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to <a href='#define-reroll'>reroll</a> any number of your damage dice on an attack that deals <a href='#define-damage-type'>magic damage</a>.</p>",features: ["<p><strong><em>Arcane Sense:</em></strong> You can sense the presence of magical people and objects within <a href='range'>Close</a> range.</p>", "<p><strong><em>Minor Illusion:</em></strong> Make a <strong><a href='spellcast-roll'>Spellcast Roll (10)</a></strong>. On a success, you create a minor visual illusion no larger than yourself within <a href='range'>Close</a> range. This illusion is convincing to anyone at <a href='range'>Close</a> range or farther.</p>", "<p><strong><em>Channel Raw Power:</em></strong> Once per <a href='downtime'>long rest</a>, you can place a <a href='domain-card'>domain card</a> from your <a href='loadout'>loadout</a> into your <a href='loadout'>vault</a> and choose to either:</p><ul class='og-list-disc'><li>Gain <a href='hope'>Hope</a> equal to the level of the card.</li><li>Enhance a spell that deals damage, gaining a bonus to your <a href='damage-roll'>damage roll</a> equal to twice the level of the card.</li></ul></li>"], sidebar: "", subclasses: ["Elemental Origin", "Primal Origin"], traitarray: ["+0", "&minus;1", "+1", "+2", "+1", "+0"], weaponprimary: "Dualstaff", weaponsecondary: "", armor: "Gambeson Armor", questions: ["What did you do that made the people in your community wary of you?", "What mentor taught you to control your untamed magic, and why are they no longer able to guide you?", "You have a deep fear you hide from everyone. What is it, and why does it scare you?"], connections: ["Why do you trust me so deeply?", "What did I do that makes you cautious around me?", "Why do we keep our shared past a secret?"], qualities: "As a <a href='#define-sorcerer'>Sorcerer</a>, you were born with innate magical power, and you've learned how to wield that power to get what you want.",  clothes: ["always moving", "flamboyant", "inconspicuous", "layered", "ornate", "tight"], attitudes: ["celebrity", "commander", "politician", "prankster", "wolf in sheep's clothing"] },
-{ label: "Warrior", name: "warrior", pages: ["Page 48"], summarybrief: "Becoming a <strong><a href='#define-warrior'>Warrior</a></strong> requires years, often a lifetime, of training and dedication to the mastery of weapons and violence.", summary: "Becoming a warrior requires years, often a lifetime, of training and dedication to the mastery of weapons and violence. While many who seek to fight hone only their strength, warriors understand the importance of an agile body and mind, making them some of the most sought-after fighters across the realms. Frequently, warriors find employment within an army, a band of mercenaries, or even a royal guard, but their potential is wasted in any position where they cannot continue to improve and expand their skills. Warriors are known to have a favored weapon; to come between them and their blade would be a grievous mistake.", domains: ["Blade", "Bone"],evasion: 11, hp: 6, items: "The drawing of a lover, or a sharpening stone", hopefeature: "<p><strong><em>No Mercy:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to gain a +1 bonus to your <a href='#define-attack-roll'>attack rolls</a> until your next <a href='#define-downtime'>rest</a>.</p>",features: ["<p><strong><em>Attack of Opportunity:</em></strong> If an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range attempts to leave that range, make a <a href='#define-reaction-roll'>reaction roll</a> using a <a href='#define-trait'>trait</a> of your choice against their <a href='#define-difficulty'>Difficulty</a>. Choose one effect on a success, or two if you critically succeed:</p><ul class='og-list-disc'><li>They can't move from where they are.</li><li>You deal damage to them equal to your primary weapon's damage.</li><li>You move with them.</li></ul>", "<p><strong><em>Combat Training:</em></strong> You ignore burden when equipping <a href='#define-weapon'>weapons</a>. When you deal <a href='#define-damage-type'>physical damage</a>, you gain a bonus to your <a href='#define-damage-roll'>damage roll</a> equal to your <a href='#define-level'>level</a>.</p>"], sidebar: "", subclasses: ["Call of the Brave", "Call of the Slayer"], traitarray: ["+2", "+1", "+0", "+1", "&minus;1", "+0"], weaponprimary: "Longsword", weaponsecondary: "", armor: "Chainmail Armor", questions: ["Who taught you to fight, and why did they stay behind when you left home?", "Somebody defeated you in battle years ago and left you to die. Who was it, and how did they betray you?", "What legendary place have you always wanted to visit, and why is it so special?"], connections: ["We knew each other long before this party came together. How?", "What mundane task do you usually help me with off the battlefield?", "What fear am I helping you overcome?"], qualities: "As a <a href='#define-warrior'>Warrior</a>, you run into battle without hestation or caution, knowing you can strike down whatever enemy stands in your path.",  clothes: ["bold", "patched", "reinforced", "royal", "sleek", "sparing", "weathered"], attitudes: ["bull, dedicated soldier, gladiator, hero, hired hand"] },
+{ label: "Warrior", name: "warrior", pages: ["Page 48"], summarybrief: "Becoming a <strong><a href='#define-warrior'>Warrior</a></strong> requires years, often a lifetime, of training and dedication to the mastery of weapons and violence.", summary: "Becoming a warrior requires years, often a lifetime, of training and dedication to the mastery of weapons and violence. While many who seek to fight hone only their strength, warriors understand the importance of an agile body and mind, making them some of the most sought-after fighters across the realms. Frequently, warriors find employment within an army, a band of mercenaries, or even a royal guard, but their potential is wasted in any position where they cannot continue to improve and expand their skills. Warriors are known to have a favored weapon; to come between them and their blade would be a grievous mistake.", domains: ["Blade", "Bone"],evasion: 11, hp: 6, items: "The drawing of a lover, or a sharpening stone", hopefeature: "<p><strong><em>No Mercy:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to gain a +1 bonus to your <a href='#define-attack-roll'>attack rolls</a> until your next <a href='#define-downtime'>rest</a>.</p>",features: ["<p><strong><em>Attack of Opportunity:</em></strong> If an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Melee</a> range attempts to leave that range, make a <a href='#define-reaction-roll'>reaction roll</a> using a <a href='#define-trait'>trait</a> of your choice against their <a href='#define-difficulty'>Difficulty</a>. Choose one effect on a success, or two if you critically succeed:</p><ul class='og-list-disc'><li>They can't move from where they are.</li><li>You deal damage to them equal to your primary weapon's damage.</li><li>You move with them.</li></ul>", "<p><strong><em>Combat Training:</em></strong> You ignore burden when equipping <a href='#define-weapon'>weapons</a>. When you deal <a href='#define-damage-type'>physical damage</a>, you gain a bonus to your <a href='#define-damage-roll'>damage roll</a> equal to your <a href='#define-level'>level</a>.</p>"], sidebar: "", subclasses: ["Call of the Brave", "Call of the Slayer"], traitarray: ["+2", "+1", "+0", "+1", "&minus;1", "+0"], weaponprimary: "Longsword", weaponsecondary: "", armor: "Chainmail Armor", questions: ["Who taught you to fight, and why did they stay behind when you left home?", "Somebody defeated you in battle years ago and left you to die. Who was it, and how did they betray you?", "What legendary place have you always wanted to visit, and why is it so special?"], connections: ["We knew each other long before this party came together. How?", "What mundane task do you usually help me with off the battlefield?", "What fear am I helping you overcome?"], qualities: "As a <a href='#define-warrior'>Warrior</a>, you run into battle without hestation or caution, knowing you can strike down whatever enemy stands in your path.",  clothes: ["bold", "patched", "reinforced", "royal", "sleek", "sparing", "weathered"], attitudes: ["bull", "dedicated soldier", "gladiator", "hero", "hired hand"] },
 { label: "Wizard", name: "wizard", pages: ["Page 50"], summarybrief: "Whether through an institution or individual study, those known as <strong><a href='#define-wizard'>Wizards</a></strong> acquire and hone immense magical power over years of learning using a variety of tools, including books, stones, potions, and herbs.", summary: "Whether through an institution or individual study, those known as wizards acquire and hone immense magical power over years of learning using a variety of tools, including books, stones, potions, and herbs. Some wizards dedicate their lives to mastering a particular school of magic, while others learn from a wide variety of disciplines. Many wizards become wise and powerful figures in their communities, advising rulers, providing medicines and healing, and even leading war councils. While these mages all work toward the common goal of collecting magical knowledge, wizards often have the most conflict within their own ranks, as the acquisition, keeping, and sharing of powerful secrets is a topic of intense debate that has resulted in innumerable deaths.", domains: ["Codex", "Splendor"], evasion: 11, hp: 5, items: "A book you're trying to translate, or a tiny, harmless elemental", hopefeature: "<p><strong><em>Not This Time:</em></strong> <strong><a href='#define-hope'>Spend 3 Hope</a></strong> to force an <a href='#define-adversary'>adversary</a> within <a href='#define-range'>Far</a> range to <a href='#define-reroll'>reroll</a> an <a href='#define-attack-roll'>attack</a> or <a href='#define-damage-roll'>damage roll</a>.</p>",features: ["<p><strong><em>Prestidigitation:</em></strong> You can perform harmless, subtle magical effects at will. For example, you can change an object's color, create a smell, light a candle, cause a tiny object to float, illuminate a room, or repair a small object.</p>", "<p><strong><em>Strange Patterns:</em></strong> Choose a number between 1 and 12. When you roll that number on a Duality Die, gain a <a href='#define-hope'>Hope</a> or clear a <a href='#define-stress'>Stress</a>.</p><p>You can change this number when you take a <a href='#define-downtime'>long rest</a>.</p>"], sidebar: "", subclasses: ["School of Knowledge", "School of War"], traitarray: ["&minus;1", "+0", "+0", "+1", "+1", "+2"], weaponprimary: "Greatstaff", weaponsecondary: "", armor: "Leather Armor", questions: ["What responsibilities did your community once count on you for? How did you let them down?", "You've spent your life searching for a book or object of great significance. What is it, and why is it so important to you?", "You have a powerful rival. Who are they, and why are you so determined to defeat them?"], connections: ["What favor have I asked of you that you're not sure you can fulfill?", "What weird hobby or strange fascination do we both share?", "What secret about yourself have you entrusted only to me?"], qualities: "As a <a href='#define-wizard'>Wizard</a>, you've become familiar with the arcane through the relentless study of grimoires and other tools of magic",  clothes: ["beautiful", "clean", "common", "flowing", "layered", "patchwork", "tight"], attitudes: ["eccentric", "librarian", "lit fuse", "philosopher", "professor"] }
 ];
 // subclasses
@@ -803,8 +803,15 @@ const d20d20dadvd10 = [95.87,94.50,92.87,91.00,88.87,86.50,83.87,81.00,77.87,74.
 const d20dadv = [100.00,90.25,81.00,72.25,64.00,56.25,49.00,42.25,36.00,30.25,25.00,20.25,16.00,12.25,9.00,6.25,4.00,2.25,1.00,0.25];
 const d20 = [100.00,95.00,90.00,85.00,80.00,75.00,70.00,65.00,60.00,55.00,50.00,45.00,40.00,35.00,30.00,25.00,20.00,15.00,10.00,5.00];
 const d20adv = [100.00,99.75,99.00,97.75,96.00,93.75,91.00,87.75,84.00,79.75,75.00,69.75,64.00,57.75,51.00,43.75,36.00,27.75,19.00,9.75];
-// example experiences
-const experiencesList  = [ 
+// other cc lists
+const descriptionList = [
+	{
+		eyes: ["carnations", "earth", "endless ocean", "fire", "ivy", "lilacs", "night", "seafoam", "winter" ],
+		body: ["broad", "carved", "curvy", "lanky", "rotund", "short", "stocky", "tall", "thin", "tiny", "toned" ],
+		skin: ["ashes", "clover", "falling snow", "fine sand", "obsidian", "rose", "sapphire", "wisteria" ]
+	}
+];
+const experiencesList = [ 
 	{ 
 		backgrounds: [ "Assassin", "Blacksmith", "Bodyguard", "Bounty Hunter", "Chef to the Royal Family", "Circus Performer", "Con Artist", "Fallen Monarch", "Field Medic", "High Priestess", "Merchant", "Noble", "Pirate", "Politician", "Runaway", "Scholar", "Sellsword", "Soldier", "Storyteller", "Thief", "World Traveler" ], 
 		characteristics: [ "Affable", "Battle-Hardened", "Bookworm", "Charming", "Cowardly", "Friend to All", "Helpful", "Intimidating Presence", "Leader", "Lone Wolf", "Loyal", "Observant", "Prankster", "Silver Tongue", "Sticky Fingers", "Stubborn to a Fault", "Survivor", "Young and Naive" ], 
@@ -1064,7 +1071,7 @@ function linkDomainCard(x) {
 	let link = x;
 	for (let i = 0; i < domaincardList.length; i++) {
 		if (x == domaincardList[i].label) {
-			link = "<a href='#define-domain-card" + domaincardList[i].name + "'>" + domaincardList[i].label + "</a>";
+			link = "<a href='#define-domain-card-" + domaincardList[i].name + "'>" + domaincardList[i].label + "</a>";
 		}
 	}
 	return link;
@@ -1097,7 +1104,7 @@ function linkSubclass(x) {
 	return link;
 };
 function linkRange(x) {
-	return "<a href='define-range'>" + x + "</a>";
+	return "<a href='#define-range'>" + x + "</a>";
 };
 function linkTrait(x) {
 	let link = x;
@@ -1134,6 +1141,8 @@ function printCC() {
 	CC += "<h2 id='character-creation'>Character Creation<a class='og-h-anchor' href='#character-creation' title='Permalink' aria-hidden='true'></a></h2>";
 	CC += getReferences(["Page 13", "Editorial Addition"]);
 	CC += "<div class='og-topbar'>"; // open topbar
+	CC += "<div class='row'>"; // open row
+	CC += "<div class='col-12 col-md-6'>"; // open col
 	CC += getCCnote("Create your player character (PC) by making a series of choices. Think about the types of <a href='#define-action'>moves and actions</a> you want to make, and what types of <a href='#define-action-roll'>action rolls</a> you want to suceed with. Some choices won't affect game mechanics, but could have a big impact on the story.</p>");
 	CC += "<ol>";
 	CC += "<li><a href='#cc-step-1'>Heritage</a></li>";
@@ -1145,9 +1154,21 @@ function printCC() {
 	CC += "<li><a href='#cc-step-7'>Experiences and Description</a></li>";
 	CC += "<li><a href='#cc-step-8'>Background and Connnections</a></li>";
 	CC += "</ol>";
+	CC += getCCnote("Additional playtest character options are available from <a href='https://www.daggerheart.com/thevoid/'>Daggerheart&mdash;The Void</a>.");
+	CC += "</div>"; // close col
+	CC += "<div class='col-12 col-md-6'>"; // open col
+	CC += "<h3>Randomize Options</h4>";
+	CC += getCCnote("Approximately 20% chance of producing a <a href='#define-mixed-ancestry'>mixed ancestry</a>. The remaining 80% are evenly distributed among the other <a href='#define-ancestry'>ancestries</a>.");
+	CC += "<ul class='list-inline'>";
+	CC += "<li class='list-inline-item'><p><button class='btn mt-1 mb-1 theme-light border' type='button' id='ccRandomize' aria-label='Randomize Character'>Randomize Character</button></p></li>";
+	CC += "</ul>";
+	CC += "<div id='ccRandomOutput'><p>&mdash;</p></div>";
+	CC += getCCnote("Confirm or change these options below.");
+	CC += "</div>"; // close col
+	CC += "</div>"; // close row
 	CC += "</div>"; // close topbar
 	CC += "</div>"; // close definition
-	CC += getEdnote("These steps differ from those in the <a href='https://www.daggerheart.com/buy/'>Daggerheart Core Rulebook</a>, but the general outline of character creation remains the same. Additional playtest character options are available from <a href='https://www.daggerheart.com/thevoid/'>Daggerheart&mdash;The Void</a>.");
+	// cc randomize
 	// STEP 1
 	CC += "<h3 id='cc-step-1'><span class='h6'>Step 1:</span> Heritage<a class='og-h-anchor' href='#cc-step-1' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += "<div class='og-topbar'>"; // open topbar
@@ -1626,11 +1647,17 @@ function ccChooseSubclass() {
 			document.getElementById("ccChooseDomainCard" + c).innerHTML = cardOptions;
 		}
 	}
-	// preselect cards
-	document.getElementById("ccChooseDomainCard1").value = ccUserClassDeck[0];
-	document.getElementById("ccChooseDomainCard2").value = ccUserClassDeck[3];
-	document.getElementById("ccChooseDomainCard3").value = ccUserClassDeck[2];
+	// preselect one card from each domain
+	let rCard1 = Math.floor(Math.random() * ccUserClassDeck.length);
+	let rCard2 = Math.floor(Math.random() * (ccUserClassDeck.length - 1));
+	if (rCard1 == rCard2) { rCard2++ }
+	// let rCard3 = Math.floor(Math.random() * ccUserClassDeck.length);
+
+	document.getElementById("ccChooseDomainCard1").value = ccUserClassDeck[rCard1];
+	document.getElementById("ccChooseDomainCard2").value = ccUserClassDeck[rCard2];
+	document.getElementById("ccChooseDomainCard3").value = ccUserClassDeck[1];
 	ccChooseDomainCard1();
+	// qualities
 	document.getElementById("ccClassQualities").innerHTML = getCCnote(classesList[ccUserClass].qualities);
 	// background questions
 	ccPrintBackgroundQuestions();
@@ -1699,7 +1726,7 @@ function ccChooseCommunity() {
 	cDetail += "<li>" + communityList[ccUserCommunity].feature + "</li>";
 	cDetail += "</ul>";
 	document.getElementById("ccCommunity").innerHTML = cDetail;
-	ccPrintBackgroundQuestions();
+	ccPrintAdditionalStatistics();
 };
 function ccChooseWeapon(x) {
 	// primary
@@ -1816,11 +1843,12 @@ function ccChooseDomainCard2() {
 	document.getElementById("ccChooseDomainCard3").options["ccCardSelect3-" + ccUserDomainCard1].disabled = true;
 	document.getElementById("ccChooseDomainCard3").options["ccCardSelect3-" + ccUserDomainCard2].disabled = true;
 	ccChooseDomainCard3();
-	refreshTooltips();
 };
 function ccChooseDomainCard3() {
 	ccUserDomainCard3 = document.getElementById("ccChooseDomainCard3").value;
 	document.getElementById("ccDomainCard3").innerHTML = ccPrintDomainCard(ccUserDomainCard3);
+	ccPrintAdditionalStatistics();
+	refreshTooltips();
 };
 function ccPrintDomainCard(x) {
 	// determine domain id for themeing
@@ -2042,7 +2070,7 @@ function ccPrintAdditionalStatistics() {
 	let traitMods = "";
 	if (userTraitMods == true) {
 	traitMods += "<h4 class='og-tab'>Trait Modifications</h4>";
-		traitMods += getCCnote("Your selected <a href='#define-equipment'>equipment</a> modifies your <a href='#define-trait'>traits</a>. Revert the modifications if you change equipment.");
+		traitMods += getCCnote("Your selected <a href='#define-equipment'>equipment</a> modifies your <a href='#define-trait'>traits</a>. Apply the listed modifications to your traits, and revert them if you change equipment.");
 		traitMods += "<div class='row'>"; // open row
 		traitMods += userTraitModArmor; // agility
 		traitMods += userTraitModWeapon; // finesse
@@ -2051,6 +2079,25 @@ function ccPrintAdditionalStatistics() {
 	document.getElementById("ccUserTraitMods").innerHTML = traitMods;
 	document.getElementById("ccPrintAdditionalStatistics").innerHTML = userStats;
 	refreshTooltips();
+
+
+	// assemble summary
+	let summary = "";
+	summary += "<ul class='og-list-inline og-ref og-omit'>";
+	if (ccUserAncestry == ancestryList.length) { 
+		summary += "<li>Ancestry: <a href='#define-mixed-ancestry'>Mixed Ancestry</a> (" + linkAncestry(ancestryList[ccUserAncestryMixed1].label) + "&ndash;" + linkAncestry(ancestryList[ccUserAncestryMixed2].label) + ")</li>"; 
+	}
+	else { summary += "<li>Ancestry: " + linkAncestry(ancestryList[ccUserAncestry].label) + "</li>"; }
+	summary += "<li>Community: " + linkCommunity(communityList[ccUserCommunity].label) + "</li>";
+	summary += "<li>Class: " + linkClass(classesList[ccUserClass].label) + "</li>";
+	summary += "<li>Subclass: " + linkSubclass(subclassList[ccUserSubclass].label) + "</li>";
+	summary += "<li>Domain Card: " + linkDomainCard(domaincardList[ccUserDomainCard1].label) + "</li>";
+	summary += "<li>Domain Card: " + linkDomainCard(domaincardList[ccUserDomainCard2].label) + "</li>";
+	if (subclassList[ccUserSubclass].label == "School of Knowledge") {
+		summary += "<li>Domain Card: " + linkDomainCard(domaincardList[ccUserDomainCard3].label); + "</li>";
+	}
+	summary += "</ul>";
+	document.getElementById("ccRandomOutput").innerHTML = summary;
 };
 function ccPrintBackgroundQuestions() {
 	//background
@@ -2134,7 +2181,9 @@ function printClasses() {
 	classContent += "</ul>";
 	classContent += "<p>There are nine classes in the <a href='#define-daggerheart'>Daggerheart</a> core materials.</p>";
 	classContent += "<ul class='og-list-inline og-tooltip-block'>";
-	classContent += "<li><a href='#bard'>Bard</a></li>";
+	for (let i = 0; i < classesList.length; i++) {
+		classContent += "<li>" + classesList[i].label + "</li>";
+	}
 	classContent += "</ul>";
 	classContent += getSidebar("<p>When you reach <a href='#define-level'>Level 5</a> or higher, you can select the <a href='#define-multiclass'>Multiclassing</a> advancement, gaining a second class and <a href='#define-subclass'>subclass</a>.</p>");
 	classContent += "</div>"; // close def
@@ -2710,15 +2759,16 @@ function printTraits() {
 	document.getElementById("printTraits").innerHTML = traitContent;
 };
 // weapons, primary
-function printWeaponsPrimary() {
+function printEquipment() {
+	// define equipment
 	let iEquip = "";
-	iEquip += "<div id='define-equipment'>";
+	iEquip += "<div id='define-equipment'>"; // open def
 	iEquip += "<h2 id='equipment'>Equipment<a class='og-h-anchor' href='#define-equipment' title='Permalink' aria-hidden='true'></a></h2>";
 	iEquip += "<div class='alert ps-4 pb-0 og-omit'>"; // open index
 	iEquip += "<ul class='list-unstyled'>";  // open list
-	// weapons
+	// weapons index
 	iEquip += "<li><span class='h6'><a href='#define-weapons'>Weapons</a></span></li>";
-	// primary
+	// primary weapon index
 	iEquip += "<li>";
 	iEquip += "<span class='h6'><a href='#weapons-primary'>Primary Weapon Tables</a></span>";
 	iEquip += "<ul class='list-unstyled og-qr'>";
@@ -2728,7 +2778,7 @@ function printWeaponsPrimary() {
 	}
 	iEquip += "</ul>";
 	iEquip += "</li>";
-	// secondary
+	// secondary weapon index
 	iEquip += "<li>";
 	iEquip += "<span class='h6'><a href='#define-weapon'>Secondary Weapon Tables</a></span>";
 	iEquip += "<ul class='list-unstyled og-qr'>";
@@ -2737,7 +2787,7 @@ function printWeaponsPrimary() {
 	}
 	iEquip += "</ul>";
 	iEquip += "</li>";
-	// armor
+	// armor index
 	iEquip += "<li>";
 	iEquip += "<span class='h6'><a href='#define-armor'>Armor</a></span>";
 	iEquip += "<ul class='list-unstyled og-qr'>";
@@ -2755,251 +2805,92 @@ function printWeaponsPrimary() {
 	iEquip += "</ul>";
 	iEquip += "</li>";
 	iEquip += "</ul>"; // end list
-	iEquip += "</div>"; // close alert
+	iEquip += "</div>"; // close index
 	iEquip += getReferences(["Page 112", "Page 115", "Errata"]);
 	iEquip += "<p><strong>Equipment</strong> includes <a href='#define-weapon'>weapons</a>, <a href='#define-armor'>armor</a>, <a href='#define-loot'>loot</a>, <a href='#define-consumable'>consumables</a>, <a href='#define-gold'>gold</a>, and other items the GM makes available you gain <a href='#define-level'>levels</a>.</p>";
 	iEquip += getSidebar("<p>For information on creating new equipment, see <a href='#pc-benchmarks'>PC Benchmarks</a>.</p>");
 	iEquip += "</div>"; // close def
 	iEquip += "<hr>";
-	document.getElementById("printEquipment").innerHTML = iEquip;
-	let wProp = "";
-	wProp += "<div class='row'>"; // open row
-	wProp += "<div class='col-12 col-md-6'>"; // open col
-	wProp += "<div id='define-weapon'>"; // open def
-	wProp += "<h3 id='weapons'>Weapons<a class='og-h-anchor' href='#weapons' title='Permalink' aria-hidden='true'></a></h3>";
-	wProp += getReferences(["Page 96", "Page 112", "Page 113", "Errata"]);
-	wProp += "<dl>";
-	wProp += "<dt>Equipping Weapons</dt>";
-	wProp += "<dd>You can equip up to two <strong>active weapons</strong>&mdash;one <strong>primary weapon</strong>, and one <strong>secondary weapon</strong>. You can equip weapons whose <a href='#define-tier'>tier</a> is equal or lower than yours. If your <a href='#define-subclass'>subclass</a> didn't assign you a Spellcast trait, you can't equip magic weapons. You can make <a href='#define-attack-roll'>attack rolls</a> with your active weapons. You can carry two <strong>inventory weapons</strong>. You can swap an inventory weapon with an active weapon during <a href='#define-downtime'>downtime</a> or a moment of calm. In danger, you must mark a <a href='#define-stress'>Stress</a> to swap weapons.</dd>";
-	wProp += "<dt>Trait</dt>";
-	wProp += "<dd>The <a href='#define-trait'>trait</a> used for <a href='#define-attack-roll'>attack rolls</a> made using the weapon.</dd>";
-	wProp += "<dt>Range</dt>";
-	wProp += "<dd>The maximum <a href='#define-range'>range</a> between you and the target.</dd>";
-	wProp += "<dt>Damage and Damage Type</dt>";
-	wProp += "<dd>The weapon's <a href='#define-damage-roll'>damage roll</a> and <a href='#define-damage-type'>damage type</a>.</dd>";
-	wProp += "<dt>Burden</dt>";
-	wProp += "<dd>The number of hands the weapon occupies when active. You have two hands.</dd>";
-	wProp += "<dt>Feature</dt>";
-	wProp += "<dd>Some weapons have special properties or features when active.</dd>";
-	wProp += "<dt>Throwing Weapons</dt>";
-	wProp += "<dd>You can make an <a href='#define-finesse'>Finesse</a> <a href='#define-attack-roll'>attack roll</a> to throw an active weapon within <a href='#define-range'>Very Close</a> range, dealing its <a href='#define-damage-roll'>damage</a> on a success. Once thrown, the weapon isn't active.</dd>";
-	wProp += "<dt>Unarmed Attacks</dt>";
-	wProp += "<dd>Use either <a href='#define-strength'>Strength</a> or <a href='#define-finesse'>Finesse</a> for the <a href='#define-attack-roll'>attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href='#define-damage-type'>physical damage</a>.</dd>";
-	wProp += "</dl>";
-	wProp += "</div>"; // close def
-	wProp += getSidebar("<p>Dual wielding is handled through <a href='#pc-benchmark-weapons-secondary'>secondary weapon features</a>.</p>");
-	wProp += "</div>"; // close col
-	wProp += "<div class='col-12 col-md-6'>"; // open col
-	wProp += "<div id='define-combat-wheelchair'>"; // open def
-	wProp += "<h4 id='combat-wheelchair'>Combat Wheelchair<a class='og-h-anchor' href='#combat-wheelchair' title='Permalink' aria-hidden='true'></a></h4>";
-	wProp += getReferences(["Page 122", "Page 123"]);
-	wProp += "<p>Combat wheelchairs are <a href='#define-weapon'>primary weapons</a>.</p>";
-	wProp += "<dl>";
-	wProp += "<dt>Movement</dt>";
-	wProp += "<dd>You are skilled in navigating your wheelchair in numerous situations.</dd>";
-	wProp += "<dt>Burden</dt>";
-	wProp += "<dd>Wheelchairs have a burden like any <a href='#define-weapon'>weapon</a>. Outside of combat, you can maneuver using one or two hands. If you have limited or no mobility in your arms, a wheelchair can be magically attuned to you.</dd>";
-	wProp += "<dt>Light Frame Models</dt>";
-	wProp += "<dd>Light frame models move with you in more acrobatic ways.</dd>";
-	wProp += "<dt>Heavy Frame Models</dt>";
-	wProp += "<dd>Heavy frame models lend their weight to <a href='#define-attack-roll'>attacks</a>, but make you an easier target.</dd>";
-	wProp += "<dt>Arcane Frame Models</dt>";
-	wProp += "<dd>When <a href='#define-attack-roll'>attacking</a> with an arcane frame model, you can use a <a href='#define-subclass'>Spellcast trait</a> assigned by a <a href='#define-subclass'>subclass</a>.</p>";
-	wProp += "</dl>";
-	wProp += "</div>"; //close def
-	wProp += "<div class='og-topbar'>"; // open topbar
-	wProp += "<h5 class='h6'>Action and Movement</h5>";
-	wProp += "<ul class='og-list-disc og-questions small'>";
-	wProp += "<li>\"I roll over to the door to see if it's open.\"</li>";
-	wProp += "<li>\"I wheel myself over to the group to ask what's going on.\"</li>";
-	wProp += "<li>\"I pull my brakes and skid to a halt, turning in my seat to level my bow at the intruder.\"</li>";
-	wProp += "</ul>";
-	wProp += "<h6 class='h6'>Consequences</h5>";
-	wProp += "<ul class='og-list-disc og-questions small'>";
-	wProp += "<li>\"I pull my brakes, but I don't think to account for the loose gravel on the ground.\"</li>";
-	wProp += "<li>\"I hit a patch of ice awkwardly and am sent skidding out past my target.\"</li>";
-	wProp += "<li>\"I go to push off in pursuit, but one of my front caster wheels snags on a crack in the pavement, stalling me for a moment.\"</li>";
-	wProp += "</ul>";
-	wProp += "</div>"; // close topbar
-	wProp += getSidebar("<p>The GM should avoid breaking removing a PC's wheelchair, unless everyone&mdash;especially the player&mdash;agrees.</p>");
-	wProp += "</div>"; // close col
-	wProp += "</div>"; // close row
-	wProp += "<hr>"; // divide and continue
-	document.getElementById("printWeapons").innerHTML = wProp;
-	let primaryweaponContent = "";
-	primaryweaponContent += "<h4 id='weapons-primary'>Primary Weapon Tables<a class='og-h-anchor' href='#weapons-primary' title='Permalink' aria-hidden='true'></a></h4>";
-	primaryweaponContent += getReferences(["Page 115"]);
+	// weapon	
+	let iWep = "";
+	iWep += "<div class='row'>"; // open row
+	iWep += "<div class='col-12 col-md-6'>"; // open col
+	iWep += "<div id='define-weapon'>"; // open def
+	iWep += "<h3 id='weapons'>Weapons<a class='og-h-anchor' href='#weapons' title='Permalink' aria-hidden='true'></a></h3>";
+	iWep += getReferences(["Page 96", "Page 112", "Page 113", "Errata"]);
+	iWep += "<dl>";
+	iWep += "<dt>Equipping Weapons</dt>";
+	iWep += "<dd>You can equip up to two <strong>active weapons</strong>&mdash;one <strong>primary weapon</strong>, and one <strong>secondary weapon</strong>. You can equip weapons whose <a href='#define-tier'>tier</a> is equal or lower than yours. If your <a href='#define-subclass'>subclass</a> didn't assign you a Spellcast trait, you can't equip magic weapons. You can make <a href='#define-attack-roll'>attack rolls</a> with your active weapons. You can carry two <strong>inventory weapons</strong>. You can swap an inventory weapon with an active weapon during <a href='#define-downtime'>downtime</a> or a moment of calm. In danger, you must mark a <a href='#define-stress'>Stress</a> to swap weapons.</dd>";
+	iWep += "<dt>Trait</dt>";
+	iWep += "<dd>The <a href='#define-trait'>trait</a> used for <a href='#define-attack-roll'>attack rolls</a> made using the weapon.</dd>";
+	iWep += "<dt>Range</dt>";
+	iWep += "<dd>The maximum <a href='#define-range'>range</a> between you and the target.</dd>";
+	iWep += "<dt>Damage and Damage Type</dt>";
+	iWep += "<dd>The weapon's <a href='#define-damage-roll'>damage roll</a> and <a href='#define-damage-type'>damage type</a>.</dd>";
+	iWep += "<dt>Burden</dt>";
+	iWep += "<dd>The number of hands the weapon occupies when active. You have two hands.</dd>";
+	iWep += "<dt>Feature</dt>";
+	iWep += "<dd>Some weapons have special properties or features when active.</dd>";
+	iWep += "<dt>Throwing Weapons</dt>";
+	iWep += "<dd>You can make an <a href='#define-finesse'>Finesse</a> <a href='#define-attack-roll'>attack roll</a> to throw an active weapon within <a href='#define-range'>Very Close</a> range, dealing its <a href='#define-damage-roll'>damage</a> on a success. Once thrown, the weapon isn't active.</dd>";
+	iWep += "<dt>Unarmed Attacks</dt>";
+	iWep += "<dd>Use either <a href='#define-strength'>Strength</a> or <a href='#define-finesse'>Finesse</a> for the <a href='#define-attack-roll'>attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href='#define-damage-type'>physical damage</a>.</dd>";
+	iWep += "</dl>";
+	iWep += "</div>"; // close def
+	iWep += getSidebar("<p>Dual wielding is handled through <a href='#pc-benchmark-weapons-secondary'>secondary weapon features</a>.</p>");
+	iWep += "</div>"; // close col
+	iWep += "<div class='col-12 col-md-6'>"; // open col
+	iWep += "<div id='define-combat-wheelchair'>"; // open def
+	iWep += "<h4 id='combat-wheelchair'>Combat Wheelchair<a class='og-h-anchor' href='#combat-wheelchair' title='Permalink' aria-hidden='true'></a></h4>";
+	iWep += getReferences(["Page 122", "Page 123"]);
+	iWep += "<p>Combat wheelchairs are <a href='#define-weapon'>primary weapons</a>.</p>";
+	iWep += "<dl>";
+	iWep += "<dt>Movement</dt>";
+	iWep += "<dd>You are skilled in navigating your wheelchair in numerous situations.</dd>";
+	iWep += "<dt>Burden</dt>";
+	iWep += "<dd>Wheelchairs have a burden like any <a href='#define-weapon'>weapon</a>. Outside of combat, you can maneuver using one or two hands. If you have limited or no mobility in your arms, a wheelchair can be magically attuned to you.</dd>";
+	iWep += "<dt>Light Frame Models</dt>";
+	iWep += "<dd>Light frame models move with you in more acrobatic ways.</dd>";
+	iWep += "<dt>Heavy Frame Models</dt>";
+	iWep += "<dd>Heavy frame models lend their weight to <a href='#define-attack-roll'>attacks</a>, but make you an easier target.</dd>";
+	iWep += "<dt>Arcane Frame Models</dt>";
+	iWep += "<dd>When <a href='#define-attack-roll'>attacking</a> with an arcane frame model, you can use a <a href='#define-subclass'>Spellcast trait</a> assigned by a <a href='#define-subclass'>subclass</a>.</p>";
+	iWep += "</dl>";
+	iWep += "</div>"; //close def
+	iWep += "<div class='og-topbar'>"; // open topbar
+	iWep += "<h5 class='h6'>Action and Movement</h5>";
+	iWep += "<ul class='og-list-disc og-questions small'>";
+	iWep += "<li>\"I roll over to the door to see if it's open.\"</li>";
+	iWep += "<li>\"I wheel myself over to the group to ask what's going on.\"</li>";
+	iWep += "<li>\"I pull my brakes and skid to a halt, turning in my seat to level my bow at the intruder.\"</li>";
+	iWep += "</ul>";
+	iWep += "<h6 class='h6'>Consequences</h5>";
+	iWep += "<ul class='og-list-disc og-questions small'>";
+	iWep += "<li>\"I pull my brakes, but I don't think to account for the loose gravel on the ground.\"</li>";
+	iWep += "<li>\"I hit a patch of ice awkwardly and am sent skidding out past my target.\"</li>";
+	iWep += "<li>\"I go to push off in pursuit, but one of my front caster wheels snags on a crack in the pavement, stalling me for a moment.\"</li>";
+	iWep += "</ul>";
+	iWep += "</div>"; // close topbar
+	iWep += getSidebar("<p>The GM should avoid breaking removing a PC's wheelchair, unless everyone&mdash;especially the player&mdash;agrees.</p>");
+	iWep += "</div>"; // close col
+	iWep += "</div>"; // close row
+	iWep += "<hr>"; // divide and continue
+	// primary weapon tables
+	let pwTable = "";
+	pwTable += "<h4 id='weapons-primary'>Primary Weapon Tables<a class='og-h-anchor' href='#weapons-primary' title='Permalink' aria-hidden='true'></a></h4>";
+	pwTable += getReferences(["Page 115"]);
 	for (let t = 1; t < 5; t++) {
-		primaryweaponContent += "<h5 id='weapons-primary-tier-" + t + "'>Tier " + t + " Primary Weapons (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#weapons-primary-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
-		primaryweaponContent += printWeaponPrimaryTable(t, false);
-		primaryweaponContent += printWeaponPrimaryTable(t, true);
+		pwTable += "<h5 id='weapons-primary-tier-" + t + "'>Tier " + t + " Primary Weapons (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#weapons-primary-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
+		pwTable += printWeaponPrimaryTable(t, false);
+		pwTable += printWeaponPrimaryTable(t, true);
 	}
-	primaryweaponContent += "<hr>";
-	document.getElementById("printprimaryWeapons").innerHTML = primaryweaponContent;
-};
-// ranges
-function printRanges() {
-	let iRange = "";
-	iRange += "<div id='define-range'>";
-	iRange += "<h3 id='maps-range-and-movement'>Maps, Range, and Movement<a class='og-h-anchor' href='#maps-range-and-movement' title='Permalink' aria-hidden='true'></a></h3>";
-	iRange += getReferences(["Page 103", "Page 104"]);
-	iRange += "<p>Range is measured from the source of an effect (for example, the attacker or spellcaster) to the target or object of an effect. A <a href='#define-weapon'>weapon</a>, spell, ability, item, or other effect's stated range is a maximum range. Usually, it can be used at closer distances.</p>";
-	iRange += "<dl>";
-	iRange += "<dt>Movement Under Pressure</dt>";
-	iRange += "<dd>You can move within <strong>Very Close</strong> or <strong>Close</strong> range and take an <a href='#define-action'>action</a>. If you move within <strong>Far</strong> or <strong>Very Far</strong> range, you must succeed on an <a href='#define-trait-roll'>Agility Roll</a> to reposition yourself safely.</dd>";
-	iRange += "<dt>Adversary Movement</dt>";
-	iRange += "<dd>An <a href='#define-adversary'>adversary</a> can move within <strong>Close</strong> range for free as part of an <a href='#define-adversary-action'>adversary action</a>, or within <a href='#define-range'>Very Far</a> range as a separate action.</dd>";
-	iRange += "</dl>";
-	iRange += "<h4 class='h6'>Ranges</h4>";
-	iRange += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
-	iRange += "<caption>Ranges</caption>";
-	iRange += "<thead>";
-	iRange += "<tr>";
-	iRange += "<th scope='col'>Range</th>";
-	iRange += "<th scope='col'>Description</th>";
-	iRange += "<th scope='col'>Movement</th>";
-	iRange += "<th class='text-end' scope='col'>Feet</th>";
-	iRange += "<th class='text-end' scope='col'>Meters</th>";
-	iRange += "</tr>";
-	iRange += "</thead>";
-	iRange += "<tbody>";
-	for (let i = 0; i < rangesList.length; i++) {
-		iRange += "<tr>";
-		iRange += "<th class='fw-normal og-nowrap' scope='row'>" + rangesList[i].label + "</th>";
-		iRange += "<td>" + rangesList[i].summary + "</td>";
-		iRange += "<td>" + rangesList[i].move + "</td>";
-		iRange += "<td class='text-end'><span class='og-nowrap'>" + rangesList[i].feet + " feet</span></td>";
-		iRange += "<td class='text-end'><span class='og-nowrap'>" + rangesList[i].meters + " m</span></td>";
-		iRange += "</tr>";
-	}
-	iRange += "</tbody>";
-	iRange += "</table></div>";
-	iRange += "</div>";
-	iRange += "<div class='og-topbar'>";
-	iRange += "<div id='define-optional-rule-defined-ranges'>";
-	iRange += "<h4 id='optional-rule-defined-ranges'>Optional Rule: Defined Ranges<a class='og-h-anchor' href='#optional-rule-defined-ranges' title='Permalink' aria-hidden='true'></a></h4>";
-	iRange += getReferences(["Page 103"]);
-	iRange += "<p>If you would rather play with more precise <a href='#define-range'>range</a> rules, the conversions below assume 1 inch (2.5 cm) of map represents 5 feet (1.5 m).</p>";
-	iRange += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
-	iRange += "<caption>Defined Ranges</caption>";
-	iRange += "<thead>";
-	iRange += "<tr>";
-	iRange += "<th scope='col'>Range</th>";
-	iRange += "<th scope='col'>Ruler</th>";
-	iRange += "<th class='text-center' scope='col'>Squares</th>";
-	iRange += "<th class='text-end' scope='col'>Inches</th>";
-	iRange += "<th class='text-end' scope='col'>Centimeters</th>";
-	iRange += "</tr>";
-	iRange += "</thead>";
-	iRange += "<tbody>";
-	for (let i = 0; i < rangesList.length; i++) {
-		iRange += "<tr>";
-		iRange += "<th class='fw-normal og-nowrap' scope='row'>" + rangesList[i].label + "</th>";
-		iRange += "<td>" + rangesList[i].ruler + "</td>";
-		iRange += "<td class='text-center'>" + rangesList[i].squares + "</td>";
-		iRange += "<td class='text-end'>" + rangesList[i].inches + "</td>";
-		iRange += "<td class='text-end'>" + rangesList[i].cm + "</td>";
-		iRange += "</tr>";
-	}
-	iRange += "</tbody>";
-	iRange += "</table></div>";
-	iRange += "</div>";
-	iRange += "</div>";
-	iRange += "<hr>";
-	document.getElementById("printRange").innerHTML = iRange;
-};
-// weapons, primary, physical and magical
-function printWeaponPrimaryTable(weaponTier, weaponType) {
-	let weaponTypeLabel = "";
-	let weaponTypeName = "";
-	if (weaponType == false) {
-		weaponTypeLabel = "Physical"; 
-		weaponTypeName = "physical"; 
-	}
-	else {
-		weaponTypeLabel = "Magic"; 
-		weaponTypeName = "magic"; 
-	}
-	let weaponContent = "";
-	weaponContent += "<h6 id='weapons-primary-tier-" + weaponTier + "-" + weaponTypeName + "'>Tier " + weaponTier + " " + weaponTypeLabel + " Weapons<a class='og-h-anchor' href='#weapons-primary-tier-" + weaponTier + "-" + weaponTypeName + "' title='Permalink' aria-hidden='true'></a></h6>";
-	let weaponPage = "";
-	let weaponErrata = false;
-	if (weaponTier == 1 && weaponType == false) {
-		weaponPage = "Page 115, Errata";
-		weaponErrata = true;
-	}
-	else if (weaponTier == 1 && weaponType == true) {
-		weaponPage = "Page 115, Errata";
-		weaponErrata = true;
-	}
-	else if (weaponTier == 2 && weaponType == false) {
-		weaponPage = "Page 116, Errata";
-		weaponErrata = true;
-	}
-	else if (weaponTier == 2 && weaponType == true) {
-		weaponPage = "Page 117";
-	}
-	else if (weaponTier == 3 && weaponType == false) {
-		weaponPage = "Page 119, Errata";
-		weaponErrata = true;
-	}
-	else if (weaponTier == 3 && weaponType == true) {
-		weaponPage = "Page 119";
-	}
-	else if (weaponTier == 4 && weaponType == false) {
-		weaponPage = "Page 120, Errata";
-		weaponErrata = true;
-	}
-	else if (weaponTier == 4 && weaponType == true) {
-		weaponPage = "Page 121";
-	}
-	weaponContent += getReferences(["" + weaponPage + ""]);
-	if (weaponErrata == true) {
-		weaponContent += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
-	}
-	weaponContent += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
-	weaponContent += "<caption>Tier " + weaponTier + " " + weaponTypeLabel + " Weapons</caption>";
-	weaponContent += "<thead><tr>";
-	weaponContent += "<th class='w-15' scope='col'>Name</th>";
-	weaponContent += "<th class='text-center w-5' scope='col'>Trait</th>";
-	weaponContent += "<th class='text-center w-10' scope='col'>Range</th>";
-	weaponContent += "<th class='text-center w-10' scope='col'>Damage</th>";
-	weaponContent += "<th class='text-center w-10' scope='col'>Burden</th>";
-	weaponContent += "<th class='w-50' scope='col'>Feature</th>";
-	weaponContent += "</tr></thead>";
-	weaponContent += "<tbody>";
-	for (w = 0; w < weaponprimaryList.length; w++) {
-		if (weaponprimaryList[w].tier == weaponTier && weaponprimaryList[w].magic == weaponType) {
-			weaponContent += "<tr>";
-			weaponContent += "<th class='fw-normal' scope='row'>" + weaponprimaryList[w].label;
-			if (weaponprimaryList[w].errata == true) {
-				weaponContent += "<span class='og-questions'>&dagger;</span>";
-			}
-			weaponContent += "</th>";
-			weaponContent += "<td class='text-center og-nowrap'>" + weaponprimaryList[w].trait + "</td>";
-			weaponContent += "<td class='text-center'>" + weaponprimaryList[w].range + "</td>";
-			weaponContent += "<td class='text-center'>" + weaponprimaryList[w].damage + " " + weaponprimaryList[w].damagetype + "</td>";
-			weaponContent += "<td class='text-center og-nowrap'>" + weaponprimaryList[w].burden + "</td>";
-			weaponContent += "<td>";
-			if (weaponprimaryList[w].feature == "") {
-				weaponContent += "&mdash;";
-			}
-			else {
-				weaponContent += weaponprimaryList[w].feature;
-			}
-			weaponContent += "</td>";
-			weaponContent += "</tr>";
-		}
-	}
-	weaponContent += "</tbody></table></div>";
-	return weaponContent;
-};
-// weapons, secondary
-function printWeaponsSecondary() {
-	let secondaryweaponContent = "";
-	secondaryweaponContent += "<h4 id='weapons-secondary'>Secondary Weapon Tables<a class='og-h-anchor' href='#weapons-secondary' title='Permalink' aria-hidden='true'></a></h4>";
+	pwTable += "<hr>";
+	iWep += pwTable;
+	// weapons, secondary
+	let swTable = "";
+	swTable += "<h4 id='weapons-secondary'>Secondary Weapon Tables<a class='og-h-anchor' href='#weapons-secondary' title='Permalink' aria-hidden='true'></a></h4>";
 	for (let t = 1; t < 5; t++) {
-		secondaryweaponContent += "<h5 id='weapons-secondary-tier-" + t + "'>Tier " + t + " Secondary Weapons (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#weapons-secondary-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
+		swTable += "<h5 id='weapons-secondary-tier-" + t + "'>Tier " + t + " Secondary Weapons (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#weapons-secondary-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
 		let weaponPage = "";
 		let weaponErrata = false;
 		if (t == 1) {
@@ -3015,143 +2906,117 @@ function printWeaponsSecondary() {
 		else if (t == 4) {
 			weaponPage = "Page 125";
 		}
-		secondaryweaponContent += getReferences(["" + weaponPage + ""]);
+		swTable += getReferences(["" + weaponPage + ""]);
 		if (weaponErrata == true) {
-			secondaryweaponContent += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
+			swTable += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
 		}
-		secondaryweaponContent += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
-		secondaryweaponContent += "<caption>Tier " + t + " Secondary Weapons</caption>";
-		secondaryweaponContent += "<thead><tr>";
-		secondaryweaponContent += "<th class='w-15' scope='col'>Name</th>";
-		secondaryweaponContent += "<th class='text-center w-5' scope='col'>Trait</th>";
-		secondaryweaponContent += "<th class='text-center w-10' scope='col'>Range</th>";
-		secondaryweaponContent += "<th class='text-center w-10' scope='col'>Damage</th>";
-		secondaryweaponContent += "<th class='text-center w-10' scope='col'>Burden</th>";
-		secondaryweaponContent += "<th class='w-50' scope='col'>Feature</th>";
-		secondaryweaponContent += "</tr></thead>";
-		secondaryweaponContent += "<tbody>";
+		swTable += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
+		swTable += "<caption>Tier " + t + " Secondary Weapons</caption>";
+		swTable += "<thead><tr>";
+		swTable += "<th class='w-15' scope='col'>Name</th>";
+		swTable += "<th class='text-center w-5' scope='col'>Trait</th>";
+		swTable += "<th class='text-center w-10' scope='col'>Range</th>";
+		swTable += "<th class='text-center w-10' scope='col'>Damage</th>";
+		swTable += "<th class='text-center w-10' scope='col'>Burden</th>";
+		swTable += "<th class='w-50' scope='col'>Feature</th>";
+		swTable += "</tr></thead>";
+		swTable += "<tbody>";
 		for (w = 0; w < weaponsecondaryList.length; w++) {
 			if (weaponsecondaryList[w].tier == t) {
-				secondaryweaponContent += "<tr>";
-				secondaryweaponContent += "<th class='fw-normal' scope='row'>" + weaponsecondaryList[w].label;
+				swTable += "<tr>";
+				swTable += "<th class='fw-normal' scope='row'>" + weaponsecondaryList[w].label;
 				if (weaponsecondaryList[w].errata == true) {
-					secondaryweaponContent += "<span class='og-questions'>&dagger;</span>";
+					swTable += "<span class='og-questions'>&dagger;</span>";
 				}
-				secondaryweaponContent += "</th>";
-				secondaryweaponContent += "<td class='text-center og-nowrap'>" + weaponsecondaryList[w].trait + "</td>";
-				secondaryweaponContent += "<td class='text-center'>" + weaponsecondaryList[w].range + "</td>";
-				secondaryweaponContent += "<td class='text-center'>" + weaponsecondaryList[w].damage + " " + weaponsecondaryList[w].damagetype + "</td>";
-				secondaryweaponContent += "<td class='text-center'>" + weaponsecondaryList[w].burden + "</td>";
-				secondaryweaponContent += "<td>";
+				swTable += "</th>";
+				swTable += "<td class='text-center og-nowrap'>" + weaponsecondaryList[w].trait + "</td>";
+				swTable += "<td class='text-center'>" + weaponsecondaryList[w].range + "</td>";
+				swTable += "<td class='text-center'>" + weaponsecondaryList[w].damage + " " + weaponsecondaryList[w].damagetype + "</td>";
+				swTable += "<td class='text-center'>" + weaponsecondaryList[w].burden + "</td>";
+				swTable += "<td>";
 				if (weaponsecondaryList[w].feature == "") {
-					secondaryweaponContent += "&mdash;";
+					swTable += "&mdash;";
 				}
 				else {
-					secondaryweaponContent += weaponsecondaryList[w].feature;
+					swTable += weaponsecondaryList[w].feature;
 				}
-				secondaryweaponContent += "</td>";
-				secondaryweaponContent += "</tr>";
+				swTable += "</td>";
+				swTable += "</tr>";
 			}
 		}
-		secondaryweaponContent += "</tbody></table></div>";
+		swTable += "</tbody></table></div>";
 	}
-	secondaryweaponContent += "<hr>";
-	document.getElementById("printsecondaryWeapons").innerHTML = secondaryweaponContent;
-};
-// armor
-function printArmor() {
-	let armorContent = "";
-	armorContent += "<div id='define-armor'>"; // open def
-	armorContent += "<h3 id='armor'>Armor<a class='og-h-anchor' href='#armor' title='Permalink' aria-hidden='true'></a></h3>";
-	armorContent += getReferences(["Page 112", "Page 114", "Errata"]);
-	armorContent += "<dl>";
-	armorContent += "<dt>Unarmored</dt>";
-	armorContent += "<dd>While unarmored, your base Armor Score is 0, your <a href='#define-hit-point'>Major threshold</a> is equal to your <a href='#define-level'>level</a>, and your <a href='#define-hit-point'>Severe threshold</a> is equal to twice your <a href='#define-level'>level</a>.</dd>";
-	armorContent += "<dt>Equipping Armor</dt>";
-	armorContent += "<dd>You can't equip armor while in danger or under pressure, and you can't equip armor of a higher <a href='#define-tier'>tier</a> than yours. You can equip only one set of armor.  Each set of armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</dd>";
-	armorContent += "<dt>Base Thresholds</dt>";
-	armorContent += "<dd>When equipped, a set of armor's base thresholds determine your Major and Severe <a href='#define-hit-point'>damage thresholds</a>. Add your <a href='#define-level'>level</a> to each.</dd>";
-	armorContent += "<dt>Armor Score and Armor Slots</dt>";
-	armorContent += "<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href='#define-procedure'>modifiers</a> (to a maximum of 12) you gain from your <a href='#define-ancestry'>ancestry</a>, <a href='#define-class'>class</a>, or <a href='#define-subclass'>subclass</a> features and your <a href='#define-domain-card'>domain cards</a>. When <a href='#define-damage-roll'>incoming damage</a> would cause you to mark <a href='#define-hit-point'>Hit Points</a>, you can mark one <strong>Armor Slot</strong> to reduce the severity of the damage by one <a href='#define-hit-point'>threshold</a>&mdash;for example, from Severe to Major, Major to Minor, or Minor to Nothing.</dd>";
-	armorContent += "<dt>Feature</dt>";
-	armorContent += "<dd>Some armors grant a feature when equipped.</dd>";
-	armorContent += "<dt>Temporary Armor</dt>";
-	armorContent += "<dd>If your Armor Score gains a <a href='#define-temporary'>temporary</a> bonus&mdash;for example, from a <a href='#define-domain-card'>domain card</a> like <a href='#define-domain-card-book-of-ava'>Book of Ava</a>&mdash;your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>";
-	armorContent += "<dt>Repairing Armor</dt>";
-	armorContent += "<dd>When you take a <a href='#define-downtime'>rest</a>, you can clear marked armor slots as a <a href='#define-downtime-move'>downtime move</a>.</dd>";
-	armorContent += "<dt>Shields</dt>";
-	armorContent += "<dd>Shields aren't armor. They are <a href='#define-equipment'>secondary weapons</a> that provide a bonus to your Armor Score.</dd>";
-	armorContent += "</dl>";
-	armorContent += getSidebar("<p>Some features alter your <a href='#define-hit-point'>damage thresholds</a>&mdash;for example, the <em>Shell</em> feature from the <a href='#define-galapa'>Galapa</a> ancestry, or the <em>Unwavering</em> feature from the <a href='#define-stalwart'>Stalwart</a> <a href='#define-guardian'>Guardian</a>, or <a href='#define-domain-card'>domain cards</a> like <a href='#define-domain-card-bare-bones'>Bare Bones</a>.</p>");
-	armorContent += "</div>"; // close def
-	armorContent += "<h4 id='armor-tables'>Armor Tables<a class='og-h-anchor' href='#armor-tables' title='Permalink' aria-hidden='true'></a></h4>";
+	swTable += "<hr>";
+	iWep += swTable;
+	// armor
+	let iArm = "";
+	iArm += "<div id='define-armor'>"; // open def
+	iArm += "<h3 id='armor'>Armor<a class='og-h-anchor' href='#armor' title='Permalink' aria-hidden='true'></a></h3>";
+	iArm += getReferences(["Page 112", "Page 114", "Errata"]);
+	iArm += "<dl>";
+	iArm += "<dt>Unarmored</dt>";
+	iArm += "<dd>While unarmored, your base Armor Score is 0, your <a href='#define-hit-point'>Major threshold</a> is equal to your <a href='#define-level'>level</a>, and your <a href='#define-hit-point'>Severe threshold</a> is equal to twice your <a href='#define-level'>level</a>.</dd>";
+	iArm += "<dt>Equipping Armor</dt>";
+	iArm += "<dd>You can't equip armor while in danger or under pressure, and you can't equip armor of a higher <a href='#define-tier'>tier</a> than yours. You can equip only one set of armor.  Each set of armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</dd>";
+	iArm += "<dt>Base Thresholds</dt>";
+	iArm += "<dd>When equipped, a set of armor's base thresholds determine your Major and Severe <a href='#define-hit-point'>damage thresholds</a>. Add your <a href='#define-level'>level</a> to each.</dd>";
+	iArm += "<dt>Armor Score and Armor Slots</dt>";
+	iArm += "<dd>Your <strong>Armor Score</strong> equals your equipped armor's <strong>Base Score</strong> plus any <a href='#define-procedure'>modifiers</a> (to a maximum of 12) you gain from your <a href='#define-ancestry'>ancestry</a>, <a href='#define-class'>class</a>, or <a href='#define-subclass'>subclass</a> features and your <a href='#define-domain-card'>domain cards</a>. When <a href='#define-damage-roll'>incoming damage</a> would cause you to mark <a href='#define-hit-point'>Hit Points</a>, you can mark one <strong>Armor Slot</strong> to reduce the severity of the damage by one <a href='#define-hit-point'>threshold</a>&mdash;for example, from Severe to Major, Major to Minor, or Minor to Nothing.</dd>";
+	iArm += "<dt>Feature</dt>";
+	iArm += "<dd>Some armors grant a feature when equipped.</dd>";
+	iArm += "<dt>Temporary Armor</dt>";
+	iArm += "<dd>If your Armor Score gains a <a href='#define-temporary'>temporary</a> bonus&mdash;for example, from a <a href='#define-domain-card'>domain card</a> like <a href='#define-domain-card-book-of-ava'>Book of Ava</a>&mdash;your available Armor Slots increase by the same amount. When the effect ends, clear a number of Armor Slots equal to the bonus.</dd>";
+	iArm += "<dt>Repairing Armor</dt>";
+	iArm += "<dd>When you take a <a href='#define-downtime'>rest</a>, you can clear marked armor slots as a <a href='#define-downtime-move'>downtime move</a>.</dd>";
+	iArm += "<dt>Shields</dt>";
+	iArm += "<dd>Shields aren't armor. They are <a href='#define-equipment'>secondary weapons</a> that provide a bonus to your Armor Score.</dd>";
+	iArm += "</dl>";
+	iArm += getSidebar("<p>Some features alter your <a href='#define-hit-point'>damage thresholds</a>&mdash;for example, the <em>Shell</em> feature from the <a href='#define-galapa'>Galapa</a> ancestry, or the <em>Unwavering</em> feature from the <a href='#define-stalwart'>Stalwart</a> <a href='#define-guardian'>Guardian</a>, or <a href='#define-domain-card'>domain cards</a> like <a href='#define-domain-card-bare-bones'>Bare Bones</a>.</p>");
+	iArm += "</div>"; // close def
+	// armor tables
+	let aTable = "";
+	aTable += "<h4 id='armor-tables'>Armor Tables<a class='og-h-anchor' href='#armor-tables' title='Permalink' aria-hidden='true'></a></h4>";
 	for (let t = 1; t < 5; t++) {
-		armorContent += "<h5 id='armor-tier-" + t + "'>Tier " + t + " Armor (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#armor-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
+		aTable += "<h5 id='armor-tier-" + t + "'>Tier " + t + " Armor (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#armor-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
 		let armorPage = "";
 		if (t == 1) { armorPage = "Page 126"; }
 		else if (t == 2) { armorPage = "Page 126"; }
 		else if (t == 3) { armorPage = "Page 127"; }
 		else if (t == 4) { armorPage = "Page 127"; }
-		armorContent += "<ul class='og-list-inline og-ref og-omit'><li>" + armorPage + "</li></ul>";
-		armorContent += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
-		armorContent += "<caption>Tier " + t + " Armor</caption>";
-		armorContent += "<thead><tr>";
-		armorContent += "<th class='w-20' scope='col'>Name</th>";
-		armorContent += "<th class='text-center w-15' scope='col'>Base Thresholds</th>";
-		armorContent += "<th class='text-center w-15' scope='col'>Base Score</th>";
-		armorContent += "<th class='w-50' scope='col'>Feature</th>";
-		armorContent += "</tr></thead>";
-		armorContent += "<tbody>";
+		aTable += "<ul class='og-list-inline og-ref og-omit'><li>" + armorPage + "</li></ul>";
+		aTable += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
+		aTable += "<caption>Tier " + t + " Armor</caption>";
+		aTable += "<thead><tr>";
+		aTable += "<th class='w-20' scope='col'>Name</th>";
+		aTable += "<th class='text-center w-15' scope='col'>Base Thresholds</th>";
+		aTable += "<th class='text-center w-15' scope='col'>Base Score</th>";
+		aTable += "<th class='w-50' scope='col'>Feature</th>";
+		aTable += "</tr></thead>";
+		aTable += "<tbody>";
 		for (a = 0; a < armorList.length; a++) {
 			if (armorList[a].tier == t) {
-				armorContent += "<tr>";
-				armorContent += "<th class='fw-normal' scope='row'>" + armorList[a].label;
-				armorContent += "</th>";
-				armorContent += "<td class='text-center og-nowrap'>" + armorList[a].thresholdmajor + "/" + armorList[a].thresholdsevere + "</td>";
-				armorContent += "<td class='text-center og-nowrap'>" + armorList[a].score + "</td>";
-				armorContent += "<td>";
+				aTable += "<tr>";
+				aTable += "<th class='fw-normal' scope='row'>" + armorList[a].label;
+				aTable += "</th>";
+				aTable += "<td class='text-center og-nowrap'>" + armorList[a].thresholdmajor + "/" + armorList[a].thresholdsevere + "</td>";
+				aTable += "<td class='text-center og-nowrap'>" + armorList[a].score + "</td>";
+				aTable += "<td>";
 				if (armorList[a].feature == "") {
-					armorContent += "&mdash;";
+					aTable += "&mdash;";
 				}
 				else {
-					armorContent += armorList[a].feature;
+					aTable += armorList[a].feature;
 				}
-				armorContent += "</td>";
-				armorContent += "</tr>";
+				aTable += "</td>";
+				aTable += "</tr>";
 			}
 		}
-		armorContent += "</tbody></table></div>";
+		aTable += "</tbody></table></div>";
 	}
-	armorContent += "<hr>";
-	document.getElementById("printArmor").innerHTML = armorContent;
-};
-// loot
-function randomLoot(p, d) {
-	document.getElementById("random-loot-roll").innerHTML = p + "d" + d;
-	for (let i = 1; i < 6; i++) {
-	  let roll = rollDice(p, d);
-      let result = roll - 1;
-	  document.getElementById("random-loot-result-" + i).innerHTML = roll;
-	  document.getElementById("random-loot-" + i).innerHTML = "<strong><em>" + lootList[result].label + ":</em></strong> " + lootList[result].feature;
-	  if ( p == 1 ) { document.getElementById("random-loot-chance-" + i).innerHTML = getChance(1, d); }
-	  else if ( p == 2 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance2d12[result]; }
-	  else if ( p == 3 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance3d12[result]; }
-	  else if ( p == 4 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance4d12[result]; }
-	  else if ( p == 5 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance5d12[result]; }
-	  else if ( p == 2 && d == 20) { document.getElementById("random-loot-chance-" + i).innerHTML = chance2d20[result]; }
-	  else if ( p == 3 && d == 20) { document.getElementById("random-loot-chance-" + i).innerHTML = chance3d20[result]; }
-	}
-	for (let i = 1; i < 6; i++) {
-		document.getElementById("new-random-loot-" + i + "d12").classList.remove('btn-hope');
-	}
-	for (let i = 1; i < 4; i++) {
-		document.getElementById("new-random-loot-" + i + "d20").classList.remove('btn-hope');
-	}
-	document.getElementById("new-random-loot-" + p + "d" + d).classList.add('btn-hope');
-	refreshTooltips(); 
-};
-function printLoot() {
-	// resuable rarity
+	aTable += "<hr>";
+	iArm += aTable;
+	// loot
+	// rarity
 	let rollRarity = "";
 	rollRarity += "<ul class='og-list-disc'>";
 	rollRarity += "<li><strong>Common:</strong> 1d12 or 2d12</li>";
@@ -3323,7 +3188,119 @@ function printLoot() {
 	iLoot += "</div>"; // close col
 	iLoot += "</div>"; // close ro
 	iLoot += "<hr>";
-	document.getElementById("printLoot").innerHTML = iLoot;
+	iEquip += iWep + iArm + iLoot;
+	document.getElementById("printEquipment").innerHTML = iEquip;
+};
+// weapons (table printer)
+function printWeaponPrimaryTable(weaponTier, weaponType) {
+	let weaponTypeLabel = "";
+	let weaponTypeName = "";
+	if (weaponType == false) {
+		weaponTypeLabel = "Physical"; 
+		weaponTypeName = "physical"; 
+	}
+	else {
+		weaponTypeLabel = "Magic"; 
+		weaponTypeName = "magic"; 
+	}
+	let weaponContent = "";
+	weaponContent += "<h6 id='weapons-primary-tier-" + weaponTier + "-" + weaponTypeName + "'>Tier " + weaponTier + " " + weaponTypeLabel + " Weapons<a class='og-h-anchor' href='#weapons-primary-tier-" + weaponTier + "-" + weaponTypeName + "' title='Permalink' aria-hidden='true'></a></h6>";
+	let weaponPage = "";
+	let weaponErrata = false;
+	if (weaponTier == 1 && weaponType == false) {
+		weaponPage = "Page 115, Errata";
+		weaponErrata = true;
+	}
+	else if (weaponTier == 1 && weaponType == true) {
+		weaponPage = "Page 115, Errata";
+		weaponErrata = true;
+	}
+	else if (weaponTier == 2 && weaponType == false) {
+		weaponPage = "Page 116, Errata";
+		weaponErrata = true;
+	}
+	else if (weaponTier == 2 && weaponType == true) {
+		weaponPage = "Page 117";
+	}
+	else if (weaponTier == 3 && weaponType == false) {
+		weaponPage = "Page 119, Errata";
+		weaponErrata = true;
+	}
+	else if (weaponTier == 3 && weaponType == true) {
+		weaponPage = "Page 119";
+	}
+	else if (weaponTier == 4 && weaponType == false) {
+		weaponPage = "Page 120, Errata";
+		weaponErrata = true;
+	}
+	else if (weaponTier == 4 && weaponType == true) {
+		weaponPage = "Page 121";
+	}
+	weaponContent += getReferences(["" + weaponPage + ""]);
+	if (weaponErrata == true) {
+		weaponContent += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
+	}
+	weaponContent += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
+	weaponContent += "<caption>Tier " + weaponTier + " " + weaponTypeLabel + " Weapons</caption>";
+	weaponContent += "<thead><tr>";
+	weaponContent += "<th class='w-15' scope='col'>Name</th>";
+	weaponContent += "<th class='text-center w-5' scope='col'>Trait</th>";
+	weaponContent += "<th class='text-center w-10' scope='col'>Range</th>";
+	weaponContent += "<th class='text-center w-10' scope='col'>Damage</th>";
+	weaponContent += "<th class='text-center w-10' scope='col'>Burden</th>";
+	weaponContent += "<th class='w-50' scope='col'>Feature</th>";
+	weaponContent += "</tr></thead>";
+	weaponContent += "<tbody>";
+	for (w = 0; w < weaponprimaryList.length; w++) {
+		if (weaponprimaryList[w].tier == weaponTier && weaponprimaryList[w].magic == weaponType) {
+			weaponContent += "<tr>";
+			weaponContent += "<th class='fw-normal' scope='row'>" + weaponprimaryList[w].label;
+			if (weaponprimaryList[w].errata == true) {
+				weaponContent += "<span class='og-questions'>&dagger;</span>";
+			}
+			weaponContent += "</th>";
+			weaponContent += "<td class='text-center og-nowrap'>" + weaponprimaryList[w].trait + "</td>";
+			weaponContent += "<td class='text-center'>" + weaponprimaryList[w].range + "</td>";
+			weaponContent += "<td class='text-center'>" + weaponprimaryList[w].damage + " " + weaponprimaryList[w].damagetype + "</td>";
+			weaponContent += "<td class='text-center og-nowrap'>" + weaponprimaryList[w].burden + "</td>";
+			weaponContent += "<td>";
+			if (weaponprimaryList[w].feature == "") {
+				weaponContent += "&mdash;";
+			}
+			else {
+				weaponContent += weaponprimaryList[w].feature;
+			}
+			weaponContent += "</td>";
+			weaponContent += "</tr>";
+		}
+	}
+	weaponContent += "</tbody></table></div>";
+	return weaponContent;
+};
+// loot
+function randomLoot(p, d) {
+	document.getElementById("random-loot-roll").innerHTML = p + "d" + d;
+	for (let i = 1; i < 6; i++) {
+	  let roll = rollDice(p, d);
+      let result = roll - 1;
+	  document.getElementById("random-loot-result-" + i).innerHTML = roll;
+	  document.getElementById("random-loot-" + i).innerHTML = "<strong><em>" + lootList[result].label + ":</em></strong> " + lootList[result].feature;
+	  if ( p == 1 ) { document.getElementById("random-loot-chance-" + i).innerHTML = getChance(1, d); }
+	  else if ( p == 2 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance2d12[result]; }
+	  else if ( p == 3 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance3d12[result]; }
+	  else if ( p == 4 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance4d12[result]; }
+	  else if ( p == 5 && d == 12) { document.getElementById("random-loot-chance-" + i).innerHTML = chance5d12[result]; }
+	  else if ( p == 2 && d == 20) { document.getElementById("random-loot-chance-" + i).innerHTML = chance2d20[result]; }
+	  else if ( p == 3 && d == 20) { document.getElementById("random-loot-chance-" + i).innerHTML = chance3d20[result]; }
+	}
+	for (let i = 1; i < 6; i++) {
+		document.getElementById("new-random-loot-" + i + "d12").classList.remove('btn-hope');
+	}
+	for (let i = 1; i < 4; i++) {
+		document.getElementById("new-random-loot-" + i + "d20").classList.remove('btn-hope');
+	}
+	document.getElementById("new-random-loot-" + p + "d" + d).classList.add('btn-hope');
+	refreshTooltips(); 
 };
 // consumables
 function randomConsumable(p, d) {
@@ -3349,6 +3326,77 @@ function randomConsumable(p, d) {
 	}
 	document.getElementById("new-random-consumable-" + p + "d" + d).classList.add('btn-hope');
 	refreshTooltips(); 
+};
+// ranges
+function printRanges() {
+	let iRange = "";
+	iRange += "<div id='define-range'>";
+	iRange += "<h3 id='maps-range-and-movement'>Maps, Range, and Movement<a class='og-h-anchor' href='#maps-range-and-movement' title='Permalink' aria-hidden='true'></a></h3>";
+	iRange += getReferences(["Page 103", "Page 104"]);
+	iRange += "<p>Range is measured from the source of an effect (for example, the attacker or spellcaster) to the target or object of an effect. A <a href='#define-weapon'>weapon</a>, spell, ability, item, or other effect's stated range is a maximum range. Usually, it can be used at closer distances.</p>";
+	iRange += "<dl>";
+	iRange += "<dt>Movement Under Pressure</dt>";
+	iRange += "<dd>You can move within <strong>Very Close</strong> or <strong>Close</strong> range and take an <a href='#define-action'>action</a>. If you move within <strong>Far</strong> or <strong>Very Far</strong> range, you must succeed on an <a href='#define-trait-roll'>Agility Roll</a> to reposition yourself safely.</dd>";
+	iRange += "<dt>Adversary Movement</dt>";
+	iRange += "<dd>An <a href='#define-adversary'>adversary</a> can move within <strong>Close</strong> range for free as part of an <a href='#define-adversary-action'>adversary action</a>, or within <a href='#define-range'>Very Far</a> range as a separate action.</dd>";
+	iRange += "</dl>";
+	iRange += "<h4 class='h6'>Ranges</h4>";
+	iRange += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
+	iRange += "<caption>Ranges</caption>";
+	iRange += "<thead>";
+	iRange += "<tr>";
+	iRange += "<th scope='col'>Range</th>";
+	iRange += "<th scope='col'>Description</th>";
+	iRange += "<th scope='col'>Movement</th>";
+	iRange += "<th class='text-end' scope='col'>Feet</th>";
+	iRange += "<th class='text-end' scope='col'>Meters</th>";
+	iRange += "</tr>";
+	iRange += "</thead>";
+	iRange += "<tbody>";
+	for (let i = 0; i < rangesList.length; i++) {
+		iRange += "<tr>";
+		iRange += "<th class='fw-normal og-nowrap' scope='row'>" + rangesList[i].label + "</th>";
+		iRange += "<td>" + rangesList[i].summary + "</td>";
+		iRange += "<td>" + rangesList[i].move + "</td>";
+		iRange += "<td class='text-end'><span class='og-nowrap'>" + rangesList[i].feet + " feet</span></td>";
+		iRange += "<td class='text-end'><span class='og-nowrap'>" + rangesList[i].meters + " m</span></td>";
+		iRange += "</tr>";
+	}
+	iRange += "</tbody>";
+	iRange += "</table></div>";
+	iRange += "</div>";
+	iRange += "<div class='og-topbar'>";
+	iRange += "<div id='define-optional-rule-defined-ranges'>";
+	iRange += "<h4 id='optional-rule-defined-ranges'>Optional Rule: Defined Ranges<a class='og-h-anchor' href='#optional-rule-defined-ranges' title='Permalink' aria-hidden='true'></a></h4>";
+	iRange += getReferences(["Page 103"]);
+	iRange += "<p>If you would rather play with more precise <a href='#define-range'>range</a> rules, the conversions below assume 1 inch (2.5 cm) of map represents 5 feet (1.5 m).</p>";
+	iRange += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
+	iRange += "<caption>Defined Ranges</caption>";
+	iRange += "<thead>";
+	iRange += "<tr>";
+	iRange += "<th scope='col'>Range</th>";
+	iRange += "<th scope='col'>Ruler</th>";
+	iRange += "<th class='text-center' scope='col'>Squares</th>";
+	iRange += "<th class='text-end' scope='col'>Inches</th>";
+	iRange += "<th class='text-end' scope='col'>Centimeters</th>";
+	iRange += "</tr>";
+	iRange += "</thead>";
+	iRange += "<tbody>";
+	for (let i = 0; i < rangesList.length; i++) {
+		iRange += "<tr>";
+		iRange += "<th class='fw-normal og-nowrap' scope='row'>" + rangesList[i].label + "</th>";
+		iRange += "<td>" + rangesList[i].ruler + "</td>";
+		iRange += "<td class='text-center'>" + rangesList[i].squares + "</td>";
+		iRange += "<td class='text-end'>" + rangesList[i].inches + "</td>";
+		iRange += "<td class='text-end'>" + rangesList[i].cm + "</td>";
+		iRange += "</tr>";
+	}
+	iRange += "</tbody>";
+	iRange += "</table></div>";
+	iRange += "</div>";
+	iRange += "</div>";
+	iRange += "<hr>";
+	document.getElementById("printRange").innerHTML = iRange;
 };
 function printDifficultyBenchmarks() {
 	let dBench = "";
@@ -4066,8 +4114,37 @@ function printEnvironments() {
 	document.getElementById("printEnvironments").innerHTML = iEnv;
 };
 
+function ccRandomize() {
+	// randomize character options
+	let mixbonus = 3 // increase the chance of a mixed ancestry
+	let aRandom = Math.floor(Math.random() * (ancestryList.length + mixbonus)) // randomize
+	if (aRandom > ancestryList.length) { aRandom = ancestryList.length } // compare and set mixed ancestry if bonus range is rolled
+	document.getElementById("ccChooseAncestry").value = aRandom;
+	ccChooseAncestry()
+	if (ccUserAncestry == ancestryList.length) {
+		document.getElementById("ccChooseAncestryMixed1").value = Math.floor(Math.random() * (ancestryList.length));
+		ccChooseAncestryMixed1();
+		document.getElementById("ccChooseAncestryMixed2").value = Math.floor(Math.random() * (ancestryList.length));
+		ccChooseAncestryMixed2();
+		// just in case, reroll once in case of a match
+		if (ccUserAncestryMixed1 == ccUserAncestryMixed2) {
+				document.getElementById("ccChooseAncestryMixed2").value = Math.floor(Math.random() * (ancestryList.length));
+				ccChooseAncestryMixed2();
+		}
+	}
+	document.getElementById("ccChooseCommunity").value = Math.floor(Math.random() * communityList.length);
+	ccChooseCommunity();
+	document.getElementById("ccChooseClass").value = Math.floor(Math.random() * classesList.length);
+	ccChooseClass();
+	document.getElementById("ccChooseSubclass").value = Math.floor(Math.random() * classesList[ccUserClass].subclasses.length);
+	ccChooseSubclass();
+	refreshTooltips();
+	ccChooseDomainCard1();
+};
+
 // INITIALIZE ON LOAD
 window.addEventListener("load", (event) => { 
+	document.querySelector('#ccRandomize').addEventListener("click", function(evene) { ccRandomize(); });
 	// class
 	document.querySelector('#ccChooseClass').addEventListener("change", function() { ccChooseClass(); });
 	document.querySelector('#ccChooseSubclass').addEventListener("change", function() { ccChooseSubclass(); });
@@ -4130,9 +4207,9 @@ window.addEventListener("load", (event) => {
 	document.getElementById("benchmark-disadvantage-d8").addEventListener("click", function (event) { setDdie(8); });
 	document.getElementById("benchmark-disadvantage-d10").addEventListener("click", function (event) { setDdie(10); });
 	// setup
+	ccRandomize();
 	randomLoot(1,12);
 	randomConsumable(1,12);
-
 	populateAdversaryBenchmarks();
 	deselectHope();
 	setHdie(12);
@@ -4153,10 +4230,7 @@ printCommunities();
 printTraits();
 printRanges();
 // print equipment
-printWeaponsPrimary();
-printWeaponsSecondary();
-printArmor();
-printLoot();
+printEquipment();
 // print gm material
 printDifficultyBenchmarks();
 printAdversaries();
