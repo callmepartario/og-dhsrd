@@ -1180,6 +1180,7 @@ function printCC() {
 	CC += "<li class='list-inline-item'><p><button class='btn mt-1 mb-1 theme-light border' type='button' id='ccRandomize' aria-label='Generate Random PC Options}'>Generate Random PC</button></p></li>";
 	CC += "</ul>";
 	CC += "<div id='ccRandomOutput'><p>&mdash;</p></div>";
+	CC += "<div id='ccRandomOutputDetail'></div>";
 	CC += getCCnote(" Confirm or change any options you wish by reading the details below. Except for experieces and description, this summary will update accordingly.");
 	CC += "</div>"; // close alert
 	CC += "</div>"; // close col
@@ -2132,35 +2133,6 @@ function ccPrintAdditionalStatistics() {
 	summary += "<li><a href='#define-stress'>Stress</a>: " + (userStress + userStressBonus) + "</li>";
 	summary += "<li><a href='#define-damage-roll'>Proficiency</a>: 1</li>";
 	summary += "<li><a href='#define-hope'>Hope</a>: 2</li>";
-	summary += "</ul>";
-	// random experiences
-	summary += "<h5 class='h6'>Experiences</h5>";
-	summary += "<ul class='og-list-inline og-ref og-omit'>";
-	let eCat1 = Math.floor(Math.random() * 5);
-	let rExp1 = "";
-	if ( eCat1 == 0) { rExp1 = experiencesList[0].backgrounds[Math.floor(Math.random() * experiencesList[0].backgrounds.length)] }
-	if ( eCat1 == 1) { rExp1 = experiencesList[0].characteristics[Math.floor(Math.random() * experiencesList[0].characteristics.length)] }
-	if ( eCat1 == 2) { rExp1 = experiencesList[0].specialties[Math.floor(Math.random() * experiencesList[0].specialties.length)] }
-	if ( eCat1 == 3) { rExp1 = experiencesList[0].skills[Math.floor(Math.random() * experiencesList[0].skills.length)] }
-	if ( eCat1 == 4) { rExp1 = experiencesList[0].phrases[Math.floor(Math.random() * experiencesList[0].phrases.length)] }
-	summary += "<li>" + rExp1 + ": +2</li>";
-	let eCat2 = Math.floor(Math.random() * 4);
-	if (eCat2 == eCat1) { eCat2 = eCat2 +1; }
-	let rExp2 = "";
-	if ( eCat2 == 0) { rExp1 = experiencesList[0].backgrounds[Math.floor(Math.random() * experiencesList[0].backgrounds.length)] }
-	if ( eCat2 == 1) { rExp1 = experiencesList[0].characteristics[Math.floor(Math.random() * experiencesList[0].characteristics.length)] }
-	if ( eCat2 == 2) { rExp1 = experiencesList[0].specialties[Math.floor(Math.random() * experiencesList[0].specialties.length)] }
-	if ( eCat2 == 3) { rExp1 = experiencesList[0].skills[Math.floor(Math.random() * experiencesList[0].skills.length)] }
-	if ( eCat2 == 4) { rExp1 = experiencesList[0].phrases[Math.floor(Math.random() * experiencesList[0].phrases.length)] }
-	summary += "<li>" + rExp1 + ": +2</li>";
-	summary += "</ul>";
-	summary += "<h5 class='h6'>Description</h5>";
-	summary += "<ul class='og-list-inline og-ref og-omit'>";
-	summary += "<li>Clothes: " + classesList[ccUserClass].clothes[Math.floor(Math.random() * classesList[ccUserClass].clothes.length)] + "</li>";
-	summary += "<li>Eyes: " + descriptionList[0].eyes[Math.floor(Math.random() * descriptionList[0].eyes.length)] + "</li>";
-	summary += "<li>Body: " + descriptionList[0].body[Math.floor(Math.random() * descriptionList[0].body.length)] + "</li>";
-	summary += "<li>Skin: " + descriptionList[0].skin[Math.floor(Math.random() * descriptionList[0].skin.length)] + "</li>";
-	summary += "<li>Attitude: " + classesList[ccUserClass].attitudes[Math.floor(Math.random() * classesList[ccUserClass].attitudes.length)] + "</li>";
 	summary += "</ul>";
 	document.getElementById("ccRandomOutput").innerHTML = summary;
 };
@@ -4204,6 +4176,38 @@ function ccRandomize() {
 	ccChooseSubclass();
 	refreshTooltips();
 	ccChooseDomainCard1();
+
+	// random experiences
+	let pcDetail = "";
+	pcDetail += "<h5 class='h6'>Experiences</h5>";
+	pcDetail += "<ul class='og-list-inline og-ref og-omit'>";
+	let eCat1 = Math.floor(Math.random() * 5);
+	let rExp1 = "";
+	if ( eCat1 == 0) { rExp1 = experiencesList[0].backgrounds[Math.floor(Math.random() * experiencesList[0].backgrounds.length)] }
+	if ( eCat1 == 1) { rExp1 = experiencesList[0].characteristics[Math.floor(Math.random() * experiencesList[0].characteristics.length)] }
+	if ( eCat1 == 2) { rExp1 = experiencesList[0].specialties[Math.floor(Math.random() * experiencesList[0].specialties.length)] }
+	if ( eCat1 == 3) { rExp1 = experiencesList[0].skills[Math.floor(Math.random() * experiencesList[0].skills.length)] }
+	if ( eCat1 == 4) { rExp1 = experiencesList[0].phrases[Math.floor(Math.random() * experiencesList[0].phrases.length)] }
+	pcDetail += "<li>" + rExp1 + ": +2</li>";
+	let eCat2 = Math.floor(Math.random() * 4);
+	if (eCat2 == eCat1) { eCat2 = eCat2++; }
+	let rExp2 = "";
+	if ( eCat2 == 0) { rExp2 = experiencesList[0].backgrounds[Math.floor(Math.random() * experiencesList[0].backgrounds.length)] }
+	if ( eCat2 == 1) { rExp2 = experiencesList[0].characteristics[Math.floor(Math.random() * experiencesList[0].characteristics.length)] }
+	if ( eCat2 == 2) { rExp2 = experiencesList[0].specialties[Math.floor(Math.random() * experiencesList[0].specialties.length)] }
+	if ( eCat2 == 3) { rExp2 = experiencesList[0].skills[Math.floor(Math.random() * experiencesList[0].skills.length)] }
+	if ( eCat2 == 4) { rExp2 = experiencesList[0].phrases[Math.floor(Math.random() * experiencesList[0].phrases.length)] }
+	pcDetail += "<li>" + rExp2 + ": +2</li>";
+	pcDetail += "</ul>";
+	pcDetail += "<h5 class='h6'>Description</h5>";
+	pcDetail += "<ul class='og-list-inline og-ref og-omit'>";
+	pcDetail += "<li>Clothes: " + classesList[ccUserClass].clothes[Math.floor(Math.random() * classesList[ccUserClass].clothes.length)] + "</li>";
+	pcDetail += "<li>Eyes: " + descriptionList[0].eyes[Math.floor(Math.random() * descriptionList[0].eyes.length)] + "</li>";
+	pcDetail += "<li>Body: " + descriptionList[0].body[Math.floor(Math.random() * descriptionList[0].body.length)] + "</li>";
+	pcDetail += "<li>Skin: " + descriptionList[0].skin[Math.floor(Math.random() * descriptionList[0].skin.length)] + "</li>";
+	pcDetail += "<li>Attitude: " + classesList[ccUserClass].attitudes[Math.floor(Math.random() * classesList[ccUserClass].attitudes.length)] + "</li>";
+	pcDetail += "</ul>";
+	document.getElementById("ccRandomOutputDetail").innerHTML = pcDetail;
 };
 
 // INITIALIZE ON LOAD
