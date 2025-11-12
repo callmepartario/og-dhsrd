@@ -1750,7 +1750,6 @@ function ccChooseWeapon(x) {
 	// secondary
 	else if (x == 2) { 
 		ccUserWeaponSecondary = document.getElementById("ccChooseWeaponSecondary").value;
-		//
 		// details
 		let sWep = "";
 		sWep += "<ul class='og-list-inline'>";
@@ -2112,11 +2111,11 @@ function ccPrintAdditionalStatistics() {
 	else { wtype = "magic"; }
 	summary += "<h5 class='h6'>Equipment and Inventory</h5>";
 	summary += "<ul class='og-list-inline og-ref og-omit'>";
-	summary += "<li>Primary Weapon <a href='#weapons-primary-tier-1-" + wtype + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a></li>";
+	summary += "<li>Primary Weapon <a href='#define-weapon-primary-" + ccUserWeaponPrimary + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a></li>";
 	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed") {
-		summary += "<li>Secondary Weapon <a href='#weapons-secondary-tier-1'>" + weaponsecondaryList[ccUserWeaponSecondary].label + "</a></li>";
+		summary += "<li>Secondary Weapon <a href='#define-weapon-secondary-" + ccUserWeaponSecondary + "'>" + weaponsecondaryList[ccUserWeaponSecondary].label + "</a></li>";
 	}
-	summary += "<li>Armor <a href='#armor-tier-1'>" + armorList[ccUserArmor].label + "</a></li>";
+	summary += "<li>Armor <a href='#define-armor-" + ccUserArmor + "'>" + armorList[ccUserArmor].label + "</a></li>";
 	summary += "<li>" + linkConsumable(consumableList[ccUserConsumable].label) + "</li>";
 	summary += "<li>" + classesList[ccUserClass].items[ccUserClassItem] + "</li>";
 	summary += "<li><a href='#define-gold'>Gold</a> 1 handful</li>";
@@ -2826,7 +2825,7 @@ function printEquipment() {
 	iEquip += "</li>";
 	// secondary weapon index
 	iEquip += "<li>";
-	iEquip += "<span class='h6'><a href='#define-weapon'>Secondary Weapon Tables</a></span>";
+	iEquip += "<span class='h6'><a href='#weapons-secondary'>Secondary Weapon Tables</a></span>";
 	iEquip += "<ul class='list-unstyled og-qr'>";
 	for (let i = 1; i < 5; i++) {
 		iEquip += "<li><a href='#weapons-secondary-tier-" + i + "'>Tier " + i + "</a></li>";
@@ -2937,6 +2936,30 @@ function printEquipment() {
 	swTable += "<h4 id='weapons-secondary'>Secondary Weapon Tables<a class='og-h-anchor' href='#weapons-secondary' title='Permalink' aria-hidden='true'></a></h4>";
 	for (let t = 1; t < 5; t++) {
 		swTable += "<h5 id='weapons-secondary-tier-" + t + "'>Tier " + t + " Secondary Weapons (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#weapons-secondary-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
+		// print weapon stats for tooltips
+		let wStats = "";
+		swTable += "<div class='visually-hidden'>"; // open hide
+		for (let i = 0; i < weaponsecondaryList.length; i++) {
+			if (weaponsecondaryList[i].tier == t) {
+				wStats = ""; // new weapon
+				wStats += "<div id='define-weapon-secondary-" + i + "'>"; // open def
+				wStats += "<h5 class='h6 og-tab'>" + weaponsecondaryList[i].label + "</h5>";
+				wStats += "<p class='fst-italic fw-bold'>Tier " + t + " Secondary Weapon</p>";
+				wStats += "<ul class='list-unstyled d-table'>";
+				wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Trait: </span><span class='d-table-cell'>" + weaponsecondaryList[i].trait + "</span></li>";
+				wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Range: </span><span class='d-table-cell'>" + weaponsecondaryList[i].range + "</span></li>";
+				wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Damage: </span><span class='d-table-cell'>" + weaponsecondaryList[i].damage + " " + weaponsecondaryList[i].damagetype + "</span></li>";
+				wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3'>Burden: </span><span class='d-table-cell'>" + weaponsecondaryList[i].burden + "</span></li>";
+				if (weaponsecondaryList[i].feature != "") {
+					wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pt-1'>Feature: </span><span class='d-table-cell'>" + weaponsecondaryList[i].feature + "</span></li>";
+				}
+				wStats += "</ul>";
+				wStats += "</div>"; // close def
+				swTable += wStats;
+			}
+		}
+		swTable += "</div>"; // close hide
+		// continue
 		let weaponPage = "";
 		let weaponErrata = false;
 		if (t == 1) {
@@ -3024,6 +3047,28 @@ function printEquipment() {
 	aTable += "<h4 id='armor-tables'>Armor Tables<a class='og-h-anchor' href='#armor-tables' title='Permalink' aria-hidden='true'></a></h4>";
 	for (let t = 1; t < 5; t++) {
 		aTable += "<h5 id='armor-tier-" + t + "'>Tier " + t + " Armor (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#armor-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
+		// print weapon stats for tooltips
+		let aStats = "";
+		aTable += "<div class='visually-hidden'>"; // open hide
+		for (let i = 0; i < armorList.length; i++) {
+			if (armorList[i].tier == t) {
+				aStats = ""; // new weapon
+				aStats += "<div id='define-armor-" + i + "'>"; // open def
+				aStats += "<h6 class='og-tab'>" + armorList[i].label + "</h6>";
+				aStats += "<p class='fst-italic fw-bold'>Tier " + t + " Armor</p>";
+				aStats += "<ul class='list-unstyled d-table'>";
+				aStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Base Thresholds: </span><span class='d-table-cell'>" + armorList[i].thresholdmajor + "/" + armorList[i].thresholdsevere + "</span></li>";
+				aStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Base Score: </span><span class='d-table-cell'>" + armorList[i].score + "</span></li>";
+				if (armorList[i].feature != "") {
+					aStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pt-1'>Feature: </span><span class='d-table-cell'>" + armorList[i].feature + "</span></li>";
+				}
+				aStats += "</ul>";
+				aStats += "</div>"; // close def
+				aTable += aStats;
+			}
+		}
+		aTable += "</div>"; // close hide
+		// continue
 		let armorPage = "";
 		if (t == 1) { armorPage = "Page 126"; }
 		else if (t == 2) { armorPage = "Page 126"; }
@@ -3251,6 +3296,30 @@ function printWeaponPrimaryTable(weaponTier, weaponType) {
 	}
 	let weaponContent = "";
 	weaponContent += "<h6 id='weapons-primary-tier-" + weaponTier + "-" + weaponTypeName + "'>Tier " + weaponTier + " " + weaponTypeLabel + " Weapons<a class='og-h-anchor' href='#weapons-primary-tier-" + weaponTier + "-" + weaponTypeName + "' title='Permalink' aria-hidden='true'></a></h6>";
+	// print weapon stats for tooltips
+	let wStats = "";
+	weaponContent += "<div class='visually-hidden'>"; // open hide
+	for (let i = 0; i < weaponprimaryList.length; i++) {
+		if (weaponprimaryList[i].tier == weaponTier && weaponprimaryList[i].magic == weaponType) {
+			wStats = ""; // new weapon
+			wStats += "<div id='define-weapon-primary-" + i + "'>"; // open def
+			wStats += "<h6 class='og-tab'>" + weaponprimaryList[i].label + "</h6>";
+			wStats += "<p class='fst-italic fw-bold'>Tier " + weaponTier + " Primary Weapon (" + weaponTypeLabel + ")</p>";
+			wStats += "<ul class='list-unstyled d-table'>";
+			wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Trait: </span><span class='d-table-cell'>" + weaponprimaryList[i].trait + "</span></li>";
+			wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Range: </span><span class='d-table-cell'>" + weaponprimaryList[i].range + "</span></li>";
+			wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pb-1'>Damage: </span><span class='d-table-cell'>" + weaponprimaryList[i].damage + " " + weaponprimaryList[i].damagetype + "</span></li>";
+			wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3'>Burden: </span><span class='d-table-cell'>" + weaponprimaryList[i].burden + "</span></li>";
+			if (weaponprimaryList[i].feature != "") {
+				wStats += "<li class='d-table-row'><span class='d-table-cell fw-bold pe-3 pt-1'>Feature: </span><span class='d-table-cell'>" + weaponprimaryList[i].feature + "</span></li>";
+			}
+			wStats += "</ul>";
+			wStats += "</div>"; // close def
+			weaponContent += wStats;
+		}
+	}
+	weaponContent += "</div>"; // close hide
+	// continue
 	let weaponPage = "";
 	let weaponErrata = false;
 	if (weaponTier == 1 && weaponType == false) {
