@@ -2087,7 +2087,6 @@ function ccPrintAdditionalStatistics() {
 	userStats += "</div>"; // close col
 	userStats += "</div>"; // close row
 	document.getElementById("ccPrintAdditionalStatistics").innerHTML = userStats;
-	refreshTooltips();
 	// assemble summary
 	let summary = "";
 	summary += "<h5 class='h6'>Character Options</h5>";
@@ -2143,6 +2142,7 @@ function ccPrintAdditionalStatistics() {
 	summary += "<li><a href='#define-hope'>Hope</a> 2</li>";
 	summary += "</ul>";
 	document.getElementById("ccRandomOutput").innerHTML = summary;
+	refreshTooltips();
 };
 function ccPrintBackgroundQuestions() {
 	//background
