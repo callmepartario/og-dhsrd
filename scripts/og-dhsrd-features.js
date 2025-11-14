@@ -1879,7 +1879,7 @@ function ccPrintAdditionalStatistics() {
 	tArray += "<h4 class='og-tab'>Traits</h4>";
 	tArray += getCCnote("<strong><a href='#define-trait'>Traits</a></strong> represent physical, mental, and social aptitudes. Assign each trait one of the array values:");
 	tArray += "<ul class='list-inline'><li class='d-inline-block h6 pe-3'>+2</li><li class='d-inline-block h6 pe-3'>+1</li><li class='d-inline-block h6 pe-3'>+1</li><li class='d-inline-block h6 pe-3'>+0</li><li class='d-inline-block h6 pe-3'>+0</li><li class='d-inline-block h6 pe-3'>&minus;1</li></ul>";
-	tArray += getCCnote("You can use the following suggested trait array for a " + linkClass(classesList[ccUserClass].label) + ". Modifications from selected features are included.");
+	tArray += getCCnote("You can use the following suggested trait array for a " + linkClass(classesList[ccUserClass].label) + ". Modifications from selected features are noted.");
 	tArray += "<div class='row'>"; // open row
 	for (let i = 0; i < traitList.length; i++) {
 		tArray += "<div class='col-12 col-md-6 col-lg-4'>"; // open col
@@ -1889,13 +1889,14 @@ function ccPrintAdditionalStatistics() {
 		// add weapon and armor modifiers
 		if (traitList[i].label == "Agility" && userAgilityMods != 0) {
 			tArray += "<ul class='og-list-inline og-ref og-omit'>";
-			tArray += "<li>Array: " + classesList[ccUserClass].traitarray[0] + "</li>";
-			tArray += "<li>" + armorList[ccUserArmor].label + " (Very Heavy): " + getNum(userAgilityMods) + "</li>";
+			tArray += "<li>Array: " + getNum(classesList[ccUserClass].traitarray[i]) + "</li>";
+			tArray += "<li><a href='#define-armor-" + ccUserArmor + "'>" + armorList[ccUserArmor].label + "</a> (Very Heavy): &minus;1</li>";
 			tArray += "</ul>";
 	}
 		else if (traitList[i].label == "Finesse" && userFinesseMods != 0) {
 			tArray += "<ul class='og-list-inline og-ref og-omit'>";
-			tArray += "<li>" + weaponprimaryList[ccUserWeaponPrimary].label + " (Cumbersome): " + getNum(userAgilityMods) + "</li>";
+			tArray += "<li>Array: " + getNum(classesList[ccUserClass].traitarray[i]) + "</li>";
+			tArray += "<li><a href='#define-weapon-primary-" + ccUserWeaponPrimary + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a> (Cumbersome): &minus;1</li>";
 			tArray += "</ul>";
 		}
 		tArray += "<p class='og-questions small'>";
@@ -1939,32 +1940,32 @@ function ccPrintAdditionalStatistics() {
 	// evasion modifiers, equipment
 	if (weaponprimaryList[ccUserWeaponPrimary].label == "Greatsword") {
 		userEvasionBonus = userEvasionBonus -1;
-		eMods += "<li>Greatsword (Massive): &minus;1</li>";
+		eMods += "<li><a href='#define-weapon-primary-" + ccUserWeaponPrimary + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a> (Massive): &minus;1</li>";
 	}
 	// evasion modifiers, equipment
 	if (weaponprimaryList[ccUserWeaponPrimary].label == "Warhammer") {
 		userEvasionBonus = userEvasionBonus -1;
-		eMods += "<li>Warhammer (Heavy): &minus;1</li>";
+		eMods += "<li><a href='#define-weapon-primary-" + ccUserWeaponPrimary + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a> (Heavy): &minus;1</li>";
 	}
 	if (weaponprimaryList[ccUserWeaponPrimary].label == "Heavy-Frame Wheelchair") {
 		userEvasionBonus = userEvasionBonus -1;
-		eMods += "<li>Heavy-Frame Wheelchair (Heavy): &minus;1</li>";
+		eMods += "<li><a href='#define-weapon-primary-" + ccUserWeaponPrimary + "'>" + weaponprimaryList[ccUserWeaponPrimary].label + "</a> (Heavy): &minus;1</li>";
 	}
 	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed" && weaponsecondaryList[ccUserWeaponSecondary].label == "Tower Shield") {
 		userEvasionBonus = userEvasionBonus -1;
-		eMods += "<li>Tower Shield (Barrier): &minus;1</li>";
+		eMods += "<li><a href='#define-weapon-secondary-" + ccUserWeaponSecondary + "'>" + weaponsecondaryList[ccUserWeaponSecondary].label + "</a> (Barrier): &minus;1</li>";
 	}
 	if (armorList[ccUserArmor].label == "Gambeson Armor") {
 		userEvasionBonus = userEvasionBonus +1;
-		eMods += "<li>Gambeson Armor (Flexible): +1</li>";
+		eMods += "<li><a href='#define-armor-" + ccUserArmor + "'>" + armorList[ccUserArmor].label + "</a> (Flexible): +1</li>";
 	}
 	if (armorList[ccUserArmor].label == "Chainmail Armor") {
 		userEvasionBonus = userEvasionBonus -1;
-		eMods += "<li>Chainmail Armor (Heavy): &minus;1</li>";
+		eMods += "<li><a href='#define-armor-" + ccUserArmor + "'>" + armorList[ccUserArmor].label + "</a> (Heavy): &minus;1</li>";
 	}
 	if (armorList[ccUserArmor].label == "Full Plate Armor") {
 		userEvasionBonus = userEvasionBonus -2;
-		eMods += "<li>Full Plate Armor (Very Heavy): &minus;2</li>";
+		eMods += "<li><a href='#define-armor-" + ccUserArmor + "'>" + armorList[ccUserArmor].label + "</a> (Very Heavy): &minus;2</li>";
 	}
 	eMods += "</ul>";
 	// print evasion
@@ -1978,15 +1979,15 @@ function ccPrintAdditionalStatistics() {
 	// record armor modifiers
 	let aMods = "";
 	aMods += "<ul class='og-list-inline og-ref og-omit'>";
-	aMods += "<li>" + armorList[ccUserArmor].label + ": " + armorList[ccUserArmor].score + "</li>";
+	aMods += "<li><a href='#define-armor-" + ccUserArmor + "'>" + armorList[ccUserArmor].label + "</a>: " + armorList[ccUserArmor].score + "</li>";
 	// armor modifiers, equipment
 	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed" && weaponsecondaryList[ccUserWeaponSecondary].label == "Round Shield") {
 		userArmorBonus = userArmorBonus +1;
-		aMods += "<li>Round Shield (Protective): +1</li>";
+		aMods += "<li><a href='#define-weapon-secondary-" + ccUserWeaponSecondary + "'>" + weaponsecondaryList[ccUserWeaponSecondary].label + "</a> (Protective): +1</li>";
 	}
 	if (weaponprimaryList[ccUserWeaponPrimary].burden == "One-Handed" && weaponsecondaryList[ccUserWeaponSecondary].label == "Tower Shield") {
 		userArmorBonus = userArmorBonus +2;
-		aMods += "<li>Tower Shield (Barrier): +2</li>";
+		aMods += "<li><a href='#define-weapon-secondary-" + ccUserWeaponSecondary + "'>" + weaponsecondaryList[ccUserWeaponSecondary].label + "</a> (Barrier): +2</li>";
 	}
 	aMods += "</ul>";
 	// print armor
@@ -2000,7 +2001,7 @@ function ccPrintAdditionalStatistics() {
 	let tMods = "";
 	tMods += "<ul class='og-list-inline og-ref og-omit'>";
 	// threshold modifiers, armor and level
-	tMods += "<li>" + armorList[ccUserArmor].label + ": " + armorList[ccUserArmor].thresholdmajor + "/" + armorList[ccUserArmor].thresholdsevere + "</li>";
+	tMods += "<li><a href='#define-armor-" + ccUserArmor + "'>" + armorList[ccUserArmor].label + "</a>: " + armorList[ccUserArmor].thresholdmajor + "/" + armorList[ccUserArmor].thresholdsevere + "</li>";
 	userThresholdBonus = userThresholdBonus +1;
 	tMods += "<li>Level: +1/+1</li>";
 	// threshold modifiers, subclass
