@@ -1737,7 +1737,7 @@ function ccChooseWeapon(x) {
 		pWep += "<ul class='og-list-inline'>";
 		pWep += "<li class='pb-1'><strong>Trait:</strong> ";
 		if (weaponprimaryList[ccUserWeaponPrimary].trait == "Spellcast") { pWep += "Spellcast (" + linkTrait(subclassList[ccUserSubclass].spellcast) + ")"; }
-		else { linkTrait(weaponprimaryList[ccUserWeaponPrimary].trait) }
+		else { pWep += linkTrait(weaponprimaryList[ccUserWeaponPrimary].trait) }
 		pWep += "</li>";
 		pWep += "<li class='pb-1'><strong>Range:</strong> <a href='#define-range'>" + weaponprimaryList[ccUserWeaponPrimary].range + "</a></li>";
 		pWep += "<li class='pb-1'><strong>Damage:</strong> <a href='#define-damage-roll'>" + weaponprimaryList[ccUserWeaponPrimary].damage + "</a> <a href='#define-damage-type'>" + weaponprimaryList[ccUserWeaponPrimary].damagetype + "</a></li>";
