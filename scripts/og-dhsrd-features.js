@@ -1763,7 +1763,6 @@ function ccChooseWeapon(x) {
 		document.getElementById("ccWeaponSecondary").innerHTML = sWep;
 	}
 	ccPrintAdditionalStatistics();
-	refreshTooltips();
 };
 function ccChooseArmor() {
 	ccUserArmor = document.getElementById("ccChooseArmor").value; 
@@ -2174,8 +2173,6 @@ function ccPrintBackgroundQuestions() {
 	cQ += "</ul>";
 	cQ += "";
 	document.getElementById("ccClassConnection").innerHTML = cQ;
-
-	refreshTooltips();
 }
 function ccPrintExperienceList() {
 	ccUserExperienceList = document.getElementById("ccChooseExperienceList").value;
@@ -2391,7 +2388,7 @@ function printClasses() {
 							classRecord += "<ul class='og-list-inline'>";
 							classRecord += "<li>" + linkTrait(beastformList[bf].stat) + " +" + beastformList[bf].statbonus + "</li>";
 							classRecord += "<li><a href='#define-evasion'>Evasion</a> +" + beastformList[bf].evasionbonus + "</li>";
-							classRecord += "<li class='d-block'><a href='#define-range'>" + beastformList[bf].attackrange + "</a> " + linkTrait(beastformList[bf].attacktrait) + " " + beastformList[bf].attackdamage + " <a href='#define-damage-type'>" + beastformList[bf].attackdamagetype + "</a></li>";
+							classRecord += "<li class='d-block'><a href='#define-range'>" + beastformList[bf].attackrange + "</a> " + linkTrait(beastformList[bf].attacktrait) + " <span class='og-divider'><a href='#define-damage-roll'>" + beastformList[bf].attackdamage + "</a> <a href='#define-damage-type'>" + beastformList[bf].attackdamagetype + "</a></span></li>";
 							classRecord += "</ul>";
 							classRecord += "<div class='og-topbar2'><p><strong>Gain advantage on:</strong> " + beastformList[bf].advantage + "</p></div>";
 							classRecord += "</div>";
