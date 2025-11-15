@@ -1735,12 +1735,11 @@ function ccChooseWeapon(x) {
 		// details
 		let pWep = "";
 		pWep += "<ul class='og-list-inline'>";
-		pWep += "<li class='pb-1'><strong>Trait:</strong> ";
+		pWep += "<li class='pb-1'><strong>Trait and Range:</strong> ";
 		if (weaponprimaryList[ccUserWeaponPrimary].trait == "Spellcast") { pWep += "Spellcast (" + linkTrait(subclassList[ccUserSubclass].spellcast) + ")"; }
 		else { pWep += linkTrait(weaponprimaryList[ccUserWeaponPrimary].trait) }
-		pWep += "</li>";
-		pWep += "<li class='pb-1'><strong>Range:</strong> <a href='#define-range'>" + weaponprimaryList[ccUserWeaponPrimary].range + "</a></li>";
-		pWep += "<li class='pb-1'><strong>Damage:</strong> <a href='#define-damage-roll'>" + weaponprimaryList[ccUserWeaponPrimary].damage + "</a> <a href='#define-damage-type'>" + weaponprimaryList[ccUserWeaponPrimary].damagetype + "</a></li>";
+		pWep += " <a href='#define-range'>" + weaponprimaryList[ccUserWeaponPrimary].range + "</a></li>";
+		pWep += "<li class='pb-1'><strong>Damage Dice and Type:</strong> <a href='#define-damage-roll'>" + weaponprimaryList[ccUserWeaponPrimary].damage + "</a> <a href='#define-damage-type'>" + weaponprimaryList[ccUserWeaponPrimary].damagetype + "</a></li>";
 		if (weaponprimaryList[ccUserWeaponPrimary].feature != "") {
 			pWep += "<li class='pb-1'><strong>Feature:</strong> <span class='og-divider d-inline og-wrap'>" + weaponprimaryList[ccUserWeaponPrimary].feature + "</span></li>";
 		}
@@ -1753,9 +1752,8 @@ function ccChooseWeapon(x) {
 		// details
 		let sWep = "";
 		sWep += "<ul class='og-list-inline'>";
-		sWep += "<li class='pb-1'><strong>Trait:</strong> " + linkTrait(weaponsecondaryList[ccUserWeaponSecondary].trait) + "</li>";
-		sWep += "<li class='pb-1'><strong>Range:</strong> <a href='#define-range'>" + weaponsecondaryList[ccUserWeaponSecondary].range + "</a></li>";
-		sWep += "<li class='pb-1'><strong>Damage:</strong> <a href='#define-damage-roll'>" + weaponsecondaryList[ccUserWeaponSecondary].damage + "</a> <a href='#define-damage-type'>" + weaponsecondaryList[ccUserWeaponSecondary].damagetype + "</a></li>";
+		sWep += "<li class='pb-1'><strong>Trait and Range:</strong> " + linkTrait(weaponsecondaryList[ccUserWeaponSecondary].trait) + " <a href='#define-range'>" + weaponsecondaryList[ccUserWeaponSecondary].range + "</a></li>";
+		sWep += "<li class='pb-1'><strong>Damage Dice and Type:</strong> <a href='#define-damage-roll'>" + weaponsecondaryList[ccUserWeaponSecondary].damage + "</a> <a href='#define-damage-type'>" + weaponsecondaryList[ccUserWeaponSecondary].damagetype + "</a></li>";
 		if (weaponsecondaryList[ccUserWeaponSecondary].feature != "") {
 			sWep += "<li class='pb-1'><strong>Feature:</strong> <span class='og-divider d-inline og-wrap'>" + weaponsecondaryList[ccUserWeaponSecondary].feature + "</span></li>";
 		}
