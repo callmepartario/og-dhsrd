@@ -1167,8 +1167,8 @@ function printCC() {
 	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Unofficial Daggerheart Character Sheet<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
 	CC += getCCnote("You can use this fillable PDF character sheet for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following two versions:");
 	CC += "<ul class='list-inline'>";
-	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'>Extra Notes Version</a></p></li>";
-	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'>Ranger Companion Version</a></p></li>";
+	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes Version</a></p></li>";
+	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion Version</a></p></li>";
 	CC += "</ul>";
 	CC += "</div>"; // close def	
 	CC += "</div>"; // close omit
@@ -1186,7 +1186,7 @@ function printCC() {
 	CC += "<li>Experiences are drawn from two different categories.</li>";
 	CC += "</ul>";
 	CC += "<ul class='list-inline'>";
-	CC += "<li class='list-inline-item'><p><button class='btn mt-1 mb-1 theme-light border' type='button' id='ccRandomize' aria-label='Generate Random PC Options}'>Generate Random PC</button></p></li>";
+	CC += "<li class='list-inline-item'><p><button class='btn mt-1 mb-1 theme-light border' type='button' id='ccRandomize' aria-label='Generate Random PC Options}'><span aria-hidden='true'>&#x1F3B2;&nbsp;</span>Generate Random PC</button></p></li>";
 	CC += "</ul>";
 	CC += "<div id='ccRandomOutput'><p>&mdash;</p></div>";
 	CC += "<div id='ccRandomOutputDetail'></div>";
