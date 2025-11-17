@@ -1161,7 +1161,23 @@ function printCC() {
 	CC += "</ol>";
 	CC += "<div class='og-omit'>"; // open omit
 	CC += getCCnote("Additional playtest character options are available from <a href='https://www.daggerheart.com/thevoid/'>Daggerheart&mdash;The Void</a>.");
-	CC += "<h3 id='character-creation-random'>Random PCs<a class='og-h-anchor' href='#character-creation-random' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += "<div id='define-character-sheet'>"; // open def	
+	CC += "<h3 id='character-sheet'>Character Sheet<a class='og-h-anchor' href='#character-sheet' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print an official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guide</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
+	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Unofficial Daggerheart Character Sheet<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
+	CC += getCCnote("You can use this fillable PDF character sheet for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following two versions:");
+	CC += "<ul class='list-inline'>";
+	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'>Extra Notes Version</a></p></li>";
+	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'>Ranger Companion Version</a></p></li>";
+	CC += "</ul>";
+	CC += "</div>"; // close def	
+	CC += "</div>"; // close omit
+	CC += "</div>"; // close topbar
+	CC += "</div>"; // close def
+	CC += "</div>"; // close col
+	CC += "<div class='col-12 col-md-6'>"; // open col
+	CC += "<div class='alert ps-4 pb-0 og-omit'>"; // open alert
+	CC += "<h3 id='character-creation-summary'>PC Summary<a class='og-h-anchor' href='#character-creation-summary' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += getCCnote("This character creation guide begins with a random set of options.");
 	CC += "<ul class='og-list-disc og-questions small'>";
 	CC += "<li>There is a 20% chance for a (random) <a href='#define-mixed-ancestry'>mixed ancestry</a>.</li>";
@@ -1169,13 +1185,6 @@ function printCC() {
 	CC += "<li><a href='#define-traits'>Traits</a> use suggested arrays by class. Traits and statistic values include modifiers from ancestry, class, and equipment features.</li>";
 	CC += "<li>Experiences are drawn from two different categories.</li>";
 	CC += "</ul>";
-	CC += "</div>"; // close omit	
-	CC += "</div>"; // close topbar
-	CC += "</div>"; // close def
-	CC += "</div>"; // close col
-	CC += "<div class='col-12 col-md-6'>"; // open col
-	CC += "<div class='alert ps-4 pb-0 og-omit'>"; // open alert
-	CC += "<h4 id='character-creation-summary'>Daggerheart PC Summary<a class='og-h-anchor' href='#character-creation-summary' title='Permalink' aria-hidden='true'></a></h4>";
 	CC += "<ul class='list-inline'>";
 	CC += "<li class='list-inline-item'><p><button class='btn mt-1 mb-1 theme-light border' type='button' id='ccRandomize' aria-label='Generate Random PC Options}'>Generate Random PC</button></p></li>";
 	CC += "</ul>";
