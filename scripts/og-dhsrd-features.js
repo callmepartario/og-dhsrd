@@ -2142,7 +2142,7 @@ function ccPrintAdditionalStatistics() {
 	summary += "<li><a href='#define-level'>Level</a> 1</li>";
 	summary += "<li><a href='#define-evasion'>Evasion</a> " + (userEvasion + userEvasionBonus) + "</li>";
 	summary += "<li><a href='#define-armor'>Armor</a> " + (userArmor + userArmorBonus) + "</li>";
-	summary += "<li><a href='#define-hit-point'>Thresholds</a> " + (armorList[ccUserArmor].thresholdmajor + userThresholdBonus) + "/" + (armorList[ccUserArmor].thresholdsevere) + "</li>";
+	summary += "<li><a href='#define-hit-point'>Thresholds</a> " + (armorList[ccUserArmor].thresholdmajor + userThresholdBonus) + "/" + (armorList[ccUserArmor].thresholdsevere + userThresholdBonus) + "</li>";
 	summary += "<li><a href='#define-hit-point'>Hit Points</a> " + (userHP + userHPBonus) + "</li>";
 	summary += "<li><a href='#define-stress'>Stress</a> " + (userStress + userStressBonus) + "</li>";
 	summary += "<li><a href='#define-damage-roll'>Proficiency</a> 1</li>";
