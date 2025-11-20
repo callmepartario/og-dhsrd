@@ -2369,7 +2369,7 @@ function printClasses() {
 			classRecord += "</dl>";
 			classRecord += "</div>";
 			// index beastform options
-			classRecord += "<h4 id='druid-beastform-options-by-tier'>Beastform Options By Tier<a class='og-h-anchor' href='#druid-beastform-options-by-tier' title='Permalink' aria-hidden='true'></a></h4>";
+			classRecord += "<h5 id='druid-beastform-options-by-tier'>Beastform Options By Tier<a class='og-h-anchor' href='#druid-beastform-options-by-tier' title='Permalink' aria-hidden='true'></a></h5>";
 			classRecord += "<div class='alert ps-4 pb-0 og-omit'><ul class='list-unstyled'>";
 			for (let tier = 1; tier < 5; tier++) {
 				classRecord += "<li><p class='h6'>Tier " + tier + "</p>";
@@ -2383,7 +2383,6 @@ function printClasses() {
 			}
 			classRecord += "</ul></div>";
 			// beastform options
-			classRecord += "<h4 id='druid-beastform-modifications'>Beastform Modifications<a class='og-h-anchor' href='#druid-beastform-modifications' title='Permalink' aria-hidden='true'></a></h4>";
 			for (let t = 1; t < 5; t++) {
 				classRecord += "<h5 id='druid-beastform-tier-" + t + "'>Tier " + t + " Beastform Options<a class='og-h-anchor' href='#druid-beastform-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h5>";
 				classRecord += "<div class='row'>";
