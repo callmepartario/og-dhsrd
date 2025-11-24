@@ -355,6 +355,32 @@
 	font-style: italic;
 }
 
+/* dyslexic reader mode */
+@font-face {
+	font-family: OpenDyslexic;
+	src:url('../fonts/OpenDyslexic-Regular.otf') format(opentype);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: OpenDyslexic;
+	src:url('../fonts/OpenDyslexic-Italic.otf') format(opentype);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: OpenDyslexic;
+	src:url('../fonts/OpenDyslexic-Bold.otf') format(opentype);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: OpenDyslexic;
+	src:url('../fonts/OpenDyslexic-BoldItalic.otf') format(opentype);
+	font-weight: bold;
+	font-style: italic;
+}
+
 /* width, by percent */
 .w-95 { width: 95% !important; }
 .w-90 { width: 90% !important; }
@@ -393,6 +419,10 @@ html {
 #og-navbar.theme-dark { 
 	background-color: #023 !important;
 	border-bottom: 0.25em solid #146;
+}
+
+#og-navbar label {
+	font-size: 1rem;
 }
 
 /* images, light and dark mode iconography */
@@ -719,7 +749,7 @@ h6 a.og-h-anchor { margin-top: 0.15rem; }
 .theme-light .og-sidebar { 
 	background-color: #f2fcff;
 }
-.theme-dark div.og-sidebar { 
+.theme-dark .og-sidebar { 
 	background-color: #222829; 
 }
 
@@ -1463,3 +1493,24 @@ body.theme-dark .tooltip-inner {
 .theme-dark .og-domain-valor, .og-tab-valor {
 	background-image: url(../images/domain-valor-light.svg);
 }
+
+/* OpenDyslexia font overrides */
+
+
+/* OpenDyslexia fond overrides */
+body.dyslexia { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia .navbar-brand { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia h1 .og-subtitle { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia h1 .og-title { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia h2, .dyslexia h3, .dyslexia h4, .dyslexia h5, .dyslexia h6 { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia h6, .dyslexia .h6 { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia .og-ed { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia ul.og-ref li { font-family: OpenDyslexic; font-kerning: none; }
+.dyslexia .tooltip-inner { font-family: OpenDyslexic; font-kerning: none; }
+
+.dyslexia h6::before, .dyslexia .h6::before {
+	content: '';
+	padding-right: 0rem;
+}
+
+.dyslexia dl dt { padding-bottom: 0.5rem; }

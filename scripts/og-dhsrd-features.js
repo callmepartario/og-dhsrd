@@ -1163,13 +1163,30 @@ function printCC() {
 	CC += getCCnote("Additional playtest character options are available from <a href='https://www.daggerheart.com/thevoid/'>Daggerheart&mdash;The Void</a>.");
 	CC += "<div id='define-character-sheet'>"; // open def	
 	CC += "<h3 id='character-sheet'>Character Sheet<a class='og-h-anchor' href='#character-sheet' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += getReferences(["Editorial Addition"]);
 	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print an official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guide</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
-	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Unofficial Daggerheart Character Sheet<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
+	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Character Sheets<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
 	CC += getCCnote("You can use this fillable PDF character sheet for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following two versions:");
 	CC += "<ul class='list-inline'>";
-	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes Version</a></p></li>";
-	CC += "<li class='list-inline-item'><p><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion Version</a></p></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion</a></li>";
 	CC += "</ul>";
+	CC += "<!--";
+	CC += "<h4 class='h6' id='qedhup-character-sheet'>Qedhup's Character Sheets<a class='og-h-anchor' href='#defiqedhup-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
+	CC += getCCnote("You can use this fillable PDF character sheet by <a href='https://ko-fi.com/qedhup'>Qedhup</a>. Choose a version for your <a href='#define-class'>class</a>, or use the blank version:");
+	CC += "<ul class='list-inline'>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Blank</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-bard.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Bard</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-druid.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Druid</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-guardian.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Guardian</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-ranger.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-rogue.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Rogue</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-seraph.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Seraph</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-sorcerer.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Sorcerer</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-warrior.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Warrior</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-Wizard.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Wizard</a></li>";
+	CC += "</ul>";
+	CC += "-->";
 	CC += "</div>"; // close def	
 	CC += "</div>"; // close omit
 	CC += "</div>"; // close topbar
@@ -1178,6 +1195,7 @@ function printCC() {
 	CC += "<div class='col-12 col-md-6'>"; // open col
 	CC += "<div class='alert ps-4 pb-0 og-omit'>"; // open alert
 	CC += "<h3 id='character-creation-summary'>PC Summary<a class='og-h-anchor' href='#character-creation-summary' title='Permalink' aria-hidden='true'></a></h3>";
+	CC += getReferences(["Editorial Addition"]);
 	CC += getCCnote("This character creation guide begins with a random set of options.");
 	CC += "<ul class='og-list-disc og-questions small'>";
 	CC += "<li>There is a 20% chance for a (random) <a href='#define-mixed-ancestry'>mixed ancestry</a>.</li>";
@@ -4302,9 +4320,23 @@ function ccRandomize() {
 	refreshTooltips();
 };
 
+function dyslexiaMode() {
+	if (document.getElementById("dyslexiaSwitch").checked == false) {
+		document.getElementById("body-content").classList.remove("dyslexia");
+	}
+	else {
+		document.getElementById("body-content").classList.add("dyslexia");
+	}
+};
+
 // INITIALIZE ON LOAD
 window.addEventListener("load", (event) => { 
-	document.querySelector('#ccRandomize').addEventListener("click", function(evene) { ccRandomize(); });
+	// dyslexiamode
+	if (document.getElementById("dyslexiaSwitch").checked == true) { dyslexiaMode(); }
+
+	document.querySelector('#dyslexiaSwitch').addEventListener("click", function(event) { dyslexiaMode(); });
+	// randomize
+	document.querySelector('#ccRandomize').addEventListener("click", function(event) { ccRandomize(); });
 	// class
 	document.querySelector('#ccChooseClass').addEventListener("change", function() { ccChooseClass(); });
 	document.querySelector('#ccChooseSubclass').addEventListener("change", function() { ccChooseSubclass(); });
