@@ -14,6 +14,8 @@ var ccUserDomainCard3 = 0;
 var ccUserExperienceList = 0;
 const ccUserClassDeck = [0,1,2,3,4,5];
 
+var readerPreference = localStorage.getItem('readerMode');
+
 // benchmark settings
 let Hdie = 0;
 let Fdie = 0;
@@ -4321,6 +4323,7 @@ function ccRandomize() {
 };
 
 function dyslexiaMode() {
+
 	if (document.getElementById("dyslexiaSwitch").checked == false) {
 		document.getElementById("body-content").classList.remove("dyslexia");
 		const col6 = document.querySelectorAll('.null6');
@@ -4333,6 +4336,8 @@ function dyslexiaMode() {
 			element.classList.add("col-lg-4");
 			element.classList.remove("null4");
 		});
+		readerPreference = "standard";
+		localStorage.setItem('readerMode', 'standard');
 	}
 	else {
 		document.getElementById("body-content").classList.add("dyslexia");
@@ -4346,13 +4351,17 @@ function dyslexiaMode() {
 			element.classList.add("null6");
 			element.classList.remove("col-lg-4");
 		});
-
+		readerPreference = "dyslexic";
+		localStorage.setItem('readerMode', 'dyslexic');
 	}
+	console.log(readerPreference);
 };
 
 // INITIALIZE ON LOAD
 window.addEventListener("load", (event) => { 
-	// dyslexiamode
+	// dyslexiamode (load preference)
+	if ( readerPreference == "dyslexic") { document.getElementById("dyslexiaSwitch").checked == true }
+	// dyslexiamode (switch)
 	if (document.getElementById("dyslexiaSwitch").checked == true) { dyslexiaMode(); }
 
 	document.querySelector('#dyslexiaSwitch').addEventListener("click", function(event) { dyslexiaMode(); });
