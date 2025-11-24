@@ -4323,9 +4323,30 @@ function ccRandomize() {
 function dyslexiaMode() {
 	if (document.getElementById("dyslexiaSwitch").checked == false) {
 		document.getElementById("body-content").classList.remove("dyslexia");
+		const col6 = document.querySelectorAll('.null6');
+		col6.forEach(element => {
+			element.classList.add("col-md-6");
+			element.classList.remove("null6");
+		});
+		const col4 = document.querySelectorAll('.null4');
+		col4.forEach(element => {
+			element.classList.add("col-lg-4");
+			element.classList.remove("null4");
+		});
 	}
 	else {
 		document.getElementById("body-content").classList.add("dyslexia");
+		const col6 = document.querySelectorAll('.col-md-6');
+		col6.forEach(element => {
+			element.classList.add("null6");
+			element.classList.remove("col-md-6");
+		});
+		const col4 = document.querySelectorAll('.col-lg-4');
+		col4.forEach(element => {
+			element.classList.add("null6");
+			element.classList.remove("col-lg-4");
+		});
+
 	}
 };
 
