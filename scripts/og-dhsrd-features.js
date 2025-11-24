@@ -4354,13 +4354,12 @@ function dyslexiaMode() {
 		readerPreference = "dyslexic";
 		localStorage.setItem('readerMode', 'dyslexic');
 	}
-	console.log(readerPreference);
 };
 
 // INITIALIZE ON LOAD
 window.addEventListener("load", (event) => { 
 	// dyslexiamode (load preference)
-	if ( readerPreference == "dyslexic") { document.getElementById("dyslexiaSwitch").checked == true }
+	if ( readerPreference == "dyslexic") { document.getElementById("dyslexiaSwitch").checked = true }
 	// dyslexiamode (switch)
 	if (document.getElementById("dyslexiaSwitch").checked == true) { dyslexiaMode(); }
 
