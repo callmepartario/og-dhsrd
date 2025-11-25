@@ -1642,6 +1642,15 @@ function ccChooseSubclass() {
 		document.getElementById("ccDomainCard3Display").classList.add("d-none");
 		document.getElementById("ccUserDomainCardBonus").innerHTML = "";
 	}
+	// return to 1 column display for dyslexic readers
+	if (readerPreference == "dyslexic") {
+		document.getElementById("ccDomainCard1Display").classList.remove("col-md-4");
+		document.getElementById("ccDomainCard1Display").classList.remove("col-md-6");
+		document.getElementById("ccDomainCard2Display").classList.remove("col-md-4");
+		document.getElementById("ccDomainCard2Display").classList.remove("col-md-6");
+		document.getElementById("ccDomainCard3Display").classList.remove("col-md-4");
+		document.getElementById("ccDomainCard3Display").classList.remove("col-md-6");
+	}
 	// store domain card options
 	let classDeck = 0;
 	for (let d = 0; d < classesList[ccUserClass].domains.length; d++) {
@@ -4338,6 +4347,16 @@ function dyslexiaMode() {
 		});
 		readerPreference = "standard";
 		localStorage.setItem('readerMode', 'standard');
+		// reset domain card widths
+		document.getElementById("ccDomainCard1Display").classList.add("col-md-6") 
+		document.getElementById("ccDomainCard2Display").classList.add("col-md-6") 
+		if (subclassList[ccUserSubclass].label == "School of Knowledge") { 
+			document.getElementById("ccDomainCard1Display").classList.remove("col-md-6") 
+			document.getElementById("ccDomainCard2Display").classList.remove("col-md-6") 
+			document.getElementById("ccDomainCard1Display").classList.add("col-md-4") 
+			document.getElementById("ccDomainCard2Display").classList.add("col-md-4") 
+			document.getElementById("ccDomainCard3Display").classList.add("col-md-4") 
+		}
 	}
 	else {
 		document.getElementById("body-content").classList.add("dyslexia");
@@ -4353,13 +4372,21 @@ function dyslexiaMode() {
 		});
 		readerPreference = "dyslexic";
 		localStorage.setItem('readerMode', 'dyslexic');
+		// reset domain card widths
+		document.getElementById("ccDomainCard1Display").classList.remove("col-md-6") 
+		document.getElementById("ccDomainCard2Display").classList.remove("col-md-6") 
+		if (subclassList[ccUserSubclass].label == "School of Knowledge") { 
+			document.getElementById("ccDomainCard1Display").classList.remove("col-md-4") 
+			document.getElementById("ccDomainCard2Display").classList.remove("col-md-4") 
+			document.getElementById("ccDomainCard3Display").classList.remove("col-md-4") 
+		}
 	}
 };
 
 // INITIALIZE ON LOAD
 window.addEventListener("load", (event) => { 
 	// dyslexiamode (load preference)
-	if ( readerPreference == "dyslexic") { document.getElementById("dyslexiaSwitch").checked = true }
+	if (readerPreference == "dyslexic") { document.getElementById("dyslexiaSwitch").checked = true }
 	// dyslexiamode (switch)
 	if (document.getElementById("dyslexiaSwitch").checked == true) { dyslexiaMode(); }
 
