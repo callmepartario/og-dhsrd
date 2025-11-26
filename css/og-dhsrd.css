@@ -1494,23 +1494,25 @@ body.theme-dark .tooltip-inner {
 	background-image: url(../images/domain-valor-light.svg);
 }
 
-/* OpenDyslexia font overrides */
-
-
-/* OpenDyslexia fond overrides */
-body.dyslexia { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia .navbar-brand { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia h1 .og-subtitle { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia h1 .og-title { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia h2, .dyslexia h3, .dyslexia h4, .dyslexia h5, .dyslexia h6 { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia h6, .dyslexia .h6 { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia .og-ed { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia ul.og-ref li { font-family: OpenDyslexic; font-kerning: none; }
-.dyslexia .tooltip-inner { font-family: OpenDyslexic; font-kerning: none; }
-
+/* Dyxlexic Reader Moder Overrides */
+body.dyslexia { font-family: OpenDyslexic; }
+.dyslexia .navbar-brand { font-family: OpenDyslexic; }
+.dyslexia h1 { font-size: 2.5rem;}
+.dyslexia h1 .og-subtitle { font-family: OpenDyslexic; }
+.dyslexia h1 .og-title { font-family: OpenDyslexic; }
+.dyslexia h2, .dyslexia h3, .dyslexia h4, .dyslexia h5, .dyslexia h6 { font-family: OpenDyslexic; }
+.dyslexia h6, .dyslexia .h6 { font-family: OpenDyslexic; }
 .dyslexia h6::before, .dyslexia .h6::before {
 	content: '';
 	padding-right: 0rem;
 }
 
+.dyslexia .og-ed { font-family: OpenDyslexic; }
+.dyslexia ul.og-ref li { font-family: OpenDyslexic; }
+.dyslexia .tooltip-inner { font-family: OpenDyslexic; }
+
+
 .dyslexia dl dt { padding-bottom: 0.5rem; }
+
+.dyslexia.theme-light dl dt { color: #146; }
+.dyslexia.theme-dark dl dt { color: #9cd; }
