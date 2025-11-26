@@ -2258,7 +2258,6 @@ function printClasses() {
 	classContent += "<li>Class features, including a <a href='#define-hope'>Hope Feature</a></li>";
 	classContent += "<li>A choice of <a href='#define-subclass'>subclass</a></li>";
 	classContent += "</ul>";
-	classContent += "<p>There are nine classes in the <a href='#define-daggerheart'>Daggerheart</a> core materials.</p>";
 	classContent += "<ul class='og-list-inline og-tooltip-block'>";
 	for (let i = 0; i < classesList.length; i++) {
 		classContent += "<li>" + classesList[i].label + "</li>";
@@ -2271,7 +2270,7 @@ function printClasses() {
 	classContent += "<div id='define-subclass'>"; // open def
 	classContent += "<h4 id='subclasses'>Subclass<a class='og-h-anchor' href='#subclasses' title='Permalink' aria-hidden='true'></a></h4>";
 	classContent += getReferences(["Page 27"]);
-	classContent += "<p>Each <a href='#define-class'>class</a> is divided into two subclasses, each of which further refines its archetype.</p>";
+	classContent += "<p>Each <a href='#define-class'>class</a> is divided into subclasses that further refine their archetype.</p>";
 	classContent += "<dl>";
 	classContent += "<dt>Spellcast Trait</dt>";
 	classContent += "<dd>If the subclass casts spells, this is the <a href='#define-trait'>trait</a> <a href='#define-procedure'>modifier</a> added to <a href='#define-spellcast-roll'>Spellcast Rolls</a> and is sometimes used to determine a spell's <a href='#define-damage-roll'>damage roll</a>.</dd>";
@@ -2585,8 +2584,7 @@ function printDomains() {
 	domainContent += "</ul>";
 	domainContent += "</div>"; // close index
 	domainContent += getReferences(["Page 24"]);
-	domainContent += "<p>The <a href='#define-daggerheart'>Daggerheart</a> core set includes nine thematic <strong>Domain Decks</strong>, comprised of a collection of <a href='#define-domain-card'>domain cards</a>.</p>";
-	domainContent += "<p>Each <a href='#define-class'>class</a> grants access to two domains.</p>";
+	domainContent += "<p>Each <a href='#define-class'>class</a> grants access to two thematic <strong>domains</strong>. Each includes a collection of <a href='#define-domain-card'>domain cards</a>.</p>";
 	domainContent += "<ul class='og-list-inline og-tooltip-block'>";
 	for (let i = 0; i < domainList.length; i++) {
 		domainContent += "<li><a href='#define-" + domainList[i].name + "'>" + domainList[i].label + "</a></li>";
@@ -2711,7 +2709,6 @@ function printAncestries() {
 	ancestryContent += getReferences(["Page 52"]);
 	ancestryContent += "<p><strong>Ancestry</strong> represent a your lineage and physical appearance. Each ancestry's description includes common characteristics, but you decide how much your PC aligns with the average expression of their ancestry.</p>";
 	ancestryContent += "<p>Each ancestry grants two <strong>ancestry features</strong>. Some features&mdash;for example, the ability to fly&mdash;are tied to anatomy, but you determine your PC's physical form. Work with the GM to change any implied characteristics that don't align with your character concept.</p>";
-	ancestryContent += "<p>There are eighteen ancestries in the <a href='#define-daggerheart'>Daggerheart</a> core materials.</p>";
 	ancestryContent += "<ul class='og-list-inline og-tooltip-block'>";
 	for (i = 0; i < (ancestryList.length + 1); i++) {
 		if (i == ancestryList.length) { ancestryContent += "<li><a href='#define-mixed-ancestry'>Mixed Ancestry</a></li>"; }
@@ -2771,7 +2768,6 @@ function printCommunities() {
 	communityContent += "</div>";
 	communityContent += getReferences(["Page 72"]);
 	communityContent += "<p>Communities represent the <strong>culture</strong>, <strong>class</strong>, or <strong>environment of origin</strong> that has had a significant on a PC's upbringing.</p>";
-	communityContent += "<p>There are nine communities in the <a href='#define-daggerheart'>Daggerheart</a> core materials.</p>";
 	communityContent += "<ul class='og-list-inline og-tooltip-block'>";
 	communityContent += "<li><a href='#define-highborne'>Highborne</a></li>";
 	communityContent += "<li><a href='#define-loreborne'>Loreborne</a></li>";
