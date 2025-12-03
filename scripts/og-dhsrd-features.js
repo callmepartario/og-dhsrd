@@ -2999,19 +2999,19 @@ function printEquipment() {
 		let weaponPage = "";
 		let weaponErrata = false;
 		if (t == 1) {
-			weaponPage = "Page 124";
+			weaponPage = ["Page 124"];
 		}
 		else if (t == 2) {
-			weaponPage = "Page 124";
+			weaponPage = ["Page 124"];
 		}
 		else if (t == 3) {
-			weaponPage = "Page 125, Errata";
+			weaponPage = ["Page 125", "Errata"];
 			weaponErrata = true;
 		}
 		else if (t == 4) {
-			weaponPage = "Page 125";
+			weaponPage = ["Page 125"];
 		}
-		swTable += getReferences(["" + weaponPage + ""]);
+		swTable += getReferences(weaponPage);
 		if (weaponErrata == true) {
 			swTable += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
 		}
@@ -3359,35 +3359,35 @@ function printWeaponPrimaryTable(weaponTier, weaponType) {
 	let weaponPage = "";
 	let weaponErrata = false;
 	if (weaponTier == 1 && weaponType == false) {
-		weaponPage = "Page 115, Errata";
+		weaponPage = ["Page 115", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 1 && weaponType == true) {
-		weaponPage = "Page 115, Errata";
+		weaponPage = ["Page 115", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 2 && weaponType == false) {
-		weaponPage = "Page 116, Errata";
+		weaponPage = ["Page 116", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 2 && weaponType == true) {
-		weaponPage = "Page 117";
+		weaponPage = ["Page 117"];
 	}
 	else if (weaponTier == 3 && weaponType == false) {
-		weaponPage = "Page 119, Errata";
+		weaponPage = ["Page 119", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 3 && weaponType == true) {
-		weaponPage = "Page 119";
+		weaponPage = ["Page 119"];
 	}
 	else if (weaponTier == 4 && weaponType == false) {
-		weaponPage = "Page 120, Errata";
+		weaponPage = ["Page 120", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 4 && weaponType == true) {
-		weaponPage = "Page 121";
+		weaponPage = ["Page 121"];
 	}
-	weaponContent += getReferences(["" + weaponPage + ""]);
+	weaponContent += getReferences(weaponPage);
 	if (weaponErrata == true) {
 		weaponContent += "<p class='og-questions small'>&dagger; &mdash; indicates a weapon with errata changes.</p>";
 	}
