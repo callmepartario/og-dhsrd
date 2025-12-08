@@ -1166,9 +1166,9 @@ function printCC() {
 	CC += "<div id='define-character-sheet'>"; // open def	
 	CC += "<h3 id='character-sheet'>Character Sheet<a class='og-h-anchor' href='#character-sheet' title='Permalink' aria-hidden='true'></a></h3>";
 	CC += getReferences(["Editorial Addition"]);
-	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print an official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guide</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
+	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guides</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
 	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Character Sheets<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
-	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following two versions:");
+	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following versions:");
 	CC += "<ul class='list-inline'>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes (Form-Fillable)</a></li>";
@@ -1176,7 +1176,7 @@ function printCC() {
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion (Form-Fillable)</a></li>";
 	CC += "</ul>";
 	CC += "<h4 class='h6' id='qedhup-character-sheet'>Qedhup's Character Sheets<a class='og-h-anchor' href='#qedhup-character-sheet' title='Permalink' aria-hidden='true'></a></h4>";
-	CC += getCCnote("These printable A5 PDF by <a href='https://ko-fi.com/qedhup'>Qedhup</a> feature a blank sheet, a starter sheet for each <a href='#define-class'>class</a>, and a final shared utiity page to track <a href='#define-consumable'>consumables</a> and <a href='#define-advancement'>advancements</a>.");
+	CC += getCCnote("This printable A5 PDF by <a href='https://ko-fi.com/qedhup'>Qedhup</a> features a blank sheet, a starter sheet for each <a href='#define-class'>class</a>, and a final shared utility page to track <a href='#define-consumable'>consumables</a> and <a href='#define-advancement'>advancements</a>.");
 	CC += "<ul class='list-inline'>";
 	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-pc-sheets.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Qedhup's A5 Sheets</a></li>";
 	CC += "</ul>";
