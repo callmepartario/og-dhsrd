@@ -1168,27 +1168,18 @@ function printCC() {
 	CC += getReferences(["Editorial Addition"]);
 	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print an official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guide</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
 	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Character Sheets<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
-	CC += getCCnote("You can use this fillable PDF character sheet for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following two versions:");
+	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following two versions:");
 	CC += "<ul class='list-inline'>";
-	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes (Form-Fillable)</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion (Form-Fillable)</a></li>";
 	CC += "</ul>";
-	CC += "<!--";
-	CC += "<h4 class='h6' id='qedhup-character-sheet'>Qedhup's Character Sheets<a class='og-h-anchor' href='#defiqedhup-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
-	CC += getCCnote("You can use this fillable PDF character sheet by <a href='https://ko-fi.com/qedhup'>Qedhup</a>. Choose a version for your <a href='#define-class'>class</a>, or use the blank version:");
+	CC += "<h4 class='h6' id='qedhup-character-sheet'>Qedhup's Character Sheets<a class='og-h-anchor' href='#qedhup-character-sheet' title='Permalink' aria-hidden='true'></a></h4>";
+	CC += getCCnote("These printable A5 PDF by <a href='https://ko-fi.com/qedhup'>Qedhup</a> feature a blank sheet, a starter sheet for each <a href='#define-class'>class</a>, and a final shared utiity page to track <a href='#define-consumable'>consumables</a> and <a href='#define-advancement'>advancements</a>.");
 	CC += "<ul class='list-inline'>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Blank</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-bard.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Bard</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-druid.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Druid</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-guardian.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Guardian</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-ranger.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-rogue.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Rogue</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-seraph.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Seraph</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-sorcerer.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Sorcerer</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-warrior.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Warrior</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-character-sheet-Wizard.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Wizard</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-pc-sheets.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Qedhup's A5 Sheets</a></li>";
 	CC += "</ul>";
-	CC += "-->";
 	CC += "</div>"; // close def	
 	CC += "</div>"; // close omit
 	CC += "</div>"; // close topbar
