@@ -2839,7 +2839,7 @@ function printEquipment() {
 	iEquip += "<div class='alert ps-4 pb-0 og-omit'>"; // open index
 	iEquip += "<ul class='list-unstyled'>";  // open list
 	// weapons index
-	iEquip += "<li><span class='h6'><a href='#define-weapons'>Weapons</a></span></li>";
+	iEquip += "<li><span class='h6'><a href='#define-weapon'>Weapons</a></span></li>";
 	// primary weapon index
 	iEquip += "<li>";
 	iEquip += "<span class='h6'><a href='#weapons-primary'>Primary Weapon Tables</a></span>";
