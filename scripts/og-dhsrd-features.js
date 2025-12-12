@@ -2231,6 +2231,12 @@ function printClasses() {
 				}
 			}
 		}
+		if (classesList[i].name == "druid") {
+			classContent += "<li class='d-block'><a href='#define-druid-beastform-options'>Beastform Options</a></li>";
+		}
+		if (classesList[i].name == "ranger") {
+			classContent += "<li class='d-block'><a href='#define-beastbound-companion'>Beastbound Companion</a></a></li>";
+		}
 		classContent += "</ul>";
 		classContent += "</li>";
 	}
