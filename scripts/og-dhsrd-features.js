@@ -2448,7 +2448,7 @@ function printClasses() {
 			classRecord += "<div class='og-topbar'>";
 			classRecord += "<ul class='list-unstyled'>";
 			classRecord += "<li><strong>Evasion:</strong> 10</li>";
-			classRecord += "<li><strong>Stress Slots:</strong> 3</li>";
+			classRecord += "<li><strong>Stress:</strong> 3</li>";
 			classRecord += "<li><strong>Attack:</strong> <a href='#define-range'>Melee</a>, d6</li>";
 			classRecord += "<li><strong>Experiences:</strong> 2</li>";
 			classRecord += "</ul>";
