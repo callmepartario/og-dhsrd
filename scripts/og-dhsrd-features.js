@@ -1168,7 +1168,7 @@ function printCC() {
 	CC += getReferences(["Editorial Addition"]);
 	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guides</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
 	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Character Sheets<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
-	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-cards'>domain cards</a>. Choose one of the following versions:");
+	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-cards'>domain cards</a>. <!--The <a href='https://heartofdaggers.com'>heartofdaggers.com</a> character sheet tools can export your PC to this sheet format.--> Choose one of the following versions:");
 	CC += "<ul class='list-inline'>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes (Form-Fillable)</a></li>";
@@ -3356,33 +3356,33 @@ function printWeaponPrimaryTable(weaponTier, weaponType) {
 	let weaponPage = "";
 	let weaponErrata = false;
 	if (weaponTier == 1 && weaponType == false) {
-		weaponPage = ["Page 115", "Errata"];
+		weaponPage = ["Page 115", "Page 123", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 1 && weaponType == true) {
-		weaponPage = ["Page 115", "Errata"];
+		weaponPage = ["Page 115", "Page 123", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 2 && weaponType == false) {
-		weaponPage = ["Page 116", "Errata"];
+		weaponPage = ["Page 116", "Page 123", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 2 && weaponType == true) {
-		weaponPage = ["Page 117"];
+		weaponPage = ["Page 117", "Page 123"];
 	}
 	else if (weaponTier == 3 && weaponType == false) {
-		weaponPage = ["Page 119", "Errata"];
+		weaponPage = ["Page 119", "Page 123", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 3 && weaponType == true) {
-		weaponPage = ["Page 119"];
+		weaponPage = ["Page 119", "Page 123"];
 	}
 	else if (weaponTier == 4 && weaponType == false) {
-		weaponPage = ["Page 120", "Errata"];
+		weaponPage = ["Page 120", "Page 123", "Errata"];
 		weaponErrata = true;
 	}
 	else if (weaponTier == 4 && weaponType == true) {
-		weaponPage = ["Page 121"];
+		weaponPage = ["Page 121", "Page 123"];
 	}
 	weaponContent += getReferences(weaponPage);
 	if (weaponErrata == true) {
