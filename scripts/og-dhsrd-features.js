@@ -3877,7 +3877,7 @@ function calcDisadvantage(x) {
     if (Fdie == 8) {
       if (Ddie == 6) {dadv = d8d8dadvd6[x];}
       else if (Ddie == 8) {dadv = d8d8dadvd8[x];}
-      else if (Ddie == 10) {dadv = d10d8dadvd10[x];}
+      else if (Ddie == 10) {dadv = d8d8dadvd10[x];}
     }
     else if (Fdie == 10) {
       if (Ddie == 6) {dadv = d10d8dadvd6[x];}
