@@ -1168,7 +1168,7 @@ function printCC() {
 	CC += getReferences(["Editorial Addition"]);
 	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guides</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
 	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Character Sheets<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
-	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-cards'>domain cards</a>. <!--The <a href='https://heartofdaggers.com'>heartofdaggers.com</a> character sheet tools can export your PC to this sheet format.--> Choose one of the following versions:");
+	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-card'>domain cards</a>. <!--The <a href='https://heartofdaggers.com'>heartofdaggers.com</a> character sheet tools can export your PC to this sheet format.--> Choose one of the following versions:");
 	CC += "<ul class='list-inline'>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes (Form-Fillable)</a></li>";
@@ -1193,8 +1193,8 @@ function printCC() {
 	CC += "<ul class='og-list-disc og-questions small'>";
 	CC += "<li>There is a 20% chance for a (random) <a href='#define-mixed-ancestry'>mixed ancestry</a>.</li>";
 	CC += "<li><a href='#define-equipment'>Equipment</a>, clothing and attitude are suggested based on class.</li>";
-	CC += "<li><a href='#define-traits'>Traits</a> use suggested arrays by class. Traits and statistic values include modifiers from ancestry, class, and equipment features.</li>";
-	CC += "<li>Experiences are drawn from two different categories.</li>";
+	CC += "<li><a href='#define-trait'>Traits</a> use suggested arrays by class. Traits and statistic values include modifiers from ancestry, class, and equipment features.</li>";
+	CC += "<li><a href='#define-experience'>Experiences</a> are drawn from two different categories.</li>";
 	CC += "</ul>";
 	CC += "<ul class='list-inline'>";
 	CC += "<li class='list-inline-item'><p><button class='btn mt-1 mb-1 theme-light border' type='button' id='ccRandomize' aria-label='Generate Random PC Options}'><span aria-hidden='true'>&#x1F3B2;&nbsp;</span>Generate Random PC</button></p></li>";
