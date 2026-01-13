@@ -4186,7 +4186,7 @@ function printAdversaries() {
 		if (adversaryList[a].attackbonus == 2.4) { iAdv += "2d4"; } // in case of irregular attack bonuses like the Outer Realms Abomination, use a decimal places detection for now
 		else { iAdv += getNum(adversaryList[a].attackbonus); }
 		iAdv += "<span class='og-divider'><strong>" + adversaryList[a].attacklabel + ":</strong> <a href='#define-range'>" + adversaryList[a].attackrange + "</a></span><span class='og-divider'>" + adversaryList[a].attackdamage + " <a href='#define-damage-type'>" + adversaryList[a].attackdamagetype + "</a></span></li>";
-		iAdv +=  "</ul></div>";
+		iAdv +=  "</ul>";
 		if (adversaryList[a].experiences != undefined) {
 			iAdv += "<div class='og-topbar2'>";
 			iAdv += "<p><strong>Experience:</strong> " + adversaryList[a].experiences + "</p>";
@@ -4194,6 +4194,7 @@ function printAdversaries() {
 		} else {
 			iAdv += "<div class='mt-3'></div>";
 		}
+		iAdv += "</div>";
 		iAdv += "<h6>Features</h6>";
 		iAdv += "<ul class='list-unstyled og-list-hang'>";
 		for (let afeat = 0; afeat < adversaryList[a].features.length; afeat++){
