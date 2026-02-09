@@ -2444,7 +2444,7 @@ function printClasses() {
 			classRecord += "<div id='define-beastbound-companion'>";
 			classRecord += "<h4 id='ranger-beastbound-companion'>Beastbound Companion<a class='og-h-anchor' href='#ranger-beastbound-companion' title='Permalink' aria-hidden='true'></a></h4>";
 			classRecord += getReferences(["Page 40", "Errata"]);
-			classRecord += "<p>Your <a href='#define-ranger-beastbound'>Beastbound</a> companion starts with the following statistics:</p>";
+			classRecord += "<p>Your <a href='#define-beastbound'>Beastbound</a> companion starts with the following statistics:</p>";
 			classRecord += "<div class='og-topbar'>";
 			classRecord += "<ul class='list-unstyled'>";
 			classRecord += "<li><strong>Evasion:</strong> 10</li>";
