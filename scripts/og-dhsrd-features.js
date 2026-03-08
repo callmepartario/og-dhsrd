@@ -4189,7 +4189,12 @@ function printAdversaries() {
 		iAdv +=  "</ul>";
 		if (adversaryList[a].experiences != undefined) {
 			iAdv += "<div class='og-topbar2'>";
-			iAdv += "<p><strong>Experience:</strong> " + adversaryList[a].experiences + "</p>";
+			iAdv += "<p><strong>Experience:</strong> ";
+			for (let aexp = 0; aexp < adversaryList[a].experiences.length; aexp++) {
+				iAdv += adversaryList[a].experiences[aexp];
+				if (aexp + 1 < adversaryList[a].experiences.length) { iAdv += ", "}
+			}
+			iAdv += "</p>";
 			iAdv += "</div>";
 		} else {
 			iAdv += "<div class='mt-3'></div>";
