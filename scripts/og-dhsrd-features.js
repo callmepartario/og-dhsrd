@@ -2235,7 +2235,7 @@ function printClasses() {
 			classContent += "<li class='d-block'><a href='#define-druid-beastform-options'>Beastform Options</a></li>";
 		}
 		if (classesList[i].name == "ranger") {
-			classContent += "<li class='d-block'><a href='#define-beastbound-companion'>Beastbound Companion</a></a></li>";
+			classContent += "<li class='d-block'><a href='#define-beastbound-companion'>Ranger Companion</a></a></li>";
 		}
 		classContent += "</ul>";
 		classContent += "</li>";
@@ -2442,15 +2442,15 @@ function printClasses() {
 		}
 		else if (classesList[i].label == "Ranger") {
 			classRecord += "<div id='define-beastbound-companion'>";
-			classRecord += "<h4 id='ranger-beastbound-companion'>Beastbound Companion<a class='og-h-anchor' href='#ranger-beastbound-companion' title='Permalink' aria-hidden='true'></a></h4>";
-			classRecord += getReferences(["Page 40", "Errata"]);
-			classRecord += "<p>Your <a href='#define-beastbound'>Beastbound</a> companion starts with the following statistics:</p>";
+			classRecord += "<h4 id='ranger-beastbound-companion'>Ranger Companion<a class='og-h-anchor' href='#ranger-beastbound-companion' title='Permalink' aria-hidden='true'></a></h4>";
+			classRecord += getReferences(["Page 40", "Errata", "Editorial Addition"]);
+			classRecord += "<p>If you are a <a href='#define-beastbound'>Beastbound</a> <a href='#define-ranger'>Ranger</a>, your companion starts with the following statistics:</p>";
 			classRecord += "<div class='og-topbar'>";
 			classRecord += "<ul class='list-unstyled'>";
 			classRecord += "<li><strong>Evasion:</strong> 10</li>";
 			classRecord += "<li><strong>Stress:</strong> 3</li>";
 			classRecord += "<li><strong>Attack:</strong> <a href='#define-range'>Melee</a>, d6</li>";
-			classRecord += "<li><strong>Experiences:</strong> 2</li>";
+			classRecord += "<li><strong>Experiences:</strong> Create two</li>";
 			classRecord += "</ul>";
 			classRecord += "</div>";
 			classRecord += "<dl>";
@@ -2492,15 +2492,15 @@ function printClasses() {
 			classRecord += "<li>You Can't Hit What You Can't Find</li>";
 			classRecord += "</ul>";
 			classRecord += "</div>";
-			classRecord += getEdnote("There aren't rules for riding a companion. Consider choosing a riding <a href='#define-experience'>Experience</a> for you, your companion, or both.");
+			classRecord += getEdnote("Some information presented in this section isn't covered in the SRD or rulebook, and appears only on the Ranger Companion sheet in the official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guides</a>. There aren't rules for riding a companion. Consider choosing a riding <a href='#define-experience'>Experience</a> for you, your companion, or both. Alternatively, the GM might use the <a href='#define-domain-card-conjured-steeds'>Conjured Steeds</a> domain card as a starting point for mounted combat.");
 			classRecord += "<div id='define-beastbound-companion-advancement'>";
-			classRecord += "<h5 id='ranger-companion-levels'>Beastbound Companion Levels<a class='og-h-anchor' href='#ranger-companion-levels' title='Permalink' aria-hidden='true'></a></h5>";
+			classRecord += "<h5 id='ranger-companion-levels'>Ranger Companion Levels<a class='og-h-anchor' href='#ranger-companion-levels' title='Permalink' aria-hidden='true'></a></h5>";
 			classRecord += getReferences(["Page 40"]);
 			classRecord += "<p>When you gain a <a href='#define-level'>level</a>, choose one available option for your <a href='#define-beastbound-companion'>companion</a> from the following list. Options with multiple slots can be chosen more than once. When you choose an advancement, mark one of its slots.</p>";
 			classRecord += "<p>Additionally, whenever you gain a new <a href='#define-experience'>Experience</a> by reaching a new <a href='#define-tier'>tier</a>, your companion also gains a new <a href='#define-experience'>Experience</a> at +2.</p>";
-			classRecord += "<h4 class='h6'>Beastbound Companion Advancements</h4>";
+			classRecord += "<h4 class='h6'>Ranger Companion Advancements</h4>";
 			classRecord += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
-			classRecord += "<caption>Beastbound Companion Advancements</caption>";
+			classRecord += "<caption>Ranger Companion Advancements</caption>";
 			classRecord += "<thead>";
 			classRecord += "<tr>";
 			classRecord += "<th scope='col'>Advancement</th>";
