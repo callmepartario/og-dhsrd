@@ -2618,7 +2618,7 @@ function printDomains() {
 	domainContent += "<dt>Loadout</dt>";
 	domainContent += "<dd>Your loadout is the set of <a href='#define-domain-card'>domain cards</a> you can use during play. You can have up to 5 domain cards in your loadout.</dd>";
 	domainContent += "<dt>Vault</dt>";
-	domainContent += "<dd>Domain cards that aren't in our loadout are placed in your vault. Unless stated otherwise, vaulted cards don't provide you any benefits. If you cast a spell and then place that <a href='#define-domain-card'>domain card</a> in your vault, its effects remain.</dd>";
+	domainContent += "<dd>Domain cards that aren't in your loadout are placed in your vault. Unless stated otherwise, vaulted cards don't provide you any benefits. If you cast a spell and then place that <a href='#define-domain-card'>domain card</a> in your vault, its effects remain.</dd>";
 	domainContent += "<dt>Exchanging Cards</dt>";
 	domainContent += "<dd>At the start of <a href='#define-downtime'>downtime</a>, you can exchange cards between your loadout and vault without paying <a href='#define-domain-card'>Recall Costs</a>.</dd>";
 	domainContent += "</dl>";
