@@ -2704,7 +2704,7 @@ function printAncestries() {
 	ancestryContent += "</ul>";
 	ancestryContent += "</div>"; // close index
 	ancestryContent += getReferences(["Page 52"]);
-	ancestryContent += "<p><strong>Ancestry</strong> represent a your lineage and physical appearance. Each ancestry's description includes common characteristics, but you decide how much your PC aligns with the average expression of their ancestry.</p>";
+	ancestryContent += "<p><strong>Ancestry</strong> represents your lineage and physical appearance. Each ancestry's description includes common characteristics, but you decide how much your PC aligns with the average expression of their ancestry.</p>";
 	ancestryContent += "<p>Each ancestry grants two <strong>ancestry features</strong>. Some features&mdash;for example, the ability to fly&mdash;are tied to anatomy, but you determine your PC's physical form. Work with the GM to change any implied characteristics that don't align with your character concept.</p>";
 	ancestryContent += "<ul class='og-list-inline og-tooltip-block'>";
 	for (i = 0; i < (ancestryList.length + 1); i++) {
