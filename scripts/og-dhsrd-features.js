@@ -1170,15 +1170,15 @@ function printCC() {
 	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Character Sheets<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
 	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-card'>domain cards</a>. The <a href='https://heartofdaggers.com'>heartofdaggers.com</a> character sheet tools can export your PC to this sheet format. Choose one of the following versions:");
 	CC += "<ul class='list-inline'>";
-	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes (Form-Fillable)</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion</a></li>";
-	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion (Form-Fillable)</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes (Form-Fillable)</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion (Form-Fillable)</a></li>";
 	CC += "</ul>";
 	CC += "<h4 class='h6' id='qedhup-character-sheet'>Qedhup's Character Sheets<a class='og-h-anchor' href='#qedhup-character-sheet' title='Permalink' aria-hidden='true'></a></h4>";
 	CC += getCCnote("This printable A5 PDF by <a href='https://ko-fi.com/qedhup'>Qedhup</a> features a blank sheet, a starter sheet for each <a href='#define-class'>class</a>, and a final shared utility page to track <a href='#define-consumable'>consumables</a> and <a href='#define-advancement'>advancements</a>.");
 	CC += "<ul class='list-inline'>";
-	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-pc-sheets.pdf' class='btn mt-1 mb-1 theme-light border' type='button'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Qedhup's A5 Sheets</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/qedhup-daggerheart-a5-pc-sheets.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Qedhup's A5 Sheets</a></li>";
 	CC += "</ul>";
 	CC += "</div>"; // close def	
 	CC += "</div>"; // close omit
@@ -3549,7 +3549,6 @@ function printRanges() {
 function printDifficultyBenchmarks() {
 	let dBench = "";
 	dBench += "<h3 id='difficulty-benchmarks'>Difficulty Benchmarks<a class='og-h-anchor' href='#difficulty-benchmarks' title='Permalink' aria-hidden='true'></a></h3>";
-	dBench += getReferences(["Page 158", "Editorial Addition"]);
 	dBench += "<div class='alert ps-4 pb-0'>"; // open index
 	dBench += "<ul class='list-unstyled og-qr'>";
 	dBench += "<li><a href='#duality-dice-benchmark'>Duality Dice</a></li>";
@@ -3563,7 +3562,7 @@ function printDifficultyBenchmarks() {
 	dBench += "<div class='row'>"; // open row
 	dBench += "<div class='col-12 col-md-6'>"; // open col
 	dBench += "<h4 id='duality-dice-benchmark'>Duality Dice Benchmarks<a class='og-h-anchor' href='#duality-dice-benchmark' title='Permalink' aria-hidden='true'></a></h4>";
-	dBench += getReferences(["Editorial Addition"]);
+	dBench += getReferences(["Page 157", "Editorial Addition"]);
 	dBench += "<p>The following tables display the approximate percentage of <a href='#define-action-roll'>duality dice</a> roll results, including those made with an <a href='#define-advantage'>advantage</a> die or <a href='#define-advantage'>disadvantage</a> die. To account for a modifier, subtract it from the Difficulty to determine the chance of success&mdash;for example, if the Difficulty is 13 and the modifier is +3, the chances of success are equal to the listed percentages for Difficulty 10. The actual chance to succeed on a roll is never less than the <a href='#define-action-roll'>critical success</a> rate.</p>";
 	dBench += "</div>"; // close col
 	dBench += "<div class='col-12 col-md-6'>"; // open col
