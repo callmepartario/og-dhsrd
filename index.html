@@ -138,7 +138,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 3.0c (2026-08-26)</p>
+<p class="small text-center">version 3.0d (2026-08-26)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="#character-sheet">Character Sheet</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="#gm-screen">GM Screen</a></li>
@@ -683,6 +683,7 @@
 		<li><a href="#define-divine-wielder">Divine Wielder</a></li>
 		<li><a href="#define-domain">domain</a></li>
 		<li><a href="#define-domain-card">domain card</a></li>
+		<li><a href="#define-doom-track">Doom Track</a><span class="ps-1">&dagger;</span></li>
 		<li><a href="#define-downtime">downtime</a></li>
 		<li><a href="#define-downtime-move">downtime move</a></li>
 		<li><a href="#define-drakona">Drakona</a></li>
@@ -1375,6 +1376,7 @@
 			<li><a href='#define-withered'>Corruption from the Witherwild</a></li>
 			<li><a href="#define-curse">Curses</a></li>
 			<li><a href="#define-defined-ranges">Defined Ranges</a></li>
+			<li><a href="#define-doom-track">Doom Track</a></li>
 			<li><a href="#define-faction">Factions</a></li>
 			<li><a href="#define-falling">Falling and Collision Damage</a></li>
 			<li><a href="#define-fate-roll">Fate Rolls</a></li>
@@ -1401,6 +1403,7 @@
 		<li><a href='#define-withered'>Corruption from the Witherwild</a></li>
 		<li><a href="#define-curse">Curses</a></li>
 		<li><a href="#define-defined-ranges">Defined Ranges</a></li>
+		<li><a href="#define-doom-track">Doom Track</a></li>
 		<li><a href="#define-faction">Factions</a></li>
 		<li><a href="#define-falling">Falling and Collision Damage</a></li>
 		<li><a href="#define-fate-roll">Fate Rolls</a></li>
@@ -1477,6 +1480,15 @@
 			</tr>
 		</tbody>
 	</table></div>
+</div>
+<div id="define-doom-track">
+	<h4 id="doom-tracks">Doom Track<a class="og-h-anchor" href="#doom-track" title="Permalink" aria-hidden="true"></a></h4>
+	<ul class="og-list-inline og-ref og-omit"><li>DH HF 177</li><li>DH HF 186</li></ul>
+	<p>The GM can use a <strong>Doom Track</strong> to plan and enact growing disasters that befall the world if the party acts too slowly, similar to a <a href="#define-countown">countdown</a>.</p>
+	<p>To use a Doom Track, create a nested list of consequences, and mark one at the end of each session, then enact its consequences in the world. You can't mark a nested box until you mark its parent box. As the story develops, the GM can increase the number of boxes they mark&mdash;especially during a shorter campaign.</p>
+	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+		<p><strong>Editor's Notes &mdash;</strong> Darrington press provides an official Doom Track for the <a href="#define-journey-to-horizon">Journey to Horizon</a> campaign frame in their free <a href="https://www.daggerheart.com/downloads">Campaign Frame Materials (Hope &amp; Fear)</a>.</p>
+	</div>
 </div>
 <div id="define-fate-roll">
 	<h4 id="fate-rolls">Fate Rolls<a class="og-h-anchor" href="#fate-rolls" title="Permalink" aria-hidden="true"></a></h4>
@@ -1788,10 +1800,138 @@
 		<dd>Charting efficient flight plans, plotting rotational momentum, or deducing the exact timing of a foe's wingbeats
 	</dl>
 </div>
-<div id="define-hex-crawl">
-	<h4 id="the-hex-crawl">The Hex Crawl<a class="og-h-anchor" href="#the-hex-crawl" title="Permalink" aria-hidden="true"></a></h4>
-	<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3">
-		<p><strong>Editor's Notes &mdash;</strong> Give an Old Gus some time! This section is complex and will take some time to simmer down and digest. Check back later.</p>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<div id="define-hex-crawl">
+			<h4 id="hex-crawl">The Hex Crawl<a class="og-h-anchor" href="#hex-crawl" title="Permalink" aria-hidden="true"></a></h4>
+			<ul class="og-list-inline og-ref og-omit"><li>DH HF 169</li><li>DH HF 176</li></ul>
+			<p>A <strong>hex crawl</strong> uses a map divided into 24-mile (38.6 km) hexagons to represent a large area. The PCs travel through wildernesses between sanctuaries, resolving encounters along the way.</p>
+			<dl>
+				<dt>Key Map and Player Map</dt>
+				<dd>The GM chooses the contents of each hex or <a href="#define-hex-crawl-fill">procedurally generates</a> them, ensuring enough for the PCs to explore in the next session. The PCs are capable wayfinders and trailblazers. As they explore, players fill out their own map and track their location. The GM provides information about the hex they're in, and anything they can learn about adjacent hexes&mdash;for example, a tall tower.</dd>
+				<dt>Downtime</dt>
+				<dd>A party can take three one-day <a href="#define-downtime">short rests</a> while traveling. Taking a <a href="#define-downtime">long rest</a> requires multiple days spent in a sanctuary.</dd>
+				<dt>Endurance Countdowns</dt>
+				<dd>The GM can complicate wilderness travel by assigning each PC an <a href="#define-countdown">Endurance Countdown (6)</a> at the end of a <a href="#defeine-downtime">rest</a>. When the party enters a hex, each player rolls their <a href="#define-action">Hope Die</a>, and if the result is equal to or less than the value of their Endurance Countdown, they mark a <a href="#define-stress">Stress</a>. Otherwise, their Endurance Countdown ticks down. When a PC's Endurance Countdown triggers, they become <a href="#define-condition"><em>Vulnerable</em></a> until their next <a href="#define-downtime">rest</a>. At the start of a <a href="#define-downtime">rest</a>, Endurance Countdowns end.
+
+			</dl>
+		</div>
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>Within the fiction, the PCs still rests most nights spent in the wilderness, but they don't gain the benefits of a <a href="#define-downtime">short rest</a>.</p>
+		</div>
+		<div id="define-hex-crawl-fill">
+			<h5 id="hex-crawl-filling">Filling Hexes<a class="og-h-anchor" href="#hex-crawl-filling" title="Permalink" aria-hidden="true"></a></h5>
+			<ul class="og-list-inline og-ref og-omit"><li>DH HF 170</li><li>DH HF 176</li></ul>
+			<p>Start in any hex and fill out the key map:</p>
+			<ol>
+				<li class="mb-1">Roll a <strong>d20</strong> to determine <a href="#define-hex-crawl-habitat">habitat</a>.</li>
+				<li class="mb-1">Roll a <strong>d12</strong> to determine the number of contiguous hexes the region covers. The region can be any shape that doesn't encircle empty hexes.</li>
+				<li class="mb-1">Roll a <strong>d8 + d6</strong> to determine an <a href="#define-hex-crawl-encounter">encounter</a> the party might face.</li>
+				<li class="mb-1">Roll a <strong>d4</strong> to determine the <a href="#define-hex-crawl-travel">terrain</a> of the region, which determines <a href="#define-hex-crawl-travel">Travel Days</a> required to enter the hex.</li>
+				<li class="mb-1">Optionally, include a point of interest a specific hex within it&mdash;for example, a settlment or sanctuary. Alternatively, include a rumour about the region. The GM decides how true a rumor is, and whether the PCs learn of it.</li>
+			</ol>
+		</div>
+		<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p><strong>Editor's Notes &mdash;</strong> <a href="#define-journey-to-horizon">Journey to Horizon</a> presents a d100 rumor table on DH HF 172&ndash;173.</p>
+		</div>
+		<div id="define-hex-crawl-habitat">
+			<h6 id="hex-crawl-habitat">Habitat<a class="og-h-anchor" href="#hex-crawl-habitat" title="Permalink" aria-hidden="true"></a></h6>
+			<ul class="og-list-inline og-ref og-omit"><li>DH HF 170</li></ul>
+			<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+				<caption>Encounters</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="text-center">d20</th>
+						<th scope="col">Habitat</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">1</th><td><strong><em>Blighted by Dark Magic.</em></strong> Roll again to determine which kind of habitat has been blighted. If you roll another 1, the entire region is so corrupted that it's become nigh impossible to traverse.</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">2</th><td>Underground</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">3&ndash;4</th><td>Aquatic</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">5&ndash;6</th><td>Wetland</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">7&ndash;8</th><td>Grassland</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">9&ndash;10</th><td>Tropical</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">11&ndash;12</th><td>Forest</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">13&ndash;14</th><td>Drylands</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">15&ndash;16</th><td>Rolling</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">17&ndash;18</th><td>Mountain</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">19</th><td>Frozen</td></tr>
+					<tr><th scope="row" class="text-center fw-normal og-nowrap">20</th><td>Badlands</td></tr>
+				</tbody>
+			</table></div>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div id="define-hex-crawl-encounter">
+			<h6 id="hex-crawl-encounters">Encounters<a class="og-h-anchor" href="#hex-crawl-encounters" title="Permalink" aria-hidden="true"></a></h6>
+			<ul class="og-list-inline og-ref og-omit"><li>DH HF 171</li><li>DH HF 176</li></ul>
+			<p>When the party enters a hex, the GM rolls a number of d6s equal to the hex's <a href="#define-hex-crawl-travel">terrain rating</a>. If any dice result in a 1, the PCs face an encounter. The GM can also spend <a href="#define-fear">Fear</a> to create an encounter, or change dice rolled to reflect regional danger, or add <a href="#define-adversary-transformation-habitat">habitat features</a> to <a href="#define-adversaries">adversaries</a> in dangerous areas.
+			<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+				<caption>Encounters</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="text-center">d8 + d6</th>
+						<th scope="col">Encounter</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><th scope="row" class="text-center fw-normal">2</th><td>Roll twice and combine the resulting entries.</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">3</th><td>Fellow travelers</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">4</th><td>Temporary setback</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">5</th><td>Powerful adversaries</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">6</th><td>Extreme weather</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">7</th><td>Potential adversaries</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">8</th><td>Territorial beast or pack of creatures</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">9</th><td>Environmental hazard or obstacle</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">10</th><td>Enemy NPCs</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">11</th><td>Wondrous or dangerous site</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">12</th><td>Lucky break</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">13</th><td>Settlement or outpost</td></tr>
+					<tr><th scope="row" class="text-center fw-normal">14</th><td>Loot or treasure</td></tr>
+				</tbody>
+			</table></div>
+		</div>
+		<div id="define-hex-crawl-travel">
+			<h6 id="hex-crawl-terrain-and-travel-days">Terrain and Travel Days<a class="og-h-anchor" href="#hex-crawl-terrain-and-travel-days" title="Permalink" aria-hidden="true"></a></h6>
+			<ul class="og-list-inline og-ref og-omit"><li>DH HF 171</li><li>DH HF 176</li></ul>
+			<div class="og-omit">
+				<p>During a travel day, the PCs:</p>
+				<ul>
+					<li>Break camp, eat breakfast, and pack up shortly before sunrise.</li>
+					<li>Travel overland for about 6&ndash;8 hours.</li>
+					<li>Take a short break at midday to eat and get their bearings.</li>
+					<li>Travel overland for another 6&ndash;8 hours until about sundown.</li>
+					<li>Make camp, prepare and eat dinner, set a watch, and bed down for the night.</li>
+				</ul>
+			</div>
+			<dl>
+				<dt>Rivers</dt>
+				<dd>PCs can traverse rivers on an appropriate conveyance&mdash;for example, a boat or canoe. Moving downstream reduces the terrain rating 1. Traveling upstream increases it by 1.</dd>
+				<dt>Ocean</dt>
+				<dd>The party can travel through ocean hexes if on an appropriate conveyance&mdash;for example, a sailboat. When the PCs enter an ocean hex, roll a d4 to determine ocean conditions.</dd>
+			</dl>
+			<div class="table-responsive"><table class="table table-light table-striped table-sm mb-3">
+				<caption>Terrain and Travel Days</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="text-center">d4</th>
+						<th scope="col" class="text-center">Overland Terrain</th>
+						<th scope="col" class="text-center">Ocean Conditions</th>
+						<th scope="col" class="text-center">Travel Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<th scope="row" class="text-center fw-normal">1</th><td class="text-center">Optimal</td><td class="text-center">Tailwind</td><td class="text-center">1 day</td></tr>
+					<th scope="row" class="text-center fw-normal">2</th><td class="text-center">Fair</td><td class="text-center">Fair weather</td><td class="text-center">2 days</td></tr>
+					<th scope="row" class="text-center fw-normal">3</th><td class="text-center">Rough</td><td class="text-center">Rough waters</td><td class="text-center">3 days</td></tr>
+					<th scope="row" class="text-center fw-normal">4</th><td class="text-center">Extreme</td><td class="text-center">Extreme weather</td><td class="text-center">4 days</td></tr>
+				</tbody>
+			</table></div>
+		</div>
+		<div class="og-sidebar pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
+			<p>As needed, various party members scout ahead, forage and hunt, refill waterskins, repair gear, and keep watch. If you like, you can narrate or even roleplay these activities, but you don't need to spend valuable table time describing or tracking these events if your group doesn't find them interesting or engaging.</p>
+		</div>
 	</div>
 </div>
 <div class="row">
@@ -1837,7 +1977,7 @@
 			</tbody>
 		</table></div>
 		<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
-			<p><strong>Editor's Notes &mdash;</strong> Darrington press provides an official Ikonis Weapon Builder for the Motherboard campaign frame in their free <a href="https://www.daggerheart.com/downloads">Campaign Frame Materials (Core)</a> with examples of iconic weapon upgrades. Additional ideas for features are indexed in the  <a href="#pc-benchmarks">PC Benchmarks</a>.</p>
+			<p><strong>Editor's Notes &mdash;</strong> Darrington press provides an official Ikonis Weapon Builder for the <a href="#define-motherboard">Motherboard</a> campaign frame in their free <a href="https://www.daggerheart.com/downloads">Campaign Frame Materials (Core)</a> with examples of iconic weapon upgrades. Additional ideas for features are indexed in the  <a href="#pc-benchmarks">PC Benchmarks</a>.</p>
 		</div>
 		<h5 id="iconic-crafting">Crafting and Trading<a class="og-h-anchor" href="#iconic-crafting" title="Permalink" aria-hidden="true"></a></h5>
 		<h6 id="iconic-scavenging">Scavenging<a class="og-h-anchor" href="#iconic-scavenging" title="Permalink" aria-hidden="true"></a></h6>
@@ -4727,13 +4867,45 @@
 <div id="define-adversary-transformation">
 	<h4 id="adversary-transformations">Adversary Transformations<a class="og-h-anchor" href="#adversary-transformations" title="Permalink" aria-hidden="true"></a></h4>
 	<p><strong>Transformations</strong> modify an adversary's statblock, granting them additional <a href="#define-adversary-feature">adversary features</a>.</p>
-	<p>These examples provide options for <a href="#define-adversary-transformation-shapeshifter">shapeshifters</a>, <a href="#define-adversary-transformation-shadow-touched">shadow-touched</a>, <a href="#define-adversary-transformation-vampire">vampire</a>, and <a href="#define-adversary-transformation-werewolf">werewolf</a> adversaries.</p>
+	<p>These examples provide options based on <a href="#define-adversary-transformation-habitat">habitats</a>, and options for <a href="#define-adversary-transformation-shapeshifter">shapeshifters</a>, <a href="#define-adversary-transformation-shadow-touched">shadow-touched</a>, <a href="#define-adversary-transformation-vampire">vampire</a>, and <a href="#define-adversary-transformation-werewolf">werewolf</a> adversaries.</p>
 </div>
 <div class="row">
+	<div class="col-12">
+		<div class="og-statblock">
+			<div id="define-adversary-transformation-habitat">
+				<h4 class="h6 og-tab" id="adversary-transformation-habitat">Habitats<a class="og-h-anchor" href="#adversary-transformation-habitat" title="Permalink" aria-hidden="true"></a></h4>
+				<ul class="og-list-inline og-ref og-omit"><li>DH HF 178</li></ul>
+				<p class="og-questions">Features that enhance an adversary's connection to <a href="#define-hex-crawl-habitat">habitat</a>.</p>
+				<h5 class="h6">Features</h5>
+				<ul class="list-inline og-tooltip-block og-questions">
+					<li class="list-inline-item">Blighted</li>
+					<li class="list-inline-item">Enviromancer</li>
+					<li class="list-inline-item">Heat Spell (Desert, Salt Flats, Volcano)</li>
+					<li class="list-inline-item">Ice Spell (Alpine, Glacier, Tundra)</li>
+					<li class="list-inline-item">Overgrowth Spell (Forest, Jungle)</li>
+					<li class="list-inline-item">Poison Spell (Moor, Swamp, Wetlands)</li>
+					<li class="list-inline-item">Stone Spell (Canyon, Mountain, Badlands)</li>
+					<li class="list-inline-item">Water Spell (Riverlands, Sea)</li>
+					<li class="list-inline-item">Wind Spell (Cliffs, Plains, Steppe)</li>
+				</ul>
+				<ul class="list-unstyled og-list-hang mt-0 mb-2 og-omit">
+					<li><p><strong><em>Blighted&mdash;Passive:</em></strong> This adversary is corrupted by magic. When encountered within a similarly affected area, this adversary <a href="#define-action">critically succeeds</a> on <a href="#define-attack">attacks</a> with a die roll of 18&ndash;20.</p></li>
+					<li><p><strong><em>Enviromancer&mdash;Passive:</em></strong> This adversary can draw upon the wild magic of their surroundings to fuel magical effects. <strong><a href="#define-stress">Mark a Stress</a></strong> to activate an effect based on the habitat of their current location (if an effect's <a href="#define-damage">damage roll</a> uses the adversary's <a href="#define-tier">tier</a>, roll the <a href="#define-damage">damage die</a> a number of times equal to their <a href="#define-tier">tier</a> and total the results):</p></li>
+					<li><p><strong><em>Heat Spell (Desert, Salt Flats, Volcano)&mdash;Passive:</em></strong> The adversary exudes oppressive supernatural heat. Each target within <a href="#define-range">Very Close</a> range must succeed on an <a href="#define-instinct">Instinct</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail must mark a <a href="#define-stress">Stress</a> and take <strong>d6</strong> <a href="#define-damage-type">direct magic damage</a> using this adversary's <a href="#define-tier">tier</a>.</p></li>
+					<li><p><strong><em>Ice Spell (Alpine, Glacier, Tundra)&mdash;Passive:</em></strong> This adversary unleashes daggers of ice. Make an <a href="#define-attack">attack</a> against each PC in front of this adversary within <a href="#define-range">Close</a> range. Targets they succeed against take <strong>d10</strong> <a href="#define-damage-type">magic damage</a> using this adversary's <a href="#define-tier">tier</a> and are <em>Frostbitten</em> until they spend a Hope to clear the <a href="#define-condition">condition</a>. While <em>Frostbitten</em>, a PC gains a &minus;1 penalty to their <a href="#define-damage">Proficiency</a>.</p></li>
+					<li><p><strong><em>Overgrowth Spell (Forest, Jungle)&mdash;Passive:</em></strong> This adversary unleashes a burst of branches, brambles, or vines in all directions. Each target within <a href="#define-range">Close</a> range must make an <a href="#define-agility">Agility</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail take <strong>d8</strong> <a href="#define-damage-type">physical damage</a> using this adversary's <a href="#define-tier">tier</a> and are <a href="#define-condition"><em>Restrained</em></a> until they break free with a successful <a href="#define-trait-roll">Strength Roll</a>.</p></li>
+					<li><p><strong><em>Poison Spell (Moor, Swamp, Wetlands)&mdash;Passive:</em></strong> A cloud of toxic spores explodes from this adversary. Each PC within <a href="#define-range">Close</a> range must succeed on a <a href="#define-strength">Strength</a> <a href="#define-reaction-roll">Reaction Roll</a> or take <strong>d6</strong> <a href="#define-damage-type">direct damage</a> using this adversary's <a href="#define-tier">tier</a> and become <em>Nauseated</em> until they clear a <a href="#define-hp">HP</a>. While <em>Nauseated</em>, a PC can't gain <a href="#define-hope">Hope</a>.</p></li>
+					<li><p><strong><em>Stone Spell (Canyon, Mountain, Badlands)&mdash;Passive:</em></strong> This adversary gains a bonus to their <a href="#define-hp">damage thresholds</a> equal to their <a href="#define-tier">tier</a> until they take <a href="#define-hp">Severe damage</a> or use this feature again.</p></li>
+					<li><p><strong><em>Water Spell (Riverlands, Sea)&mdash;Passive:</em></strong> This adversary unleashes a geyser or tidal wave. Make an <a href="#define-attack">attack</a> against all targets within <a href="#define-range">Very Close</a> range. Targets they succeed against are pushed to <a href="#define-range">Close</a> range of where they were and mark a number of <a href="#define-stress">Stress</a> equal to this adversary's <a href="#define-tier">tier</a>.</p></li>
+					<li><p><strong><em>Wind Spell (Cliffs, Plains, Steppe)&mdash;Passive:</em></strong> A tornado surrounds this adversary. Each target within <a href="#define-range">Close</a> range must make a <a href="#define-strength">Strength</a> <a href="#define-reaction-roll">Reaction Roll</a>. Targets who fail take <strong>d8</strong> <a href="#define-damage-type">magic damage</a> using this adversary's <a href="#define-tier">tier</a> and are pushed up to <a href="#define-range">Far</a> range. Until this adversary takes damage, <a href="#define-attack">attack rolls</a> against them have <a href="#define-advantage">disadvantage</a>.</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div class="col-12 col-md-6">
 		<div class="og-statblock">
 			<div id="define-adversary-transformation-shapeshifter">
-				<h4 class="h6 og-tab" id="adversary-transformation-shape-shifter">Shapeshifter<a class="og-h-anchor" href="#adversary-transformation-shadow-touched" title="Permalink" aria-hidden="true"></a></h4>
+				<h4 class="h6 og-tab" id="adversary-transformation-shapeshifter">Shapeshifter<a class="og-h-anchor" href="#adversary-transformation-shapeshifter" title="Permalink" aria-hidden="true"></a></h4>
 				<ul class="og-list-inline og-ref og-omit"><li>DH HF 142</li></ul>
 				<p class="og-questions">Powerful shapeshifters can assume the form and features of multiple stat blocks.</p>
 				<dl>
@@ -4742,7 +4914,7 @@
 					<dt>Stat Block Forms</dt>
 					<dd>While in an active form, the adversary can use stats and features in that form's stat block.</dd>
 				</dl>
-				<h5 class="h6">Features</h6>
+				<h5 class="h6">Features</h5>
 				<ul class="list-unstyled og-list-hang mt-0 mb-2">
 					<li><p><strong><em>Transform&mdash;Action:</em></strong> <strong><a href="#define-stress">Mark a Stress</a></strong> to have this aversary shift between their normal statblock and another form.</p></li>
 				</ul>
@@ -4755,7 +4927,7 @@
 				<h4 class="h6 og-tab" id="adversary-transformation-shadow-touched">Shadow-Touched<a class="og-h-anchor" href="#adversary-transformation-shadow-touched" title="Permalink" aria-hidden="true"></a></h4>
 				<ul class="og-list-inline og-ref og-omit"><li>DH HF 178</li></ul>
 				<p class="og-questions">When the GM introduces a Shadow-Touched adversary, they describe how magic has warped their essence and form.</p>
-				<h5 class="h6">Features</h6>
+				<h5 class="h6">Features</h5>
 				<ul class="list-unstyled og-list-hang mt-0 mb-2">
 					<li><p><strong><em>Shadow-Touched&mdash;Passive:</em></strong> This adversary <a href="#define-action-roll">critically succeeds</a> on <a href="#define-attack">attack rolls</a> of 18&ndash;20.</p></li>
 				</ul>
@@ -4768,7 +4940,7 @@
 			<div id="define-adversary-transformation-vampire">
 				<h4 class="h6 og-tab" id="adversary-transformation-vampire">Vampire<a class="og-h-anchor" href="#adversary-transformation-vampire" title="Permalink" aria-hidden="true"></a></h4>
 				<ul class="og-list-inline og-ref og-omit"><li>DH HF 153</li></ul>
-				<h5 class="h6">Features</h6>
+				<h5 class="h6">Features</h5>
 				<ul class="list-unstyled og-list-hang mt-0 mb-2">
 					<li><p><strong><em>Vampire's Curse&mdash;Action:</em></strong> Make an attack roll against a target within Melee range. On a success, you can spend a Fear to have this adversary sink their teeth into the target's neck and try to turn them into a vampire. Roll a number of d8s equal to this adversary's tier and deal that much physical damage to the target. Then roll a d6. If the rolled result matches any of the damage dice results, the target marks all their Stress and gains the <a href="#define-vampire">Vampire</a> transformation.</p></li>
 				</ul>
@@ -4781,7 +4953,7 @@
 			<div id="define-adversary-transformation-werewolf">
 				<h4 class="h6 og-tab" id="adversary-transformation-werewolf">Werewolf<a class="og-h-anchor" href="#adversary-transformation-werewolf" title="Permalink" aria-hidden="true"></a></h4>
 				<ul class="og-list-inline og-ref og-omit"><li>DH HF 153</li></ul>
-				<h5 class="h6">Features</h6>
+				<h5 class="h6">Features</h5>
 				<ul class="list-unstyled og-list-hang mt-0 mb-2">
 					<li><p><strong><em>Wolf's Curse&mdash;Action.</em></strong> Make an <a href="#define-attack">attack roll</a> against a target within <a href="#define-range">Melee</a> range. On a success, you can <strong><a href="#define-fear">spend a Fear</a></strong> to have this adversary viciously bite the target. Roll a number of <strong>d20s</strong> equal to this adversary's tier and deal that much <a href="#define-damage-type">physical damage</a> to the target. If the target takes <a href="#define-hp">Major</a> or greater damage from this attack, activate a long-term <a href="#define-countdown">Lycanthropy Countdown (6)</a>. It ticks down each time the PC takes a rest without using a downtime move to halt their lycanthropy's progression. When it triggers, the PC gains the <a href="#define-werewolf">Werewolf</a> transformation.</p></li>
 				</ul>
