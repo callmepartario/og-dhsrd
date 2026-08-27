@@ -1245,7 +1245,7 @@ const framesList = [
 { label: "Colossus of the Drylands", name: "colossus-of-the-drylands", pages: ["DH Core 308"], complexity: 4, summary: "A prosperous region of gunslingers and outlaws has fallen into terror as colossal creatures awaken from beneath the earth.", mechanics: ["<a href='#define-colossus'>Colossal Adversaries</a>", ], },
 { label: "The Dark Heart of Andaluria", name: "dark-heart-of-andaluria", pages: ["DH HF 144"], complexity: 3, summary: "As the nights grow long in a land of rich wine and ancient superstitions, a band of monster hunters battles the creatures that stalk the shadows.", mechanics: ["<a href='#define-the-hunt'>The Hunt</a>", "<a href='#define-transformation'>Transformations</a>", "<a href='#define-adversary-transformation-vampire'>Vampires</a>", "<a href='#define-adversary-transformation-werewolf'>Werewolves</a>", ], },
 { label: "Five Banners Burning", name: "five-banners-burning", pages: ["DH Core 262"], complexity: 2, summary: "Long-brewing tensions between rival nations boil over, threatening all-out war.", mechanics: ["<a href='#define-faction'>Factions</a>", "<a href='#define-faction-tracking'>Faction Tracking</a>", "<a href='#define-faction-objective'>Faction Objectives</a>"], },
-{ label: "Journey to Horizon", name: "journey-to-horizon", pages: ["DH HF 158"], complexity: 4, summary: "After a thousand-year cataclysm, a fellowship of heroes embarks from their magically protected sanctuary to journey across a broken continent and resurrect the fallen goddess who can heal their world.", mechanics: ["<a href='#define-doom-track'>Doom Track</a>", "<a href='#define-hex-crawl'>The Hex Crawl</a>", ], },
+{ label: "Journey to Horizon", name: "journey-to-horizon", pages: ["DH HF 158"], complexity: 4, summary: "After a thousand-year cataclysm, a fellowship of heroes embarks from their magically protected sanctuary to journey across a broken continent and resurrect the fallen goddess who can heal their world.", mechanics: ["<a href='#define-doom-track'>Doom Track</a>", "<a href='#define-hex-crawl'>The Hex Crawl</a>", "<a href='#define-adversary-transformation-habitat'>Adversary Habitat Features</a>" ], },
 { label: "Motherboard", name: "motherboard", pages: ["DH Core 290"], complexity: 3, summary: "In a world where magic takes the form of the technology left behind by a long-fallen civilization, a new threat rises as a malicious virus spreads through the machines that wander the Wastes.", mechanics: ["<a href='#define-tech-damage'>Tech Damage</a>", "<a href='#define-iconic-weapon'>Iconic Weapons</a>", ], },
 { label: "Reign of the Weredragon", name: "reign-of-the-weredragon", pages: ["DH HF 128"], complexity: 2, summary: "In a land ruled by a violent weredragon tyrant, heroes ordained by the stars to defeat her must rise to the chalenge and defend their people.", mechanics: ["<a href='#define-villain-builder'>Building Villains Collaboratively</a>", "<a href='#define-curse'>Curses</a>", "<a href='#define-adversary-transformation-shapeshifter'>Shapeshifters</a>", ], },
 { label: "The Witherwild", name: "the-witherwild", pages: ["DH Core 254"], complexity: 1, summary: "When an invading nation attacks an ancient forest deity, a virulent overgrowth&mdash;<a href='#the-witherwild'>The Witherwild</a>&mdash;spreads throughout the land.", mechanics: ["<a href='#define-withered'>Corruption from the Witherwild</a>", ], },
@@ -5073,10 +5073,19 @@ function printAdversaries() {
 	iAdv += getReferences(["DH Core 209", "DH HF 61"]);
 	iAdv += "<div class='alert ps-4 pb-0 og-omit'>";
 	for (t = 1; t < 5; t++) {
-		iAdv += "<h4 class='h6' id='adversaries-by-tier-" + t + "'>Tier " + t + " Adversaries (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#adversaries-by-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h4>";
+		iAdv += "<h4 id='adversaries-by-tier-" + t + "'>Tier " + t + " (" + getTierLevels(t) + ")<a class='og-h-anchor' href='#adversaries-by-tier-" + t + "' title='Permalink' aria-hidden='true'></a></h4>";
+		iAdv += "<h5 class='h6' id='adversaries-by-tier-" + t + "-dh-core'>Core Rulebook: Tier " + t + "<a class='og-h-anchor' href='#adversaries-by-tier-" + t + "-dh-core' title='Permalink' aria-hidden='true'></a></h5>";
 		iAdv += "<ul class='list-unstyled og-qr'>";
 		for (let a = 0; a < adversaryList.length; a++) {
-			if (adversaryList[a].tier == t) {
+			if (adversaryList[a].tier == t && adversaryList[a].pages[0].includes("DH Core")) {
+				iAdv += "<li><a href='#define-adversary-" + adversaryList[a].name + "'>" + adversaryList[a].label + "</a> <em>(" + adversaryList[a].type + ")</em></li>";
+			}
+		}
+		iAdv += "</ul>";
+		iAdv += "<h5 class='h6' id='adversaries-by-tier-" + t + "-dh-hf'>Hope &amp; Fear: Tier " + t + "<a class='og-h-anchor' href='#adversaries-by-tier-" + t + "-dh-hf' title='Permalink' aria-hidden='true'></a></h5>";
+		iAdv += "<ul class='list-unstyled og-qr'>";
+		for (let a = 0; a < adversaryList.length; a++) {
+			if (adversaryList[a].tier == t && adversaryList[a].pages[0].includes("DH HF")) {
 				iAdv += "<li><a href='#define-adversary-" + adversaryList[a].name + "'>" + adversaryList[a].label + "</a> <em>(" + adversaryList[a].type + ")</em></li>";
 			}
 		}
