@@ -3761,19 +3761,19 @@ function printEquipment() {
 	iWep += "<div id='define-weapon'>"; // open def
 	iWep += "<h3 id='weapons'>Weapons<a class='og-h-anchor' href='#weapons' title='Permalink' aria-hidden='true'></a></h3>";
 	iWep += getReferences(["DH Core 96", "DH Core 112", "DH Core 113", "Errata"]);
+	iWep += "<p>You can have two <strong>active weapons</strong>&mdash;one <strong>primary weapon</strong>, and one <strong>secondary weapon</strong>. You can't use weapons with <a href='#define-tier'>tier</a> higher than yours. If your <a href='#define-subclass'>subclass</a> didn't assign you a Spellcast trait, you can't use magic weapons. You can make <a href='#define-attack'>attack rolls</a> with your active weapons.</p>";
+	iWep += "<p>You can carry two <strong>inventory weapons</strong>. You can swap an active weapon with an inventory weapon during <a href='#define-downtime'>downtime</a> or a moment of calm. In danger, you must mark a <a href='#define-stress'>Stress</a> to swap weapons.</p>"
 	iWep += "<dl>";
-	iWep += "<dt>Equipping Weapons</dt>";
-	iWep += "<dd>You can equip up to two <strong>active weapons</strong>&mdash;one <strong>primary weapon</strong>, and one <strong>secondary weapon</strong>. You can equip weapons whose <a href='#define-tier'>tier</a> is equal or lower than yours. If your <a href='#define-subclass'>subclass</a> didn't assign you a Spellcast trait, you can't equip magic weapons. You can make <a href='#define-attack'>attack rolls</a> with your active weapons. You can carry two <strong>inventory weapons</strong>. You can swap an inventory weapon with an active weapon during <a href='#define-downtime'>downtime</a> or a moment of calm. In danger, you must mark a <a href='#define-stress'>Stress</a> to swap weapons.</dd>";
-	iWep += "<dt>Trait</dt>";
-	iWep += "<dd>The <a href='#define-trait'>trait</a> used for <a href='#define-attack'>attack rolls</a> made using the weapon.</dd>";
-	iWep += "<dt>Range</dt>";
-	iWep += "<dd>The maximum <a href='#define-range'>range</a> between you and the target.</dd>";
-	iWep += "<dt>Damage and Damage Type</dt>";
-	iWep += "<dd>The weapon's <a href='#define-damage'>damage roll</a> and <a href='#define-damage-type'>damage type</a>.</dd>";
-	iWep += "<dt>Burden</dt>";
-	iWep += "<dd>The number of hands the weapon occupies when active. You have two hands.</dd>";
-	iWep += "<dt>Feature</dt>";
-	iWep += "<dd>Some weapons have special properties or features when active.</dd>";
+	iWep += "<dt class='og-omit'>Trait</dt>";
+	iWep += "<dd class='og-omit'>The <a href='#define-trait'>trait</a> used for <a href='#define-attack'>attack rolls</a> made using the weapon.</dd>";
+	iWep += "<dt class='og-omit'>Range</dt>";
+	iWep += "<dd class='og-omit'>The maximum <a href='#define-range'>range</a> between you and the target.</dd>";
+	iWep += "<dt class='og-omit'>Damage and Damage Type</dt>";
+	iWep += "<dd class='og-omit'>The weapon's <a href='#define-damage'>damage roll</a> and <a href='#define-damage-type'>damage type</a>.</dd>";
+	iWep += "<dt class='og-omit'>Burden</dt>";
+	iWep += "<dd class='og-omit'>The number of hands the weapon occupies when active. You have two hands.</dd>";
+	iWep += "<dt class='og-omit'>Feature</dt>";
+	iWep += "<dd class='og-omit'>Some weapons have special properties or features when active.</dd>";
 	iWep += "<dt>Throwing Weapons</dt>";
 	iWep += "<dd>You can make a <a href='#define-finesse'>Finesse</a> <a href='#define-attack'>attack roll</a> to throw an active weapon within <a href='#define-range'>Very Close</a> range, dealing its <a href='#define-damage'>damage</a> on a success. Once thrown, the weapon isn't active.</dd>";
 	iWep += "<dt>Unarmed Attacks</dt>";
@@ -3909,7 +3909,7 @@ function printEquipment() {
 	iArm += "<dt>Unarmored</dt>";
 	iArm += "<dd>While unarmored, your base <a href='#define-armor'>Armor Score</a> is 0, your <a href='#define-hp'>Major threshold</a> is equal to your <a href='#define-level'>level</a>, and your <a href='#define-hp'>Severe threshold</a> is equal to twice your <a href='#define-level'>level</a>.</dd>";
 	iArm += "<dt>Equipping Armor</dt>";
-	iArm += "<dd>You can't equip armor while in danger or under pressure, and you can't equip armor of a higher <a href='#define-tier'>tier</a> than yours. You can equip only one set of armor. Each set of armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</dd>";
+	iArm += "<dd>You can't equip armor while in danger or under pressure, and you can't equip armor with <a href='#define-tier'>tier</a> higher than yours. You can equip only one set of armor. Each set of armor has its own Armor Slots. If you change armor, track its marked Armor Slots. You can't carry armor in your inventory.</dd>";
 	iArm += "<dt>Base Thresholds</dt>";
 	iArm += "<dd>When equipped, a set of armor's base thresholds determine your Major and Severe <a href='#define-hp'>damage thresholds</a>. Add your <a href='#define-level'>level</a> to each.</dd>";
 	iArm += "<dt>Armor Score and Armor Slots</dt>";
