@@ -138,7 +138,7 @@
 	<span class="og-title">Daggerheart</span>
 	<span class="og-subtitle">System Reference Document</span>
 </h1>
-<p class="small text-center">version 3.0i (2026-09-14)</p>
+<p class="small text-center">version 3.0i (2026-10-12)</p>
 <ul class="list-inline text-center">
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="#character-sheet">Character Sheet</a></li>
 	<li class="list-inline-item"><a class="btn btn-light mt-1 mb-1 theme-light border text-white" href="#gm-screen">GM Screen</a></li>
@@ -744,6 +744,7 @@
 		<li><a href="#define-gold-coin">gold coin</a><span class="ps-1">&dagger;</span></li>
 		<li><a href="#define-gm-move">golden opportunity</a></li>
 		<li><a href="#define-grace">Grace</a></li>
+		<li><a href="#define-target">group</a></li>
 		<li><a href="#define-group-action-roll">Group Action Roll</a></li>
 		<li><a href="#define-guardian">Guardian</a></li>
 	</ul>
@@ -1022,7 +1023,14 @@
 		<div id="define-target">
 			<h5 id="targeting">Targeting<a class="og-h-anchor" href="#targeting" title="Permalink" aria-hidden="true"></a></h5>
 			<ul class="og-list-inline og-ref og-omit"><li>DH Core 104</li></ul>
-			<p>A target is anything a feature affects. Most of the time, you can choose the target, including who (a creature) or what (an object) is affected. Creatures are living beings&mdash;you, your fellow PCs, and <a href="#define-adversary">adversaries</a> and <a href="#define-npc">NPCs</a> you encounter. Some features can only target creatures that are allies, and others only creatures that are adversaries. Some features affect multiple creatures in an area with a single <a href="#define-attack">attack roll</a><span class="og-omit">&mdash;for example, the <a href="#define-domain-card-rain-of-blades">Rain of Blades</a> domain card</span>.<p>
+			<dl>
+				<dt>Target</dt>
+				<dd>A target is anything a feature affects. Most of the time, you can choose the target, including who (a creature) or what (an object) is affected. Creatures are living beings&mdash;you, your fellow PCs, and <a href="#define-adversary">adversaries</a> and <a href="#define-npc">NPCs</a> you encounter.</dt>
+				<dt>Allies and Adversaries</dt>
+				<dd>Some features can only target creatures that are allies, and others only creatures that are adversaries.</dd>
+				<dt>Group</dt>
+				<dd>Some features a group of targets in an area<span class="og-omit">&mdash;for example, the <a href="#define-domain-card-rain-of-blades">Rain of Blades</a> domain card</span>. A group of targets must be within within <a href="#define-range">Very Close</a> distance of a point you choose within <a href="#define-range">range</a>.</dd>
+			</dl>
 			<div class="og-ed pt-3 pb-1 ps-3 pe-3 mt-3 mb-3 og-omit">
 				<p><strong>Editor's Notes &mdash;</strong> Since several features target "you or an ally", or "yourself or an ally", you probably don't count as your own ally. These features must be used on an allied character&mdash;usually another PC.</p>
 				<p>Some features have two types of "target": those that are the target of an <a href="#define-action">action roll</a>, and those who might be affected by the action roll&mdash;for example, a <em>Fireball</em> created by the <a href="#define-domain-card-book-of-norai">Book of Norai</a> domain card targets one creature with a <a href="#define-spellcast-roll">Spellcast Roll</a>. If that roll succeeds, the resulting effect targets all creature within <a href="#define-range">Very Close</a> range of the original target.</p>
@@ -2275,7 +2283,7 @@
 <div id="define-attack">
 	<h3 id="attack-rolls">Attack Rolls<a class="og-h-anchor" href="#attack-rolls" title="Permalink" aria-hidden="true"></a></h3>
 	<ul class="og-list-inline og-ref og-omit"><li>DH Core 96</li><li>DH Core 104</li><li>DH Core 148</li><li>DH Core 160</li></ul>
-	<p>An <strong>attack roll</strong> is an <a href="#define-action">action roll</a> intended to inflict harm. The <a href="#define-trait">trait</a> you use for your attack roll is determined by your <a href="#define-weapon">weapon</a> or <a href="#define-subclass">Spellcast trait</a>. If the result meets or beats the target <a href="#define-adversary">adversary</a>'s <a href="#define-difficulty">Difficulty</a>, you succeed and roll the attack's <a href="#define-damage">damage dice</a>.</p>
+	<p>An <strong>attack roll</strong> is an <a href="#define-action">action roll</a> intended to inflict harm to a <a href="#define-target">target</a>. The <a href="#define-trait">trait</a> you use for your attack roll is determined by your <a href="#define-weapon">weapon</a> or <a href="#define-subclass">Spellcast trait</a>. If the result meets or beats the target <a href="#define-adversary">adversary</a>'s <a href="#define-difficulty">Difficulty</a>, you succeed and roll the attack's <a href="#define-damage">damage dice</a>.</p>
 	<dl>
 		<dt>Adversary Attacks</dt>
 		<dd>When an <a href="#define-adversary">adversary</a> attacks you, the GM rolls the <a href="#define-action">GM's die</a> and adds the adversary's attack bonus. If the result meets or beats your <a href="#define-evasion">Evasion</a>, the attack succeeds and they roll the attack's <a href="#define-damage">damage dice</a>. If the GM's die results in a  <strong>natural 20</strong>, the attack succeeds automatically and deals <a href="#define-damage">critical damage</a>.</dd>
@@ -3500,9 +3508,13 @@
 			<li><a href="https://www.dh-brewing.com">DH Brewing</a></li>
 			<li><a href="https://freshcutgrass.app/">FreshCutGrass.app&mdash;Encounter Builder</a></li>
 			<li><a href="https://heartofdaggers.com/">Heart of Daggers</a></li>
+			<li><a href="https://github.com/JHerrin00/daggerheart-srd-2.0">JHerrin00's Daggerheart SRD 2.0</a> (markdown and json)</li>
+			<li><a href="https://www.montecookgames.com/consent-in-gaming/">Monte Cook Games&mdash;Consent in Gaming Checklist</a></li>
+			<!--
 			<li><a href="https://daggerheart-encounter-generator.streamlit.app/">Pompdin's Encounter Generator</a></li>
 			<li><a href="https://daggerheart-loot-generator.streamlit.app/">Pompdin's Loot Generator</a></li>
 			<li><a href="https://daggerheart-npc-generator.streamlit.app/">Pompdin's NPC Generator</a></li>
+			-->
 			<li><a href="https://docs.google.com/document/d/12g-obIkdGJ_iLL19bS0oKPDDvPbPI9pWUiFqGw8ED88">RightKnighttoFight's Guide to Making Custom Adversaries</a></li>
 			<li><a href="https://daggerheart.tabletoptown.app/">TableTopTown&mdash;Daggerheart Companion</a></li>
 		</ul>
@@ -3796,7 +3808,7 @@
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="row">Ghostwalker</th>
-			<td><strong><em>Ghostwalker:</em></strong> Once per <a href="#define-downtime">rest</a>, <strong><a href="#define-stresss">mark a Stress</a></strong> to move up to <a href="#define-close">Close</a> range through solid objects.</td>
+			<td><strong><em>Ghostwalker:</em></strong> Once per <a href="#define-downtime">rest</a>, <strong><a href="#define-stresss">mark a Stress</a></strong> to move up to <a href="#define-range">Close</a> range through solid objects.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">+1</td>
 			<td>Minimum tier 4.</td>
@@ -4622,7 +4634,7 @@
 		</tr>
 		<tr>
 			<th class="fw-normal visually-hidden" scope="row">Poisonous</th>
-			<td><strong><em>Poisonous:</em></strong> When a target marks any number of <a href="#define-hp"</a>, <a href="#define-range">>Hit Points</a> from an <a href="#define-attack"</a>, <a href="#define-range">>attack</a> you rolled with <a href="#define-fear"</a>, <a href="#define-range">>Fear</a>, they mark an equal number of <a href="#define-stress"</a>, <a href="#define-range">>Stress</a>.</td>
+			<td><strong><em>Poisonous:</em></strong> When a target marks any number of <a href="#define-range">Hit Points</a> from an <a href="#define-range">attack</a> you rolled with <a href="#define-fear">Fear</a>, they mark an equal number of <a href="#define-stress">Stress</a>.</td>
 			<td class="text-center">&mdash;</td>
 			<td class="text-center">+1</td>
 			<td>Minimum tier 4.</td>
@@ -5040,6 +5052,160 @@
 	<li>A <strong>d10 Siphoning Die</strong> that starts at 1. When the PCs take a short rest, tick increase the siphoning die's value by one. When they take a long rest, increase it by 2. When the PCs defeat a colossus, roll a number of d12s equal to the value of the Siphoning Die. Increase the Power Die by the highest result, and reset the Siphon Die to 1.</li>
 	<li>A <strong>d100 Power Die</strong> that starts at 0. Once nine colossi have been defeated or the Power Die reaches 100, the final colossus reveals itself. It has a Severe threshold is equal to the value of Power Die and a Major threshold equal to half the Power Die.</li>
 </ul>
+<h4 id="adversary-type-colossus-example">Example Colossus<a class="og-h-anchor" href="#adversary-type-colossus-example" title="Permalink" aria-hidden="true"></a></h4>
+<p>This example collosus is authored by Old Gus, and appears courtesy <a href="https://jaybird.games/">Jaybird Games</a>. This statblock, its parent mad scientist villain and his lieutenant are included in <a href="https://heartofdaggers.com/products/fear-me/"><em>Fear Me!</em></a>, a collection of villains for Daggerheart.</p>
+<div class="row">
+	<div class="col-12 col-md-6">
+		<div class="og-statblock">
+			<div id="define-environment-witchs-hut">
+				<h5 id="adversary-gujara-morkheg">Gujara-Morkheg<a class="og-h-anchor" href="#adversary-gujara-morkheg" title="Permalink" aria-hidden="true"></a></h5>
+				<ul class="og-list-inline og-ref og-omit">
+					<li class="og-nowrap">Editorial Addition</li>
+				</ul>
+				<ul class="list-unstyled">
+					<li class="fw-bold fst-italic">Tier 2 <a href="#define-adversary-type">Colossus</a></li>
+					<li class="og-questions">A former familiar face, now an uncanny abomination with humanoid, bat, scorpion, and dragon features.</li>
+					<li class="mt-2"><strong>Motives &amp; Tactics:</strong> Wreak havoc, devour, gain dominion</li>
+				</ul>
+				<div class="og-topbar">
+					<ul class="og-list-inline">
+						<li><strong>Size:</strong> 160 ft. (24 m) long, 200 ft. (61 m) wingspan</li>
+						<li><strong>Segments:</strong> 1 <a href="#define-adversary-gujara-morkheg-head">Head</a>, 1 <a href="#define-adversary-gujara-morkheg-torso">Torso</a>, 1 <a href="#define-adversary-gujara-morkheg-back">Back</a>, 2 <a href="#define-adversary-gujara-morkheg-wing">Wings</a>, 1d2 <a href="#define-adversary-gujara-morkheg-tail">Tails</a></li>
+						<li><strong>Thresholds:</strong> 15/23</li>
+						<li><strong>Stress:</strong> 7</li>
+					</ul>
+					<div class="og-topbar2">
+						<p><strong>Experience:</strong> Instinct +3, City Knowledge +2</p>
+					</div>
+				</div>
+				<h6>Features</h6>
+				<ul class="list-unstyled og-list-hang">
+					<li><p><strong><em>Flying&mdash;Passive:</em></strong> Morkheg can fly unless both <a href="#define-adversary-gujara-morkheg-wing">Wing</a> segments are <em>Destroyed</em>. While Morkheg is flying, each segment's <a href="#define-difficulty">Difficulty</a> gains a +1 bonus. If Morkheg is forced to land, start a <a href="#define-countdown"><em>Recovery Countdown (1d2+2)</em></a>. When it triggers, Morkheg's <a href="#define-adversary-gujara-morkheg-wing">Wing</a> segments clear a number of HP equal to the countdown roll's results.</p></li>
+					<li><p><strong><em>Tails&mdash;Passive:</em></strong> When Morkheg first appears, roll <strong>1d2</strong> to determine its number of <a href="#define-adversary-gujara-morkheg-tail">Tail</a> segments.</p></li>
+					<li><p><strong><em>Terror Engine&mdash;Reaction:</em></strong> When Morkheg fails an attack, gain a <a href="#define-fear">Fear</a>.</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div class="og-statblock og-statblock-alt">
+			<div id="define-adversary-gujara-morkheg-head">
+				<h5 id="adversary-gujara-morkheg-head">Morkheg Head<a class="og-h-anchor" href="#adversary-gujara-morkheg-head" title="Permalink" aria-hidden="true"></a></h5>
+				<ul class="list-unstyled">
+					<li class="mt-2"><strong>Adjacent Segments:</strong> <a href="#define-adversary-gujara-morkheg-torso">Torso</a>, <a href="#define-adversary-gujara-morkheg-back">Back</a></li>
+				</ul>
+				<div class="og-topbar">
+					<ul class="og-list-inline">
+						<li><strong>Difficulty:</strong> 15</li>
+						<li><strong>HP:</strong> 6</li>
+						<li class="d-block"><strong>ATK:</strong> +4 <span class="og-divider"><strong>Mandibles:</strong> <a href="#define-range">Very Close</a></span><span class="og-divider">2d12+6 <a href="#define-damage-type">phy</a></span></li>
+					</ul>
+					<div class="mt-3"></div>
+				</div>
+				<h6>Features</h6>
+				<ul class="list-unstyled og-list-hang">
+					<li><p><strong><em>Crucial&mdash;Passive:</em></strong> When the head is <em>Destroyed</em>, Morkheg is defeated.</p></li>
+					<li><p><strong><em>Shielded&mdash;Passive:</em></strong> This segment is <a href="#define-damage-type">immune</a> to <a href="#define-damage">damage</a> from <a href="#define-attack">attacks</a> made from beyond <a href="#define-range">Very Close</a> range.</p></li>
+					<li><p><strong><em>Shriek&mdash;Action:</em></strong> <a href="#define-fear"><strong>Spend 2 Fear</strong></a> to force PCs within <a href="#define-far">Very Far</a> range to make a <a href="#define-reaction-roll">Presence Reaction Roll</a> or become <em>Rattled</em>. A <em>Rattled</em> PC doesn't gain <a href="#define-hope">Hope</a> from their next <a href="#define-action">roll with Hope</a>, and clears the <em>Rattled</em> condition instead.</p></li>
+					<li><p><strong><em>Tar Breath&mdash;Action:</em></strong> <a href="#define-fear"><strong>Spend a Fear</strong></a> to breathe vomitous combustible tar in a <a href="#define-range">Close</a> area which momentarily ignites, dealing <strong>2d10</strong> <a href="#define-damage-type">physical damage</a> to creatures or objects within. Moving through the area requires a roll.</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div class="og-statblock og-statblock-alt">
+			<div id="define-adversary-gujara-morkheg-torso">
+				<h5 id="adversary-gujara-morkheg-torso">Morkheg Torso<a class="og-h-anchor" href="#adversary-gujara-morkheg-torso" title="Permalink" aria-hidden="true"></a></h5>
+				<ul class="list-unstyled">
+					<li class="mt-2"><strong>Adjacent Segments:</strong> <a href="#define-adversary-gujara-morkheg-head">Head</a>, <a href="#define-adversary-gujara-morkheg-wing">Wings</a>, <a href="#define-adversary-gujara-morkheg-tail">Tail</a></li>
+				</ul>
+				<div class="og-topbar">
+					<ul class="og-list-inline">
+						<li><strong>Difficulty:</strong> 14</li>
+						<li><strong>HP:</strong> 6</li>
+						<li class="d-block"><strong>ATK:</strong> +4 <span class="og-divider"><strong>Razor Frills:</strong> <a href="#define-range">Melee</a></span><span class="og-divider">2d8+6 <a href="#define-damage-type">phy</a></span></li>
+					</ul>
+					<div class="mt-3"></div>
+				</div>
+				<h6>Features</h6>
+				<ul class="list-unstyled og-list-hang">
+					<li><p><strong><em>Durable&mdash;Passive:</em></strong> When this segment marks <a href="#define-hp">HP</a>, reduce the number marked by 1.</p></li>
+					<li><p><strong><em>Razor Fur&mdash;Passive:</em></strong> <a href="#define-trait">Agility Rolls</a> made to climb this segment have <a href="#define-advantage">disadvantage</a>. On a <a href="#define-action">roll with Fear</a>, PCs take <strong>1d20</strong> <a href="#define-damage-type">physical damage</a>.</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div class="og-statblock og-statblock-alt">
+			<div id="define-adversary-gujara-morkheg-back">
+				<h5 id="adversary-gujara-morkheg-back">Morkheg Back<a class="og-h-anchor" href="#adversary-gujara-morkheg-back" title="Permalink" aria-hidden="true"></a></h5>
+				<ul class="list-unstyled">
+					<li class="mt-2"><strong>Adjacent Segments:</strong> <a href="#define-adversary-gujara-morkheg-head">Head</a>, <a href="#define-adversary-gujara-morkheg-wing">Wings</a>, <a href="#define-adversary-gujara-morkheg-tail">Tail</a></li>
+				</ul>
+				<div class="og-topbar">
+					<ul class="og-list-inline">
+						<li><strong>Difficulty:</strong> 15</li>
+						<li><strong>HP:</strong> 7</li>
+						<li class="d-block"><strong>ATK:</strong> +2 <span class="og-divider"><strong>Tar Ooze:</strong> <a href="#define-range">Very Close</a></span><span class="og-divider">2d12 <a href="#define-damage-type">phy</a></span></li>
+					</ul>
+					<div class="mt-3"></div>
+				</div>
+				<h6>Features</h6>
+				<ul class="list-unstyled og-list-hang">
+					<li><p><strong><em>Chitin Plating&mdash;Passive:</em></strong> When this segment marks <a href="#define-hp">HP</a>, reduce the number marked by 1.</p></li>
+					<li><p><strong><em>Scaling (+3)&mdash;Passive:</em></strong> <a href="#define-action">Action rolls</a> made to climb this segment gain a +3 bonus.</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div class="og-statblock og-statblock-alt">
+			<div id="define-adversary-gujara-morkheg-wing">
+				<h5 id="adversary-gujara-morkheg-wing">Morkheg Wing (2)<a class="og-h-anchor" href="#adversary-gujara-morkheg-wing" title="Permalink" aria-hidden="true"></a></h5>
+				<ul class="list-unstyled">
+					<li class="mt-2"><strong>Adjacent Segments:</strong> <a href="#define-adversary-gujara-morkheg-torso">Torso</a>, <a href="#define-adversary-gujara-morkheg-back">Back</a></li>
+				</ul>
+				<div class="og-topbar">
+					<ul class="og-list-inline">
+						<li><strong>Difficulty:</strong> 14</li>
+						<li><strong>HP:</strong> 4 (each)</li>
+						<li class="d-block"><strong>ATK:</strong> +3 <span class="og-divider"><strong>Smash:</strong> <a href="#define-range">Close</a></span><span class="og-divider">2d12+6 <a href="#define-damage-type">phy</a></span></li>
+					</ul>
+					<div class="mt-3"></div>
+				</div>
+				<h6>Features</h6>
+				<ul class="list-unstyled og-list-hang">
+					<li><p><strong><em>Restricted&mdash;Passive:</em></strong> This segment can't make standard attacks against creatures scaling Morkheg.</p></li>
+					<li><p><strong><em>Wing Buffet&mdash;Action:</em></strong> <a href="#define-stress"><strong>Mark a Stress</strong></a> to fill a <a href="#define-range">Close</a> area with intense wind, forcing creatures in the area to succeed a <a href="#define-reaction-roll">Strength Reaction Roll</a> or mark a <a href="#define-stress">Stress</a>. On a failure, a flying creature is knocked to the ground and marks 1 <a href="#define-hp">HP</a>, or 2 <a href="#define-hp">HP</a> if Morkheg is flying. Additionally, areas in the scene affected by Morkheg's "Tar Breath" reignite, dealing <strong>1d10</strong> <a href="#define-damage-type">physical damage</a> to anything in the area. Morkheg can't use this action if either Wing segment is <em>Destroyed</em>.</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-6">
+		<div class="og-statblock og-statblock-alt">
+			<div id="define-adversary-gujara-morkheg-tail">
+				<h5 id="adversary-gujara-morkheg-tail">Morkheg Tail (1d2)<a class="og-h-anchor" href="#adversary-gujara-morkheg-tail" title="Permalink" aria-hidden="true"></a></h5>
+				<ul class="list-unstyled">
+					<li class="mt-2"><strong>Adjacent Segments:</strong> <a href="#define-adversary-gujara-morkheg-torso">Torso</a>, <a href="#define-adversary-gujara-morkheg-back">Back</a></li>
+				</ul>
+				<div class="og-topbar">
+					<ul class="og-list-inline">
+						<li><strong>Difficulty:</strong> 15</li>
+						<li><strong>HP:</strong> 6 (each)</li>
+						<li class="d-block"><strong>ATK:</strong> +3 <span class="og-divider"><strong>Stinger:</strong> <a href="#define-range">Far</a></span><span class="og-divider">2d8+5 <a href="#define-damage-type">phy</a></span></li>
+					</ul>
+					<div class="mt-3"></div>
+				</div>
+				<h6>Features</h6>
+				<ul class="list-unstyled og-list-hang">
+					<li><p><strong><em>Scaling (&minus;3)&mdash;Passive:</em></strong> <a href="#define-action">Action rolls</a> made to climb this segment gain a &minus;3 penalty.</p></li>
+					<li><p><strong><em>Tail Whip&mdash;Action:</em></strong> Force a creature scaling a segment other than the torso to make an <a href="#define-reaction-roll">Agility Reaction Roll</a>. On a success, they must mark a <a href="#define-stress">Stress</a>. On a failure, they fall to the ground and mark 1 <a href="#define-hp">HP</a>, or 2 <a href="#define-hp">HP</a> if Morkheg is flying.</p></li>
+					<li><p><strong><em>Sickening Venom&mdash;Reaction:</em></strong> When this segment succeeds a standard attack, <a href="#define-stress"><strong>mark a Stress</strong></a> to inject the target with venom, making them <em>Sickened</em>. A <em>Sickened</em> creature has <a href="#define-advantage">disadvantage</a> on <a href="#define-reaction-roll">reaction rolls</a>. A successful <a href="#define-strength">Strength Roll</a> clears the <a href="#define-condition">condition</a>.</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
 <div id="define-adversary-benchmarks">
 	<h4 id="adversary-benchmarks">Adversary Benchmarks<a class="og-h-anchor" href="#adversary-benchmarks" title="Permalink" aria-hidden="true"></a></h4>
 	<div class="alert ps-4 pb-0 og-omit">

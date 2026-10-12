@@ -3672,7 +3672,7 @@ function printTraits() {
 	traitContent += "<dt>Negative Modifiers</dt>";
 	traitContent += "<dd>Unless otherwise stated, if a mechanic other than a roll uses a trait modifier and yours is negative, treat it as if it were 0&mdash;for example, if you are a <a href='#define-druid'>Druid</a> and choose the <a href='#define-warden-of-renewal'>Warden of Renewal</a>, your \"Clarity of Nature\" feature requires an <a href='#define-instinct'>Instinct</a> modifier of +1 or higher to have any effect. A few mechanics set a minimum&mdash;for example, the <a href='#define-domain-card-flight'>Flight</a> spell grants 1 counter even if your <a href='#define-agility'>Agility</a> modifier is &minus;1.</dd> ";
 	traitContent += "<dt>Increasing Trait Modifiers</dt>";
-	traitContent += "<dd>When you gain a <a href='#define-level'>level</a>, you can increase purchase an <a href='#define-advancement'>advancement</a> to increase the modifiers of two traits. You can increase a trait's modifier only once each <a href='#define-tier'>tier</a>.</dd>";
+	traitContent += "<dd>When you gain a <a href='#define-level'>level</a>, you can increase purchase an <a href='#define-advancement'>advancement</a> to increase the modifiers of two traits. You can increase a trait's modifier once each <a href='#define-tier'>tier</a>.</dd>";
 	traitContent += "</dl>";
 	traitContent += "</div>";
 	traitContent += "<hr>";
